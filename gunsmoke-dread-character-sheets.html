@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunsmoke & Dread - Character Sheets</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rye&family=Crimson+Text:wght@400;600;700&family=Special+Elite&display=swap');
+        
+        :root {
+            --desert-sand: #d4a574;
+            --blood-red: #8b0000;
+            --night-black: #1a1a1a;
+            --parchment: #f4e8d0;
+            --rust: #a0522d;
+        }
+        
+        @page {
+            size: A4;
+            margin: 0.5cm;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            background: #333;
+            color: var(--night-black);
+            line-height: 1.3;
+            font-size: 10pt;
+        }
+        
+        .character-sheet {
+            width: 210mm;
+            height: 297mm;
+            margin: 1cm auto;
+            background: var(--parchment);
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            padding: 0.8cm;
+            page-break-after: always;
+            position: relative;
+            border: 3px solid var(--rust);
+        }
+        
+        .character-sheet:last-child {
+            page-break-after: auto;
+        }
+        
+        /* HEADER */
+        .character-header {
+            text-align: center;
+            border-bottom: 4px double var(--blood-red);
+            padding-bottom: 0.4cm;
+            margin-bottom: 0.5cm;
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.05) 0%, rgba(212, 165, 116, 0.05) 100%);
+            padding: 0.4cm;
+            border-radius: 4px;
+        }
+        
+        .character-name {
+            font-family: 'Rye', cursive;
+            color: var(--blood-red);
+            font-size: 24pt;
+            margin-bottom: 0.2cm;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .character-archetype {
+            font-family: 'Special Elite', cursive;
+            font-size: 11pt;
+            color: var(--rust);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.1cm;
+        }
+        
+        .character-tagline {
+            font-style: italic;
+            font-size: 10pt;
+            color: #555;
+        }
+        
+        /* LAYOUT A TRE COLONNE */
+        .sheet-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.4cm;
+            margin-top: 0.5cm;
+        }
+        
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .two-columns {
+            grid-column: span 2;
+        }
+        
+        /* SEZIONI */
+        .section {
+            background: white;
+            border: 2px solid var(--rust);
+            border-radius: 4px;
+            padding: 0.3cm;
+            margin-bottom: 0.3cm;
+        }
+        
+        .section-header {
+            font-family: 'Rye', cursive;
+            color: var(--blood-red);
+            font-size: 11pt;
+            margin-bottom: 0.25cm;
+            border-bottom: 2px solid var(--desert-sand);
+            padding-bottom: 0.1cm;
+            text-transform: uppercase;
+        }
+        
+        .section-subheader {
+            font-weight: 700;
+            color: var(--rust);
+            font-size: 10pt;
+            margin-top: 0.2cm;
+            margin-bottom: 0.1cm;
+        }
+        
+        /* STATS */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.2cm;
+            margin-top: 0.2cm;
+        }
+        
+        .stat-box {
+            background: rgba(212, 165, 116, 0.1);
+            border: 1px solid var(--desert-sand);
+            border-radius: 3px;
+            padding: 0.15cm;
+            text-align: center;
+        }
+        
+        .stat-name {
+            font-size: 8pt;
+            color: var(--rust);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .stat-value {
+            font-family: 'Special Elite', cursive;
+            font-size: 16pt;
+            color: var(--blood-red);
+            font-weight: 700;
+            margin-top: 0.1cm;
+        }
+        
+        /* HP & STRESS */
+        .hp-track {
+            display: flex;
+            gap: 0.15cm;
+            margin-top: 0.2cm;
+            justify-content: center;
+        }
+        
+        .hp-box {
+            width: 0.6cm;
+            height: 0.6cm;
+            border: 2px solid var(--blood-red);
+            border-radius: 2px;
+            background: white;
+        }
+        
+        .stress-track {
+            display: flex;
+            gap: 0.15cm;
+            margin-top: 0.2cm;
+            justify-content: center;
+        }
+        
+        .stress-box {
+            width: 0.6cm;
+            height: 0.6cm;
+            border: 2px solid var(--rust);
+            border-radius: 2px;
+            background: white;
+        }
+        
+        /* ARMI */
+        .weapon-entry {
+            background: rgba(139, 0, 0, 0.05);
+            border-left: 3px solid var(--blood-red);
+            padding: 0.2cm;
+            margin: 0.2cm 0;
+            font-size: 9pt;
+        }
+        
+        .weapon-name {
+            font-family: 'Special Elite', cursive;
+            font-weight: 700;
+            color: var(--blood-red);
+            margin-bottom: 0.1cm;
+        }
+        
+        /* ABILITÀ */
+        .ability-entry {
+            background: rgba(212, 165, 116, 0.1);
+            border-left: 3px solid var(--rust);
+            padding: 0.2cm;
+            margin: 0.15cm 0;
+            font-size: 9pt;
+        }
+        
+        .ability-name {
+            font-weight: 700;
+            color: var(--rust);
+        }
+        
+        /* BACKGROUND */
+        .background-text {
+            font-size: 9pt;
+            line-height: 1.4;
+            text-align: justify;
+            margin-top: 0.2cm;
+        }
+        
+        /* CONNESSIONI */
+        .connection-line {
+            border-bottom: 1px dotted var(--desert-sand);
+            margin: 0.2cm 0;
+            padding-bottom: 0.1cm;
+            font-size: 9pt;
+        }
+        
+        /* NOTE AREA */
+        .notes-area {
+            border: 1px solid var(--desert-sand);
+            min-height: 1.5cm;
+            background: white;
+            padding: 0.2cm;
+            font-size: 9pt;
+            border-radius: 3px;
+        }
+        
+        /* THRESHOLDS */
+        .threshold-box {
+            display: inline-block;
+            background: rgba(139, 0, 0, 0.1);
+            border: 1px solid var(--blood-red);
+            padding: 0.1cm 0.2cm;
+            border-radius: 3px;
+            margin: 0.05cm;
+            font-size: 8pt;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .character-sheet {
+                box-shadow: none;
+                margin: 0;
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========================================
+         JACK MALONE - GUNSLINGER
+         ======================================== -->
+    <div class="character-sheet">
+        <div class="character-header">
+            <div class="character-name">Jack Malone</div>
+            <div class="character-archetype">Il Pistolero • Gunslinger</div>
+            <div class="character-tagline">"Ogni proiettile ha un nome. Spero che nessuno di questi abbia il mio."</div>
+        </div>
+
+        <div class="sheet-body">
+            <!-- COLONNA 1: STATS & HP -->
+            <div>
+                <div class="section">
+                    <div class="section-header">Tratti</div>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-name">Agilità</div>
+                            <div class="stat-value">+2</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-name">Forza</div>
+                            <div class="stat-value">+1</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-name">Finezza</div>
+                            <div class="stat-value">0</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-name">Istinto</div>
+                            <div class="stat-value">+2</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-name">Presenza</div>
+                            <div class="stat-value">0</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-name">Conoscenza</div>
+                            <div class="stat-value">-1</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Punti Ferita</div>
+                    <div style="text-align: center; margin-top: 0.2cm;">
+                        <div style="font-size: 9pt; color: var(--rust); margin-bottom: 0.1cm;">
+                            <strong>HP Totali: 6</strong>
+                        </div>
+                        <div class="hp-track">
+                            <div class="hp-box"></div>
+                            <div class="hp-box"></div>
+                            <div class="hp-box"></div>
+                            <div class="hp-box"></div>
+                            <div class="hp-box"></div>
+                            <div class="hp-box"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="section-subheader" style="margin-top: 0.3cm;">Soglie Danno</div>
+                    <div style="text-align: center;">
+                        <span class="threshold-box"><strong>Minor:</strong> 4-8 (1 HP)</span>
+                        <span class="threshold-box"><strong>Major:</strong> 9-13 (2 HP)</span>
+                        <span class="threshold-box"><strong>Severe:</strong> 14+ (3 HP)</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Stress</div>
+                    <div style="text-align: center; margin-top: 0.2cm;">
+                        <div class="stress-track">
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Tenuta Mentale</div>
+                    <div style="text-align: center; margin-top: 0.2cm;">
+                        <div class="stress-track">
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                        </div>
+                    </div>
+                    <div style="font-size: 8pt; color: #555; margin-top: 0.2cm; text-align: center;">
+                        <strong>Condizione Mentale:</strong> Veterano Traumatizzato<br>
+                        Vulnerabile a ricordi della guerra
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Difese</div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.2cm; margin-top: 0.2cm;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 8pt; color: var(--rust);">EVASIONE</div>
+                            <div style="font-family: 'Special Elite', cursive; font-size: 18pt; color: var(--blood-red);">12</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 8pt; color: var(--rust);">ARMATURA</div>
+                            <div style="font-family: 'Special Elite', cursive; font-size: 18pt; color: var(--blood-red);">3</div>
+                        </div>
+                    </div>
+                    <div style="font-size: 8pt; margin-top: 0.2cm;">
+                        <strong>Armatura Attiva:</strong> Gilet di pelle rinforzato
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Speranza</div>
+                    <div style="text-align: center; margin-top: 0.2cm;">
+                        <div class="hp-track">
+                            <div class="hp-box" style="border-color: var(--desert-sand);"></div>
+                            <div class="hp-box" style="border-color: var(--desert-sand);"></div>
+                            <div class="hp-box" style="border-color: var(--desert-sand);"></div>
+                            <div class="hp-box" style="border-color: var(--desert-sand);"></div>
+                            <div class="hp-box" style="border-color: var(--desert-sand);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLONNA 2: ARMI & ABILITÀ -->
+            <div>
+                <div class="section">
+                    <div class="section-header">Armi</div>
+                    
+                    <div class="weapon-entry">
+                        <div class="weapon-name">⚔ Peacemaker (Revolver)</div>
+                        <div><strong>Danno:</strong> 1d8+2 fisico</div>
+                        <div><strong>Range:</strong> Ravvicinata</div>
+                        <div><strong>Colpi:</strong> 6 (ricaricare = azione minore)</div>
+                        <div><strong>Feature:</strong> Quick Draw (+2 iniziativa duelli)</div>
+                    </div>
+
+                    <div class="weapon-entry">
+                        <div class="weapon-name">⚔ Winchester (Fucile)</div>
+                        <div><strong>Danno:</strong> 2d6 fisico</div>
+                        <div><strong>Range:</strong> Lontana</div>
+                        <div><strong>Feature:</strong> Penetrante 2 (ignora 2 armatura)</div>
+                    </div>
+
+                    <div class="weapon-entry">
+                        <div class="weapon-name">⚔ Coltello da Combattimento</div>
+                        <div><strong>Danno:</strong> 1d6 fisico</div>
+                        <div><strong>Range:</strong> Molto Ravvicinata</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Abilità di Classe</div>
+                    
+                    <div class="ability-entry">
+                        <div class="ability-name">🎯 Quickdraw (Passiva)</div>
+                        <div>Nei duelli, +2 al tiro Estrazione. Puoi estrarre e sparare come singola azione.</div>
+                    </div>
+
+                    <div class="ability-entry">
+                        <div class="ability-name">🎯 Tiro Impossibile</div>
+                        <div><strong>Costo:</strong> 1 Speranza</div>
+                        <div>Ignora copertura/penalità range. Tiro attacco con vantaggio. Se colpisci, +1d8 danno.</div>
+                    </div>
+
+                    <div class="ability-entry">
+                        <div class="ability-name">🎯 Riflessi da Pistolero</div>
+                        <div><strong>Trigger:</strong> Nemico ti attacca in Ravvicinata</div>
+                        <div>Reazione: Tiro Agilità vs loro attacco. Se vinci, schivi e contrattacchi.</div>
+                    </div>
+
+                    <div class="ability-entry">
+                        <div class="ability-name">🎯 Fan the Hammer</div>
+                        <div><strong>Costo:</strong> Tutti i colpi rimasti nel revolver</div>
+                        <div>Svuoti il tamburo su un nemico. Tira attacco: successo = danno × colpi spesi.</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Esperienze</div>
+                    <div style="margin-top: 0.2cm; font-size: 9pt;">
+                        <div style="margin-bottom: 0.15cm;"><strong>Veterano della Guerra Civile (+2):</strong> Tattiche militari, sopravvivenza in battaglia, comando truppe</div>
+                        <div style="margin-bottom: 0.15cm;"><strong>Cacciatore di Taglie (+1):</strong> Tracciare fuggiaschi, interrogare informatori, leggere manifesti</div>
+                        <div><strong>Mano Maledetta (+1):</strong> Quando usi la mano sinistra (dannata), +1 ai tiri ma riempi 1 Tenuta</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLONNA 3: BACKGROUND & CONNESSIONI -->
+            <div>
+                <div class="section">
+                    <div class="section-header">Background</div>
+                    <div class="background-text">
+                        <p><strong>Età:</strong> 34 anni</p>
+                        <p><strong>Origine:</strong> Kentucky, ex-Confederato</p>
+                        <p style="margin-top: 0.2cm;">
+                        Jack Malone è sopravvissuto alla Guerra Civile, ma non ne è uscito intero. Durante la battaglia di Shiloh, la sua mano sinistra fu gravemente ferita e divenne gangrenosa. Un medico da campo la amputò senza anestesia mentre Jack era cosciente.
+                        </p>
+                        <p style="margin-top: 0.2cm;">
+                        Tre giorni dopo, si svegliò con la mano ricresciuta. Funzionava perfettamente ma era fredda al tatto, con vene nere sotto la pelle pallida. Gli incubi iniziarono quella stessa notte.
+                        </p>
+                        <p style="margin-top: 0.2cm;">
+                        Ora lavora come cacciatore di taglie, cercando di non pensare a cosa sia davvero la sua mano sinistra.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Connessioni</div>
+                    <div class="connection-line">
+                        <strong>→ Sarah Blackwood:</strong> Mi ha salvato la vita quando ero ferito. Ma ho ucciso il suo mentore durante un duello anni fa.
+                    </div>
+                    <div class="connection-line">
+                        <strong>→ Doc Artemis:</strong> Sa qualcosa sulla mia mano che non mi sta dicendo. Lo odio e ne ho bisogno allo stesso tempo.
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Segreto Oscuro</div>
+                    <div style="font-size: 9pt; margin-top: 0.2cm; line-height: 1.4;">
+                        <p><strong>La Mano Maledetta:</strong></p>
+                        <p style="margin-top: 0.1cm;">
+                        Quando Jack dorme, la mano sinistra si muove da sola. Ha iniziato a trovare oggetti (monete, proiettili, piccoli animali morti) disposti in cerchi perfetti vicino al suo giaciglio.
+                        </p>
+                        <p style="margin-top: 0.1cm;">
+                        Quando usa la mano per sparare, i suoi colpi sono innaturalmente precisi. Ma ogni volta, sente una voce sussurrare nel suo orecchio: <em>"Stai tornando da me."</em>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Equipaggiamento</div>
+                    <div style="font-size: 9pt; margin-top: 0.2cm;">
+                        <ul style="margin-left: 0.4cm; line-height: 1.5;">
+                            <li>50 proiettili (revolver)</li>
+                            <li>20 proiettili (fucile)</li>
+                            <li>Kit pulizia armi</li>
+                            <li>Borraccia whisky</li>
+                            <li>Foto sbiadita (donna sconosciuta)</li>
+                            <li>Guanto nero (copre mano sinistra)</li>
+                            <li>Manifesti taglie (3)</li>
+                            <li>Benda e alcol (medicina base)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Note</div>
+                    <div class="notes-area"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================
+         SARAH BLACKWOOD - PREACHER
+         ======================================== -->
+    <div class="character-sheet">
+        <div class="character-header">
+            <div class="character-name">Sarah Blackwood</div>
+            <div class="character-archetype">La Predicatrice • Fallen Preacher</div>
+            <div class="character-tagline">"Dio mi ha abbandonato. Ma porto ancora la Sua luce."</div>
+        </div>
+
+        <div class="sheet-body">
+            <!-- COLONNA 1: STATS & HP -->
+            <div>
+                <div class="section">
+                    <div class="section-header">Tratti</div>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-name">Agilità</div>
+                            <div class="stat-value">0</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-name">Forza</div>
+                            <div class="stat-value">+1</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-name">Finezza</div>
+                            <div class="stat-value">+1</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-name">Istinto</div>
+                            <div class="stat-value">+2</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-name">Presenza</div>
+                            <div class="stat-value">+2</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-name">Conoscenza</div>
+                            <div class="stat-value">0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Punti Ferita</div>
+                    <div style="text-align: center; margin-top: 0.2cm;">
+                        <div style="font-size: 9pt; color: var(--rust); margin-bottom: 0.1cm;">
+                            <strong>HP Totali: 6</strong>
+                        </div>
+                        <div class="hp-track">
+                            <div class="hp-box"></div>
+                            <div class="hp-box"></div>
+                            <div class="hp-box"></div>
+                            <div class="hp-box"></div>
+                            <div class="hp-box"></div>
+                            <div class="hp-box"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="section-subheader" style="margin-top: 0.3cm;">Soglie Danno</div>
+                    <div style="text-align: center;">
+                        <span class="threshold-box"><strong>Minor:</strong> 3-7 (1 HP)</span>
+                        <span class="threshold-box"><strong>Major:</strong> 8-12 (2 HP)</span>
+                        <span class="threshold-box"><strong>Severe:</strong> 13+ (3 HP)</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Stress</div>
+                    <div style="text-align: center; margin-top: 0.2cm;">
+                        <div class="stress-track">
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Tenuta Mentale</div>
+                    <div style="text-align: center; margin-top: 0.2cm;">
+                        <div class="stress-track">
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                        </div>
+                    </div>
+                    <div style="font-size: 8pt; color: #555; margin-top: 0.2cm; text-align: center;">
+                        <strong>Condizione Mentale:</strong> Fede Spezzata<br>
+                        Vulnerabile a prove che Dio non ascolta
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Difese</div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.2cm; margin-top: 0.2cm;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 8pt; color: var(--rust);">EVASIONE</div>
+                            <div style="font-family: 'Special Elite', cursive; font-size: 18pt; color: var(--blood-red);">10</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 8pt; color: var(--rust);">ARMATURA</div>
+                            <div style="font-family: 'Special Elite', cursive; font-size: 18pt; color: var(--blood-red);">5</div>
+                        </div>
+                    </div>
+                    <div style="font-size: 8pt; margin-top: 0.2cm;">
+                        <strong>Armatura Attiva:</strong> Corazza da predicatore (piastre sotto veste)
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Speranza</div>
+                    <div style="text-align: center; margin-top: 0.2cm;">
+                        <div class="hp-track">
+                            <div class="hp-box" style="border-color: var(--desert-sand);"></div>
+                            <div class="hp-box" style="border-color: var(--desert-sand);"></div>
+                            <div class="hp-box" style="border-color: var(--desert-sand);"></div>
+                            <div class="hp-box" style="border-color: var(--desert-sand);"></div>
+                            <div class="hp-box" style="border-color: var(--desert-sand);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLONNA 2: ARMI & ABILITÀ -->
+            <div>
+                <div class="section">
+                    <div class="section-header">Armi</div>
+                    
+                    <div class="weapon-entry">
+                        <div class="weapon-name">✝ Bibbia Rinforzata (Contundente)</div>
+                        <div><strong>Danno:</strong> 1d6+2 fisico</div>
+                        <div><strong>Range:</strong> Molto Ravvicinata</div>
+                        <div><strong>Feature:</strong> Benedetta (contro non-morti: +1d8)</div>
+                    </div>
+
+                    <div class="weapon-entry">
+                        <div class="weapon-name">✝ Revolver "Redenzione"</div>
+                        <div><strong>Danno:</strong> 1d8 fisico</div>
+                        <div><strong>Range:</strong> Ravvicinata</div>
+                        <div><strong>Colpi:</strong> 6</div>
+                    </div>
+
+                    <div class="weapon-entry">
+                        <div class="weapon-name">✝ Croce d'Argento Affilata</div>
+                        <div><strong>Danno:</strong> 1d4 fisico</div>
+                        <div><strong>Range:</strong> Molto Ravvicinata</div>
+                        <div><strong>Feature:</strong> Argento (extra danno vs creature soprannaturali)</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Abilità di Classe</div>
+                    
+                    <div class="ability-entry">
+                        <div class="ability-name">✝ Parole di Fede (Azione)</div>
+                        <div><strong>Costo:</strong> 1 Speranza</div>
+                        <div>Presenza vs Presenza nemico. Successo: rimuovi 1 condizione da alleato o infliggi Scosso a nemico.</div>
+                    </div>
+
+                    <div class="ability-entry">
+                        <div class="ability-name">✝ Fuoco Purificatore</div>
+                        <div><strong>Costo:</strong> 2 Speranza</div>
+                        <div>La tua arma si accende di fiamme bianche (1 minuto). Attacchi: +2d6 danno sacro, ignorano armatura non-morti.</div>
+                    </div>
+
+                    <div class="ability-entry">
+                        <div class="ability-name">✝ Scacciare il Male</div>
+                        <div><strong>Costo:</strong> 1 Speranza</div>
+                        <div>Presenza vs Istinto (tutti non-morti/demoni in Ravvicinata). Successo: fuggono terrorizzati per 1d4 round.</div>
+                    </div>
+
+                    <div class="ability-entry">
+                        <div class="ability-name">✝ Imposizione delle Mani</div>
+                        <div><strong>Costo:</strong> 1 Speranza</div>
+                        <div>Tocca alleato: cura 2d6 HP. Puoi usare su te stessa ma costa +1 Speranza aggiuntiva.</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Esperienze</div>
+                    <div style="margin-top: 0.2cm; font-size: 9pt;">
+                        <div style="margin-bottom: 0.15cm;"><strong>Predicatrice Itinerante (+2):</strong> Teologia, rituali, riconoscere demoni/possessioni</div>
+                        <div style="margin-bottom: 0.15cm;"><strong>Esorcista Non Ufficiale (+1):</strong> Quando affronto soprannaturale, posso aggiungere +1</div>
+                        <div><strong>Dubbi di Fede (+1):</strong> Quando dubito di Dio, guadagno +1 ma riempio 1 Tenuta</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLONNA 3: BACKGROUND & CONNESSIONI -->
+            <div>
+                <div class="section">
+                    <div class="section-header">Background</div>
+                    <div class="background-text">
+                        <p><strong>Età:</strong> 29 anni</p>
+                        <p><strong>Origine:</strong> Boston, figlia di predicatore</p>
+                        <p style="margin-top: 0.2cm;">
+                        Sarah Blackwood crebbe leggendo la Bibbia ogni notte con suo padre, Reverendo Josiah Blackwood. Quando aveva 16 anni, assistette a qualcosa che non avrebbe mai dovuto vedere: un demone possedeva un membro della congregazione durante la messa.
+                        </p>
+                        <p style="margin-top: 0.2cm;">
+                        Suo padre tentò un esorcismo. Fallì. Il demone lo uccise davanti alla congregazione terrorizzata. Sarah, in preda alla disperazione, recitò le parole di potere che aveva sentito sussurrare dall'entità. Funzionò. Il demone fu bandito.
+                        </p>
+                        <p style="margin-top: 0.2cm;">
+                        Ma Dio non rispose quando urlò perché le aveva portato via il padre. Da quel giorno, le sue preghiere sono rimaste senza risposta. Eppure, incredibilmente, i suoi poteri funzionano ancora.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Connessioni</div>
+                    <div class="connection-line">
+                        <strong>→ Jack Malone:</strong> Gli ho salvato la vita. Ma lui uccise il mio mentore, Reverendo Marcus, anni fa.
+                    </div>
+                    <div class="connection-line">
+                        <strong>→ Doc Artemis:</strong> Mi ha aiutata dopo la morte di mio padre. Mi disse cose sul soprannaturale che la Chiesa nega esistano.
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Segreto Oscuro</div>
+                    <div style="font-size: 9pt; margin-top: 0.2cm; line-height: 1.4;">
+                        <p><strong>La Fonte del Potere:</strong></p>
+                        <p style="margin-top: 0.1cm;">
+                        Sarah non lo ammetterebbe mai, ma sa che i suoi poteri non vengono da Dio. Quando li usa, sente una presenza fredda e antica che la osserva. Qualcosa risponde alle sue preghiere, ma non è divino.
+                        </p>
+                        <p style="margin-top: 0.1cm;">
+                        La notte, sogna una biblioteca infinita dove libri si scrivono da soli. Una voce le sussurra: <em>"Noi abbiamo sempre risposto. Tu hai solo iniziato ad ascoltare."</em>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Equipaggiamento</div>
+                    <div style="font-size: 9pt; margin-top: 0.2cm;">
+                        <ul style="margin-left: 0.4cm; line-height: 1.5;">
+                            <li>Bibbia del padre (bruciature sui bordi)</li>
+                            <li>Acqua santa (3 fiale)</li>
+                            <li>Sale benedetto (piccolo sacchetto)</li>
+                            <li>30 proiettili d'argento</li>
+                            <li>Rosario di legno di frassino</li>
+                            <li>Diario preghiere (metà pagine strappate)</li>
+                            <li>Kit medicazione (bende, alcol)</li>
+                            <li>Foto padre (la guarda ogni sera)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Note</div>
+                    <div class="notes-area"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================
+         DOC ARTEMIS - SNAKE OIL SALESMAN
+         ======================================== -->
+    <div class="character-sheet">
+        <div class="character-header">
+            <div class="character-name">Doc Artemis</div>
+            <div class="character-archetype">Il Ciarlatano • Snake Oil Salesman</div>
+            <div class="character-tagline">"Ogni verità è una bugia ben confezionata."</div>
+        </div>
+
+        <div class="sheet-body">
+            <!-- COLONNA 1: STATS & HP -->
+            <div>
+                <div class="section">
+                    <div class="section-header">Tratti</div>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-name">Agilità</div>
+                            <div class="stat-value">+1</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-name">Forza</div>
+                            <div class="stat-value">-1</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-name">Finezza</div>
+                            <div class="stat-value">+2</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-name">Istinto</div>
+                            <div class="stat-value">+1</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-name">Presenza</div>
+                            <div class="stat-value">+2</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-name">Conoscenza</div>
+                            <div class="stat-value">+2</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Punti Ferita</div>
+                    <div style="text-align: center; margin-top: 0.2cm;">
+                        <div style="font-size: 9pt; color: var(--rust); margin-bottom: 0.1cm;">
+                            <strong>HP Totali: 5</strong>
+                        </div>
+                        <div class="hp-track">
+                            <div class="hp-box"></div>
+                            <div class="hp-box"></div>
+                            <div class="hp-box"></div>
+                            <div class="hp-box"></div>
+                            <div class="hp-box"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="section-subheader" style="margin-top: 0.3cm;">Soglie Danno</div>
+                    <div style="text-align: center;">
+                        <span class="threshold-box"><strong>Minor:</strong> 3-7 (1 HP)</span>
+                        <span class="threshold-box"><strong>Major:</strong> 8-12 (2 HP)</span>
+                        <span class="threshold-box"><strong>Severe:</strong> 13+ (3 HP)</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Stress</div>
+                    <div style="text-align: center; margin-top: 0.2cm;">
+                        <div class="stress-track">
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Tenuta Mentale</div>
+                    <div style="text-align: center; margin-top: 0.2cm;">
+                        <div class="stress-track">
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                            <div class="stress-box"></div>
+                        </div>
+                    </div>
+                    <div style="font-size: 8pt; color: #555; margin-top: 0.2cm; text-align: center;">
+                        <strong>Condizione Mentale:</strong> Nichilista Cinico<br>
+                        Vulnerabile a conoscenza che rompe realtà
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Difese</div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.2cm; margin-top: 0.2cm;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 8pt; color: var(--rust);">EVASIONE</div>
+                            <div style="font-family: 'Special Elite', cursive; font-size: 18pt; color: var(--blood-red);">11</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 8pt; color: var(--rust);">ARMATURA</div>
+                            <div style="font-family: 'Special Elite', cursive; font-size: 18pt; color: var(--blood-red);">2</div>
+                        </div>
+                    </div>
+                    <div style="font-size: 8pt; margin-top: 0.2cm;">
+                        <strong>Armatura Attiva:</strong> Gilet elegante (tasche rinforzate acciaio)
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Speranza</div>
+                    <div style="text-align: center; margin-top: 0.2cm;">
+                        <div class="hp-track">
+                            <div class="hp-box" style="border-color: var(--desert-sand);"></div>
+                            <div class="hp-box" style="border-color: var(--desert-sand);"></div>
+                            <div class="hp-box" style="border-color: var(--desert-sand);"></div>
+                            <div class="hp-box" style="border-color: var(--desert-sand);"></div>
+                            <div class="hp-box" style="border-color: var(--desert-sand);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLONNA 2: ARMI & ABILITÀ -->
+            <div>
+                <div class="section">
+                    <div class="section-header">Armi</div>
+                    
+                    <div class="weapon-entry">
+                        <div class="weapon-name">🎩 Bastone da Passeggio (Stocco Nascosto)</div>
+                        <div><strong>Danno:</strong> 1d6+1 fisico</div>
+                        <div><strong>Range:</strong> Molto Ravvicinata</div>
+                        <div><strong>Feature:</strong> Nascosta (sorpresa: vantaggio primo attacco)</div>
+                    </div>
+
+                    <div class="weapon-entry">
+                        <div class="weapon-name">🎩 Derringer (Pistola Tascabile)</div>
+                        <div><strong>Danno:</strong> 1d8 fisico</div>
+                        <div><strong>Range:</strong> Molto Ravvicinata</div>
+                        <div><strong>Colpi:</strong> 2 (ricaricare = azione)</div>
+                    </div>
+
+                    <div class="weapon-entry">
+                        <div class="weapon-name">🎩 Polvere Accecante</div>
+                        <div><strong>Danno:</strong> Nessuno</div>
+                        <div><strong>Range:</strong> Ravvicinata</div>
+                        <div><strong>Feature:</strong> Finesse vs Istinto. Successo: Accecato 1 round</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Abilità di Classe</div>
+                    
+                    <div class="ability-entry">
+                        <div class="ability-name">🎩 Olio di Serpente (Azione)</div>
+                        <div><strong>Costo:</strong> 1 utilizzo</div>
+                        <div>Alleato beve: cura 2d6 HP + rimuovi 1 veleno/malattia. Hai 3 utilizzi. Reintegra in città.</div>
+                    </div>
+
+                    <div class="ability-entry">
+                        <div class="ability-name">🎩 Ciarlatano Esperto</div>
+                        <div><strong>Passiva</strong></div>
+                        <div>Vantaggio su: Inganno, Contrattare, Falsificare documenti, Conoscenza (alchimia/medicina).</div>
+                    </div>
+
+                    <div class="ability-entry">
+                        <div class="ability-name">🎩 Analisi Rapida</div>
+                        <div><strong>Costo:</strong> 1 Speranza</div>
+                        <div>Studia nemico (azione minore). GM rivela: 1 debolezza, 1 resistenza, 1 abilità speciale.</div>
+                    </div>
+
+                    <div class="ability-entry">
+                        <div class="ability-name">🎩 Fuga Strategica</div>
+                        <div><strong>Trigger:</strong> Nemico ti attacca</div>
+                        <div>Reazione: Finezza vs attacco nemico. Successo: schivi e muovi in Ravvicinata (non provoca attacchi).</div>
+                    </div>
+
+                    <div class="ability-entry">
+                        <div class="ability-name">🎩 Preparato per Tutto</div>
+                        <div><strong>1/sessione</strong></div>
+                        <div>Dichiara che avevi preparato un oggetto utile (valore ≤100$). Lo tiri fuori dalla borsa. GM approva.</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Esperienze</div>
+                    <div style="margin-top: 0.2cm; font-size: 9pt;">
+                        <div style="margin-bottom: 0.15cm;"><strong>Studioso dell'Occulto (+2):</strong> Riconoscere simboli, rituali, entità soprannaturali</div>
+                        <div style="margin-bottom: 0.15cm;"><strong>Venditore Ambulante (+1):</strong> Persuasione, contrattazione, leggere persone</div>
+                        <div><strong>Ha Visto Troppo (+1):</strong> Quando affronto orrore cosmico, +1 ma riempio 1 Tenuta</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLONNA 3: BACKGROUND & CONNESSIONI -->
+            <div>
+                <div class="section">
+                    <div class="section-header">Background</div>
+                    <div class="background-text">
+                        <p><strong>Età:</strong> 42 anni</p>
+                        <p><strong>Origine:</strong> New Orleans, ex-professore universitario</p>
+                        <p style="margin-top: 0.2cm;">
+                        Dorian Artemis era un professore rispettato di antropologia all'Università di New Orleans. Durante una spedizione in Messico, scoprì rovine precolombiane con iscrizioni che non corrispondevano a nessuna civiltà conosciuta.
+                        </p>
+                        <p style="margin-top: 0.2cm;">
+                        Tradusse un testo. Grande errore. Le parole evocarono qualcosa. L'intera spedizione fu massacrata. Lui sopravvisse solo perché fuggì, lasciando indietro studenti e colleghi.
+                        </p>
+                        <p style="margin-top: 0.2cm;">
+                        L'università lo dichiarò pazzo e lo licenziò. Ora vende "medicine miracolose" viaggiando per il West, studiando segretamente l'occulto, cercando di capire cosa ha evocato quella notte.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Connessioni</div>
+                    <div class="connection-line">
+                        <strong>→ Jack Malone:</strong> So cosa è davvero la sua mano sinistra. Non glielo dirò finché non sarà pronto.
+                    </div>
+                    <div class="connection-line">
+                        <strong>→ Sarah Blackwood:</strong> L'ho aiutata dopo la morte del padre. Le ho insegnato verità che la Chiesa nasconde.
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Segreto Oscuro</div>
+                    <div style="font-size: 9pt; margin-top: 0.2cm; line-height: 1.4;">
+                        <p><strong>Il Testo Maledetto:</strong></p>
+                        <p style="margin-top: 0.1cm;">
+                        Doc porta sempre con sé un taccuino con le traduzioni delle iscrizioni messicane. Ogni notte, aggiunge nuove note. Ma al mattino, scopre che le pagine contengono paragrafi che non ricorda di aver scritto.
+                        </p>
+                        <p style="margin-top: 0.1cm;">
+                        Qualcosa sta usando la sua mano per completare il rituale. Ogni pagina lo avvicina a qualcosa di terribile. Ma non riesce a smettere di leggere.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Equipaggiamento</div>
+                    <div style="font-size: 9pt; margin-top: 0.2cm;">
+                        <ul style="margin-left: 0.4cm; line-height: 1.5;">
+                            <li>Borsa medicinali (varie fiale colorate)</li>
+                            <li>Olio di Serpente genuino (3 dosi)</li>
+                            <li>Taccuino traduzioni (scritto in codice)</li>
+                            <li>Lente d'ingrandimento</li>
+                            <li>Kit chirurgia da campo</li>
+                            <li>10 proiettili (derringer)</li>
+                            <li>Polvere accecante (2 dosi)</li>
+                            <li>Libro "Miti del Nuovo Mondo" (annotato)</li>
+                            <li>Foto spedizione (facce cancellate)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-header">Note</div>
+                    <div class="notes-area"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

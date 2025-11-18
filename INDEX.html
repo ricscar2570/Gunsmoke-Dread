@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunsmoke & Dread - Quickstart Index</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rye&family=Crimson+Text:wght@400;600;700&family=Special+Elite&display=swap');
+        
+        :root {
+            --desert-sand: #d4a574;
+            --blood-red: #8b0000;
+            --night-black: #1a1a1a;
+            --parchment: #f4e8d0;
+            --rust: #a0522d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            background: linear-gradient(135deg, var(--night-black) 0%, #2a1810 100%);
+            color: var(--parchment);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--parchment);
+            color: var(--night-black);
+            border: 5px solid var(--rust);
+            box-shadow: 0 10px 50px rgba(0,0,0,0.5);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--blood-red) 0%, #5a0000 100%);
+            color: var(--parchment);
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: '🔫';
+            position: absolute;
+            left: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 60px;
+            opacity: 0.3;
+        }
+        
+        header::after {
+            content: '💀';
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 60px;
+            opacity: 0.3;
+        }
+        
+        h1 {
+            font-family: 'Rye', cursive;
+            font-size: 48px;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            letter-spacing: 3px;
+        }
+        
+        .subtitle {
+            font-family: 'Special Elite', cursive;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.9;
+        }
+        
+        .tagline {
+            margin-top: 20px;
+            font-style: italic;
+            font-size: 16px;
+            opacity: 0.8;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro {
+            background: rgba(212, 165, 116, 0.1);
+            border-left: 5px solid var(--desert-sand);
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 5px;
+        }
+        
+        .intro p {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .intro strong {
+            color: var(--blood-red);
+        }
+        
+        h2 {
+            font-family: 'Rye', cursive;
+            color: var(--blood-red);
+            font-size: 32px;
+            margin: 40px 0 25px 0;
+            border-bottom: 3px solid var(--desert-sand);
+            padding-bottom: 10px;
+        }
+        
+        .file-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .file-card {
+            background: white;
+            border: 3px solid var(--rust);
+            border-radius: 8px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .file-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--blood-red), var(--rust), var(--desert-sand));
+        }
+        
+        .file-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(139, 0, 0, 0.3);
+            border-color: var(--blood-red);
+        }
+        
+        .file-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .file-title {
+            font-family: 'Special Elite', cursive;
+            font-size: 22px;
+            color: var(--blood-red);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .file-description {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .file-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid var(--desert-sand);
+            font-size: 14px;
+            color: var(--rust);
+        }
+        
+        .file-link {
+            display: inline-block;
+            background: var(--blood-red);
+            color: var(--parchment);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: 'Special Elite', cursive;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .file-link:hover {
+            background: var(--night-black);
+            transform: scale(1.05);
+        }
+        
+        .priority-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .priority-essential {
+            background: var(--blood-red);
+            color: white;
+        }
+        
+        .priority-recommended {
+            background: var(--rust);
+            color: white;
+        }
+        
+        .priority-optional {
+            background: var(--desert-sand);
+            color: var(--night-black);
+        }
+        
+        .quickstart-path {
+            background: rgba(139, 0, 0, 0.1);
+            border: 3px solid var(--blood-red);
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .quickstart-path h3 {
+            font-family: 'Rye', cursive;
+            color: var(--blood-red);
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        
+        .quickstart-path ol {
+            margin-left: 25px;
+            font-size: 16px;
+        }
+        
+        .quickstart-path li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        
+        .quickstart-path strong {
+            color: var(--blood-red);
+        }
+        
+        footer {
+            background: var(--night-black);
+            color: var(--parchment);
+            padding: 30px;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+        }
+        
+        footer a {
+            color: var(--desert-sand);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        
+        footer a:hover {
+            color: var(--parchment);
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 32px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            header::before,
+            header::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GUNSMOKE & DREAD</h1>
+            <div class="subtitle">Quickstart per Daggerheart</div>
+            <div class="tagline">Dove i pistoleri affrontano orrori cosmici</div>
+        </header>
+
+        <div class="content">
+            <div class="intro">
+                <p><strong>Benvenuto nel Weird West!</strong></p>
+                <p>Questo quickstart contiene tutto il necessario per giocare un'avventura completa di western horror utilizzando il sistema Daggerheart. Tre personaggi pregenerati, regole speciali per l'ambientazione, un'avventura in tre atti, e materiali di supporto.</p>
+                <p><strong>Durata della sessione:</strong> 3-4 ore • <strong>Giocatori:</strong> 3 (+ 1 GM) • <strong>Difficoltà:</strong> Adatto a principianti</p>
+            </div>
+
+            <div class="quickstart-path">
+                <h3>🎯 Percorso Rapido per Iniziare</h3>
+                <ol>
+                    <li><strong>GM:</strong> Apri <em>gunsmoke-dread-quickstart.html</em> e leggi le sezioni "Introduzione" e "Come Leggere Questo Quickstart" (10 minuti)</li>
+                    <li><strong>GM:</strong> Stampa <em>gunsmoke-dread-quick-reference.html</em> e tienila dietro lo schermo (essenziale!)</li>
+                    <li><strong>Giocatori:</strong> Stampa <em>gunsmoke-dread-character-sheets.html</em> e scegliete i vostri personaggi</li>
+                    <li><strong>Tutti:</strong> Leggete la sezione "Ambientazione" nel quickstart (5 minuti)</li>
+                    <li><strong>Iniziate a giocare!</strong> Il GM consulta Part 2 e Part 3 durante la sessione secondo necessità</li>
+                </ol>
+            </div>
+
+            <h2>📚 File del Quickstart</h2>
+
+            <div class="file-grid">
+                <!-- Quickstart principale -->
+                <div class="file-card">
+                    <span class="file-icon">📖</span>
+                    <div class="file-title">gunsmoke-dread-quickstart.html</div>
+                    <div class="file-description">
+                        <strong>File principale</strong> - Contiene: Introduzione completa, spiegazione del Weird West, guida "Come Leggere Questo Quickstart", le schede dei tre personaggi (Jack Malone, Sarah Blackwood, Doc Artemis) con background completi e statistiche.
+                    </div>
+                    <div class="file-meta">
+                        <span class="priority-badge priority-essential">🔥 ESSENZIALE</span>
+                        <a href="gunsmoke-dread-quickstart.html" class="file-link">Apri →</a>
+                    </div>
+                </div>
+
+                <!-- Quick Reference -->
+                <div class="file-card">
+                    <span class="file-icon">📄</span>
+                    <div class="file-title">gunsmoke-dread-quick-reference.html</div>
+                    <div class="file-description">
+                        <strong>Scheda di riferimento rapido (1 pagina A4)</strong> - Tutte le regole essenziali in formato compatto: tiri base, difficoltà, distanze, combattimento, armi, duelli, Tenuta Mentale, condizioni. <strong>STAMPA PRIMA DELLA SESSIONE!</strong> È lo strumento più utile per il GM.
+                    </div>
+                    <div class="file-meta">
+                        <span class="priority-badge priority-essential">🔥 STAMPA QUESTO</span>
+                        <a href="gunsmoke-dread-quick-reference.html" class="file-link">Apri →</a>
+                    </div>
+                </div>
+
+                <!-- Character Sheets -->
+                <div class="file-card">
+                    <span class="file-icon">📋</span>
+                    <div class="file-title">gunsmoke-dread-character-sheets.html</div>
+                    <div class="file-description">
+                        <strong>Schede personaggio stampabili (3 pagine A4)</strong> - Una pagina completa per ciascun personaggio (Jack, Sarah, Doc) con: tratti calcolati, spazi per HP/Stress/Tenuta/Speranza, armi e abilità dettagliate, background, connessioni, equipaggiamento, area note. Molto più comodo che consultare l'HTML durante il gioco!
+                    </div>
+                    <div class="file-meta">
+                        <span class="priority-badge priority-recommended">⭐ RACCOMANDATO</span>
+                        <a href="gunsmoke-dread-character-sheets.html" class="file-link">Apri →</a>
+                    </div>
+                </div>
+
+                <!-- Part 2 -->
+                <div class="file-card">
+                    <span class="file-icon">⚔️</span>
+                    <div class="file-title">gunsmoke-dread-part2.html</div>
+                    <div class="file-description">
+                        <strong>Regole Weird West e Avventura (Parte 2)</strong> - Regole speciali dell'ambientazione: Tenuta Mentale (sistema horror psicologico), Duelli classici western, Armi da fuoco d'epoca, Combattere orrori cosmici. Include anche l'inizio dell'avventura "Sangue sui Binari" (Atto I e Atto II).
+                    </div>
+                    <div class="file-meta">
+                        <span class="priority-badge priority-essential">🔥 DA CONSULTARE</span>
+                        <a href="gunsmoke-dread-part2.html" class="file-link">Apri →</a>
+                    </div>
+                </div>
+
+                <!-- Part 3 -->
+                <div class="file-card">
+                    <span class="file-icon">🎲</span>
+                    <div class="file-title">gunsmoke-dread-part3.html</div>
+                    <div class="file-description">
+                        <strong>Avventura (Fine), Bestiario e Strumenti (Parte 3)</strong> - Conclusione dell'avventura (Atto III: la discesa nella miniera maledetta e il confronto finale con Jeremiah). Bestiario completo (6 creature: banditi, morti risorti, entità cosmiche) e Strumenti per il GM (tabelle, consigli di gestione, modificare difficoltà al volo).
+                    </div>
+                    <div class="file-meta">
+                        <span class="priority-badge priority-essential">🔥 DA CONSULTARE</span>
+                        <a href="gunsmoke-dread-part3.html" class="file-link">Apri →</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2>💡 Consigli per l'Uso</h2>
+
+            <div class="file-card" style="background: rgba(212, 165, 116, 0.1);">
+                <h3 style="color: var(--blood-red); margin-bottom: 15px; font-family: 'Crimson Text', serif;">Per il Game Master</h3>
+                <ul style="margin-left: 25px; line-height: 1.8;">
+                    <li><strong>Prima della sessione:</strong> Apri tutti e 3 i file HTML in tab separate del browser. Stampa la Quick Reference.</li>
+                    <li><strong>Durante il gioco:</strong> Tieni sempre visibile la Quick Reference. Consulta Part 2 e Part 3 secondo necessità per le regole speciali e lo svolgimento dell'avventura.</li>
+                    <li><strong>Navigazione:</strong> Usa i menu laterali (sidebar) per saltare rapidamente tra le sezioni. I link sono tutti funzionanti.</li>
+                    <li><strong>Stampa:</strong> Se preferisci, tutti i file HTML sono ottimizzati anche per la stampa. Ctrl+P o Cmd+P.</li>
+                </ul>
+            </div>
+
+            <div class="file-card" style="background: rgba(212, 165, 116, 0.1); margin-top: 20px;">
+                <h3 style="color: var(--blood-red); margin-bottom: 15px; font-family: 'Crimson Text', serif;">Per i Giocatori</h3>
+                <ul style="margin-left: 25px; line-height: 1.8;">
+                    <li><strong>Scelta personaggio:</strong> Leggi le descrizioni in <em>gunsmoke-dread-quickstart.html</em> sezione "Personaggi"</li>
+                    <li><strong>Character sheet:</strong> Chiedi al GM di stamparti la tua pagina da <em>gunsmoke-dread-character-sheets.html</em></li>
+                    <li><strong>Background:</strong> Leggi attentamente la sezione Background e Segreto Oscuro del tuo personaggio. Ti daranno molti spunti di roleplay!</li>
+                    <li><strong>Connessioni:</strong> Discuti con gli altri giocatori le Connessioni tra i vostri personaggi prima di iniziare</li>
+                </ul>
+            </div>
+
+            <h2>🎭 Cosa Aspettarsi</h2>
+
+            <div class="file-card" style="border-color: var(--blood-red); background: rgba(139, 0, 0, 0.05);">
+                <p style="font-size: 18px; line-height: 1.7; margin-bottom: 15px;">
+                    <strong>Gunsmoke & Dread</strong> è un'avventura che inizia come una classica rapina al treno in stile western, ma si trasforma progressivamente in un incubo di survival horror quando i morti iniziano a risorgere. Il tono passa dall'azione pura all'horror cosmico, culminando in una discesa in una miniera maledetta dove antiche forze attendono di essere risvegliate.
+                </p>
+                <p style="font-size: 18px; line-height: 1.7;">
+                    <strong>Temi:</strong> Corruzione, perdita della fede, il prezzo della conoscenza proibita, la fragilità della sanità mentale di fronte all'incomprensibile.
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>GUNSMOKE & DREAD</strong></p>
+            <p>Un Quickstart per Daggerheart nel Weird West</p>
+            <p style="margin-top: 15px; opacity: 0.7;">Sistema: <a href="https://www.daggerheart.com" target="_blank">Daggerheart</a> (Darrington Press)</p>
+            <p style="margin-top: 10px; font-size: 12px; opacity: 0.6;">Contenuto fan-made non ufficiale • © 2025</p>
+        </footer>
+    </div>
+</body>
+</html>

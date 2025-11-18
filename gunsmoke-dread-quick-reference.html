@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunsmoke & Dread - Quick Reference Sheet</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rye&family=Crimson+Text:wght@600;700&family=Special+Elite&display=swap');
+        
+        :root {
+            --desert-sand: #d4a574;
+            --blood-red: #8b0000;
+            --night-black: #1a1a1a;
+            --parchment: #f4e8d0;
+            --rust: #a0522d;
+        }
+        
+        @page {
+            size: A4;
+            margin: 1cm;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            background: var(--parchment);
+            color: var(--night-black);
+            line-height: 1.4;
+            font-size: 11pt;
+            padding: 0.5cm;
+        }
+        
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            background: var(--parchment);
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            padding: 1cm;
+        }
+        
+        header {
+            text-align: center;
+            border-bottom: 4px double var(--blood-red);
+            padding-bottom: 0.5cm;
+            margin-bottom: 0.5cm;
+        }
+        
+        h1 {
+            font-family: 'Rye', cursive;
+            color: var(--blood-red);
+            font-size: 28pt;
+            margin-bottom: 0.2cm;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-family: 'Special Elite', cursive;
+            font-size: 12pt;
+            color: var(--rust);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5cm;
+            margin-top: 0.5cm;
+        }
+        
+        .section {
+            background: white;
+            border: 2px solid var(--rust);
+            border-radius: 4px;
+            padding: 0.4cm;
+            margin-bottom: 0.4cm;
+            break-inside: avoid;
+        }
+        
+        h2 {
+            font-family: 'Rye', cursive;
+            color: var(--blood-red);
+            font-size: 14pt;
+            margin-bottom: 0.3cm;
+            border-bottom: 1px solid var(--desert-sand);
+            padding-bottom: 0.1cm;
+        }
+        
+        h3 {
+            font-family: 'Crimson Text', serif;
+            color: var(--rust);
+            font-size: 11pt;
+            font-weight: 700;
+            margin-top: 0.3cm;
+            margin-bottom: 0.15cm;
+        }
+        
+        .priority-icon {
+            display: inline-block;
+            font-size: 14pt;
+            margin-right: 0.1cm;
+            vertical-align: middle;
+        }
+        
+        ul {
+            margin-left: 0.5cm;
+            margin-top: 0.2cm;
+        }
+        
+        li {
+            margin-bottom: 0.15cm;
+            line-height: 1.3;
+        }
+        
+        strong {
+            color: var(--blood-red);
+            font-weight: 700;
+        }
+        
+        .dice-formula {
+            font-family: 'Special Elite', cursive;
+            background: rgba(212, 165, 116, 0.2);
+            padding: 0.05cm 0.15cm;
+            border-radius: 2px;
+            font-size: 10pt;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0.3cm 0;
+            font-size: 10pt;
+        }
+        
+        th {
+            background: var(--rust);
+            color: var(--parchment);
+            padding: 0.15cm;
+            text-align: left;
+            font-weight: 700;
+        }
+        
+        td {
+            border: 1px solid var(--desert-sand);
+            padding: 0.15cm;
+        }
+        
+        tr:nth-child(even) {
+            background: rgba(212, 165, 116, 0.1);
+        }
+        
+        .example {
+            font-style: italic;
+            color: #555;
+            font-size: 10pt;
+            margin-top: 0.1cm;
+            padding-left: 0.3cm;
+            border-left: 2px solid var(--desert-sand);
+        }
+        
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 0.5cm;
+            padding-top: 0.3cm;
+            border-top: 2px solid var(--rust);
+            font-size: 9pt;
+            color: var(--rust);
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .page {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>GUNSMOKE & DREAD</h1>
+            <p class="subtitle">Quick Reference Sheet</p>
+        </header>
+
+        <div class="columns">
+            <!-- COLONNA SINISTRA -->
+            <div>
+                <div class="section">
+                    <h2><span class="priority-icon">🔥</span> Tiri Base</h2>
+                    <h3>Tiro Azione (2d12)</h3>
+                    <p><strong>Formula:</strong> <span class="dice-formula">2d12 + Tratto</span></p>
+                    <ul>
+                        <li><strong>Successo con Speranza:</strong> Ottieni ciò che volevi, segna Speranza</li>
+                        <li><strong>Successo con Paura:</strong> Riesci, ma complicazione (GM prende Paura)</li>
+                        <li><strong>Fallimento con Speranza:</strong> Non riesci, ma non è un disastro</li>
+                        <li><strong>Fallimento con Paura:</strong> Fallisci male, conseguenze gravi</li>
+                        <li><strong>Doppio critico:</strong> Successo + bonus (segna Speranza, cancella Stress)</li>
+                    </ul>
+                    <p class="example">Es: "Tiro 10+7 = 17 con Paura" → Riesci ma GM fa una mossa</p>
+                </div>
+
+                <div class="section">
+                    <h2><span class="priority-icon">🔥</span> Difficoltà</h2>
+                    <table>
+                        <tr><th>Tipo</th><th>Valore</th></tr>
+                        <tr><td>Facile</td><td>10</td></tr>
+                        <tr><td>Normale</td><td>12</td></tr>
+                        <tr><td>Medio</td><td>14</td></tr>
+                        <tr><td>Difficile</td><td>16</td></tr>
+                        <tr><td>Molto Difficile</td><td>18</td></tr>
+                        <tr><td>Quasi Impossibile</td><td>20</td></tr>
+                    </table>
+                </div>
+
+                <div class="section">
+                    <h2><span class="priority-icon">🔥</span> Combattimento</h2>
+                    <h3>Tiro Attacco</h3>
+                    <p><strong>1.</strong> Tiro azione con tratto dell'arma</p>
+                    <p><strong>2.</strong> Se successo → Tiro danno</p>
+                    <p><strong>3.</strong> Nemico confronta con Soglie Danno</p>
+                    
+                    <h3 style="margin-top: 0.3cm;">Soglie Danno (esempio)</h3>
+                    <ul>
+                        <li><strong>Minor:</strong> 3-7 → Segna 1 HP</li>
+                        <li><strong>Major:</strong> 8-12 → Segna 2 HP</li>
+                        <li><strong>Severe:</strong> 13+ → Segna 3 HP</li>
+                        <li><strong>Stress:</strong> ≤2 → Segna 1 Stress</li>
+                    </ul>
+
+                    <h3 style="margin-top: 0.3cm;">Armatura</h3>
+                    <p>Segna slot Armatura per ridurre danno del valore Armatura</p>
+                    <p class="example">Armatura 5 → Riduci danno di 5 (segna 1 slot)</p>
+                </div>
+
+                <div class="section">
+                    <h2><span class="priority-icon">⭐</span> Distanze</h2>
+                    <table>
+                        <tr><th>Range</th><th>Metri</th></tr>
+                        <tr><td>Molto Ravvicinata</td><td>0-3m</td></tr>
+                        <tr><td>Ravvicinata</td><td>~9m</td></tr>
+                        <tr><td>Lontana</td><td>~18m</td></tr>
+                        <tr><td>Molto Lontana</td><td>36m+</td></tr>
+                    </table>
+                </div>
+
+                <div class="section">
+                    <h2><span class="priority-icon">🔥</span> Speranza</h2>
+                    <h3>Guadagnare Speranza</h3>
+                    <ul>
+                        <li>Tiri azione con dado Speranza più alto</li>
+                        <li>Doppio critico (stesso numero su entrambi i dadi)</li>
+                        <li>Attivare Connessioni tra personaggi</li>
+                    </ul>
+                    
+                    <h3>Spendere Speranza</h3>
+                    <ul>
+                        <li><strong>Prima del tiro:</strong> Aggiungi +2 da Esperienza</li>
+                        <li><strong>Aiutare alleato:</strong> Dai +1d6 al loro tiro</li>
+                        <li><strong>Abilità speciali:</strong> Alcune abilità richiedono Speranza</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- COLONNA DESTRA -->
+            <div>
+                <div class="section">
+                    <h2><span class="priority-icon">🔥</span> Tratti</h2>
+                    <table>
+                        <tr><th>Tratto</th><th>Usa per...</th></tr>
+                        <tr><td><strong>Agilità</strong></td><td>Schivare, saltare, muoversi</td></tr>
+                        <tr><td><strong>Forza</strong></td><td>Sollevare, spaccare, afferrare</td></tr>
+                        <tr><td><strong>Finezza</strong></td><td>Scassinare, nascondersi</td></tr>
+                        <tr><td><strong>Istinto</strong></td><td>Percepire, orientarsi, intuire</td></tr>
+                        <tr><td><strong>Presenza</strong></td><td>Persuadere, intimidire</td></tr>
+                        <tr><td><strong>Conoscenza</strong></td><td>Ricordare, analizzare</td></tr>
+                    </table>
+                </div>
+
+                <div class="section">
+                    <h2><span class="priority-icon">⭐</span> Armi da Fuoco</h2>
+                    <table style="font-size: 9pt;">
+                        <tr><th>Arma</th><th>Danno</th><th>Range</th><th>Note</th></tr>
+                        <tr><td>Revolver</td><td>1d8+2</td><td>Ravv.</td><td>6 colpi</td></tr>
+                        <tr><td>Fucile</td><td>2d6</td><td>Lont.</td><td>Penetrante</td></tr>
+                        <tr><td>Shotgun</td><td>2d8</td><td>M.Ravv.</td><td>Spread</td></tr>
+                        <tr><td>Rifle</td><td>1d10+4</td><td>M.Lont.</td><td>Precisione</td></tr>
+                    </table>
+                    <p style="margin-top: 0.2cm;"><strong>Ricaricare:</strong> Azione minore (6 colpi revolver, 1 colpo fucile)</p>
+                </div>
+
+                <div class="section">
+                    <h2><span class="priority-icon">⭐</span> Tenuta Mentale</h2>
+                    <p><strong>7 segmenti totali.</strong> Riempi quando:</p>
+                    <ul>
+                        <li>Vedi qualcosa di terrificante</li>
+                        <li>Subisci trauma psicologico</li>
+                        <li>Alcune abilità soprannaturali</li>
+                    </ul>
+                    
+                    <h3>Effetti</h3>
+                    <table style="font-size: 9pt;">
+                        <tr><th>Segmenti</th><th>Effetto</th></tr>
+                        <tr><td>1-2</td><td>Nervoso (minori penalità)</td></tr>
+                        <tr><td>3-4</td><td>Scosso (svantaggio alcuni tiri)</td></tr>
+                        <tr><td>5-6</td><td>Turbato (penalità gravi)</td></tr>
+                        <tr><td>7</td><td>Collasso (incapacitato fino a cura)</td></tr>
+                    </table>
+                    
+                    <p style="margin-top: 0.2cm;"><strong>Recuperare:</strong> Riposo lungo (cancella 1d4 segmenti), psicoterapia, tempo</p>
+                </div>
+
+                <div class="section">
+                    <h2><span class="priority-icon">⭐</span> Duelli</h2>
+                    <p><strong>3 fasi:</strong></p>
+                    <p><strong>1. Tensione</strong> → Presenza vs Presenza (chi vince inizia con vantaggio)</p>
+                    <p><strong>2. Estrazione</strong> → Agilità vs Agilità (chi vince spara per primo)</p>
+                    <p><strong>3. Tiro</strong> → Tiro attacco normale</p>
+                    <p class="example">Vincitore fase 2 attacca per primo. Se manca, avversario può rispondere.</p>
+                </div>
+
+                <div class="section">
+                    <h2><span class="priority-icon">💡</span> Condizioni</h2>
+                    <table style="font-size: 9pt;">
+                        <tr><th>Condizione</th><th>Effetto</th></tr>
+                        <tr><td><strong>Scosso</strong></td><td>Svantaggio tiri mentali</td></tr>
+                        <tr><td><strong>Vulnerabile</strong></td><td>Attacchi contro di te: vantaggio</td></tr>
+                        <tr><td><strong>Stordito</strong></td><td>Non puoi agire (1 round)</td></tr>
+                        <tr><td><strong>Affascinato</strong></td><td>Non puoi attaccare chi ti affascina</td></tr>
+                        <tr><td><strong>Hidden</strong></td><td>Non puoi essere bersagliato</td></tr>
+                    </table>
+                </div>
+
+                <div class="section">
+                    <h2><span class="priority-icon">💡</span> Vantaggio/Svantaggio</h2>
+                    <p><strong>Vantaggio:</strong> Tira +1d6, aggiungilo al totale</p>
+                    <p><strong>Svantaggio:</strong> Tira +1d6, sottrailo dal totale</p>
+                    <p class="example">GM: "Hai vantaggio perché sei in copertura" → Tiri 2d12+1d6</p>
+                </div>
+            </div>
+
+            <!-- SEZIONI FULL-WIDTH -->
+            <div class="section full-width">
+                <h2><span class="priority-icon">🔥</span> Action Tracker (Combattimento)</h2>
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 0.3cm;">
+                    <div>
+                        <p><strong>Quando un PG fa un tiro azione in combattimento:</strong> Aggiungi 1 token all'Action Tracker</p>
+                        <p><strong>Quando GM fa una mossa (fallimento o Paura):</strong> Spendi token per attivare nemici</p>
+                        <p class="example">Es: Ci sono 5 token. GM spende 3 per attivare 3 banditi (1 token = 1 attivazione)</p>
+                    </div>
+                    <div>
+                        <p><strong>Regole speciali:</strong></p>
+                        <ul style="font-size: 10pt;">
+                            <li>1 nemico = 1 attivazione per mossa GM</li>
+                            <li>GM può spendere 2 token per guadagnare 1 Paura</li>
+                            <li>Token restano finché non spesi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section full-width">
+                <h2><span class="priority-icon">💡</span> Weird West: Regole Soprannaturali</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.3cm; font-size: 10pt;">
+                    <div>
+                        <h3>Fantasmi/Spiriti</h3>
+                        <ul>
+                            <li><strong>Resistenza fisica:</strong> Danni fisici dimezzati</li>
+                            <li><strong>Vulnerabili:</strong> Ferro freddo, sale, argento</li>
+                            <li><strong>Attacchi:</strong> Spesso danni necrotici (ignorano armatura)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Non-Morti (Zombi)</h3>
+                        <ul>
+                            <li><strong>Immunità:</strong> Dolore, paura, veleno</li>
+                            <li><strong>Rigenerazione:</strong> 1d6 HP/round</li>
+                            <li><strong>Debolezza:</strong> Fuoco (previene rigenerazione), luce solare</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Entità Cosmiche</h3>
+                        <ul>
+                            <li><strong>Presenza terrificante:</strong> Riempi Tenuta Mentale (Istinto vs 16+)</li>
+                            <li><strong>Attacchi psichici:</strong> Danno diretto a Tenuta</li>
+                            <li><strong>Banishment:</strong> Distruggi idoli/sigilli per bandire</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>GUNSMOKE & DREAD</strong> • Sistema Daggerheart • Weird West Horror • © 2025</p>
+            <p style="font-size: 8pt; margin-top: 0.2cm;">Stampa questa pagina e tienila dietro lo schermo del GM per riferimento rapido durante la sessione!</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunsmoke & Dread - Parte 2: Regole e Avventura</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rye&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Special+Elite&display=swap');
+        
+        :root {
+            --desert-sand: #d4a574;
+            --blood-red: #8b0000;
+            --night-black: #1a1a1a;
+            --parchment: #f4e8d0;
+            --rust: #a0522d;
+            --shadow-grey: #3a3a3a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            background: linear-gradient(135deg, var(--night-black) 0%, var(--shadow-grey) 100%);
+            color: var(--parchment);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 30px;
+        }
+        
+        /* Navigazione laterale */
+        .sidebar {
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+            background: rgba(26, 26, 26, 0.95);
+            border: 3px solid var(--rust);
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+        }
+        
+        .sidebar h2 {
+            font-family: 'Rye', cursive;
+            color: var(--desert-sand);
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        .nav-links {
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin: 8px 0;
+        }
+        
+        .nav-links a {
+            color: var(--desert-sand);
+            text-decoration: none;
+            display: block;
+            padding: 8px 12px;
+            border-left: 3px solid transparent;
+            transition: all 0.3s;
+            font-size: 0.95em;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(212, 165, 116, 0.1);
+            border-left-color: var(--blood-red);
+            padding-left: 18px;
+        }
+        
+        .nav-links .sub-link {
+            font-size: 0.85em;
+            padding-left: 24px;
+            color: #c4a574;
+        }
+        
+        /* Contenuto principale */
+        .content {
+            background: var(--parchment);
+            color: var(--night-black);
+            padding: 50px 60px;
+            border-radius: 5px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            border: 2px solid var(--rust);
+        }
+        
+        /* Titoli */
+        h1, h2, h3, h4 {
+            font-family: 'Rye', cursive;
+            color: var(--blood-red);
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2.8em;
+            border-bottom: 3px solid var(--rust);
+            padding-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        h2 {
+            font-size: 2.2em;
+            border-bottom: 2px solid var(--desert-sand);
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.7em;
+            color: var(--rust);
+        }
+        
+        h4 {
+            font-size: 1.3em;
+            color: var(--shadow-grey);
+        }
+        
+        /* Paragrafi */
+        p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        /* Liste */
+        ul, ol {
+            margin: 15px 0 15px 40px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        /* Box speciali */
+        .info-box {
+            background: rgba(212, 165, 116, 0.15);
+            border-left: 5px solid var(--rust);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 3px;
+        }
+        
+        .warning-box {
+            background: rgba(139, 0, 0, 0.1);
+            border-left: 5px solid var(--blood-red);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 3px;
+        }
+        
+        .stat-block {
+            background: rgba(58, 58, 58, 0.05);
+            border: 2px solid var(--shadow-grey);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+            font-family: 'Special Elite', cursive;
+            font-size: 0.95em;
+        }
+        
+        .stat-block h4 {
+            margin-top: 0;
+            font-family: 'Rye', cursive;
+        }
+        
+        /* Icone priorità */
+        .priority-icon {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            vertical-align: middle;
+        }
+        
+        .essential {
+            background: var(--blood-red);
+            color: white;
+        }
+        
+        .important {
+            background: var(--rust);
+            color: white;
+        }
+        
+        .optional {
+            background: var(--desert-sand);
+            color: var(--night-black);
+        }
+        
+        /* Sezioni collassabili */
+        .collapsible {
+            cursor: pointer;
+            padding: 15px;
+            background: rgba(139, 0, 0, 0.1);
+            border: 2px solid var(--rust);
+            border-radius: 5px;
+            margin: 20px 0;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .collapsible:hover {
+            background: rgba(139, 0, 0, 0.2);
+        }
+        
+        .collapsible::before {
+            content: "▶ ";
+            display: inline-block;
+            margin-right: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .collapsible.active::before {
+            transform: rotate(90deg);
+        }
+        
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 20px;
+        }
+        
+        .collapsible-content.active {
+            max-height: 8000px;
+            padding: 20px;
+        }
+        
+        /* Tabelle */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+        }
+        
+        th, td {
+            border: 1px solid var(--shadow-grey);
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: var(--rust);
+            color: var(--parchment);
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background: rgba(212, 165, 116, 0.1);
+        }
+        
+        /* Separatori */
+        hr {
+            border: none;
+            border-top: 2px solid var(--desert-sand);
+            margin: 40px 0;
+        }
+        
+        /* Header parte 2 */
+        .part-header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--rust) 0%, var(--shadow-grey) 100%);
+            color: var(--parchment);
+            border-radius: 5px;
+            margin-bottom: 40px;
+            border: 3px solid var(--blood-red);
+        }
+        
+        .part-header h1 {
+            color: var(--parchment);
+            border: none;
+            margin: 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+        }
+        
+        /* Stampa */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+            .sidebar {
+                display: none;
+            }
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .content {
+                box-shadow: none;
+                border: none;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigazione laterale -->
+        <nav class="sidebar">
+            <h2>📖 Parte 2</h2>
+            <ul class="nav-links">
+                <li><a href="#doc">Doc Artemis</a></li>
+                <li><a href="#regole">Regole Weird West</a>
+                    <ul>
+                        <li><a href="#tenuta" class="sub-link">Tenuta Mentale</a></li>
+                        <li><a href="#orrori" class="sub-link">Combattere Orrori</a></li>
+                        <li><a href="#armi" class="sub-link">Armi da Fuoco</a></li>
+                        <li><a href="#duelli" class="sub-link">Duelli</a></li>
+                    </ul>
+                </li>
+                <li><a href="#avventura">Avventura</a>
+                    <ul>
+                        <li><a href="#atto1" class="sub-link">Atto I</a></li>
+                        <li><a href="#atto2" class="sub-link">Atto II</a></li>
+                        <li><a href="#atto3" class="sub-link">Atto III</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <hr style="margin: 20px 0; border-color: var(--desert-sand);">
+            <p style="text-align: center; font-size: 0.85em; color: var(--desert-sand);">
+                <a href="gunsmoke-dread-quickstart.html" style="color: var(--desert-sand);">← Torna alla Parte 1</a>
+            </p>
+        </nav>
+
+        <!-- Contenuto principale -->
+        <main class="content">
+            <div class="part-header">
+                <h1>GUNSMOKE & DREAD</h1>
+                <p style="font-size: 1.3em; margin-top: 15px;">Parte 2: Personaggi, Regole e Avventura</p>
+            </div>
+
+            <!-- DOC ARTEMIS -->
+            <article id="doc">
+                <h1>Doc Artemis - Il Medico Inventore</h1>
+
+                <h2>Chi È Doc Artemis</h2>
+
+                <p>Il Dott. Jonathan "Doc" Artemis è un uomo che vive nella frontiera tra scienza e sopravvivenza, tra razionalità e necessità, tra il mondo ordinato che vorrebbe esistesse e il caos violento che effettivamente esiste.</p>
+
+                <p>Ha quarantadue anni e ogni anno è scritto chiaramente sul suo volto in rughe guadagnate attraverso notti insonni passate a operare soldati morenti o a studiare testi medici alla luce tremolante di candele. I capelli erano un tempo castani ma adesso sono prevalentemente grigi, tagliati corti per praticità. Porta occhiali con montatura d'acciaio - una delle lenti è stata sostituita tre volte dopo essere stata rotta in varie circostanze violente. Gli occhi dietro quelle lenti sono acuti e analitici, sempre osservanti, sempre valutanti.</p>
+
+                <p>Si veste in modo pratico ma con tracce della sua educazione formale: camicia bianca (sempre un po' macchiata di sangue o sostanze chimiche nonostante i lavaggi), pantaloni scuri, gilet con molte tasche dove tiene strumenti medici e piccoli dispositivi di sua invenzione. Porta sempre una borsa di pelle consumata piena di equipaggiamento medico - quella borsa lo ha seguito attraverso tre guerre, due epidemie, e innumerevoli emergenze.</p>
+
+                <p>Doc si muove con economia di movimento - nessun gesto è sprecato, tutto è efficiente. È il risultato di anni passati in situazioni dove ogni secondo contava, dove la differenza tra vita e morte di un paziente era spesso una questione di quanto velocemente potevi trovare lo strumento giusto o fare l'incisione corretta.</p>
+
+                <div class="collapsible">Il Passato Militare</div>
+                <div class="collapsible-content">
+                    <p>Jonathan Artemis nacque in una famiglia benestante di Boston nel 1843. Suo padre era un professore di medicina all'Università di Harvard, sua madre una botanica dilettante con interesse particolare per piante medicinali. Cresciuto in un ambiente di educazione e privilegi, Jonathan seguì naturalmente le orme paterne, studiando medicina con passione genuina e eccellenza accademica.</p>
+
+                    <p>Si laureò nel 1863, proprio mentre la Guerra Civile stava dilaniando la nazione. Nonostante potesse facilmente evitare il servizio militare (la sua famiglia aveva connessioni, e i medici civili erano sempre necessari), Jonathan scelse volontariamente di arruolarsi come chirurgo militare nell'esercito dell'Unione.</p>
+
+                    <p>Non lo fece per patriottismo cieco o per gloria. Lo fece perché razionalmente calcolò che nei campi di battaglia avrebbe imparato più in un anno che in dieci anni di pratica civile tranquilla. Aveva ragione - ma il prezzo di quell'educazione fu più alto di quanto avesse anticipato.</p>
+
+                    <p>I quattro anni successivi trasformarono il giovane medico idealista in qualcosa di più duro. Ha operato in tende da campo mentre le palle di cannone cadevano a poche centinaia di metri. Ha amputato arti con seghe che non erano state sterilizzate perché non c'era tempo. Ha fatto triage - decidendo chi aveva possibilità di sopravvivere e meritava cure immediate, e chi era troppo ferito e doveva essere lasciato a morire con morfina per alleviare l'agonia.</p>
+
+                    <p>Ha imparato a lavorare velocemente, a non lasciarsi paralizzare dalla paura o dal disgusto, a mettere l'emozione da parte e concentrarsi sul compito. Ha salvato centinaia di vite. Ne ha perse migliaia. Ha imparato che la medicina, per quanto avanzata, è sempre una battaglia contro la morte - e la morte vince più spesso di quanto i medici vogliano ammettere.</p>
+
+                    <p>Fu durante la guerra che incontrò Jack Malone (allora un giovane soldato che sopravvisse a una ferita da moschetto al torace che avrebbe dovuto ucciderlo, salvato dalle mani rapide di Doc) e dove forgiò quella comprensione silenziosa di uomini che hanno visto orrori condivisi.</p>
+                </div>
+
+                <div class="collapsible">L'Incontro con l'Impossibile</div>
+                <div class="collapsible-content">
+                    <p>Dopo la guerra, Doc tornò brevemente a Boston. Ma non riuscì a rimanere. La vita civile ordinata, i pazienti con malanni triviali, le cene sociali con conversazioni vuote - tutto sembrava irreale, privo di significato dopo l'intensità della guerra.</p>
+
+                    <p>Si spostò a ovest, attirato dalla frontiera dove la medicina pratica era disperatamente necessaria e dove le sfide mediche erano interessanti. Stabilì una pratica itinerante, viaggiando da città a città, offrendo servizi medici dove servivano.</p>
+
+                    <p>Fu nel 1878, in una piccola città mineraria nel Nevada, che Doc incontrò qualcosa che sfidò completamente la sua comprensione scientifica della realtà.</p>
+
+                    <p>Un'epidemia strana aveva colpito la città. I sintomi non corrispondevano a nessuna malattia che Doc conoscesse - febbre che bruciava così calda che i pazienti sviluppavano vesciche sulla pelle, delirio che li faceva parlare in lingue che nessuno riconosceva, e infine una morte dove il corpo semplicemente... si spegneva, come se qualcosa avesse estratto l'essenza vitale lasciando solo carne vuota.</p>
+
+                    <p>Doc condusse autopsie, prese campioni, esaminò ogni possibile vettore di infezione. Niente aveva senso. I corpi mostravano segni di decomposizione avanzata ore dopo la morte, come se il tempo stesso si fosse accelerato. In alcuni casi, vide cose nei tessuti che non dovrebbero essere possibili - strutture cellulari che sembravano esistere in geometrie impossibili.</p>
+
+                    <p>Un vecchio prospettore locale gli disse: "Dottore, con tutto il rispetto, questa non è una malattia che può curare con la medicina. È una maledizione. Quei minatori hanno scavato in qualcosa che avrebbero dovuto lasciare sepolto."</p>
+
+                    <p>Doc, razionale e scientifico, inizialmente respinse questo come superstizione ignorante. Ma mentre più persone morivano e nessuno dei suoi trattamenti aveva effetto, iniziò a considerare la possibilità terrificante che ci fossero cose nel mondo che la scienza non poteva spiegare.</p>
+
+                    <p>La "maledizione" terminò solo quando l'ingresso della miniera crollò in un incidente (o forse non fu un incidente), sigillando quello che giaceva sotto. Le morti cessarono immediatamente.</p>
+
+                    <p>Doc non parlò mai pubblicamente di quello che aveva visto. Ma da allora, porta con sé una piccola nota in latino che tradusse da un vecchio libro di occultismo che trovò nella biblioteca della città: "Ci sono più cose tra il cielo e la terra di quante ne sogni la tua filosofia."</p>
+                </div>
+
+                <h2>L'Uomo che È Adesso</h2>
+
+                <p>Doc Artemis è un medico eccezionale che ha anche accettato, con riluttanza, che il mondo è più strano di quanto la scienza attuale possa spiegare. Questo non lo ha reso meno scientifico - anzi, cerca di applicare metodologia scientifica anche agli eventi soprannaturali, prendendo note dettagliate, cercando pattern, formulando ipotesi.</p>
+
+                <p>È anche diventato un inventore per necessità. La frontiera manca di molte attrezzature mediche moderne, quindi Doc ha imparato a improvvisare - costruendo strumenti chirurgici da materiali disponibili, creando dispositivi meccanici semplici che risolvono problemi specifici, persino sperimentando con sostanze chimiche per creare medicine quando quelle commerciali non sono disponibili.</p>
+
+                <p>Ha un atteggiamento clinico e distaccato che alcune persone interpretano erroneamente come freddezza. Non è freddo - semplicemente ha imparato a non lasciare che l'emozione interferisca con il giudizio medico. Quando opera, è completamente concentrato. Quando diagnostica, è metodico. Ma quando il lavoro è fatto, permette a se stesso di sentire - sollievo quando salva qualcuno, tristezza quando perde un paziente.</p>
+
+                <p>Rispetta la fede di Sarah anche se non la condivide. Rispetta il coraggio di Jack anche se pensa che sia parzialmente autodistruttivo. Rispetta la competenza in tutte le sue forme, e disprezza l'incompetenza e la stupidità volontaria.</p>
+
+                <p>Beve whisky (con moderazione), fuma occasionalmente sigari (per rilassarsi), e legge voracemente - sia testi medici che, sempre più frequentemente, trattati di occultismo e folklore. Sta costruendo una libreria personale di conoscenze su fenomeni soprannaturali, convinto che con abbastanza dati, persino l'impossibile può essere compreso.</p>
+
+                <p>È un uomo che cerca di imporre ordine razionale su un universo che continua ostinatamente a comportarsi in modi irrazionali.</p>
+
+                <h2>Statistiche e Abilità</h2>
+
+                <div class="stat-block">
+                    <h4>STATISTICHE BASE</h4>
+                    <p><strong>CLASSE:</strong> Erudito (Medico di Campo variant) | <strong>LIVELLO:</strong> 2</p>
+                    <p><strong>PUNTI FERITA:</strong> 22 | <strong>ARMATURA:</strong> 1 | <strong>EVASIONE:</strong> 13 | <strong>SOGLIA:</strong> 3</p>
+                    <p><strong>CARATTERISTICHE:</strong> Forza +0 | Agilità +2 | Finezza +3 | Istinto +2 | Presenza +1 | Conoscenza +4</p>
+                    <p><strong>ESPERIENZE:</strong> ⚕️ Medicina e Chirurgia (Maestro) | 🔬 Chimica e Farmacologia | 🔧 Ingegneria Meccanica | 📚 Occultismo e Folklore | 🔫 Armi da Fuoco</p>
+                </div>
+
+                <div class="collapsible">MEDICINA DA CAMPO (3 utilizzi/riposo)</div>
+                <div class="collapsible-content">
+                    <p>La tua esperienza sui campi di battaglia ti ha insegnato a stabilizzare pazienti critici in condizioni impossibili. Con un'azione, puoi trattare un alleato entro distanza Molto Ravvicinata. L'alleato recupera 2d6+4 Punti Ferita. Inoltre, rimuovi una condizione fisica negativa (Sanguinamento, Avvelenato, Febbre del Cadavere, Rallentato).</p>
+                    <p>Se usata durante un Riposo Breve, tutti gli alleati che ricevono cure da te recuperano +1d6 PF extra grazie alla tua competenza chirurgica.</p>
+                </div>
+
+                <div class="collapsible">COLPO CHIRURGICO (2 utilizzi/riposo)</div>
+                <div class="collapsible-content">
+                    <p>La tua conoscenza anatomica ti permette di colpire con precisione devastante. Quando dichiari questa abilità prima di un attacco contro una creatura con tag [UMANO] o [BESTIA], tira per colpire con vantaggio. Se colpisci, infliggi +3d8 danni extra poiché la pallottola penetra esattamente dove sai che causerà il massimo trauma - arterie maggiori, plessi nervosi, organi vitali.</p>
+                    <p>Questa abilità non funziona contro [NON-MORTO] o [ORRORE COSMICO] che hanno anatomia aliena o assente.</p>
+                </div>
+
+                <div class="collapsible">OCCHIO CLINICO (Sempre attivo)</div>
+                <div class="collapsible-content">
+                    <p>Il tuo sguardo analitico identifica debolezze, pattern e vulnerabilità. Come azione, puoi osservare attentamente una creatura e fare un tiro di Conoscenza contro Difficoltà 14. Se hai successo, il GM deve rivelarti una delle seguenti informazioni (scelta del GM):</p>
+                    <ul>
+                        <li>Una debolezza specifica (vulnerabilità elementale, punto debole anatomico)</li>
+                        <li>Un pattern nei suoi attacchi o movimenti</li>
+                        <li>Il suo stato di salute approssimativo (PF rimanenti in percentuale)</li>
+                        <li>Un metodo per evitare le sue abilità speciali</li>
+                    </ul>
+                    <p>Puoi condividere immediatamente questa informazione con gli alleati. Attacchi basati su questa conoscenza ricevono +2 al danno.</p>
+                </div>
+
+                <div class="collapsible">MAESTRO DELL'IMPROVVISAZIONE (2 utilizzi/riposo)</div>
+                <div class="collapsible-content">
+                    <p>Quando la situazione richiede uno strumento specifico che non possiedi, puoi crearne una versione improvvisata utilizzando materiali disponibili e ingegno. Richiede 10 minuti di lavoro e un tiro di Conoscenza contro Difficoltà 12-16 (basato su complessità del dispositivo).</p>
+                    <p><strong>Esempi:</strong> bomba incendiaria da bottiglia di whisky e stracci, grimaldello da fil di ferro, bisturi da lama di rasoio, veleno da piante locali, esplosivo rudimentale da polvere da sparo e chiodi.</p>
+                    <p>Il dispositivo improvvisato funziona una sola volta, poi si rompe o esaurisce.</p>
+                </div>
+
+                <div class="collapsible">DISTACCO CLINICO (Passiva)</div>
+                <div class="collapsible-content">
+                    <p>Anni di operare sotto pressione estrema ti hanno insegnato a compartimentalizzare le emozioni. Quando riempi segmenti del tuo Orologio della Tenuta Mentale, puoi scegliere di ritardare gli effetti per 1 ora - "mettendo da parte" il trauma psicologico per processarlo dopo. Questo ti permette di continuare a funzionare efficacemente durante emergenze anche quando la tua sanità è compromessa.</p>
+                    <p>Dopo quell'ora, tutti i segmenti ritardati si riempiono simultaneamente e devi affrontare le conseguenze accumulate.</p>
+                </div>
+
+                <h2>Connessioni</h2>
+
+                <div class="info-box">
+                    <h4>CON JACK MALONE</h4>
+                    <p><em>"Jack e io ci siamo conosciuti quando stavo cercando di rimuovere una palla di moschetto dal suo polmone destro mentre le artiglierie confederate bombardavano la collina sopra di noi. Non parlò per l'intera operazione - semplicemente strinse i denti e sopportò. Rispetto quel tipo di forza. Entrambi abbiamo visto troppo per poter mai tornare completamente al mondo normale."</em></p>
+                    <p><strong>Meccanica:</strong> Quando Doc usa Medicina da Campo su Jack, i PF recuperati aumentano di +1d6 poiché Doc conosce esattamente la fisiologia di Jack dopo anni di curarlo. Inoltre, se Jack è Morente, Doc ha vantaggio sui tiri per stabilizzarlo.</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>CON SARAH BLACKWOOD</h4>
+                    <p><em>"La reverenda crede nella guarigione attraverso la fede. Io credo nella guarigione attraverso la scienza. Potrebbe sembrare che siamo in conflitto, ma ho visto le sue preghiere funzionare troppe volte per ignorarle. Forse c'è qualcosa che la scienza moderna non comprende ancora. O forse la fede stessa ha proprietà terapeutiche misurabili. Dovrei prendere note più dettagliate."</em></p>
+                    <p><strong>Meccanica:</strong> Quando Doc e Sarah lavorano insieme per curare lo stesso alleato (lui con medicina, lei con fede), l'effetto combinato recupera +1d8 PF extra. Inoltre, malattie o condizioni che richiederebbero cure separate possono essere rimosse simultaneamente dalla loro collaborazione.</p>
+                </div>
+
+                <h2>Equipaggiamento</h2>
+
+                <div class="stat-block">
+                    <p><strong>ARMI:</strong></p>
+                    <ul>
+                        <li>Revolver Standard (.38) - 1d8+2 danni, Ricarica 6, Penetrante 1, Rumoroso</li>
+                        <li>Bisturi Chirurgico (come arma) - 1d6+3 danni, Molto Ravvicinata, usa Finezza</li>
+                        <li>36 proiettili standard (6 ricariche complete)</li>
+                    </ul>
+                    
+                    <p><strong>KIT MEDICO COMPLETO:</strong> Strumenti chirurgici, bende, garze, tourniquet, laudano (5 dosi), alcol medicale (10 utilizzi), morfina (3 dosi), antidoto universale (2 dosi), sali aromatici, termometro, stetoscopio, notebook medico</p>
+                    
+                    <p><strong>EQUIPAGGIAMENTO DA INVENTORE:</strong> Toolkit meccanico base, sostanze chimiche varie in boccette, fiammiferi, lente d'ingrandimento, telescopio tascabile</p>
+                    
+                    <p><strong>GENERALE:</strong> Gilet pratico con molte tasche (Armatura 1), occhiali essenziali, camicia bianca, mantello, borraccia, libro corrente ("Fenomeni Inspiegabili del Southwest"), 42 dollari</p>
+                    
+                    <p><strong>OGGETTO PERSONALE:</strong> Una piccola scatola di latta che contiene proiettili deformati estratti da pazienti durante la Guerra Civile. Ogni proiettile ha incise le iniziali del soldato da cui fu rimosso e se sopravvisse (S) o morì (M). Ci sono 47 proiettili - 31 marcati S, 16 marcati M. Doc li tiene come promemoria delle vite salvate e perse.</p>
+                </div>
+
+                <div class="collapsible">Come Giocare Doc</div>
+                <div class="collapsible-content">
+                    <p><strong>IN COMBATTIMENTO:</strong> Doc è supporto tattico - fornisce guarigioni, identifica debolezze nemiche, e crea opportunità tattiche. Usa Occhio Clinico presto nel combattimento per identificare vulnerabilità. Medicina da Campo mantiene gli alleati in salute. Colpo Chirurgico elimina minacce umane velocemente. Non sei un combattente frontale - rimani dietro Jack e Sarah, osservando e analizzando.</p>
+                    
+                    <p><strong>NELLE SCENE SOCIALI:</strong> Doc è analitico e preciso. Parla con vocabolario medicale/scientifico. Usa Conoscenza +4 per identificare sostanze, diagnosticare malattie, riconoscere pattern. Non è freddo, semplicemente compartimentalizza. Quando qualcuno è ferito, passa in modalità medica - calmo, efficiente, rassicurante.</p>
+                    
+                    <p><strong>CON GLI ALTRI PERSONAGGI:</strong> Con Jack - cameratismo da veterani, conversazioni brevi. Con Sarah - discussioni filosofiche su fede vs scienza, rispetto reciproco.</p>
+                    
+                    <p><strong>MOMENTI CHIAVE:</strong> Quando vedi i morti alzarsi = cortocircuito cognitivo poi accettazione pragmatica. Dopo combattimenti = esamini cadaveri metodicamente, prendi note. Quando qualcuno muore = ti incolpi tecnicamente, non emotivamente. Se incontri il libro maledetto = immensamente tentato di leggerlo. Quando usi Distacco Clinico = descrivi fisicamente come compartimentalizzi.</p>
+                    
+                    <p><strong>LA TUA DOMANDA CENTRALE:</strong> Può la razionalità coesistere con l'impossibile?</p>
+                </div>
+            </article>
+
+            <hr style="margin: 80px 0;">
+
+            <!-- REGOLE DEL WEIRD WEST -->
+            <section id="regole">
+                <h1>Regole del Weird West</h1>
+
+                <div class="warning-box">
+                    <h3 style="margin-top: 0;">Priorità delle Regole</h3>
+                    <p><span class="priority-icon essential">🔥</span> <strong>ESSENZIALE</strong> - Devi conoscere queste regole per giocare l'avventura</p>
+                    <p><span class="priority-icon important">⭐</span> <strong>IMPORTANTE</strong> - Dovresti conoscere queste regole, usate frequentemente</p>
+                    <p><span class="priority-icon optional">💡</span> <strong>OPZIONALE</strong> - Usa queste regole se la situazione le richiede</p>
+                </div>
+
+                <!-- TENUTA MENTALE -->
+                <article id="tenuta">
+                    <h2><span class="priority-icon essential">🔥</span> Tenuta Mentale</h2>
+
+                    <h3>Quando la Realtà Si Sfalda</h3>
+
+                    <p>Il Weird West non è solo pericoloso per il corpo - è pericoloso per la mente. Vedere i morti camminare, confrontare geometrie impossibili, realizzare che l'universo è più vasto e più indifferente di quanto avessi mai immaginato - queste esperienze lasciano cicatrici psicologiche che nessuna medicina può curare completamente.</p>
+
+                    <p>La <strong>Tenuta Mentale</strong> rappresenta la stabilità psicologica del tuo personaggio di fronte all'impossibile. Ogni personaggio ha un <strong>Orologio della Tenuta Mentale</strong> con 6 segmenti. Inizia completamente vuoto. Man mano che testimoni orrori, i segmenti si riempiono progressivamente, rappresentando il deterioramento della tua sanità.</p>
+
+                    <h3>Quando Riempi Segmenti</h3>
+
+                    <div class="info-box">
+                        <h4>PRIMA VISTA DI ORRORI</h4>
+                        <p>La prima volta che vedi una creatura con tag [NON-MORTO], [ORRORE COSMICO], o [CORROTTO], fai un tiro di Istinto contro Difficoltà variabile:</p>
+                        <ul>
+                            <li><strong>Difficoltà 12</strong> per [NON-MORTO] relativamente normali (zombie, scheletri)</li>
+                            <li><strong>Difficoltà 14</strong> per non-morti particolarmente mostruosi o creature [CORROTTE]</li>
+                            <li><strong>Difficoltà 16-18</strong> per [ORRORE COSMICO] che violano palesemente le leggi fisiche</li>
+                        </ul>
+                        <p><strong>Fallimento:</strong> Riempi 1-3 segmenti (basato su quanto hai fallito) e subisci svantaggio sul tuo prossimo tiro mentre la mente lotta contro l'impossibile.</p>
+                        <p><strong>Successo:</strong> Mantieni controllo psicologico. Non riempi segmenti da questa specifica vista, ma il GM genera comunque 1 Paura - anche resistere all'orrore ha un costo.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>ABILITÀ MENTALI NEMICHE</h4>
+                        <p>Alcune creature hanno attacchi che danneggiano direttamente la psiche. Quando colpiscono, riempi segmenti come indicato nelle loro statistiche (tipicamente 1-3 segmenti).</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>TRAUMI ESTREMI</h4>
+                        <p>Eventi particolarmente orribili possono riempire segmenti anche senza tiri:</p>
+                        <ul>
+                            <li>Assistere alla morte orribile di PNG che conoscevi e a cui tenevi</li>
+                            <li>Leggere testi maledetti che rivelano verità cosmiche terrificanti</li>
+                            <li>Essere toccato fisicamente da entità che non dovrebbero esistere</li>
+                            <li>Scoprire che qualcuno che amavi è stato corrotto o trasformato in mostro</li>
+                        </ul>
+                        <p><em>Il GM usa discrezione - non ogni scena triste riempie Tenuta, solo quelle genuinamente traumatiche per il personaggio specifico.</em></p>
+                    </div>
+
+                    <h3>Effetti Progressivi</h3>
+
+                    <table>
+                        <tr>
+                            <th>Segmenti</th>
+                            <th>Condizione</th>
+                            <th>Effetti</th>
+                        </tr>
+                        <tr>
+                            <td>0-2</td>
+                            <td>Scosso ma Funzionale</td>
+                            <td>Nervosismo crescente. Trasalimento a rumori improvvisi. Difficoltà a dormire. Flashback occasionali. Nessuna penalità meccanica.</td>
+                        </tr>
+                        <tr>
+                            <td>3-4</td>
+                            <td>Deterioramento Visibile</td>
+                            <td>Flashback frequenti. Difficoltà a concentrarsi. Incubi vividi. Paranoia crescente. <strong>Meccanicamente:</strong> Il GM può spendere 1 Paura per farti tirare con svantaggio su un tiro mentale mentre i flashback interferiscono.</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Sul Baratro</td>
+                            <td>La tua mente è gravemente compromessa. Sviluppi una <strong>Condizione Permanente</strong> (decisa collaborativamente): Fobia Specifica, Flashback Paralizzanti, Dissociazione, o Insonnia Cronica. Questa persiste anche dopo che l'Orologio viene svuotato.</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Rottura Mentale</td>
+                            <td>La tua mente non può più sostenere il peso dell'orrore. Subisci una <strong>Rottura Mentale Temporanea</strong>. Tira 1d6: 1-2 = Fuga Panica, 3-4 = Congelamento Catatonico, 5-6 = Frenesia Violenta. Dura 1d4 round. Durante la Rottura, perdi controllo del personaggio.</td>
+                        </tr>
+                    </table>
+
+                    <h3>Recuperare Tenuta Mentale</h3>
+
+                    <div class="stat-block">
+                        <p><strong>RIPOSO LUNGO IN SICUREZZA:</strong> Dopo un Riposo Lungo completo (8+ ore) in ambiente sicuro lontano da minacce, svuoti 2 segmenti del tuo Orologio. Il sonno e il tempo aiutano a processare il trauma.</p>
+                        
+                        <p><strong>SUPPORTO EMOTIVO DAGLI ALLEATI:</strong> Un alleato può spendere 30 minuti confortandoti. Richiede tiro di Presenza contro Difficoltà 12. Successo = svuoti 1 segmento. Può essere tentato una sola volta per riposo.</p>
+                        
+                        <p><strong>ABILITÀ SPECIALI:</strong> Alcune abilità (come quelle di Sarah) possono svuotare segmenti attraverso fede o magia.</p>
+                        
+                        <p><strong>IMPORTANTE:</strong> Anche se svuoti l'Orologio completamente, le Condizioni Permanenti guadagnate a 5 segmenti rimangono. Sono cicatrici che non guariscono mai completamente.</p>
+                    </div>
+                </article>
+
+                <hr>
+
+                <!-- COMBATTERE L'IMPOSSIBILE -->
+                <article id="orrori">
+                    <h2><span class="priority-icon essential">🔥</span> Combattere l'Impossibile</h2>
+
+                    <h3>Cosa Rende Gli Orrori Diversi</h3>
+
+                    <p>Un bandito umano, per quanto pericoloso, segue le leggi della biologia. Ha organi vitali. Sanguina. Prova dolore. Può essere ucciso con metodi convenzionali. Un cadavere animato o un'entità cosmica non segue queste regole. Questo li rende sia terrificanti che difficili da combattere.</p>
+
+                    <h3>Proprietà Degli Orrori</h3>
+
+                    <div class="warning-box">
+                        <h4>ANATOMIA ALIENA O ASSENTE</h4>
+                        <p>Abilità che si basano sulla conoscenza dell'anatomia normale (come Colpo Chirurgico di Doc) falliscono automaticamente. Non puoi mirare al cuore se il cuore non batte. Non puoi recidere arterie se il sangue non scorre.</p>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4>IMMUNITÀ A DOLORE E PAURA</h4>
+                        <p>Effetti che si basano sull'infliggere dolore fisico o paura psicologica non funzionano. Non puoi intimidire un cadavere. Non puoi torturare informazioni da qualcosa che non prova sensazioni.</p>
+                        <p><strong>ECCEZIONE:</strong> Effetti basati su potere divino o fede sacra funzionano normalmente - la luce divina respinge l'oscurità indipendentemente dalla biologia.</p>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4>RIGENERAZIONE INNATURALE</h4>
+                        <p>Alcune creature recuperano PF automaticamente ogni turno (tipicamente 1d6-2d8). Questo accade all'inizio del loro turno prima che agiscano.</p>
+                        <p><strong>Come Fermare la Rigenerazione:</strong></p>
+                        <ul>
+                            <li>Danni da <strong>fuoco</strong> prevengono rigenerazione per 1 round</li>
+                            <li>Danni <strong>sacri/divini</strong> prevengono rigenerazione permanentemente per quella specifica ferita</li>
+                            <li><strong>Luce solare diretta</strong> sopprime rigenerazione completamente</li>
+                            <li><strong>Distruggere il corpo completamente</strong> (ridurlo a PF negativi pari a Soglia x5) previene rigenerazione permanentemente</li>
+                        </ul>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4>RESISTENZA AI DANNI FISICI</h4>
+                        <p>Alcune creature (specialmente Orrori Cosmici maggiori) hanno "Resistenza ai Danni Fisici X" dove X è un numero (tipicamente 5-10). Sottrai X da tutti i danni fisici (proiettili, lame, cadute) prima di applicarli ai PF.</p>
+                        <p><strong>Come Bypassare la Resistenza:</strong></p>
+                        <ul>
+                            <li>Danni da <strong>fuoco</strong> ignorano completamente la Resistenza</li>
+                            <li>Danni <strong>sacri/divini</strong> ignorano completamente la Resistenza</li>
+                            <li>Armi <strong>benedette o d'argento</strong> applicano solo metà Resistenza</li>
+                        </ul>
+                    </div>
+
+                    <h3>Come I Personaggi Possono Prevalere</h3>
+
+                    <div class="info-box">
+                        <h4>🔥 ARMI BENEDETTE (Sarah può creare)</h4>
+                        <p>Infliggono +2d6 danni contro [NON-MORTO]/[DEMONIACO]/[CORROTTO], bypassano Resistenza, prevengono Rigenerazione, generano 1 Speranza quando colpiscono. Il revolver personale di Sarah è permanentemente benedetto.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>🔥 FUOCO COME ARMA UNIVERSALE</h4>
+                        <p>Il fuoco bypassa Resistenza, previene Rigenerazione, e molti orrori lo temono istintivamente. Modi per usare fuoco:</p>
+                        <ul>
+                            <li>Molotov improvvisate (Doc può creare con Maestro dell'Improvvisazione)</li>
+                            <li>Fuoco Purificatore di Sarah (3d8 o 5d8 contro certi nemici)</li>
+                            <li>Lanterne a olio spezzate</li>
+                            <li>Bruciare cadaveri dopo per prevenire resurrezione</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>📊 CONOSCENZA DELLE DEBOLEZZE (Doc può scoprire)</h4>
+                        <p>Occhio Clinico di Doc può identificare vulnerabilità specifiche anche di creature innaturali. Quando scopre una debolezza, condividila immediatamente - gli alleati guadagnano +2 danni contro quella debolezza.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>🔗 DISTRUGGERE PUNTI DI ANCORAGGIO</h4>
+                        <p>Alcuni orrori potenti esistono solo parzialmente in questa realtà, ancorati attraverso:</p>
+                        <ul>
+                            <li>Rituali attivi (interromperli indebolisce la creatura)</li>
+                            <li>Oggetti maledetti (distruggerli danneggia la creatura)</li>
+                            <li>Portali dimensionali (chiuderli può bandir la creatura)</li>
+                        </ul>
+                        <p>Quando un Punto di Ancoraggio viene distrutto, la creatura perde 25% PF massimi, -2 a tutti i tiri, e perde alcune abilità speciali.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>🤝 LAVORARE INSIEME</h4>
+                        <p>Gli orrori potenti richiedono coordinazione. Esempio:</p>
+                        <p>Doc identifica debolezza al fuoco → Jack crea distrazione → Sarah colpisce con Fuoco Purificatore nel momento perfetto → Danni massimi che nessuno avrebbe potuto infliggere individualmente.</p>
+                        <p><strong>Le Connessioni meccaniche tra personaggi non sono flavor - sono strumenti tattici essenziali.</strong></p>
+                    </div>
+                </article>
+
+                <hr>
+
+                <!-- ARMI DA FUOCO -->
+                <article id="armi">
+                    <h2><span class="priority-icon important">⭐</span> Armi da Fuoco</h2>
+
+                    <h3>Proprietà Speciali</h3>
+
+                    <p>Tutte le armi da fuoco hanno <strong>Rumorosa</strong> (allertano tutti entro distanza Lontana). Altre proprietà variano:</p>
+
+                    <div class="stat-block">
+                        <p><strong>RICARICA X:</strong> Spari X colpi poi devi ricaricare (azione completa, o azione minore con speedloader se disponibile).</p>
+                        
+                        <p><strong>PENETRANTE X:</strong> Riduce Armatura del bersaglio di X per questo attacco (Penetrante 2 contro Armatura 3 = bersaglio conta come Armatura 1).</p>
+                        
+                        <p><strong>IMPRECISA A DISTANZA:</strong> Funziona solo contro bersagli entro Ravvicinata o più vicini. Attacchi a Lontana falliscono automaticamente.</p>
+                        
+                        <p><strong>NASCOSTA:</strong> Non notabile senza perquisizione fisica. Estraibile come azione minore invece che completa.</p>
+                        
+                        <p><strong>COLPO DIFFUSO</strong> (fucile a canna mozza): Colpisci tutti i bersagli in area di 3 metri. Tira un attacco, confronta con Evasione di ogni bersaglio.</p>
+                    </div>
+
+                    <h3>Armi Comuni</h3>
+
+                    <table>
+                        <tr>
+                            <th>Arma</th>
+                            <th>Danni</th>
+                            <th>Proprietà Speciali</th>
+                        </tr>
+                        <tr>
+                            <td>DERRINGER (.41)</td>
+                            <td>1d6+1</td>
+                            <td>Ricarica 2, Nascosta, Imprecisa</td>
+                        </tr>
+                        <tr>
+                            <td>REVOLVER STANDARD (.38)</td>
+                            <td>1d8+2</td>
+                            <td>Ricarica 6, Penetrante 1</td>
+                        </tr>
+                        <tr>
+                            <td>REVOLVER PESANTE (.44)</td>
+                            <td>2d8</td>
+                            <td>Ricarica 6, Penetrante 2</td>
+                        </tr>
+                        <tr>
+                            <td>WINCHESTER (.44-40)</td>
+                            <td>2d8+2</td>
+                            <td>Ricarica 15, Penetrante 2, Gittata Lontana</td>
+                        </tr>
+                        <tr>
+                            <td>CANNA MOZZA (12 gauge)</td>
+                            <td>3d6</td>
+                            <td>Ricarica 2, Imprecisa, Colpo Diffuso</td>
+                        </tr>
+                    </table>
+
+                    <h3>Munizioni Speciali</h3>
+
+                    <div class="stat-block">
+                        <p><strong>ARGENTO</strong> (5$/colpo): +1d6 vs [NON-MORTO]/[LICANTROPO]</p>
+                        <p><strong>BENEDETTE</strong> (2$/colpo, gratis se Sarah le benedice): +2d6 vs [NON-MORTO]/[DEMONIACO]/[CORROTTO], genera 1 Speranza quando colpisci</p>
+                    </div>
+                </article>
+
+                <hr>
+
+                <!-- DUELLI E SOPRAVVIVENZA -->
+                <article id="duelli">
+                    <h2><span class="priority-icon optional">💡</span> Duello Rapido e Sopravvivenza</h2>
+
+                    <div class="collapsible">Duello Rapido</div>
+                    <div class="collapsible-content">
+                        <p>Il duello formale western segue questa struttura:</p>
+                        <ol>
+                            <li><strong>DICHIARAZIONE:</strong> Entrambi i duellanti dichiarano intenzione di duellare. Tutte le altre azioni cessano - il duello è sacro.</li>
+                            <li><strong>IL CONTO ALLA ROVESCIA:</strong> Entrambi tirano Istinto simultaneamente. Chi ottiene risultato più alto estrae e spara per primo.</li>
+                            <li><strong>IL COLPO:</strong> Chi vince l'iniziativa fa un attacco. Se colpisce e uccide, il duello termina. Se manca o non uccide, l'avversario risponde.</li>
+                        </ol>
+                        <p><strong>REGOLA SPECIALE:</strong> Nel duello, il primo colpo infligge danni doppi se colpisce - l'elemento sorpresa è letale.</p>
+                    </div>
+
+                    <div class="collapsible">Sopravvivenza nel Deserto</div>
+                    <div class="collapsible-content">
+                        <p><strong>CALORE</strong> (ogni 2 ore sotto sole diretto): Resistenza vs 10-16 (varia per stagione). Fallimento = 1d6 danni + 1 Esaurimento.</p>
+                        
+                        <p><strong>DISIDRATAZIONE</strong> (per giorno senza acqua):</p>
+                        <ul>
+                            <li>Giorno 1: Svantaggio Forza/Resistenza</li>
+                            <li>Giorno 2: Svantaggio tutti i tiri, -1d6 PF</li>
+                            <li>Giorno 3: Indebolito, -2d6 PF</li>
+                            <li>Giorno 4+: -3d6 PF/giorno, morte a 0 PF</li>
+                        </ul>
+                        
+                        <p><strong>FREDDO NOTTURNO</strong> (dormire senza protezione): Resistenza vs 12 o 1d4 danni da freddo + Affaticato al risveglio.</p>
+                        
+                        <p><strong>Protezioni:</strong> Fuoco da campo, coperte, riparo naturale, viaggiare durante ore fresche.</p>
+                    </div>
+                </article>
+            </section>
+
+            <hr style="margin: 80px 0;">
+
+            <div style="text-align: center; font-style: italic; color: var(--rust); padding: 40px; background: rgba(139, 0, 0, 0.05); border-radius: 5px;">
+                <p style="font-size: 1.2em; margin-bottom: 15px;">L'avventura, il bestiario e gli strumenti per il GM continuano nel file successivo...</p>
+                <p>Hai ora tutti e tre i personaggi e le regole complete del Weird West.</p>
+                <p style="margin-top: 20px;"><strong>Prossimo file: Sangue sui Binari (3 Atti) + Bestiario + Strumenti GM</strong></p>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        // Script per le sezioni collassabili
+        document.querySelectorAll('.collapsible').forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                content.classList.toggle('active');
+            });
+        });
+
+        // Smooth scroll per i link di navigazione
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
