@@ -2,18 +2,21 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guida alla Campagna - Gunsmoke & Dread</title>
     <link rel="stylesheet" href="assets/css/main-styles.css">
     <link rel="stylesheet" href="assets/css/volume-themes.css">
     <style media="print">
         @page { size: A4; margin: 1.5cm; }
-        body { background: white !important; color: black !important; font-size: 10pt; line-height: 1.4; font-family: 'Georgia', serif; }
+        body { background: white !important; color: black !important; font-size: 10pt; line-height: 1.5; font-family: 'Georgia', serif; }
         .container { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
         .sidebar, .nav-links, .hero-stats, .no-print { display: none !important; }
         .content { column-count: 2; column-gap: 1cm; column-rule: 1px solid #ccc; width: 100% !important; }
-        h1, h2, .hero, .footer { column-span: all; text-align: center; page-break-after: avoid; }
-        .stat-block, .info-box, .warning-box, .horror-box, .tip-box, .card { break-inside: avoid; page-break-inside: avoid; border: 2px solid #000 !important; background-color: #f5f5f5 !important; color: black !important; margin-bottom: 15px; text-align: justify; }
+        h1, h2, h3, .hero, .footer { column-span: all; text-align: center; page-break-after: avoid; }
+        .stat-block, .info-box, .warning-box, .horror-box, .tip-box, .card { 
+            break-inside: avoid; page-break-inside: avoid; 
+            border: 2px solid #000 !important; background-color: #f5f5f5 !important; 
+            color: black !important; margin-bottom: 20px; text-align: justify; padding: 15px;
+        }
         a { text-decoration: underline; color: black !important; }
     </style>
 </head>
@@ -22,125 +25,149 @@
         
         <div class="hero" style="padding: 60px 40px; background: linear-gradient(135deg, var(--rust) 0%, var(--night-black) 50%, var(--ocean-blue) 100%);">
             <h1 style="font-size: 4em; color: white;">🗺️ GUIDA ALLA CAMPAGNA</h1>
-            <p class="subtitle" style="color: var(--seafoam);">Gestire Gunsmoke & Dread</p>
-            <p class="tagline" style="color: white;">Dalla Silver Hollow all'Abisso • Progressione • Conseguenze</p>
+            <p class="subtitle" style="color: var(--seafoam);">Il Manuale del Custode</p>
+            <p class="tagline" style="color: white;">Dalla Silver Hollow all'Abisso • Progressione • Archi Narrativi</p>
         </div>
         
         <div class="sidebar-layout">
             <aside class="sidebar no-print">
                 <h2>Indice</h2>
-                <ul class="nav-links"><li><a href="#overview">Panoramica</a></li><li><a href="#structure">Struttura</a></li><li><a href="#timeline">Cronologia</a></li><li><a href="#progression">Progressione</a></li><li><a href="#downtime">Tempo Morto</a></li><li><a href="#troubleshooting">Problemi Comuni</a></li></ul>
+                <ul class="nav-links">
+                    <li><a href="#overview">Panoramica</a></li>
+                    <li><a href="#structure">Struttura</a></li>
+                    <li><a href="#timeline">Cronologia</a></li>
+                    <li><a href="#narrative">Archi Narrativi</a></li>
+                    <li><a href="#downtime">Tempo Morto</a></li>
+                    <li><a href="#troubleshooting">Risoluzione Problemi</a></li>
+                </ul>
             </aside>
             
             <main class="content">
+                
                 <section id="overview" class="section">
-                    <h2>📖 Panoramica della Campagna</h2>
-                    <p class="large"><strong>Gunsmoke & Dread</strong> è una campagna horror in 2 volumi ambientata nel Weird West del 1885-1886. Combina azione western classica con orrore cosmico lovecraftiano, esplorando temi di insignificanza umana, body horror e corruzione.</p>
+                    <h2>📖 La Visione d'Insieme</h2>
+                    
+                    <p class="large">
+                        <strong>Gunsmoke & Dread</strong> non è una semplice serie di avventure scollegate. È una discesa graduale nell'abisso, una campagna horror in due atti ambientata nel Weird West del 1885-1886. L'opera combina l'azione viscerale del western classico con il nichilismo dell'orrore cosmico lovecraftiano, esplorando temi come l'insignificanza umana di fronte all'eterno, la corruzione della carne e la fragilità della mente.
+                    </p>
                     
                     <div class="info-box">
-                        <h3>🎯 Dati Essenziali</h3>
+                        <h3>🎯 Dati Essenziali per il GM</h3>
                         <ul>
-                            <li><strong>Durata Totale:</strong> 25-35 ore di gioco (10-14 sessioni).</li>
-                            <li><strong>Livelli:</strong> Inizia al 2, termina al 5-6.</li>
-                            <li><strong>Tono:</strong> Horror psicologico (70%) + Azione western (30%).</li>
+                            <li><strong>Durata Complessiva:</strong> Stimata tra le 25 e le 35 ore di gioco effettivo (circa 10-14 sessioni da 3 ore).</li>
+                            <li><strong>Arco di Livello:</strong> I personaggi iniziano come novizi al Livello 2 e terminano come veterani segnati al Livello 5-6.</li>
+                            <li><strong>Tono e Atmosfera:</strong> Horror psicologico (70%) intervallato da brutale azione western (30%).</li>
+                            <li><strong>Pubblico:</strong> 3-5 Giocatori adulti (contenuti maturi e disturbanti).</li>
                         </ul>
-                    </div>
-
-                    <h3>📚 I Due Volumi</h3>
-                    <div class="card">
-                        <h4>VOLUME I: Shadows in the Desert</h4>
-                        <p><strong>Location:</strong> Silver Hollow, New Mexico. <strong>Livelli:</strong> 2 → 3.</p>
-                        <p><strong>Focus:</strong> Investigazione, culti, primo contatto cosmico.</p>
-                    </div>
-                    <div class="card">
-                        <h4>VOLUME II: Where the Ocean Meets the Dust</h4>
-                        <p><strong>Location:</strong> Dry Eye, Arizona. <strong>Livelli:</strong> 3 → 5.</p>
-                        <p><strong>Focus:</strong> Esplorazione, body horror, confronto epico.</p>
                     </div>
                 </section>
                 
                 <section id="structure" class="section">
-                    <h2>🏗️ Struttura e Collegamenti</h2>
+                    <h2>🏗️ La Struttura dei Due Volumi</h2>
                     
-                    <div class="info-box">
-                        <h4>Opzione A: Campagna Continuativa (CONSIGLIATO)</h4>
-                        <p>Gioca il Volume I, poi dopo <strong>6 mesi di tempo in-game</strong> (gestiti come Tempo Morto), inizia il Volume II con gli stessi personaggi, ora veterani e segnati dalle cicatrici.</p>
-                        <p><strong>Pro:</strong> Massimo impatto emotivo. I giocatori vedono l'evoluzione dei loro traumi.</p>
+                    <h3>📚 Analisi dei Moduli</h3>
+                    
+                    <div class="card">
+                        <h4>VOLUME I: Shadows in the Desert</h4>
+                        <p><strong>Location:</strong> Silver Hollow, New Mexico.<br><strong>Livelli:</strong> 2 → 3.</p>
+                        <p>Questo volume funge da introduzione. Inizia come un mistero locale (persone scomparse, un prete impazzito) ma si evolve rapidamente verso la rivelazione cosmica. I giocatori imparano che sotto la superficie del mondo esiste "altro".</p>
                     </div>
                     
-                    <div class="stat-block">
-                        <h4>L'Arco Narrativo</h4>
-                        <p>Sotto il West giacciono rovine preumane. Nel <strong>Vol I</strong>, i PG scoprono che gli Antichi esistono. Nel <strong>Vol II</strong>, scoprono che stanno tornando e devono scegliere se combattere, fuggire o sacrificarsi.</p>
+                    <div class="card">
+                        <h4>VOLUME II: Where the Ocean Meets the Dust</h4>
+                        <p><strong>Location:</strong> Dry Eye, Arizona.<br><strong>Livelli:</strong> 3 → 5.</p>
+                        <p>Questo è il cuore dell'orrore. Non c'è più mistero, solo sopravvivenza. I personaggi, ora consapevoli della minaccia, devono discendere fisicamente in un mondo alieno sottomarino per affrontare un'entità quasi divina.</p>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h4>🔗 Come Collegare i Volumi (Consigliato)</h4>
+                        <p>Il modo migliore per giocare questa campagna è l'<strong>Opzione Continuativa</strong>. Gioca il Volume I, poi narra un intervallo di <strong>6 mesi di tempo in-game</strong> (gestiti tramite le regole del Tempo Morto), e infine riprendi con il Volume II usando gli stessi personaggi.</p>
+                        <p>Questo approccio massimizza l'impatto emotivo: i giocatori vedono i loro eroi evolvere da avventurieri ingenui a veterani pieni di cicatrici, rendendo il finale del Volume II incredibilmente potente.</p>
                     </div>
                 </section>
                 
                 <section id="timeline" class="section">
-                    <h2>📅 Cronologia Consigliata</h2>
+                    <h2>📅 Cronologia degli Eventi</h2>
                     
                     <div class="stat-block">
-                        <h4>FASE 1: SETTEMBRE 1885 (Volume I)</h4>
-                        <p>Sessioni 1-5. Arrivo a Silver Hollow, scoperta del culto, scontro con Jeremiah.</p>
+                        <h4>FASE 1: SETTEMBRE 1885 (L'Incidente)</h4>
+                        <p>I personaggi arrivano a Silver Hollow. In meno di una settimana, smantellano il culto di Jeremiah e scoprono il Tempio del Serpente. L'evento lascia segni indelebili nelle loro menti.</p>
                     </div>
+                    
                     <div class="stat-block">
-                        <h4>FASE 2: INVERNO 1885 (Tempo Morto)</h4>
-                        <p>6 Mesi di pausa narrativa. I PG guariscono, studiano o si perdono nei vizi.</p>
+                        <h4>FASE 2: INVERNO 1885-1886 (Il Silenzio)</h4>
+                        <p>Per sei mesi, il mondo sembra tornare normale. I personaggi si separano o cercano di dimenticare. Ma gli incubi non cessano. In questo periodo, l'entità "Il Guardiano" in Arizona inizia a svegliarsi, influenzando i sogni di persone sensibili a centinaia di chilometri di distanza.</p>
                     </div>
+                    
                     <div class="stat-block">
-                        <h4>FASE 3: MARZO 1886 (Volume II)</h4>
-                        <p>Sessioni 6-12. Chiamata a Dry Eye, discesa nel pozzo, finale cosmico.</p>
+                        <h4>FASE 3: MARZO 1886 (Il Risveglio)</h4>
+                        <p>Cornelius Brandt invia il telegramma disperato da Dry Eye. I personaggi, spinti dal destino o dal trauma non risolto, si riuniscono. Inizia la discesa finale.</p>
                     </div>
                 </section>
                 
-                <section id="progression" class="section">
-                    <h2>📈 Progressione Personaggi</h2>
-                    <p>Usa il sistema a pietre miliari (Milestone) invece dei punti esperienza numerici.</p>
-                    <ul>
-                        <li><strong>Inizio:</strong> Livello 2.</li>
-                        <li><strong>Fine Vol I:</strong> Livello 3.</li>
-                        <li><strong>Tempo Morto:</strong> Possibile passaggio a Livello 4 se giocano side-quest.</li>
-                        <li><strong>Fine Vol II:</strong> Livello 5-6 (Veterani Leggendari).</li>
-                    </ul>
+                <section id="narrative" class="section">
+                    <h2>🧵 Archi Narrativi dei Personaggi</h2>
+                    <p>Per rendere la storia personale, incoraggia i giocatori a seguire questi archi di sviluppo suggeriti:</p>
+                    
+                    <div class="info-box">
+                        <h4>JACK MALONE: La Redenzione attraverso il Sangue</h4>
+                        <p><strong>Volume I:</strong> Jack è perseguitato dal fantasma della bambina che ha ucciso per errore. È un uomo che cerca la morte ma è troppo bravo a sopravvivere.</p>
+                        <p><strong>Volume II:</strong> Incontra Tommy Garrett (il geometra scomparso), che per lui è come un fratello minore. Quando scopre che Tommy è diventato un mostro, Jack deve fare una scelta impossibile: uccidere l'ultima persona che amava o lasciarlo vivere come abominio. La sua redenzione non sta nel salvare Tommy, ma nel trovare la pace dopo aver fatto la cosa necessaria.</p>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h4>SARAH BLACKWOOD: La Fede nel Fuoco</h4>
+                        <p><strong>Volume I:</strong> La sua fede è dogmatica e sicura. Vedere Padre Jeremiah trasformato in mostro incrina le sue certezze: come può Dio permettere un tale abominio?</p>
+                        <p><strong>Volume II:</strong> La sua fede deve evolversi o morire. Comprende che gli Antichi sono reali e antecedenti alla Bibbia. Il suo arco culmina nella realizzazione che la sua fede non deve essere una negazione della realtà, ma uno scudo contro di essa. Diventa una guerriera sacra che combatte non perché "vincerà", ma perché è giusto.</p>
+                    </div>
+                    
+                    <div class="info-box">
+                        <h4>DOC WELLS: Il Crollo della Ragione</h4>
+                        <p><strong>Volume I:</strong> Cerca di razionalizzare tutto. I mostri sono "animali sconosciuti", la magia è "scienza non spiegata".</p>
+                        <p><strong>Volume II:</strong> Di fronte alla geometria non euclidea della Città Sommersa, la logica umana fallisce. Doc deve accettare che l'universo è più vasto e terrificante di quanto la scienza possa misurare. Il suo trionfo sta nell'usare la sua mente analitica non per negare l'orrore, ma per comprenderne i meccanismi (es. i Pilastri) e sconfiggerlo.</p>
+                    </div>
                 </section>
                 
                 <section id="downtime" class="section">
-                    <h2>⏸️ Tempo Morto (Downtime)</h2>
-                    <div class="tip-box">
-                        <h3>Gestire i 6 Mesi</h3>
-                        <p>Chiedi a ogni giocatore come il suo PG ha passato l'inverno. Questo serve a recuperare Tenuta Mentale e giustificare nuove abilità.</p>
+                    <h2>⏸️ Gestione del Tempo Morto (Downtime)</h2>
+                    <p>I 6 mesi tra le avventure non devono essere saltati con un semplice "passa il tempo". Chiedi a ogni giocatore di scegliere un'attività principale:</p>
+                    
+                    <div class="stat-block">
+                        <h4>1. RECUPERO E TERAPIA</h4>
+                        <p>Il personaggio passa l'inverno in un sanatorio, in un monastero o semplicemente a casa cercando di dimenticare. <strong>Effetto:</strong> Azzera completamente la Tenuta Mentale e rimuove una Conseguenza Minore.</p>
                     </div>
                     
                     <div class="stat-block">
-                        <h4>ATTIVITÀ POSSIBILI</h4>
-                        <ul>
-                            <li><strong>Recupero & Terapia:</strong> Azzera la Tenuta Mentale. Rimuovi 1 Conseguenza minore.</li>
-                            <li><strong>Addestramento:</strong> Guadagna una nuova competenza o migliora un'arma.</li>
-                            <li><strong>Indagine:</strong> Scopri voci su Dry Eye (Vantaggio all'inizio del Vol II).</li>
-                            <li><strong>Vizio Prolungato:</strong> Il PG si perde nell'alcol o nel gioco. Recupera mente ma perde soldi/reputazione.</li>
-                        </ul>
+                        <h4>2. ADDESTRAMENTO INTENSIVO</h4>
+                        <p>Il personaggio si prepara alla guerra, sapendo che il male tornerà. <strong>Effetto:</strong> Guadagna competenza in un'arma o un bonus +1 permanente a una caratteristica fisica.</p>
+                    </div>
+                    
+                    <div class="stat-block">
+                        <h4>3. RICERCA OCCULTA</h4>
+                        <p>Il personaggio studia i tomi rubati a Silver Hollow o indaga su voci simili. <strong>Effetto:</strong> Il giocatore inizia il Volume II con informazioni cruciali sul Guardiano (conosce la debolezza dei Pilastri prima di vederli).</p>
                     </div>
                 </section>
                 
                 <section id="troubleshooting" class="section">
-                    <h2>🔧 Risoluzione Problemi (Troubleshooting)</h2>
+                    <h2>🔧 Risoluzione dei Problemi al Tavolo</h2>
                     
                     <div class="warning-box">
-                        <h4>"I Giocatori non hanno paura"</h4>
-                        <p>Aumenta le descrizioni sensoriali (odori, suoni). Usa i Token Paura per creare eventi inspiegabili. Rendi le ferite descrittive ("L'artiglio ti apre la spalla fino all'osso" invece di "Prendi 5 danni").</p>
+                        <h4>"I miei giocatori non sembrano spaventati"</h4>
+                        <p>L'horror è difficile. Se ridono o fanno battute, non fermarli: è un meccanismo di difesa. Per riportare la tensione, colpisci le loro risorse. Fai in modo che le munizioni finiscano. Descrivi odori disgustosi. Uccidi un NPC a cui tenevano in modo improvviso e brutale. La paura nasce dalla vulnerabilità.</p>
                     </div>
                     
                     <div class="warning-box">
                         <h4>"Si sono bloccati nell'indagine"</h4>
-                        <p>Usa la <strong>Regola dei Tre Indizi</strong>. Se non trovano il diario, fai confessare un cultista morente. Se falliscono quello, fagli avere una visione onirica. L'indagine non deve mai fermare il gioco.</p>
+                        <p>Non lasciare mai che il gioco si fermi per un tiro fallito. Usa la regola del <strong>"Fail Forward"</strong> (Fallire in avanti). Se falliscono il tiro per scassinare la scrivania dello sceriffo, ci riescono comunque, ma fanno così tanto rumore che l'intera città sa che sono lì. Hanno l'indizio, ma ora sono nei guai.</p>
                     </div>
                     
                     <div class="warning-box">
-                        <h4>"Stanno morendo tutti contro il Boss"</h4>
-                        <p>Ricorda che l'obiettivo non è sempre uccidere. Il Boss potrebbe catturarli per un rituale (dando chance di fuga). Oppure, un NPC alleato (come Brandt) può intervenire con della dinamite per un sacrificio eroico.</p>
+                        <h4>"Il Boss li sta massacrando troppo in fretta"</h4>
+                        <p>Se il TPK (Total Party Kill) sembra imminente e non vuoi che finisca così, offri un patto faustiano. Il Boss non li uccide, li <em>cattura</em> per trasformarli con calma. Questo sposta la scena dal combattimento alla fuga disperata dalle celle del tempio, dando loro un'ultima chance.</p>
                     </div>
                 </section>
             </main>
         </div>
-        <div class="footer"><p>Guida alla Campagna - Gunsmoke & Dread</p></div>
     </div>
 </body>
 </html>
