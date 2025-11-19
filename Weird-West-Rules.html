@@ -3,201 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Regole del Weird West - Gunsmoke & Dread</title>
+    <title>Regole del Weird West - Gunsmoke & Dread</title>
     <link rel="stylesheet" href="assets/css/main-styles.css">
     <link rel="stylesheet" href="assets/css/volume-themes.css">
-    <style>
-        @media print {
-            .no-print { display: none !important; }
-            .session-zero-sheet { page-break-before: always; display: block !important; border: 2px solid black; padding: 20px; }
-            body { font-size: 10pt; background: white; color: black; font-family: Georgia, serif; }
-            .sidebar, .nav-links { display: none !important; }
-            .content { width: 100% !important; margin: 0 !important; column-count: 2; column-gap: 1cm; }
-            h1, h2, .hero, .footer { column-span: all; text-align: center; page-break-after: avoid; }
-            .stat-block, .info-box, .warning-box, .horror-box, .tip-box, table, .card { break-inside: avoid; page-break-inside: avoid; border: 2px solid #000 !important; background-color: #f5f5f5 !important; color: black !important; margin-bottom: 15px; }
-            a { text-decoration: underline; color: black !important; }
-        }
-        .session-zero-sheet { background: #fff; padding: 30px; border: 1px solid #ccc; margin-top: 40px; display: none; }
-        .show-on-screen { display: block !important; border: 4px double var(--rust); }
-        .checkbox-list label { display: block; margin: 5px 0; }
+    <style media="print">
+        @page { size: A4; margin: 1.5cm; }
+        body { background: white !important; color: black !important; font-size: 10pt; line-height: 1.4; font-family: 'Georgia', serif; }
+        .container { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
+        .sidebar, .nav-links, .no-print { display: none !important; }
+        .content { column-count: 2; column-gap: 1cm; column-rule: 1px solid #ccc; width: 100% !important; }
+        h1, h2, .hero, .footer { column-span: all; text-align: center; page-break-after: avoid; }
+        .stat-block, .info-box, .warning-box, .horror-box, .tip-box, table { break-inside: avoid; page-break-inside: avoid; border: 2px solid #000 !important; background-color: #f5f5f5 !important; color: black !important; margin-bottom: 15px; text-align: justify; }
+        a { text-decoration: underline; color: black !important; }
     </style>
 </head>
 <body class="theme-desert">
     <div class="container">
-        
         <div class="hero" style="padding: 80px 40px; background: linear-gradient(135deg, var(--rust) 0%, var(--blood-red) 50%, var(--night-black) 100%);">
-            <h1 style="font-size: 4.5em; color: white; text-shadow: 3px 3px 6px rgba(0,0,0,0.7);">
-                🔫 REGOLE DEL WEIRD WEST
-            </h1>
-            <p class="subtitle" style="color: var(--desert-sand); font-size: 1.5em;">Il Regolamento Completo per Gunsmoke & Dread</p>
+            <h1 style="font-size: 4.5em;">🔫 REGOLE DEL WEIRD WEST</h1>
+            <p class="subtitle">Il Regolamento Completo per Gunsmoke & Dread</p>
         </div>
         
         <div class="sidebar-layout">
-            <aside class="sidebar no-print">
-                <h2>📋 Indice</h2>
-                <ul class="nav-links">
-                    <li><a href="#intro">Introduzione</a></li>
-                    <li><a href="#base">Sistema Base</a></li>
-                    <li><a href="#tenuta">Tenuta Mentale</a></li>
-                    <li><a href="#combat">Combattimento</a></li>
-                    <li><a href="#environment">Ambiente</a></li>
-                    <li><a href="#conditions">Condizioni</a></li>
-                </ul>
-            </aside>
-            
             <main class="content">
                 <section id="intro" class="section">
-                    <h2>📖 Introduzione</h2>
-                    <p class="large">Questa sezione contiene tutte le regole necessarie per giocare a <strong>Gunsmoke & Dread</strong>, basate su Daggerheart™ SRD 1.0 con modifiche per l'horror cosmico.</p>
-                    
-                    <div class="warning-box">
-                        <h3>⚠️ Safety Tools</h3>
-                        <p>Questa campagna contiene temi horror intensi. Si raccomanda l'uso di:</p>
+                    <h2>📖 Introduzione al Sistema</h2>
+                    <p class="large">Questa sezione contiene tutte le regole necessarie per giocare a <strong>Gunsmoke & Dread</strong>. Il sistema base è <strong>Daggerheart™</strong>, modificato per supportare l'ambientazione Weird West e l'orrore cosmico.</p>
+                    <div class="info-box">
+                        <h3>🎯 Requisiti di Gioco</h3>
                         <ul>
-                            <li><strong>X-Card:</strong> Per saltare contenuti problematici.</li>
-                            <li><strong>Lines & Veils:</strong> Per definire i limiti prima di giocare.</li>
-                            <li><strong>Open Door:</strong> Libertà di lasciare il tavolo se necessario.</li>
+                            <li><strong>Sistema Base:</strong> Regole Daggerheart™ (SRD 1.0).</li>
+                            <li><strong>Dadi:</strong> Set poliedrico completo (d4, d6, d8, d10, d12, d20).</li>
+                            <li><strong>Giocatori:</strong> 3-5 Giocatori + 1 Game Master.</li>
                         </ul>
                     </div>
-
-                    <div class="no-print" style="margin: 20px 0; padding: 15px; background: #fdfbf7; border: 2px solid var(--alien-green); text-align: center;">
-                        <h3>🤝 Strumenti Sessione Zero</h3>
-                        <button onclick="document.getElementById('session-agreement').classList.add('show-on-screen'); window.location.href='#session-agreement'" style="padding: 10px 20px; background: var(--alien-green); border: none; cursor: pointer; font-weight:bold;">📝 Apri Foglio Accordo</button>
-                        <button onclick="window.print()" style="padding: 10px 20px; background: var(--rust); color: white; border: none; cursor: pointer; margin-left: 10px; font-weight:bold;">🖨️ Stampa Tutto</button>
+                    <div class="warning-box">
+                        <h3>⚠️ Strumenti di Sicurezza</h3>
+                        <p>Questa campagna tratta temi maturi come body horror e nichilismo. Discutete l'uso di <strong>X-Card</strong>, <strong>Linee & Veli</strong> e la politica della <strong>Porta Aperta</strong> durante la Sessione Zero.</p>
                     </div>
                 </section>
                 
                 <section id="base" class="section">
-                    <h2>🎲 Sistema Base & Modifiche</h2>
-                    
+                    <h2>🎲 Il Sistema dei Dadi Dualità</h2>
+                    <p>Daggerheart utilizza due dadi da 12 facce (d12) per risolvere le azioni dall'esito incerto. Uno rappresenta la <strong>Speranza</strong> (colore chiaro), l'altro la <strong>Paura</strong> (colore scuro).</p>
                     <div class="stat-block">
-                        <h4>Il Tiro Azione (Duality Dice)</h4>
-                        <p>Tira 2d12 (Speranza/Paura). Il risultato più alto determina il successo e chi riceve il Token.</p>
+                        <h4>Il Tiro Azione</h4>
+                        <ol>
+                            <li>Tira 2d12 (Speranza e Paura).</li>
+                            <li>Somma il risultato più alto al tuo Modificatore di Attributo.</li>
+                            <li>Confronta il totale con la Classe Difficoltà (CD).</li>
+                        </ol>
+                        <p><strong>Risultati:</strong></p>
                         <ul>
-                            <li><strong>Hope > Fear:</strong> Successo con Speranza (Aiuta i giocatori).</li>
-                            <li><strong>Fear > Hope:</strong> Successo con Paura (Il GM fa una mossa).</li>
-                            <li><strong>Fallimento:</strong> Conseguenze negative.</li>
+                            <li><strong>Speranza > Paura (Successo con Speranza):</strong> Ottieni ciò che vuoi e guadagni 1 Speranza.</li>
+                            <li><strong>Paura > Speranza (Successo con Paura):</strong> Ottieni ciò che vuoi, ma il GM guadagna 1 Paura o introduce una complicazione.</li>
+                            <li><strong>Fallimento:</strong> Non riesci e subisci conseguenze.</li>
                         </ul>
                     </div>
 
                     <div class="warning-box" style="border-color: var(--blood-red);">
-                        <h3>⚠️ IL COSTO DEL POTERE (Nuova Regola)</h3>
-                        <p>In questo setting, la magia non è gratuita. Attingere al soprannaturale scheggia l'anima.</p>
-                        <p><strong>Regola:</strong> Per attivare abilità "Soprannaturali" o "Miracolose" (es. Ira Divina, Resurrezione, Sguardo dell'Oltre), un giocatore deve pagare un prezzo:</p>
+                        <h3>⚠️ REGOLA SPECIALE: IL COSTO DEL POTERE</h3>
+                        <p>In questo mondo, la magia non è gratuita. Attingere al sovrannaturale scheggia l'anima.</p>
+                        <p><strong>Regola:</strong> Per attivare abilità "Soprannaturali" o "Miracolose" (es. <em>Ira Divina, Resurrezione, Sguardo dell'Oltre</em>), un giocatore deve pagare un prezzo immediato:</p>
                         <ul>
                             <li>Spendere <strong>1 Speranza</strong> (Sforzo Eroico)</li>
                             <li>OPPURE spendere <strong>1 Segmento di Tenuta Mentale</strong> (Sacrificio Psichico)</li>
                         </ul>
                     </div>
+
+                    <h3>Gli Attributi</h3>
+                    <div class="grid-auto">
+                        <p><strong>💪 FORZA:</strong> Potenza fisica, combattimento in mischia, sollevare pesi.</p>
+                        <p><strong>🎯 AGILITÀ:</strong> Destrezza, riflessi, mira con armi da fuoco, furtività.</p>
+                        <p><strong>🧠 CONOSCENZA:</strong> Intelligenza, memoria, medicina, ricerca, occultismo.</p>
+                        <p><strong>🗣️ PRESENZA:</strong> Carisma, leadership, intimidazione, forza di volontà.</p>
+                        <p><strong>👁️ ISTINTO:</strong> Percezione, empatia, intuito, sopravvivenza.</p>
+                        <p><strong>🛡️ COSTITUZIONE:</strong> Resistenza fisica, salute, sopportazione del dolore.</p>
+                    </div>
                 </section>
                 
                 <section id="tenuta" class="section">
-                    <h2>🧠 Tenuta Mentale</h2>
-                    <p>Ogni PG ha una traccia di <strong>10 segmenti</strong>. Riempirla causa un crollo.</p>
+                    <h2>🧠 Il Sistema della Tenuta Mentale</h2>
+                    <p class="large">Il sistema della <strong>Tenuta Mentale</strong> traccia il deterioramento psicologico dei personaggi di fronte a orrori che la mente umana non può comprendere. Sostituisce o integra lo Stress.</p>
                     
+                    <div class="horror-box">
+                        <h3>Come Funziona</h3>
+                        <p>Ogni PG ha una traccia di <strong>10 Segmenti</strong>. Quando assiste a eventi traumatici, riempie uno o più segmenti. Se la traccia si riempie completamente, avviene un Crollo (Breakdown).</p>
+                    </div>
+                    
+                    <h3>Le 5 Fasi del Deterioramento</h3>
                     <div class="stat-block">
-                        <h4>Fasi del Deterioramento</h4>
-                        <ul>
-                            <li><strong>FASE 1 (0-2):</strong> Normale. Nessun malus.</li>
-                            <li><strong>FASE 2 (3-5):</strong> Scosso. -1 ai check sociali.</li>
-                            <li><strong>FASE 3 (6-8):</strong> Traumatizzato. -2 Presenza, -1 Istinto.</li>
-                            <li><strong>FASE 4 (9):</strong> In Bilico. Svantaggio a tutto. Il GM può forzare azioni.</li>
-                            <li><strong>FASE 5 (10):</strong> BREAKDOWN. Azzera la tenuta e tira per una Conseguenza Permanente.</li>
-                        </ul>
+                        <p><strong>FASE 1: NORMALE (0-2 Segmenti)</strong><br>Il personaggio è stabile. Nessun effetto meccanico. Incubi occasionali.</p>
+                        <p><strong>FASE 2: SCOSSO (3-5 Segmenti)</strong><br>Segni di stress visibili (tremori, sudore). <strong>-1 alle prove di Presenza</strong> in situazioni sociali.</p>
+                        <p><strong>FASE 3: TRAUMATIZZATO (6-8 Segmenti)</strong><br>Paranoia crescente. <strong>-2 Presenza, -1 Istinto.</strong> Deve superare una prova di Presenza (CD 12) per affrontare la fonte della paura.</p>
+                        <p><strong>FASE 4: IN BILICO (9 Segmenti)</strong><br>Sull'orlo della follia. <strong>Svantaggio a TUTTE le prove.</strong> Il GM può forzare un'azione irrazionale una volta per sessione (costa 2 Speranza per resistere).</p>
+                        <p><strong>FASE 5: CROLLO (10 Segmenti)</strong><br>La mente si spezza. Azzera la Tenuta e tira sulla Tabella delle Conseguenze Permanenti.</p>
                     </div>
 
-                    <div class="info-box">
-                        <h4>🥃 RECUPERO: IL VIZIO</h4>
-                        <p>Durante un Riposo Breve, un PG può recuperare <strong>1d4 Tenuta</strong> indulgendo nel suo Vizio. Se il dado fa <strong>1</strong>, ottiene una Condizione negativa.</p>
+                    <h3>Tabella Conseguenze Permanenti (d6)</h3>
+                    <div class="stat-block">
+                        <ol>
+                            <li><strong>Fobia Debilitante:</strong> Svantaggio permanente in presenza dello stimolo (buio, acqua, insetti).</li>
+                            <li><strong>Tic Compulsivo:</strong> Deve compiere rituali (contare, lavarsi) o subisce stress.</li>
+                            <li><strong>Paranoia Cronica:</strong> -1 Permanente a tutte le prove sociali (non si fida di nessuno).</li>
+                            <li><strong>Incubi Ricorrenti:</strong> Il Riposo Lungo non recupera Tenuta Mentale automaticamente.</li>
+                            <li><strong>Dissociazione:</strong> Episodi di catatonia o perdita di tempo (a discrezione del GM).</li>
+                            <li><strong>Rivelazione Oscura:</strong> +2 a Conoscenza (Miti), ma -2 a Presenza (Vede il mondo diversamente).</li>
+                        </ol>
                     </div>
                 </section>
                 
                 <section id="combat" class="section">
-                    <h2>⚔️ Combattimento & Equipaggiamento</h2>
+                    <h2>⚔️ Combattimento e Armi</h2>
                     
                     <div class="stat-block">
-                        <h4>🔫 Armi da Fuoco del Weird West</h4>
-                        <table style="width: 100%; margin-top: 10px; font-size: 0.9em;">
-                            <thead><tr><th>Arma</th><th>Danno</th><th>Note</th></tr></thead>
-                            <tbody>
-                                <tr><td>Revolver .45</td><td>2d6</td><td>Reload (Bonus Action), 6 colpi</td></tr>
-                                <tr><td>Winchester</td><td>2d8</td><td>Due mani, Gittata lunga</td></tr>
-                                <tr><td>Shotgun</td><td>3d6</td><td>Spread (Colpisce 2 vicini)</td></tr>
-                                <tr style="background-color: rgba(255,0,0,0.1);">
-                                    <td><strong>Dinamite</strong></td>
-                                    <td><strong>4d6</strong></td>
-                                    <td><strong>Speciale:</strong> Infligge DANNO MASSIMO (24) contro strutture o boss colossali senza tirare.</td>
-                                </tr>
-                            </tbody>
+                        <h4>L'Economia delle Azioni</h4>
+                        <p><strong>Azione Principale (1/turno):</strong> Attaccare, Scattare, Aiutare, Usare Abilità.</p>
+                        <p><strong>Movimento (Gratuito):</strong> Fino alla velocità base (tipicamente 9m).</p>
+                        <p><strong>Azione Bonus (Se disponibile):</strong> Ricaricare, usare oggetto rapido.</p>
+                        <p><strong>Reazione (1/round):</strong> Attacchi di opportunità o abilità difensive.</p>
+                    </div>
+
+                    <h3>Armi da Fuoco del Weird West</h3>
+                    <div class="stat-block">
+                        <table style="width:100%">
+                            <tr><th>Arma</th><th>Danno</th><th>Note</th></tr>
+                            <tr><td>Revolver .45</td><td>2d6</td><td>Ricarica (Bonus), 6 colpi. Gittata 12/36m.</td></tr>
+                            <tr><td>Fucile Winchester</td><td>2d8</td><td>Due mani. Gittata 24/90m.</td></tr>
+                            <tr><td>Doppietta (Shotgun)</td><td>3d6</td><td>Rosa: Colpisce 2 bersagli vicini entro 3m.</td></tr>
+                            <tr style="background:rgba(255,0,0,0.1)"><td><strong>Dinamite</strong></td><td><strong>4d6</strong></td><td><strong>Speciale:</strong> Infligge <strong>DANNO MASSIMO (24)</strong> contro strutture o mostri colossali senza tirare.</td></tr>
                         </table>
                     </div>
                 </section>
 
                 <section id="environment" class="section">
-                    <h2>🌪️ Pericoli Ambientali</h2>
+                    <h2>🌪️ Pericoli Ambientali & Condizioni</h2>
                     <div class="grid-auto-wide">
                         <div class="stat-box">
-                            <h4>🔥 CALORE ESTREMO</h4>
-                            <p>Check Costituzione (CD 12) ogni 2 ore o 1 Esaurimento.</p>
+                            <h4>Calore del Deserto</h4>
+                            <p>Prova di Costituzione (CD 12) ogni 2 ore di viaggio diurno o subisci 1 livello di Sfinimento.</p>
                         </div>
                         <div class="stat-box">
-                            <h4>❄️ FREDDO NOTTURNO</h4>
-                            <p>Check Costituzione (CD 10) ogni 4 ore senza riparo o 1 Esaurimento.</p>
+                            <h4>Freddo Notturno</h4>
+                            <p>Senza riparo adeguato, prova di Costituzione (CD 10) ogni 4 ore o 1 Sfinimento.</p>
                         </div>
                         <div class="stat-box">
-                            <h4>🐍 ANIMALI</h4>
-                            <p><strong>Serpenti:</strong> Morso 2d6 veleno (Cost CD 14).<br><strong>Scorpioni:</strong> 1d4 + veleno.</p>
+                            <h4>Fauna Letale</h4>
+                            <p><strong>Serpenti a Sonagli:</strong> Morso 2d6 veleno (Costituzione CD 14).<br><strong>Scorpioni:</strong> 1d4 + veleno.</p>
                         </div>
                     </div>
+
+                    <h3>Condizioni Comuni</h3>
+                    <ul style="margin-top:15px;">
+                        <li><strong>ACCECATO:</strong> Svantaggio agli attacchi, i nemici hanno Vantaggio.</li>
+                        <li><strong>SPAVENTATO:</strong> Svantaggio alle prove se vedi la fonte. Impossibile avvicinarsi.</li>
+                        <li><strong>AFFERRATO:</strong> Velocità ridotta a 0.</li>
+                        <li><strong>PRONO:</strong> Svantaggio attacchi in mischia, +2 CA contro attacchi a distanza.</li>
+                        <li><strong>STORDITO:</strong> Incapacitato, fallimento automatico TS fisici, nemici hanno Vantaggio.</li>
+                        <li><strong>MORENTE:</strong> A 0 PF. Tira d20: 10+ Successo, 1-9 Fallimento. 3 Successi = Stabile, 3 Fallimenti = Morte.</li>
+                    </ul>
                 </section>
-
-                <section id="healing" class="section">
-                    <h2>❤️‍🩹 Guarigione & Condizioni</h2>
-                    <div class="stat-block">
-                        <h4>☠️ Regole Morte (Dying)</h4>
-                        <p>A 0 HP sei morente. Tira d20 ogni turno:</p>
-                        <ul>
-                            <li><strong>10+:</strong> Successo (3 per stabilizzare).</li>
-                            <li><strong>1-9:</strong> Fallimento (3 per morire).</li>
-                            <li><strong>Danno mentre a 0 HP:</strong> 1 Fallimento automatico.</li>
-                        </ul>
-                    </div>
-
-                    <div class="grid-auto-wide" style="margin-top: 20px;">
-                        <div class="stat-box"><h4>BLINDED</h4><p>Svantaggio attacchi, nemici hanno Vantaggio.</p></div>
-                        <div class="stat-box"><h4>FRIGHTENED</h4><p>Svantaggio check se vedi la fonte. Non puoi avvicinarti.</p></div>
-                        <div class="stat-box"><h4>GRAPPLED</h4><p>Velocità 0.</p></div>
-                        <div class="stat-box"><h4>POISONED</h4><p>Svantaggio a tutto.</p></div>
-                        <div class="stat-box"><h4>PRONE</h4><p>Svantaggio attacchi melee, +2 AC vs Ranged.</p></div>
-                        <div class="stat-box"><h4>STUNNED</h4><p>Incapacitato, fallisci save Str/Dex, nemici Vantaggio.</p></div>
-                    </div>
-                </section>
-                
-                <div id="session-agreement" class="session-zero-sheet">
-                    <h1 style="text-align: center; font-family: 'Rye', cursive;">📜 ACCORDO DEL TAVOLO</h1>
-                    <p style="text-align: center;">Gunsmoke & Dread - Session Zero Agreement</p>
-                    <hr>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div>
-                            <h3>1. Tono & Aspettative</h3>
-                            <div class="checkbox-list">
-                                <label><input type="checkbox" checked> <strong>Lethality:</strong> Alta</label>
-                                <label><input type="checkbox" checked> <strong>Horror:</strong> Cosmico</label>
-                                <label><input type="checkbox" checked> <strong>Risorse:</strong> Scarse</label>
-                            </div>
-                        </div>
-                        <div>
-                            <h3>2. Safety Tools</h3>
-                            <div class="checkbox-list">
-                                <label><input type="checkbox" checked> <strong>X-Card</strong></label>
-                                <label><input type="checkbox" checked> <strong>Lines & Veils</strong></label>
-                            </div>
-                        </div>
-                    </div>
-                    <h3>3. Confini Tematici (Lines & Veils)</h3>
-                    <div style="border: 1px solid black; height: 150px; padding: 10px; color: #666;">Spazio per scrivere...</div>
-                </div>
-
             </main>
         </div>
     </div>
