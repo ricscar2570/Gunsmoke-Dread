@@ -4,47 +4,162 @@
     <meta charset="UTF-8">
     <title>Bestiario - Gunsmoke & Dread</title>
     <link rel="stylesheet" href="assets/css/main-styles.css">
+    <link rel="stylesheet" href="assets/css/volume-themes.css">
     <style>
-        .creature-entry { border: 3px solid #8b4513; padding: 20px; margin: 20px 0; page-break-inside: avoid; }
-        .header { background: #8b4513; color: white; padding: 10px; }
-        @media print { .no-print { display: none; } }
+        .creature-entry { background: rgba(212, 165, 116, 0.1); border: 3px solid var(--rust); border-radius: 12px; padding: 30px; margin: 30px 0; page-break-inside: avoid; }
+        .creature-header { background: linear-gradient(135deg, var(--blood-red) 0%, var(--rust) 100%); color: white; padding: 20px; margin: -30px -30px 20px -30px; border-radius: 8px 8px 0 0; }
+        .creature-type { display: inline-block; background: var(--night-black); color: var(--alien-green); padding: 5px 15px; border-radius: 5px; font-size: 0.9em; margin-right: 5px; font-family: 'Rye', cursive; }
+        .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 20px 0; }
+        .stat-item { background: white; border: 2px solid var(--desert-sand); padding: 10px; text-align: center; }
+        .ability-list { background: rgba(139, 69, 19, 0.1); padding: 20px; border-left: 4px solid var(--rust); margin: 15px 0; }
+        .tip-box { background: #e8f4f8; border-left: 5px solid #2980b9; padding: 15px; margin-top: 15px; }
+        @media print { .no-print { display: none; } body { background: white; color: black; } .creature-header { background: #333; } }
     </style>
 </head>
 <body class="theme-desert">
-    <div class="hero no-print"><h1>👹 BESTIARIO</h1><button onclick="window.print()">🖨️ Stampa</button></div>
-
-    <div class="content">
-        <div class="creature-entry">
-            <div class="header"><h3>CULTISTA (Gregario)</h3></div>
-            <p>Fanatici di Silver Hollow.</p>
-            <p><strong>PF:</strong> 18 | <strong>Armatura:</strong> 0 | <strong>Velocità:</strong> 9m</p>
-            <p><strong>Coltello:</strong> +4 (1d6+2) | <strong>Fanatico:</strong> Immune a Paura.</p>
+    <div class="container">
+        <div class="hero no-print" style="padding: 60px 40px; background: linear-gradient(135deg, var(--night-black) 0%, var(--blood-red) 50%, var(--ocean-blue) 100%);">
+            <h1 style="font-size: 4em; color: white;">👹 BESTIARIO</h1>
+            <p class="subtitle">Creature del Weird West per Daggerheart™</p>
         </div>
 
-        <div class="creature-entry">
-            <div class="header"><h3>ZOMBIE (Gregario)</h3></div>
-            <p><strong>PF:</strong> 22 | <strong>Armatura:</strong> 0 | <strong>Velocità:</strong> 6m</p>
-            <p><strong>Schianto:</strong> +4 (1d8+2) | <strong>Inesorabile:</strong> Non rallenta mai.</p>
-        </div>
+        <div class="content">
+            <section class="section">
+                <h2>👤 CREATURE UMANOIDI</h2>
+                
+                <div class="creature-entry">
+                    <div class="creature-header">
+                        <h3>CULTISTA <span class="creature-type">Gregario</span></h3>
+                    </div>
+                    <p style="font-style: italic;">Cittadini di Silver Hollow corrotti dall'influenza dell'Antico. Indossano tonache nere imbrattate di simboli alieni dipinti col sangue. I loro occhi brillano di febbre e mormorano litanie in lingue morte, completamente dediti al loro "dio serpente".</p>
+                    
+                    <div class="stat-grid">
+                        <div class="stat-item"><div>PF</div><strong>18</strong></div>
+                        <div class="stat-item"><div>Armatura</div><strong>0</strong></div>
+                        <div class="stat-item"><div>Velocità</div><strong>9m</strong></div>
+                        <div class="stat-item"><div>Percezione</div><strong>+2</strong></div>
+                    </div>
+                    <div class="ability-list">
+                        <p><strong>Coltello Rituale:</strong> +4 (1d6+2 taglienti)</p>
+                        <p><strong>Revolver Malandato:</strong> +3 (2d6 perforanti, 6 colpi)</p>
+                        <p><strong>Fanatico:</strong> Vantaggio ai T.S. contro Paura e Charme.</p>
+                        <p><strong>Tattiche di Branco:</strong> Vantaggio agli attacchi se un alleato è vicino al bersaglio.</p>
+                    </div>
+                    <div class="tip-box"><strong>Tattica:</strong> Attaccano in massa, senza curarsi della propria vita. Non negoziano.</div>
+                </div>
+            </section>
 
-        <div class="creature-entry">
-            <div class="header"><h3>IBRIDO INIZIALE (Standard)</h3></div>
-            <p><strong>PF:</strong> 35 | <strong>Armatura:</strong> 2 | <strong>Velocità:</strong> 12m</p>
-            <p><strong>Artigli:</strong> +6 (2d6+3) | <strong>Rigenerazione:</strong> 5 PF se bagnato.</p>
-        </div>
+            <section class="section">
+                <h2>💀 NON-MORTI</h2>
+                
+                <div class="creature-entry">
+                    <div class="creature-header">
+                        <h3>ZOMBIE <span class="creature-type">Gregario</span></h3>
+                    </div>
+                    <p style="font-style: italic;">Cadaveri rianimati di recente. Carne in putrefazione, vestiti strappati, movimenti meccanici e inesorabili. Sulla fronte portano inciso a vivo il simbolo della spirale. Non sentono dolore, non conoscono paura, avanzano finché non vengono distrutti.</p>
+                    
+                    <div class="stat-grid">
+                        <div class="stat-item"><div>PF</div><strong>22</strong></div>
+                        <div class="stat-item"><div>Armatura</div><strong>0</strong></div>
+                        <div class="stat-item"><div>Velocità</div><strong>6m</strong></div>
+                    </div>
+                    <div class="ability-list">
+                        <p><strong>Schianto:</strong> +4 (1d8+2 contundenti)</p>
+                        <p><strong>Morso:</strong> +4 (1d6+2 + Rischio Malattia)</p>
+                        <p><strong>Inesorabile:</strong> Non rallentano mai su terreno difficile.</p>
+                        <p><strong>Debolezza Critica:</strong> Un colpo critico alla testa uccide istantaneamente.</p>
+                    </div>
+                </div>
 
-        <div class="creature-entry">
-            <div class="header"><h3>PADRE JEREMIAH (Capo)</h3></div>
-            <p><strong>PF:</strong> 70 | <strong>Armatura:</strong> 3</p>
-            <p><strong>Attacchi:</strong> Artigli +7, Morso +7 (Veleno).</p>
-            <p><strong>Rigenerazione:</strong> 8 PF/turno. (Fuoco ferma la cura).</p>
-        </div>
+                <div class="creature-entry">
+                    <div class="creature-header">
+                        <h3>GHOUL <span class="creature-type">Standard</span></h3>
+                    </div>
+                    <p style="font-style: italic;">Cadaveri rianimati dotati di un'intelligenza malevola. Pelle grigia tesa sulle ossa, artigli lunghi, denti aguzzi. Si muovono a quattro zampe con agilità ferina e parlano con voci raspanti. Cacciano nei cimiteri e nei tunnel bui.</p>
+                    <div class="stat-grid">
+                        <div class="stat-item"><div>PF</div><strong>32</strong></div>
+                        <div class="stat-item"><div>Armatura</div><strong>1</strong></div>
+                        <div class="stat-item"><div>Velocità</div><strong>12m</strong></div>
+                    </div>
+                    <div class="ability-list">
+                        <p><strong>Multiattacco:</strong> 2 Artigli o 1 Morso.</p>
+                        <p><strong>Artigli:</strong> +5 (2d4+3 taglienti)</p>
+                        <p><strong>Morso Paralizzante:</strong> +5 (2d6+3 + Costituzione CD 13 o Paralizzato 1 minuto).</p>
+                        <p><strong>Scalare Pareti:</strong> Si muove su muri e soffitti senza prove.</p>
+                    </div>
+                </div>
+            </section>
 
-        <div class="creature-entry" style="border-color: #8b0000;">
-            <div class="header" style="background: #8b0000;"><h3>IL GUARDIANO (Boss Enigma)</h3></div>
-            <p><strong>PF:</strong> 140 | <strong>Armatura:</strong> 5 | <strong>Attacchi:</strong> +10</p>
-            <p><strong>RIGENERAZIONE VINCOLATA:</strong> Recupera 20 PF/turno finché i <strong>4 Pilastri</strong> sono attivi.</p>
-            <p><strong>DINAMITE:</strong> Infligge DANNO MASSIMO (24) a Boss/Pilastri.</p>
+            <section class="section">
+                <h2>🐙 ABERRAZIONI & BOSS</h2>
+
+                <div class="creature-entry">
+                    <div class="creature-header"><h3>IBRIDO INIZIALE (Standard)</h3></div>
+                    <p style="font-style: italic;">Un umano nelle prime fasi della trasformazione. Pelle viscida verde-grigia, dita palmate, branchie sanguinanti sul collo. Occhi neri come l'abisso. Gorgoglia invece di parlare.</p>
+                    <div class="stat-grid">
+                        <div class="stat-item"><div>PF</div><strong>35</strong></div>
+                        <div class="stat-item"><div>Armatura</div><strong>2</strong></div>
+                        <div class="stat-item"><div>Velocità</div><strong>12m</strong></div>
+                    </div>
+                    <div class="ability-list">
+                        <p><strong>Artigli:</strong> +6 (2d6+3)</p>
+                        <p><strong>Rigenerazione Acquatica:</strong> Recupera 5 PF/turno se tocca l'acqua.</p>
+                        <p><strong>Grido Ultrasonico:</strong> (1/scontro) Costituzione CD 14 o Stordito.</p>
+                    </div>
+                </div>
+
+                <div class="creature-entry">
+                    <div class="creature-header"><h3>IBRIDO AVANZATO (Veterano)</h3></div>
+                    <p style="font-style: italic;">Trasformazione completa. Più mostro che uomo. Scaglie dure come cuoio, denti da predatore marino, pinne dorsali. Caccia in branco coordinandosi con click ultrasonici.</p>
+                    <div class="stat-grid">
+                        <div class="stat-item"><div>PF</div><strong>45</strong></div>
+                        <div class="stat-item"><div>Armatura</div><strong>3</strong></div>
+                        <div class="stat-item"><div>Velocità</div><strong>15m (Nuoto)</strong></div>
+                    </div>
+                    <div class="ability-list">
+                        <p><strong>Multiattacco:</strong> 2 colpi.</p>
+                        <p><strong>Artigli:</strong> +7 (2d6+4)</p>
+                        <p><strong>Rigenerazione Potenziata:</strong> 8 PF/turno in acqua.</p>
+                        <p><strong>Tattiche di Branco:</strong> Vantaggio se un alleato è vicino.</p>
+                    </div>
+                </div>
+
+                <div class="creature-entry">
+                    <div class="creature-header"><h3>PADRE JEREMIAH (Capo)</h3></div>
+                    <p style="font-style: italic;">Il prete corrotto, ora un abominio metà uomo e metà rettile. Veloce, letale, circondato da un'aura di sacralità profana.</p>
+                    <div class="stat-grid">
+                        <div class="stat-item"><div>PF</div><strong>70</strong></div>
+                        <div class="stat-item"><div>Armatura</div><strong>3</strong></div>
+                        <div class="stat-item"><div>Velocità</div><strong>12m</strong></div>
+                    </div>
+                    <div class="ability-list">
+                        <p><strong>Multiattacco:</strong> 2 Azioni per turno.</p>
+                        <p><strong>Artigli Dilanianti:</strong> +7 (2d8+4 taglienti)</p>
+                        <p><strong>Morso del Serpente:</strong> +7 (2d10+4 + Veleno CD 15)</p>
+                        <p><strong>Rigenerazione Empia:</strong> 8 PF/turno.</p>
+                        <p style="color:darkred; font-weight:bold;">DEBOLEZZA: Il Fuoco blocca la Rigenerazione per 1 turno.</p>
+                    </div>
+                </div>
+
+                <div class="creature-entry" style="border-color: #8b0000;">
+                    <div class="creature-header" style="background: #8b0000;"><h3>IL GUARDIANO (Boss Enigma)</h3></div>
+                    <p style="font-style: italic;">Un Grande Antico minore. Un orrore cefalopode alto 30 metri con scaglie nere impenetrabili e occhi che riflettono stelle aliene.</p>
+                    <div class="stat-grid">
+                        <div class="stat-item"><div>PF</div><strong>140</strong></div>
+                        <div class="stat-item"><div>Armatura</div><strong>5</strong></div>
+                        <div class="stat-item"><div>Velocità</div><strong>15m</strong></div>
+                    </div>
+                    <div class="ability-list">
+                        <p><strong>Multiattacco Leggendario:</strong> 3 Azioni per turno.</p>
+                        <p><strong>Morso Colossale:</strong> +10 (4d10+8 perforanti)</p>
+                        <p><strong>Tentacolo:</strong> +9 (3d8+6 + Afferrare)</p>
+                        <hr style="border: 1px dashed black; margin: 10px 0;">
+                        <p><strong>RIGENERAZIONE VINCOLATA:</strong> Recupera <strong>20 PF/turno</strong> finché i <strong>4 Pilastri Runici</strong> sono attivi.</p>
+                        <p><strong>PUNTO DEBOLE STRUTTURALE:</strong> I Pilastri (15 PF) e il Boss subiscono <strong>DANNO MASSIMO (24)</strong> dalla Dinamite.</p>
+                    </div>
+                </div>
+
+            </section>
         </div>
     </div>
 </body>
