@@ -2,103 +2,49 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bestiary - Gunsmoke & Dread</title>
+    <title>Bestiario - Gunsmoke & Dread</title>
     <link rel="stylesheet" href="assets/css/main-styles.css">
-    <link rel="stylesheet" href="assets/css/volume-themes.css">
     <style>
-        .creature-entry { background: rgba(212, 165, 116, 0.1); border: 3px solid var(--rust); border-radius: 12px; padding: 30px; margin: 30px 0; page-break-inside: avoid; }
-        .creature-header { background: linear-gradient(135deg, var(--blood-red) 0%, var(--rust) 100%); color: white; padding: 20px; margin: -30px -30px 20px -30px; border-radius: 8px 8px 0 0; }
-        .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 20px 0; }
-        .stat-item { background: white; border: 2px solid var(--desert-sand); padding: 10px; text-align: center; }
-        .ability-list { background: rgba(139, 69, 19, 0.1); padding: 20px; border-left: 4px solid var(--rust); margin: 15px 0; }
-        @media print {
-            .no-print { display: none; }
-            body { background: white; color: black; font-size: 10pt; }
-            .creature-header { background: white; color: black; border-bottom: 2px solid black; }
-        }
+        .creature-entry { border: 3px solid #8b4513; padding: 20px; margin: 20px 0; page-break-inside: avoid; }
+        .header { background: #8b4513; color: white; padding: 10px; }
+        @media print { .no-print { display: none; } }
     </style>
 </head>
 <body class="theme-desert">
-    <div class="container">
-        <div class="hero no-print" style="padding: 60px 40px; background: linear-gradient(135deg, var(--night-black) 0%, var(--blood-red) 50%, var(--ocean-blue) 100%);">
-            <h1 style="font-size: 4em; color: white;">👹 BESTIARY</h1>
-            <p class="subtitle" style="color: var(--seafoam);">Creature del Weird West</p>
-            <button onclick="window.print()" style="padding:10px 20px; cursor:pointer;">🖨️ Stampa Bestiario</button>
+    <div class="hero no-print"><h1>👹 BESTIARIO</h1><button onclick="window.print()">🖨️ Stampa</button></div>
+
+    <div class="content">
+        <div class="creature-entry">
+            <div class="header"><h3>CULTISTA (Gregario)</h3></div>
+            <p>Fanatici di Silver Hollow.</p>
+            <p><strong>PF:</strong> 18 | <strong>Armatura:</strong> 0 | <strong>Velocità:</strong> 9m</p>
+            <p><strong>Coltello:</strong> +4 (1d6+2) | <strong>Fanatico:</strong> Immune a Paura.</p>
         </div>
 
-        <div class="content">
-            <div class="creature-entry">
-                <div class="creature-header"><h3>CULTISTA (Minion)</h3></div>
-                <p>Fanatici di Silver Hollow.</p>
-                <div class="stat-grid">
-                    <div class="stat-item"><div>HP</div><strong>18</strong></div>
-                    <div class="stat-item"><div>AC</div><strong>0</strong></div>
-                    <div class="stat-item"><div>Speed</div><strong>9m</strong></div>
-                </div>
-                <div class="ability-list">
-                    <p><strong>Coltello:</strong> +4 (1d6+2) | <strong>Revolver:</strong> +3 (2d6)</p>
-                    <p><strong>Fanatico:</strong> Immune a Paura.</p>
-                </div>
-            </div>
+        <div class="creature-entry">
+            <div class="header"><h3>ZOMBIE (Gregario)</h3></div>
+            <p><strong>PF:</strong> 22 | <strong>Armatura:</strong> 0 | <strong>Velocità:</strong> 6m</p>
+            <p><strong>Schianto:</strong> +4 (1d8+2) | <strong>Inesorabile:</strong> Non rallenta mai.</p>
+        </div>
 
-            <div class="creature-entry">
-                <div class="creature-header"><h3>ZOMBIE (Minion)</h3></div>
-                <div class="stat-grid">
-                    <div class="stat-item"><div>HP</div><strong>22</strong></div>
-                    <div class="stat-item"><div>AC</div><strong>0</strong></div>
-                    <div class="stat-item"><div>Speed</div><strong>6m</strong></div>
-                </div>
-                <div class="ability-list">
-                    <p><strong>Slam:</strong> +4 (1d8+2) | <strong>Inesorabile:</strong> Non rallenta mai.</p>
-                </div>
-            </div>
+        <div class="creature-entry">
+            <div class="header"><h3>IBRIDO INIZIALE (Standard)</h3></div>
+            <p><strong>PF:</strong> 35 | <strong>Armatura:</strong> 2 | <strong>Velocità:</strong> 12m</p>
+            <p><strong>Artigli:</strong> +6 (2d6+3) | <strong>Rigenerazione:</strong> 5 PF se bagnato.</p>
+        </div>
 
-            <div class="creature-entry">
-                <div class="creature-header"><h3>IBRIDO INIZIALE (Standard)</h3></div>
-                <div class="stat-grid">
-                    <div class="stat-item"><div>HP</div><strong>35</strong></div>
-                    <div class="stat-item"><div>AC</div><strong>2</strong></div>
-                    <div class="stat-item"><div>Speed</div><strong>12m</strong></div>
-                </div>
-                <div class="ability-list">
-                    <p><strong>Artigli:</strong> +6 (2d6+3) | <strong>Rigenerazione:</strong> 5 HP se bagnato.</p>
-                </div>
-            </div>
+        <div class="creature-entry">
+            <div class="header"><h3>PADRE JEREMIAH (Capo)</h3></div>
+            <p><strong>PF:</strong> 70 | <strong>Armatura:</strong> 3</p>
+            <p><strong>Attacchi:</strong> Artigli +7, Morso +7 (Veleno).</p>
+            <p><strong>Rigenerazione:</strong> 8 PF/turno. (Fuoco ferma la cura).</p>
+        </div>
 
-            <div class="creature-entry">
-                <div class="creature-header"><h3>FATHER JEREMIAH (Boss)</h3></div>
-                <p>Il prete corrotto nel Tempio Sotterraneo.</p>
-                <div class="stat-grid">
-                    <div class="stat-item"><div>HP</div><strong>70</strong></div>
-                    <div class="stat-item"><div>AC</div><strong>3</strong></div>
-                    <div class="stat-item"><div>Speed</div><strong>12m</strong></div>
-                </div>
-                <div class="ability-list">
-                    <p><strong>Multiattack:</strong> 2 Azioni.</p>
-                    <p><strong>Attacchi:</strong> Claws +7 (2d8+4), Serpent Strike +7 (Veleno).</p>
-                    <p><strong>Rigenerazione:</strong> 8 HP/turno.</p>
-                    <p style="font-weight:bold; color:darkred;">DEBOLEZZA: Se colpito da FUOCO, perde Rigenerazione per 1 turno.</p>
-                </div>
-            </div>
-
-            <div class="creature-entry" style="border-color: var(--blood-red);">
-                <div class="creature-header" style="background: var(--blood-red);"><h3>IL GUARDIANO (Puzzle Boss)</h3></div>
-                <p>Orrore cosmico nell'Abisso. Non può essere ucciso convenzionalmente.</p>
-                <div class="stat-grid">
-                    <div class="stat-item"><div>HP</div><strong>140</strong></div>
-                    <div class="stat-item"><div>AC</div><strong>5</strong></div>
-                    <div class="stat-item"><div>Speed</div><strong>15m</strong></div>
-                </div>
-                <div class="ability-list">
-                    <p><strong>Multiattack:</strong> 3 Azioni (Leggendario).</p>
-                    <p><strong>Attacchi:</strong> Morso +10 (4d10+8), Tentacolo +9 (Afferra).</p>
-                    <hr>
-                    <p><strong>RIGENERAZIONE VINCOLATA:</strong> Recupera 20 HP/turno finché i <strong>4 Pilastri</strong> sono attivi.</p>
-                    <p><strong>PILASTRI (HP 15):</strong> Se distrutti, infliggono 10 Danni al Boss.</p>
-                    <p><strong>DINAMITE:</strong> Infligge DANNO MASSIMO (24) a Boss/Pilastri.</p>
-                </div>
-            </div>
+        <div class="creature-entry" style="border-color: #8b0000;">
+            <div class="header" style="background: #8b0000;"><h3>IL GUARDIANO (Boss Enigma)</h3></div>
+            <p><strong>PF:</strong> 140 | <strong>Armatura:</strong> 5 | <strong>Attacchi:</strong> +10</p>
+            <p><strong>RIGENERAZIONE VINCOLATA:</strong> Recupera 20 PF/turno finché i <strong>4 Pilastri</strong> sono attivi.</p>
+            <p><strong>DINAMITE:</strong> Infligge DANNO MASSIMO (24) a Boss/Pilastri.</p>
         </div>
     </div>
 </body>
