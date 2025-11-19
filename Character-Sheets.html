@@ -2,184 +2,47 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character Sheets - Gunsmoke & Dread</title>
+    <title>Schede Personaggi</title>
     <link rel="stylesheet" href="assets/css/main-styles.css">
-    <link rel="stylesheet" href="assets/css/volume-themes.css">
     <style>
-        .character-sheet { background: rgba(212, 165, 116, 0.1); border: 4px solid var(--rust); border-radius: 12px; padding: 30px; margin: 40px 0; page-break-inside: avoid; }
-        .level-5 { border-color: var(--ocean-blue); background: rgba(0, 51, 102, 0.05); }
-        .char-header { background: linear-gradient(135deg, var(--blood-red) 0%, var(--rust) 100%); color: white; padding: 20px; margin: -30px -30px 20px -30px; border-radius: 8px 8px 0 0; }
-        .char-header.level-5 { background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--teal-dark) 100%); }
-        .char-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 20px 0; }
-        .stat-box-char { background: white; border: 2px solid var(--rust); padding: 10px; text-align: center; border-radius: 6px; }
-        .traits-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin: 20px 0; }
-        .trait-box { background: rgba(139, 69, 19, 0.1); border-left: 4px solid var(--rust); padding: 10px; }
-        .ability-card { background: white; border: 2px solid var(--desert-sand); border-radius: 8px; padding: 15px; margin: 10px 0; }
-        /* CSS STAMPA */
-        @media print {
-            .character-sheet { page-break-after: always; }
-            .no-print { display: none; }
-            .char-header { background: white !important; color: black !important; border: 3px solid black; }
-            body { font-size: 10pt; background: white; }
-        }
+        .character-sheet { border: 4px solid #8b4513; padding: 20px; margin: 20px 0; page-break-inside: avoid; }
+        .header { background: #8b4513; color: white; padding: 10px; }
+        .trait-box { border: 1px dashed #8b4513; padding: 10px; margin: 10px 0; background: #fff; }
+        @media print { .no-print { display: none; } .character-sheet { page-break-after: always; } }
     </style>
 </head>
 <body class="theme-desert">
-    <div class="container">
-        <div class="hero no-print" style="padding: 60px 40px;">
-            <h1>👥 CHARACTER SHEETS</h1>
-            <p class="subtitle">6 Personaggi Pregenerati (Livello 2 & 5)</p>
-            <div style="text-align: center; margin-top: 20px;">
-                <button onclick="window.print()" style="padding: 12px 24px; background: var(--rust); color: white; border: none; cursor: pointer; font-size: 1.1em;">🖨️ Stampa Tutte le Schede</button>
-            </div>
+    <div class="hero no-print"><h1>👥 PERSONAGGI</h1><button onclick="window.print()">🖨️ Stampa Tutti</button></div>
+    
+    <div class="character-sheet">
+        <div class="header"><h2>🔫 JACK MALONE (Liv 2)</h2></div>
+        <p><strong>PF:</strong> 28 | <strong>Armatura:</strong> 2 | <strong>Tenuta:</strong> 7/10</p>
+        <div class="trait-box">
+            <h4>🥃 IL MIO VIZIO (Recupero)</h4>
+            <p>Scegli: Whisky, Poker, Solitudine. (Recupera 1d4 Tenuta in Riposo Breve. Se 1 = Condizione).</p>
         </div>
-
-        <div class="content">
-            
-            <div class="character-sheet" id="jack-2">
-                <div class="char-header"><h2>🔫 JACK "GHOST" MALONE - Lv 2</h2><p>Pistolero Haunted</p></div>
-                <div class="char-stats-grid">
-                    <div class="stat-box-char"><div>HP</div><strong>28</strong></div>
-                    <div class="stat-box-char"><div>Armor</div><strong>2</strong></div>
-                    <div class="stat-box-char"><div>Tenuta</div><strong>7/10</strong></div>
-                    <div class="stat-box-char"><div>Speed</div><strong>9m</strong></div>
-                </div>
-                <div class="traits-grid">
-                    <div class="trait-box"><h4>Agilità</h4>+3</div>
-                    <div class="trait-box"><h4>Forza</h4>+2</div>
-                    <div class="trait-box"><h4>Istinto</h4>+4 (Main)</div>
-                </div>
-                
-                <div class="trait-box" style="background: #fff; border: 2px dashed var(--rust); margin: 20px 0;">
-                    <h4 style="margin:0; color: var(--blood-red);">🥃 IL MIO VIZIO (Recupero Tenuta)</h4>
-                    <p style="font-size:0.9em; margin-top:5px;">Scegli: Whisky, Poker, Solitudine. (Durante Riposo Breve: Recupera 1d4 Tenuta. Se fai 1 = Condizione).</p>
-                </div>
-
-                <h3>⚔️ Abilità</h3>
-                <div class="ability-card"><h4>🎯 MARCA IL BERSAGLIO</h4><p>Scegli nemico. Tu e alleati avete Vantaggio e +1d6 danni contro di lui.</p></div>
-                <div class="ability-card"><h4>💨 ESTRAZIONE RAPIDA</h4><p>Reaction: Interrompi attacco nemico e spara con Vantaggio.</p></div>
-                
-                <div class="equipment-list" style="background: #eee; padding: 15px; border-radius: 8px;">
-                    <h3>🎒 Equipaggiamento</h3>
-                    <p>2x Revolver Colt .45 (2d6), Fucile Winchester (2d8), Duster (Arm 2), Whisky, Manette.</p>
-                </div>
-            </div>
-
-            <div class="character-sheet" id="sarah-2">
-                <div class="char-header"><h2>🙏 SARAH BLACKWOOD - Lv 2</h2><p>Predicatrice Guerriera</p></div>
-                <div class="char-stats-grid">
-                    <div class="stat-box-char"><div>HP</div><strong>24</strong></div>
-                    <div class="stat-box-char"><div>Armor</div><strong>1</strong></div>
-                    <div class="stat-box-char"><div>Tenuta</div><strong>8/10</strong></div>
-                    <div class="stat-box-char"><div>Speed</div><strong>9m</strong></div>
-                </div>
-                <div class="traits-grid">
-                    <div class="trait-box"><h4>Presenza</h4>+4 (Main)</div>
-                    <div class="trait-box"><h4>Istinto</h4>+3</div>
-                    <div class="trait-box"><h4>Finezza</h4>+2</div>
-                </div>
-
-                <div class="trait-box" style="background: #fff; border: 2px dashed var(--rust); margin: 20px 0;">
-                    <h4 style="margin:0; color: var(--blood-red);">🥃 IL MIO VIZIO (Recupero Tenuta)</h4>
-                    <p style="font-size:0.9em; margin-top:5px;">Scegli: Preghiera, Confessione, Digiuno. (Durante Riposo Breve: Recupera 1d4 Tenuta).</p>
-                </div>
-
-                <h3>⚔️ Abilità</h3>
-                <div class="ability-card"><h4>✨ TOCCO CURATIVO</h4><p>Azione: Cura 2d8+4 HP e rimuovi 1 condizione.</p></div>
-                <div class="ability-card"><h4>⚡ SCACCIARE NON-MORTI</h4><p>Azione: Non-morti entro 9m fuggono o prendono 3d8 radianti.</p></div>
-                
-                <div class="equipment-list" style="background: #eee; padding: 15px; border-radius: 8px;">
-                    <h3>🎒 Equipaggiamento</h3>
-                    <p>Bibbia, Croce d'Argento, Acqua Santa (x3), Derringer (1d8), Abito nero.</p>
-                </div>
-            </div>
-
-            <div class="character-sheet" id="doc-2">
-                <div class="char-header"><h2>🔬 DOC ARTEMIS WELLS - Lv 2</h2><p>Medico Razionalista</p></div>
-                <div class="char-stats-grid">
-                    <div class="stat-box-char"><div>HP</div><strong>20</strong></div>
-                    <div class="stat-box-char"><div>Armor</div><strong>0</strong></div>
-                    <div class="stat-box-char"><div>Tenuta</div><strong>5/10</strong></div>
-                    <div class="stat-box-char"><div>Speed</div><strong>9m</strong></div>
-                </div>
-                <div class="traits-grid">
-                    <div class="trait-box"><h4>Conoscenza</h4>+4 (Main)</div>
-                    <div class="trait-box"><h4>Finezza</h4>+3</div>
-                    <div class="trait-box"><h4>Agilità</h4>+2</div>
-                </div>
-
-                <div class="trait-box" style="background: #fff; border: 2px dashed var(--rust); margin: 20px 0;">
-                    <h4 style="margin:0; color: var(--blood-red);">🥃 IL MIO VIZIO (Recupero Tenuta)</h4>
-                    <p style="font-size:0.9em; margin-top:5px;">Scegli: Morfina, Studio Ossessivo. (Durante Riposo Breve: Recupera 1d4 Tenuta).</p>
-                </div>
-
-                <h3>⚔️ Abilità</h3>
-                <div class="ability-card"><h4>💉 CHIRURGIA DA CAMPO</h4><p>Cura 2d8+4 HP con bisturi.</p></div>
-                <div class="ability-card"><h4>⚗️ GADGET IMPROVVISATO</h4><p>Crea: Fumogeno, Acido, o Esplosivo al volo.</p></div>
-                
-                <div class="equipment-list" style="background: #eee; padding: 15px; border-radius: 8px;">
-                    <h3>🎒 Equipaggiamento</h3>
-                    <p>Borsa Medica, Bisturi (1d6), Kit Chimico, Morfina.</p>
-                </div>
-            </div>
-
-            <div class="character-sheet level-5" id="jack-5">
-                <div class="char-header level-5"><h2>🔫 JACK MALONE - Lv 5</h2><p>Sopravvissuto del Serpente</p></div>
-                <div class="char-stats-grid">
-                    <div class="stat-box-char"><div>HP</div><strong>42</strong></div>
-                    <div class="stat-box-char"><div>Armor</div><strong>3</strong></div>
-                    <div class="stat-box-char"><div>Tenuta</div><strong>6/10</strong></div> </div>
-                <div class="traits-grid">
-                    <div class="trait-box"><h4>Istinto</h4>+5</div>
-                    <div class="trait-box"><h4>Agilità</h4>+4</div>
-                </div>
-                <div class="trait-box" style="background: #fff; border: 2px dashed var(--ocean-blue); margin: 20px 0;">
-                    <h4 style="margin:0; color: var(--ocean-blue);">🥃 IL MIO VIZIO</h4><p>Whisky (necessario per dormire).</p>
-                </div>
-                <h3>⚔️ Nuove Abilità</h3>
-                <div class="ability-card"><h4>💀 SOPRAVVISSUTO</h4><p>Vantaggio su tiri Tenuta. Riduci danno mentale di 2.</p></div>
-                <div class="ability-card"><h4>⚡ RAFFICA MORTALE</h4><p>Spara a 6 bersagli diversi in un turno (1d10 danni ciascuno).</p></div>
-            </div>
-
-            <div class="character-sheet level-5" id="sarah-5">
-                <div class="char-header level-5"><h2>🙏 SARAH BLACKWOOD - Lv 5</h2><p>Fede Temprata</p></div>
-                <div class="char-stats-grid">
-                    <div class="stat-box-char"><div>HP</div><strong>36</strong></div>
-                    <div class="stat-box-char"><div>Armor</div><strong>2</strong></div>
-                    <div class="stat-box-char"><div>Tenuta</div><strong>8/10</strong></div>
-                </div>
-                <div class="traits-grid">
-                    <div class="trait-box"><h4>Presenza</h4>+5</div>
-                    <div class="trait-box"><h4>Istinto</h4>+4</div>
-                </div>
-                <div class="trait-box" style="background: #fff; border: 2px dashed var(--ocean-blue); margin: 20px 0;">
-                    <h4 style="margin:0; color: var(--ocean-blue);">🥃 IL MIO VIZIO</h4><p>Preghiera ossessiva.</p>
-                </div>
-                <h3>⚔️ Nuove Abilità</h3>
-                <div class="ability-card"><h4>🕊️ RESURREZIONE MINORE</h4><p>Riporta in vita creatura morta da 1 ora. Costo: 3 Tenuta.</p></div>
-                <div class="ability-card"><h4>⭐ AURA DI FEDE</h4><p>Alleati entro 6m rigenerano +1d6 HP extra.</p></div>
-            </div>
-
-            <div class="character-sheet level-5" id="doc-5">
-                <div class="char-header level-5"><h2>🔬 DOC WELLS - Lv 5</h2><p>Scienziato dell'Impossibile</p></div>
-                <div class="char-stats-grid">
-                    <div class="stat-box-char"><div>HP</div><strong>30</strong></div>
-                    <div class="stat-box-char"><div>Armor</div><strong>1</strong></div>
-                    <div class="stat-box-char"><div>Tenuta</div><strong>4/10</strong></div> </div>
-                <div class="traits-grid">
-                    <div class="trait-box"><h4>Conoscenza</h4>+5</div>
-                    <div class="trait-box"><h4>Finezza</h4>+4</div>
-                </div>
-                <div class="trait-box" style="background: #fff; border: 2px dashed var(--ocean-blue); margin: 20px 0;">
-                    <h4 style="margin:0; color: var(--ocean-blue);">🥃 IL MIO VIZIO</h4><p>Analisi Compulsiva.</p>
-                </div>
-                <h3>⚔️ Nuove Abilità</h3>
-                <div class="ability-card"><h4>🧬 ANALISI MYTHOS</h4><p>Identifica debolezze mostri alieni. Crea veleni specifici.</p></div>
-                <div class="ability-card"><h4>⚙️ INVENZIONE RAPIDA</h4><p>Crea gadget complessi (Detonatori a tempo, Radar) in 1 azione.</p></div>
-            </div>
-
-        </div>
+        <p><strong>Equip:</strong> 2x Revolver, Fucile, Spolverino.</p>
     </div>
-</body>
+
+    <div class="character-sheet">
+        <div class="header"><h2>🙏 SARAH BLACKWOOD (Liv 2)</h2></div>
+        <p><strong>PF:</strong> 24 | <strong>Armatura:</strong> 1 | <strong>Tenuta:</strong> 8/10</p>
+        <div class="trait-box">
+            <h4>🥃 IL MIO VIZIO (Recupero)</h4>
+            <p>Scegli: Preghiera, Digiuno, Confessione.</p>
+        </div>
+        <p><strong>Equip:</strong> Bibbia, Croce, Acqua Santa, Derringer.</p>
+    </div>
+
+    <div class="character-sheet">
+        <div class="header"><h2>🔬 DOC WELLS (Liv 2)</h2></div>
+        <p><strong>PF:</strong> 20 | <strong>Armatura:</strong> 0 | <strong>Tenuta:</strong> 5/10</p>
+        <div class="trait-box">
+            <h4>🥃 IL MIO VIZIO (Recupero)</h4>
+            <p>Scegli: Morfina, Studio Ossessivo.</p>
+        </div>
+        <p><strong>Equip:</strong> Borsa Medica, Bisturi.</p>
+    </div>
+    
+    </body>
 </html>
