@@ -3,31 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volume I: Shadows in the Desert - Gunsmoke & Dread</title>
+    <title>Volume I: Ombre nel Deserto - Gunsmoke & Dread</title>
     <link rel="stylesheet" href="assets/css/main-styles.css">
     <link rel="stylesheet" href="assets/css/volume-themes.css">
     <style media="print">
         @page { size: A4; margin: 1.5cm; }
-        body { background: white !important; color: black !important; font-size: 10pt; line-height: 1.5; font-family: 'Georgia', serif; }
+        body { background: white !important; color: black !important; font-size: 10pt; line-height: 1.4; font-family: 'Georgia', serif; }
         .container { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
         .sidebar, .nav-links, .hero-stats, .no-print { display: none !important; }
         .content { column-count: 2; column-gap: 1cm; column-rule: 1px solid #ccc; width: 100% !important; }
         h1, h2, .hero, .footer { column-span: all; text-align: center; page-break-after: avoid; }
-        .stat-block, .info-box, .warning-box, .horror-box, .tip-box, .card { 
-            break-inside: avoid; page-break-inside: avoid; 
-            border: 2px solid #000 !important; background-color: #f5f5f5 !important; 
-            color: black !important; margin-bottom: 15px; text-align: justify; 
-        }
+        .stat-block, .info-box, .warning-box, .horror-box, .tip-box, .card { break-inside: avoid; page-break-inside: avoid; border: 2px solid #000 !important; background-color: #f5f5f5 !important; color: black !important; margin-bottom: 15px; text-align: justify; }
         a { text-decoration: underline; color: black !important; }
         pre { white-space: pre-wrap; word-wrap: break-word; font-size: 8pt; }
     </style>
 </head>
 <body class="theme-rust">
     <div class="container">
-        
         <div class="hero" style="background: linear-gradient(135deg, var(--rust) 0%, var(--night-black) 100%);">
             <h1 style="font-size: 4em;">🏜️ VOLUME I</h1>
-            <p class="subtitle">SHADOWS IN THE DESERT</p>
+            <p class="subtitle">OMBRE NEL DESERTO</p>
             <div class="hero-stats"><span>Livelli: 2 → 3</span><span>Giocatori: 3-5</span></div>
         </div>
         
@@ -40,15 +35,12 @@
             <main class="content">
                 <section id="intro" class="section">
                     <h2>📖 Introduzione</h2>
-                    <p class="large">
-                        A un primo sguardo distratto, <strong>Silver Hollow</strong> non appariva diversa dalle centinaia di insediamenti precari sorti come funghi nel New Mexico del dopoguerra. Tuttavia, quando il filone d'argento si esaurì con brutale improvvisazione, i minatori scavarono troppo a fondo, spinti dalla disperazione. Non trovarono altro metallo; trovarono invece un passaggio verso un'oscurità dimenticata, qualcosa che attendeva pazientemente da millenni.
-                    </p>
+                    <p class="large"><strong>Silver Hollow</strong> sembrava una cittadina mineraria come tante altre. Ma quando la miniera d'argento si esaurì, i cittadini scoprirono qualcosa di più prezioso - e molto più pericoloso - nelle profondità della terra.</p>
                     <div class="info-box">
                         <h3>🎯 Panoramica</h3>
-                        <p>I personaggi inizieranno con una semplice indagine su sparizioni locali, per poi essere trascinati in una spirale di follia che culminerà in un tempio preumano.</p>
                         <ul>
-                            <li><strong>Minaccia:</strong> Un culto locale corrotto da un'entità sotterranea.</li>
-                            <li><strong>Obiettivo:</strong> Fermare il rituale di risveglio prima che la luna sia piena.</li>
+                            <li><strong>Minaccia:</strong> Un culto ha scoperto un tempio preumano.</li>
+                            <li><strong>Obiettivo:</strong> Fermare il rituale prima che l'Antico si svegli.</li>
                         </ul>
                     </div>
                 </section>
@@ -56,57 +48,53 @@
                 <section id="atto1" class="section">
                     <h2>🏜️ ATTO I: L'ARRIVO</h2>
                     
-                    <h3>🎬 Scena 1: Benvenuti all'Inferno</h3>
+                    <h3>🎬 Scena 1: Benvenuti a Silver Hollow</h3>
                     <div class="horror-box">
-                        <h4>📖 Da Leggere ai Giocatori</h4>
-                        <p style="font-style: italic;">
-                            La diligenza frena con un lamento metallico, depositandovi in una nuvola di polvere ocra sulla Main Street. Il sole del tardo pomeriggio martella le facciate scolorite degli edifici, ma non c'è anima viva a cercare riparo sotto i portici. Silver Hollow è innaturalmente silenziosa. Le imposte sono sbarrate dall'interno. Nessun cane abbaia, nessun bambino gioca. L'unico suono è il cigolio ritmico dell'insegna del Saloon, mossa da un vento caldo che porta con sé un odore dolciastro e nauseante: zolfo misto a carne in decomposizione. Sulla collina, davanti alla chiesa, si staglia una sagoma nera: una croce di legno, piantata al contrario e bruciata.
-                        </p>
+                        <h4>📖 Leggi ai Giocatori</h4>
+                        <p style="font-style: italic;">La diligenza vi deposita sulla polverosa Main Street. Silver Hollow una volta prosperava, ma ora qualcosa è sbagliato. Strada deserta. Imposte chiuse. Solo silenzio e odore di zolfo. Davanti alla chiesa: una croce rovesciata bruciata.</p>
                     </div>
                     
-                    <h4>👮 INCONTRO: Lo Sceriffo Hank Morrison</h4>
+                    <h4>👮 INCONTRO: Sceriffo Hank Morrison</h4>
                     <div class="stat-block">
-                        <p><strong>HANK MORRISON</strong> (52 anni, visibilmente denutrito e tremante)</p>
-                        <p>Un uomo che un tempo doveva riempire la sua uniforme con autorità, ora ridotto a un fascio di nervi. Le sue mani tremano mentre cerca di accendersi una sigaretta. I suoi occhi sono cerchiati di rosso, segnati da notti insonni. Sa cosa sta succedendo, ma il terrore lo ha paralizzato. Si rifiuta categoricamente di avvicinarsi alla miniera dopo il tramonto.</p>
-                        <p><em>"Voi non capite... quelle cose che graffiano la notte... non sono uomini. Non più."</em></p>
+                        <p><strong>HANK MORRISON</strong> (52 anni, stempiato, terrorizzato)</p>
+                        <p>Sa che 12 cittadini sono scomparsi e che Jeremiah è impazzito. Ha paura di entrare nella miniera. <em>"Non capite... quelle cose non sono umane."</em></p>
                     </div>
                     
-                    <h3>🔍 Scena 2: Indagine al Crepuscolo</h3>
+                    <h3>🔍 Scena 2: Indagine</h3>
                     
                     <div class="warning-box" style="border: 3px solid var(--blood-red);">
-                        <h3>⏳ LA TIMELINE DELL'APOCALISSE</h3>
-                        <p>Il tempo non è un'astrazione. Se i giocatori esitano:</p>
+                        <h3>⏳ CRONOLOGIA DELL'APOCALISSE</h3>
+                        <p>Se i PG esitano, il mondo va avanti:</p>
                         <ul style="margin-top: 10px;">
-                            <li><strong>TRAMONTO 1:</strong> Le tracce verso la miniera diventano un sentiero battuto di impronte trascinate. Tre cittadini vengono strappati dalle loro case tra le urla.</li>
-                            <li><strong>TRAMONTO 2:</strong> Una nebbia verdastra inghiotte la città. I morti del cimitero locale scavano per uscire dalla terra consacrata. Lo Sceriffo scompare lasciando solo il distintivo insanguinato.</li>
-                            <li><strong>TRAMONTO 3:</strong> L'assedio finale. Non c'è più nulla da investigare; ora si tratta solo di sopravvivere all'orda che scende dalla montagna.</li>
+                            <li><strong>TRAMONTO 1:</strong> 3 Cittadini rapiti dalle loro case.</li>
+                            <li><strong>TRAMONTO 2:</strong> Nebbia verde. I morti scavano per uscire. Lo Sceriffo scompare.</li>
+                            <li><strong>TRAMONTO 3:</strong> Assedio totale. Sopravvivenza contro l'orda.</li>
                         </ul>
                     </div>
 
                     <h4>I Luoghi Chiave</h4>
-                    <p><strong>Il Saloon "Silver Lady":</strong> Frank, il barista, asciuga nervosamente lo stesso bicchiere da ore. Rivela sottovoce che Jeremiah è "cambiato" dopo aver trovato una caverna segreta. <em>"Parlava lingue che facevano sanguinare le orecchie."</em></p>
-                    <p><strong>La Chiesa Sconsacrata:</strong> L'interno è devastato. Panche rovesciate come da una furia cieca. Sotto un asse del pavimento, trovate il diario di Jeremiah: pagine fitte di scritte deliranti su "Verità Sepolte" e "Il Serpente che Attende".</p>
+                    <p><strong>Saloon:</strong> Frank il barista è nervoso. Rivela che Jeremiah è cambiato dopo aver trovato "qualcosa" nella miniera.</p>
+                    <p><strong>Chiesa:</strong> Devastata. Trovate il diario di Jeremiah sotto un asse: parla di "Verità Sepolte".</p>
+                    <p><strong>Ingresso Miniera:</strong> Tracce fresche di piedi trascinati entrano nel buio.</p>
 
-                    <h3>🌙 Scena 3: Il Primo Orrore</h3>
+                    <h3>🌙 Scena 3: Primo Orrore</h3>
                     <div class="horror-box">
-                        <p style="font-style: italic;">
-                            Il sole sparisce dietro le montagne come una moneta in un pozzo, e la temperatura crolla. Dalla direzione della miniera, il vento porta un canto gutturale, profondo, che risuona nelle ossa. Poi, emergendo dall'ombra, vedete delle figure. Barcollano. Trascinano i piedi. I loro volti sono familiari, ma gli occhi sono vuoti e sulla fronte di ognuno è inciso a vivo un simbolo a spirale.
-                        </p>
+                        <p style="font-style: italic;">Il sole tramonta. Un canto gutturale esce dalla miniera. Figure barcollanti scendono dalla collina.</p>
                     </div>
                     <div class="stat-block">
-                        <h4>L'ORDA DI ZOMBIE (4x)</h4>
-                        <p><strong>HP:</strong> 22 | <strong>Attacco:</strong> Schianto +4 (1d8+2)</p>
-                        <p><strong>Speciale:</strong> <em>Inesorabili.</em> Non si fermano, non provano dolore, non hanno paura. Solo un colpo alla testa (Critico) li abbatte all'istante.</p>
+                        <h4>ZOMBIES (x4)</h4>
+                        <p><strong>PF:</strong> 22 | <strong>Armatura:</strong> 0 | <strong>Attacco:</strong> +4 Schianto (1d8+2)</p>
+                        <p><strong>Speciale:</strong> Inesorabile. Cittadini morti con simbolo sulla fronte.</p>
                     </div>
                 </section>
                 
                 <section id="atto2" class="section">
-                    <h2>⛏️ ATTO II: NELLE VISCERE DELLA TERRA</h2>
+                    <h2>⛏️ ATTO II: LA MINIERA</h2>
                     
                     <div class="info-box" style="background: #fafafa; border: 2px solid #333;">
                         <h3>🗺️ MAPPA SCHEMATICA</h3>
                         <pre style="font-family: 'Courier New', monospace; font-weight: bold; font-size: 0.8em; overflow-x: hidden;">
- [INGRESSO MINIERA]
+ [INGRESSO]
     |
     v
  [LIV 1] --(Trappola Gas)--> [MAGAZZINO]
@@ -118,70 +106,78 @@
  [GUARDIA CULTISTI]
     |
     v
- [LIV 3: PORTALE TEMPIO]
+ [LIV 3: TEMPIO]
                         </pre>
                     </div>
                     
-                    <h3>🔦 Livello 1: I Tunnel Abbandonati</h3>
-                    <p>L'aria qui è stantia, pesante. Le travi di sostegno gemono sotto il peso della roccia. C'è un odore pungente nell'aria, simile a uova marce.</p>
+                    <h3>🔦 Livello 1: Tunnel Commerciali</h3>
+                    <p>Travi di legno scricchiolanti. Odore di gas.</p>
                     <div class="warning-box">
                         <h4>⚠️ PERICOLO: GAS TOSSICO</h4>
-                        <p>Un check di <strong>Percezione CD 13</strong> rivela il sibilo di una sacca di gas. Se i giocatori accendono una fiamma o sparano un colpo qui: <strong>4d6 Danni da Fuoco</strong> a tutti nell'area.</p>
+                        <p><strong>Percezione CD 13</strong> per notare l'odore. Se usano fiamme: <strong>4d6 Danni Fuoco</strong> a tutti.</p>
                     </div>
                     
                     <div class="stat-block">
-                        <h4>AREA 1-B: Il Magazzino Profanato</h4>
-                        <p>Quella che era una stanza per gli attrezzi è diventata un mattatoio rituale. Al centro, un altare di casse accatastate gronda sangue fresco. Le foto dei cittadini scomparsi sono inchiodate al legno, ognuna segnata con una "X" nera.</p>
+                        <h4>AREA 1-B: Il Magazzino</h4>
+                        <p>Una stanza laterale trasformata in altare. Sangue fresco, foto dei cittadini con delle "X" sopra. <strong>Tenuta CD 12</strong> o 1 segmento.</p>
                     </div>
 
-                    <h3>⚔️ Livello 2: Lo Scavo Profondo</h3>
-                    <p>La roccia cambia natura. Non è più pietra grezza, ma ossidiana nera, liscia, lavorata da mani che non erano umane.</p>
+                    <h3>⚔️ Livello 2: Tunnel Profondi</h3>
+                    <p>La roccia cambia. Diventa nera, liscia, lavorata da mani non umane.</p>
                     
                     <div class="stat-block">
-                        <h4>AREA 2-A: Il Posto di Guardia</h4>
-                        <p>Tre figure incappucciate siedono attorno a un fuoco che brucia di una fiamma verde innaturale. I <strong>Cultisti (HP 18)</strong> mormorano litanie in una lingua sconosciuta. Sono fanatici: combatteranno fino alla morte per proteggere l'accesso al tempio.</p>
+                        <h4>AREA 2-A: Posto di Guardia</h4>
+                        <p>3 Cultisti (PF 18) seduti attorno a un fuoco verde. Cantano in una lingua sconosciuta.</p>
+                        <p><strong>Tattica:</strong> Sono fanatici. Non fuggono. Gridano per avvisare il tempio.</p>
                     </div>
                     
                     <div class="stat-block">
                         <h4>AREA 2-C: La Fossa Comune</h4>
-                        <p>L'odore qui è insopportabile. Una caverna naturale usata come discarica per i "fallimenti". Corpi deformi, esperimenti di ibridazione andati male, organi rimossi chirurgicamente. <strong>Tenuta CD 15</strong> o si perdono 3 segmenti per la nausea e l'orrore.</p>
+                        <p>Una caverna piena di corpi scartati. Esperimenti falliti. Organi rimossi.</p>
+                        <p><strong>Tenuta CD 15:</strong> Fallimento = 3 Segmenti + Nausea (Svantaggio).</p>
+                    </div>
+                    
+                    <h3>🕳️ Livello 3: La Scoperta</h3>
+                    <div class="horror-box">
+                        <p style="font-style: italic;">Il tunnel finisce in un portale monumentale alto 4 metri. Architettura aliena. Simboli che si muovono se li fissi troppo a lungo. Sentite il canto provenire da dentro.</p>
                     </div>
                 </section>
                 
                 <section id="atto3" class="section">
-                    <h2>🏛️ ATTO III: IL TEMPIO DEL SERPENTE</h2>
+                    <h2>🏛️ ATTO III: IL TEMPIO</h2>
                     
                     <h3>👁️ Scena 1: Il Rituale</h3>
                     <div class="horror-box">
-                        <p style="font-style: italic;">
-                            Varcate l'ultimo portale e il respiro vi muore in gola. Vi trovate in una cattedrale sotterranea vasta quanto una montagna cava. Le pareti pulsano di bioluminescenza verdastra. Al centro, su un altare rialzato circondato da fedeli in trance, c'è Padre Jeremiah. Ma non è più l'uomo del manifesto. La sua pelle è diventata scaglie, le sue braccia si sono allungate e i suoi occhi sono fessure verticali che vi fissano con odio rettile.
-                        </p>
+                        <p style="font-style: italic;">Varcate l'ingresso. Una cattedrale sotterranea vasta e opprimente. Pareti bioluminescenti verdi. Al centro, Padre Jeremiah sta completando il rito su un altare di ossidiana. Ma non è più un uomo.</p>
                     </div>
                     
                     <div class="stat-block">
-                        <h4>FATHER JEREMIAH TRASFORMATO (Boss)</h4>
-                        <p>Un abominio ibrido, veloce e letale.</p>
-                        <p><strong>HP:</strong> 70 | <strong>AC:</strong> 3 | <strong>Attacchi:</strong> Artigli +7, Morso +7 (Veleno)</p>
-                        <p style="color: var(--blood-red);"><strong>Abilità Chiave:</strong> Rigenerazione 8 HP/turno. <strong>Debolezza:</strong> Il fuoco cauterizza le sue ferite. Se colpito da danni da Fuoco, la rigenerazione si ferma.</p>
+                        <h4>PADRE JEREMIAH TRASFORMATO (Boss)</h4>
+                        <p>Un ibrido uomo-rettile. Veloce e letale.</p>
+                        <p><strong>PF:</strong> 70 | <strong>Armatura:</strong> 3 | <strong>Velocità:</strong> 12m</p>
+                        <p><strong>Attacchi:</strong> Artigli +7 (2d8+4), Morso +7 (2d10+4 + Veleno).</p>
+                        <p style="color: var(--blood-red);"><strong>Rigenerazione Empia:</strong> 8 PF/turno. <strong>Debolezza:</strong> Se colpito da FUOCO, la rigenerazione si ferma per 1 turno.</p>
                     </div>
                     
-                    <h3>Scena 2: La Scelta Finale</h3>
-                    <p>Il rituale è al culmine. I giocatori devono agire immediatamente:</p>
+                    <h3>Scena 2: La Scelta</h3>
+                    <p>I giocatori devono agire subito.
                     <ul>
-                        <li><strong>Combattere:</strong> Affrontare la bestia in uno scontro diretto.</li>
-                        <li><strong>Sabotare:</strong> Piazzare la dinamite sui pilastri portanti (Ingegneria CD 16) per seppellire tutto.</li>
+                        <li><strong>Combattere:</strong> Attaccare Jeremiah.</li>
+                        <li><strong>Sabotare:</strong> Usare la dinamite sui pilastri (Ingegneria CD 16).</li>
+                        <li><strong>Unirsi:</strong> Accettare la "Verità" (Sconfitta).</li>
                     </ul>
+                    </p>
                 </section>
                 
                 <section id="epilogo" class="section">
                     <h2>🎬 EPILOGHI</h2>
                     <div class="stat-block">
                         <h4>A: VITTORIA EROICA</h4>
-                        <p>Jeremiah cade urlando. Il culto si disperde. Silver Hollow è salva, ma nei vostri sogni vedrete sempre quell'altare. (1500 XP)</p>
+                        <p>Jeremiah muore. Il culto è spezzato. Silver Hollow è salva, ma sapete che l'Antico dorme ancora.</p>
                     </div>
                     <div class="stat-block">
-                        <h4>B: SEPOLTI VIVI</h4>
-                        <p>L'esplosione fa collassare la montagna. Fuggite per un soffio mentre tonnellate di roccia sigillano l'orrore. L'entità non è morta, solo intrappolata. (1200 XP)</p>
+                        <h4>B: SEPOLTI</h4>
+                        <p>La miniera crolla. L'entità è intrappolata ma viva. Fuggite per un soffio.</p>
                     </div>
                 </section>
             </main>
