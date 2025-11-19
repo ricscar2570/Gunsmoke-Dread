@@ -5,14 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volume I: Shadows in the Desert - Gunsmoke & Dread</title>
     
-    <!-- External Stylesheets -->
     <link rel="stylesheet" href="assets/css/main-styles.css">
     <link rel="stylesheet" href="assets/css/volume-themes.css">
+
+    <style media="print">
+        @page { size: A4; margin: 1.5cm; }
+        body { background: white !important; color: black !important; font-size: 10pt; line-height: 1.4; }
+        .container { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
+        .sidebar, .nav-links, .hero-stats, .no-print, .print-button-char { display: none !important; }
+        .content { column-count: 2; column-gap: 1cm; column-rule: 1px solid #ccc; width: 100% !important; }
+        h1, h2, .hero, .footer { column-span: all; text-align: center; page-break-after: avoid; }
+        .stat-block, .info-box, .warning-box, .horror-box, .tip-box, .card, table { 
+            break-inside: avoid; page-break-inside: avoid; 
+            border: 2px solid #000 !important; background-color: #f5f5f5 !important; 
+            color: black !important; margin-bottom: 15px; 
+        }
+        a { text-decoration: underline; color: black !important; }
+        pre { white-space: pre-wrap; word-wrap: break-word; font-size: 8pt; }
+    </style>
 </head>
 <body class="theme-rust">
     <div class="container">
         
-        <!-- Header -->
         <div class="hero" style="background: linear-gradient(135deg, var(--rust) 0%, var(--night-black) 100%);">
             <h1 style="font-size: 4em;">🏜️ VOLUME I</h1>
             <p class="subtitle">SHADOWS IN THE DESERT</p>
@@ -27,10 +41,8 @@
             </div>
         </div>
         
-        <!-- Sidebar + Content -->
         <div class="sidebar-layout">
             
-            <!-- Sidebar Navigation -->
             <aside class="sidebar">
                 <h2>📋 Indice</h2>
                 <ul class="nav-links">
@@ -48,10 +60,8 @@
                 </div>
             </aside>
             
-            <!-- Main Content -->
             <main class="content">
                 
-                <!-- INTRODUZIONE -->
                 <section id="intro" class="section">
                     <h2>📖 Introduzione</h2>
                     
@@ -135,7 +145,6 @@
                     </div>
                 </section>
                 
-                <!-- SETUP & HOOKS -->
                 <section id="setup" class="section">
                     <h2>🎣 Setup & Hooks</h2>
                     
@@ -189,18 +198,8 @@
                         <p style="margin-top: 10px;"><strong>Motivazione:</strong> Denaro, adventure, help people 
                         in need. Simple ma effective.</p>
                     </div>
-                    
-                    <div class="tip-box">
-                        <h4>💡 Combinare Hooks</h4>
-                        <p>
-                            In party misto, ogni PG può avere hook diverso. Arrivano a Silver Hollow per ragioni 
-                            diverse, si incontrano lì, decidono collaborare. Questo crea dynamic interessante - 
-                            motivazioni diverse, conflitti potenziali, ma obiettivo comune.
-                        </p>
-                    </div>
                 </section>
                 
-                <!-- ATTO I -->
                 <section id="atto1" class="section">
                     <h2>🏜️ ATTO I: ARRIVO A SILVER HOLLOW</h2>
                     
@@ -241,7 +240,6 @@
                             <li><strong>General Store:</strong> Supplies, proprietaria sa rumors</li>
                             <li><strong>Church:</strong> Danneggiata, simboli strani, blood stains</li>
                             <li><strong>Abandoned Mine:</strong> Ingresso principale dungeon</li>
-                            <li><strong>Residential:</strong> Case sparse, famiglie barricata dentro</li>
                         </ol>
                     </div>
                     
@@ -253,35 +251,8 @@
                         profonde, mani tremanti</p>
                         <p style="margin-top: 10px;"><strong>Personalità:</strong> Era competente. Ma eventi recenti 
                         lo hanno broken. Cerca disperatamente aiuto ma shame ammettere che situation è beyond him.</p>
-                        
-                        <p style="margin-top: 15px;"><strong>Cosa Sa:</strong></p>
-                        <ul>
-                            <li>12 cittadini scomparsi in 6 settimane (pattern: 2 a settimana, sempre di notte)</li>
-                            <li>Father Jeremiah impazzì 3 settimane fa - uccise 3 parrocchiani durante "sermone"</li>
-                            <li>Simboli strani apparsi ovunque - pareti, porte, scritti col sangue</li>
-                            <li>Suoni dalla miniera di notte - canti, urla, qualcosa che... non è umano</li>
-                            <li>Deputy (Billy) è scomparso ieri notte investigating mine</li>
-                        </ul>
-                        
-                        <p style="margin-top: 15px;"><strong>Cosa NON Sa (ma players scopriranno):</strong></p>
-                        <ul>
-                            <li>Jeremiah trovò tempio antico nella miniera</li>
-                            <li>Metà cittadini "scomparsi" sono ora cultisti volontari</li>
-                            <li>Rituale finale è programmato per 3 notti da ora (full moon)</li>
-                        </ul>
-                        
                         <p style="margin-top: 15px;"><strong>Stats (se combat):</strong> HP 28, Armatura 1, 
                         Revolver +5 (2d6+2)</p>
-                    </div>
-                    
-                    <div class="tip-box">
-                        <h4>💡 Roleplaying Hank</h4>
-                        <p>
-                            Hank vuole aiutare ma è paralizzato da fear. Dà informazioni reluctantly - vergogna 
-                            ammettere town ha spiraled beyond control. Se PG sono compassionevoli, si apre. Se 
-                            giudgmental, diventa defensive. Usa per teach players che NPCs hanno emotions, non 
-                            sono info dispensers.
-                        </p>
                     </div>
                     
                     <h3>🔍 Scena 2: Investigation - Gathering Clues</h3>
@@ -290,77 +261,40 @@
                         PG hanno 3-4 ore daylight per investigate prima nightfall. Possono visitare locations, 
                         interrogare NPCs, examine evidence. Ogni scelta rivela info diversa.
                     </p>
+
+                    <div class="warning-box" style="border: 3px solid var(--blood-red);">
+                        <h3>⏳ LA TIMELINE DELL'APOCALISSE (Se i PG non agiscono)</h3>
+                        <p>Il mondo non aspetta i giocatori. Se i PG esitano, ignorano la miniera o passano troppo tempo a pianificare, questi eventi accadono:</p>
+                        
+                        <ul style="margin-top: 10px;">
+                            <li><strong>TRAMONTO 1 (Stasera):</strong> Le tracce verso la miniera diventano un'autostrada di impronte. 3 Cittadini vengono rapiti dalle loro case (incluso un NPC a cui i PG tengono).</li>
+                            <li><strong>TRAMONTO 2:</strong> Una nebbia verde copre Silver Hollow. I morti nel cimitero locale iniziano a scavare per uscire. Lo Sceriffo Hank scompare nel nulla.</li>
+                            <li><strong>TRAMONTO 3 (Game Over Soft):</strong> L'assedio. 20+ Zombie e Cultisti attaccano il luogo dove i PG si nascondono. L'obiettivo non è più "investigare", ma "sopravvivere all'orda".</li>
+                        </ul>
+                        <p style="font-style: italic; margin-top: 10px;">
+                            <strong>Nota GM:</strong> Comunica questi cambiamenti visivamente (cielo che cambia colore, urla in lontananza) per mettere pressione senza dire "dovete andare lì".
+                        </p>
+                    </div>
                     
                     <h4>🍺 LOCATION A: Silver Lady Saloon</h4>
-                    
                     <div class="stat-block">
-                        <p><strong>Atmosfera:</strong> Saloon è mezzo vuoto anche se è sera. 5-6 miners drink 
-                        in silenzio. Bartender (Frank) asciuga bicchieri nervosamente. Piano nell'angolo coperto 
-                        da sheet.</p>
-                        
-                        <p style="margin-top: 15px;"><strong>NPCs Presenti:</strong></p>
-                        <ul>
-                            <li><strong>Frank (Bartender):</strong> Sa tutto gossip. Rivela: Jeremiah cambiò dopo 
-                            trovare "something" in miniera. Parlava lingue sconosciute di notte.</li>
-                            <li><strong>Old Pete (Drunk):</strong> Ex-miner. Vide simboli nelle tunnel profonde. 
-                            "Weren't there before. Someone... carved them. Or they growed there."</li>
-                            <li><strong>Maria (Prostituta):</strong> 3 clienti abituali scomparsi. Tutti avevano 
-                            visitato chiesa settimana prima. "Tornavano... changed. Distant."</li>
-                        </ul>
-                        
-                        <p style="margin-top: 15px;"><strong>Check Sociale CD 12:</strong> PG convince qualcuno 
-                        rivelare dettaglio critical: Jeremiah teneva ritua
-
-li segreti in miniera. Membri "fedeli" 
-                        andavano lì di notte. "Il prete diceva che Dio era morto. Che c'erano dei più antichi."</p>
+                        <p><strong>NPCs Presenti:</strong> Frank (Barista), Old Pete (Drunk), Maria (Prostituta).</p>
+                        <p><strong>Check Sociale CD 12:</strong> Rivela che Jeremiah teneva rituali segreti in miniera.</p>
                     </div>
                     
                     <h4>⛪ LOCATION B: Damaged Church</h4>
-                    
                     <div class="horror-box">
                         <p style="font-size: 1.05em; line-height: 1.8;">
                             Chiesa è devastata dall'interno. Panche rovesciate. Altare coperto di simboli spiraliformi 
-                            scolpiti (non dipinti - qualcuno usò knife per carve nel legno). Blood stains sul 
-                            pavimento - molto sangue. 3 settimane old ma ancora visible.
+                            scolpiti. Blood stains sul pavimento.
                         </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                            <strong>Percezione CD 13:</strong> Trovi diary di Jeremiah nascosto sotto floorboard 
-                            loose. Ultime 5 entries sono... inquietanti (vedi Handout #1).
-                        </p>
-                    </div>
-                    
-                    <div class="warning-box">
-                        <h4>💀 TENUTA CHECK</h4>
-                        <p><strong>Vedere chiesa devastata:</strong> Istinto CD 12 o 1 segmento (profanazione 
-                        violenta spazio sacro)</p>
+                        <p style="margin-top: 15px;"><strong>Percezione CD 13:</strong> Trovi diary di Jeremiah.</p>
                     </div>
                     
                     <h4>⛏️ LOCATION C: Mine Entrance</h4>
-                    
                     <div class="stat-block">
-                        <p>Mineshaft entrance sulla collina. Wooden support beam danneggiato. Tracks portano dentro 
-                        buio. Odore di... decomposizione mista a something else. Metallico. Alieno.</p>
-                        
-                        <p style="margin-top: 15px;"><strong>Se PG investigate di giorno (smart!):</strong></p>
-                        <ul>
-                            <li><strong>Percezione CD 11:</strong> Footprints fresche - 6-8 persone entered last night</li>
-                            <li><strong>Percezione CD 14:</strong> Qualcosa è stato DRAGGED out (blood trail)</li>
-                            <li><strong>Survival CD 13:</strong> Tracks indicate persone non walking normally - 
-                            shuffling, dragging feet. Wounded? Or...</li>
-                        </ul>
-                        
-                        <p style="margin-top: 15px;"><strong>Se tentano entrare ORA:</strong></p>
-                        <p>Hank interviene: "NON di giorno! Tornano dentro only at night. Ma... alcuni non tornano 
-                        fuori mai. Aspettate nightfall se volete sorprenderli. O preparate equipment prima."</p>
-                    </div>
-                    
-                    <div class="tip-box">
-                        <h4>💡 Pacing Atto I</h4>
-                        <p>
-                            Dedica 2-3 ore a investigation. Non rush. Lascia players esplorare, talk to NPCs, 
-                            gather clues. Buildup è essenziale per horror. Quando sono pronti (o nightfall arrives), 
-                            trigger Scena 3.
-                        </p>
+                        <p>Mineshaft entrance sulla collina. Tracks portano dentro buio.</p>
+                        <p><strong>Percezione CD 11:</strong> Footprints fresche - 6-8 persone entered last night.</p>
                     </div>
                     
                     <h3>🌙 Scena 3: Primo Orrore - Nightfall</h3>
@@ -368,401 +302,90 @@ li segreti in miniera. Membri "fedeli"
                     <div class="horror-box">
                         <h4>📖 Read Aloud - Tramonto</h4>
                         <p style="font-size: 1.05em; line-height: 1.8; font-style: italic;">
-                            Sole tramonta dietro montagne, tingendo deserto di rosso sangue. Temperature crolla 
-                            rapidamente - da torrido a gelido in minuti. Silver Hollow diventa città fantasma. 
-                            Ogni porta si chiude. Ogni finestra si sbarra. Sentite... silenzio totale. Poi, 
-                            dalla direzione miniera, arriva <strong>suono</strong>.
+                            Sole tramonta. Temperature crolla. Silver Hollow diventa città fantasma. Sentite... silenzio totale. Poi, dalla direzione miniera, arriva <strong>suono</strong>. Gutturale. Canto alieno. E passi strascicati.
                         </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8; font-style: italic;">
-                            Non è vento. È... canto? No. Più profondo. Gutturale. Come se dozzine voci cantassero 
-                            in lingua che fa male alle orecchie. E tra i canti, sentite altro - 
-                            <strong>footsteps</strong>. Shuffling. Dragging. Qualcosa sta venendo giù dalla collina. 
-                            Qualcosa... o <em>qualcuno</em>.
-                        </p>
-                    </div>
-                    
-                    <div class="warning-box">
-                        <h4>💀 TENUTA CHECK: Canto Alieno</h4>
-                        <p><strong>Istinto CD 13:</strong></p>
-                        <ul>
-                            <li>Successo: 1 segmento (deeply unsettling)</li>
-                            <li>Fallimento: 2 segmenti + nausea (Svantaggio primo check)</li>
-                        </ul>
                     </div>
                     
                     <h4>👹 COMBATTIMENTO: Zombie Horde</h4>
                     
                     <div class="stat-block">
                         <h4>ZOMBIES (4x per party size 4)</h4>
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Dalla oscurità emergono figure. Riconoscete vestiti - erano cittadini Silver Hollow. 
-                            Ma ora... carne putrescente, occhi vitrei, movimenti mechanical. E sulla fronte di 
-                            ciascuno: <strong>simbolo scolpito</strong>, sanguinante, fresco. Stesso simbolo 
-                            visto in chiesa.
-                        </p>
-                        
-                        <p style="margin-top: 15px;"><strong>Stats:</strong></p>
+                        <p><strong>Stats:</strong></p>
                         <ul>
                             <li>HP: 22 ciascuno</li>
                             <li>Armatura: 0</li>
                             <li>Velocità: 6m (lenti ma inesorabili)</li>
                             <li>Attacco Slam: +4, 1d8+2 contundenti</li>
-                            <li>Attacco Morso: +4, 1d6+2 perforanti + malattia (Costituzione CD 12 o infetto)</li>
+                            <li>Attacco Morso: +4, 1d6+2 perforanti + malattia</li>
                         </ul>
-                        
-                        <p style="margin-top: 15px;"><strong>Abilità:</strong></p>
-                        <ul>
-                            <li><strong>Non-Morto:</strong> Immune veleno, paura, charm</li>
-                            <li><strong>Inesorabile:</strong> Movimento non rallenta da terreno/ferite</li>
-                            <li><strong>Debolezza Testa:</strong> Colpo critico (20 naturale) = kill istantaneo</li>
-                        </ul>
-                        
-                        <p style="margin-top: 15px;"><strong>Tattiche:</strong></p>
-                        <ul>
-                            <li>Avanzano inesorabilmente verso PG più vicino</li>
-                            <li>Non si fermano finché distrutti</li>
-                            <li>Se PG flee, inseguono ma perdono traccia dopo 100m</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="info-box">
-                        <h4>🎯 Obiettivo Scena</h4>
-                        <p>
-                            Questo è <strong>primo combat major</strong> e <strong>prima rivelazione horror</strong>. 
-                            PG capiscono: situazione è WORSE di quanto pensassero. Non solo cultisti - i morti 
-                            camminano. E il simbolo? È everywhere.
-                        </p>
-                    </div>
-                    
-                    <h4>🔍 Post-Combat Discovery</h4>
-                    
-                    <div class="stat-block">
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Dopo combat, PG possono examine bodies. <strong>Medicina CD 13:</strong> Questi sono 
-                            morti RECENTI (1-3 giorni). Rianimati tramite... magia? Scienza? Non è chiaro. Ma 
-                            simbolo sulla fronte è <strong>carved mentre erano vivi</strong>. Torture marks.
-                        </p>
-                        
-                        <p style="margin-top: 15px;"><strong>Percezione CD 14:</strong> Uno zombie ha qualcosa 
-                        in tasca - <strong>nota scritta in blood</strong>:</p>
-                        <p style="margin-top: 10px; font-style: italic; padding-left: 20px; border-left: 3px solid var(--blood-red);">
-                            "Il Serpente Sotto Terra attende. Jeremiah ha trovato la Verità. Noi tutti la vedremo. 
-                            Il sangue apre la porta. La carne nutre il Vecchio. Quando luna è piena, Egli si 
-                            risveglierà. E noi saremo degni. - F.M."
-                        </p>
-                        
-                        <p style="margin-top: 15px;"><strong>Conoscenza CD 15:</strong> "F.M." potrebbe essere 
-                        Frank Miller - proprietario General Store. Cittadino rispettabile. Se anche LUI è coinvolto...</p>
-                    </div>
-                    
-                    <div class="warning-box">
-                        <h4>💀 TENUTA CHECK: Vedere Zombi Esplicitamente</h4>
-                        <p><strong>Istinto CD 14:</strong></p>
-                        <ul>
-                            <li>Successo: 2 segmenti (body horror intenso)</li>
-                            <li>Fallimento: 3 segmenti + <strong>Incubi</strong> (Svantaggio primo Tenuta check 
-                            prossimo riposo)</li>
-                        </ul>
-                    </div>
-                    
-                    <h4>🎬 Cliffhanger - Fine Atto I</h4>
-                    
-                    <div class="horror-box">
-                        <p style="font-size: 1.05em; line-height: 1.8; font-style: italic;">
-                            Mentre esaminate corpi, sentite di nuovo - quella VOCE dalla miniera. Ma ora... 
-                            è più forte. Più chiara. E sta... <strong>chiamandovi</strong>. Non con parole. 
-                            Con sensazione. Pull irresistibile. Come se miniera stessa vi stesse attirando dentro.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8; font-style: italic;">
-                            E sopra collina, vicino mine entrance, vedete figura. Tall. Robed. Watching. Per un 
-                            momento, luna illumina viso - <strong>Father Jeremiah</strong>. Poi sparisce nel buio 
-                            tunnel. Ma la sua voce echeggia:
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.2em; font-weight: bold; font-style: italic; 
-                            color: var(--blood-red); text-align: center;">
-                            "Venite. Vedrete. Capirete. Il Serpente aspetta."
-                        </p>
-                    </div>
-                    
-                    <div class="tip-box">
-                        <h4>🎭 End Session o Continue?</h4>
-                        <p>
-                            Questo è perfetto <strong>cliffhanger</strong> per fine sessione. PG hanno:
-                        </p>
-                        <ul>
-                            <li>✅ Established threat (zombies, culto, Jeremiah)</li>
-                            <li>✅ Clear next objective (entrare miniera)</li>
-                            <li>✅ Mystery deepening (cosa è "Serpente"?)</li>
-                            <li>✅ Emotional hook (PG want answers NOW)</li>
-                        </ul>
-                        <p style="margin-top: 10px;">
-                            <strong>Opzione 1:</strong> Fine sessione qui. Next time: Atto II.<br>
-                            <strong>Opzione 2:</strong> Se gruppo ha energie, 10 min break poi continue!
-                        </p>
+                        <p><strong>Speciale:</strong> Inesorabile (non rallentano mai).</p>
                     </div>
                 </section>
                 
-                <!-- ATTO II: LA MINIERA -->
                 <section id="atto2" class="section">
                     <h2>⛏️ ATTO II: LA MINIERA MALEDETTA</h2>
                     
                     <p class="large">
-                        PG scendono nella miniera Silver Hollow. Quello che trovano è più di semplice dungeon - 
-                        è nexus tra mondo surface e qualcosa molto, molto più antico underneath.
+                        PG scendono nella miniera Silver Hollow. Quello che trovano è più di semplice dungeon.
                     </p>
                     
-                    <div class="info-box">
-                        <h4>🗺️ STRUTTURA MINIERA - Overview</h4>
-                        <p>
-                            Miniera ha 3 livelli principali che PG attraversano:
-                        </p>
-                        <ol style="font-size: 1.05em; line-height: 1.7;">
-                            <li><strong>Livello 1 - Tunnel Commerciali:</strong> Mining operations normal, 
-                            abbandonato ma stabile</li>
-                            <li><strong>Livello 2 - Tunnel Profondi:</strong> Dove cultisti operano, trappole, 
-                            combattimenti</li>
-                            <li><strong>Livello 3 - Scoperta:</strong> Breakthrough verso tempio preumano</li>
-                        </ol>
-                        <p style="margin-top: 15px;">
-                            <strong>Tempo stimato:</strong> 4-5 ore gameplay
+                    <div class="info-box" style="background: #fafafa; border: 2px solid #333;">
+                        <h3>🗺️ MAPPA SCHEMATICA: LA MINIERA</h3>
+                        <pre style="font-family: 'Courier New', monospace; font-weight: bold; line-height: 1.2; overflow-x: hidden;">
+ [INGRESSO MINIERA]
+        |
+        v
+ [LIV 1: TUNNEL] --(Trappola Gas)--> [MAGAZZINO CULTISTI]
+        |                                  (Altare)
+        |
+   (Montacarichi)
+        |
+        v
+ [LIV 2: PROFONDO] --> [FOSSA COMUNE]
+        |              (Indizi Corpi)
+        v
+ [POSTO DI GUARDIA]
+ (3 Cultisti)
+        |
+        v
+ [LIV 3: PORTALE TEMPIO]
+                        </pre>
+                        <p style="font-size: 0.9em; margin-top: 10px;">
+                            <strong>Nota GM:</strong> La struttura è lineare verso il basso, ma i PG possono barricarsi nelle stanze laterali per riposare.
                         </p>
                     </div>
                     
                     <h3>🔦 Livello 1: Tunnel Commerciali</h3>
-                    
-                    <div class="stat-block">
-                        <h4>AREA 1-A: Ingresso Miniera</h4>
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Wooden support beams creaky ma solid. Rails per mine carts corrono deeper. Lanterns 
-                            appese (olio esaurito mesi fa). Odore di terra, polvere, e... decomposizione lontana.
-                        </p>
-                        
-                        <p style="margin-top: 15px;"><strong>Percezione CD 12:</strong> Footprints fresche - 
-                        many people (10-15) passed here recently. Some barefoot (cultisti?), some dragging.</p>
-                        
-                        <p style="margin-top: 15px;"><strong>Check Equipment:</strong></p>
-                        <ul>
-                            <li>PG hanno lanterne? Torce? (visibility critical)</li>
-                            <li>Rope? (vertical sections ahead)</li>
-                            <li>Weapons ready? (ambush possible)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="warning-box">
-                        <h4>⚠️ PERICOLO AMBIENTALE: Gas Tossico</h4>
-                        <p>
-                            Alcune sezioni miniera hanno <strong>gas naturale</strong> accumulato. Se PG usano 
-                            torce/lanterne vicino gas pockets:
-                        </p>
-                        <ul>
-                            <li><strong>Percezione CD 13:</strong> Noti odore strano, aria shimmering</li>
-                            <li><strong>Se ignori:</strong> ESPLOSIONE! Tutti entro 3m: Agilità CD 15 o 4d6 fuoco</li>
-                            <li><strong>Soluzione:</strong> Spegni flame, hold breath, move past pocket</li>
-                        </ul>
-                    </div>
-                    
                     <div class="stat-block">
                         <h4>AREA 1-B: Storage Chamber</h4>
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Camera laterale, 6m × 4m. Era storage per equipment mining. Ora... devastata. Casse 
-                            rovesciate. Tools scattered. Blood stains (dried, old). E al centro: <strong>altar 
-                            improvvisato</strong>.
-                        </p>
-                        
-                        <p style="margin-top: 15px;"><strong>Altar Contents:</strong></p>
-                        <ul>
-                            <li>Wooden board con simbolo carved (same dalle church/zombie)</li>
-                            <li>Candele (alcune ancora burning - fresh!)</li>
-                            <li>Bowl con... blood. Recent. Warm.</li>
-                            <li>Pages torn from Jeremiah's bible, burned edges</li>
-                            <li>3 photos: cittadini di Silver Hollow, X marked sopra facce</li>
-                        </ul>
-                        
-                        <p style="margin-top: 15px;"><strong>Conoscenza CD 14:</strong> Questo è ritual site. 
-                        Pattern indica... sacrifices. Photo X-marked sono probably le vittime "scomparse".</p>
-                    </div>
-                    
-                    <div class="warning-box">
-                        <h4>💀 TENUTA CHECK: Altare Sacrificale</h4>
-                        <p><strong>Istinto CD 13 o 2 segmenti</strong> (realizing scope - questo è systematic 
-                        murder cultist operation)</p>
-                    </div>
-                    
-                    <div class="stat-block">
-                        <h4>AREA 1-C: Shaft Descent</h4>
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Tunnel termina a vertical shaft (20m deep). Wooden ladder attached to wall, creaky. 
-                            Alternativa: mine cart pulley system (risky but faster).
-                        </p>
-                        
-                        <p style="margin-top: 15px;"><strong>OPZIONE 1 - Ladder:</strong></p>
-                        <ul>
-                            <li>Safe ma slow (5 min per tutti PG)</li>
-                            <li>Agilità CD 11 o slip (catch self, no damage ma noise)</li>
-                        </ul>
-                        
-                        <p style="margin-top: 15px;"><strong>OPZIONE 2 - Pulley Cart:</strong></p>
-                        <ul>
-                            <li>Fast (1 min) ma risky</li>
-                            <li>Forza CD 13 controllare descent speed</li>
-                            <li>Fallimento: Crash! 2d6 contundenti + LOUD noise (alert cultisti)</li>
-                        </ul>
+                        <p>Camera laterale devastata. Altare improvvisato al centro con sangue fresco e foto dei cittadini.</p>
                     </div>
                     
                     <h3>⚔️ Livello 2: Tunnel Profondi</h3>
-                    
-                    <div class="horror-box">
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Livello 2 è... diverso. Walls qui sono no longer natural rock. Vedete... carved stone. 
-                            Smooth. Black. Con patterns geometrici che non quite make sense. E temperatura è 
-                            dropped - gelido qua sotto. Your breath is visible. But non c'è reason per questo - 
-                            sei deep underground, dovrebbe essere warm.
-                        </p>
-                    </div>
-                    
                     <div class="stat-block">
                         <h4>AREA 2-A: Cultist Guardpost</h4>
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Tunnel si allarga in chamber (10m × 8m). E qui... <strong>cultisti</strong>. 3 robed 
-                            figures seduti attorno small fire. Stanno... praying? Chanting? Lingua sconosciuta.
-                        </p>
-                        
-                        <p style="margin-top: 15px;"><strong>PG Options:</strong></p>
-                        <ul>
-                            <li><strong>Stealth (CD 14):</strong> Bypass senza essere visti</li>
-                            <li><strong>Diplomacy (CD 16):</strong> Tentare parlare (difficile - cultisti fanatici)</li>
-                            <li><strong>Combat:</strong> Attack first (Vantaggio surprise se successo Stealth)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="stat-block">
-                        <h4>👹 CULTISTI (3x)</h4>
-                        <p><strong>Stats:</strong></p>
-                        <ul>
-                            <li>HP: 18 ciascuno</li>
-                            <li>Armatura: 0 (robes)</li>
-                            <li>Velocità: 9m</li>
-                            <li>Coltello Rituale: +4, 1d6+2 taglienti</li>
-                            <li>Revolver: +3, 2d6 perforanti (6 shots)</li>
-                        </ul>
-                        
-                        <p style="margin-top: 15px;"><strong>Abilità:</strong></p>
-                        <ul>
-                            <li><strong>Fanatico:</strong> Vantaggio vs Spaventato/Charm</li>
-                            <li><strong>Morte Devota:</strong> A 0 HP, ultimo attacco come Reaction</li>
-                            <li><strong>Swarm:</strong> Se 3 adiacenti a target, Vantaggio</li>
-                        </ul>
-                        
-                        <p style="margin-top: 15px;"><strong>Tattiche:</strong></p>
-                        <ul>
-                            <li>1 cultista runs per alert others (se PG don't stop fast)</li>
-                            <li>2 cultisti fight recklessly (no self-preservation)</li>
-                            <li>Scream devotions mentre attack: "Per il Serpente!" "Sangue per l'Antico!"</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tip-box">
-                        <h4>💡 Interrogare Cultista Catturato</h4>
-                        <p>
-                            Se PG cattura cultista vivo (knock out, restraints):
-                        </p>
-                        <p style="margin-top: 10px;"><strong>Presenza CD 15:</strong> Cultista rivela:</p>
-                        <ul>
-                            <li>"Jeremiah trovò la Verità. Sotto terra. Il Serpente era sempre qui."</li>
-                            <li>"Noi solo... Lo serviamo. Come dovevamo sempre."</li>
-                            <li>"Rituale è tonight. Full moon. Tutti i fedeli saranno presenti."</li>
-                            <li>"Voi... troppo tardi. Può solo join us. O morire."</li>
-                        </ul>
-                        <p style="margin-top: 10px;">Poi cultista ride istericamente finché passa out (o PG stop him).</p>
-                    </div>
-                    
-                    <div class="stat-block">
-                        <h4>AREA 2-B: Trapped Corridor</h4>
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Tunnel narrow (2m wide). Walls hanno strani holes. Floor ha pressure plates barely 
-                            visible sotto dust.
-                        </p>
-                        
-                        <p style="margin-top: 15px;"><strong>Percezione CD 14:</strong> Noti pressure plates!</p>
-                        <p style="margin-top: 10px;"><strong>Se triggered:</strong> Darts shoot from wall holes! 
-                        Tutti nel corridor: Agilità CD 13 or 2d6 perforanti + veleno (Costituzione CD 12 or 
-                        Avvelenato 1 hour)</p>
-                        
-                        <p style="margin-top: 15px;"><strong>Disarm (CD 15):</strong> Wedge pressure plates 
-                        con rocks/wood. Success = safe passage.</p>
-                    </div>
-                    
-                    <div class="stat-block">
-                        <h4>AREA 2-C: Mass Grave</h4>
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Chamber opens a grisly sight: <strong>pile di corpi</strong>. 8-10 bodies, vari stages 
-                            decomposizione. Alcuni riconoscibili come Silver Hollow citizens. Simbolo carved su 
-                            ogni fronte. Ma questi sono... discarded. Failed experiments? Sacrifices non worthy?
-                        </p>
-                        
-                        <p style="margin-top: 15px;"><strong>Medicina CD 13:</strong> Death cause varia - alcuni 
-                        bled out, alcuni strangled, alcuni... something else. Internal organs missing in 2 corpi.</p>
+                        <p>3 Cultisti (HP 18) seduti attorno a un fuoco. Fanatici.</p>
                     </div>
                     
                     <div class="warning-box">
                         <h4>💀 TENUTA CHECK MAJOR</h4>
-                        <p><strong>Istinto CD 15:</strong></p>
-                        <ul>
-                            <li>Successo: 3 segmenti (mass death, desecration)</li>
-                            <li>Fallimento: 5 segmenti + <strong>Nausea Violenta</strong> (Svantaggio fisico 
-                            checks 10 min)</li>
-                        </ul>
+                        <p>Vedere la Fossa Comune (Area 2-C): Istinto CD 15 o 3 segmenti di Tenuta.</p>
                     </div>
                     
                     <h3>🕳️ Livello 3: La Scoperta</h3>
-                    
                     <div class="horror-box">
-                        <h4>BREAKTHROUGH MOMENT</h4>
                         <p style="font-size: 1.05em; line-height: 1.8; font-style: italic;">
-                            Tunnel improvvisamente... changes. Non è più mining tunnel. È qualcos'altro. Walls 
-                            sono smooth black stone - <strong>impossibly smooth</strong>. Carved con precision 
-                            che no human tool potrebbe achieve. E covering every surface: <strong>symbols</strong>.
+                            Tunnel improvvisamente... changes. Non è più mining tunnel. Walls sono smooth black stone. Carved con simboli che fanno male agli occhi.
                         </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8; font-style: italic;">
-                            Spirals. Serpents. Geometric shapes che hurt to look at directly. E al end del tunnel: 
-                            <strong>doorway</strong>. 4 meters tall. Archway carved con creature - metà serpent, 
-                            metà... something else. With too many eyes.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.1em; font-weight: bold;">
-                            Questa è entrance al <strong>TEMPIO</strong>.
-                        </p>
-                    </div>
-                    
-                    <div class="warning-box">
-                        <h4>💀 TENUTA CHECK DEVASTANTE</h4>
-                        <p><strong>Istinto CD 16 (difficile):</strong></p>
-                        <ul>
-                            <li>Successo: 3 segmenti (architecture impossibile, preumana)</li>
-                            <li>Fallimento: 5 segmenti + <strong>Realizzazione Cosmica</strong> (capisci che 
-                            questo è ANTICO - milioni anni old. Humanity è blip. Questo era here FIRST.)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tip-box">
-                        <h4>🎬 End Atto II</h4>
-                        <p>
-                            Perfect cliffhanger. PG stanno davanti doorway tempio. Sentono chanting from within - 
-                            ritual è in progress. Sanno che <strong>DEVONO entrare</strong>. Ma anche sanno... 
-                            cosa trovano inside cambierà tutto.
-                        </p>
-                        <p style="margin-top: 10px;"><strong>GM:</strong> "Prendete respiro. Check equipment. 
-                            Poi... varcare doorway. E vedere..."</p>
-                        <p style="margin-top: 10px; font-style: italic;">[FADE TO BLACK - ATTO III]</p>
                     </div>
                 </section>
                 
-                <!-- ATTO III: TEMPIO -->
                 <section id="atto3" class="section">
                     <h2>🏛️ ATTO III: IL TEMPIO DEL SERPENTE</h2>
                     
                     <p class="large">
                         PG entrano nel tempio preumano. Qui affrontano Father Jeremiah trasformato e devono 
-                        fare ultimate choice: fermare rituale o lasciar essere compiuto.
+                        fare ultimate choice.
                     </p>
                     
                     <h3>👁️ Scena 1: Dentro il Tempio</h3>
@@ -771,183 +394,79 @@ li segreti in miniera. Membri "fedeli"
                         <h4>📖 Read Aloud - Ingresso</h4>
                         <p style="font-size: 1.05em; line-height: 1.8; font-style: italic;">
                             Varchi doorway e... spazio si apre. Impossibly large. Chamber è cathedral-sized. 
-                            Ceiling perso nel dark. Pillars carved con serpenti intrecciate. Walls glow con 
-                            faint bioluminescence verde. E covering every surface: simboli che... <em>si muovono</em>.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8; font-style: italic;">
-                            Al center: altar massivo. Attorno: 20-30 cultisti chanting. Nel center, arms raised: 
+                            Al center: altar massivo. Attorno: 20-30 cultisti chanting. Nel center: 
                             <strong>Father Jeremiah</strong>. Ma non è più... umano.
                         </p>
                     </div>
                     
-                    <div class="warning-box">
-                        <h4>💀 TENUTA CHECK FINALE</h4>
-                        <p><strong>Istinto CD 17:</strong> Successo 4 segmenti | Fallimento 6 segmenti + Fuggi</p>
-                    </div>
-                    
-                    <h4>👹 BOSS: Father Jeremiah Trasformato</h4>
-                    
                     <div class="stat-block">
-                        <h4>FATHER JEREMIAH TRASFORMATO</h4>
+                        <h4>FATHER JEREMIAH TRASFORMATO (Boss Livello 3)</h4>
                         <p><strong>HP:</strong> 70 | <strong>Armatura:</strong> 3 | <strong>Velocità:</strong> 12m</p>
                         
                         <p style="margin-top: 15px;"><strong>Attacchi:</strong></p>
                         <ul>
-                            <li>Claws +7 (2d8+4 taglienti)</li>
-                            <li>Serpent Strike +7 (2d10+4 + veleno CD 15)</li>
-                            <li>Staff Slam +6 (3d6+3 + push 3m)</li>
+                            <li><strong>Claws:</strong> +7 (2d8+4 taglienti)</li>
+                            <li><strong>Serpent Strike:</strong> +7 (2d10+4 + veleno CD 15)</li>
+                            <li><strong>Staff Slam:</strong> +6 (3d6+3 + push 3m)</li>
                         </ul>
                         
-                        <p style="margin-top: 15px;"><strong>Abilità:</strong></p>
+                        <p style="margin-top: 15px; color: var(--blood-red);"><strong>Abilità Speciali:</strong></p>
                         <ul>
-                            <li>Multiattack (2 per turno)</li>
-                            <li>Regeneration 8 HP/turno</li>
-                            <li>Unholy Presence (aura 9m, Svantaggio Tenuta)</li>
-                            <li>Serpent's Voice (Charm CD 16, 1/combat)</li>
-                            <li>Summon Shadows (2d4 wraiths, 1/combat)</li>
-                            <li>Final Form a 20 HP (resistenza physical, vulnerabile radiant)</li>
+                            <li><strong>Multiattack:</strong> 2 azioni per turno.</li>
+                            <li><strong>Rigenerazione Empia:</strong> Recupera 8 HP all'inizio di ogni turno.</li>
+                            <li><strong>DEBOLEZZA AL FUOCO:</strong> Se subisce danni da Fuoco (torce, dinamite), la Rigenerazione è disattivata per il turno successivo.</li>
+                            <li><strong>Unholy Presence:</strong> Aura 9m, Svantaggio Tenuta.</li>
                         </ul>
-                        
-                        <p style="margin-top: 15px;"><strong>Tattiche 3 Fasi:</strong></p>
-                        <p>Fase 1 (70-40): Staff & claws | Fase 2 (40-20): Serpent Strike & Shadows | 
-                        Fase 3 (<20): Final Form disperato</p>
                     </div>
                     
                     <h3>⚔️ Scena 2: Tre Opzioni</h3>
-                    
                     <div class="grid-auto-wide">
                         <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">1. COMBAT</h3>
-                            </div>
-                            <div class="card-body">
-                                <p>Attack Jeremiah direttamente. Boss fight + 6 cultisti + hazards ambientali.</p>
-                                <p style="margin-top: 10px;"><strong>Difficoltà:</strong> Alta</p>
-                                <p><strong>Outcome:</strong> Epilogo A (vittoria) o D (sacrificio)</p>
-                            </div>
+                            <div class="card-header"><h3 class="card-title">1. COMBAT</h3></div>
+                            <div class="card-body"><p>Attack Jeremiah direttamente. Boss fight.</p></div>
                         </div>
-                        
                         <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">2. SABOTAGGIO</h3>
-                            </div>
-                            <div class="card-body">
-                                <p>Collapse tempio con explosives. Require Ingegneria CD 16, dynamite, fuga rapida.</p>
-                                <p style="margin-top: 10px;"><strong>Difficoltà:</strong> Media</p>
-                                <p><strong>Outcome:</strong> Epilogo B (sepolto)</p>
-                            </div>
+                            <div class="card-header"><h3 class="card-title">2. SABOTAGGIO</h3></div>
+                            <div class="card-body"><p>Collapse tempio con explosives. Ingegneria CD 16.</p></div>
                         </div>
-                        
                         <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">3. JOIN</h3>
-                            </div>
-                            <div class="card-body">
-                                <p>Negozia con Jeremiah (Presenza CD 18). Join rituale volontariamente.</p>
-                                <p style="margin-top: 10px;"><strong>Difficoltà:</strong> N/A</p>
-                                <p><strong>Outcome:</strong> Epilogo C (corruzione - bad ending)</p>
-                            </div>
+                            <div class="card-header"><h3 class="card-title">3. JOIN</h3></div>
+                            <div class="card-body"><p>Join rituale volontariamente. Bad Ending.</p></div>
                         </div>
                     </div>
                 </section>
                 
-                <!-- EPILOGHI -->
                 <section id="epilogo" class="section">
                     <h2>🎬 EPILOGHI (4 Finali)</h2>
                     
                     <div class="stat-block">
                         <h4>📜 A: VITTORIA EROICA</h4>
                         <p><strong>Trigger:</strong> Sconfiggi Jeremiah in combat</p>
-                        <p style="margin-top: 10px;">Silver Hollow saved. Entity torna dormiente. PG guadagnano 
-                        reputation Monster Hunters. Reward: 1500 XP, $100, magic staff.</p>
+                        <p>Silver Hollow saved. Entity torna dormiente. Reward: 1500 XP.</p>
                     </div>
                     
                     <div class="stat-block">
                         <h4>📜 B: SEPOLTO MA NON MORTO</h4>
                         <p><strong>Trigger:</strong> Collapse tempio con sabotaggio</p>
-                        <p style="margin-top: 10px;">Temporary solution. Entity trapped ma alive. Hook per sequel. 
-                        Reward: 1200 XP.</p>
+                        <p>Entity trapped ma alive. Hook per sequel. Reward: 1200 XP.</p>
                     </div>
                     
                     <div class="stat-block">
                         <h4>📜 C: CORRUZIONE</h4>
                         <p><strong>Trigger:</strong> Join rituale o TPK</p>
-                        <p style="margin-top: 10px;">Bad ending. PG diventa cultisti. Campaign over (o sequel 
-                        con nuovi heroes). Reward: 0 XP.</p>
+                        <p>Bad ending. Campaign over. Reward: 0 XP.</p>
                     </div>
                     
                     <div class="stat-block">
                         <h4>📜 D: SACRIFICIO EROICO</h4>
-                        <p><strong>Trigger:</strong> 1 PG sacrifica se stesso per salvare party</p>
-                        <p style="margin-top: 10px;">Ultimate heroism. Tempio destroyed, PG morto ma remembered. 
-                        Reward: 1800 XP + Honor bonus.</p>
+                        <p><strong>Trigger:</strong> 1 PG sacrifica se stesso</p>
+                        <p>Ultimate heroism. Tempio destroyed. Reward: 1800 XP + Honor bonus.</p>
                     </div>
                 </section>
                 
-                <!-- NPCs REFERENCE -->
-                <section id="npcs" class="section">
-                    <h2>👥 NPCs & Creature Quick Reference</h2>
-                    
-                    <h3>🤠 NPCs Chiave</h3>
-                    <ul style="font-size: 1.05em; line-height: 1.7;">
-                        <li><strong>Sheriff Hank Morrison:</strong> Quest giver, HP 28, overwhelmed ma honest</li>
-                        <li><strong>Frank (Barista):</strong> Info hub, knows gossip, nervous</li>
-                        <li><strong>Old Pete:</strong> Ex-miner witness, drunk ma truthful</li>
-                        <li><strong>Maria:</strong> Prostituta, pattern recognition, pragmatica</li>
-                    </ul>
-                    
-                    <h3>👹 Creature Stats</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Creatura</th>
-                                <th>HP</th>
-                                <th>AC</th>
-                                <th>Attacco</th>
-                                <th>Special</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Zombie</td>
-                                <td>22</td>
-                                <td>0</td>
-                                <td>+4 (1d8+2)</td>
-                                <td>Inesorabile</td>
-                            </tr>
-                            <tr>
-                                <td>Cultista</td>
-                                <td>18</td>
-                                <td>0</td>
-                                <td>+4 (1d6+2)</td>
-                                <td>Fanatico</td>
-                            </tr>
-                            <tr>
-                                <td>Jeremiah</td>
-                                <td>70</td>
-                                <td>3</td>
-                                <td>Multiattack ×2</td>
-                                <td>Regeneration 8, Boss</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-                
-                <!-- CONCLUSIONE -->
                 <div style="background: linear-gradient(135deg, var(--rust) 0%, var(--night-black) 100%); 
                     color: white; padding: 60px 40px; margin-top: 60px; text-align: center;">
                     <h2 style="color: white; font-size: 2.5em;">✅ VOLUME I COMPLETO!</h2>
-                    <p style="font-size: 1.3em; max-width: 900px; margin: 30px auto; line-height: 1.8;">
-                        <strong>Shadows in the Desert</strong> è ora completamente giocabile. Include 3 Atti, 
-                        10+ scene, 4 epiloghi, e supporto GM completo.
-                    </p>
-                    <ul style="text-align: left; max-width: 700px; margin: 30px auto; font-size: 1.15em; line-height: 1.9;">
-                        <li>✅ <strong>10-12 ore</strong> gameplay</li>
-                        <li>✅ <strong>4 Hooks</strong> personalizzati</li>
-                        <li>✅ <strong>Boss fight</strong> Jeremiah 3-fase</li>
-                        <li>✅ <strong>4 Epiloghi</strong> basati scelte</li>
-                        <li>✅ <strong>Dungeon crawl</strong> 3 livelli</li>
-                    </ul>
                     <p style="font-size: 1.2em; margin-top: 40px;">
                         🏜️ Pronto per Silver Hollow! 🏜️
                     </p>
@@ -956,13 +475,8 @@ li segreti in miniera. Membri "fedeli"
             </main>
         </div>
         
-        <!-- Footer -->
         <div class="footer">
             <p><strong>Volume I: Shadows in the Desert</strong> - Gunsmoke & Dread Collection</p>
-            <p style="margin-top: 10px;">
-                <a href="../INDEX.html">← Torna all'Index</a> | 
-                <a href="../volume-ii/Volume-II-Main.html">Volume II →</a>
-            </p>
         </div>
         
     </div>
