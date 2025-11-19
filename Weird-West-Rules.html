@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weird West Rules - Gunsmoke & Dread</title>
+    
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main-styles.css">
+    <link rel="stylesheet" href="assets/css/volume-themes.css">
+</head>
+<body class="theme-desert">
+    <div class="container">
+        
+        <!-- Header -->
+        <div class="hero" style="padding: 80px 40px; background: linear-gradient(135deg, var(--rust) 0%, var(--blood-red) 50%, var(--night-black) 100%);">
+            <h1 style="font-size: 4.5em; color: white; text-shadow: 3px 3px 6px rgba(0,0,0,0.7);">
+                🔫 WEIRD WEST RULES
+            </h1>
+            <p class="subtitle" style="color: var(--desert-sand); font-size: 1.5em;">
+                Regole Complete per Gunsmoke & Dread
+            </p>
+            <p class="tagline" style="color: white; font-size: 1.2em;">
+                Sistema Daggerheart™ + Modifiche Weird West + Horror Cosmico
+            </p>
+        </div>
+        
+        <!-- Sidebar + Content Layout -->
+        <div class="sidebar-layout">
+            
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar">
+                <h2>📋 Indice</h2>
+                <ul class="nav-links">
+                    <li><a href="#intro">Introduzione</a></li>
+                    <li><a href="#base">Sistema Base Daggerheart</a></li>
+                    <li><a href="#tenuta">Sistema Tenuta Mentale</a></li>
+                    <li><a href="#checks">Difficoltà Checks (CD)</a></li>
+                    <li><a href="#combat">Combattimento</a></li>
+                    <li><a href="#environment">Pericoli Ambientali</a></li>
+                    <li><a href="#equipment">Equipaggiamento Weird West</a></li>
+                    <li><a href="#healing">Healing & Recovery</a></li>
+                    <li><a href="#conditions">Conditions & Status</a></li>
+                    <li><a href="#gm-tools">GM Tools & Tables</a></li>
+                </ul>
+            </aside>
+            
+            <!-- Main Content -->
+            <main class="content">
+                
+                <!-- INTRODUZIONE -->
+                <section id="intro" class="section">
+                    <h2>📖 Introduzione</h2>
+                    
+                    <p class="large">
+                        Questa sezione contiene tutte le regole necessarie per giocare <strong>Gunsmoke & Dread</strong>. 
+                        Il sistema base è <strong>Daggerheart™ SRD 1.0</strong>, con modifiche specifiche per 
+                        ambientazione Weird West e horror cosmico.
+                    </p>
+                    
+                    <div class="info-box">
+                        <h3>🎯 Cosa Serve per Giocare</h3>
+                        <ul style="font-size: 1.05em; line-height: 1.7;">
+                            <li><strong>Sistema:</strong> Daggerheart™ Core Rules (SRD 1.0 o superiore)</li>
+                            <li><strong>Dadi:</strong> Set completo poliedrici (d4, d6, d8, d10, d12, d20)</li>
+                            <li><strong>Giocatori:</strong> 3-5 giocatori + 1 Game Master (ideale 4 PG)</li>
+                            <li><strong>Età:</strong> 18+ (contenuto horror maturo)</li>
+                            <li><strong>Sessioni:</strong> 3-4 ore ciascuna</li>
+                            <li><strong>Character Sheets:</strong> Forniti con questa collection</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h3>⚠️ Safety Tools Raccomandati</h3>
+                        <p style="font-size: 1.05em; line-height: 1.7;">
+                            Questa campaign contiene temi horror intensi (body horror, violenza grafica, 
+                            orrore psicologico, nihilismo cosmico). È <strong>fortemente raccomandato</strong> 
+                            discutere safety tools in Session 0:
+                        </p>
+                        <ul>
+                            <li><strong>X-Card:</strong> Chiunque può dire "X" per saltare contenuto problematico</li>
+                            <li><strong>Lines & Veils:</strong> Temi hard no vs temi "fade to black"</li>
+                            <li><strong>Pause Break:</strong> Check-in emotivo ogni 90 minuti</li>
+                            <li><strong>Open Door Policy:</strong> Sempre OK lasciare tavolo se necessario</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- SISTEMA BASE DAGGERHEART -->
+                <section id="base" class="section">
+                    <h2>🎲 Sistema Base Daggerheart</h2>
+                    
+                    <h3>Core Mechanics</h3>
+                    
+                    <p class="large">
+                        Daggerheart usa sistema basato su <strong>d12 dual-dice</strong> con meccanica Hope/Fear. 
+                        Per azioni importanti, tiri 2d12 (uno Hope, uno Fear) e usi il più alto, ma quello che 
+                        mostri determina se GM ottiene Fear token.
+                    </p>
+                    
+                    <div class="stat-block">
+                        <h4>🎲 Action Roll Base</h4>
+                        <p><strong>Quando:</strong> Ogni volta che esiti qualcosa con outcome incerto</p>
+                        <p style="margin-top: 10px;"><strong>Come:</strong></p>
+                        <ol>
+                            <li>Tira 2d12 (uno Hope [colore chiaro], uno Fear [colore scuro])</li>
+                            <li>Prendi risultato più alto</li>
+                            <li>Aggiungi modificatore rilevante</li>
+                            <li>Confronta con Classe Difficoltà (CD) del GM</li>
+                        </ol>
+                        <p style="margin-top: 10px;"><strong>Risultato:</strong></p>
+                        <ul>
+                            <li><strong>Successo (≥ CD):</strong> Ottieni quello che volevi</li>
+                            <li><strong>Successo con Hope:</strong> Successo + GM ottiene Hope token</li>
+                            <li><strong>Successo con Fear:</strong> Successo + GM ottiene Fear token</li>
+                            <li><strong>Fallimento (< CD):</strong> Non ottieni quello che volevi, conseguenze</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Attributi & Modificatori</h3>
+                    
+                    <div class="grid-auto">
+                        <div class="stat-box">
+                            <h4>💪 FORZA</h4>
+                            <p>Potenza fisica, combattimento corpo a corpo, sollevare/spingere</p>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>🎯 AGILITÀ</h4>
+                            <p>Destrezza, riflessi, movimento, combattimento a distanza</p>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>🧠 CONOSCENZA</h4>
+                            <p>Intelligenza, memoria, ricerca, medicina, investigazione</p>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>🗣️ PRESENZA</h4>
+                            <p>Carisma, leadership, persuasione, intimidazione</p>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>👁️ ISTINTO</h4>
+                            <p>Percezione, empatia, intuito, awareness</p>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>🛡️ COSTITUZIONE</h4>
+                            <p>Resistenza, tenacia, resistere veleni/malattie/fatica</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Hit Points & Stress</h3>
+                    
+                    <div class="stat-block">
+                        <h4>💚 HIT POINTS (HP)</h4>
+                        <p>Rappresenta salute fisica. Quando arrivi a 0 HP, cadi Dying.</p>
+                        <p><strong>Calcolo:</strong> Varia per classe, tipicamente 20-40 per livello 2-5</p>
+                        <p><strong>Recovery:</strong> Rest lungo (8 ore) recupera tutto. Short rest (1 ora) recupera 
+                        Hit Dice.</p>
+                    </div>
+                    
+                    <div class="stat-block">
+                        <h4>💔 STRESS</h4>
+                        <p>Danno emotivo/mentale standard Daggerheart. In Gunsmoke & Dread, questo rappresenta 
+                        fatica, paura ordinaria, shock.</p>
+                        <p><strong>Nota:</strong> Per horror cosmico usiamo sistema <strong>Tenuta Mentale</strong> 
+                        separato (vedi sotto).</p>
+                    </div>
+                </section>
+                
+                <!-- SISTEMA TENUTA MENTALE -->
+                <section id="tenuta" class="section">
+                    <h2>🧠 Sistema Tenuta Mentale</h2>
+                    
+                    <p class="large">
+                        Il sistema più importante per Gunsmoke & Dread. Rappresenta <strong>sanità mentale</strong> 
+                        e <strong>stabilità psicologica</strong> di fronte a orrori cosmici incomprensibili.
+                    </p>
+                    
+                    <div class="horror-box">
+                        <h3>⚙️ Come Funziona</h3>
+                        <p style="font-size: 1.05em; line-height: 1.8;">
+                            Ogni PG ha <strong>track Tenuta Mentale</strong> con 10 segmenti. Quando vedi/scopri 
+                            qualcosa di disturbante, fai <strong>check Tenuta</strong> (tipicamente Istinto). 
+                            Se fallisci, segni segmenti.
+                        </p>
+                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+                            A certe soglie (2, 4, 6, 8, 10 segmenti), subisci <strong>deterioramento mentale</strong> 
+                            con effetti meccanici e narrative.
+                        </p>
+                    </div>
+                    
+                    <h3>📊 Track Tenuta (10 Segmenti)</h3>
+                    
+                    <div class="stat-block">
+                        <h4>FASE 0: STABILE (0-1 segmenti)</h4>
+                        <p><strong>Stato:</strong> Mentalmente integro</p>
+                        <p><strong>Effetti:</strong> Nessuno</p>
+                        <p><strong>Narrative:</strong> PG razionalizza eventi, mantiene compostura</p>
+                    </div>
+                    
+                    <div class="stat-block" style="border-color: #ff9800;">
+                        <h4>FASE 1: TURBATO (2-3 segmenti)</h4>
+                        <p><strong>Stato:</strong> Shaken, nervoso</p>
+                        <p><strong>Effetti Meccanici:</strong></p>
+                        <ul>
+                            <li>Svantaggio a check Istinto (percezione ridotta)</li>
+                            <li>-1 Initiative (riflessi più lenti)</li>
+                        </ul>
+                        <p><strong>Effetti Narrative:</strong></p>
+                        <ul>
+                            <li>Difficoltà dormire (incubi)</li>
+                            <li>Nervosismo, sobbalzi a rumori improvvisi</li>
+                            <li>Cerca rassicurazione da alleati</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="stat-block" style="border-color: #f44336;">
+                        <h4>FASE 2: DISTURBATO (4-5 segmenti)</h4>
+                        <p><strong>Stato:</strong> Psiche danneggiata</p>
+                        <p><strong>Effetti Meccanici:</strong></p>
+                        <ul>
+                            <li>Svantaggio a <strong>tutti</strong> check sociali (Presenza)</li>
+                            <li>Svantaggio a concentrazione (casting, aim)</li>
+                            <li>-2 Initiative</li>
+                        </ul>
+                        <p><strong>Effetti Narrative:</strong></p>
+                        <ul>
+                            <li>Comportamento erratico, mood swings</li>
+                            <li>Vede ombre movimento periferico</li>
+                            <li>Parla da solo, mormora</li>
+                            <li>Evita essere solo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="stat-block" style="border-color: #c62828;">
+                        <h4>FASE 3: FRAMMENTATO (6-7 segmenti)</h4>
+                        <p><strong>Stato:</strong> Sanità compromessa</p>
+                        <p><strong>Effetti Meccanici:</strong></p>
+                        <ul>
+                            <li>Svantaggio a <strong>tutti</strong> check (eccetto Forza pura)</li>
+                            <li>-5 Initiative</li>
+                            <li>Deve fare Costituzione CD 12 per usare abilities complesse</li>
+                        </ul>
+                        <p><strong>Effetti Narrative:</strong></p>
+                        <ul>
+                            <li><strong>Minor hallucinations:</strong> Sente sussurri, vede forme distorte</li>
+                            <li>Memoria confusa (mischia presente/passato)</li>
+                            <li>Teme tocco (sensazione pelle che si muove)</li>
+                            <li>Tic nervosi, tremori</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="stat-block" style="border-color: #b71c1c;">
+                        <h4>FASE 4: SPEZZATO (8-9 segmenti)</h4>
+                        <p><strong>Stato:</strong> Crollo psicologico imminente</p>
+                        <p><strong>Effetti Meccanici:</strong></p>
+                        <ul>
+                            <li>Svantaggio a <strong>TUTTO</strong></li>
+                            <li>Nessuna Initiative (agisce ultimo)</li>
+                            <li>Non può fare Long Rest senza aiuto esterno (sedativi, magic, terapia)</li>
+                            <li>50% chance ogni mattino: Catatonic 1d4 ore</li>
+                        </ul>
+                        <p><strong>Effetti Narrative:</strong></p>
+                        <ul>
+                            <li><strong>Major hallucinations:</strong> Non distingue più reale da irreale</li>
+                            <li>Regressione infantile o dissociazione completa</li>
+                            <li>Parla con "loro" (entità che non esistono)</li>
+                            <li>Autolesionismo (scratch pelle sentendo movimento)</li>
+                        </ul>
+                        <p style="margin-top: 15px; font-weight: bold; color: var(--blood-red);">
+                            ⚠️ WARNING: Un altro fallimento porta a CROLLO TOTALE
+                        </p>
+                    </div>
+                    
+                    <div class="warning-box" style="border-color: #000000; background: rgba(0,0,0,0.8); color: white;">
+                        <h4 style="color: var(--blood-red);">☠️ FASE 5: CROLLO TOTALE (10 segmenti)</h4>
+                        <p style="color: white;"><strong>Stato:</strong> Sanità distrutta permanentemente</p>
+                        <p style="margin-top: 10px; color: white;"><strong>Effetti:</strong></p>
+                        <p style="font-size: 1.1em; line-height: 1.7; color: white;">
+                            PG subisce <strong>breakdown completo</strong>. GM sceglie uno:
+                        </p>
+                        <ol style="color: white;">
+                            <li><strong>Catatonia Permanente:</strong> PG si spegne completamente. Non risponde 
+                            stimoli. Diventa NPC vegetativo.</li>
+                            <li><strong>Frenesia Omicida:</strong> PG attacca alleati/sé stesso. Deve essere 
+                            restrainato o ucciso.</li>
+                            <li><strong>Fuga Psicogena:</strong> PG fugge in wilderness, perduto per sempre 
+                            (GM può riportare come NPC mutato).</li>
+                            <li><strong>Servitù Aliena:</strong> Mente di PG "claimed" da entità cosmica. 
+                            Diventa servitore NPC degli Antichi.</li>
+                        </ol>
+                        <p style="margin-top: 15px; font-weight: bold; font-size: 1.2em; color: var(--alien-green);">
+                            In ogni caso: PG è PERSO come character giocabile. Crea nuovo PG.
+                        </p>
+                    </div>
+                    
+                    <h3>🛡️ Recuperare Tenuta</h3>
+                    
+                    <div class="tip-box">
+                        <h4>Metodi di Recupero</h4>
+                        
+                        <p><strong>1. LONG REST (8+ ore sicuro):</strong> Recupera 1d4 segmenti</p>
+                        <ul>
+                            <li>Richiede luogo sicuro, confortevole</li>
+                            <li>No minacce attive</li>
+                            <li>Se Fase 4+: Solo 1d4-2 (min 0)</li>
+                        </ul>
+                        
+                        <p style="margin-top: 15px;"><strong>2. DOWNTIME (giorni/settimane):</strong> 1 segmento 
+                        per settimana</p>
+                        <ul>
+                            <li>Richiede ambiente normale, routine</li>
+                            <li>Supporto sociale (famiglia, amici)</li>
+                            <li>Distanza da eventi traumatici</li>
+                        </ul>
+                        
+                        <p style="margin-top: 15px;"><strong>3. TERAPIA PROFESSIONALE:</strong> 1d4 segmenti per 
+                        mese</p>
+                        <ul>
+                            <li>Medico specializzato (Conoscenza 15+)</li>
+                            <li>Trattamenti regolari</li>
+                            <li>Costo: $50-100/mese (1880s)</li>
+                        </ul>
+                        
+                        <p style="margin-top: 15px;"><strong>4. MAGICAL INTERVENTION:</strong> Variabile</p>
+                        <ul>
+                            <li>Spell "Lesser Restoration" → 1d4 segmenti</li>
+                            <li>"Greater Restoration" → 1d6+2 segmenti</li>
+                            <li>"Wish" equivalente → Full restore</li>
+                            <li>Nota: Magia è RARA in Weird West!</li>
+                        </ul>
+                        
+                        <p style="margin-top: 15px;"><strong>5. ALCOL/OPPIO (Temporaneo):</strong></p>
+                        <ul>
+                            <li>Ignora penalità Tenuta per 1d4 ore</li>
+                            <li>Dopo: +1 segmento extra (addiction risk)</li>
+                            <li>⚠️ Meccanica pericolosa, può spiral</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>🎲 Quando Fare Check Tenuta</h3>
+                    
+                    <div class="stat-block">
+                        <h4>Trigger Comuni</h4>
+                        <table style="width: 100%; margin-top: 10px;">
+                            <thead>
+                                <tr>
+                                    <th>Evento</th>
+                                    <th>CD</th>
+                                    <th>Segmenti Fallimento</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Vedere cadavere mutilato</td>
+                                    <td>12</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Incontrare creatura non-naturale</td>
+                                    <td>14</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Vedere trasformazione body horror</td>
+                                    <td>15</td>
+                                    <td>2-3</td>
+                                </tr>
+                                <tr>
+                                    <td>Realizzare verità cosmica</td>
+                                    <td>16</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>Vedere Grande Antico</td>
+                                    <td>18</td>
+                                    <td>4-5</td>
+                                </tr>
+                                <tr>
+                                    <td>Contatto mentale alieno diretto</td>
+                                    <td>20</td>
+                                    <td>5-6</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                
+                <!-- DIFFICOLTÀ CHECKS -->
+                <section id="checks" class="section">
+                    <h2>🎯 Difficoltà Checks (CD)</h2>
+                    
+                    <p class="large">
+                        Guide per GM: quando PG tentano qualcosa, imposti Classe Difficoltà (CD). Più alta la CD, 
+                        più difficile il task.
+                    </p>
+                    
+                    <div class="stat-block">
+                        <h4>📊 Scala Difficoltà Standard</h4>
+                        <table style="width: 100%; margin-top: 10px;">
+                            <thead>
+                                <tr>
+                                    <th>CD</th>
+                                    <th>Difficoltà</th>
+                                    <th>Descrizione</th>
+                                    <th>Esempio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>5</strong></td>
+                                    <td>Triviale</td>
+                                    <td>Quasi impossibile fallire</td>
+                                    <td>Notare porta gigante</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>8</strong></td>
+                                    <td>Facile</td>
+                                    <td>La maggior parte riesce</td>
+                                    <td>Cavalcare cavallo tranquillo</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>10</strong></td>
+                                    <td>Routine</td>
+                                    <td>Competenti riescono</td>
+                                    <td>Scalare parete con corde</td>
+                                </tr>
+                                <tr style="background: rgba(255, 152, 0, 0.1);">
+                                    <td><strong>12</strong></td>
+                                    <td>Moderato</td>
+                                    <td>Richiede skill</td>
+                                    <td>Convincere guard sospettoso</td>
+                                </tr>
+                                <tr style="background: rgba(255, 152, 0, 0.2);">
+                                    <td><strong>14</strong></td>
+                                    <td>Difficile</td>
+                                    <td>Solo skilled riescono</td>
+                                    <td>Disarmare trappola complessa</td>
+                                </tr>
+                                <tr style="background: rgba(244, 67, 54, 0.1);">
+                                    <td><strong>16</strong></td>
+                                    <td>Molto Difficile</td>
+                                    <td>Experts challenge</td>
+                                    <td>Decifrare linguaggio alieno</td>
+                                </tr>
+                                <tr style="background: rgba(244, 67, 54, 0.2);">
+                                    <td><strong>18</strong></td>
+                                    <td>Formidabile</td>
+                                    <td>Quasi impossibile</td>
+                                    <td>Saltare canyon 6 metri</td>
+                                </tr>
+                                <tr style="background: rgba(0, 0, 0, 0.2);">
+                                    <td><strong>20+</strong></td>
+                                    <td>Leggendario</td>
+                                    <td>Serve miracolo o mastery</td>
+                                    <td>Comprendere geometria non-euclidea</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 GM Guidelines</h4>
+                        <ul>
+                            <li><strong>CD 10-12:</strong> "Baseline" per maggior parte checks standard</li>
+                            <li><strong>CD 14-16:</strong> Situazioni tese, pressure, expertise richiesta</li>
+                            <li><strong>CD 18+:</strong> Solo per momenti climactici o impossibili</li>
+                            <li><strong>Advantage/Disadvantage:</strong> Modifica probabilità più che CD</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- COMBATTIMENTO -->
+                <section id="combat" class="section">
+                    <h2>⚔️ Combattimento</h2>
+                    
+                    <h3>Initiative & Rounds</h3>
+                    
+                    <div class="stat-block">
+                        <h4>🎲 Initiative</h4>
+                        <p>All'inizio combat, tutti tirano <strong>Istinto + Agilità</strong>. Ordine dal più alto 
+                        al più basso.</p>
+                        <p><strong>Note:</strong></p>
+                        <ul>
+                            <li>Tenuta Mentale può dare penalità Initiative</li>
+                            <li>Surprise: Chi sorprende ottiene Vantaggio Initiative</li>
+                            <li>Rounds durano ~6 secondi ciascuno</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Action Economy</h3>
+                    
+                    <div class="grid-auto">
+                        <div class="stat-box">
+                            <h4>AZIONE PRINCIPALE</h4>
+                            <p><strong>1 per turno</strong></p>
+                            <ul>
+                                <li>Attacco (arma o spell)</li>
+                                <li>Dash (movimento extra)</li>
+                                <li>Azione complessa (es. disarmare)</li>
+                                <li>Aiuto alleato</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>MOVIMENTO</h4>
+                            <p><strong>Gratis (1x speed)</strong></p>
+                            <ul>
+                                <li>Umano standard: 9m (30 ft)</li>
+                                <li>Terreno difficile: ½ speed</li>
+                                <li>Dash action: 2x speed</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>AZIONE BONUS</h4>
+                            <p><strong>Se disponibile</strong></p>
+                            <ul>
+                                <li>Usare oggetto semplice</li>
+                                <li>Class features</li>
+                                <li>Second attack (se hai feature)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>REACTION</h4>
+                            <p><strong>1 per round</strong></p>
+                            <ul>
+                                <li>Opportunity attack</li>
+                                <li>Defensive abilities</li>
+                                <li>Triggers specifiche</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3>Attacco & Danno</h3>
+                    
+                    <div class="stat-block">
+                        <h4>🎯 Attacco Base</h4>
+                        <p><strong>Processo:</strong></p>
+                        <ol>
+                            <li>Dichiara target entro range</li>
+                            <li>Tira 2d12 + modificatore attacco</li>
+                            <li>Confronta con Armor Class (AC) del target</li>
+                            <li>Se ≥ AC: Hit! Tira danno</li>
+                            <li>Se < AC: Miss!</li>
+                        </ol>
+                        
+                        <p style="margin-top: 15px;"><strong>Modificatori Attacco:</strong></p>
+                        <ul>
+                            <li><strong>Melee:</strong> Forza (di solito)</li>
+                            <li><strong>Ranged:</strong> Agilità</li>
+                            <li><strong>Finesse weapons:</strong> Scelta Forza o Agilità</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Armi da Fuoco (Weird West Specific)</h3>
+                    
+                    <div class="stat-block">
+                        <h4>🔫 Regole Firearms</h4>
+                        <table style="width: 100%; margin-top: 10px;">
+                            <thead>
+                                <tr>
+                                    <th>Arma</th>
+                                    <th>Danno</th>
+                                    <th>Range</th>
+                                    <th>Proprietà</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Revolver</strong></td>
+                                    <td>2d6</td>
+                                    <td>12/36m</td>
+                                    <td>Loading, 6 colpi</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Rifle</strong></td>
+                                    <td>2d8</td>
+                                    <td>24/90m</td>
+                                    <td>Two-handed, Loading</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Shotgun</strong></td>
+                                    <td>3d6</td>
+                                    <td>6/15m</td>
+                                    <td>Two-handed, Spread</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Dynamite</strong></td>
+                                    <td>4d6</td>
+                                    <td>6m radius</td>
+                                    <td>Reflex CD 14 half</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <p style="margin-top: 15px;"><strong>Proprietà Speciali:</strong></p>
+                        <ul>
+                            <li><strong>Loading:</strong> Azione bonus per ricaricare</li>
+                            <li><strong>Spread:</strong> +2 attacco entro 6m, ma perde efficacia oltre</li>
+                            <li><strong>Misfire:</strong> Natural 1 su attack = jammed (azione full clean)</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Cover & Positioning</h3>
+                    
+                    <div class="tip-box">
+                        <h4>🛡️ Copertura</h4>
+                        <ul>
+                            <li><strong>Half Cover:</strong> +2 AC (dietro barile, angolo muro)</li>
+                            <li><strong>Three-Quarters Cover:</strong> +5 AC (dietro muro solido con feritoia)</li>
+                            <li><strong>Full Cover:</strong> Non targetable (completamente nascosto)</li>
+                        </ul>
+                        
+                        <h4 style="margin-top: 20px;">📍 Posizionamento Tattico</h4>
+                        <ul>
+                            <li><strong>High Ground:</strong> +1 attacco se 3m+ sopra target</li>
+                            <li><strong>Flanking:</strong> Vantaggio se alleato opposto lato nemico</li>
+                            <li><strong>Prone:</strong> +2 AC vs ranged, -2 AC vs melee, ½ movement alzarsi</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- PERICOLI AMBIENTALI -->
+                <section id="environment" class="section">
+                    <h2>🌵 Pericoli Ambientali</h2>
+                    
+                    <h3>Deserto & Clima</h3>
+                    
+                    <div class="warning-box">
+                        <h4>☀️ Calore Estremo</h4>
+                        <p>Deserto di giorno: 40-45°C (105-115°F)</p>
+                        <p><strong>Effetti:</strong> Ogni ora senza acqua/ombra:</p>
+                        <ul>
+                            <li>Costituzione CD 12 o 1 Livello Fatica</li>
+                            <li>CD aumenta +1 ogni ora consecutiva</li>
+                            <li>Fatica 3+ = Heatstroke (disadvantage tutto)</li>
+                            <li>Fatica 6 = Death</li>
+                        </ul>
+                        <p><strong>Recupero:</strong> 1 livello Fatica per ora in ombra con acqua</p>
+                    </div>
+                    
+                    <div class="stat-block">
+                        <h4>🌙 Freddo Notturno</h4>
+                        <p>Deserto di notte: 5-10°C (40-50°F)</p>
+                        <p><strong>Effetti:</strong> Senza riparo/coperte:</p>
+                        <ul>
+                            <li>Costituzione CD 10 o No rest benefits</li>
+                            <li>-1 Tenuta Mental (insonnia, discomfort)</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Acqua & Annegamento</h3>
+                    
+                    <div class="stat-block">
+                        <h4>💧 Trattenere Fiato</h4>
+                        <p><strong>Durata:</strong> 1 minuto + Costituzione modifier (min 30 secondi)</p>
+                        <p><strong>Oltre limite:</strong></p>
+                        <ul>
+                            <li>Round 1: Costituzione CD 10 o inizi annegare</li>
+                            <li>Ogni round dopo: CD +1</li>
+                            <li>Annegando: 1d10 danno/round</li>
+                            <li>HP = 0 mentre anneghi = Death immediata (non Dying)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="stat-block">
+                        <h4>🌊 Acqua Fredda (Pozzo/Tunnel)</h4>
+                        <p><strong>Temperatura:</strong> 5-8°C (40-45°F)</p>
+                        <p><strong>Effetti:</strong> Ogni 10 minuti immerso:</p>
+                        <ul>
+                            <li>Costituzione CD 13 o 1 Livello Fatica</li>
+                            <li>Movimento -3m per livello Fatica</li>
+                            <li>Fatica 3+ = Hypothermia (disadvantage tutto)</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Buio & Visibility</h3>
+                    
+                    <div class="stat-block">
+                        <h4>🌑 Darkness Levels</h4>
+                        <table style="width: 100%; margin-top: 10px;">
+                            <thead>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Effetto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Dim Light</strong></td>
+                                    <td>Svantaggio Percezione</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Darkness</strong></td>
+                                    <td>Blinded (se no darkvision)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Magical Darkness</strong></td>
+                                    <td>Blinded anche con darkvision</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <p style="margin-top: 15px;"><strong>Fonti Luce (1880s):</strong></p>
+                        <ul>
+                            <li><strong>Lanterna:</strong> 18m bright, 18m dim, 6 ore oil</li>
+                            <li><strong>Torcia:</strong> 9m bright, 9m dim, 1 ora</li>
+                            <li><strong>Candela:</strong> 1.5m bright, 1.5m dim, 1 ora</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Cadute & Danni Ambientali</h3>
+                    
+                    <div class="stat-block">
+                        <h4>📉 Caduta</h4>
+                        <p><strong>Danno:</strong> 1d6 per 3m caduti (max 20d6)</p>
+                        <p><strong>Atterraggio:</strong> Agilità CD 15 per dimezzare (se < 6m)</p>
+                        
+                        <p style="margin-top: 15px;"><strong>Esempi Gunsmoke & Dread:</strong></p>
+                        <ul>
+                            <li>Pozzo (150m) = 50d6 = 175 dmg medio = Instant death</li>
+                            <li>Tetto saloon (5m) = 2d6 = ~7 dmg</li>
+                            <li>Canyon edge (30m) = 10d6 = ~35 dmg</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- EQUIPAGGIAMENTO -->
+                <section id="equipment" class="section">
+                    <h2>🎒 Equipaggiamento Weird West</h2>
+                    
+                    <h3>Armi Standard</h3>
+                    
+                    <div class="stat-block">
+                        <table style="width: 100%; margin-top: 10px;">
+                            <thead>
+                                <tr>
+                                    <th>Arma</th>
+                                    <th>Costo</th>
+                                    <th>Danno</th>
+                                    <th>Peso</th>
+                                    <th>Proprietà</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Revolver Colt .45</strong></td>
+                                    <td>$15</td>
+                                    <td>2d6</td>
+                                    <td>1.5kg</td>
+                                    <td>Loading, 6 colpi, 12/36m</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Winchester Rifle</strong></td>
+                                    <td>$25</td>
+                                    <td>2d8</td>
+                                    <td>4kg</td>
+                                    <td>Two-handed, 24/90m</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Double-Barrel Shotgun</strong></td>
+                                    <td>$30</td>
+                                    <td>3d6</td>
+                                    <td>4kg</td>
+                                    <td>Two-handed, Spread, 6/15m</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Knife/Dagger</strong></td>
+                                    <td>$2</td>
+                                    <td>1d4</td>
+                                    <td>0.5kg</td>
+                                    <td>Finesse, Light, Thrown 6/12m</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Tomahawk</strong></td>
+                                    <td>$5</td>
+                                    <td>1d6</td>
+                                    <td>1kg</td>
+                                    <td>Thrown 6/18m, Versatile</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h3>Gear & Supplies</h3>
+                    
+                    <div class="stat-block">
+                        <table style="width: 100%; margin-top: 10px;">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Costo</th>
+                                    <th>Peso</th>
+                                    <th>Note</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Corda (15m)</td>
+                                    <td>$1</td>
+                                    <td>5kg</td>
+                                    <td>Hemp, strong</td>
+                                </tr>
+                                <tr>
+                                    <td>Lanterna + Oil</td>
+                                    <td>$3</td>
+                                    <td>1kg</td>
+                                    <td>6 ore luce</td>
+                                </tr>
+                                <tr>
+                                    <td>Dynamite (stick)</td>
+                                    <td>$2</td>
+                                    <td>0.5kg</td>
+                                    <td>4d6, 6m radius</td>
+                                </tr>
+                                <tr>
+                                    <td>Whiskey (bottle)</td>
+                                    <td>$0.50</td>
+                                    <td>0.5kg</td>
+                                    <td>Temp ignore Tenuta penalty</td>
+                                </tr>
+                                <tr>
+                                    <td>Morphine (dose)</td>
+                                    <td>$1</td>
+                                    <td>-</td>
+                                    <td>Heal 2d4+2 HP, addictive</td>
+                                </tr>
+                                <tr>
+                                    <td>Bedroll</td>
+                                    <td>$1</td>
+                                    <td>3kg</td>
+                                    <td>Comfortable rest</td>
+                                </tr>
+                                <tr>
+                                    <td>Cavallo</td>
+                                    <td>$50-150</td>
+                                    <td>-</td>
+                                    <td>Speed 18m, carrying 200kg</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h3>Items Speciali (Weird West)</h3>
+                    
+                    <div class="horror-box">
+                        <h4>🔮 Protective Charms</h4>
+                        <p>Rari, spesso inefficaci, ma confortanti:</p>
+                        <ul>
+                            <li><strong>Croce Benedetta:</strong> +1 Tenuta check vs unholy (placebo?)</li>
+                            <li><strong>Silver Bullets:</strong> 2x danno vs certain creatures (costo $5 each)</li>
+                            <li><strong>Dreamcatcher Nativo:</strong> +2 su saves vs nightmares</li>
+                            <li><strong>Whiskey "Ghost Ward":</strong> Snake oil, no effetto reale</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- HEALING & RECOVERY -->
+                <section id="healing" class="section">
+                    <h2>❤️‍🩹 Healing & Recovery</h2>
+                    
+                    <h3>Recupero HP</h3>
+                    
+                    <div class="stat-block">
+                        <h4>🛏️ Rest</h4>
+                        
+                        <p><strong>SHORT REST (1 ora):</strong></p>
+                        <ul>
+                            <li>Tira Hit Dice disponibili</li>
+                            <li>Recupera HP = risultato dado + Costituzione mod</li>
+                            <li>Max 1 Short Rest tra Long Rest</li>
+                        </ul>
+                        
+                        <p style="margin-top: 15px;"><strong>LONG REST (8 ore):</strong></p>
+                        <ul>
+                            <li>Recupera TUTTI HP</li>
+                            <li>Recupera metà Hit Dice totali (min 1)</li>
+                            <li>Recupera 1d4 Tenuta Mental</li>
+                            <li>Rimuovi 1 livello Fatica</li>
+                        </ul>
+                        
+                        <p style="margin-top: 15px;"><strong>Requisiti Long Rest:</strong></p>
+                        <ul>
+                            <li>Luogo sicuro (no minacce attive)</li>
+                            <li>Almeno 6 ore sleep</li>
+                            <li>Max 2 ore light activity (guardia, cucina)</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Medicina & Primoi Soccorsi</h3>
+                    
+                    <div class="stat-block">
+                        <h4>🩹 First Aid (Azione)</h4>
+                        <p><strong>Requisiti:</strong> Medical kit, target alive</p>
+                        <p><strong>Check:</strong> Conoscenza CD 12</p>
+                        <p><strong>Successo:</strong> Target recupera 1d6 + tuo Conoscenza mod HP</p>
+                        <p><strong>Limite:</strong> 1x per target per Short Rest</p>
+                    </div>
+                    
+                    <div class="stat-block">
+                        <h4>💉 Surgery (1 ora)</h4>
+                        <p><strong>Requisiti:</strong> Medical kit completo, luogo pulito</p>
+                        <p><strong>Check:</strong> Conoscenza CD 15</p>
+                        <p><strong>Successo:</strong> Rimuovi 1 condizione persistente (Maimed, Disease, ecc)</p>
+                        <p><strong>Fallimento:</strong> Nessun effetto (o worse, CD 18+ complication)</p>
+                    </div>
+                    
+                    <h3>Dying & Death</h3>
+                    
+                    <div class="warning-box">
+                        <h4>☠️ Dying Rules</h4>
+                        <p>Quando arrivi 0 HP, cadi <strong>Dying</strong>:</p>
+                        
+                        <p style="margin-top: 10px;"><strong>Ogni tuo turno mentre Dying:</strong></p>
+                        <ol>
+                            <li>Tira d20 (Death Save)
+                                <ul>
+                                    <li>10+: Segna 1 successo</li>
+                                    <li>1-9: Segna 1 fallimento</li>
+                                    <li>Natural 20: Stabilizzato + recuperi 1 HP</li>
+                                    <li>Natural 1: Conta come 2 fallimenti</li>
+                                </ul>
+                            </li>
+                            <li>3 successi = Stabilized (0 HP ma conscious)</li>
+                            <li>3 fallimenti = Death</li>
+                        </ol>
+                        
+                        <p style="margin-top: 15px;"><strong>Stabilizzazione Esterna:</strong></p>
+                        <ul>
+                            <li>Alleato usa azione + Conoscenza CD 10</li>
+                            <li>Successo = stabilized immediatamente</li>
+                            <li>Healing magic/pozione = auto stabilized + HP</li>
+                        </ul>
+                        
+                        <p style="margin-top: 15px; font-weight: bold; color: var(--blood-red);">
+                            ⚠️ Danno mentre Dying = auto fallimento (massive damage = instant death)
+                        </p>
+                    </div>
+                </section>
+                
+                <!-- CONDITIONS -->
+                <section id="conditions" class="section">
+                    <h2>🤕 Conditions & Status Effects</h2>
+                    
+                    <div class="grid-auto-wide">
+                        <div class="stat-box">
+                            <h4>BLINDED</h4>
+                            <p>Non vedi nulla</p>
+                            <ul>
+                                <li>Auto-fail check visivi</li>
+                                <li>Attacchi: Svantaggio</li>
+                                <li>Attacchi vs te: Vantaggio</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>DEAFENED</h4>
+                            <p>Non senti nulla</p>
+                            <ul>
+                                <li>Auto-fail check uditivi</li>
+                                <li>No altre penalità</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>FRIGHTENED</h4>
+                            <p>Terrore verso fonte</p>
+                            <ul>
+                                <li>Svantaggio checks mentre vedi fonte</li>
+                                <li>Non puoi avvicinarti volontariamente</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>GRAPPLED</h4>
+                            <p>Trattenuto da forza</p>
+                            <ul>
+                                <li>Speed = 0</li>
+                                <li>Termina se grappler Incapacitated</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>INCAPACITATED</h4>
+                            <p>Non puoi agire</p>
+                            <ul>
+                                <li>No actions/reactions</li>
+                                <li>Movimento se fisicamente possibile</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>PARALYZED</h4>
+                            <p>Corpo non risponde</p>
+                            <ul>
+                                <li>Incapacitated</li>
+                                <li>Auto-fail Forza/Agilità saves</li>
+                                <li>Attacchi vs te: Vantaggio</li>
+                                <li>Hit entro 1.5m = auto crit</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>POISONED</h4>
+                            <p>Veleno nel sistema</p>
+                            <ul>
+                                <li>Svantaggio attacchi</li>
+                                <li>Svantaggio ability checks</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>PRONE</h4>
+                            <p>A terra</p>
+                            <ul>
+                                <li>Svantaggio attacchi melee</li>
+                                <li>+2 AC vs ranged (beyond 1.5m)</li>
+                                <li>-2 AC vs melee</li>
+                                <li>½ movimento per alzarsi</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>RESTRAINED</h4>
+                            <p>Legato/intrappolato</p>
+                            <ul>
+                                <li>Speed = 0</li>
+                                <li>Svantaggio attacchi</li>
+                                <li>Svantaggio Agilità saves</li>
+                                <li>Attacchi vs te: Vantaggio</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>STUNNED</h4>
+                            <p>Stordito, dazed</p>
+                            <ul>
+                                <li>Incapacitated</li>
+                                <li>Auto-fail Forza/Agilità saves</li>
+                                <li>Attacchi vs te: Vantaggio</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>UNCONSCIOUS</h4>
+                            <p>Svenuto/dormendo</p>
+                            <ul>
+                                <li>Incapacitated</li>
+                                <li>Drop tutto held</li>
+                                <li>Auto-fail Forza/Agilità</li>
+                                <li>Attacchi: Vantaggio</li>
+                                <li>Hit entro 1.5m = auto crit</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>EXHAUSTION</h4>
+                            <p>Fatica cumulativa</p>
+                            <ul>
+                                <li>Lvl 1: Svantaggio checks</li>
+                                <li>Lvl 2: Speed ½</li>
+                                <li>Lvl 3: Svantaggio attacchi/saves</li>
+                                <li>Lvl 4: HP max ½</li>
+                                <li>Lvl 5: Speed = 1.5m</li>
+                                <li>Lvl 6: Death</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- GM TOOLS -->
+                <section id="gm-tools" class="section">
+                    <h2>🎲 GM Tools & Tables</h2>
+                    
+                    <h3>Encounter Building</h3>
+                    
+                    <div class="tip-box">
+                        <h4>⚖️ Balance Guidelines</h4>
+                        <p><strong>Party di 4 PG, Livello 3-5:</strong></p>
+                        <ul>
+                            <li><strong>Easy Fight:</strong> 4-6 Minions OR 2 Standard</li>
+                            <li><strong>Medium Fight:</strong> 8-10 Minions OR 3-4 Standard OR 1 Elite</li>
+                            <li><strong>Hard Fight:</strong> 12+ Minions OR 5-6 Standard OR 2 Elite OR 1 Boss</li>
+                            <li><strong>Deadly Fight:</strong> 1 Boss + support OR 2 Boss tier</li>
+                        </ul>
+                        
+                        <p style="margin-top: 15px;"><strong>Modificatori:</strong></p>
+                        <ul>
+                            <li>Party 3 PG: -25% enemies</li>
+                            <li>Party 5 PG: +25% enemies</li>
+                            <li>PG Tenuta Fase 3+: -20% enemies (già handicappati)</li>
+                            <li>Terreno favorevole PG: +20% enemies</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Improvvisazione Veloce</h3>
+                    
+                    <div class="stat-block">
+                        <h4>🎭 Quick NPC Stats</h4>
+                        <table style="width: 100%; margin-top: 10px;">
+                            <thead>
+                                <tr>
+                                    <th>Tipo NPC</th>
+                                    <th>HP</th>
+                                    <th>AC</th>
+                                    <th>Attacco</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Civile comune</td>
+                                    <td>4 (1d8)</td>
+                                    <td>10</td>
+                                    <td>+0, 1d4</td>
+                                </tr>
+                                <tr>
+                                    <td>Guard/Bandit</td>
+                                    <td>11 (2d8+2)</td>
+                                    <td>12</td>
+                                    <td>+3, 1d6+1</td>
+                                </tr>
+                                <tr>
+                                    <td>Gunslinger</td>
+                                    <td>27 (5d8+5)</td>
+                                    <td>14</td>
+                                    <td>+5, 2d6+2</td>
+                                </tr>
+                                <tr>
+                                    <td>Sheriff/Marshal</td>
+                                    <td>45 (7d8+14)</td>
+                                    <td>16</td>
+                                    <td>+6, 2d8+3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h3>Pacing & Session Structure</h3>
+                    
+                    <div class="tip-box">
+                        <h4>⏱️ Struttura Sessione Tipo (3-4 ore)</h4>
+                        
+                        <p><strong>Primo 30 min:</strong> Recap + Setup</p>
+                        <ul>
+                            <li>Ricapitola sessione scorsa</li>
+                            <li>Stabilisci goals sessione corrente</li>
+                            <li>Scene setup, mood setting</li>
+                        </ul>
+                        
+                        <p style="margin-top: 15px;"><strong>Ora 1-2:</strong> Exploration & Roleplay</p>
+                        <ul>
+                            <li>Investigation scenes</li>
+                            <li>NPC interactions</li>
+                            <li>World-building moments</li>
+                            <li>Build tension gradualmente</li>
+                        </ul>
+                        
+                        <p style="margin-top: 15px;"><strong>Ora 2-3:</strong> Action & Challenge</p>
+                        <ul>
+                            <li>1-2 combat encounters</li>
+                            <li>Skill challenges significativi</li>
+                            <li>Climax tension</li>
+                        </ul>
+                        
+                        <p style="margin-top: 15px;"><strong>Ultimi 30 min:</strong> Resolution & Cliffhanger</p>
+                        <ul>
+                            <li>Risolvi immediate threads</li>
+                            <li>Short rest se necessario</li>
+                            <li>Setup cliffhanger per next session</li>
+                            <li>Quick debrief OOC</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Reward Guidelines</h3>
+                    
+                    <div class="stat-block">
+                        <h4>💰 Tesoro & Rewards</h4>
+                        
+                        <p><strong>Monetario (1880s West):</strong></p>
+                        <table style="width: 100%; margin-top: 10px;">
+                            <thead>
+                                <tr>
+                                    <th>Tipo Incontro</th>
+                                    <th>Reward $</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Minor bounty/job</td>
+                                    <td>$20-50</td>
+                                </tr>
+                                <tr>
+                                    <td>Major bounty</td>
+                                    <td>$100-300</td>
+                                </tr>
+                                <tr>
+                                    <td>Boss creature hunt</td>
+                                    <td>$200-500</td>
+                                </tr>
+                                <tr>
+                                    <td>Salvare città</td>
+                                    <td>$500-1000+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <p style="margin-top: 15px;"><strong>Reference Costi:</strong></p>
+                        <ul>
+                            <li>Pasto taverna: $0.50</li>
+                            <li>Stanza hotel/notte: $1-2</li>
+                            <li>Cavallo: $50-150</li>
+                            <li>Revolver: $15</li>
+                            <li>Rifle: $25</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- FOOTER -->
+                <section class="section" style="margin-top: 60px; padding-top: 40px; border-top: 3px solid var(--rust);">
+                    <h2>📚 Riferimenti & Credits</h2>
+                    
+                    <div class="info-box">
+                        <h3>Sistema Base</h3>
+                        <p><strong>Daggerheart™</strong> è proprietà di Darrington Press LLC.</p>
+                        <p>Questo prodotto è compatibile con Daggerheart™ SRD 1.0 e segue tutte le 
+                        linee guida licensing.</p>
+                        
+                        <h3 style="margin-top: 20px;">Modifiche Weird West</h3>
+                        <p>Sistema <strong>Tenuta Mentale</strong>, regole firearms, e ambientazione sono creazioni 
+                        originali di questo prodotto.</p>
+                        
+                        <h3 style="margin-top: 20px;">Designer</h3>
+                        <p>Riccardo (Il Gioco in Tavolo) & Claude (Anthropic)</p>
+                        
+                        <h3 style="margin-top: 20px;">Version</h3>
+                        <p>Weird West Rules v1.0 - Novembre 2024</p>
+                    </div>
+                    
+                    <div class="tip-box" style="text-align: center; margin-top: 30px;">
+                        <p style="font-size: 1.3em; font-weight: bold; color: var(--blood-red);">
+                            🔫 May Your Aim Be True 🌊
+                        </p>
+                        <p style="font-size: 1.3em; font-weight: bold; color: var(--ocean-blue);">
+                            🧠 May Your Sanity Hold 👁️
+                        </p>
+                        <p style="font-size: 1.5em; margin-top: 20px;">
+                            <strong>The Weird West Awaits</strong>
+                        </p>
+                    </div>
+                </section>
+                
+            </main>
+        </div>
+    </div>
+</body>
+</html>
