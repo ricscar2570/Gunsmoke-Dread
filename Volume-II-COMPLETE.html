@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volume II: Where the Ocean Meets the Dust - Gunsmoke & Dread</title>
+    <title>Volume II: Dove l'Oceano Incontra la Polvere - Gunsmoke & Dread</title>
     <link rel="stylesheet" href="assets/css/main-styles.css">
     <link rel="stylesheet" href="assets/css/volume-themes.css">
     <style media="print">
@@ -21,14 +21,14 @@
     <div class="container">
         <div class="hero" style="background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--teal-dark) 100%);">
             <h1 style="font-size: 4em;">🌊 VOLUME II</h1>
-            <h2 style="color: var(--seafoam); font-size: 2.5em;">Where the Ocean Meets the Dust</h2>
+            <h2 style="color: var(--seafoam); font-size: 2.5em;">Dove l'Oceano Incontra la Polvere</h2>
             <p class="subtitle">Scenario Sequel per Daggerheart™ | Livello 3-5</p>
         </div>
         
         <div class="sidebar-layout">
             <aside class="sidebar">
                 <h2>Indice</h2>
-                <ul class="nav-links"><li><a href="#overview">Overview</a></li><li><a href="#setup">Setup</a></li><li><a href="#atto1">Atto I</a></li><li><a href="#atto2">Atto II</a></li><li><a href="#atto3">Atto III</a></li><li><a href="#handout">Handouts</a></li></ul>
+                <ul class="nav-links"><li><a href="#overview">Panoramica</a></li><li><a href="#setup">Preparazione</a></li><li><a href="#atto1">Atto I</a></li><li><a href="#atto2">Atto II (Dungeon)</a></li><li><a href="#atto3">Atto III</a></li><li><a href="#handout">Dispense</a></li></ul>
             </aside>
             
             <main class="content">
@@ -37,7 +37,7 @@
                     <p class="large">
                         Sei mesi sono passati dagli orrori di Silver Hollow, ma le cicatrici mentali non sono guarite. Un nuovo telegramma vi strappa alla vostra inquieta quotidianità: un team di geometri della ferrovia è svanito nel nulla a <strong>Dry Eye</strong>, in Arizona. Lì, nel cuore del deserto più arido, è stato scoperto un pozzo impossibile che scende verso un oceano che non dovrebbe esistere da milioni di anni.
                     </p>
-                    <div class="warning-box"><p><strong>Content Warning:</strong> Claustrofobia, Body Horror Intenso, Annegamento.</p></div>
+                    <div class="warning-box"><p><strong>Avviso Contenuti:</strong> Claustrofobia, Body Horror Intenso, Annegamento.</p></div>
                 </section>
                 
                 <section id="setup" class="section">
@@ -60,7 +60,7 @@
                     <div class="stat-block">
                         <h4>PETER WALSH (L'Ibrido)</h4>
                         <p>Quello che avete davanti era un geometra. Ora è una parodia oscena dell'umanità. La sua pelle è viscida e verde-grigia, le dita sono unite da membrane, e sul collo pulsano branchie sanguinanti.</p>
-                        <p><strong>HP:</strong> 35 | <strong>Attacco:</strong> +6 | <strong>Speciale:</strong> Rigenerazione 5 HP (se tocca acqua).</p>
+                        <p><strong>PF:</strong> 35 | <strong>Attacco:</strong> +6 | <strong>Speciale:</strong> Rigenerazione 5 PF (se tocca acqua).</p>
                     </div>
                 </section>
                 
@@ -85,9 +85,8 @@
 [NIDO]   [SALA ECHI]
 (Combat)   (Lore)
  |         |
- +----+----+
-      |
-      v
+      [CROLLO]
+         |
  [CITTÀ SOMMERSA]
       |
  +----+----+
@@ -105,18 +104,34 @@
                     <p>Emergete dall'acqua gelida in un tunnel orizzontale. L'acqua vi arriva alla vita. Le pareti sono decorate con bassorilievi di creature marine impossibili. La corrente vi spinge verso l'interno, invitandovi a scendere.</p>
 
                     <h4>AREA B: La Sala degli Echi</h4>
-                    <p>Una caverna naturale immensa. Ogni suono qui viene amplificato e distorto, trasformandosi in parole in una lingua sconosciuta che sembrano sussurrare i vostri nomi.</p>
+                    <p>Una caverna naturale immensa, con un'acustica aliena. Ogni suono qui viene amplificato e distorto, trasformandosi in parole in una lingua sconosciuta che sembrano sussurrare i vostri nomi. Al centro, un obelisco nero emerge dall'acqua.</p>
+                    
+                    <h4>AREA C: Il Labirinto Crollato</h4>
+                    <p>Uscendo dalla Sala, entrate in una sezione di tunnel parzialmente crollata. Macerie instabili bloccano la via principale.</p>
+                    <div class="stat-block">
+                        <p><strong>PUZZLE AMBIENTALE:</strong> I PG devono scegliere un passaggio:</p>
+                        <ul>
+                            <li><strong>Strettoia:</strong> Fessura di 50cm. Richiede prova di Agilità CD 13 o si rimane incastrati (panico).</li>
+                            <li><strong>Tunnel Instabile:</strong> Ampio ma pericolante. Richiede movimento silenzioso. Fallire causa un crollo (3d6 danni).</li>
+                            <li><strong>Via Sommersa:</strong> Tunnel completamente allagato. Richiede apnea prolungata (Costituzione CD 14).</li>
+                        </ul>
+                    </div>
 
                     <h4>AREA D: Il Nido degli Ibridi</h4>
                     <div class="stat-block">
                         <p>Una camera circolare coperta di muco bioluminescente. Uova traslucide pulsano sulle pareti come cuori malati. Qui trovate i resti dei geometri scomparsi... o ciò che sono diventati.</p>
-                        <p><strong>NEMICI: 3x IBRIDI AVANZATI</strong> (HP 45, Rigenerazione 8).</p>
+                        <p><strong>NEMICI: 3x IBRIDI AVANZATI (Veterani)</strong></p>
+                        <p><strong>PF:</strong> 45 ciascuno | <strong>Armatura:</strong> 3 | <strong>Rigenerazione:</strong> 8 PF</p>
+                        <p><strong>Tattica:</strong> Tattiche di Branco. Cercano di trascinare i PG sott'acqua per affogarli.</p>
                     </div>
+
+                    <h4>AREA E: Il Portale della Città</h4>
+                    <p>Il tunnel termina bruscamente davanti a un arco monumentale, alto venti metri, scolpito nella roccia viva con forme non euclidee. Oltre il portale, una luce verdastra illumina uno spazio impossibile. Il rumore dell'oceano qui è assordante.</p>
 
                     <h3>🏛️ Scena 6: La Città Sommersa</h3>
                     <div class="horror-box">
                         <h4>👁️ LA RIVELAZIONE</h4>
-                        <p style="font-style: italic;">Il tunnel si apre su uno spazio ciclopico. Davanti a voi, illuminata da una luce spettrale, si estende una metropoli aliena. Torri di ossidiana, ponti sospesi su abissi d'acqua, geometrie non euclidee che sfidano la logica umana. Questa città esisteva prima che l'umanità nascesse.</p>
+                        <p style="font-style: italic;">Emergete in uno spazio ciclopico. Davanti a voi, illuminata da una luce spettrale, si estende una metropoli aliena. Torri di ossidiana, ponti sospesi su abissi d'acqua, geometrie che sfidano la logica umana. Questa città esisteva prima che l'umanità nascesse.</p>
                     </div>
                 </section>
                 
@@ -128,34 +143,34 @@
                     </div>
 
                     <div class="stat-block" style="border: 3px solid var(--blood-red);">
-                        <h3 style="color: var(--blood-red);">🐙 IL GUARDIANO (Puzzle Boss)</h3>
+                        <h3 style="color: var(--blood-red);">🐙 IL GUARDIANO (Boss Enigma)</h3>
                         <p><strong>Descrizione:</strong> Un orrore cefalopode alto 30 metri. Tentacoli, scaglie nere, occhi che riflettono costellazioni sconosciute.</p>
                         
-                        <p><strong>HP:</strong> 140 | <strong>AC:</strong> 5 | <strong>Attacchi:</strong> 3 per turno (+10 colpire)</p>
+                        <p><strong>PF:</strong> 140 | <strong>Armatura:</strong> 5 | <strong>Attacchi:</strong> 3 per turno (+10 colpire)</p>
                         
                         <div class="info-box" style="background: white; border: 1px solid black; margin: 10px 0;">
                             <h4>🧩 MECCANICA: I 4 PILASTRI</h4>
-                            <p>Il Guardiano recupera <strong>20 HP/turno</strong> finché i pilastri sono attivi.</p>
-                            <p><strong>Obiettivo:</strong> Distruggere i Pilastri (HP 15). Ogni pilastro rotto infligge <strong>10 Danni</strong> al boss e ferma la cura.</p>
+                            <p>Il Guardiano recupera <strong>20 PF/turno</strong> finché i pilastri sono attivi.</p>
+                            <p><strong>Obiettivo:</strong> Distruggere i Pilastri (PF 15). Ogni pilastro rotto infligge <strong>10 Danni</strong> al boss e ferma la cura.</p>
                         </div>
                         <p><strong>Dinamite:</strong> Infligge DANNO MASSIMO (24) a Boss e Pilastri.</p>
                     </div>
                 </section>
                 
                 <section id="epilogo" class="section">
-                    <h2>🎬 EPILOGHI</h2>
-                    <div class="stat-block"><h4>A: SIGILLATO</h4><p>Fate crollare l'ingresso. Il Guardiano è intrappolato. Vittoria amara.</p></div>
-                    <div class="stat-block"><h4>B: UCCISIONE</h4><p>L'entità si dissolve in liquido nero. La città muore. Siete leggende spezzate.</p></div>
-                    <div class="stat-block"><h4>C: SACRIFICIO</h4><p>Un PG diventa il sigillo vivente. Morte eroica permanente.</p></div>
+                    <h2>🎬 GLI EPILOGHI</h2>
+                    <div class="stat-block"><h4>A: IL SIGILLO</h4><p>Fate crollare l'ingresso. Il Guardiano è intrappolato. Vittoria amara.</p></div>
+                    <div class="stat-block"><h4>B: L'UCCISIONE</h4><p>L'entità si dissolve in liquido nero. La città muore. Siete leggende spezzate.</p></div>
+                    <div class="stat-block"><h4>C: IL SACRIFICIO</h4><p>Un PG diventa il sigillo vivente. Morte eroica.</p></div>
                 </section>
 
                 <section id="handout" class="section no-print">
-                    <h2>📄 DOCUMENTI (Stampabili)</h2>
+                    <h2>📄 DISPENSE (Stampabili)</h2>
                     <script>function printDiv(id){var w=window.open('','','width=600,height=400');w.document.write('<html><body style="font-family:Courier New;padding:40px;">'+document.getElementById(id).innerHTML+'</body></html>');w.document.close();w.print();w.close();}</script>
                     
-                    <div class="stat-block" id="h1"><div style="font-family:'Courier New'; border:1px solid #ccc; padding:20px; background:#fdfbf7;"><h3>WESTERN UNION</h3><p>STOP NECESSITO ASSISTENZA STOP GEOMETRI SCOMPARSI STOP TROVATO POZZO ANTICO STOP STRANI SUONI STOP</p><p>- C. BRANDT</p></div><button onclick="printDiv('h1')">🖨️ Stampa</button></div>
+                    <div class="stat-block" id="h1"><div style="font-family:'Courier New'; border:1px solid #ccc; padding:20px; background:#fdfbf7;"><h3>TELEGRAFO</h3><p>STOP NECESSITO ASSISTENZA STOP GEOMETRI SCOMPARSI STOP TROVATO POZZO ANTICO STOP STRANI SUONI STOP</p><p>- C. BRANDT</p></div><button onclick="printDiv('h1')">🖨️ Stampa</button></div>
                     
-                    <div class="stat-block" id="h2" style="margin-top:20px;"><div style="font-family:'Georgia'; font-style:italic; border:1px dashed #8b4513; padding:20px; background:#fffef0;"><h3>DIARIO DI TOMMY</h3><p>12 Marzo: Trovato pozzo incredibile. Pietra nera.<br>13 Marzo: Incisioni si muovono.<br>15 Marzo: Sento l'oceano. Scendiamo stanotte. DIO È MORTO QUI.</p></div><button onclick="printDiv('h2')">🖨️ Stampa</button></div>
+                    <div class="stat-block" id="h2" style="margin-top:20px;"><div style="font-family:'Georgia'; font-style:italic; border:1px dashed #8b4513; padding:20px; background:#fffef0;"><h3>DIARIO DI TOMMY</h3><p>12 Marzo: Trovato pozzo incredibile.<br>15 Marzo: Sento l'oceano. Scendiamo stanotte. DIO È MORTO QUI.</p></div><button onclick="printDiv('h2')">🖨️ Stampa</button></div>
                 </section>
             </main>
         </div>
