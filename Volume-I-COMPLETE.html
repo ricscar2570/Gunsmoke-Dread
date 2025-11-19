@@ -4,21 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volume I: Shadows in the Desert - Gunsmoke & Dread</title>
-    
     <link rel="stylesheet" href="assets/css/main-styles.css">
     <link rel="stylesheet" href="assets/css/volume-themes.css">
-
     <style media="print">
         @page { size: A4; margin: 1.5cm; }
-        body { background: white !important; color: black !important; font-size: 10pt; line-height: 1.4; }
+        body { background: white !important; color: black !important; font-size: 10pt; line-height: 1.5; font-family: 'Georgia', serif; }
         .container { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
-        .sidebar, .nav-links, .hero-stats, .no-print, .print-button-char { display: none !important; }
+        .sidebar, .nav-links, .hero-stats, .no-print { display: none !important; }
         .content { column-count: 2; column-gap: 1cm; column-rule: 1px solid #ccc; width: 100% !important; }
         h1, h2, .hero, .footer { column-span: all; text-align: center; page-break-after: avoid; }
-        .stat-block, .info-box, .warning-box, .horror-box, .tip-box, .card, table { 
+        .stat-block, .info-box, .warning-box, .horror-box, .tip-box, .card { 
             break-inside: avoid; page-break-inside: avoid; 
             border: 2px solid #000 !important; background-color: #f5f5f5 !important; 
-            color: black !important; margin-bottom: 15px; 
+            color: black !important; margin-bottom: 15px; text-align: justify; 
         }
         a { text-decoration: underline; color: black !important; }
         pre { white-space: pre-wrap; word-wrap: break-word; font-size: 8pt; }
@@ -30,455 +28,165 @@
         <div class="hero" style="background: linear-gradient(135deg, var(--rust) 0%, var(--night-black) 100%);">
             <h1 style="font-size: 4em;">🏜️ VOLUME I</h1>
             <p class="subtitle">SHADOWS IN THE DESERT</p>
-            <p class="tagline">
-                Silver Hollow, New Mexico • Settembre 1885 • Mystery Horror
-            </p>
-            <div class="hero-stats">
-                <span><strong>Durata:</strong> 10-12 ore</span>
-                <span><strong>Livelli:</strong> 2 → 3</span>
-                <span><strong>Giocatori:</strong> 3-5</span>
-                <span><strong>Difficoltà:</strong> Moderata</span>
-            </div>
+            <div class="hero-stats"><span>Livelli: 2 → 3</span><span>Giocatori: 3-5</span></div>
         </div>
         
         <div class="sidebar-layout">
-            
             <aside class="sidebar">
-                <h2>📋 Indice</h2>
-                <ul class="nav-links">
-                    <li><a href="#intro">Introduzione</a></li>
-                    <li><a href="#setup">Setup & Hooks</a></li>
-                    <li><a href="#atto1">Atto I: Arrivo</a></li>
-                    <li><a href="#atto2">Atto II: Miniera</a></li>
-                    <li><a href="#atto3">Atto III: Tempio</a></li>
-                    <li><a href="#epilogo">Epiloghi</a></li>
-                    <li><a href="#npcs">NPCs & Mostri</a></li>
-                </ul>
-                <div class="sidebar-card">
-                    <h3>⚠️ Content Warning</h3>
-                    <p>Body horror, culti, sacrifici umani, orrore cosmico</p>
-                </div>
+                <h2>Indice</h2>
+                <ul class="nav-links"><li><a href="#intro">Intro</a></li><li><a href="#atto1">Atto I</a></li><li><a href="#atto2">Atto II</a></li><li><a href="#atto3">Atto III</a></li></ul>
             </aside>
             
             <main class="content">
-                
                 <section id="intro" class="section">
                     <h2>📖 Introduzione</h2>
-                    
                     <p class="large">
-                        <strong>Silver Hollow</strong> sembrava cittadina mineraria come tante altre nel New Mexico 
-                        del 1885. Ma quando la miniera d'argento si esaurì, i cittadini scoprirono qualcosa di 
-                        più prezioso - e molto più pericoloso - nelle profondità della terra.
+                        A un primo sguardo distratto, <strong>Silver Hollow</strong> non appariva diversa dalle centinaia di insediamenti precari sorti come funghi nel New Mexico del dopoguerra. Tuttavia, quando il filone d'argento si esaurì con brutale improvvisazione, i minatori scavarono troppo a fondo, spinti dalla disperazione. Non trovarono altro metallo; trovarono invece un passaggio verso un'oscurità dimenticata, qualcosa che attendeva pazientemente da millenni.
                     </p>
-                    
                     <div class="info-box">
-                        <h3>🎯 Overview Scenario</h3>
-                        <ul style="font-size: 1.05em; line-height: 1.7;">
-                            <li><strong>Location:</strong> Silver Hollow, New Mexico (città mineraria 300 abitanti)</li>
-                            <li><strong>Tempo:</strong> Settembre 1885 (fine estate, caldo torrido)</li>
-                            <li><strong>Hook:</strong> Sceriffo chiede aiuto - cittadini scompaiono, strani culti</li>
-                            <li><strong>Minaccia:</strong> Culto scopre tempio preumano, tenta risvegliare entità</li>
-                            <li><strong>Climax:</strong> Fermare rituale nel tempio sotterraneo</li>
-                            <li><strong>Tone:</strong> Mystery investigation → Horror revelation</li>
+                        <h3>🎯 Panoramica</h3>
+                        <p>I personaggi inizieranno con una semplice indagine su sparizioni locali, per poi essere trascinati in una spirale di follia che culminerà in un tempio preumano.</p>
+                        <ul>
+                            <li><strong>Minaccia:</strong> Un culto locale corrotto da un'entità sotterranea.</li>
+                            <li><strong>Obiettivo:</strong> Fermare il rituale di risveglio prima che la luna sia piena.</li>
                         </ul>
-                    </div>
-                    
-                    <h3>🎭 Struttura in 3 Atti</h3>
-                    
-                    <div class="grid-auto-wide">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">ATTO I: ARRIVO</h3>
-                            </div>
-                            <div class="card-body">
-                                <p><strong>Durata:</strong> 3-4 ore</p>
-                                <p><strong>Focus:</strong> Investigation, social, first clues</p>
-                                <ul>
-                                    <li>Arrivo a Silver Hollow</li>
-                                    <li>Meet sceriffo & NPCs</li>
-                                    <li>Investigation scomparse</li>
-                                    <li>Primo incontro culto (zombi)</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">ATTO II: MINIERA</h3>
-                            </div>
-                            <div class="card-body">
-                                <p><strong>Durata:</strong> 4-5 ore</p>
-                                <p><strong>Focus:</strong> Dungeon crawl, combat, horror</p>
-                                <ul>
-                                    <li>Discesa nella miniera</li>
-                                    <li>Tunnel & trappole</li>
-                                    <li>Cultisti & non-morti</li>
-                                    <li>Discovery: ingresso tempio</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">ATTO III: TEMPIO</h3>
-                            </div>
-                            <div class="card-body">
-                                <p><strong>Durata:</strong> 3-4 ore</p>
-                                <p><strong>Focus:</strong> Boss fight, choice, revelation</p>
-                                <ul>
-                                    <li>Tempio sotterraneo alieno</li>
-                                    <li>Confronto Father Jeremiah</li>
-                                    <li>Fermare/assistere rituale</li>
-                                    <li>4 epiloghi possibili</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="warning-box">
-                        <h3>⚠️ Note per GM</h3>
-                        <p style="font-size: 1.05em;">
-                            <strong>Volume I è "gateway drug"</strong> - introduce players a orrore cosmico 
-                            gradualmente. Inizia come western mystery standard, poi rivela verità terrificante. 
-                            Pacing è critico: buildup lento → revelation devastante.
-                        </p>
-                    </div>
-                </section>
-                
-                <section id="setup" class="section">
-                    <h2>🎣 Setup & Hooks</h2>
-                    
-                    <p class="large">
-                        Come PG arrivano a Silver Hollow? Scegli hook appropriato per gruppo, o lascia ciascun 
-                        player scegliere il proprio.
-                    </p>
-                    
-                    <h3>🔫 HOOK 1: Jack Malone - Bounty Hunter</h3>
-                    <div class="stat-block">
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Hai ricevuto wanted poster da marshal territoriale: <strong>"Jeremiah Stone - Wanted 
-                            for Murder & Heresy - $500 Reward"</strong>. Stone era prete a Silver Hollow. Poi 
-                            impazzì, uccise 3 parrocchiani, fuggì nella miniera. Ultimo avvistamento: 2 settimane fa.
-                        </p>
-                        <p style="margin-top: 10px;"><strong>Motivazione:</strong> $500 è ottimo denaro. E forse... 
-                        salvare qualche anima nel processo.</p>
-                    </div>
-                    
-                    <h3>🙏 HOOK 2: Sarah Blackwood - Called by Church</h3>
-                    <div class="stat-block">
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Lettera da <strong>Vescovo Santa Fe</strong>: "Sister Sarah, abbiamo perso contatto 
-                            con Father Jeremiah a Silver Hollow. Sue ultime lettere... preoccupanti. Parlava di 
-                            'verità antiche' e 'falsi dei'. Investigate discretamente. Se è caduto in eresia, 
-                            riportalo alla fede. Se... oltre redemption... fa ciò che è necessario."
-                        </p>
-                        <p style="margin-top: 10px;"><strong>Motivazione:</strong> Duty alla Chiesa. E curiosità 
-                        - cosa ha scoperto Jeremiah?</p>
-                    </div>
-                    
-                    <h3>🔬 HOOK 3: Doc Wells - Scientific Curiosity</h3>
-                    <div class="stat-block">
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Articolo su <strong>Santa Fe Scientific Journal</strong>: "Strange Geological Formation 
-                            Discovered in Silver Hollow Mine - Ancient Ruins Predating Known Civilizations?" 
-                            L'autore, geologo locale, è scomparso settimana dopo pubblicazione. Le foto mostrano... 
-                            architettura impossibile. Pietra che non corrisponde a nessuna formazione conosciuta.
-                        </p>
-                        <p style="margin-top: 10px;"><strong>Motivazione:</strong> Scientific discovery of lifetime! 
-                        E... dovere verificare se collega è salvo.</p>
-                    </div>
-                    
-                    <h3>🎯 HOOK 4: Universal - Sheriff's Telegram</h3>
-                    <div class="stat-block">
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            <strong>Telegramma urgente da Sheriff Hank Morrison, Silver Hollow:</strong><br>
-                            "NEED HELP STOP 12 CITIZENS MISSING STOP CULT ACTIVITY SUSPECTED STOP LOCALS SCARED 
-                            STOP PAY $100 EACH STOP COME IMMEDIATELY STOP"
-                        </p>
-                        <p style="margin-top: 10px;"><strong>Motivazione:</strong> Denaro, adventure, help people 
-                        in need. Simple ma effective.</p>
                     </div>
                 </section>
                 
                 <section id="atto1" class="section">
-                    <h2>🏜️ ATTO I: ARRIVO A SILVER HOLLOW</h2>
+                    <h2>🏜️ ATTO I: L'ARRIVO</h2>
                     
-                    <p class="large">
-                        PG arrivano in cittadina mineraria decadente. Popolazione nervosa, sceriffo sopraffatto, 
-                        atmosphere tesa. Investigation rivela pattern inquietanti - e primo incontro con orrore.
-                    </p>
-                    
-                    <h3>🎬 Scena 1: Benvenuti a Silver Hollow</h3>
-                    
+                    <h3>🎬 Scena 1: Benvenuti all'Inferno</h3>
                     <div class="horror-box">
-                        <h4>📖 Read Aloud</h4>
-                        <p style="font-size: 1.05em; line-height: 1.8; font-style: italic;">
-                            Stagecoach ti deposita su polverosa Main Street nel tardo pomeriggio. Sole torrido 
-                            batte su edifici di legno sbiaditi. Silver Hollow una volta prosperava - vedi mineshaft 
-                            tower abbandonata sopra collina, saloon con veranda crollante, general store con 
-                            insegna che cigola nel vento.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8; font-style: italic;">
-                            Ma qualcosa è... sbagliato. Strada è troppo deserta per ora del giorno. Shutters chiusi. 
-                            Nessun bambino gioca. Solo silenzio, eccetto vento che trasporta odore di... cosa? 
-                            Decomposizione? Zolfo? Non sei sicuro.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8; font-style: italic;">
-                            Piccola chiesa wooden sulla collina. Campanile danneggiato - campana pende storta. 
-                            E davanti, piantata nel terreno: <strong>croce rovesciata</strong>, bruciata nel legno.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.1em; font-weight: bold;">
-                            Benvenuti a Silver Hollow. Cosa fate?
+                        <h4>📖 Da Leggere ai Giocatori</h4>
+                        <p style="font-style: italic;">
+                            La diligenza frena con un lamento metallico, depositandovi in una nuvola di polvere ocra sulla Main Street. Il sole del tardo pomeriggio martella le facciate scolorite degli edifici, ma non c'è anima viva a cercare riparo sotto i portici. Silver Hollow è innaturalmente silenziosa. Le imposte sono sbarrate dall'interno. Nessun cane abbaia, nessun bambino gioca. L'unico suono è il cigolio ritmico dell'insegna del Saloon, mossa da un vento caldo che porta con sé un odore dolciastro e nauseante: zolfo misto a carne in decomposizione. Sulla collina, davanti alla chiesa, si staglia una sagoma nera: una croce di legno, piantata al contrario e bruciata.
                         </p>
                     </div>
                     
-                    <div class="info-box">
-                        <h4>🗺️ SILVER HOLLOW - Key Locations</h4>
-                        <ol style="font-size: 1.05em; line-height: 1.7;">
-                            <li><strong>Sheriff's Office:</strong> Centro operazioni, meet Hank Morrison</li>
-                            <li><strong>Silver Lady Saloon:</strong> Info hub, drunk miners, barista nervoso</li>
-                            <li><strong>General Store:</strong> Supplies, proprietaria sa rumors</li>
-                            <li><strong>Church:</strong> Danneggiata, simboli strani, blood stains</li>
-                            <li><strong>Abandoned Mine:</strong> Ingresso principale dungeon</li>
-                        </ol>
-                    </div>
-                    
-                    <h4>👮 INCONTRO: Sheriff Hank Morrison</h4>
-                    
+                    <h4>👮 INCONTRO: Lo Sceriffo Hank Morrison</h4>
                     <div class="stat-block">
-                        <h4>HANK MORRISON - Sceriffo Sopraffatto</h4>
-                        <p><strong>Età:</strong> 52 • <strong>Aspetto:</strong> Stempiato, baffi grigi, occhiaie 
-                        profonde, mani tremanti</p>
-                        <p style="margin-top: 10px;"><strong>Personalità:</strong> Era competente. Ma eventi recenti 
-                        lo hanno broken. Cerca disperatamente aiuto ma shame ammettere che situation è beyond him.</p>
-                        <p style="margin-top: 15px;"><strong>Stats (se combat):</strong> HP 28, Armatura 1, 
-                        Revolver +5 (2d6+2)</p>
+                        <p><strong>HANK MORRISON</strong> (52 anni, visibilmente denutrito e tremante)</p>
+                        <p>Un uomo che un tempo doveva riempire la sua uniforme con autorità, ora ridotto a un fascio di nervi. Le sue mani tremano mentre cerca di accendersi una sigaretta. I suoi occhi sono cerchiati di rosso, segnati da notti insonni. Sa cosa sta succedendo, ma il terrore lo ha paralizzato. Si rifiuta categoricamente di avvicinarsi alla miniera dopo il tramonto.</p>
+                        <p><em>"Voi non capite... quelle cose che graffiano la notte... non sono uomini. Non più."</em></p>
                     </div>
                     
-                    <h3>🔍 Scena 2: Investigation - Gathering Clues</h3>
+                    <h3>🔍 Scena 2: Indagine al Crepuscolo</h3>
                     
-                    <p style="font-size: 1.05em;">
-                        PG hanno 3-4 ore daylight per investigate prima nightfall. Possono visitare locations, 
-                        interrogare NPCs, examine evidence. Ogni scelta rivela info diversa.
-                    </p>
-
                     <div class="warning-box" style="border: 3px solid var(--blood-red);">
-                        <h3>⏳ LA TIMELINE DELL'APOCALISSE (Se i PG non agiscono)</h3>
-                        <p>Il mondo non aspetta i giocatori. Se i PG esitano, ignorano la miniera o passano troppo tempo a pianificare, questi eventi accadono:</p>
-                        
+                        <h3>⏳ LA TIMELINE DELL'APOCALISSE</h3>
+                        <p>Il tempo non è un'astrazione. Se i giocatori esitano:</p>
                         <ul style="margin-top: 10px;">
-                            <li><strong>TRAMONTO 1 (Stasera):</strong> Le tracce verso la miniera diventano un'autostrada di impronte. 3 Cittadini vengono rapiti dalle loro case (incluso un NPC a cui i PG tengono).</li>
-                            <li><strong>TRAMONTO 2:</strong> Una nebbia verde copre Silver Hollow. I morti nel cimitero locale iniziano a scavare per uscire. Lo Sceriffo Hank scompare nel nulla.</li>
-                            <li><strong>TRAMONTO 3 (Game Over Soft):</strong> L'assedio. 20+ Zombie e Cultisti attaccano il luogo dove i PG si nascondono. L'obiettivo non è più "investigare", ma "sopravvivere all'orda".</li>
+                            <li><strong>TRAMONTO 1:</strong> Le tracce verso la miniera diventano un sentiero battuto di impronte trascinate. Tre cittadini vengono strappati dalle loro case tra le urla.</li>
+                            <li><strong>TRAMONTO 2:</strong> Una nebbia verdastra inghiotte la città. I morti del cimitero locale scavano per uscire dalla terra consacrata. Lo Sceriffo scompare lasciando solo il distintivo insanguinato.</li>
+                            <li><strong>TRAMONTO 3:</strong> L'assedio finale. Non c'è più nulla da investigare; ora si tratta solo di sopravvivere all'orda che scende dalla montagna.</li>
                         </ul>
-                        <p style="font-style: italic; margin-top: 10px;">
-                            <strong>Nota GM:</strong> Comunica questi cambiamenti visivamente (cielo che cambia colore, urla in lontananza) per mettere pressione senza dire "dovete andare lì".
-                        </p>
                     </div>
-                    
-                    <h4>🍺 LOCATION A: Silver Lady Saloon</h4>
-                    <div class="stat-block">
-                        <p><strong>NPCs Presenti:</strong> Frank (Barista), Old Pete (Drunk), Maria (Prostituta).</p>
-                        <p><strong>Check Sociale CD 12:</strong> Rivela che Jeremiah teneva rituali segreti in miniera.</p>
-                    </div>
-                    
-                    <h4>⛪ LOCATION B: Damaged Church</h4>
+
+                    <h4>I Luoghi Chiave</h4>
+                    <p><strong>Il Saloon "Silver Lady":</strong> Frank, il barista, asciuga nervosamente lo stesso bicchiere da ore. Rivela sottovoce che Jeremiah è "cambiato" dopo aver trovato una caverna segreta. <em>"Parlava lingue che facevano sanguinare le orecchie."</em></p>
+                    <p><strong>La Chiesa Sconsacrata:</strong> L'interno è devastato. Panche rovesciate come da una furia cieca. Sotto un asse del pavimento, trovate il diario di Jeremiah: pagine fitte di scritte deliranti su "Verità Sepolte" e "Il Serpente che Attende".</p>
+
+                    <h3>🌙 Scena 3: Il Primo Orrore</h3>
                     <div class="horror-box">
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Chiesa è devastata dall'interno. Panche rovesciate. Altare coperto di simboli spiraliformi 
-                            scolpiti. Blood stains sul pavimento.
-                        </p>
-                        <p style="margin-top: 15px;"><strong>Percezione CD 13:</strong> Trovi diary di Jeremiah.</p>
-                    </div>
-                    
-                    <h4>⛏️ LOCATION C: Mine Entrance</h4>
-                    <div class="stat-block">
-                        <p>Mineshaft entrance sulla collina. Tracks portano dentro buio.</p>
-                        <p><strong>Percezione CD 11:</strong> Footprints fresche - 6-8 persone entered last night.</p>
-                    </div>
-                    
-                    <h3>🌙 Scena 3: Primo Orrore - Nightfall</h3>
-                    
-                    <div class="horror-box">
-                        <h4>📖 Read Aloud - Tramonto</h4>
-                        <p style="font-size: 1.05em; line-height: 1.8; font-style: italic;">
-                            Sole tramonta. Temperature crolla. Silver Hollow diventa città fantasma. Sentite... silenzio totale. Poi, dalla direzione miniera, arriva <strong>suono</strong>. Gutturale. Canto alieno. E passi strascicati.
+                        <p style="font-style: italic;">
+                            Il sole sparisce dietro le montagne come una moneta in un pozzo, e la temperatura crolla. Dalla direzione della miniera, il vento porta un canto gutturale, profondo, che risuona nelle ossa. Poi, emergendo dall'ombra, vedete delle figure. Barcollano. Trascinano i piedi. I loro volti sono familiari, ma gli occhi sono vuoti e sulla fronte di ognuno è inciso a vivo un simbolo a spirale.
                         </p>
                     </div>
-                    
-                    <h4>👹 COMBATTIMENTO: Zombie Horde</h4>
-                    
                     <div class="stat-block">
-                        <h4>ZOMBIES (4x per party size 4)</h4>
-                        <p><strong>Stats:</strong></p>
-                        <ul>
-                            <li>HP: 22 ciascuno</li>
-                            <li>Armatura: 0</li>
-                            <li>Velocità: 6m (lenti ma inesorabili)</li>
-                            <li>Attacco Slam: +4, 1d8+2 contundenti</li>
-                            <li>Attacco Morso: +4, 1d6+2 perforanti + malattia</li>
-                        </ul>
-                        <p><strong>Speciale:</strong> Inesorabile (non rallentano mai).</p>
+                        <h4>L'ORDA DI ZOMBIE (4x)</h4>
+                        <p><strong>HP:</strong> 22 | <strong>Attacco:</strong> Schianto +4 (1d8+2)</p>
+                        <p><strong>Speciale:</strong> <em>Inesorabili.</em> Non si fermano, non provano dolore, non hanno paura. Solo un colpo alla testa (Critico) li abbatte all'istante.</p>
                     </div>
                 </section>
                 
                 <section id="atto2" class="section">
-                    <h2>⛏️ ATTO II: LA MINIERA MALEDETTA</h2>
-                    
-                    <p class="large">
-                        PG scendono nella miniera Silver Hollow. Quello che trovano è più di semplice dungeon.
-                    </p>
+                    <h2>⛏️ ATTO II: NELLE VISCERE DELLA TERRA</h2>
                     
                     <div class="info-box" style="background: #fafafa; border: 2px solid #333;">
-                        <h3>🗺️ MAPPA SCHEMATICA: LA MINIERA</h3>
-                        <pre style="font-family: 'Courier New', monospace; font-weight: bold; line-height: 1.2; overflow-x: hidden;">
+                        <h3>🗺️ MAPPA SCHEMATICA</h3>
+                        <pre style="font-family: 'Courier New', monospace; font-weight: bold; font-size: 0.8em; overflow-x: hidden;">
  [INGRESSO MINIERA]
-        |
-        v
- [LIV 1: TUNNEL] --(Trappola Gas)--> [MAGAZZINO CULTISTI]
-        |                                  (Altare)
-        |
-   (Montacarichi)
-        |
-        v
- [LIV 2: PROFONDO] --> [FOSSA COMUNE]
-        |              (Indizi Corpi)
-        v
- [POSTO DI GUARDIA]
- (3 Cultisti)
-        |
-        v
+    |
+    v
+ [LIV 1] --(Trappola Gas)--> [MAGAZZINO]
+    |
+    v
+ [LIV 2] --> [FOSSA COMUNE]
+    |
+    v
+ [GUARDIA CULTISTI]
+    |
+    v
  [LIV 3: PORTALE TEMPIO]
                         </pre>
-                        <p style="font-size: 0.9em; margin-top: 10px;">
-                            <strong>Nota GM:</strong> La struttura è lineare verso il basso, ma i PG possono barricarsi nelle stanze laterali per riposare.
-                        </p>
                     </div>
                     
-                    <h3>🔦 Livello 1: Tunnel Commerciali</h3>
-                    <div class="stat-block">
-                        <h4>AREA 1-B: Storage Chamber</h4>
-                        <p>Camera laterale devastata. Altare improvvisato al centro con sangue fresco e foto dei cittadini.</p>
-                    </div>
-                    
-                    <h3>⚔️ Livello 2: Tunnel Profondi</h3>
-                    <div class="stat-block">
-                        <h4>AREA 2-A: Cultist Guardpost</h4>
-                        <p>3 Cultisti (HP 18) seduti attorno a un fuoco. Fanatici.</p>
-                    </div>
-                    
+                    <h3>🔦 Livello 1: I Tunnel Abbandonati</h3>
+                    <p>L'aria qui è stantia, pesante. Le travi di sostegno gemono sotto il peso della roccia. C'è un odore pungente nell'aria, simile a uova marce.</p>
                     <div class="warning-box">
-                        <h4>💀 TENUTA CHECK MAJOR</h4>
-                        <p>Vedere la Fossa Comune (Area 2-C): Istinto CD 15 o 3 segmenti di Tenuta.</p>
+                        <h4>⚠️ PERICOLO: GAS TOSSICO</h4>
+                        <p>Un check di <strong>Percezione CD 13</strong> rivela il sibilo di una sacca di gas. Se i giocatori accendono una fiamma o sparano un colpo qui: <strong>4d6 Danni da Fuoco</strong> a tutti nell'area.</p>
                     </div>
                     
-                    <h3>🕳️ Livello 3: La Scoperta</h3>
-                    <div class="horror-box">
-                        <p style="font-size: 1.05em; line-height: 1.8; font-style: italic;">
-                            Tunnel improvvisamente... changes. Non è più mining tunnel. Walls sono smooth black stone. Carved con simboli che fanno male agli occhi.
-                        </p>
+                    <div class="stat-block">
+                        <h4>AREA 1-B: Il Magazzino Profanato</h4>
+                        <p>Quella che era una stanza per gli attrezzi è diventata un mattatoio rituale. Al centro, un altare di casse accatastate gronda sangue fresco. Le foto dei cittadini scomparsi sono inchiodate al legno, ognuna segnata con una "X" nera.</p>
+                    </div>
+
+                    <h3>⚔️ Livello 2: Lo Scavo Profondo</h3>
+                    <p>La roccia cambia natura. Non è più pietra grezza, ma ossidiana nera, liscia, lavorata da mani che non erano umane.</p>
+                    
+                    <div class="stat-block">
+                        <h4>AREA 2-A: Il Posto di Guardia</h4>
+                        <p>Tre figure incappucciate siedono attorno a un fuoco che brucia di una fiamma verde innaturale. I <strong>Cultisti (HP 18)</strong> mormorano litanie in una lingua sconosciuta. Sono fanatici: combatteranno fino alla morte per proteggere l'accesso al tempio.</p>
+                    </div>
+                    
+                    <div class="stat-block">
+                        <h4>AREA 2-C: La Fossa Comune</h4>
+                        <p>L'odore qui è insopportabile. Una caverna naturale usata come discarica per i "fallimenti". Corpi deformi, esperimenti di ibridazione andati male, organi rimossi chirurgicamente. <strong>Tenuta CD 15</strong> o si perdono 3 segmenti per la nausea e l'orrore.</p>
                     </div>
                 </section>
                 
                 <section id="atto3" class="section">
                     <h2>🏛️ ATTO III: IL TEMPIO DEL SERPENTE</h2>
                     
-                    <p class="large">
-                        PG entrano nel tempio preumano. Qui affrontano Father Jeremiah trasformato e devono 
-                        fare ultimate choice.
-                    </p>
-                    
-                    <h3>👁️ Scena 1: Dentro il Tempio</h3>
-                    
+                    <h3>👁️ Scena 1: Il Rituale</h3>
                     <div class="horror-box">
-                        <h4>📖 Read Aloud - Ingresso</h4>
-                        <p style="font-size: 1.05em; line-height: 1.8; font-style: italic;">
-                            Varchi doorway e... spazio si apre. Impossibly large. Chamber è cathedral-sized. 
-                            Al center: altar massivo. Attorno: 20-30 cultisti chanting. Nel center: 
-                            <strong>Father Jeremiah</strong>. Ma non è più... umano.
+                        <p style="font-style: italic;">
+                            Varcate l'ultimo portale e il respiro vi muore in gola. Vi trovate in una cattedrale sotterranea vasta quanto una montagna cava. Le pareti pulsano di bioluminescenza verdastra. Al centro, su un altare rialzato circondato da fedeli in trance, c'è Padre Jeremiah. Ma non è più l'uomo del manifesto. La sua pelle è diventata scaglie, le sue braccia si sono allungate e i suoi occhi sono fessure verticali che vi fissano con odio rettile.
                         </p>
                     </div>
                     
                     <div class="stat-block">
-                        <h4>FATHER JEREMIAH TRASFORMATO (Boss Livello 3)</h4>
-                        <p><strong>HP:</strong> 70 | <strong>Armatura:</strong> 3 | <strong>Velocità:</strong> 12m</p>
-                        
-                        <p style="margin-top: 15px;"><strong>Attacchi:</strong></p>
-                        <ul>
-                            <li><strong>Claws:</strong> +7 (2d8+4 taglienti)</li>
-                            <li><strong>Serpent Strike:</strong> +7 (2d10+4 + veleno CD 15)</li>
-                            <li><strong>Staff Slam:</strong> +6 (3d6+3 + push 3m)</li>
-                        </ul>
-                        
-                        <p style="margin-top: 15px; color: var(--blood-red);"><strong>Abilità Speciali:</strong></p>
-                        <ul>
-                            <li><strong>Multiattack:</strong> 2 azioni per turno.</li>
-                            <li><strong>Rigenerazione Empia:</strong> Recupera 8 HP all'inizio di ogni turno.</li>
-                            <li><strong>DEBOLEZZA AL FUOCO:</strong> Se subisce danni da Fuoco (torce, dinamite), la Rigenerazione è disattivata per il turno successivo.</li>
-                            <li><strong>Unholy Presence:</strong> Aura 9m, Svantaggio Tenuta.</li>
-                        </ul>
+                        <h4>FATHER JEREMIAH TRASFORMATO (Boss)</h4>
+                        <p>Un abominio ibrido, veloce e letale.</p>
+                        <p><strong>HP:</strong> 70 | <strong>AC:</strong> 3 | <strong>Attacchi:</strong> Artigli +7, Morso +7 (Veleno)</p>
+                        <p style="color: var(--blood-red);"><strong>Abilità Chiave:</strong> Rigenerazione 8 HP/turno. <strong>Debolezza:</strong> Il fuoco cauterizza le sue ferite. Se colpito da danni da Fuoco, la rigenerazione si ferma.</p>
                     </div>
                     
-                    <h3>⚔️ Scena 2: Tre Opzioni</h3>
-                    <div class="grid-auto-wide">
-                        <div class="card">
-                            <div class="card-header"><h3 class="card-title">1. COMBAT</h3></div>
-                            <div class="card-body"><p>Attack Jeremiah direttamente. Boss fight.</p></div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header"><h3 class="card-title">2. SABOTAGGIO</h3></div>
-                            <div class="card-body"><p>Collapse tempio con explosives. Ingegneria CD 16.</p></div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header"><h3 class="card-title">3. JOIN</h3></div>
-                            <div class="card-body"><p>Join rituale volontariamente. Bad Ending.</p></div>
-                        </div>
-                    </div>
+                    <h3>Scena 2: La Scelta Finale</h3>
+                    <p>Il rituale è al culmine. I giocatori devono agire immediatamente:</p>
+                    <ul>
+                        <li><strong>Combattere:</strong> Affrontare la bestia in uno scontro diretto.</li>
+                        <li><strong>Sabotare:</strong> Piazzare la dinamite sui pilastri portanti (Ingegneria CD 16) per seppellire tutto.</li>
+                    </ul>
                 </section>
                 
                 <section id="epilogo" class="section">
-                    <h2>🎬 EPILOGHI (4 Finali)</h2>
-                    
+                    <h2>🎬 EPILOGHI</h2>
                     <div class="stat-block">
-                        <h4>📜 A: VITTORIA EROICA</h4>
-                        <p><strong>Trigger:</strong> Sconfiggi Jeremiah in combat</p>
-                        <p>Silver Hollow saved. Entity torna dormiente. Reward: 1500 XP.</p>
+                        <h4>A: VITTORIA EROICA</h4>
+                        <p>Jeremiah cade urlando. Il culto si disperde. Silver Hollow è salva, ma nei vostri sogni vedrete sempre quell'altare. (1500 XP)</p>
                     </div>
-                    
                     <div class="stat-block">
-                        <h4>📜 B: SEPOLTO MA NON MORTO</h4>
-                        <p><strong>Trigger:</strong> Collapse tempio con sabotaggio</p>
-                        <p>Entity trapped ma alive. Hook per sequel. Reward: 1200 XP.</p>
-                    </div>
-                    
-                    <div class="stat-block">
-                        <h4>📜 C: CORRUZIONE</h4>
-                        <p><strong>Trigger:</strong> Join rituale o TPK</p>
-                        <p>Bad ending. Campaign over. Reward: 0 XP.</p>
-                    </div>
-                    
-                    <div class="stat-block">
-                        <h4>📜 D: SACRIFICIO EROICO</h4>
-                        <p><strong>Trigger:</strong> 1 PG sacrifica se stesso</p>
-                        <p>Ultimate heroism. Tempio destroyed. Reward: 1800 XP + Honor bonus.</p>
+                        <h4>B: SEPOLTI VIVI</h4>
+                        <p>L'esplosione fa collassare la montagna. Fuggite per un soffio mentre tonnellate di roccia sigillano l'orrore. L'entità non è morta, solo intrappolata. (1200 XP)</p>
                     </div>
                 </section>
-                
-                <div style="background: linear-gradient(135deg, var(--rust) 0%, var(--night-black) 100%); 
-                    color: white; padding: 60px 40px; margin-top: 60px; text-align: center;">
-                    <h2 style="color: white; font-size: 2.5em;">✅ VOLUME I COMPLETO!</h2>
-                    <p style="font-size: 1.2em; margin-top: 40px;">
-                        🏜️ Pronto per Silver Hollow! 🏜️
-                    </p>
-                </div>
-                
             </main>
         </div>
-        
-        <div class="footer">
-            <p><strong>Volume I: Shadows in the Desert</strong> - Gunsmoke & Dread Collection</p>
-        </div>
-        
+        <div class="footer"><p>Volume I - Gunsmoke & Dread</p></div>
     </div>
 </body>
 </html>
