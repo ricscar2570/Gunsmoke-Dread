@@ -5,14 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volume II: Where the Ocean Meets the Dust - Gunsmoke & Dread</title>
     
-    <!-- External Stylesheets -->
     <link rel="stylesheet" href="assets/css/main-styles.css">
     <link rel="stylesheet" href="assets/css/volume-themes.css">
+
+    <style media="print">
+        @page { size: A4; margin: 1.5cm; }
+        body { background: white !important; color: black !important; font-size: 10pt; line-height: 1.4; }
+        .container { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
+        .sidebar, .nav-links, .no-print, button { display: none !important; }
+        .content { column-count: 2; column-gap: 1cm; column-rule: 1px solid #ccc; width: 100% !important; }
+        h1, h2, .hero, .footer { column-span: all; text-align: center; page-break-after: avoid; }
+        .stat-block, .info-box, .warning-box, .horror-box, .tip-box, .card, table { 
+            break-inside: avoid; page-break-inside: avoid; 
+            border: 2px solid #000 !important; background-color: #f5f5f5 !important; 
+            color: black !important; margin-bottom: 15px; 
+        }
+        a { text-decoration: underline; color: black !important; }
+        pre { white-space: pre-wrap; word-wrap: break-word; font-size: 8pt; }
+    </style>
 </head>
 <body class="theme-ocean">
     <div class="container">
         
-        <!-- Header -->
         <div class="hero" style="background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--teal-dark) 100%); padding: 80px 40px;">
             <h1 style="font-size: 4em; color: white; text-shadow: 3px 3px 6px rgba(0,0,0,0.5);">
                 🌊 VOLUME II
@@ -28,41 +42,24 @@
             </p>
         </div>
         
-        <!-- Sidebar + Content Layout -->
         <div class="sidebar-layout">
             
-            <!-- Sidebar Navigation -->
             <aside class="sidebar">
                 <h2>📋 Indice</h2>
                 <ul class="nav-links">
                     <li><a href="#overview">Overview</a></li>
                     <li><a href="#setup">Setup & Hook</a></li>
-                    <li><a href="#atto1">Atto I: Dry Eye</a>
-                        <ul>
-                            <li><a href="#arrivo" class="sub-link">Arrivo</a></li>
-                            <li><a href="#investigation" class="sub-link">Investigation</a></li>
-                            <li><a href="#primo-orrore" class="sub-link">Primo Orrore</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#atto2">Atto II: Il Pozzo</a>
-                        <ul>
-                            <li><a href="#discesa" class="sub-link">Discesa</a></li>
-                            <li><a href="#tunnel" class="sub-link">I Tunnel</a></li>
-                            <li><a href="#citta-sommersa" class="sub-link">Città Sommersa</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="#atto1">Atto I: Dry Eye</a></li>
+                    <li><a href="#atto2">Atto II: Il Pozzo</a></li>
                     <li><a href="#atto3">Atto III: Confronto</a></li>
                     <li><a href="#epilogo">Epiloghi Multipli</a></li>
-                    <li><a href="#npc">NPC & Mostri</a></li>
                     <li><a href="#handout">Handouts</a></li>
                     <li><a href="#gm-guide">Guida GM</a></li>
                 </ul>
             </aside>
             
-            <!-- Main Content -->
             <main class="content">
                 
-                <!-- OVERVIEW -->
                 <section id="overview" class="section">
                     <h2>📖 Overview dello Scenario</h2>
                     
@@ -70,10 +67,8 @@
                         <h3>🎯 Informazioni Essenziali</h3>
                         <ul style="font-size: 1.1em; line-height: 1.8;">
                             <li><strong>Titolo:</strong> Where the Ocean Meets the Dust</li>
-                            <li><strong>Sistema:</strong> Daggerheart™ (convertito da Cthulhu Dark)</li>
                             <li><strong>Livello PG:</strong> 3-5 (sequel Volume I, ma giocabile standalone)</li>
                             <li><strong>Durata:</strong> 4-6 sessioni (12-18 ore totali)</li>
-                            <li><strong>Giocatori:</strong> 3-5 (ideale 4)</li>
                             <li><strong>Tone:</strong> Cosmic Horror, Mystery, Survival</li>
                             <li><strong>Location:</strong> Dry Eye, Arizona & Rovine Sottomarine Preumane</li>
                         </ul>
@@ -85,960 +80,127 @@
                         nell'Arizona per investigare la scomparsa di un team di geometri ferroviari nel deserto di 
                         <strong>Dry Eye</strong>. Quello che trovano è un <strong>antico pozzo</strong> che scende 
                         nelle profondità della terra - e un segreto terrificante: milioni di anni fa, questo deserto 
-                        era il fondo di un <strong>oceano alieno</strong>, e qualcosa giace ancora dormiente nelle 
-                        sue rovine sommerse.
+                        era il fondo di un <strong>oceano alieno</strong>.
                     </p>
-                    
-                    <div class="horror-box">
-                        <h3>☠️ Temi Centrali</h3>
-                        <ul style="font-size: 1.05em; line-height: 1.7;">
-                            <li><strong>Tempo Profondo:</strong> Scale temporali incomprensibili (milioni di anni)</li>
-                            <li><strong>Inversione Oceanica:</strong> Oceano antico nel deserto moderno (straniamento)</li>
-                            <li><strong>Archeologia Aliena:</strong> Civiltà che precedevano l'umanità</li>
-                            <li><strong>Body Horror:</strong> Trasformazione in creature marine ibride</li>
-                            <li><strong>Insignificanza Cosmica:</strong> L'umanità è recente e irrilevante</li>
-                            <li><strong>Claustrofobia:</strong> Tunnel sotterranei, pressione, buio totale</li>
-                        </ul>
-                    </div>
-                    
-                    <h3>🔗 Connessione con Volume I</h3>
-                    <div class="info-box">
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Questo scenario è <strong>sequel narrativo</strong> di "Shadows in the Desert" (Volume I), 
-                            ma può essere giocato <strong>standalone</strong> con modifiche minime:
-                        </p>
-                        <ul style="margin-top: 15px; font-size: 1.05em; line-height: 1.7;">
-                            <li><strong>Se giochi dopo Vol I:</strong> PG hanno cicatrici mentali, conoscono orrori 
-                            cosmici, hanno equipaggiamento/abilità potenziate. Usa personaggi Livello 3-5.</li>
-                            <li><strong>Se giochi standalone:</strong> Ignora riferimenti a Silver Hollow, rimuovi 
-                            PTSD/cicatrici da background PG. Spiega che PG sono "esperti di casi strani" ma questa 
-                            è prima vera esposizione a cosmico.</li>
-                        </ul>
-                        <p style="margin-top: 15px; font-size: 1.05em;">
-                            <strong>Nota GM:</strong> Scenario è progettato per essere giocabile in entrambi i modi. 
-                            Le sezioni con 🔗 indicano elementi che richiedono Volume I.
-                        </p>
-                    </div>
-                    
-                    <h3>⚠️ Content Warning</h3>
-                    <div class="warning-box">
-                        <p style="font-size: 1.05em;">
-                            Questo scenario contiene:
-                        </p>
-                        <ul>
-                            <li><strong>Body Horror Intenso:</strong> Trasformazioni corporee, mutazioni, perdita umanità</li>
-                            <li><strong>Claustrofobia:</strong> Scene prolungate in tunnel stretti, buio, pressione</li>
-                            <li><strong>Violenza Grafica:</strong> Cadaveri mutilati, combattimenti brutali</li>
-                            <li><strong>Horror Psicologico:</strong> Perdita sanità, allucinazioni, realizzazioni terrificanti</li>
-                            <li><strong>Temi Nichilisti:</strong> Insignificanza cosmica, futilità esistenza umana</li>
-                        </ul>
-                        <p style="margin-top: 15px; font-weight: bold;">
-                            Età consigliata: 18+. Discuti safety tools in Session 0 (X-Card, Lines & Veils, Pause Break).
-                        </p>
-                    </div>
                 </section>
                 
-                <!-- SETUP & HOOK -->
                 <section id="setup" class="section">
                     <h2>🎣 Setup & Hook</h2>
                     
                     <h3>📅 Quando & Dove</h3>
                     <p class="large">
                         <strong>Data:</strong> Marzo 1886, sei mesi dopo Silver Hollow<br>
-                        <strong>Luogo:</strong> Dry Eye, Arizona - città mineraria quasi abbandonata ai margini del 
-                        deserto di Sonora
+                        <strong>Luogo:</strong> Dry Eye, Arizona - città mineraria quasi abbandonata
                     </p>
                     
-                    <h3>📧 Il Telegramma</h3>
                     <div class="horror-box" style="background: rgba(212, 165, 116, 0.15);">
                         <p style="font-family: 'Special Elite', cursive; font-size: 1.1em; line-height: 2;">
                             STOP NECESSITO ASSISTENZA IMMEDIATA STOP<br>
                             TEAM GEOMETRI SCOMPARSO DRY EYE ARIZONA STOP<br>
                             TROVATO POZZO ANTICO PROFONDITA SCONOSCIUTA STOP<br>
-                            STRANI SUONI DAL SOTTOSUOLO STOP<br>
-                            POPOLAZIONE AGITATA PARLA DI MALEDIZIONI STOP<br>
-                            PAGO BENE ARRIVATE PRESTO STOP<br>
                             <strong>CORNELIUS BRANDT INGEGNERE FERROVIA SOUTHERN PACIFIC</strong>
-                        </p>
-                        <p style="margin-top: 20px; font-size: 0.95em; font-style: italic;">
-                            <strong>Allegato:</strong> Assegno di $200 come anticipo. Altri $300 alla risoluzione.
-                        </p>
-                    </div>
-                    
-                    <h3>🔗 Hook Personalizzati (Se Dopo Volume I)</h3>
-                    
-                    <div class="info-box">
-                        <h4>Per Jack Malone:</h4>
-                        <p>
-                            Uno dei geometri scomparsi è <strong>Thomas "Tommy" Garrett</strong>, figlio del vecchio 
-                            marshal che ti ha addestrato. Tommy è quasi come un fratello minore per te. Non puoi 
-                            ignorare questo.
-                        </p>
-                    </div>
-                    
-                    <div class="info-box">
-                        <h4>Per Sarah Blackwood:</h4>
-                        <p>
-                            Hai ricevuto lettera separata da <strong>Father Miguel</strong>, prete locale di Dry Eye. 
-                            Scrive: "Qualcosa di profano si sta svegliando qui. La mia fede vacilla. Ho bisogno di 
-                            rinforzi spirituali." Le sue parole sono terribilmente familiari - ricordi Jeremiah a 
-                            Silver Hollow.
-                        </p>
-                    </div>
-                    
-                    <div class="info-box">
-                        <h4>Per Doc Artemis Wells:</h4>
-                        <p>
-                            Brandt ha incluso <strong>campione geologico</strong> prelevato vicino al pozzo. È... 
-                            impossibile. Roccia sedimentaria marina databile a 500+ milioni di anni fa, ma con 
-                            <strong>incisioni geometriche</strong> chiaramente artificiali. Questo non dovrebbe 
-                            esistere. DEVI vedere il sito.
                         </p>
                     </div>
                     
                     <h3>🚂 Il Viaggio</h3>
                     <p style="font-size: 1.05em; line-height: 1.8;">
-                        I PG prendono treno Southern Pacific da Tucson verso Dry Eye (6 ore viaggio). Durante il 
-                        viaggio, possono:
+                        I PG prendono treno Southern Pacific da Tucson verso Dry Eye. Paesaggio cambia - da desertico "normale" a stranamente <em>piatto</em>. Troppo piatto. Come fondale marino.
                     </p>
-                    <ul style="font-size: 1.05em; line-height: 1.7;">
-                        <li><strong>Ricercare Dry Eye:</strong> Conoscenza CD 12 - era città mineraria argento negli 
-                        anni '60, ora quasi abbandonata (vena esaurita). Popolazione ~80 persone.</li>
-                        <li><strong>Parlare con ferrovieri:</strong> Dicono che zona è "maledetta" - treni hanno 
-                        problemi meccanici inspiegabili, binari cedono, animali evitano area.</li>
-                        <li><strong>Studiare campione</strong> (Doc): Più lo esamini, meno senso fa. Fossili che non 
-                        corrispondono a nessuna specie conosciuta. Forme troppo... regolari.</li>
-                    </ul>
-                    
-                    <div class="tip-box">
-                        <h4>💡 Consiglio GM: Building Dread</h4>
-                        <p>
-                            Durante viaggio, descrivi paesaggio che cambia - da desertico "normale" a stranamente 
-                            <em>piatto</em>. Troppo piatto. Come se fosse... un <strong>fondale marino</strong>. 
-                            Rocce hanno forme erosive strane. A volte sembra di vedere... onde? Ma è solo miraggio. 
-                            Giusto?
-                        </p>
-                    </div>
                 </section>
                 
-                <!-- ATTO I: DRY EYE -->
                 <section id="atto1" class="section">
                     <h2>🏜️ ATTO I: DRY EYE</h2>
-                    <p class="large">
-                        Investigazione, NPC interaction, primi segnali dell'orrore. Questo atto stabilisce mistero 
-                        e costruisce tensione prima della discesa.
-                    </p>
                     
                     <div id="arrivo">
                         <h3>🚉 Scena 1: Arrivo a Dry Eye</h3>
-                        
                         <div class="stat-block">
                             <h4>DESCRIZIONE INIZIALE</h4>
                             <p style="font-size: 1.05em; line-height: 1.8;">
-                                Il treno rallenta avvicinandosi a Dry Eye. Non c'è vera stazione - solo piattaforma 
-                                di legno marcio e cartello sbiadito. La "città" è una fila di edifici in legno 
-                                semidistrutti lungo una strada polverosa. Molti hanno finestre rotte, porte che 
-                                sbattono al vento.
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                                Ma quello che colpisce è il <strong>silenzio</strong>. Nessun cane abbaia. Nessun 
-                                bambino gioca. Le poche persone visibili ti guardano con occhi vuoti, poi distolgono 
-                                lo sguardo velocemente. Come se avessero paura di essere visti guardare.
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                                E c'è un <strong>odore</strong>. Salmastro. Di sale e decomposizione. Impossibile - 
-                                l'oceano è a 300 miglia da qui.
-                            </p>
-                        </div>
-                        
-                        <div class="info-box">
-                            <h4>🎲 Percezione Check (Istinto CD 12)</h4>
-                            <p><strong>Successo:</strong> Noti che molte case hanno <strong>strani simboli</strong> 
-                            sugli stipiti - croci, ferri di cavallo, sacchetti di sale. Protezioni. Contro cosa?</p>
-                            <p style="margin-top: 10px;"><strong>Successo 15+:</strong> Alcune case hanno 
-                            <strong>finestre murate</strong>. Non dall'esterno - dall'<em>interno</em>. Come se gli 
-                            occupanti volessero essere sigillati dentro.</p>
-                        </div>
-                        
-                        <h4>🏨 Prime Locations</h4>
-                        
-                        <div class="grid-auto-wide">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">🍺 THE DRY WELL SALOON</h3>
-                                </div>
-                                <div class="card-body">
-                                    <p><strong>Owner:</strong> Silas Morrow (60, barista cinico)</p>
-                                    <p><strong>Atmosfera:</strong> Mezzo vuoto anche di sera. Avventori bevono in silenzio.</p>
-                                    <p><strong>Info disponibili:</strong></p>
-                                    <ul>
-                                        <li>Geometri sono scomparsi 3 giorni fa</li>
-                                        <li>Erano acampati vicino a "l'Occhio" (il pozzo)</li>
-                                        <li>Prima di sparire, parlavano di "aver trovato qualcosa straordinario"</li>
-                                        <li>Uno di loro - Tommy Garrett - tornava ogni sera al saloon, beveva troppo, 
-                                        mormorava di "città sotto la sabbia"</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">⛪ OLD SPANISH MISSION</h3>
-                                </div>
-                                <div class="card-body">
-                                    <p><strong>Prete:</strong> Father Miguel Santos (45, esausto)</p>
-                                    <p><strong>Atmosfera:</strong> Chiesa fatiscente. Crocifisso è capovolto (Miguel dice 
-                                    che continua a girarsi da solo).</p>
-                                    <p><strong>Info disponibili:</strong></p>
-                                    <ul>
-                                        <li>Popolazione ha incubi collettivi - "città di pietra nera sott'acqua"</li>
-                                        <li>3 persone sono scomparse ultimo mese (non solo geometri)</li>
-                                        <li>Miguel ha trovato <strong>libro antico</strong> nella missione - diario di 
-                                        missionario spagnolo 1780: parla di "templo del serpiente bajo las dunas"</li>
-                                        <li>🔗 Se Sarah: Miguel riconosce "lo sguardo" - lei ha visto cose simili</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">🏭 ACCAMPAMENTO FERROVIA</h3>
-                                </div>
-                                <div class="card-body">
-                                    <p><strong>Ingegnere:</strong> Cornelius Brandt (52, nervoso)</p>
-                                    <p><strong>Atmosfera:</strong> Tende, strumenti, mappe. Brandt ha occhiaie profonde.</p>
-                                    <p><strong>Info disponibili:</strong></p>
-                                    <ul>
-                                        <li>Team stava mappando terreno per futura ferrovia</li>
-                                        <li>Hanno trovato "l'Occhio" durante prospezione geologica</li>
-                                        <li>Brandt ha <strong>mappe dettagliate</strong> (mostra anomalia geologica massiva)</li>
-                                        <li>Ultimo contatto: telegramma frenetico da Tommy: "CITTÀ INTERA QUI SOTTO. 
-                                        STIAMO SCENDENDO. DIO È MORTO QUI."</li>
-                                        <li>Brandt offre <strong>equipaggiamento</strong>: corde, lanterne, dinamite, mappe</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div id="investigation">
-                        <h3>🔍 Scena 2: Investigation Phase</h3>
-                        
-                        <p>
-                            I PG hanno tempo di investigare Dry Eye e raccogliere informazioni. Lascia che esplorino 
-                            liberamente, ma guida verso questi discovery:
-                        </p>
-                        
-                        <div class="stat-block">
-                            <h4>📚 DISCOVERY: IL DIARIO DEL MISSIONARIO</h4>
-                            <p style="font-size: 1.05em; line-height: 1.8;">
-                                Se i PG parlano con Father Miguel, lui condivide diario del 1780. È in spagnolo antico, 
-                                ma leggibile:
-                            </p>
-                            <div class="horror-box" style="margin-top: 15px;">
-                                <p style="font-family: 'Special Elite', cursive; font-size: 0.95em; line-height: 1.9;">
-                                    "16 de Julio, 1780 - Los nativos me han advertido. Dicen que bajo estas tierras 
-                                    yace una ciudad antigua, anterior a los hombres. Hablan de un gran pozo, 'el ojo 
-                                    seco', donde el mar antiguo tocaba el cielo. Prohíben acercarse.
-                                </p>
-                                <p style="font-family: 'Special Elite', cursive; font-size: 0.95em; line-height: 1.9; margin-top: 10px;">
-                                    He visto los sueños. Calles de piedra negra. Criaturas que no son peces ni hombres. 
-                                    Y algo más grande, durmiente en el abismo. Dios perdóname, pero creo que hay dioses 
-                                    más antiguos que el nuestro."
-                                </p>
-                            </div>
-                            <p style="margin-top: 15px;">
-                                <strong>Tenuta Check:</strong> Leggere diario = 1 segmento (inquietante ma non traumatico)
-                            </p>
-                        </div>
-                        
-                        <div class="stat-block" style="margin-top: 25px;">
-                            <h4>🏠 DISCOVERY: CASA DI TOMMY GARRETT</h4>
-                            <p>
-                                Se i PG cercano alloggio di Tommy, trovano stanza al saloon. Silas dà chiave riluttante.
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                                <strong>Descrizione:</strong> Stanza piccola, letto disfatto. Ma sui muri... 
-                                <strong>disegni ossessivi</strong>. Carboncino, inchiostro, perfino sangue. Tutti 
-                                rappresentano la stessa cosa: <em>spirali</em>. Spirali che scendono. E al centro, 
-                                una forma vagamente umanoide con troppi tentacoli.
-                            </p>
-                            <p style="margin-top: 15px;">
-                                <strong>Investigazione (Conoscenza CD 14):</strong> I disegni mostrano 
-                                <strong>progressione</strong>. I primi (5-6 giorni fa) sono schizzi curiosi. Gli 
-                                ultimi (2 giorni fa) sono frenetici, coperti di note: "DEVO TORNARE GIÙ", "MI CHIAMA", 
-                                "POSSO SENTIRE L'OCEANO NELLE MIE OSSA".
-                            </p>
-                            <p style="margin-top: 15px;">
-                                <strong>Tenuta Check:</strong> Vedere disegni = 2 segmenti (terrificante pattern ossessivo)
-                            </p>
-                        </div>
-                        
-                        <div class="tip-box">
-                            <h4>💡 Clue Tracking</h4>
-                            <p>
-                                I PG dovrebbero raccogliere questi clue chiave prima di procedere:
-                            </p>
-                            <ul>
-                                <li>✓ Location del Pozzo ("l'Occhio")</li>
-                                <li>✓ Equipaggiamento da Brandt</li>
-                                <li>✓ Informazioni su "città antica sottomarina"</li>
-                                <li>✓ Comprensione che geometri sono probabilmente ancora vivi (ma cambiati)</li>
-                            </ul>
-                            <p style="margin-top: 10px;">
-                                Quando hanno almeno 3/4 clue, possono procedere al Pozzo.
+                                Il treno rallenta avvicinandosi a Dry Eye. Non c'è vera stazione. La "città" è una fila di edifici in legno semidistrutti. Ma quello che colpisce è il <strong>silenzio</strong>. E c'è un <strong>odore</strong>. Salmastro. Impossibile - l'oceano è a 300 miglia da qui.
                             </p>
                         </div>
                     </div>
                     
                     <div id="primo-orrore">
-                        <h3>☠️ Scena 3: Primo Orrore - Attacco Notturno</h3>
-                        
-                        <p class="large">
-                            Prima notte a Dry Eye. I PG dormono al saloon o accampamento. Verso le 3 AM...
-                        </p>
-                        
+                        <h3>☠️ Scena 3: Primo Orrore</h3>
                         <div class="horror-box">
                             <h4>🌙 LA SVEGLIA</h4>
                             <p style="font-size: 1.05em; line-height: 1.8;">
-                                Ti svegli improvvisamente. Non per un rumore - per un <strong>silenzio</strong>. 
-                                Il vento del deserto si è fermato. Completamente. L'aria è pesante, umida. Senti 
-                                odore di sale intenso.
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                                Poi... un <strong>grido</strong>. Acuto, disperato. Viene dalla strada.
+                                Ti svegli improvvisamente. Non per un rumore - per un silenzio. L'aria è pesante, umida. Poi... un grido.
                             </p>
                         </div>
-                        
-                        <h4>⚔️ COMBATTIMENTO: L'Ibrido</h4>
-                        
-                        <p>
-                            Se i PG escono, vedono figura nel buio. È <strong>Peter Walsh</strong>, uno dei geometri 
-                            scomparsi. Ma è... cambiato.
-                        </p>
                         
                         <div class="stat-block">
                             <h4>👹 PETER WALSH - IBRIDO INIZIALE</h4>
-                            <p><strong>Descrizione:</strong> Ancora vagamente umano, ma la pelle ha sfumature 
-                            verde-grigie. Le dita sono palmate. Branchie incipiente sul collo. Occhi completamente 
-                            neri, senza pupille. Si muove in modo innaturale - troppo fluido, come se galleggiasse 
-                            sott'acqua.</p>
-                            
-                            <p style="margin-top: 15px;"><strong>Stats:</strong></p>
-                            <ul>
-                                <li>HP: 35</li>
-                                <li>Armatura: 2 (pelle coriacea)</li>
-                                <li>Velocità: 12m (movimento acquatico)</li>
-                                <li>Attacco Artigli: +6, 2d6+3 taglienti</li>
-                                <li>Attacco Morso: +6, 1d10+3 perforanti + veleno marino (Costituzione CD 13 o 
-                                Avvelenato 1 min)</li>
-                            </ul>
-                            
-                            <p style="margin-top: 15px;"><strong>Abilità Speciali:</strong></p>
-                            <ul>
-                                <li><strong>Pelle Scivolosa:</strong> Svantaggio per afferrarlo/lottare</li>
-                                <li><strong>Rigenerazione:</strong> Recupera 5 HP inizio turno se in contatto con acqua</li>
-                                <li><strong>Grido Ultrasonico:</strong> (1/combattimento) Tutti entro 6m: Costituzione 
-                                CD 14 o Storditi 1 round</li>
-                            </ul>
-                            
-                            <p style="margin-top: 15px;"><strong>Comportamento:</strong></p>
-                            <ul>
-                                <li>Non parla, ma emette suoni gorgoglianti ("glub glub glub")</li>
-                                <li>Cerca di <strong>trascinare PG vivo</strong> verso direzione del Pozzo</li>
-                                <li>Se ridotto sotto 10 HP, fugge verso Pozzo (velocità raddoppiata)</li>
-                            </ul>
+                            <p><strong>Descrizione:</strong> Pelle verde-grigia, dita palmate, branchie. Si muove in modo innaturale.</p>
+                            <p><strong>HP:</strong> 35 | <strong>Armatura:</strong> 2 | <strong>Velocità:</strong> 12m</p>
+                            <p><strong>Attacco:</strong> Artigli +6 (2d6+3), Morso +6 (1d10+3 + veleno)</p>
+                            <p><strong>Speciale:</strong> Rigenerazione 5 HP/turno se bagnato.</p>
                         </div>
-                        
-                        <div class="warning-box">
-                            <h4>💀 TENUTA MENTAL IMPACT</h4>
-                            <p>
-                                <strong>Vedere l'Ibrido:</strong> Tutti i PG fanno Istinto CD 14:
-                            </p>
-                            <ul>
-                                <li><strong>Successo:</strong> 1 segmento Tenuta (inquietante ma gestibile)</li>
-                                <li><strong>Fallimento:</strong> 2 segmenti (questo era un <em>uomo</em> 3 giorni fa!)</li>
-                                <li><strong>🔗 Se PG conosce Peter/Tommy:</strong> Automaticamente 3 segmenti (trauma personale)</li>
-                            </ul>
-                        </div>
-                        
-                        <h4>🔍 Post-Combattimento Investigation</h4>
-                        
-                        <p>
-                            Se i PG sconfiggono/catturano l'ibrido:
-                        </p>
-                        
-                        <ul style="font-size: 1.05em; line-height: 1.7;">
-                            <li><strong>Medicina Check (Conoscenza CD 15):</strong> Trasformazione è 
-                            <strong>biologica</strong>, non magia. Tessuti stanno letteralmente mutando a livello 
-                            cellulare. Processo sembra irreversibile ma lento (giorni/settimane).</li>
-                            <li><strong>Se interrogato</strong> (impossibile - non capisce più linguaggio umano, 
-                            solo gorgoglia)</li>
-                            <li><strong>Nei vestiti strappati:</strong> Badge identificazione ferrovia con nome "P. WALSH"</li>
-                            <li><strong>🔬 Doc può fare autopsia</strong> (se ucciso): Scopre <strong>organi interni</strong> 
-                            stanno trasformandosi in equivalenti marini. Polmoni diventano branchie. Sangue cambia 
-                            composizione chimica. È... affascinante e terrificante.</li>
-                        </ul>
-                        
-                        <div class="tip-box">
-                            <h4>💡 Aftermath & Reaction Cittadini</h4>
-                            <p>
-                                Il combattimento sveglia tutta Dry Eye. Cittadini escono con fucili, ma quando vedono 
-                                la creatura... <strong>non sono sorpresi</strong>. Solo esausti. Silas commenta: 
-                                "Quinto questa settimana. Vengono tutti dal Pozzo. Dovevate sigillarlo quando ve l'ho detto."
-                            </p>
-                            <p style="margin-top: 10px;">
-                                <strong>Brandt è terrorizzato</strong> - offre raddoppiare paga ($600 totale) se PG 
-                                "risolvono questo SUBITO". Implica che altri geometri potrebbero fare stessa fine.
-                            </p>
-                        </div>
-                        
-                        <h4>🎬 Fine Atto I</h4>
-                        <p class="large">
-                            Con primo orrore affrontato e comprensione gravità situazione, i PG devono decidere: 
-                            <strong>scendere nel Pozzo</strong>. Non c'è altra via. I geometri sono là sotto. E 
-                            qualunque cosa li stia trasformando... deve essere fermata.
-                        </p>
                     </div>
                 </section>
                 
-                <!-- ATTO II: IL POZZO -->
                 <section id="atto2" class="section">
                     <h2>🕳️ ATTO II: IL POZZO</h2>
-                    <p class="large">
-                        Discesa, esplorazione tunnel, scoperta città sommersa. Questo è il cuore dello scenario - 
-                        claustrofobia, body horror, ancient mystery.
-                    </p>
                     
                     <div id="discesa">
                         <h3>⬇️ Scena 4: La Discesa</h3>
-                        
                         <div class="horror-box">
                             <h4>🌅 ALBA AL POZZO</h4>
                             <p style="font-size: 1.05em; line-height: 1.8;">
-                                Camminate 2 ore nel deserto seguendo mappe di Brandt. Il sole sta sorgendo quando 
-                                finalmente lo vedete: <strong>L'OCCHIO</strong>.
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                                È un pozzo perfettamente circolare, 10 metri di diametro. I bordi sono fatti di 
-                                <strong>pietra nera levigata</strong> - chiaramente artificiale, ma lo stile è... 
-                                alieno. Nessuna cultura umana conosciuta costruisce così. Le pietre si incastrano 
-                                con precisione impossibile, senza malta.
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                                Guardi dentro. <strong>Buio totale</strong>. Lasci cadere pietra. Conti... 1... 2... 
-                                3... 4... 5... e finalmente, distante, senti <em>splash</em>. C'è acqua là sotto. 
-                                A centinaia di metri di profondità.
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                                E senti... un <strong>suono</strong>. Bassiso. Ritmico. Come... respirazione? No. 
-                                <strong>Onde</strong>. Il suono di onde che si infrangono. Ma siamo in mezzo al deserto.
-                            </p>
-                        </div>
-                        
-                        <div class="warning-box">
-                            <h4>💀 TENUTA CHECK: VEDERE IL POZZO</h4>
-                            <p>
-                                <strong>Istinto CD 12:</strong>
-                            </p>
-                            <ul>
-                                <li><strong>Successo:</strong> 1 segmento (profondamente innaturale)</li>
-                                <li><strong>Fallimento:</strong> 2 segmenti (senso schiacciante di <em>antichità</em> 
-                                - questa cosa è vecchia di milioni di anni)</li>
-                            </ul>
-                        </div>
-                        
-                        <h4>🧗 Prepararsi per la Discesa</h4>
-                        
-                        <p>
-                            I PG devono decidere equipaggiamento e strategia. Brandt fornisce:
-                        </p>
-                        
-                        <ul style="font-size: 1.05em; line-height: 1.7;">
-                            <li><strong>Corde robuste:</strong> 300 metri totali</li>
-                            <li><strong>Carrucole e moschettoni:</strong> Sistema di discesa</li>
-                            <li><strong>Lanterne olio:</strong> 6, con olio per 4 ore ciascuna</li>
-                            <li><strong>Dinamite:</strong> 6 candelotti (per emergenze)</li>
-                            <li><strong>Mappa parziale:</strong> Geometri avevano iniziato mappare tunnel superiori</li>
-                            <li><strong>Segnali:</strong> Fischietto, razzi di segnalazione (2)</li>
-                        </ul>
-                        
-                        <div class="tip-box">
-                            <h4>💡 Considerazioni Tecniche</h4>
-                            <p>
-                                <strong>Domande importanti</strong> che PG dovrebbero considerare:
-                            </p>
-                            <ul>
-                                <li>Chi scende per primo? (Qualcuno deve ancorare corde sopra)</li>
-                                <li>Quante lanterne portare vs conservare olio?</li>
-                                <li>Portare armi pesanti o prioritizzare mobilità?</li>
-                                <li>Sistema di segnalazione se si separano?</li>
-                                <li>Piano di ritirata se cose vanno male?</li>
-                            </ul>
-                            <p style="margin-top: 10px;">
-                                <strong>GM:</strong> Non forzare soluzioni "corrette" - lascia che PG decidano, poi 
-                                applica conseguenze realistiche (es: troppo equipaggiamento = movimento lento, poche 
-                                lanterne = navigazione difficile).
-                            </p>
-                        </div>
-                        
-                        <h4>🕳️ La Discesa - Fasi</h4>
-                        
-                        <div class="stat-block">
-                            <h4>FASE 1: PRIMI 50 METRI - POZZO VERTICALE</h4>
-                            <p>
-                                <strong>Difficoltà:</strong> Agilità CD 10 (routine con corde)<br>
-                                <strong>Descrizione:</strong> Pareti lisce di pietra nera. Ogni 10 metri, 
-                                <strong>incisioni</strong> - simboli spiraliformi che sembrano muoversi alla luce 
-                                lanterna. Aria diventa più fredda, umida.
-                            </p>
-                            <p style="margin-top: 10px;">
-                                <strong>Tenuta:</strong> 0 (ancora relativamente "normale")
-                            </p>
-                        </div>
-                        
-                        <div class="stat-block">
-                            <h4>FASE 2: 50-150 METRI - ZONE DI TRANSIZIONE</h4>
-                            <p>
-                                <strong>Difficoltà:</strong> Agilità CD 12 (pareti scivolose)<br>
-                                <strong>Descrizione:</strong> Pareti iniziano a essere <strong>bagnate</strong>. Acqua 
-                                gocciola costantemente. Senti suono di onde più forte. Temperatura scende - ora è 
-                                freddo come in grotta profonda.
-                            </p>
-                            <p style="margin-top: 10px;">
-                                <strong>Discovery:</strong> A 100 metri, piccola alcova. Dentro: 
-                                <strong>equipaggiamento geometri</strong> (zaini, corde di scorta). E <em>sangue secco</em> 
-                                sulle pareti. Segni di lotta.
-                            </p>
-                            <p style="margin-top: 10px;">
-                                <strong>Tenuta:</strong> 1 segmento (implicazioni sinistre)
-                            </p>
-                        </div>
-                        
-                        <div class="stat-block">
-                            <h4>FASE 3: 150+ METRI - ACQUA</h4>
-                            <p>
-                                <strong>Difficoltà:</strong> Costituzione CD 13 (freddo intenso)<br>
-                                <strong>Descrizione:</strong> Pozzo si allarga improvvisamente. Non tocchi più pareti 
-                                con braccia. E poi... <strong>acqua</strong>. Fredda come ghiaccio. Sali. Molto 
-                                salata. Come... oceano.
-                            </p>
-                            <p style="margin-top: 10px;">
-                                <strong>Nuoto:</strong> Agilità CD 12 ogni 10 minuti o 1 Fatica (freddo esauriente)
-                            </p>
-                            <p style="margin-top: 10px;">
-                                <strong>Discovery:</strong> Sott'acqua, a 3 metri profondità, c'è <strong>apertura 
-                                orizzontale</strong> - tunnel che parte di lato. È l'unica via. PG devono 
-                                <strong>immergersi e nuotare</strong> per raggiungerla (10 secondi, Costituzione CD 10 
-                                o perdono fiato).
-                            </p>
-                            <p style="margin-top: 10px;">
-                                <strong>Tenuta:</strong> 2 segmenti (claustrofobia acuta - sei sott'acqua in buio totale)
-                            </p>
-                        </div>
-                        
-                        <div class="warning-box">
-                            <h4>⚠️ PERICOLO: ANNEGAMENTO</h4>
-                            <p>
-                                Se PG falliscono check nuoto o fiato:
-                            </p>
-                            <ul>
-                                <li><strong>1° Fallimento:</strong> Panico, perdi 1 lanterna (cade, si spegne)</li>
-                                <li><strong>2° Fallimento:</strong> Inizia annegamento - 1d6 danni/round finché non 
-                                emergi o alleato ti salva</li>
-                                <li><strong>3° Fallimento:</strong> Incosciente, morente (0 HP)</li>
-                            </ul>
-                            <p style="margin-top: 10px;">
-                                <strong>Aiuto alleati:</strong> Tiro Agilità CD 13 per salvare alleato in difficoltà.
+                                Camminate 2 ore nel deserto. Il sole sta sorgendo quando finalmente lo vedete: <strong>L'OCCHIO</strong>. Un pozzo perfettamente circolare di pietra nera levigata. Buio totale. E senti... il suono di onde che si infrangono nel profondo.
                             </p>
                         </div>
                     </div>
                     
-                    <div id="tunnel">
-                        <h3>🌊 Scena 5: I Tunnel Sommersi</h3>
-                        
-                        <p class="large">
-                            Dopo immersione, PG emergono in <strong>tunnel orizzontale</strong>. Metà allagato (acqua 
-                            fino vita), metà aria. Questo è network di tunnel che porta a città antica.
-                        </p>
-                        
-                        <div class="info-box">
-                            <h4>🗺️ MAPPA TUNNEL - Overview</h4>
-                            <p style="font-size: 1.05em;">
-                                Network tunnel è composto da 5 aree principali che PG attraversano in sequenza:
-                            </p>
-                            <ol style="font-size: 1.05em; line-height: 1.7;">
-                                <li><strong>Area A - Galleria d'Ingresso:</strong> Tunnel allagato, primo respiro</li>
-                                <li><strong>Area B - Sala degli Echi:</strong> Camera naturale, acustica aliena</li>
-                                <li><strong>Area C - Corridoi Crollati:</strong> Puzzle navigazione, crolli parziali</li>
-                                <li><strong>Area D - Nido Ibrido:</strong> Combattimento maggiore, Tommy Garrett</li>
-                                <li><strong>Area E - Porta della Città:</strong> Transition verso città sommersa</li>
-                            </ol>
-                            <p style="margin-top: 15px; font-style: italic;">
-                                <strong>Tempo stimato:</strong> 2-3 ore gameplay (dipende da scelte PG)
-                            </p>
-                        </div>
-                        
-                        <h4>🔦 AREA A: GALLERIA D'INGRESSO</h4>
-                        
-                        <div class="stat-block">
-                            <p style="font-size: 1.05em; line-height: 1.8;">
-                                Emergi da immersione in tunnel orizzontale largo 4 metri, alto 3. Acqua salata fino 
-                                alla vita (1.2m profondità). Corrente leggera ti spinge <em>verso interno</em> - come 
-                                se tunnel stesse "respirando" verso dentro.
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                                Pareti sono stessa pietra nera del pozzo - levigata, con incisioni spiraliformi che 
-                                continuano. Ogni 10 metri, <strong>pilastri decorativi</strong> emergono dall'acqua - 
-                                scolpiti con forme che ricordano vita marina (tentacoli, conchiglie, creature ibride).
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                                Luce lanterna si riflette sull'acqua creando ombre danzanti. Silenzio totale tranne 
-                                <em>gocciolare costante</em> e <em>tuo respiro</em> che echeggia.
-                            </p>
-                        </div>
-                        
-                        <div class="info-box">
-                            <h4>🔍 DISCOVERY: EQUIPAGGIAMENTO GEOMETRI</h4>
-                            <p>
-                                <strong>Percezione CD 12:</strong> Noti, appoggiato a pilastro, <strong>zaino da campo</strong> 
-                                (logo Southern Pacific). Dentro:
-                            </p>
-                            <ul>
-                                <li><strong>Diario di Tommy Garrett</strong> (ultimi 3 giorni - vedi Handout #2)</li>
-                                <li>Mappa parziale tunnel (accurata per Area A-B)</li>
-                                <li>Strumenti geologici (bussola impazzita - indica direzioni impossibili)</li>
-                                <li>Foto ferrotipia: Tommy con crew, tutti sorridenti (5 giorni fa)</li>
-                                <li>Ultimo entry diario: "Non dovevamo scendere. Ma DEVO tornare. Mi chiama. Sento 
-                                oceano nelle ossa."</li>
-                            </ul>
-                            <p style="margin-top: 10px;">
-                                <strong>Tenuta:</strong> 1 segmento (progressione deterioramento mentale evidente)
-                            </p>
-                        </div>
-                        
-                        <div class="warning-box">
-                            <h4>⚠️ PERICOLO AMBIENTALE: CORRENTE</h4>
-                            <p>
-                                Mentre procedete, corrente acqua <strong>aumenta</strong> gradualmente. Dopo 50 metri 
-                                tunnel, acqua arriva a petto (Forza CD 12 per avanzare, movimento dimezzato).
-                            </p>
-                            <p style="margin-top: 10px;">
-                                <strong>Opzione 1:</strong> Combattere corrente (Forza checks ripetuti, esaurente)<br>
-                                <strong>Opzione 2:</strong> Lasciarsi trasportare controllatamente (Agilità CD 13 per 
-                                non sbattere contro pilastri - 1d6 danni contundenti per fallimento)
-                            </p>
-                        </div>
-                        
-                        <h4>🌀 AREA B: SALA DEGLI ECHI</h4>
-                        
-                        <div class="horror-box">
-                            <p style="font-size: 1.05em; line-height: 1.8;">
-                                Tunnel si apre improvvisamente in <strong>camera naturale enorme</strong> - 30 metri 
-                                diametro, soffitto perso nel buio (50+ metri sopra). È come cattedrale naturale, ma... 
-                                <em>troppo perfetta</em>. Le pareti sono simmetriche. L'acustica è... aliena.
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                                Quando parli, la tua voce echeggia <strong>7 volte</strong>. Sempre 7. Indipendentemente 
-                                da quanto forte parli. E gli echi... non sono giusti. Sembrano dire cose diverse. Parole 
-                                in lingua che non conosci. Antico. Gutturale. Come... <em>canto di balene</em>?
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                                Al centro sala, emergendo dall'acqua: <strong>obelisco nero</strong>, 5 metri alto. 
-                                Coperto di incisioni. E alla sua base... <strong>scheletri</strong>. Umani. Molto antichi. 
-                                Vestiti in stracci che sembrano stile... pre-colombiano? 1500s? È impossibile datare con 
-                                sicurezza.
-                            </p>
-                        </div>
-                        
-                        <div class="warning-box">
-                            <h4>💀 TENUTA CHECK: SALA DEGLI ECHI</h4>
-                            <p>
-                                <strong>Istinto CD 14:</strong>
-                            </p>
-                            <ul>
-                                <li><strong>Successo:</strong> 1 segmento (profondamente innaturale)</li>
-                                <li><strong>Fallimento:</strong> 2 segmenti + <strong>Effetto Eco</strong>: Per prossima 
-                                ora, senti occasionalmente voci chiamare il tuo nome in lontananza (nessuno è là)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="info-box">
-                            <h4>🔬 OBELISCO - ANALISI</h4>
-                            <p>
-                                <strong>Conoscenza CD 15:</strong> Incisioni rappresentano... <strong>mappa stellare</strong>. 
-                                Ma costellazioni non corrispondono a cielo attuale. Sono... antiche. 500 milioni di anni 
-                                antiche. Quando vita sulla terra era solo batteri oceanici.
-                            </p>
-                            <p style="margin-top: 10px;">
-                                <strong>Conoscenza CD 18:</strong> Aspetta. C'è qualcosa di più. Una delle "stelle" 
-                                non è stella - è <strong>pianeta</strong>. E la traiettoria segnata... sta venendo verso 
-                                Terra. Questa è... <em>predizione</em>? <em>Avvertimento</em>? O... <strong>chiamata</strong>?
-                            </p>
-                            <p style="margin-top: 10px;">
-                                <strong>Tenuta extra:</strong> Comprendere implicazioni = +1 segmento (contatto imminente?)
-                            </p>
-                        </div>
-                        
-                        <h4>🪨 AREA C: CORRIDOI CROLLATI</h4>
-                        
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Uscendo dalla Sala, entri in sezione tunnel parzialmente <strong>crollata</strong>. Macerie, 
-                            pietre enormi, passaggi stretti. Acqua qui è più bassa (ginocchia) ma terreno instabile.
-                        </p>
-                        
-                        <div class="stat-block">
-                            <h4>🧩 PUZZLE: NAVIGAZIONE CROLLI</h4>
-                            <p>
-                                PG devono scegliere rotta tra 3 passaggi possibili:
-                            </p>
-                            
-                            <p style="margin-top: 15px;"><strong>PASSAGGIO 1 - STRETTO MA STABILE:</strong></p>
-                            <ul>
-                                <li>Fessura 50cm larghezza, 10 metri lunghezza</li>
-                                <li>Richiede <strong>squeeze</strong> (Agilità CD 13, PG con armatura pesante Svantaggio)</li>
-                                <li><strong>Pro:</strong> Veloce (5 minuti), sicuro strutturalmente</li>
-                                <li><strong>Contro:</strong> Claustrofobia intensa (Tenuta +1 se fallisci check)</li>
-                            </ul>
-                            
-                            <p style="margin-top: 15px;"><strong>PASSAGGIO 2 - LARGO MA INSTABILE:</strong></p>
-                            <ul>
-                                <li>Tunnel 2m larghezza ma soffitto ha crepe evidenti</li>
-                                <li>Richiede <strong>movimento silenzioso</strong> (Agilità CD 12 per non far vibrazioni)</li>
-                                <li><strong>Pro:</strong> Spazioso, veloce</li>
-                                <li><strong>Contro:</strong> Fallimento check = <strong>crollo parziale</strong> (tutti 
-                                fanno Agilità CD 14 o 3d6 danni contundenti + Sepolto)</li>
-                            </ul>
-                            
-                            <p style="margin-top: 15px;"><strong>PASSAGGIO 3 - SOTT'ACQUA:</strong></p>
-                            <ul>
-                                <li>Tunnel completamente allagato, 20 metri lunghezza</li>
-                                <li>Richiede <strong>immersione prolungata</strong> (Costituzione CD 14 trattenere fiato)</li>
-                                <li><strong>Pro:</strong> Bypass crolli, strutturalmente sicuro</li>
-                                <li><strong>Contro:</strong> Rischio annegamento, perdi equipaggiamento se panico</li>
-                            </ul>
-                            
-                            <p style="margin-top: 20px; font-style: italic;">
-                                <strong>GM Note:</strong> Non c'è scelta "corretta" - ogni opzione ha trade-offs. 
-                                Lascia PG dibattere strategia.
-                            </p>
-                        </div>
-                        
-                        <h4>👹 AREA D: NIDO IBRIDO</h4>
-                        
-                        <div class="horror-box">
-                            <h4>⚠️ COMBATTIMENTO MAGGIORE</h4>
-                            <p style="font-size: 1.05em; line-height: 1.8;">
-                                Oltre crolli, tunnel si apre in camera circolare (15m diametro). E capisci immediatamente: 
-                                questo è un <strong>NIDO</strong>.
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                                Acqua è più profonda qui (vita). Pareti sono coperte di... <em>muco</em>. Bioluminescente. 
-                                Verde-azzurro pulsante. E ci sono <strong>uova</strong> - sacche traslucide grandi come 
-                                angurie, attaccate a pareti. Dentro puoi vedere... forme. Che si muovono.
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                                E al centro camera, su roccia piatta emergente: <strong>i geometri</strong>. O quello 
-                                che resta di loro. 3 figure. Completamente trasformate.
-                            </p>
-                        </div>
-                        
-                        <div class="stat-block">
-                            <h4>👹 IBRIDI AVANZATI (3x)</h4>
-                            <p><strong>Descrizione:</strong> Questi erano umani 4 giorni fa. Ora... quasi irriconoscibili. 
-                            Pelle verde-grigia squamosa. Branchie pienamente funzionali. Mani/piedi completamente palmati 
-                            con artigli. Bocca piena di denti da predatore marino. Occhi neri, senza bianco. Si muovono 
-                            con agilità aliena - perfettamente adattati ad ambiente sottomarino.</p>
-                            
-                            <p style="margin-top: 15px;"><strong>Stats:</strong></p>
-                            <ul>
-                                <li>HP: 45 ciascuno</li>
-                                <li>Armatura: 3 (scaglie dure)</li>
-                                <li>Velocità: 9m terra, 15m acqua</li>
-                                <li>Attacco Artigli: +7, 2d6+4 taglienti</li>
-                                <li>Attacco Morso: +7, 2d8+4 perforanti + <strong>Veleno Paralizzante</strong> (Costituzione 
-                                CD 14 o Paralizzato 1d4 round)</li>
-                            </ul>
-                            
-                            <p style="margin-top: 15px;"><strong>Abilità Speciali:</strong></p>
-                            <ul>
-                                <li><strong>Anfibi Perfetti:</strong> Respirano sia aria che acqua. Vantaggio tutti check 
-                                in acqua.</li>
-                                <li><strong>Rigenerazione Marina:</strong> Inizio turno se in acqua: recupera 8 HP 
-                                (ridotto da 5 HP - più avanzati)</li>
-                                <li><strong>Invisibilità Acquatica:</strong> Se completamente sommersi, Svantaggio per 
-                                vederli (si mimetizzano perfettamente)</li>
-                                <li><strong>Pack Tactics:</strong> Vantaggio attacchi se 2+ ibridi adiacenti a stesso target</li>
-                                <li><strong>Grido Ultrasonico Potenziato:</strong> (1/combattimento ciascuno) Tutti entro 
-                                9m: Costituzione CD 15 o Storditi 2 round + 2d6 danni sonici</li>
-                            </ul>
-                            
-                            <p style="margin-top: 15px;"><strong>Tattiche:</strong></p>
-                            <ul>
-                                <li>Combattono coordinati (comunicano con clicks ultrasonici)</li>
-                                <li>1-2 emergono da acqua per attacco diretto</li>
-                                <li>1 rimane sommerso, attacca gambe PG sott'acqua (surprise attacks)</li>
-                                <li>Usano ambiente: spingono PG in acqua profonda, separano gruppo</li>
-                                <li>Se 1 cade sotto 15 HP, tutti si immergono e ritirano (rigenerano poi tornano)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="warning-box">
-                            <h4>💀 TENUTA CHECK: VEDERE NIDO</h4>
-                            <p>
-                                Prima di combattimento, <strong>Istinto CD 15:</strong>
-                            </p>
-                            <ul>
-                                <li><strong>Successo:</strong> 2 segmenti (body horror intenso)</li>
-                                <li><strong>Fallimento:</strong> 3 segmenti + <strong>Nausea</strong> (Svantaggio primo 
-                                attacco combattimento - sei shaken)</li>
-                                <li><strong>Se riconosci uno degli ibridi:</strong> +1 segmento extra (trauma personale)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="tip-box">
-                            <h4>💡 TOMMY GARRETT - Special Encounter</h4>
-                            <p>
-                                Se <strong>Jack è nel party</strong> e uno degli ibridi è Tommy (GM decide quale), 
-                                c'è momento drammatico:
-                            </p>
-                            <p style="margin-top: 10px; font-style: italic;">
-                                "L'ibrido ti guarda. Per un secondo - solo un secondo - vedi qualcosa negli occhi neri. 
-                                <strong>Riconoscimento</strong>. La bocca si apre, tenta parlare... ma esce solo gorgoglio 
-                                acquoso. Poi l'intelligenza svanisce. Torna pura predazione. Si lancia."
-                            </p>
-                            <p style="margin-top: 10px;">
-                                <strong>Jack:</strong> Istinto CD 16 o +2 segmenti Tenuta (questo era tuo amico/fratello 
-                                adottivo). Se Jack uccide Tommy personalmente, dopo combattimento +1 segmento extra 
-                                (must process grief).
-                            </p>
-                        </div>
-                        
-                        <h4>🎬 Post-Combattimento: Scelta Morale</h4>
-                        
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Dopo sconfitta ibridi, PG hanno scelta:
-                        </p>
-                        
-                        <ul style="font-size: 1.05em; line-height: 1.7;">
-                            <li><strong>Opzione 1 - Distruggere Uova:</strong> Usare dinamite/fuoco per sterminare 
-                            nido. Previene futura propagazione. Ma... sono <em>vive</em>. Sta uccidendo... cosa? 
-                            Creature innocenti? Mostri? (Tenuta 0 se razionalizzi come "necessario", +1 se ti pesa 
-                            moralmente)</li>
-                            
-                            <li><strong>Opzione 2 - Lasciare Uova:</strong> Non toccare. "Non sono minaccia immediata." 
-                            Ma... si schiuderanno. E poi? (Nessuna Tenuta ora, ma conseguenze future - GM decide se 
-                            incontri baby ibridi dopo)</li>
-                            
-                            <li><strong>Opzione 3 - Portare Campione:</strong> Doc può suggerire prendere 1 uovo per 
-                            studio. Scientificamente prezioso. Eticamente... discutibile. (Sarah probabilmente si 
-                            oppone, Jack è ambivalente)</li>
-                        </ul>
-                        
-                        <div class="tip-box">
-                            <h4>🎭 RP Opportunity</h4>
-                            <p>
-                                Questa è momento perfetto per conflitto intra-party. Non c'è risposta "giusta". Lascia 
-                                PG dibattere etica, pragmatismo, paura. Se tensione sale troppo, Sarah può invocare 
-                                "votiamo democraticamente" (ma ricorda voto - ha conseguenze).
-                            </p>
-                        </div>
-                        
-                        <h4>🚪 AREA E: PORTA DELLA CITTÀ</h4>
-                        
-                        <div class="horror-box">
-                            <p style="font-size: 1.05em; line-height: 1.8;">
-                                Oltre nido, tunnel continua altri 100 metri, poi... <strong>finisce</strong>.
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.1em; line-height: 1.8;">
-                                Davanti a te: <strong>portale monumentale</strong>. 20 metri alto, 15 metri largo. 
-                                Scolpito nella pietra nera con dettagli che fanno male agli occhi. Creature impossibili, 
-                                geometrie non-euclidee, simboli che sembrano <em>muoversi</em> quando non li guardi 
-                                direttamente.
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                                E oltre il portale... <strong>luce</strong>. Impossibile. Sei centinaia di metri 
-                                sottoterra. Ma c'è <em>luce</em>. Verde-azzurra. Pulsante. Bioluminescente su scala 
-                                monumentale.
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                                E senti... <strong>oceano</strong>. Il suono di onde. Forte. Reale. Come se oltre quel 
-                                portale ci fosse... mare aperto.
-                            </p>
-                            <p style="margin-top: 20px; font-size: 1.2em; font-weight: bold; color: var(--blood-red);">
-                                Questo è l'ingresso alla <strong>CITTÀ SOMMERSA</strong>.
-                            </p>
-                        </div>
-                        
-                        <div class="info-box">
-                            <h4>🎬 END ATTO II</h4>
-                            <p style="font-size: 1.05em;">
-                                Questo è perfetto momento per <strong>break</strong> (fine sessione). PG hanno attraversato 
-                                tunnel, affrontato orrori, fatto scelte morali. Ora sono alla soglia della rivelazione 
-                                massima.
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.05em;">
-                                <strong>Cliffhanger line:</strong> "Prendi respiro profondo. Check equipaggiamento. 
-                                E poi... varchi il portale. E vedi..."
-                            </p>
-                            <p style="margin-top: 10px; font-style: italic;">
-                                [FADE TO BLACK - CONTINUA ATTO III]
-                            </p>
-                        </div>
+                    <div class="info-box" style="background: #fafafa; border: 2px solid #003366;">
+                        <h3>🗺️ MAPPA SCHEMATICA: IL SOTTOSUOLO</h3>
+                        <pre style="font-family: 'Courier New', monospace; font-weight: bold; color: #003366; line-height: 1.2; overflow-x: hidden;">
+ [POZZO DRY EYE]
+      |
+      | (Discesa 150m)
+      v
+ [LAGO SOTTERRANEO]
+      |
+ +----+----+
+ |         |
+[NIDO]   [SALA ECHI]
+(Combat)   (Lore)
+ |         |
+ +----+----+
+      |
+      v
+ [CITTÀ SOMMERSA]
+      |
+ +----+----+
+ |         |
+[TEMPIO] [BIBLIOTECA]
+      |
+      v
+ [ABISSO DEL GUARDIANO]
+     (Final Boss)
+                        </pre>
                     </div>
                     
                     <div id="citta-sommersa">
                         <h3>🏛️ Scena 6: La Città Sommersa</h3>
-                        
                         <div class="horror-box">
                             <h4>👁️ LA RIVELAZIONE</h4>
                             <p style="font-size: 1.05em; line-height: 1.8;">
-                                Il tunnel si apre improvvisamente. Emergi in... <strong>spazio aperto</strong>. 
-                                Impossibile. Sei centinaia di metri sotto terra, ma...
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.1em; line-height: 1.8; font-weight: bold;">
-                                ...c'è una CITTÀ qui.
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                                <strong>Pietra nera</strong>, edifici impossibilmente alti (50+ metri), con geometria 
-                                che fa male agli occhi guardare. Angoli che sembrano avere più di 90 gradi. Superfici 
-                                che riflettono luce in modi che contraddicono fisica.
-                            </p>
-                            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                                E l'<strong>acqua</strong>. Metà della città è <strong>sommersa</strong> - ma l'acqua 
-                                non si muove come dovrebbe. Sta... <em>pulsando</em>. Come se fosse viva. E puoi vedere, 
-                                illuminato da fosforescenza aliena, che ci sono... <strong>cose</strong> nell'acqua. 
-                                Grandi. Antiche. Dormienti.
-                            </p>
-                            <p style="margin-top: 20px; font-size: 1.2em; font-weight: bold; color: var(--blood-red);">
-                                Questo è il fondo di un <strong>oceano preumano</strong>. E questa città era qui quando 
-                                l'umanità non esisteva ancora.
+                                Il tunnel si apre improvvisamente. Emergi in uno spazio aperto. C'è una CITTÀ qui. Pietra nera, edifici impossibilmente alti. Metà della città è sommersa in un lago bioluminescente che pulsa come vivo.
                             </p>
                         </div>
-                        
                         <div class="warning-box">
                             <h4>💀 TENUTA CHECK MASSIVO</h4>
-                            <p>
-                                <strong>Istinto CD 16 (difficile):</strong>
-                            </p>
-                            <ul>
-                                <li><strong>Successo:</strong> 3 segmenti (incomprensibilità scale)</li>
-                                <li><strong>Fallimento:</strong> 5 segmenti (collasso concettuale - capisci 
-                                <em>insignificanza</em> umanità)</li>
-                                <li><strong>Fallimento Critico:</strong> Tenuta piena automaticamente + Conseguenza 
-                                immediata</li>
-                            </ul>
+                            <p><strong>Istinto CD 16:</strong> 3-5 segmenti. Collasso concettuale.</p>
                         </div>
-                        
                     </div>
                 </section>
                 
-                <!-- ATTO III: CONFRONTO -->
                 <section id="atto3" class="section">
                     <h2>⚔️ ATTO III: CONFRONTO FINALE</h2>
                     <p class="large">
-                        Dopo aver sconfitto/negoziato con il Sacerdote, i PG devono affrontare la fonte ultima 
-                        dell'orrore: <strong>l'Abisso Centrale</strong> e ciò che dorme là.
+                        I PG devono affrontare la fonte ultima dell'orrore: <strong>l'Abisso Centrale</strong>.
                     </p>
                     
                     <h3>🕳️ ZONA 4: ABISSO CENTRALE</h3>
@@ -1046,537 +208,122 @@
                     <div class="horror-box">
                         <h4>🌀 LA DISCESA NELL'ABISSO</h4>
                         <p style="font-size: 1.05em; line-height: 1.8;">
-                            Al centro della città, nascosto dietro il Tempio: un <strong>secondo pozzo</strong>. 
-                            Ma questo è... diverso. Più antico. Più <em>profondo</em>.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                            Il bordo del pozzo è circondato da <strong>pilastri monumentali</strong> (12, ciascuno 
-                            15m alto) con catene metalliche che scendono nell'abisso. Le catene sono spesse come 
-                            torso umano. E vibrano. Leggermente. Come se qualcosa, molto sotto, stesse... 
-                            <em>respirando</em>.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                            Guardi giù. Bioluminescenza proveniente da profondità mostra... movimento. Forme enormi. 
-                            <strong>Tentacoli</strong>? <strong>Serpenti</strong>? È impossibile dire - sono troppo 
-                            grandi per comprendere scala.
-                        </p>
-                        <p style="margin-top: 20px; font-size: 1.2em; font-weight: bold; color: var(--blood-red);">
-                            Questo è dove dorme il <strong>GUARDIANO</strong>.
+                            Al centro della città, un secondo pozzo circondato da <strong>4 Pilastri Runici</strong> monumentali. Catene scendono nell'acqua. Qualcosa di colossale si muove là sotto.
                         </p>
                     </div>
                     
                     <div class="warning-box">
                         <h4>💀 TENUTA CHECK FINALE</h4>
-                        <p>
-                            <strong>Istinto CD 18 (molto difficile):</strong>
-                        </p>
-                        <ul>
-                            <li><strong>Successo:</strong> 3 segmenti (terrore controllato)</li>
-                            <li><strong>Fallimento:</strong> 5 segmenti + <strong>Fuggi</strong> (devi fare Presenza 
-                            CD 15 per non correre via immediatamente)</li>
-                            <li><strong>Fallimento Critico:</strong> Tenuta piena + Conseguenza + <strong>Catatonia</strong> 
-                            1 minuto (paralizzato dalla paura cosmica)</li>
-                        </ul>
+                        <p><strong>Istinto CD 18:</strong> Successo 3 segmenti | Fallimento 5 segmenti + Fuga</p>
                     </div>
-                    
-                    <h4>🎭 SCELTA CRITICA: COSA FARE?</h4>
-                    
-                    <div class="info-box">
-                        <p style="font-size: 1.05em;">
-                            I PG hanno 4 opzioni principali. Ciascuna porta a finale diverso:
-                        </p>
-                    </div>
-                    
-                    <div class="stat-block">
-                        <h4>OPZIONE 1: SIGILLARE L'ABISSO</h4>
-                        <p>
-                            <strong>Piano:</strong> Usare dinamite (da Brandt) per far collassare tunnel ingresso. 
-                            Intrappolare Guardiano e città per sempre.
-                        </p>
-                        <p style="margin-top: 10px;"><strong>Requisiti:</strong></p>
-                        <ul>
-                            <li>6 candelotti dinamite (hanno questi)</li>
-                            <li>Conoscenza (Ingegneria) CD 15 per piazzare cariche correttamente</li>
-                            <li>Agilità CD 14 per uscire prima che crollo li seppellisca</li>
-                        </ul>
-                        <p style="margin-top: 10px;"><strong>Rischi:</strong></p>
-                        <ul>
-                            <li>Se falliscono Ingegneria: crollo insufficiente, Guardiano può ancora uscire</li>
-                            <li>Se falliscono Agilità: sepolti vivi (3d10 danni, devono scavare via)</li>
-                            <li>Guardiano sente preparativi - può attaccare PRIMA che finiscano setup</li>
-                        </ul>
-                        <p style="margin-top: 10px;"><strong>Outcome:</strong> Vedi Epilogo A</p>
-                    </div>
-                    
-                    <div class="stat-block">
-                        <h4>OPZIONE 2: RISVEGLIARE & COMBATTERE</h4>
-                        <p>
-                            <strong>Piano:</strong> Scendere nell'Abisso, confrontare Guardiano direttamente, 
-                            tentare ucciderlo.
-                        </p>
-                        <p style="margin-top: 10px;"><strong>Avvertimento:</strong></p>
-                        <p style="font-style: italic; color: var(--blood-red);">
-                            Questa è opzione <strong>quasi suicida</strong>. Il Guardiano è Great Old One minore - 
-                            non può essere "ucciso" in senso tradizionale. Al massimo, PG possono <em>ferirlo 
-                            abbastanza</em> da farlo ritornare in letargo per secoli.
-                        </p>
-                        <p style="margin-top: 10px;"><strong>Requisiti:</strong></p>
-                        <ul>
-                            <li>Tutto party deve fare Presenza CD 16 per non fuggire terrorizzati</li>
-                            <li>Boss fight (vedi stats sotto)</li>
-                            <li>Almeno 1 PG con Tomo Luminoso (per comprende debolezza)</li>
-                        </ul>
-                        <p style="margin-top: 10px;"><strong>Outcome:</strong> Vedi Epilogo B</p>
-                    </div>
-                    
-                    <div class="stat-block">
-                        <h4>OPZIONE 3: FUGA IMMEDIATA</h4>
-                        <p>
-                            <strong>Piano:</strong> "Questo è oltre le nostre capacità. Usciamo. Adesso."
-                        </p>
-                        <p style="margin-top: 10px;"><strong>Esecuzione:</strong></p>
-                        <ul>
-                            <li>Sprint attraverso tunnel (Costituzione CD 12 o 1 Fatica da esaurimento)</li>
-                            <li>Ibridi li inseguono (1d4+2 Ibridi Avanzati, 2 encounter durante fuga)</li>
-                            <li>Risalita pozzo (Agilità CD 13, fallimento = caduta 20m, 6d6 danni)</li>
-                        </ul>
-                        <p style="margin-top: 10px;"><strong>Conseguenze:</strong></p>
-                        <ul>
-                            <li>Guardiano rimane dormiente... per ora</li>
-                            <li>Ibridi continuano emergere da Dry Eye (1-2 al mese)</li>
-                            <li>Tra 1d6 mesi, Guardiano si sveglierà completamente</li>
-                        </ul>
-                        <p style="margin-top: 10px;"><strong>Outcome:</strong> Vedi Epilogo C</p>
-                    </div>
-                    
-                    <div class="stat-block">
-                        <h4>OPZIONE 4: SACRIFICIO RITUALE</h4>
-                        <p>
-                            <strong>Piano:</strong> Il Sacerdote (se ancora vivo/negoziato) spiega: Guardiano 
-                            può essere <strong>placato</strong> con sacrificio volontario. Una vita umana 
-                            donata consapevolmente = 100 anni letargo extra.
-                        </p>
-                        <p style="margin-top: 10px;"><strong>Requisiti:</strong></p>
-                        <ul>
-                            <li>1 PG accetta volontariamente (o NPC se presente)</li>
-                            <li>Rituale sull'altare Tempio (10 minuti)</li>
-                            <li>Sacrificato viene <strong>trasformato completamente</strong> e assorbito in 
-                            Guardiano (morte permanente, no resurrezione possibile)</li>
-                        </ul>
-                        <p style="margin-top: 10px;"><strong>Opzione eroica/orrifica:</strong></p>
-                        <p style="font-style: italic;">
-                            Un PG con Tenuta completamente piena, consapevole che sta perdendo sanità, potrebbe 
-                            <em>scegliere</em> questo. "Almeno la mia morte ha significato. Salvo altri 100 anni 
-                            di pace."
-                        </p>
-                        <p style="margin-top: 10px;"><strong>Outcome:</strong> Vedi Epilogo D</p>
-                    </div>
-                    
-                    <h4>👹 BOSS FIGHT: IL GUARDIANO</h4>
-                    
-                    <p style="font-size: 1.05em;">
-                        Se PG scelgono Opzione 2 (combattere), affrontano questo:
-                    </p>
-                    
-                    <div class="horror-box">
-                        <h4>🐙 IL GUARDIANO - Great Old One Minore</h4>
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            <strong>Descrizione:</strong> È... impossibile descrivere completamente. Forma principale 
-                            è <strong>serpente colossale</strong> (30m lungo, 3m diametro) con scaglie nere lucenti. 
-                            Ma da corpo emergono <strong>dozzine di tentacoli</strong> (ciascuno 10m lungo). E la 
-                            <strong>testa</strong>... non è serpente. È qualcosa di più antico. Occhi (7 totali) 
-                            brillano con intelligenza aliena. Bocca piena di zanne circolari, come lamprea gigante. 
-                            Quando apre bocca, vedi... <em>galassie</em>? No. Impossibile. Ma giuri di aver visto 
-                            stelle.
-                        </p>
+
+                    <div class="stat-block" style="border: 3px solid var(--blood-red);">
+                        <h3 style="color: var(--blood-red);">🐙 IL GUARDIANO (Great Old One Minore)</h3>
+                        <p><strong>Descrizione:</strong> Un orrore cefalopode alto 30 metri. La sua pelle di pietra nera sembra impenetrabile, ma i quattro Pilastri Runici pulsano intorno a lui, fornendogli energia vitale.</p>
                         
-                        <p style="margin-top: 20px;"><strong>⚠️ LIMITAZIONI BOSS FIGHT:</strong></p>
-                        <p style="font-style: italic;">
-                            Questo NON è combattimento "normale". Il Guardiano è <strong>Great Old One</strong> - 
-                            entità semi-divina. Non può essere "ucciso", solo <strong>ferito abbastanza</strong> 
-                            da costringerlo ritornare in letargo. Obiettivo: ridurlo a 0 HP = ritorna dormiente.
-                        </p>
-                        
-                        <p style="margin-top: 20px;"><strong>Stats:</strong></p>
+                        <p style="margin-top: 15px;"><strong>Stats Riviste:</strong></p>
                         <ul>
-                            <li>HP: 200 (boss massivo)</li>
-                            <li>Armatura: 6 (scaglie antiche invulnerabili)</li>
-                            <li>Velocità: 15m nuoto, 6m terra (goffo fuori acqua)</li>
-                            <li><strong>Azioni: 3 per turno</strong> (leggendario)</li>
+                            <li><strong>HP:</strong> 140 (Boss Puzzle)</li>
+                            <li><strong>Armatura:</strong> 5 (Scaglie antiche)</li>
+                            <li><strong>Velocità:</strong> 15m nuoto, 6m terra</li>
+                            <li><strong>Rigenerazione Vincolata:</strong> Recupera 20 HP a inizio turno <em>SOLO SE</em> almeno 1 Pilastro Runico è attivo.</li>
                         </ul>
                         
-                        <p style="margin-top: 20px;"><strong>Attacchi:</strong></p>
+                        <p style="margin-top: 15px;"><strong>Attacchi:</strong></p>
                         <ul>
-                            <li><strong>Morso Colossale:</strong> +10, 4d10+8 perforanti, reach 3m</li>
-                            <li><strong>Tentacolo Slam:</strong> +9, 3d8+6 contundenti, reach 10m, può afferrare 
-                            (Forza CD 18 per liberarsi)</li>
-                            <li><strong>Constrict:</strong> Se afferra target, automaticamente 3d10 contundenti 
-                            inizio turno + Soffocato</li>
-                            <li><strong>Coda Sweep:</strong> +10, tutti in linea 15m: 3d12+8 contundenti + push 6m 
-                            + Prono</li>
+                            <li><strong>Morso Colossale:</strong> +10, 4d10+8 perforanti</li>
+                            <li><strong>Tentacolo Slam:</strong> +9, 3d8+6 contundenti (afferra, Forza CD 18 libera)</li>
+                            <li><strong>Coda Sweep:</strong> +10, linea 15m, 3d12+8 + Prono</li>
                         </ul>
-                        
-                        <p style="margin-top: 20px;"><strong>Abilità Speciali:</strong></p>
+
+                        <div class="info-box" style="background: white; border: 1px solid black; margin: 10px 0;">
+                            <h4>🧩 OBIETTIVO SECONDARIO: I 4 PILASTRI RUNICI</h4>
+                            <p>Quattro colonne di ossidiana circondano l'abisso. Brillano quando il Guardiano si rigenera.</p>
+                            <ul>
+                                <li><strong>HP Pilastro:</strong> 15 (Vulnerabile a esplosivi/contundenti)</li>
+                                <li><strong>Effetto Distruzione:</strong> Quando un Pilastro viene distrutto (0 HP), il Guardiano urla di dolore, perde la Rigenerazione per 1 round e subisce <strong>10 Danni Veri</strong> automatici.</li>
+                            </ul>
+                        </div>
+
+                        <p style="margin-top: 15px;"><strong>Regole Speciali "Anti-Spugna":</strong></p>
                         <ul>
-                            <li><strong>Presenza Cosmica:</strong> Aura 30m - tutti nemici Svantaggio attacchi, 
-                            Svantaggio Tenuta, devono fare Presenza CD 17 inizio turno o Spaventati</li>
-                            <li><strong>Rigenerazione Divina:</strong> Recupera 25 HP inizio turno se in acqua 
-                            (quasi impossibile killare in ambiente nativo)</li>
-                            <li><strong>Pelle Aliena:</strong> Resistenza a tutti danni fisici normali (danni 
-                            dimezzati). <strong>Vulnerabile</strong> a fuoco/esplosivo/argentato (+50% danni)</li>
-                            <li><strong>Sguardo Folle:</strong> (1 azione) Target entro 18m: Istinto CD 19 o 
-                            Tenuta +5 segmenti + Confuso 1d4 round</li>
-                            <li><strong>Urlo Ultrasonico Devastante:</strong> (2 azioni) Tutti entro 20m: 
-                            Costituzione CD 18 o 6d8 sonici + Storditi 3 round + Sanguinamento orecchie (1d4 
-                            danni/round, Svantaggio Percezione)</li>
-                            <li><strong>Evoca Servitori:</strong> (3 azioni, 1/combattimento) 2d4 Ibridi Avanzati 
-                            emergono da acqua, arrivano in 1 round</li>
-                            <li><strong>Forma Acquatica Perfetta:</strong> In acqua profonda, Velocità 24m, 
-                            Vantaggio tutti attacchi, può respirare indefinitamente</li>
-                            <li><strong>Immortalità:</strong> Se ridotto a 0 HP, corpo si dissolve in acqua. 
-                            Essence ritorna in letargo profondo (non risvegliabile per 100-500 anni)</li>
-                        </ul>
-                        
-                        <p style="margin-top: 20px;"><strong>Tattiche (3 Fasi):</strong></p>
-                        
-                        <p><strong>FASE 1 (HP 200-120):</strong></p>
-                        <ul>
-                            <li>Emerge da acqua lentamente (dramatic entrance)</li>
-                            <li>Usa Sguardo Folle per rompere party morale</li>
-                            <li>Attacca con Tentacoli da distanza, afferra PG isolati</li>
-                            <li>Se qualcuno fa danno significativo (20+ singolo hit): focus su quel PG</li>
-                        </ul>
-                        
-                        <p style="margin-top: 10px;"><strong>FASE 2 (HP 120-60):</strong></p>
-                        <ul>
-                            <li>Si arrabbia, emerge completamente</li>
-                            <li>Usa Urlo Ultrasonico (party-wide damage)</li>
-                            <li>Constrict multipli PG simultaneamente (3 azioni = 3 afferrati)</li>
-                            <li>Evoca Servitori per overwhelm</li>
-                        </ul>
-                        
-                        <p style="margin-top: 10px;"><strong>FASE 3 (HP <60):</strong></p>
-                        <ul>
-                            <li>Ferito, terrorizzato (prima volta in millenni!)</li>
-                            <li>Ritira verso acqua (rigenerazione massiva)</li>
-                            <li>Attacchi disperati: Coda Sweep ripetuti, Morso colossale</li>
-                            <li>A HP 20: Tenta <strong>fuga finale</strong> tuffandosi in Abisso (PG hanno 1 
-                            round per finishing blow o scappa)</li>
+                            <li><strong>Dinamite:</strong> Un candelotto di dinamite piazzato su un Pilastro o sul Guardiano infligge automaticamente il danno massimo (24 danni) e distrugge i Pilastri all'istante.</li>
+                            <li><strong>Fase Disperata (sotto 40 HP):</strong> Il Guardiano spacca i Pilastri rimanenti per assorbirli. Guadagna +1 Azione ma perde la Rigenerazione per sempre.</li>
                         </ul>
                     </div>
                     
                     <div class="tip-box">
-                        <h4>💡 COME RENDERE FIGHT VINCIBILE</h4>
-                        <p>
-                            Questo boss è DESIGNED per essere quasi impossibile. Ma ci sono ways per PG per 
-                            avere chance:
-                        </p>
+                        <h4>💡 STRATEGIA PER I GIOCATORI</h4>
+                        <p>Questo non è un sacco di HP da picchiare. È un puzzle.</p>
                         <ul>
-                            <li><strong>Tomo Luminoso:</strong> Chi ha letto sa che Guardiano ha <strong>punto 
-                            debole</strong>: centro massa, dove tutti tentacoli si connettono. Attaccare là = 
-                            ignora Armatura. (Richiede Agilità CD 16 per colpire punto specifico)</li>
-                            <li><strong>Dinamite:</strong> Usare tutti 6 candelotti simultaneamente = 18d6 fuoco 
-                            (×1.5 per vulnerabilità = ~135 danni media) - massive damage</li>
-                            <li><strong>Ambiente:</strong> Pilastri con catene possono essere abbattuti (Forza CD 
-                            18) - cadono su Guardiano (4d10 danni + Prono)</li>
-                            <li><strong>Kiting fuori acqua:</strong> Guardiano è MOLTO più debole su terra (no 
-                            rigenerazione, movimento lento). Attirarlo fuori da lago = viable strategy</li>
-                            <li><strong>Focus fire:</strong> Se TUTTO party concentra su punto debole con armi 
-                            potenziate (argentate, esplosive) = possono fare 60-80 danni/round</li>
-                        </ul>
-                        <p style="margin-top: 15px; font-weight: bold;">
-                            Anche con tutto questo, aspettati almeno 1 PG down/morto. Questo è FINAL BOSS.
-                        </p>
-                    </div>
-                    
-                    <div class="warning-box">
-                        <h4>⚠️ SE PG PERDONO BOSS FIGHT</h4>
-                        <p>
-                            Se Guardiano riduce TUTTO party a 0 HP o li costringe a fuga:
-                        </p>
-                        <ul>
-                            <li>Guardiano NON li uccide - li <strong>trasforma</strong>. Diventano Ibridi Avanzati 
-                            permanentemente (new character time, o epilogo tragico)</li>
-                            <li>Guardiano, ora completamente sveglio, inizia <strong>espandere influenza</strong>. 
-                            Dry Eye è solo inizio. (Setup per sequel campaign se volete)</li>
-                            <li><strong>BAD ENDING</strong> - ma narrativamente potente</li>
+                            <li><strong>Distruggere i Pilastri:</strong> È la priorità per fermare la cura.</li>
+                            <li><strong>Usare la Dinamite:</strong> Premia i giocatori che l'hanno conservata.</li>
                         </ul>
                     </div>
                 </section>
                 
-                <!-- EPILOGHI -->
                 <section id="epilogo" class="section">
                     <h2>🎬 EPILOGHI MULTIPLI</h2>
                     
-                    <p class="large">
-                        Basato su scelte PG e outcome finale, lo scenario ha 5 possibili epiloghi:
-                    </p>
-                    
                     <div class="stat-block">
-                        <h4>📜 EPILOGO A: SIGILLATO</h4>
-                        <p><strong>Trigger:</strong> PG sigillano Abisso con dinamite, collassano tunnel</p>
-                        
-                        <p style="margin-top: 15px; font-style: italic; font-size: 1.05em; line-height: 1.8;">
-                            L'esplosione echeggia attraverso città antica. Pareti crollano. Soffitti cedono. 
-                            Correte attraverso tunnel mentre tutto crolla dietro di voi. Acqua vi insegue come 
-                            predatore liquido.
-                        </p>
-                        <p style="margin-top: 15px; font-style: italic; font-size: 1.05em; line-height: 1.8;">
-                            Emergete finalmente nel deserto all'alba. Pozzo dietro voi è... sparito. Collassato 
-                            completamente. Solo depressione nella sabbia resta.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                            <strong>Settimane dopo:</strong> Dry Eye lentamente torna normale. Nessun altro ibrido 
-                            emerge. Cittadini iniziano ricostruire. Brandt paga in pieno ($600). Father Miguel 
-                            benedice terreno sopra pozzo, erige croce monumentale.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                            Ma tu... <strong>tu sai</strong>. Là sotto, intrappolato ma non morto, il Guardiano 
-                            dorme. E un giorno - forse tra 1000 anni, forse 100 - qualcuno scaverà abbastanza 
-                            profondo. E si risveglierà.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                            Per ora, il mondo è salvo. Grazie a te.
-                        </p>
-                        
-                        <p style="margin-top: 20px;"><strong>Reward XP:</strong> Livello completo (2500 XP)</p>
-                        <p><strong>Conseguenze Long-term:</strong> PG guadagnano reputazione "Monster Hunters". 
-                        Altre città con "problemi strani" iniziano chiamarli.</p>
+                        <h4>📜 EPILOGO A: SIGILLATO (Vittoria Tattica)</h4>
+                        <p><strong>Trigger:</strong> Usare esplosivi per far crollare l'ingresso dell'Abisso.</p>
+                        <p>Il Guardiano è intrappolato. Il mondo è salvo... per ora. Reward: 2500 XP.</p>
                     </div>
                     
                     <div class="stat-block">
-                        <h4>📜 EPILOGO B: VITTORIA PYRRICA</h4>
-                        <p><strong>Trigger:</strong> PG sconfiggono Guardiano in combat, lo riducono a 0 HP</p>
-                        
-                        <p style="margin-top: 15px; font-style: italic; font-size: 1.05em; line-height: 1.8;">
-                            Con ultimo colpo disperato, colpisci punto debole. Il Guardiano <strong>urla</strong> - 
-                            suono che fa tremare roccia stessa. Poi... si dissolve. Letteralmente. Corpo diventa 
-                            acqua, si scioglie nel lago. Solo gli occhi - quelle pietre preziose nere - affondano 
-                            lentamente nell'abisso.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                            Silenzio. Completo. La città è... morta. Bioluminescenza si spegne. Acqua smette di 
-                            pulsare. È finita.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                            Ma il costo... [Conta PG morti/trasformati]. E quelli che sono sopravvissuti... non 
-                            saranno mai più gli stessi. <strong>Tenuta permanentemente ridotta -2</strong> per tutti 
-                            (trauma indelebile).
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                            <strong>Mesi dopo:</strong> Dry Eye prospera. Pozzo è sigillato con cemento e maledizioni. 
-                            Ma tu... sogni ancora. Vedi l'Abisso ogni notte. E a volte giuri di sentire... il 
-                            Guardiano che chiama dal profondo. Dormiente. Ma non morto. Mai morto.
-                        </p>
-                        
-                        <p style="margin-top: 20px;"><strong>Reward XP:</strong> Doppio livello (5000 XP) - 
-                        achievement incredibile</p>
-                        <p><strong>Conseguenze Long-term:</strong> PG diventano leggende. "Quelli che uccisero 
-                        un dio." Ma fame crescente - altri Great Old Ones sentono. Ti vengono a cercare.</p>
+                        <h4>📜 EPILOGO B: UCCISIONE (Vittoria Eroica)</h4>
+                        <p><strong>Trigger:</strong> Ridurre il Guardiano a 0 HP.</p>
+                        <p>L'entità si dissolve. La città muore. Vittoria totale, ma cicatrici eterne. Reward: 5000 XP.</p>
                     </div>
                     
                     <div class="stat-block">
-                        <h4>📜 EPILOGO C: FUGA</h4>
-                        <p><strong>Trigger:</strong> PG fuggono senza sigillare o combattere</p>
-                        
-                        <p style="margin-top: 15px; font-style: italic; font-size: 1.05em; line-height: 1.8;">
-                            Corri. Non guardi indietro. Ibridi ti inseguono ma riesci scuoterli. Emergere nel 
-                            deserto sembra miracolo.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                            <strong>Settimane dopo:</strong> Dry Eye continua avere "problemi". 1-2 ibridi al mese. 
-                            Cittadini imparano convivere - cacciano creature, bruciano corpi. Diventa... normale.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                            <strong>6 mesi dopo:</strong> Leggi nei giornali: "Strani Eventi a Yuma." "Creature 
-                            Marine in Tucson." "Epidemia Misteriosa a Phoenix." Sta... <strong>espandendo</strong>. 
-                            Lentamente. Ma inesorabilmente.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                            Hai comprato tempo. Ma non hai fermato niente. E ora... è troppo grande per te. 
-                            Servirebbe esercito. O miracolo.
-                        </p>
-                        
-                        <p style="margin-top: 20px;"><strong>Reward XP:</strong> Metà livello (1000 XP) - 
-                        sopravvissuto ma non risolto</p>
-                        <p><strong>Conseguenze Long-term:</strong> Senso colpa. Hook per sequel (tornare finire 
-                        lavoro). Il West sta diventando... diverso.</p>
-                    </div>
-                    
-                    <div class="stat-block">
-                        <h4>📜 EPILOGO D: SACRIFICIO</h4>
-                        <p><strong>Trigger:</strong> PG (o NPC) accetta sacrificio rituale volontario</p>
-                        
-                        <p style="margin-top: 15px; font-style: italic; font-size: 1.05em; line-height: 1.8;">
-                            [Nome PG] sale sull'altare. Guarda gli alleati. Sorride - triste ma risoluto. "Portatemi 
-                            a casa. Un giorno. Quando il mondo è pronto per verità."
-                        </p>
-                        <p style="margin-top: 15px; font-style: italic; font-size: 1.05em; line-height: 1.8;">
-                            Il Sacerdote canta in lingua antica. [Nome] si trasforma - ma diversamente. Non diventa 
-                            mostro. Diventa... <strong>parte del Guardiano</strong>. Coscienza umana diventa sigillo 
-                            vivente. Essenza impedisce risveglio completo.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                            <strong>100 anni dopo:</strong> (Epilogo narrato) Dry Eye è città prospera. Nessuno 
-                            ricorda orrore. Ma sotto, nella città sommersa, una parte di [Nome] ancora vive. 
-                            Dormente. Guardiano. Prigioniero volontario. Eroe che nessuno ricorderà.
-                        </p>
-                        
-                        <p style="margin-top: 20px;"><strong>Reward XP:</strong> Livello completo (2500 XP) + 
-                        Legacy permanente</p>
-                        <p><strong>Player sacrificato:</strong> Nuovo character, MA può creare "discendente" 
-                        di PG sacrificato (100 anni futuro campaign) che eredita parte memoria ancestrale.</p>
-                    </div>
-                    
-                    <div class="stat-block">
-                        <h4>📜 EPILOGO E: DANNAZIONE (Bad Ending)</h4>
-                        <p><strong>Trigger:</strong> PG perdono boss fight completamente</p>
-                        
-                        <p style="margin-top: 15px; font-style: italic; font-size: 1.05em; line-height: 1.8;">
-                            Il Guardiano ti afferra. Tentacoli ti trascinano sott'acqua. Provi urlare ma acqua 
-                            riempie polmoni. E poi... <strong>cambiamento</strong>. Non è doloroso. È... 
-                            <em>liberatorio</em>. Senti te stesso dissolversi. Riformarsi. Diventare... perfetto.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                            <strong>Mesi dopo:</strong> Dry Eye è città fantasma. Abitanti o morti o trasformati. 
-                            Il Guardiano controlla network ibridi che espandono territorio. Arizona sta cadendo.
-                        </p>
-                        <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                            E tu... tu sei uno di loro ora. Servi il Guardiano. Felicemente. Non ricordi perché 
-                            hai resistito. L'oceano ha chiamato. E tu hai risposto.
-                        </p>
-                        
-                        <p style="margin-top: 20px;"><strong>Reward XP:</strong> 0 - campagna finita (total party wipe)</p>
-                        <p><strong>Opzione:</strong> GM può offrire "Sequel Campaign" dove giocano NUOVI eroi che 
-                        devono fermare i loro vecchi PG (ora ibridi boss-tier). Dark ma epic.</p>
+                        <h4>📜 EPILOGO C: SACRIFICIO (Tragedia)</h4>
+                        <p><strong>Trigger:</strong> Un PG si offre volontario al rituale.</p>
+                        <p>Il PG diventa il nuovo sigillo vivente. Morte permanente, ma salva il party. Reward: 2500 XP + Legacy.</p>
                     </div>
                 </section>
                 
-                <!-- NPC & MOSTRI -->
-                <section id="npc" class="section">
-                    <h2>👥 NPC PRINCIPALI & REFERENCE</h2>
+                <section id="handout" class="section no-print">
+                    <h2>📄 HANDOUTS IMMERSIVI (Stampabili)</h2>
                     
-                    <div class="grid-auto-wide">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">CORNELIUS BRANDT</h3>
-                            </div>
-                            <div class="card-body">
-                                <p><strong>Ruolo:</strong> Ingegnere Southern Pacific, Employer</p>
-                                <p><strong>Età:</strong> 52 • <strong>Aspetto:</strong> Calvo, baffi grigi, occhiaie profonde</p>
-                                <p><strong>Personalità:</strong> Pragmatico, nervoso (ha visto troppo), generoso con paga</p>
-                                <p><strong>Stats (se combat):</strong> HP 18, Armatura 0, Revolver +3 (2d6)</p>
-                                <p><strong>Motivazioni:</strong> Salvare geometri, proteggere reputazione ferrovia</p>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">FATHER MIGUEL SANTOS</h3>
-                            </div>
-                            <div class="card-body">
-                                <p><strong>Ruolo:</strong> Prete locale, Spiritual guide</p>
-                                <p><strong>Età:</strong> 45 • <strong>Aspetto:</strong> Tonaca nera usurata, croce argentata</p>
-                                <p><strong>Personalità:</strong> Fede testata ma resistente, compassionevole</p>
-                                <p><strong>Stats:</strong> HP 24, Armatura 1, <strong>Benedizione</strong> (come Sarah)</p>
-                                <p><strong>Hook:</strong> 🔗 Conosce Sarah da corrispondenza, si fidano mutuamente</p>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">SILAS MORROW</h3>
-                            </div>
-                            <div class="card-body">
-                                <p><strong>Ruolo:</strong> Barista Dry Well Saloon</p>
-                                <p><strong>Età:</strong> 60 • <strong>Aspetto:</strong> Cicatrice viso, sempre asciuga bicchieri</p>
-                                <p><strong>Personalità:</strong> Cinico, saw everything, informatore affidabile</p>
-                                <p><strong>Stats:</strong> HP 22, Armatura 0, Shotgun +5 (3d8)</p>
-                                <p><strong>Quote:</strong> "Quinto ibrido questa settimana. Dovevate sigillare il pozzo."</p>
-                            </div>
-                        </div>
-                        
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">TOMMY GARRETT (Pre-Trasformazione)</h3>
-                            </div>
-                            <div class="card-body">
-                                <p><strong>Ruolo:</strong> Geometra scomparso, Jack's "fratello"</p>
-                                <p><strong>Età:</strong> 28 • <strong>Aspetto:</strong> Biondo, energico, ora...</p>
-                                <p><strong>Ultimo Visto:</strong> 4 giorni fa, delirante su "città sotto sabbia"</p>
-                                <p><strong>Destino:</strong> Ibrido Avanzato in Nido (Area D tunnel)</p>
-                                <p><strong>Momento Jack:</strong> Riconoscimento 1 secondo, poi attacca (trauma +2 Tenuta)</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <h3>🐙 Quick Reference Mostri</h3>
-                    
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Creatura</th>
-                                <th>HP</th>
-                                <th>Armatura</th>
-                                <th>Key Ability</th>
-                                <th>Incontro</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Ibrido Iniziale</strong></td>
-                                <td>35</td>
-                                <td>2</td>
-                                <td>Rigenerazione 5, Grido Ultrasonico</td>
-                                <td>Atto I, Scena 3</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Ibrido Avanzato</strong></td>
-                                <td>45</td>
-                                <td>3</td>
-                                <td>Rigenerazione 8, Pack Tactics</td>
-                                <td>Atto II, Area D (×3)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Il Sacerdote</strong></td>
-                                <td>80</td>
-                                <td>4</td>
-                                <td>Multiattack, Evoca Ibridi, Veleno Trasformativo</td>
-                                <td>Città, Tempio</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Il Guardiano</strong></td>
-                                <td>200</td>
-                                <td>6</td>
-                                <td>3 Azioni/turno, Rigenerazione 25, Presenza Cosmica</td>
-                                <td>Atto III, Abisso</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
+                    <script>
+                        function printDiv(divId) {
+                            var content = document.getElementById(divId).innerHTML;
+                            var myWindow = window.open('', '', 'width=800,height=600');
+                            myWindow.document.write('<html><head><title>Print Handout</title>');
+                            myWindow.document.write('<link rel="stylesheet" href="assets/css/main-styles.css">'); 
+                            myWindow.document.write('<style>body{font-family: "Courier New", monospace; padding: 40px;} .handout-paper{border:none !important; background:white !important;} button{display:none;}</style>');
+                            myWindow.document.write('</head><body>');
+                            myWindow.document.write(content);
+                            myWindow.document.write('</body></html>');
+                            myWindow.document.close();
+                            myWindow.focus();
+                            setTimeout(function(){myWindow.print(); myWindow.close();}, 500);
+                        }
+                    </script>
                 
-                <!-- HANDOUTS -->
-                <section id="handout" class="section">
-                    <h2>📄 HANDOUTS PER GIOCATORI</h2>
-                    
-                    <div class="info-box">
-                        <p style="font-size: 1.05em;">
-                            Questi documenti possono essere stampati e dati ai giocatori durante gameplay per 
-                            aumentare immersione.
-                        </p>
-                    </div>
-                    
-                    <div class="stat-block">
-                        <h4>📧 HANDOUT #1: TELEGRAMMA BRANDT</h4>
-                        <div style="border: 3px double black; padding: 20px; background: rgba(212, 165, 116, 0.2); 
-                            font-family: 'Special Elite', cursive;">
-                            <p style="text-align: center; margin: 0;"><strong>⚡ WESTERN UNION TELEGRAM ⚡</strong></p>
-                            <p style="text-align: center; margin: 5px 0; font-size: 0.9em;">DATA: 15 MARZO 1886</p>
-                            <hr style="border: 1px solid black; margin: 10px 0;">
-                            <p style="margin: 10px 0;">DESTINATARIO: [NOMI PG]</p>
-                            <p style="margin: 10px 0;">MITTENTE: CORNELIUS BRANDT - SOUTHERN PACIFIC RR</p>
-                            <hr style="border: 1px solid black; margin: 10px 0;">
-                            <p style="line-height: 2;">
+                    <div class="stat-block" id="handout-1-container">
+                        <div id="handout-1" class="handout-paper" style="
+                            background: #fdfbf7; 
+                            border: 1px solid #d3d3d3; 
+                            padding: 40px; 
+                            font-family: 'Courier New', monospace; 
+                            color: #333;
+                            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+                            
+                            <div style="border-bottom: 2px double black; padding-bottom: 10px; margin-bottom: 20px; text-align: center;">
+                                <h2 style="margin: 0; letter-spacing: 2px;">WESTERN UNION TELEGRAPH COMPANY</h2>
+                                <p style="margin: 5px 0; font-size: 0.8em;">UFFICIO DI TUCSON, TERRITORIO ARIZONA</p>
+                            </div>
+                            
+                            <p><strong>DATA:</strong> 15 MARZO 1886</p>
+                            <p><strong>A:</strong> AGENTI INCARICATI</p>
+                            <p><strong>DA:</strong> CORNELIUS BRANDT - SOUTHERN PACIFIC RR</p>
+                            
+                            <hr style="border: 1px solid #333; margin: 20px 0;">
+                            
+                            <p style="font-size: 1.2em; line-height: 1.6; font-weight: bold;">
                                 STOP NECESSITO ASSISTENZA IMMEDIATA STOP<br>
                                 TEAM GEOMETRI SCOMPARSO DRY EYE ARIZONA STOP<br>
                                 TROVATO POZZO ANTICO PROFONDITA SCONOSCIUTA STOP<br>
@@ -1584,245 +331,19 @@
                                 POPOLAZIONE AGITATA PARLA DI MALEDIZIONI STOP<br>
                                 PAGO BENE ARRIVATE PRESTO STOP
                             </p>
-                            <p style="margin: 15px 0; font-weight: bold;">CORNELIUS BRANDT</p>
-                            <p style="font-size: 0.85em; font-style: italic;">Allegato: Assegno $200 anticipo</p>
+                            
+                            <hr style="border: 1px solid #333; margin: 20px 0;">
+                            <p style="font-size: 0.8em; text-align: right;">TARIFFA PAGATA - URGENTE</p>
                         </div>
-                    </div>
-                    
-                    <div class="stat-block" style="margin-top: 30px;">
-                        <h4>📖 HANDOUT #2: DIARIO TOMMY GARRETT (Excerpts)</h4>
-                        <div style="border: 2px solid var(--rust); padding: 20px; background: rgba(139, 69, 19, 0.1);">
-                            <p style="font-family: 'Special Elite', cursive; margin-bottom: 20px;">
-                                <strong>12 Marzo:</strong> Trovato qualcosa incredibile oggi. Pozzo perfettamente 
-                                circolare nel deserto. Pietra nera levigata. Cornelius dice che è "anomalia geologica". 
-                                Ma io... sento qualcosa. Come se mi chiamasse.
-                            </p>
-                            <hr>
-                            <p style="font-family: 'Special Elite', cursive; margin: 20px 0;">
-                                <strong>13 Marzo:</strong> Siamo scesi 50 metri. Trovato incisioni. Non sono spagnole. 
-                                Non sono native. Sono... più antiche. Molto più antiche. Peter dice che deliro ma 
-                                GIURO che le incisioni si muovono quando non le guardo direttamente.
-                            </p>
-                            <hr>
-                            <p style="font-family: 'Special Elite', cursive; margin: 20px 0;">
-                                <strong>14 Marzo:</strong> Sogni strani. Città di pietra nera. Sott'acqua. Creature 
-                                che nuotano attraverso rovine. Mi chiamano. "Torna a casa." Ma come può essere casa? 
-                                Non sono mai stato là.
-                            </p>
-                            <hr>
-                            <p style="font-family: 'Special Elite', cursive; margin: 20px 0; font-size: 1.1em;">
-                                <strong>15 Marzo (ultima entry):</strong> Non dovevamo scendere. Ma DEVO tornare. 
-                                Sento oceano nelle ossa. Sento... chiamata. Peter e altri sono d'accordo. Scendiamo 
-                                stanotte. Senza dire a Cornelius. Deve rimanere segreto. CITTÀ INTERA QUI SOTTO. 
-                                Aspettando. Dio è morto qui.
-                            </p>
-                            <p style="margin-top: 20px; text-align: right; font-style: italic;">
-                                [Resto pagina coperto da disegni ossessivi di spirali]
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="stat-block" style="margin-top: 30px;">
-                        <h4>📜 HANDOUT #3: ESTRATTO DIARIO MISSIONARIO 1780</h4>
-                        <div style="border: 2px solid var(--blood-red); padding: 20px; background: rgba(139, 0, 0, 0.05);">
-                            <p style="font-family: 'Special Elite', cursive; font-style: italic;">
-                                <em>[Traduzione dallo spagnolo antico]</em>
-                            </p>
-                            <p style="font-family: 'Special Elite', cursive; margin-top: 15px; line-height: 1.9;">
-                                "16 Luglio 1780 - I nativi mi hanno avvertito. Dicono che sotto queste terre giace 
-                                una città antica, anteriore agli uomini. Parlano di un grande pozzo, 'l'occhio secco', 
-                                dove il mare antico toccava il cielo. Proibiscono di avvicinarsi.
-                            </p>
-                            <p style="font-family: 'Special Elite', cursive; margin-top: 15px; line-height: 1.9;">
-                                Ho visto i sogni. Strade di pietra nera. Creature che non sono pesci né uomini. 
-                                E qualcosa di più grande, dormiente nell'abisso.
-                            </p>
-                            <p style="font-family: 'Special Elite', cursive; margin-top: 15px; line-height: 1.9; 
-                                font-size: 1.1em; font-weight: bold;">
-                                Dio mi perdoni, ma credo che ci siano dèi più antichi del nostro.
-                            </p>
-                            <p style="margin-top: 20px; text-align: right; font-style: italic;">
-                                - Padre Esteban Rodriguez
-                            </p>
-                        </div>
+                        <button onclick="printDiv('handout-1')" style="margin-top: 10px; padding: 8px 15px; cursor: pointer;">🖨️ Stampa Telegramma</button>
                     </div>
                 </section>
-                
-                <!-- GM GUIDE -->
-                <section id="gm-guide" class="section">
-                    <h2>🎭 GUIDA PER IL GAME MASTER</h2>
-                    
-                    <h3>📋 Pacing & Session Breakdown</h3>
-                    
-                    <div class="info-box">
-                        <h4>Struttura Consigliata (4-6 Sessioni)</h4>
-                        <ul style="font-size: 1.05em; line-height: 1.7;">
-                            <li><strong>Sessione 1:</strong> Arrivo Dry Eye + Investigation + Primo Orrore (4h)</li>
-                            <li><strong>Sessione 2:</strong> Discesa Pozzo + Tunnel Area A-C (3-4h)</li>
-                            <li><strong>Sessione 3:</strong> Nido Ibrido (Area D) + Ingresso Città (3-4h)</li>
-                            <li><strong>Sessione 4:</strong> Esplorazione Città (Zone 1-3) (4h)</li>
-                            <li><strong>Sessione 5:</strong> Tempio Sacerdote + Decisione Abisso (3h)</li>
-                            <li><strong>Sessione 6:</strong> Boss Fight + Epilogo (2-3h)</li>
-                        </ul>
-                        <p style="margin-top: 15px; font-style: italic;">
-                            <strong>Nota:</strong> Giocatori veloci potrebbero finire in 4 sessioni. Giocatori RP-heavy 
-                            potrebbero richiedere 7-8. Adatta secondo stile gruppo.
-                        </p>
-                    </div>
-                    
-                    <h3>🎯 Gestire Tenuta Mentale</h3>
-                    
-                    <div class="tip-box">
-                        <h4>💡 Best Practices</h4>
-                        <ul>
-                            <li><strong>Traccia Visualmente:</strong> Usa tracker condiviso (whiteboard, Roll20) così 
-                            tutti vedono deterioramento</li>
-                            <li><strong>Descrivi Effetti:</strong> Non solo "riempi 2 segmenti" - descrivi: "Le mani 
-                            ti tremano. Senti sudore freddo. Per un momento, giuri di vedere tentacoli negli angoli 
-                            della visione."</li>
-                            <li><strong>Conseguenze sono RP:</strong> Quando PG subisce Conseguenza, lavora CON 
-                            giocatore per incorporare in roleplay (non punizione, ma storytelling)</li>
-                            <li><strong>Recupero è Prezioso:</strong> Momenti safe per recuperare Tenuta sono rari - 
-                            rendili significativi (campfire talk, preghiera, vulnerability)</li>
-                        </ul>
-                    </div>
-                    
-                    <h3>⚔️ Balancing Combat</h3>
-                    
-                    <div class="warning-box">
-                        <h4>Questo Scenario è DIFFICILE</h4>
-                        <p>
-                            È designed per livello 3-5 con challenge alto. Aspettati:
-                        </p>
-                        <ul>
-                            <li>1-2 PG down per combattimento maggiore</li>
-                            <li>Risorse (HP, munizioni, lanterne) strettamente gestite</li>
-                            <li>Boss fight richiede strategia ottimale per vincere</li>
-                        </ul>
-                        <p style="margin-top: 15px;">
-                            <strong>Se troppo difficile:</strong> Riduci HP nemici 20%, aumenta Tenuta max +2, 
-                            dai hint su debolezze.<br>
-                            <strong>Se troppo facile:</strong> Aggiungi 1-2 ibridi extra, riduci tempo riposi.
-                        </p>
-                    </div>
-                    
-                    <h3>🎬 Atmosfera & Horror</h3>
-                    
-                    <div class="tip-box">
-                        <h4>Creare Dread Autentico</h4>
-                        <ul>
-                            <li><strong>Descrizioni Sensoriali:</strong> Non solo vista - odori (sale, decomposizione), 
-                            suoni (gocciolare, echi distorti), touch (acqua fredda, muco)</li>
-                            <li><strong>Pause Strategiche:</strong> Dopo rivelazioni maggiori (città, Guardiano), 
-                            fai pausa 5-10 secondi silenzio. Lascia peso affondare.</li>
-                            <li><strong>Musica Ambient:</strong> Considera Cryo Chamber, Atrium Carceri per soundtrack</li>
-                            <li><strong>Lighting:</strong> Se in persona, gioca con dim lights durante scene sotterranee</li>
-                            <li><strong>Slow Reveal:</strong> Non mostrare tutto subito - buildup è chiave horror</li>
-                        </ul>
-                    </div>
-                    
-                    <h3>🔗 Connessioni Volume I</h3>
-                    
-                    <div class="info-box">
-                        <h4>Se Giocato Dopo Silver Hollow</h4>
-                        <p>
-                            Riferimenti da integrare:
-                        </p>
-                        <ul>
-                            <li>PG riconoscono <strong>pattern</strong> - "Abbiamo visto questo prima. Culto. 
-                            Entità antica. Same playbook."</li>
-                            <li>Father Miguel può chiedere Sarah di Silver Hollow - "Ho sentito voci. Jeremiah... 
-                            è vero?"</li>
-                            <li>Doc ha <strong>campioni</strong> da Vol I - può comparare tessuti ibridi (stessa 
-                            fonte aliena)</li>
-                            <li>Jack è più <strong>pragmatico</strong> - "Sappiamo come finisce. Sigillarlo. Adesso."</li>
-                        </ul>
-                        <p style="margin-top: 15px;">
-                            Ma anche: Veterani hanno <strong>overconfidence</strong> pericolosa - "Abbiamo ucciso 
-                            mostri prima." Poi incontrano Guardiano e capiscono: questo è DIVERSO. Più grande. 
-                            Più antico.
-                        </p>
-                    </div>
-                    
-                    <h3>🎲 Random Encounters (Opzionale)</h3>
-                    
-                    <div class="stat-block">
-                        <h4>Tunnel Sommersi - Incontri Casuali</h4>
-                        <p>
-                            Se PG impiegano troppo tempo tunnel (3+ ore in-game), tira 1d6 ogni 30min:
-                        </p>
-                        <ul>
-                            <li><strong>1-2:</strong> Niente (tensione cresce)</li>
-                            <li><strong>3-4:</strong> Suono inquietante (grido distante, splash, echi strani) - 
-                            Tenuta +1</li>
-                            <li><strong>5:</strong> 1d2 Ibridi Avanzati pattugliano - possibile evitare (Furtività 
-                            CD 14)</li>
-                            <li><strong>6:</strong> Trappola ambientale (crollo, allagamento improvviso, corrente 
-                            - Agilità CD 13 o 2d6 danni)</li>
-                        </ul>
-                    </div>
-                    
-                    <h3>📊 Rewards & Progression</h3>
-                    
-                    <div class="info-box">
-                        <h4>XP & Loot</h4>
-                        <p><strong>XP Totale Scenario:</strong> 2500-5000 (dipende da epilogo)</p>
-                        <p><strong>Treasure:</strong></p>
-                        <ul>
-                            <li>$600 da Brandt (pagamento contratto)</li>
-                            <li>Tomo Luminoso (artefatto unico - valore inestimabile ma maledetto)</li>
-                            <li>Pietre preziose occhi Guardiano (se sconfitto) - 7× pietre nere, $500 ciascuna 
-                            MA maledette (portano incubi)</li>
-                            <li>Equipaggiamento geometri (zaini, strumenti, mappe) - $200 valore totale</li>
-                        </ul>
-                        <p style="margin-top: 15px;"><strong>Magic Items (Opzionale):</strong></p>
-                        <ul>
-                            <li><strong>Amuleto Protezione Marina:</strong> +2 tiri salvezza vs creature marine, 
-                            ma attira loro attenzione</li>
-                            <li><strong>Coltello Argentato Benedetto:</strong> 1d8+2d6 vs non-morti/aberrazioni</li>
-                        </ul>
-                    </div>
-                </section>
-                
-                <!-- CONCLUSIONE -->
-                <div style="background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--night-black) 100%); 
-                    color: white; padding: 60px 40px; margin-top: 60px; text-align: center;">
-                    <h2 style="color: var(--seafoam); font-size: 2.5em;">✅ SCENARIO COMPLETO!</h2>
-                    <p style="font-size: 1.3em; max-width: 900px; margin: 30px auto; line-height: 1.8;">
-                        <strong>Volume II: Where the Ocean Meets the Dust</strong> è ora completamente giocabile 
-                        dall'inizio alla fine. Include:
-                    </p>
-                    <ul style="text-align: left; max-width: 700px; margin: 30px auto; font-size: 1.15em; line-height: 1.9;">
-                        <li>✅ <strong>3 Atti completi</strong> (15-18 ore gameplay)</li>
-                        <li>✅ <strong>9 Scene dettagliate</strong> con descrizioni atmosferiche</li>
-                        <li>✅ <strong>4 Boss fights</strong> con stats complete Daggerheart</li>
-                        <li>✅ <strong>5 Epiloghi multipli</strong> basati su scelte PG</li>
-                        <li>✅ <strong>3 Handouts stampabili</strong> per immersione</li>
-                        <li>✅ <strong>Guida GM completa</strong> con tips pacing/atmosfera</li>
-                        <li>✅ <strong>Tenuta Mental system</strong> integrato (20+ checkpoints)</li>
-                        <li>✅ <strong>Scelte morali significative</strong> con conseguenze reali</li>
-                    </ul>
-                    <p style="font-size: 1.2em; margin-top: 40px; font-weight: bold;">
-                        🌊 Pronto per portare i tuoi giocatori nelle profondità del terrore cosmico! 🌊
-                    </p>
-                    <p style="font-size: 1em; margin-top: 30px; color: var(--seafoam);">
-                        Gunsmoke & Dread Collection | Compatible with Daggerheart™ SRD 1.0
-                    </p>
-                </div>
-                
+
             </main>
         </div>
         
-        <!-- Footer -->
         <div class="footer">
-            <p style="font-size: 0.9em;">
-                <strong>Volume II: Where the Ocean Meets the Dust</strong><br>
-                Gunsmoke & Dread Collection | Compatible with Daggerheart™ SRD 1.0
-            </p>
-            <p style="margin-top: 20px; font-size: 0.85em; color: var(--seafoam);">
-                <a href="../INDEX.html" style="color: var(--alien-green);">← Torna all'Index</a> | 
-                <a href="../core/Weird-West-Rules.html" style="color: var(--alien-green);">Weird West Rules →</a>
-            </p>
+            <p><strong>Volume II: Where the Ocean Meets the Dust</strong> - Gunsmoke & Dread Collection</p>
         </div>
         
     </div>
