@@ -11,14 +11,14 @@
         .container { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
         .sidebar, .nav-links, .no-print, button { display: none !important; }
         .content { column-count: 2; column-gap: 1cm; column-rule: 1px solid #ccc; width: 100% !important; }
-        h1, h2, .hero, .footer { column-span: all; text-align: center; page-break-after: avoid; }
-        .stat-block, .info-box, .warning-box, .horror-box { break-inside: avoid; border: 2px solid #000 !important; background: #f5f5f5 !important; color: black !important; margin-bottom: 15px; text-align: justify; }
+        h1, h2, h3, .hero, .footer { column-span: all; text-align: center; page-break-after: avoid; }
+        .stat-block, .info-box, .warning-box, .horror-box { break-inside: avoid; border: 2px solid #000 !important; background: #f5f5f5 !important; color: black !important; margin-bottom: 20px; text-align: justify; padding: 15px; }
         pre { white-space: pre-wrap; word-wrap: break-word; font-size: 8pt; }
     </style>
 </head>
 <body class="theme-ocean">
     <div class="container">
-        <div class="hero" style="background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--teal-dark) 100%);">
+        <div class="hero">
             <h1 style="font-size: 4em;">🌊 VOLUME II</h1>
             <h2 style="color: var(--seafoam); font-size: 2.5em;">Where the Ocean Meets the Dust</h2>
             <p class="subtitle">Scenario Sequel per Daggerheart™ | Livello 3-5</p>
@@ -27,153 +27,205 @@
         <div class="sidebar-layout">
             <main class="content">
                 <section id="overview" class="section">
-                    <h2>📖 Overview</h2>
-                    <p class="large">Sei mesi dopo gli eventi di <strong>Silver Hollow</strong> (Volume I), i PG sono chiamati nell'Arizona per investigare la scomparsa di un team di geometri ferroviari nel deserto di <strong>Dry Eye</strong>. Quello che trovano è un <strong>antico pozzo</strong> che scende nelle profondità della terra - e un segreto terrificante: milioni di anni fa, questo deserto era il fondo di un <strong>oceano alieno</strong>, e qualcosa giace ancora dormiente nelle sue rovine sommerse.</p>
+                    <h2>📖 Premessa Narrativa</h2>
+                    <p>Sei mesi sono passati dagli orrori di Silver Hollow, ma le cicatrici mentali non sono guarite. Un nuovo telegramma vi strappa alla vostra inquieta quotidianità: un team di geometri della ferrovia è svanito nel nulla a <strong>Dry Eye</strong>, in Arizona. Lì, nel cuore del deserto più arido, è stato scoperto un pozzo impossibile che scende verso un oceano che non dovrebbe esistere da milioni di anni.</p>
                     <div class="warning-box"><p><strong>Avviso Contenuti:</strong> Claustrofobia, Body Horror Intenso, Annegamento, Temi Nichilisti.</p></div>
                 </section>
                 
                 <section id="setup" class="section">
-                    <h2>🎣 Setup & Ganci</h2>
-                    <p><strong>Data:</strong> Marzo 1886. <strong>Luogo:</strong> Dry Eye, Arizona - città mineraria quasi abbandonata.</p>
+                    <h2>🎣 Il Viaggio verso il Nulla</h2>
+                    <p>Mentre il treno attraversa il deserto di Sonora, notate come il paesaggio cambi in modo sottile e inquietante. Le rocce non sembrano erose dal vento, ma levigate dall'acqua. Le dune di sabbia si stendono piatte, ondulate come un fondale marino prosciugato di recente. È un presagio geologico: qui, in un tempo dimenticato, regnava l'acqua e sta aspettando di tornare.</p>
                     <div class="horror-box">
                         <p><strong>TELEGRAMMA:</strong> "NECESSITO ASSISTENZA IMMEDIATA STOP TEAM GEOMETRI SCOMPARSO STOP TROVATO POZZO ANTICO PROFONDITA SCONOSCIUTA STOP STRANI SUONI DAL SOTTOSUOLO STOP PAGO BENE ARRIVATE PRESTO - CORNELIUS BRANDT"</p>
                     </div>
-                    <p><strong>Il Viaggio:</strong> Durante il viaggio in treno, il paesaggio cambia. Da desertico "normale" a stranamente <em>piatto</em>. Rocce erose dall'acqua. A volte sembra di vedere onde, ma è solo un miraggio... giusto?</p>
                 </section>
                 
                 <section id="atto1" class="section">
-                    <h2>🏜️ ATTO I: DRY EYE</h2>
+                    <h2>🏜️ ATTO I: LA CITTÀ DI SALE</h2>
                     
                     <h3>Scena 1: Arrivo a Dry Eye</h3>
-                    <div class="stat-block">
-                        <p>Il treno rallenta. Non c'è vera stazione, solo una piattaforma marcia. La "città" è una fila di edifici semidistrutti. Ma quello che colpisce è il <strong>silenzio</strong>. Nessun cane, nessun bambino. E c'è un <strong>odore</strong>. Salmastro. Di sale e decomposizione. Impossibile, l'oceano è a 300 miglia.</p>
-                        <p><strong>Percezione CD 12:</strong> Molte case hanno strani simboli sugli stipiti (protezioni). Alcune hanno finestre murate dall'<em>interno</em>.</p>
-                    </div>
+                    <p>Dry Eye non è una città, è uno scheletro sbiancato dal sole. Gli edifici sono gusci vuoti, il legno crepato dal calore. Ma la cosa peggiore è l'odore: un fetore denso, salmastro, di alghe in decomposizione e pesce marcio, completamente impossibile a centinaia di chilometri dal mare. I pochi abitanti rimasti vi osservano da dietro finestre sbarrate, con occhi acquosi e terrorizzati.</p>
+                    <p>Incontrate <strong>Cornelius Brandt</strong> all'accampamento ferroviario. È un uomo distrutto, che beve per dimenticare ciò che ha visto. Vi mostra mappe geologiche che non hanno senso: indicano un'enorme cavità piena d'acqua proprio sotto i vostri piedi.</p>
 
-                    <h4>Le Location Principali (Originali)</h4>
-                    <div class="card">
-                        <p><strong>THE DRY WELL SALOON:</strong> Mezzo vuoto. Silas Morrow (60, barista cinico) dice: <em>"I geometri sono scomparsi 3 giorni fa. Erano accampati vicino a 'l'Occhio'. Tommy Garrett tornava qui ogni sera, beveva e parlava di una città sotto la sabbia."</em></p>
-                    </div>
-                    <div class="card">
-                        <p><strong>VECCHIA MISSIONE:</strong> Padre Miguel Santos (45, esausto). Il crocifisso è capovolto (dice che si gira da solo). Ha un diario del 1780 che parla del "tempio del serpente sotto le dune".</p>
-                    </div>
-                    <div class="card">
-                        <p><strong>ACCAMPAMENTO FERROVIA:</strong> Cornelius Brandt (52, nervoso). Mostra mappe con un'anomalia geologica massiva. Offre equipaggiamento (dinamite, corde) e paga.</p>
-                    </div>
-
-                    <h3>Scena 3: Primo Orrore - Notte</h3>
+                    <h3>Scena 3: L'Orrore nella Notte</h3>
                     <div class="horror-box">
-                        <p style="font-style: italic;">Vi svegliate alle 3 AM. Non per un rumore, ma per un silenzio totale. Il vento si è fermato. L'aria è umida. Poi... un grido acuto dalla strada.</p>
+                        <p style="font-style: italic;">Nel cuore della notte, un grido lacera il silenzio del deserto. Poi, un suono umido, viscido, di qualcosa di pesante che si trascina sulla sabbia asciutta. Uscendo, vedete una figura. Sembra umana, ma si muove male, come se le sue articolazioni fossero liquide.</p>
                     </div>
+                    
                     <div class="stat-block">
-                        <h4>PETER WALSH (Ibrido Iniziale)</h4>
-                        <p>Era un geometra. Ora la sua pelle è verde-grigia, dita palmate, branchie sul collo. Occhi neri. Gorgoglia.</p>
-                        <p><strong>PF:</strong> 35 | <strong>Armatura:</strong> 2 | <strong>Attacco:</strong> +6</p>
-                        <p><strong>Speciale:</strong> Rigenerazione 5 PF (se tocca acqua).</p>
+                        <h4>PETER WALSH (L'Ibrido)</h4>
+                        <p>Quello che avete davanti era un geometra. Ora è una parodia oscena dell'umanità. La sua pelle è viscida e verde-grigia, le dita sono unite da membrane, e sul collo pulsano branchie sanguinanti. Vi guarda con occhi neri, privi di iride, e boccheggia come un pesce fuor d'acqua.</p>
+                        <p><strong>PF:</strong> 35 | <strong>Attacco:</strong> +6 | <strong>Speciale:</strong> Rigenerazione 5 PF (se tocca acqua).</p>
                     </div>
                 </section>
                 
                 <section id="atto2" class="section">
-                    <h2>🕳️ ATTO II: IL POZZO</h2>
+                    <h2>🕳️ ATTO II: NELL'ABISSO</h2>
                     
-                    <h3>Scena 4: La Discesa</h3>
+                    <h3>Scena 4: L'Occhio del Deserto</h3>
                     <div class="horror-box">
-                        <p style="font-style: italic;">Camminate nel deserto fino all'alba. Trovate <strong>L'OCCHIO</strong>. Un pozzo perfettamente circolare, 10 metri di diametro, di pietra nera levigata aliena. Buio totale. Dal fondo sale il rumore di onde.</p>
+                        <p style="font-style: italic;">Seguendo le tracce dell'ibrido, trovate il pozzo all'alba. È un cerchio perfetto di pietra nera, liscia come vetro, fredda al tatto anche sotto il sole cocente. Guardando dentro, l'oscurità è assoluta, ma dal fondo risale il rumore inconfondibile e ritmico della risacca. L'oceano sta respirando là sotto.</p>
                     </div>
                     
                     <div class="info-box" style="background: #fafafa; border: 2px solid #003366;">
-                        <h3>🗺️ MAPPA SOTTOSUOLO</h3>
+                        <h3>🗺️ MAPPA DEL SOTTOSUOLO</h3>
                         <pre style="font-family: 'Courier New', monospace; font-weight: bold; font-size: 0.7em; overflow-x: hidden;">
  [POZZO DRY EYE]
-      | (150m Corde)
+      |
+      | (Discesa vertiginosa di 150m)
       v
- [LAGO SOTTERRANEO] -> (Immersione)
+ [IL LAGO SOTTERRANEO]
       |
- [AREA A: GALLERIA]
+ +----+----+
+ |         |
+[NIDO DEGLI IBRIDI] [SALA DEGLI ECHI]
+(Zona di Combattimento) (Zona di Indizi)
+ |         |
+      [CROLLO]
+         |
+  [LA CITTÀ SOMMERSA]
       |
- [AREA B: SALA ECHI] --(Crollo)--> [AREA C: LABIRINTO]
-      |
- [AREA D: NIDO IBRIDI]
-      |
- [AREA E: PORTALE CITTÀ]
+ +----+----+
+ |         |
+[TEMPIO DEL SACERDOTE] [BIBLIOTECA ALIENA]
       |
       v
- [CITTÀ SOMMERSA]
+ [ABISSO DEL GUARDIANO]
+ (Il confronto finale)
                         </pre>
                     </div>
 
-                    <h3>🌊 I Tunnel Sommersi (Aree Dettagliate)</h3>
+                    <h3>🌊 Esplorazione dei Tunnel</h3>
                     
                     <h4>AREA A: La Galleria d'Ingresso</h4>
-                    <p>Emergete dall'immersione in un tunnel orizzontale. Acqua salata fino alla vita. Corrente leggera verso l'interno. Pareti di pietra nera con incisioni a spirale. Pilastri decorativi scolpiti con forme di vita marina aliena. Trovate lo zaino di un geometra con il Diario di Tommy (vedi Handout).</p>
+                    <p>Dopo l'immersione nel lago sotterraneo, emergete in un tunnel orizzontale. L'acqua gelida e salata vi arriva alla vita. Le pareti sono decorate con bassorilievi di creature marine impossibili. Una corrente innaturale vi spinge verso l'interno, come se il tunnel vi stesse invitando a entrare.</p>
 
                     <h4>AREA B: La Sala degli Echi</h4>
-                    <p>Una camera naturale enorme, 30m diametro. Acustica aliena: ogni voce echeggia 7 volte, distorcendosi in parole sconosciute. Al centro, un obelisco nero emerge dall'acqua, coperto di mappe stellari di 500 milioni di anni fa.</p>
-                    
+                    <p>Il tunnel si apre in una caverna naturale immensa. L'acustica qui è aliena: ogni suono viene amplificato e distorto, trasformandosi in parole in una lingua sconosciuta che sembrano sussurrare i vostri nomi. Al centro, un obelisco nero emerge dall'acqua, coperto di incisioni che ricordano mappe stellari di ere dimenticate.</p>
+
                     <h4>AREA C: Il Labirinto Crollato</h4>
-                    <p>Sezione parzialmente crollata. Macerie ovunque. Puzzle di navigazione:
+                    <p>Uscendo dalla Sala, entrate in una sezione di tunnel parzialmente crollata. Macerie instabili bloccano la via principale. Dovete scegliere come procedere:</p>
                     <ul>
-                        <li><strong>Strettoia:</strong> Fessura 50cm. Agilità CD 13 o incastrati (claustrofobia).</li>
-                        <li><strong>Tunnel Instabile:</strong> Movimento silenzioso o crollo (3d6 danni).</li>
-                        <li><strong>Via Sommersa:</strong> Apnea prolungata (Costituzione CD 14).</li>
+                        <li><strong>La Strettoia:</strong> Una fessura di appena 50cm. Richiede una prova di Agilità CD 13 o si rimane incastrati, rischiando un attacco di panico.</li>
+                        <li><strong>Il Tunnel Instabile:</strong> Più ampio ma pericolante. Richiede movimento silenzioso. Fallire causa un crollo (3d6 danni contundenti).</li>
+                        <li><strong>La Via Sommersa:</strong> Un tunnel laterale completamente allagato. Richiede un'apnea prolungata (Costituzione CD 14).</li>
                     </ul>
-                    </p>
 
                     <h4>AREA D: Il Nido degli Ibridi</h4>
                     <div class="stat-block">
-                        <p>Camera circolare coperta di muco bioluminescente. Uova traslucide sulle pareti. Al centro, su una roccia, i resti dei geometri... o ciò che sono diventati.</p>
-                        <p><strong>NEMICI: 3x IBRIDI AVANZATI (Veterani)</strong></p>
-                        <p><strong>PF:</strong> 45 | <strong>Armatura:</strong> 3 | <strong>Rigenerazione:</strong> 8 PF</p>
-                        <p><strong>Tattica:</strong> Tattiche di Branco. 1 emerge, 2 attaccano da sott'acqua.</p>
+                        <p>Una camera circolare coperta di muco bioluminescente. Uova traslucide pulsano sulle pareti come cuori malati. Qui trovate i resti dei geometri scomparsi... o ciò che sono diventati. Tre figure emergono dall'acqua: <strong>Ibridi Avanzati (Veterani)</strong>. Hanno scaglie dure, denti da squalo e cacciano in branco, cercando di trascinarvi sott'acqua per affogarvi.</p>
                     </div>
 
                     <h4>AREA E: Il Portale della Città</h4>
-                    <p>Il tunnel finisce davanti a un portale monumentale alto 20 metri. Oltre l'arco, luce verdastra e suono di oceano aperto. È l'ingresso alla città.</p>
+                    <p>Il tunnel termina bruscamente davanti a un arco monumentale, alto venti metri, scolpito nella roccia viva con forme non euclidee. Oltre il portale, una luce verdastra illumina uno spazio impossibile. Il rumore dell'oceano qui è assordante.</p>
 
                     <h3>🏛️ Scena 6: La Città Sommersa</h3>
                     <div class="horror-box">
                         <h4>👁️ LA RIVELAZIONE</h4>
-                        <p style="font-style: italic;">Il tunnel si apre su uno spazio impossibile. Una città di pietra nera, metà sommersa in un lago infinito, con edifici alti 50 metri e geometrie non euclidee che fanno male agli occhi. L'acqua pulsa come se fosse viva. Questa città era qui prima dell'umanità.</p>
+                        <p style="font-style: italic;">
+                            Emergete in uno spazio ciclopico. Davanti a voi, illuminata da una luce spettrale, si estende una metropoli aliena. Torri di ossidiana si innalzano storte verso il soffitto di roccia, ponti sospesi su abissi d'acqua senza fondo. Le geometrie di questo luogo fanno male agli occhi: gli angoli sembrano sbagliati, le prospettive ingannevoli. Questa città esisteva milioni di anni prima che il primo uomo camminasse sulla terra.
+                        </p>
                     </div>
                 </section>
                 
                 <section id="atto3" class="section">
-                    <h2>⚔️ ATTO III: IL CONFRONTO FINALE</h2>
+                    <h2>⚔️ ATTO III: IL RISVEGLIO</h2>
                     
                     <div class="horror-box">
-                        <h4>L'ABISSO CENTRALE</h4>
-                        <p>Al centro della città, un secondo pozzo sprofonda nell'oscurità. È circondato da <strong>4 Pilastri Runici</strong> massicci. Catene titaniche scendono nell'acqua. Qualcosa di colossale si muove là sotto.</p>
+                        <p>Al centro della città sommersa, un secondo pozzo sprofonda ancora più giù nell'oscurità. È incatenato da <strong>4 Pilastri Runici</strong> massicci che vibrano di energia. Le catene titaniche che scendono nell'acqua si tendono. Qualcosa di colossale si sta svegliando là sotto.</p>
                     </div>
 
                     <div class="stat-block" style="border: 3px solid var(--blood-red);">
-                        <h3 style="color: var(--blood-red);">🐙 IL GUARDIANO (Boss Enigma)</h3>
-                        <p><strong>Descrizione:</strong> Un orrore cefalopode alto 30 metri. Tentacoli, scaglie nere, occhi multipli che riflettono stelle aliene.</p>
+                        <h3 style="color: var(--blood-red);">🐙 IL GUARDIANO (Puzzle Boss)</h3>
+                        <p><strong>Descrizione:</strong> Un orrore antico, una massa di tentacoli e scaglie nere alta trenta metri. I suoi occhi riflettono costellazioni sconosciute. Non potete ucciderlo con i semplici proiettili, dovete essere più astuti.</p>
                         
-                        <p><strong>PF:</strong> 140 | <strong>Armatura:</strong> 5 | <strong>Attacchi:</strong> 3 per turno (+10 colpire)</p>
+                        <p style="margin-top: 15px;"><strong>Statistiche del Boss:</strong></p>
+                        <ul>
+                            <li><strong>PF:</strong> 140 (Ribilanciato per il gruppo)</li>
+                            <li><strong>Armatura:</strong> 5 (Scaglie impenetrabili)</li>
+                            <li><strong>Velocità:</strong> Letale in acqua (15m), goffo a terra (6m)</li>
+                            <li><strong>Rigenerazione Vincolata:</strong> Il mostro recupera 20 PF a inizio turno, ma <em>SOLO SE</em> almeno un Pilastro Runico è ancora intatto.</li>
+                        </ul>
                         
                         <div class="info-box" style="background: white; border: 1px solid black; margin: 10px 0;">
-                            <h4>🧩 MECCANICA: I 4 PILASTRI</h4>
-                            <p>Il Guardiano recupera <strong>20 PF/turno</strong> finché i pilastri sono attivi.</p>
-                            <p><strong>Obiettivo:</strong> Distruggere i Pilastri (PF 15). Ogni pilastro rotto infligge <strong>10 Danni</strong> al boss e ferma la cura per 1 turno.</p>
+                            <h4>🧩 OBIETTIVO: I 4 PILASTRI RUNICI</h4>
+                            <p>Quattro colonne di ossidiana pulsano di energia, nutrendo il mostro.</p>
+                            <ul>
+                                <li><strong>PF Pilastro:</strong> 15 (Vulnerabili agli esplosivi)</li>
+                                <li><strong>Effetto Distruzione:</strong> Ogni volta che un pilastro crolla, il Guardiano urla, perde la sua Rigenerazione per un turno e subisce <strong>10 Danni Veri</strong> dallo shock.</li>
+                            </ul>
                         </div>
-                        <p><strong>Dinamite:</strong> Un candelotto piazzato su un Pilastro o sul Boss infligge <strong>DANNO MASSIMO (24)</strong>.</p>
+                    
+                        <p style="margin-top: 15px;"><strong>L'Uso della Dinamite:</strong></p>
+                        <ul>
+                            <li>Un candelotto piazzato strategicamente su un Pilastro o sul mostro infligge automaticamente il <strong>Danno Massimo (24)</strong>, distruggendo le strutture all'istante.</li>
+                        </ul>
                     </div>
                 </section>
                 
                 <section id="epilogo" class="section">
                     <h2>🎬 GLI EPILOGHI</h2>
-                    <div class="stat-block"><h4>A: IL SIGILLO</h4><p>Fate crollare l'ingresso con la dinamite. Il Guardiano è intrappolato. Vittoria amara. (2500 XP)</p></div>
-                    <div class="stat-block"><h4>B: L'UCCISIONE</h4><p>L'entità si dissolve in liquido nero. La città muore. Siete leggende, ma con cicatrici eterne. (5000 XP)</p></div>
-                    <div class="stat-block"><h4>C: IL SACRIFICIO</h4><p>Un PG o NPC diventa il sigillo vivente tramite rituale. Morte eroica permanente. (2500 XP)</p></div>
+                    <div class="stat-block">
+                        <h4>📜 FINALE A: IL SIGILLO (Vittoria Tattica)</h4>
+                        <p>Fate crollare l'ingresso dell'abisso con gli esplosivi. Il Guardiano urla mentre tonnellate di roccia lo seppelliscono nuovamente. Il mondo è salvo, ma sapete che è solo una prigione temporanea. (2500 XP)</p>
+                    </div>
+                    <div class="stat-block">
+                        <h4>📜 FINALE B: L'UCCISIONE (Vittoria Eroica)</h4>
+                        <p>Contro ogni previsione, abbattete la bestia. Il suo corpo si dissolve in un liquido nero e fetido. La città muore con lui. Siete eroi, ma le cicatrici nella vostra mente non guariranno mai. (5000 XP)</p>
+                    </div>
+                    <div class="stat-block">
+                        <h4>📜 FINALE C: IL SACRIFICIO (Tragedia)</h4>
+                        <p>Uno di voi capisce che l'unico modo per fermarlo per sempre è diventare il nuovo carceriere. Il PG si sacrifica nel rituale, fondendo la sua coscienza con la città per tenere il mostro addormentato. Morte eroica. (2500 XP)</p>
+                    </div>
                 </section>
 
                 <section id="handout" class="section no-print">
-                    <h2>📄 DISPENSE (Stampabili)</h2>
-                    <script>function printDiv(id){var w=window.open('','','width=600,height=400');w.document.write('<html><body style="font-family:Courier New;padding:40px;">'+document.getElementById(id).innerHTML+'</body></html>');w.document.close();w.print();w.close();}</script>
+                    <h2>📄 DOCUMENTI DI GIOCO (Stampabili)</h2>
                     
-                    <div class="stat-block" id="h1"><div style="font-family:'Courier New'; border:1px solid #ccc; padding:20px; background:#fdfbf7;"><h3>WESTERN UNION</h3><p>STOP NECESSITO ASSISTENZA STOP GEOMETRI SCOMPARSI STOP TROVATO POZZO ANTICO STOP STRANI SUONI STOP</p><p>- C. BRANDT</p></div><button onclick="printDiv('h1')">🖨️ Stampa</button></div>
+                    <script>
+                        function printDiv(divId) {
+                            var content = document.getElementById(divId).innerHTML;
+                            var myWindow = window.open('', '', 'width=800,height=600');
+                            myWindow.document.write('<html><head><title>Print Handout</title>');
+                            myWindow.document.write('<link rel="stylesheet" href="assets/css/main-styles.css">'); 
+                            myWindow.document.write('<style>body{font-family: "Courier New", monospace; padding: 40px;} .handout-paper{border:none !important; background:white !important;} button{display:none;}</style>');
+                            myWindow.document.write('</head><body>');
+                            myWindow.document.write(content);
+                            myWindow.document.write('</body></html>');
+                            myWindow.document.close();
+                            myWindow.focus();
+                            setTimeout(function(){myWindow.print(); myWindow.close();}, 500);
+                        }
+                    </script>
+                
+                    <div class="stat-block" id="handout-1-container">
+                        <div id="handout-1" class="handout-paper" style="background: #fdfbf7; border: 1px solid #d3d3d3; padding: 40px; font-family: 'Courier New', monospace; color: #333;">
+                            <h2 style="text-align:center; border-bottom: 2px double black;">WESTERN UNION TELEGRAPH</h2>
+                            <p><strong>DATA:</strong> 15 MARZO 1886</p>
+                            <p style="font-weight: bold; font-size: 1.2em; margin-top: 20px; line-height: 1.6;">
+                                STOP NECESSITO ASSISTENZA IMMEDIATA STOP<br>
+                                TEAM GEOMETRI SCOMPARSO STOP<br>
+                                TROVATO POZZO ANTICO PROFONDITA SCONOSCIUTA STOP<br>
+                                STRANI SUONI DAL SOTTOSUOLO STOP<br>
+                                POPOLAZIONE AGITATA PARLA DI MALEDIZIONI STOP<br>
+                                PAGO BENE ARRIVATE PRESTO STOP
+                            </p>
+                            <p style="text-align: right; margin-top: 30px;">- CORNELIUS BRANDT</p>
+                        </div>
+                        <button onclick="printDiv('handout-1')" style="margin-top: 10px; padding: 8px 15px; cursor: pointer;">🖨️ Stampa Telegramma</button>
+                    </div>
                     
-                    <div class="stat-block" id="h2" style="margin-top:20px;"><div style="font-family:'Georgia'; font-style:italic; border:1px dashed #8b4513; padding:20px; background:#fffef0;"><h3>DIARIO DI TOMMY</h3><p>12 Marzo: Trovato pozzo incredibile. Pietra nera.<br>13 Marzo: Incisioni si muovono.<br>15 Marzo: Sento l'oceano. Scendiamo stanotte. DIO È MORTO QUI.</p></div><button onclick="printDiv('h2')">🖨️ Stampa</button></div>
+                    <div class="stat-block" id="handout-2-container" style="margin-top: 30px;">
+                        <div id="handout-2" class="handout-paper" style="background: #fffef0; border: 1px dashed #8b4513; padding: 40px; font-family: 'Georgia', serif; font-style: italic; color: #2a2a2a;">
+                            <h3 style="text-align: center; font-variant: small-caps;">Dal Diario di Tommy Garrett</h3>
+                            <p><strong>12 Marzo:</strong> Trovato qualcosa incredibile oggi. Pozzo perfettamente circolare nel deserto. Pietra nera levigata. Cornelius dice che è "anomalia geologica". Ma io... sento qualcosa. Come se mi chiamasse.</p>
+                            <p><strong>13 Marzo:</strong> Siamo scesi 50 metri. Trovato incisioni. Non sono spagnole. Non sono native. Sono... più antiche. Peter dice che deliro ma GIURO che le incisioni si muovono quando non le guardo direttamente.</p>
+                            <p style="font-size: 1.1em; font-weight: bold; color: #8b0000;">15 Marzo (Ultima voce):</p>
+                            <p>Non dovevamo scendere. Ma DEVO tornare. Sento oceano nelle ossa. Sento... chiamata. Peter e altri sono d'accordo. Scendiamo stanotte. Senza dire a Cornelius.</p> 
+                            <p style="font-size: 1.2em; text-align: center; margin-top: 20px;">CITTÀ INTERA QUI SOTTO.<br>DIO È MORTO QUI.</p>
+                        </div>
+                        <button onclick="printDiv('handout-2')" style="margin-top: 10px; padding: 8px 15px; cursor: pointer;">🖨️ Stampa Diario</button>
+                    </div>
                 </section>
             </main>
         </div>
