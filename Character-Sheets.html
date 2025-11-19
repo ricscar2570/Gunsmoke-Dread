@@ -2,47 +2,159 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Schede Personaggi</title>
+    <title>Schede Personaggi - Gunsmoke & Dread</title>
     <link rel="stylesheet" href="assets/css/main-styles.css">
+    <link rel="stylesheet" href="assets/css/volume-themes.css">
     <style>
-        .character-sheet { border: 4px solid #8b4513; padding: 20px; margin: 20px 0; page-break-inside: avoid; }
-        .header { background: #8b4513; color: white; padding: 10px; }
-        .trait-box { border: 1px dashed #8b4513; padding: 10px; margin: 10px 0; background: #fff; }
+        .character-sheet { background: rgba(212, 165, 116, 0.1); border: 4px solid var(--rust); border-radius: 12px; padding: 30px; margin: 40px 0; page-break-inside: avoid; }
+        .char-header { background: linear-gradient(135deg, var(--blood-red) 0%, var(--rust) 100%); color: white; padding: 20px; margin: -30px -30px 20px -30px; border-radius: 8px 8px 0 0; }
+        .level-5 { border-color: var(--ocean-blue); background: rgba(0, 51, 102, 0.05); }
+        .char-header.level-5 { background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--teal-dark) 100%); }
+        .char-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 20px 0; }
+        .stat-box-char { background: white; border: 2px solid var(--rust); padding: 10px; text-align: center; }
+        .traits-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; }
+        .trait-box { background: rgba(139, 69, 19, 0.1); border-left: 4px solid var(--rust); padding: 10px; }
         @media print { .no-print { display: none; } .character-sheet { page-break-after: always; } }
     </style>
 </head>
 <body class="theme-desert">
-    <div class="hero no-print"><h1>👥 PERSONAGGI</h1><button onclick="window.print()">🖨️ Stampa Tutti</button></div>
-    
-    <div class="character-sheet">
-        <div class="header"><h2>🔫 JACK MALONE (Liv 2)</h2></div>
-        <p><strong>PF:</strong> 28 | <strong>Armatura:</strong> 2 | <strong>Tenuta:</strong> 7/10</p>
-        <div class="trait-box">
-            <h4>🥃 IL MIO VIZIO (Recupero)</h4>
-            <p>Scegli: Whisky, Poker, Solitudine. (Recupera 1d4 Tenuta in Riposo Breve. Se 1 = Condizione).</p>
+    <div class="container">
+        <div class="hero no-print" style="padding: 40px;">
+            <h1>👥 SCHEDE PERSONAGGI</h1>
+            <p>6 Eroi Pregenerati (Livello 2 e 5)</p>
+            <button onclick="window.print()" style="padding:10px 20px; cursor:pointer;">🖨️ Stampa Tutte</button>
         </div>
-        <p><strong>Equip:</strong> 2x Revolver, Fucile, Spolverino.</p>
-    </div>
 
-    <div class="character-sheet">
-        <div class="header"><h2>🙏 SARAH BLACKWOOD (Liv 2)</h2></div>
-        <p><strong>PF:</strong> 24 | <strong>Armatura:</strong> 1 | <strong>Tenuta:</strong> 8/10</p>
-        <div class="trait-box">
-            <h4>🥃 IL MIO VIZIO (Recupero)</h4>
-            <p>Scegli: Preghiera, Digiuno, Confessione.</p>
-        </div>
-        <p><strong>Equip:</strong> Bibbia, Croce, Acqua Santa, Derringer.</p>
-    </div>
+        <div class="content">
+            
+            <div class="character-sheet" id="jack-2">
+                <div class="char-header">
+                    <h2>🔫 JACK "GHOST" MALONE (Liv 2)</h2>
+                    <p>Il Pistolero Tormentato</p>
+                </div>
+                <div class="char-stats-grid">
+                    <div class="stat-box-char"><div>PF</div><strong>28</strong></div>
+                    <div class="stat-box-char"><div>Armatura</div><strong>2</strong></div>
+                    <div class="stat-box-char"><div>Tenuta</div><strong>7/10</strong></div>
+                    <div class="stat-box-char"><div>Velocità</div><strong>9m</strong></div>
+                </div>
+                <div class="traits-grid">
+                    <div class="trait-box"><h4>Agilità +3</h4><p>Estrazione rapida</p></div>
+                    <div class="trait-box"><h4>Forza +2</h4><p>Combattimento duro</p></div>
+                    <div class="trait-box"><h4>Istinto +4 (Main)</h4><p>Percezione, Sopravvivenza</p></div>
+                </div>
+                
+                <div style="margin: 20px 0;">
+                    <h4>📜 Background</h4>
+                    <p>Ex-sceriffo del Kansas, ha gettato la stella dopo una sparatoria finita male che ha coinvolto una bambina innocente. Ora lavora come cacciatore di taglie, accettando solo incarichi che considera "giusti". È perseguitato dagli incubi e beve per non sognare.</p>
+                </div>
 
-    <div class="character-sheet">
-        <div class="header"><h2>🔬 DOC WELLS (Liv 2)</h2></div>
-        <p><strong>PF:</strong> 20 | <strong>Armatura:</strong> 0 | <strong>Tenuta:</strong> 5/10</p>
-        <div class="trait-box">
-            <h4>🥃 IL MIO VIZIO (Recupero)</h4>
-            <p>Scegli: Morfina, Studio Ossessivo.</p>
+                <div class="trait-box" style="background: white; border: 2px dashed var(--rust);">
+                    <h4 style="color: var(--blood-red);">🥃 IL MIO VIZIO (Recupero)</h4>
+                    <p><strong>Whisky scadente.</strong> (Durante un Riposo Breve, recuperi 1d4 Tenuta. Se fai 1, ottieni la condizione <em>Ubriaco</em>).</p>
+                </div>
+
+                <h3>⚔️ Abilità & Equipaggiamento</h3>
+                <ul>
+                    <li><strong>Marca il Bersaglio:</strong> Scegli un nemico. Tu e gli alleati avete Vantaggio e +1d6 danni contro di lui.</li>
+                    <li><strong>Estrazione Rapida (Reazione):</strong> Interrompi un attacco nemico e spara con Vantaggio.</li>
+                </ul>
+                <p><strong>Zaino:</strong> 2x Revolver Colt .45, Winchester Rifle, Spolverino rinforzato, Manette, Whisky.</p>
+            </div>
+
+            <div class="character-sheet" id="sarah-2">
+                <div class="char-header">
+                    <h2>🙏 SARAH BLACKWOOD (Liv 2)</h2>
+                    <p>La Predicatrice Guerriera</p>
+                </div>
+                <div class="char-stats-grid">
+                    <div class="stat-box-char"><div>PF</div><strong>24</strong></div>
+                    <div class="stat-box-char"><div>Armatura</div><strong>1</strong></div>
+                    <div class="stat-box-char"><div>Tenuta</div><strong>8/10</strong></div>
+                    <div class="stat-box-char"><div>Velocità</div><strong>9m</strong></div>
+                </div>
+                <div class="traits-grid">
+                    <div class="trait-box"><h4>Presenza +4 (Main)</h4><p>Fede, Persuasione</p></div>
+                    <div class="trait-box"><h4>Istinto +3</h4><p>Intuizione</p></div>
+                    <div class="trait-box"><h4>Finezza +2</h4><p>Empatia</p></div>
+                </div>
+
+                <div style="margin: 20px 0;">
+                    <h4>📜 Background</h4>
+                    <p>Figlia di un pastore, ha avuto visioni di un'oscurità crescente nel West. Crede che la fede senza opere sia morta, e le sue opere spesso coinvolgono un derringer nascosto nella manica. Cerca di salvare le anime, ma sa quando punire i corpi.</p>
+                </div>
+
+                <div class="trait-box" style="background: white; border: 2px dashed var(--rust);">
+                    <h4 style="color: var(--blood-red);">🥃 IL MIO VIZIO (Recupero)</h4>
+                    <p><strong>Preghiera Ossessiva.</strong> (Durante un Riposo Breve, recuperi 1d4 Tenuta).</p>
+                </div>
+
+                <h3>⚔️ Abilità & Equipaggiamento</h3>
+                <ul>
+                    <li><strong>Tocco Curativo:</strong> Cura 2d8+4 PF e rimuovi una condizione.</li>
+                    <li><strong>Scacciare il Male:</strong> I non-morti vicini fuggono o subiscono danni radianti.</li>
+                </ul>
+                <p><strong>Zaino:</strong> Bibbia, Croce d'Argento, Acqua Santa, Derringer .41, Kit Medico.</p>
+            </div>
+
+            <div class="character-sheet" id="doc-2">
+                <div class="char-header">
+                    <h2>🔬 DOC ARTEMIS WELLS (Liv 2)</h2>
+                    <p>Il Medico Razionalista</p>
+                </div>
+                <div class="char-stats-grid">
+                    <div class="stat-box-char"><div>PF</div><strong>20</strong></div>
+                    <div class="stat-box-char"><div>Armatura</div><strong>0</strong></div>
+                    <div class="stat-box-char"><div>Tenuta</div><strong>5/10</strong></div>
+                    <div class="stat-box-char"><div>Velocità</div><strong>9m</strong></div>
+                </div>
+                <div class="traits-grid">
+                    <div class="trait-box"><h4>Conoscenza +4 (Main)</h4><p>Medicina, Scienza</p></div>
+                    <div class="trait-box"><h4>Finezza +3</h4><p>Chirurgia, Meccanica</p></div>
+                    <div class="trait-box"><h4>Agilità +2</h4><p>Mani ferme</p></div>
+                </div>
+
+                <div style="margin: 20px 0;">
+                    <h4>📜 Background</h4>
+                    <p>Un chirurgo caduto in disgrazia per i suoi esperimenti troppo "avanguardistici". È venuto nel West dove nessuno fa domande. Crede che tutto abbia una spiegazione scientifica, anche i mostri. È la mente del gruppo.</p>
+                </div>
+
+                <div class="trait-box" style="background: white; border: 2px dashed var(--rust);">
+                    <h4 style="color: var(--blood-red);">🥃 IL MIO VIZIO (Recupero)</h4>
+                    <p><strong>Morfina / Studio.</strong> (Recupera 1d4 Tenuta. Se 1 = Condizione <em>Stordito</em>).</p>
+                </div>
+
+                <h3>⚔️ Abilità & Equipaggiamento</h3>
+                <ul>
+                    <li><strong>Chirurgia da Campo:</strong> Cura 2d8+4 PF usando il bisturi.</li>
+                    <li><strong>Gadget Improvvisato:</strong> Crea al volo fumogeni, acidi o esplosivi minori.</li>
+                </ul>
+                <p><strong>Zaino:</strong> Borsa medica, Bisturi, Kit Chimico, Morfina, Taccuino.</p>
+            </div>
+
+            <div class="character-sheet level-5" id="jack-5">
+                <div class="char-header level-5"><h2>🔫 JACK MALONE (Liv 5 - Veterano)</h2></div>
+                <div class="char-stats-grid"><div class="stat-box-char"><div>PF</div><strong>42</strong></div><div class="stat-box-char"><div>Tenuta</div><strong>6/10</strong></div></div>
+                <div class="trait-box" style="background: white; border: 2px dashed var(--ocean-blue);"><h4>🥃 VIZIO: Whisky (Necessario)</h4></div>
+                <p><strong>Nuova Abilità: Raffica Mortale.</strong> Colpisci fino a 6 bersagli diversi in un turno.</p>
+                <p><strong>Cicatrici:</strong> Tenuta massima ridotta. Non dorme mai bene.</p>
+            </div>
+
+            <div class="character-sheet level-5" id="sarah-5">
+                <div class="char-header level-5"><h2>🙏 SARAH BLACKWOOD (Liv 5 - Veterana)</h2></div>
+                <div class="char-stats-grid"><div class="stat-box-char"><div>PF</div><strong>36</strong></div><div class="stat-box-char"><div>Tenuta</div><strong>8/10</strong></div></div>
+                <div class="trait-box" style="background: white; border: 2px dashed var(--ocean-blue);"><h4>🥃 VIZIO: Penitenza</h4></div>
+                <p><strong>Nuova Abilità: Resurrezione Minore.</strong> Riporta in vita un morto recente (Costo: 3 Tenuta).</p>
+            </div>
+
+            <div class="character-sheet level-5" id="doc-5">
+                <div class="char-header level-5"><h2>🔬 DOC WELLS (Liv 5 - Veterano)</h2></div>
+                <div class="char-stats-grid"><div class="stat-box-char"><div>PF</div><strong>30</strong></div><div class="stat-box-char"><div>Tenuta</div><strong>4/10</strong></div></div>
+                <div class="trait-box" style="background: white; border: 2px dashed var(--ocean-blue);"><h4>🥃 VIZIO: Analisi Maniacale</h4></div>
+                <p><strong>Nuova Abilità: Invenzione Rapida.</strong> Crea gadget complessi (radar, bombe a tempo) in 1 azione.</p>
+            </div>
+
         </div>
-        <p><strong>Equip:</strong> Borsa Medica, Bisturi.</p>
     </div>
-    
-    </body>
+</body>
 </html>
