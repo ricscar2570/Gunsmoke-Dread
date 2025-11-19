@@ -1,0 +1,476 @@
+/*
+================================================================================
+    GUNSMOKE & DREAD - Volume Theme Variants
+    
+    Questo CSS definisce varianti di colore per:
+    - Volume I: Desert/Western theme (rosso, sabbia, rust)
+    - Volume II: Ocean/Cosmic theme (blu, verde alieno, nero profondo)
+    
+    Applica classe al <body>:
+    - <body class="theme-desert"> per Volume I
+    - <body class="theme-ocean"> per Volume II
+    - Nessuna classe = default (mix di entrambi)
+================================================================================
+*/
+
+
+/* ============================================================================
+   VOLUME I - DESERT/WESTERN THEME
+============================================================================ */
+
+body.theme-desert {
+    /* Override color variables */
+    --primary-color: var(--blood-red);
+    --secondary-color: var(--desert-sand);
+    --accent-color: var(--rust);
+    --bg-gradient-start: var(--blood-red);
+    --bg-gradient-end: var(--rust);
+}
+
+.theme-desert .hero {
+    background: linear-gradient(135deg, var(--blood-red) 0%, var(--rust) 50%, var(--night-black) 100%);
+}
+
+.theme-desert h1,
+.theme-desert h2 {
+    color: var(--blood-red);
+}
+
+.theme-desert h3 {
+    color: var(--rust);
+}
+
+.theme-desert .button,
+.theme-desert .btn {
+    background: var(--blood-red);
+}
+
+.theme-desert .button:hover,
+.theme-desert .btn:hover {
+    background: var(--rust);
+}
+
+.theme-desert .card {
+    border-color: var(--rust);
+}
+
+.theme-desert .card:hover {
+    box-shadow: 0 10px 30px rgba(139, 0, 0, 0.3);
+}
+
+.theme-desert .info-box {
+    background: rgba(212, 165, 116, 0.2);
+    border-left-color: var(--rust);
+}
+
+.theme-desert .warning-box {
+    background: rgba(139, 0, 0, 0.15);
+    border-left-color: var(--blood-red);
+}
+
+.theme-desert .collapsible {
+    background: rgba(139, 0, 0, 0.15);
+    border-color: var(--rust);
+}
+
+.theme-desert .collapsible:hover {
+    background: rgba(139, 0, 0, 0.25);
+}
+
+.theme-desert th {
+    background: var(--rust);
+}
+
+.theme-desert a {
+    color: var(--blood-red);
+}
+
+.theme-desert a:hover {
+    color: var(--rust);
+}
+
+/* Desert-specific decorative elements */
+.theme-desert .hero::before {
+    content: '🌵';
+}
+
+.theme-desert .hero::after {
+    content: '💀';
+}
+
+/* Desert accent borders */
+.theme-desert .section {
+    border-bottom: 1px solid rgba(212, 165, 116, 0.2);
+}
+
+.theme-desert .section:last-child {
+    border-bottom: none;
+}
+
+
+/* ============================================================================
+   VOLUME II - OCEAN/COSMIC THEME
+============================================================================ */
+
+body.theme-ocean {
+    /* Override color variables */
+    --primary-color: var(--ocean-blue);
+    --secondary-color: var(--alien-green);
+    --accent-color: var(--teal-dark);
+    --bg-gradient-start: var(--ocean-blue);
+    --bg-gradient-end: var(--deep-blue);
+}
+
+.theme-ocean .hero {
+    background: linear-gradient(135deg, var(--deep-blue) 0%, var(--ocean-blue) 50%, var(--night-black) 100%);
+}
+
+.theme-ocean h1 {
+    color: var(--ocean-blue);
+}
+
+.theme-ocean h2 {
+    color: var(--ocean-blue);
+    border-bottom-color: var(--alien-green);
+}
+
+.theme-ocean h3 {
+    color: var(--teal-dark);
+}
+
+.theme-ocean .button,
+.theme-ocean .btn {
+    background: var(--ocean-blue);
+}
+
+.theme-ocean .button:hover,
+.theme-ocean .btn:hover {
+    background: var(--deep-blue);
+}
+
+.theme-ocean .card {
+    border-color: var(--ocean-blue);
+}
+
+.theme-ocean .card:hover {
+    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.4);
+}
+
+.theme-ocean .info-box {
+    background: rgba(0, 51, 102, 0.1);
+    border-left-color: var(--ocean-blue);
+}
+
+.theme-ocean .warning-box {
+    background: rgba(0, 51, 102, 0.15);
+    border-left-color: var(--ocean-blue);
+}
+
+.theme-ocean .tip-box {
+    background: rgba(0, 255, 65, 0.05);
+    border-left-color: var(--alien-green);
+}
+
+.theme-ocean .horror-box {
+    background: linear-gradient(135deg, rgba(0, 51, 102, 0.2) 0%, rgba(0, 0, 0, 0.3) 100%);
+    border-color: var(--alien-green);
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.2);
+}
+
+.theme-ocean .collapsible {
+    background: rgba(0, 51, 102, 0.15);
+    border-color: var(--ocean-blue);
+}
+
+.theme-ocean .collapsible:hover {
+    background: rgba(0, 51, 102, 0.25);
+}
+
+.theme-ocean th {
+    background: var(--ocean-blue);
+}
+
+.theme-ocean a {
+    color: var(--ocean-blue);
+}
+
+.theme-ocean a:hover {
+    color: var(--alien-green);
+}
+
+/* Ocean-specific decorative elements */
+.theme-ocean .hero::before {
+    content: '🌊';
+}
+
+.theme-ocean .hero::after {
+    content: '👁️';
+}
+
+/* Ocean "wet" effect on certain elements */
+.theme-ocean .card {
+    background: linear-gradient(135deg, rgba(0, 51, 102, 0.03) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+/* Cosmic glow effect */
+.theme-ocean h1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--alien-green) 20%, 
+        var(--alien-green) 80%, 
+        transparent 100%);
+    margin-top: 15px;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* Ocean accent borders */
+.theme-ocean .section {
+    border-bottom: 1px solid rgba(0, 51, 102, 0.2);
+}
+
+.theme-ocean .section:last-child {
+    border-bottom: none;
+}
+
+/* Specific styling for "The Vision" sections */
+.theme-ocean .vision-phase {
+    background: radial-gradient(circle, rgba(0, 255, 65, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+    border: 3px solid var(--alien-green);
+    border-radius: 12px;
+    padding: 40px;
+    margin: 40px 0;
+    box-shadow: 0 0 40px rgba(0, 255, 65, 0.3);
+}
+
+
+/* ============================================================================
+   MIXED THEME (Default - Collection Index, etc)
+============================================================================ */
+
+/* Quando non c'è tema specifico, usa mix di colori */
+body:not(.theme-desert):not(.theme-ocean) .hero {
+    background: linear-gradient(135deg, 
+        var(--blood-red) 0%, 
+        var(--night-black) 50%, 
+        var(--ocean-blue) 100%);
+}
+
+/* Alternar colori per card in mixed theme */
+body:not(.theme-desert):not(.theme-ocean) .card:nth-child(odd) {
+    border-left: 5px solid var(--blood-red);
+}
+
+body:not(.theme-desert):not(.theme-ocean) .card:nth-child(even) {
+    border-left: 5px solid var(--ocean-blue);
+}
+
+
+/* ============================================================================
+   VOLUME-SPECIFIC CREATURE STAT BLOCKS
+============================================================================ */
+
+/* Desert creatures */
+.theme-desert .creature-card,
+.creature-card.desert {
+    border: 3px solid var(--rust);
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.05) 0%, rgba(212, 165, 116, 0.05) 100%);
+}
+
+.theme-desert .creature-card h3,
+.creature-card.desert h3 {
+    color: var(--blood-red);
+}
+
+/* Ocean/Cosmic creatures */
+.theme-ocean .creature-card,
+.creature-card.ocean,
+.creature-card.cosmic {
+    border: 3px solid var(--ocean-blue);
+    background: linear-gradient(135deg, rgba(0, 51, 102, 0.1) 0%, rgba(0, 255, 65, 0.02) 100%);
+}
+
+.theme-ocean .creature-card h3,
+.creature-card.ocean h3,
+.creature-card.cosmic h3 {
+    color: var(--ocean-blue);
+}
+
+.creature-card.cosmic {
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+}
+
+
+/* ============================================================================
+   SPECIAL EFFECT: Cthulhu Vision Styling
+============================================================================ */
+
+.cthulhu-vision {
+    background: radial-gradient(ellipse at center, 
+        rgba(0, 0, 0, 1) 0%, 
+        rgba(0, 51, 102, 0.9) 50%, 
+        rgba(0, 0, 0, 1) 100%);
+    color: var(--alien-green);
+    padding: 60px;
+    margin: 60px -30px;
+    border: 6px solid var(--alien-green);
+    border-radius: 15px;
+    box-shadow: 
+        0 0 40px rgba(0, 255, 65, 0.5),
+        inset 0 0 40px rgba(0, 51, 102, 0.5);
+    font-size: 1.15em;
+    line-height: 2;
+    text-align: center;
+}
+
+.cthulhu-vision h3,
+.cthulhu-vision h4 {
+    color: var(--pure-white);
+    text-shadow: 0 0 10px var(--alien-green);
+}
+
+.cthulhu-vision strong {
+    color: var(--pure-white);
+    font-size: 1.2em;
+    text-shadow: 0 0 5px var(--alien-green);
+}
+
+.cthulhu-vision em {
+    color: var(--desert-sand);
+}
+
+/* Animazione inquietante per testo nella visione */
+.cthulhu-vision.animated {
+    animation: visionFlicker 4s ease-in-out infinite;
+}
+
+@keyframes visionFlicker {
+    0%, 100% { 
+        opacity: 1; 
+        text-shadow: 0 0 10px var(--alien-green);
+    }
+    50% { 
+        opacity: 0.85; 
+        text-shadow: 0 0 20px var(--alien-green);
+    }
+}
+
+
+/* ============================================================================
+   NPC PORTRAITS & GALLERY (se aggiungi immagini in futuro)
+============================================================================ */
+
+.npc-portrait {
+    border: 4px solid;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.theme-desert .npc-portrait {
+    border-color: var(--rust);
+}
+
+.theme-ocean .npc-portrait {
+    border-color: var(--ocean-blue);
+}
+
+.npc-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+
+/* ============================================================================
+   HANDOUT VARIATIONS
+============================================================================ */
+
+.handout.telegram {
+    background: #f5f5dc;
+    font-family: 'Courier New', monospace;
+    border: 3px solid var(--night-black);
+}
+
+.handout.diary {
+    background: #fffaf0;
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    border: 4px double var(--rust);
+}
+
+.handout.letter {
+    background: #faf0e6;
+    border: 2px solid var(--shadow-grey);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ============================================================================
+   RESPONSIVE THEME ADJUSTMENTS
+============================================================================ */
+
+@media (max-width: 968px) {
+    .cthulhu-vision {
+        padding: 40px 20px;
+        margin: 40px -20px;
+    }
+    
+    .theme-ocean h1::after,
+    .theme-desert h1::after {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .theme-ocean .vision-phase,
+    .theme-desert .horror-box {
+        padding: 20px;
+        margin: 20px 0;
+    }
+}
+
+
+/* ============================================================================
+   PRINT THEME ADJUSTMENTS
+============================================================================ */
+
+@media print {
+    .theme-desert .hero,
+    .theme-ocean .hero {
+        background: white;
+        border: 3px solid black;
+    }
+    
+    .theme-desert h1,
+    .theme-desert h2,
+    .theme-ocean h1,
+    .theme-ocean h2 {
+        color: black;
+    }
+    
+    .cthulhu-vision {
+        background: white;
+        color: black;
+        border: 3px solid black;
+        box-shadow: none;
+    }
+    
+    .theme-ocean h1::after {
+        display: none;
+    }
+}
+
+
+/* ============================================================================
+   END OF THEME STYLESHEET
+============================================================================ */

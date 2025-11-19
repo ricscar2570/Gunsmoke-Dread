@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestiary - Gunsmoke & Dread</title>
+    
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main-styles.css">
+    <link rel="stylesheet" href="assets/css/volume-themes.css">
+    
+    <style>
+        .creature-entry {
+            background: rgba(212, 165, 116, 0.1);
+            border: 3px solid var(--rust);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            page-break-inside: avoid;
+        }
+        
+        .creature-header {
+            background: linear-gradient(135deg, var(--blood-red) 0%, var(--rust) 100%);
+            color: white;
+            padding: 20px;
+            margin: -30px -30px 20px -30px;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .creature-header h3 {
+            margin: 0;
+            color: white;
+            border: none;
+        }
+        
+        .creature-type {
+            display: inline-block;
+            background: var(--night-black);
+            color: var(--alien-green);
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            margin: 5px 5px 0 0;
+            font-family: 'Rye', cursive;
+        }
+        
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-item {
+            background: white;
+            border: 2px solid var(--desert-sand);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .stat-label {
+            font-size: 0.85em;
+            color: var(--rust);
+            font-weight: bold;
+        }
+        
+        .stat-value {
+            font-size: 1.5em;
+            color: var(--blood-red);
+            font-weight: bold;
+        }
+        
+        .ability-list {
+            background: rgba(139, 69, 19, 0.1);
+            padding: 20px;
+            border-left: 4px solid var(--rust);
+            margin: 15px 0;
+        }
+        
+        .challenge-rating {
+            display: inline-block;
+            background: var(--alien-green);
+            color: var(--night-black);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-left: 15px;
+        }
+        
+        .volume-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .vol-1 {
+            background: var(--rust);
+            color: white;
+        }
+        
+        .vol-2 {
+            background: var(--ocean-blue);
+            color: white;
+        }
+    </style>
+</head>
+<body class="theme-desert">
+    <div class="container">
+        
+        <!-- Header -->
+        <div class="hero" style="padding: 60px 40px; background: linear-gradient(135deg, var(--night-black) 0%, var(--blood-red) 50%, var(--ocean-blue) 100%);">
+            <h1 style="font-size: 4em; color: white;">👹 BESTIARY</h1>
+            <p class="subtitle" style="color: var(--seafoam);">Creature del Weird West per Daggerheart™</p>
+            <p class="tagline" style="color: white;">
+                Volume I: Shadows in the Desert • Volume II: Where the Ocean Meets the Dust
+            </p>
+        </div>
+        
+        <!-- Introduzione -->
+        <div class="content">
+            <section class="section">
+                <h2>📖 Introduzione al Bestiario</h2>
+                
+                <p class="large">
+                    Questo bestiario unificato contiene <strong>tutte le creature</strong> presenti in Gunsmoke & Dread 
+                    Collection. Ogni entry include stats complete per Daggerheart, descrizioni atmosferiche, tattiche 
+                    di combattimento, e suggerimenti per l'uso narrativo.
+                </p>
+                
+                <div class="info-box">
+                    <h3>🎯 Come Usare Questo Documento</h3>
+                    <ul style="font-size: 1.05em; line-height: 1.7;">
+                        <li><strong>Per GM:</strong> Reference rapido durante sessioni - stats organizzati per accesso veloce</li>
+                        <li><strong>Volume Tags:</strong> Ogni creatura indica da quale scenario proviene (Vol I o Vol II)</li>
+                        <li><strong>Challenge Rating:</strong> Indicazione difficoltà (Minion, Standard, Elite, Boss, Legendary)</li>
+                        <li><strong>Scaling:</strong> Tutte creature possono essere scalate +/- livelli modificando HP e danni</li>
+                    </ul>
+                </div>
+                
+                <div class="warning-box">
+                    <h3>⚠️ Note su Creature Cosmiche</h3>
+                    <p style="font-size: 1.05em;">
+                        Creature marchiate come <strong>"Aberration"</strong> o <strong>"Great Old One"</strong> seguono 
+                        regole speciali:
+                    </p>
+                    <ul>
+                        <li>Causano <strong>Tenuta Mental damage</strong> anche solo vedendole</li>
+                        <li>Hanno spesso <strong>resistenze</strong> innaturali</li>
+                        <li>Non possono essere veramente "uccise", solo <strong>scacciate o sigillate</strong></li>
+                        <li>Presenza altera realtà locale (geometria, fisica, percezione)</li>
+                    </ul>
+                </div>
+                
+                <h3>📊 Indice Creature per Challenge Rating</h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>CR</th>
+                            <th>Creature</th>
+                            <th>Volume</th>
+                            <th>Uso Tipico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Minion</strong></td>
+                            <td>Zombie, Cultista, Scorpione Gigante</td>
+                            <td>I</td>
+                            <td>Swarms, cannon fodder</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Standard</strong></td>
+                            <td>Ghoul, Ibrido Iniziale, Serpente Velenoso</td>
+                            <td>I, II</td>
+                            <td>Encounter regolari, 2-4 per party</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Elite</strong></td>
+                            <td>Ibrido Avanzato, Non-Morto Potenziato, Shadow Beast</td>
+                            <td>I, II</td>
+                            <td>Mini-boss, 1-2 per party</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Boss</strong></td>
+                            <td>Il Sacerdote, Jeremiah Trasformato, Sand Wurm</td>
+                            <td>I, II</td>
+                            <td>Climax atto, boss fight maggiore</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Legendary</strong></td>
+                            <td>Il Guardiano, Grande Antico (Vol I)</td>
+                            <td>I, II</td>
+                            <td>Final boss, almost unkillable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- SEZIONE: CREATURE UMANOIDI -->
+            <section class="section">
+                <h2>👤 CREATURE UMANOIDI</h2>
+                <p>Umani trasformati, corrotti, o al servizio di poteri oscuri.</p>
+                
+                <!-- CULTISTA -->
+                <div class="creature-entry">
+                    <div class="creature-header">
+                        <h3>CULTISTA <span class="challenge-rating">CR: Minion</span></h3>
+                        <span class="volume-tag vol-1">Volume I</span>
+                        <span class="creature-type">Umanoide</span>
+                        <span class="creature-type">Fanatic</span>
+                    </div>
+                    
+                    <p style="font-style: italic; font-size: 1.05em; line-height: 1.7;">
+                        Cittadini di Silver Hollow corrotti da influenza del Grande Antico. Indossano tonache nere 
+                        con simboli alieni dipinti col sangue. Occhi febbrili, voci che mormorano in lingue morte. 
+                        Completamente dediti al loro "dio serpente" sotterraneo.
+                    </p>
+                    
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <div class="stat-label">HP</div>
+                            <div class="stat-value">18</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Armatura</div>
+                            <div class="stat-value">0</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Velocità</div>
+                            <div class="stat-value">9m</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Percezione</div>
+                            <div class="stat-value">+2</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ability-list">
+                        <h4>⚔️ Azioni</h4>
+                        <p><strong>Coltello Rituale:</strong> +4, 1d6+2 taglienti</p>
+                        <p><strong>Revolver Malandato:</strong> +3, 2d6 perforanti (6 colpi, ricaricare 1 azione)</p>
+                        
+                        <h4 style="margin-top: 20px;">✨ Abilità Speciali</h4>
+                        <p><strong>Fanatico:</strong> Vantaggio su tiri salvezza vs Spaventato e Charme (fede distorta 
+                        protegge mentalmente)</p>
+                        <p><strong>Morte Devota:</strong> Quando ridotto a 0 HP, può fare ultimo attacco come Reazione 
+                        (muore gridando lodi al suo dio)</p>
+                        <p><strong>Swarm Tactics:</strong> Se 3+ cultisti adiacenti a stesso target, hanno Vantaggio attacchi</p>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Uso Tattico</h4>
+                        <p>Cultisti sono <strong>cannon fodder</strong> ma pericolosi in numero. Usali in gruppi 4-8. 
+                        Combattono senza paura, si sacrificano volentieri. Non negoziano - sono beyond reason.</p>
+                        <p style="margin-top: 10px;"><strong>Variante Elite:</strong> Leader cultista ha +10 HP, 
+                        può lanciare 1 rituale minore (es: Benedizione Oscura, +2 attacchi alleati).</p>
+                    </div>
+                </div>
+                
+                <!-- IBRIDO INIZIALE -->
+                <div class="creature-entry">
+                    <div class="creature-header">
+                        <h3>IBRIDO UMANO-MARINO (Iniziale) <span class="challenge-rating">CR: Standard</span></h3>
+                        <span class="volume-tag vol-2">Volume II</span>
+                        <span class="creature-type">Aberration</span>
+                        <span class="creature-type">Acquatico</span>
+                    </div>
+                    
+                    <p style="font-style: italic; font-size: 1.05em; line-height: 1.7;">
+                        Geometra scomparso trasformato dopo 3-5 giorni esposizione all'influenza del Guardiano. 
+                        Pelle verdegrigia, branchie incipiente, dita palmate. Si muove con fluidità innaturale. 
+                        Occhi completamente neri. Ancora vagamente umanoide ma... alterato. Gorgoglia invece di parlare.
+                    </p>
+                    
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <div class="stat-label">HP</div>
+                            <div class="stat-value">35</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Armatura</div>
+                            <div class="stat-value">2</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Velocità</div>
+                            <div class="stat-value">12m</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Nuoto</div>
+                            <div class="stat-value">15m</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ability-list">
+                        <h4>⚔️ Azioni</h4>
+                        <p><strong>Artigli:</strong> +6, 2d6+3 taglienti</p>
+                        <p><strong>Morso:</strong> +6, 1d10+3 perforanti + Veleno Marino (Costituzione CD 13 o 
+                        Avvelenato 1 minuto)</p>
+                        
+                        <h4 style="margin-top: 20px;">✨ Abilità Speciali</h4>
+                        <p><strong>Pelle Scivolosa:</strong> Svantaggio su check per afferrarlo o lottare</p>
+                        <p><strong>Rigenerazione Marina:</strong> Se in contatto con acqua, recupera 5 HP inizio turno</p>
+                        <p><strong>Grido Ultrasonico:</strong> (1/combattimento) Tutti entro 6m: Costituzione CD 14 
+                        o Storditi 1 round</p>
+                        <p><strong>Anfibio:</strong> Respira aria e acqua, Vantaggio Percezione sott'acqua</p>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>💀 Tenuta Mental Impact</h4>
+                        <p><strong>Vedere Ibrido:</strong> Istinto CD 14</p>
+                        <ul>
+                            <li>Successo: 1 segmento (inquietante ma gestibile)</li>
+                            <li>Fallimento: 2 segmenti (questo era un UOMO pochi giorni fa)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Uso Tattico</h4>
+                        <p>Ibridi Iniziali sono primi encounter con trasformazione body horror. Usali singolarmente 
+                        o in coppia. Preferiscono combattere vicino acqua (rigenerazione). Se feriti gravemente (<10 HP), 
+                        fuggono verso acqua più vicina.</p>
+                        <p style="margin-top: 10px;"><strong>Variante:</strong> Se PG riconoscono ibrido (ex-amico, 
+                        NPC conosciuto), +1 Tenuta extra per shock emotivo.</p>
+                    </div>
+                </div>
+                
+                <!-- IBRIDO AVANZATO -->
+                <div class="creature-entry">
+                    <div class="creature-header">
+                        <h3>IBRIDO AVANZATO <span class="challenge-rating">CR: Elite</span></h3>
+                        <span class="volume-tag vol-2">Volume II</span>
+                        <span class="creature-type">Aberration</span>
+                        <span class="creature-type">Acquatico</span>
+                    </div>
+                    
+                    <p style="font-style: italic; font-size: 1.05em; line-height: 1.7;">
+                        Trasformazione completa dopo 7-10 giorni. Quasi irriconoscibile come umano. Pelle squamosa 
+                        verde-grigia dura come cuoio. Branchie completamente funzionali. Artigli affilati come rasoi. 
+                        Denti da predatore. Intelligenza ridotta ma istinto predatorio acutissimo. Perfettamente 
+                        adattato ad ambiente sottomarino.
+                    </p>
+                    
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <div class="stat-label">HP</div>
+                            <div class="stat-value">45</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Armatura</div>
+                            <div class="stat-value">3</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Terra</div>
+                            <div class="stat-value">9m</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Acqua</div>
+                            <div class="stat-value">15m</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ability-list">
+                        <h4>⚔️ Azioni</h4>
+                        <p><strong>Multiattack:</strong> Può fare 2 attacchi (Artigli o Morso)</p>
+                        <p><strong>Artigli Potenziati:</strong> +7, 2d6+4 taglienti</p>
+                        <p><strong>Morso Devastante:</strong> +7, 2d8+4 perforanti + Veleno Paralizzante (Costituzione 
+                        CD 14 o Paralizzato 1d4 round)</p>
+                        
+                        <h4 style="margin-top: 20px;">✨ Abilità Speciali</h4>
+                        <p><strong>Rigenerazione Marina Potenziata:</strong> Recupera 8 HP inizio turno se in acqua</p>
+                        <p><strong>Invisibilità Acquatica:</strong> Se completamente sommerso, Svantaggio per vederlo</p>
+                        <p><strong>Pack Tactics:</strong> Vantaggio su attacchi se 2+ ibridi adiacenti a target</p>
+                        <p><strong>Grido Ultrasonico Potenziato:</strong> (1/combattimento) Tutti entro 9m: Costituzione 
+                        CD 15 o Storditi 2 round + 2d6 sonici</p>
+                        <p><strong>Anfibio Perfetto:</strong> Nessuna penalità in qualsiasi ambiente, sensi acuti 
+                        sott'acqua</p>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Uso Tattico</h4>
+                        <p>Ibridi Avanzati sono <strong>elite enemies</strong>. Usali in gruppi 2-3 per combattimenti 
+                        maggiori. Combattono coordinati (Pack Tactics), comunicano con clicks ultrasonici. Strategia: 
+                        1-2 emergono per attacco diretto, 1 rimane sommerso per surprise attacks da sott'acqua.</p>
+                        <p style="margin-top: 10px;"><strong>Ambiente:</strong> Massimamente pericolosi in aree 
+                        parzialmente allagate. Usano acqua per rigenerazione continua.</p>
+                    </div>
+                </div>
+                
+            </section>
+            
+            <!-- SEZIONE: NON-MORTI -->
+            <section class="section">
+                <h2>💀 NON-MORTI</h2>
+                <p>Morti rianimati da forze oscure, maledizioni, o volontà malvagia.</p>
+                
+                <!-- ZOMBIE -->
+                <div class="creature-entry">
+                    <div class="creature-header">
+                        <h3>ZOMBIE (Standard) <span class="challenge-rating">CR: Minion</span></h3>
+                        <span class="volume-tag vol-1">Volume I</span>
+                        <span class="creature-type">Non-Morto</span>
+                    </div>
+                    
+                    <p style="font-style: italic; font-size: 1.05em; line-height: 1.7;">
+                        Cadavere rianimato. Carne putrescente, vestiti strappati, movimenti goffi ma inesorabili. 
+                        Occhi vitrei senza intelligenza. Odore di decomposizione. Geme costantemente. Non sente 
+                        dolore, non conosce paura. Continua avanzare finché non distrutto completamente.
+                    </p>
+                    
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <div class="stat-label">HP</div>
+                            <div class="stat-value">22</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Armatura</div>
+                            <div class="stat-value">0</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Velocità</div>
+                            <div class="stat-value">6m</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Percezione</div>
+                            <div class="stat-value">+0</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ability-list">
+                        <h4>⚔️ Azioni</h4>
+                        <p><strong>Slam:</strong> +4, 1d8+2 contundenti</p>
+                        <p><strong>Morso:</strong> +4, 1d6+2 perforanti + rischio infezione (Costituzione CD 12 o 
+                        malattia: -1 Costituzione al giorno finché curato)</p>
+                        
+                        <h4 style="margin-top: 20px;">✨ Abilità Speciali</h4>
+                        <p><strong>Non-Morto:</strong> Immune a veleno, malattia, charm, sonno, paura</p>
+                        <p><strong>Inesorabile:</strong> Velocità non ridotta da terreno difficile o ferite</p>
+                        <p><strong>Debolezza Sacra:</strong> Vulnerabile a danni radianti (+50%), può essere scacciato 
+                        da chierici</p>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Uso Tattico</h4>
+                        <p>Zombie sono minacce numeriche. Usali in orde 6-12. Lenti ma inesorabili. Perfetti per 
+                        creare tensione: "Li senti arrivare... passo... dopo passo... sempre più vicini..."</p>
+                        <p style="margin-top: 10px;"><strong>Variante:</strong> Zombie Veloci (HP 18, Velocità 12m) 
+                        per horror più intenso.</p>
+                    </div>
+                </div>
+                
+                <!-- GHOUL -->
+                <div class="creature-entry">
+                    <div class="creature-header">
+                        <h3>GHOUL <span class="challenge-rating">CR: Standard</span></h3>
+                        <span class="volume-tag vol-1">Volume I</span>
+                        <span class="creature-type">Non-Morto</span>
+                        <span class="creature-type">Intelligente</span>
+                    </div>
+                    
+                    <p style="font-style: italic; font-size: 1.05em; line-height: 1.7;">
+                        Cadavere rianimato ma con intelligenza malevola. Pelle grigio-verdastra tesa su ossa. Artigli 
+                        lunghi e affilati. Denti aguzzi. Occhi che brillano con fame innaturale. Si muove a quattro 
+                        zampe come bestia ma può parlare (voce raspante). Mangia carne, preferibilmente fresca. 
+                        Caccia in tunnel e cimiteri.
+                    </p>
+                    
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <div class="stat-label">HP</div>
+                            <div class="stat-value">32</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Armatura</div>
+                            <div class="stat-value">1</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Velocità</div>
+                            <div class="stat-value">12m</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Climb</div>
+                            <div class="stat-value">12m</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ability-list">
+                        <h4>⚔️ Azioni</h4>
+                        <p><strong>Multiattack:</strong> 2 artigli o 1 artiglio + 1 morso</p>
+                        <p><strong>Artigli:</strong> +5, 2d4+3 taglienti</p>
+                        <p><strong>Morso:</strong> +5, 2d6+3 perforanti + Paralisi Ghoul (Costituzione CD 13 o 
+                        Paralizzato 1 minuto; tiro salvezza a fine turno)</p>
+                        
+                        <h4 style="margin-top: 20px;">✨ Abilità Speciali</h4>
+                        <p><strong>Non-Morto:</strong> Immune veleno, malattia, charme</p>
+                        <p><strong>Olfatto Acuto:</strong> Vantaggio Percezione basata su olfatto, fiuta sangue 
+                        entro 30m</p>
+                        <p><strong>Spider Climb:</strong> Può arrampicarsi su pareti/soffitti senza check</p>
+                        <p><strong>Predatore Notturno:</strong> Scurovisione 18m, Vantaggio attacchi furtivi da buio</p>
+                        <p><strong>Frenesia Alimentare:</strong> Se PG è sotto 50% HP e sanguina, Ghoul ha Vantaggio 
+                        attacchi vs quel PG (odore sangue lo eccita)</p>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>💀 Tenuta Mental</h4>
+                        <p><strong>Prima volta vedere Ghoul:</strong> Istinto CD 13 o 2 segmenti (body horror + 
+                        movimento innaturale)</p>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Uso Tattico</h4>
+                        <p>Ghoul sono <strong>ambush predators</strong>. Usali 1-2 alla volta, attack from darkness/above. 
+                        Paralisi è devastante - può remove PG dal fight 1d4 round. Concentrano attacchi su target 
+                        paralizzato (easy meal).</p>
+                        <p style="margin-top: 10px;"><strong>Roleplay:</strong> Ghoul possono parlare - usa per 
+                        disturbing dialogue. "Carne... fresca... giovane... AFFAMATO..." Mix intelligenza + bestialità.</p>
+                    </div>
+                </div>
+                
+            </section>
+            
+            <!-- SEZIONE: BOSS CREATURES -->
+            <section class="section">
+                <h2>👑 CREATURE BOSS</h2>
+                <p>Minacce maggiori, climax di atti, final bosses.</p>
+                
+                <!-- IL SACERDOTE -->
+                <div class="creature-entry">
+                    <div class="creature-header">
+                        <h3>IL SACERDOTE (Ibrido Finale) <span class="challenge-rating">CR: Boss</span></h3>
+                        <span class="volume-tag vol-2">Volume II</span>
+                        <span class="creature-type">Aberration</span>
+                        <span class="creature-type">Boss</span>
+                    </div>
+                    
+                    <p style="font-style: italic; font-size: 1.05em; line-height: 1.7;">
+                        Geometra completamente trasformato. Trasformazione è... perfetta. Alto 2.5m, corpo serpentino 
+                        muscoloso, 4 braccia con artigli, pelle squamosa verde-nera iridescente. Testa è fusione 
+                        pesce abissale e volto umano distorto. Ma gli occhi... ancora parzialmente umani. E in quegli 
+                        occhi: delirio mistico. Crede trasformazione sia benedizione divina. Parla - gorgogliante 
+                        ma comprensibile - predicando "verità" dell'oceano.
+                    </p>
+                    
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <div class="stat-label">HP</div>
+                            <div class="stat-value">80</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Armatura</div>
+                            <div class="stat-value">4</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Terra</div>
+                            <div class="stat-value">12m</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Acqua</div>
+                            <div class="stat-value">18m</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ability-list">
+                        <h4>⚔️ Azioni</h4>
+                        <p><strong>Multiattack:</strong> 4 attacchi con artigli (può dividere tra target)</p>
+                        <p><strong>Multi-Artiglio:</strong> +8, 1d8+5 taglienti (ciascuno)</p>
+                        <p><strong>Morso:</strong> +9, 3d8+6 perforanti + Veleno Trasformativo (Costituzione CD 16 
+                        o inizi trasformazione in ibrido - 24h per completare, curabile entro 12h)</p>
+                        <p><strong>Coda Sweep:</strong> +8, 2d10+5 contundenti + push 3m</p>
+                        
+                        <h4 style="margin-top: 20px;">✨ Abilità Speciali</h4>
+                        <p><strong>Rigenerazione Potente:</strong> Inizio turno in acqua recupera 12 HP</p>
+                        <p><strong>Grido Ultrasonico Devastante:</strong> (2/combattimento) Tutti entro 15m: 
+                        Costituzione CD 17 o Storditi 3 round + 4d6 sonici + Tenuta +2</p>
+                        <p><strong>Presenza Aliena:</strong> Aura 9m - tutti nemici Svantaggio su Tenuta checks</p>
+                        <p><strong>Evoca Ibridi:</strong> (1/combattimento) Chiama 1d4 Ibridi Avanzati (arrivano 
+                        1 round dopo)</p>
+                        <p><strong>Forma Acquatica:</strong> In acqua profonda, si trasforma in forma serpentina 
+                        pura (Velocità 24m, Vantaggio attacchi, ma vulnerabile fuoco +50%)</p>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ BOSS FIGHT - 3 FASI</h4>
+                        <p><strong>Fase 1 (HP 80-50):</strong> Combatte su scalinata, usa multiattack, evoca rinforzi</p>
+                        <p><strong>Fase 2 (HP 50-20):</strong> Tuffa in acqua, hit-and-run, rigenerazione massiva</p>
+                        <p><strong>Fase 3 (HP <20):</strong> Disperato, fuga verso Abisso, tenta risvegliare Guardiano</p>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Uso Tattico</h4>
+                        <p>Questo è <strong>major boss fight</strong>. Può negoziare prima di combat (intelligente). 
+                        Offre "unirsi pacificamente" alla trasformazione. Se PG rifiutano → combat inevitabile.</p>
+                        <p style="margin-top: 10px;">Massimamente pericoloso in arena con acqua profonda (tempio 
+                        parzialmente allagato). Usa ambiente: si immerge, rigenera, riemerge per surprise attack.</p>
+                    </div>
+                </div>
+                
+                <!-- IL GUARDIANO -->
+                <div class="creature-entry">
+                    <div class="creature-header">
+                        <h3>IL GUARDIANO <span class="challenge-rating">CR: Legendary</span></h3>
+                        <span class="volume-tag vol-2">Volume II</span>
+                        <span class="creature-type">Great Old One</span>
+                        <span class="creature-type">Aberration</span>
+                        <span class="creature-type">God-Tier</span>
+                    </div>
+                    
+                    <p style="font-style: italic; font-size: 1.05em; line-height: 1.7;">
+                        È... impossibile descrivere completamente. Forma principale: serpente colossale (30m lungo, 
+                        3m diametro) con scaglie nere lucenti che riflettono luce in modi fisicamente impossibili. 
+                        Dal corpo emergono dozzine di tentacoli (10m ciascuno). Testa NON è serpente - è qualcosa 
+                        più antico. 7 occhi brillano con intelligenza aliena. Bocca piena zanne circolari. Quando 
+                        apre bocca... vedi STELLE. Letteralmente. Come se gola fosse portale verso spazio profondo.
+                    </p>
+                    
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <div class="stat-label">HP</div>
+                            <div class="stat-value">200</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Armatura</div>
+                            <div class="stat-value">6</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Nuoto</div>
+                            <div class="stat-value">15m</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Terra</div>
+                            <div class="stat-value">6m</div>
+                        </div>
+                    </div>
+                    
+                    <div class="ability-list">
+                        <h4>⚔️ Azioni (3 per turno)</h4>
+                        <p><strong>Morso Colossale:</strong> +10, 4d10+8 perforanti, reach 3m</p>
+                        <p><strong>Tentacolo Slam:</strong> +9, 3d8+6 contundenti, reach 10m, può afferrare (Forza 
+                        CD 18 per liberarsi)</p>
+                        <p><strong>Constrict:</strong> Se afferra, automaticamente 3d10 contundenti inizio turno + 
+                        Soffocato</p>
+                        <p><strong>Coda Sweep:</strong> +10, tutti in linea 15m: 3d12+8 contundenti + push 6m + Prono</p>
+                        
+                        <h4 style="margin-top: 20px;">✨ Abilità Leggendarie</h4>
+                        <p><strong>Presenza Cosmica:</strong> Aura 30m - tutti nemici Svantaggio attacchi, Svantaggio 
+                        Tenuta, devono fare Presenza CD 17 inizio turno o Spaventati</p>
+                        <p><strong>Rigenerazione Divina:</strong> Recupera 25 HP inizio turno se in acqua</p>
+                        <p><strong>Pelle Aliena:</strong> Resistenza a tutti danni fisici normali (dimezzati). 
+                        Vulnerabile fuoco/esplosivo/argentato (+50%)</p>
+                        <p><strong>Sguardo Folle:</strong> (1 azione) Target entro 18m: Istinto CD 19 o Tenuta +5 + 
+                        Confuso 1d4 round</p>
+                        <p><strong>Urlo Ultrasonico Devastante:</strong> (2 azioni) Tutti entro 20m: Costituzione 
+                        CD 18 o 6d8 sonici + Storditi 3 round + Sanguinamento orecchie</p>
+                        <p><strong>Evoca Servitori:</strong> (3 azioni, 1/combat) 2d4 Ibridi Avanzati emergono</p>
+                        <p><strong>Immortalità:</strong> Se ridotto a 0 HP, corpo dissolve in acqua. Essence torna 
+                        letargo profondo (non risvegliabile per 100-500 anni)</p>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>☠️ QUESTO NON È COMBATTIMENTO "NORMALE"</h4>
+                        <p>Il Guardiano è <strong>Great Old One</strong> - entità semi-divina. Non può essere 
+                        "ucciso", solo ferito abbastanza da costringerlo in letargo. Obiettivo: ridurre a 0 HP.</p>
+                        
+                        <p style="margin-top: 15px;"><strong>COME RENDERLO VINCIBILE:</strong></p>
+                        <ul>
+                            <li>Punto debole (centro massa) - ignora Armatura se colpito (Agilità CD 16)</li>
+                            <li>Dinamite combinata: 18d6 fuoco ×1.5 = ~135 danni</li>
+                            <li>Kiting fuori acqua (no rigenerazione)</li>
+                            <li>Abbattere pilastri su di lui (4d10 + Prono)</li>
+                            <li>Focus fire party su punto debole</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="horror-box">
+                        <h4>💀 TENUTA DEVASTANTE</h4>
+                        <p><strong>Vedere Guardiano:</strong> Istinto CD 18</p>
+                        <ul>
+                            <li>Successo: 4 segmenti (orrore assoluto)</li>
+                            <li>Fallimento: 6 segmenti + Presenza CD 16 o Fuggi terrorizzato</li>
+                            <li>Critico: Tenuta piena + Catatonia 1d4 round</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </section>
+            
+            <!-- QUICK REFERENCE TABLE -->
+            <section class="section">
+                <h2>📊 QUICK REFERENCE - Tutte le Creature</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Creatura</th>
+                            <th>Vol</th>
+                            <th>CR</th>
+                            <th>HP</th>
+                            <th>AC</th>
+                            <th>Attacco Principale</th>
+                            <th>Abilità Key</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cultista</td>
+                            <td>I</td>
+                            <td>Minion</td>
+                            <td>18</td>
+                            <td>0</td>
+                            <td>Coltello +4 (1d6+2)</td>
+                            <td>Fanatico, Swarm</td>
+                        </tr>
+                        <tr>
+                            <td>Zombie</td>
+                            <td>I</td>
+                            <td>Minion</td>
+                            <td>22</td>
+                            <td>0</td>
+                            <td>Slam +4 (1d8+2)</td>
+                            <td>Inesorabile</td>
+                        </tr>
+                        <tr>
+                            <td>Ghoul</td>
+                            <td>I</td>
+                            <td>Standard</td>
+                            <td>32</td>
+                            <td>1</td>
+                            <td>Morso +5 (2d6+3) + Paralisi</td>
+                            <td>Spider Climb, Paralisi</td>
+                        </tr>
+                        <tr>
+                            <td>Ibrido Iniziale</td>
+                            <td>II</td>
+                            <td>Standard</td>
+                            <td>35</td>
+                            <td>2</td>
+                            <td>Artigli +6 (2d6+3)</td>
+                            <td>Rigenerazione 5</td>
+                        </tr>
+                        <tr>
+                            <td>Ibrido Avanzato</td>
+                            <td>II</td>
+                            <td>Elite</td>
+                            <td>45</td>
+                            <td>3</td>
+                            <td>Multiattack ×2</td>
+                            <td>Rigenerazione 8, Pack Tactics</td>
+                        </tr>
+                        <tr>
+                            <td>Il Sacerdote</td>
+                            <td>II</td>
+                            <td>Boss</td>
+                            <td>80</td>
+                            <td>4</td>
+                            <td>Multi-Artiglio ×4</td>
+                            <td>Rigenerazione 12, Evoca Ibridi</td>
+                        </tr>
+                        <tr>
+                            <td>Il Guardiano</td>
+                            <td>II</td>
+                            <td>Legendary</td>
+                            <td>200</td>
+                            <td>6</td>
+                            <td>3 Azioni/turno</td>
+                            <td>Rigenerazione 25, Presenza Cosmica, Immortalità</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p style="margin-top: 30px; font-size: 1.1em;">
+                    <strong>Nota:</strong> Questo bestiario include le creature principali. Creature minori (scorpioni, 
+                    serpenti, coyote) sono dettagliate in Weird-West-Rules.html nella sezione Pericoli Ambientali.
+                </p>
+            </section>
+            
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p style="font-size: 0.9em;">
+                <strong>Bestiary - Gunsmoke & Dread Collection</strong><br>
+                Compatible with Daggerheart™ SRD 1.0
+            </p>
+            <p style="margin-top: 20px; font-size: 0.85em; color: var(--desert-sand);">
+                <a href="../INDEX.html" style="color: var(--alien-green);">← Torna all'Index</a> | 
+                <a href="../core/Weird-West-Rules.html" style="color: var(--alien-green);">Weird West Rules →</a>
+            </p>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,228 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║              🔫🌊 GUNSMOKE & DREAD - FILE STRUCTURE 🌊🔫                    ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📁 OUTPUTS DIRECTORY (Your Files)
+═══════════════════════════════════════════════════════════════════════════════
+
+/mnt/user-data/outputs/
+│
+├── 🏠 INDEX.html                          (31 KB) ⭐ START HERE
+│   └─→ Main hub, navigation to all documents
+│
+├── 📖 README-FINAL.md                     (13 KB) ⭐ READ FIRST
+│   └─→ Complete guide, quick start, troubleshooting
+│
+├── 📊 COLLECTION-MANIFEST.txt             (21 KB)
+│   └─→ Complete stats, content breakdown, credits
+│
+├── 🗺️ FILE-STRUCTURE.txt                 (This file)
+│   └─→ Visual map of all files
+│
+├── 🎮 Volume-II-COMPLETE.html             (120 KB) ⭐ MAIN SCENARIO
+│   └─→ Full playable scenario, 15-18 hours gameplay
+│       • 3 Atti completi
+│       • 9 Scene dettagliate  
+│       • 4 Boss fights
+│       • 5 Epiloghi
+│       • 20+ Tenuta checkpoints
+│
+├── 👥 Character-Sheets.html               (111 KB)
+│   └─→ 6 Pre-generated characters
+│       • Jack Malone (Gunslinger)
+│       • Sarah Blackwood (Preacher)
+│       • Doc Wells (Scientist)
+│       • Elena Vasquez (Sharpshooter)
+│       • William Cross (Warrior)
+│       • Isabella Rossi (Immigrant)
+│       • Each with Level 2 & 5 stats
+│
+├── 👹 Bestiary.html                       (42 KB)
+│   └─→ 7 Creatures fully detailed
+│       • Cultista (Minion)
+│       • Zombie (Minion)
+│       • Ghoul (Standard)
+│       • Ibrido Iniziale (Standard)
+│       • Ibrido Avanzato (Elite)
+│       • Il Sacerdote (Boss)
+│       • Il Guardiano (Legendary)
+│
+└── 🗺️ Campaign-Guide.html                (45 KB)
+    └─→ GM long-term play guide
+        • Timeline consigliata
+        • Progressione PG
+        • Narrative threads
+        • Downtime activities
+        • Troubleshooting
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📁 SOURCE COLLECTION (Original Files)
+═══════════════════════════════════════════════════════════════════════════════
+
+/home/claude/gunsmoke-dread-collection/
+│
+├── 🏠 INDEX.html                          Main navigation hub
+├── 📄 README.txt                          Quick start guide
+├── 📊 COLLECTION-MANIFEST.txt             Complete stats
+│
+├── 📂 core/                               Core system files
+│   ├── Weird-West-Rules.html              Complete ruleset
+│   ├── Quick-Reference.html               Tables & cheat sheets
+│   ├── Character-Sheets.html              6 pre-gen PG
+│   ├── Bestiary.html                      7 creatures
+│   └── Campaign-Guide.html                GM guide
+│
+├── 📂 volume-i/                           Volume I (outlined)
+│   └── [Placeholder for future]
+│
+├── 📂 volume-ii/                          Volume II (COMPLETE)
+│   └── Volume-II-Main.html                Full scenario
+│
+├── 📂 assets/                             Styling & resources
+│   └── css/
+│       ├── main-styles.css                Global styles
+│       └── volume-themes.css              Theme variations
+│
+└── 📂 handouts/                           Future expansion
+    └── [Printable documents]
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎯 WHICH FILES TO USE WHEN
+═══════════════════════════════════════════════════════════════════════════════
+
+PREPARATION PHASE:
+├─→ README-FINAL.md                        Understand what you have
+├─→ INDEX.html                             Navigate collection
+├─→ Campaign-Guide.html                    Plan long-term
+└─→ Character-Sheets.html                  Prepare/print PG
+
+DURING SESSION:
+├─→ Volume-II-COMPLETE.html (Tab 1)        Current scenario
+├─→ Bestiary.html (Tab 2)                  Creature stats
+└─→ Character-Sheets.html (Tab 3)          PG reference
+
+BETWEEN SESSIONS:
+├─→ Volume-II-COMPLETE.html                Read ahead
+├─→ Campaign-Guide.html                    Check consequences
+└─→ Bestiary.html                          Preview encounters
+
+REFERENCE:
+├─→ COLLECTION-MANIFEST.txt                Stats & credits
+└─→ FILE-STRUCTURE.txt                     This file!
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📊 FILE SIZES & CONTENT
+═══════════════════════════════════════════════════════════════════════════════
+
+Small Files (< 50 KB):
+├── README-FINAL.md           13 KB   │ Quick read
+├── COLLECTION-MANIFEST.txt   21 KB   │ 5-10 min read
+├── FILE-STRUCTURE.txt         8 KB   │ 2 min read
+├── INDEX.html                31 KB   │ Interactive hub
+├── Bestiary.html             42 KB   │ 30 min read
+└── Campaign-Guide.html       45 KB   │ 1 hour read
+
+Large Files (> 100 KB):
+├── Character-Sheets.html    111 KB   │ 30 min browse
+└── Volume-II-COMPLETE.html  120 KB   │ 2-3 hours study
+
+TOTAL CONTENT: ~400 KB compressed, ~85,000 words
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🚀 QUICK START PATHS
+═══════════════════════════════════════════════════════════════════════════════
+
+PATH A: "I want to play Volume II tonight"
+1. Open Character-Sheets.html → Choose/print PG
+2. Open Volume-II-COMPLETE.html → Read Atto I
+3. Open Bestiary.html → Bookmark Peter Walsh
+4. Start session!
+   Time: 30 min prep
+
+PATH B: "I want to understand everything first"
+1. Read README-FINAL.md → Get overview
+2. Browse INDEX.html → See what's available
+3. Read Campaign-Guide.html → Plan strategy
+4. Study Volume-II-COMPLETE.html → Full prep
+5. Print/share Character-Sheets.html → Player prep
+   Time: 3-4 hours prep
+
+PATH C: "I just want to browse"
+1. Open INDEX.html → Click around
+2. Read sections that interest you
+3. Bookmark favorites
+4. Decide later
+   Time: 1 hour explore
+
+═══════════════════════════════════════════════════════════════════════════════
+
+💡 TIPS & TRICKS
+═══════════════════════════════════════════════════════════════════════════════
+
+BROWSER TIPS:
+• Open files with Chrome, Firefox, Safari, or Edge
+• Use Ctrl+F to search within documents
+• Bookmark frequently used pages
+• Use multiple tabs during sessions
+• Ctrl+P to print if needed
+
+NAVIGATION:
+• INDEX.html is your home base
+• Every page links back to INDEX
+• Sidebar navigation where available
+• Section anchors for quick jumps
+
+PRINTING:
+• Files are print-friendly (B&W works)
+• Landscape mode for wide tables
+• "Print to PDF" to save digital copies
+• Character sheets 1 page each
+
+MOBILE:
+• All files are mobile-responsive
+• Works on tablets (iPad, Android)
+• Phone viewing possible but cramped
+• Best on tablet or larger
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📞 HELP & SUPPORT
+═══════════════════════════════════════════════════════════════════════════════
+
+FILE WON'T OPEN:
+→ Use modern browser (not Internet Explorer)
+→ Try different browser if issues persist
+→ Ensure CSS folder intact if using source
+
+CONTENT QUESTIONS:
+→ Check Campaign-Guide.html (troubleshooting section)
+→ COLLECTION-MANIFEST.txt (design philosophy)
+→ README-FINAL.md (FAQ equivalent)
+
+WANT MORE:
+→ Volume I outlined but not written (future expansion)
+→ Visual aids possible (maps, portraits)
+→ Community resources (Daggerheart forums)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎉 YOU'RE READY!
+═══════════════════════════════════════════════════════════════════════════════
+
+Everything you need is in /outputs/.
+
+Start with:  README-FINAL.md (understand what you have)
+Then open:   INDEX.html (navigate collection)
+Finally:     Volume-II-COMPLETE.html (start playing!)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🔫 The Weird West Awaits 🌊
+
+═══════════════════════════════════════════════════════════════════════════════
