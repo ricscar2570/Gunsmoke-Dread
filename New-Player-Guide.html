@@ -1,682 +1,682 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Player Guide - Gunsmoke & Dread</title>
-    
-    <!-- External Stylesheets -->
-    <link rel="stylesheet" href="assets/css/main-styles.css">
-    <link rel="stylesheet" href="assets/css/volume-themes.css">
-    
-    <style>
-        .beginner-box {
-            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 12px;
-            margin: 30px 0;
-            border: 3px solid #2d5a8a;
-        }
-        
-        .step-number {
-            display: inline-block;
-            background: var(--alien-green);
-            color: var(--night-black);
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            border-radius: 50%;
-            font-weight: bold;
-            font-size: 1.3em;
-            margin-right: 15px;
-        }
-        
-        .difficulty-badge {
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: bold;
-            margin-left: 10px;
-        }
-        
-        .diff-easy {
-            background: #4caf50;
-            color: white;
-        }
-        
-        .diff-medium {
-            background: #ff9800;
-            color: white;
-        }
-        
-        .diff-hard {
-            background: #f44336;
-            color: white;
-        }
-        
-        .example-box {
-            background: rgba(139, 69, 19, 0.1);
-            border-left: 4px solid var(--rust);
-            padding: 20px;
-            margin: 20px 0;
-        }
-        
-        .mechanic-card {
-            background: white;
-            border: 2px solid var(--desert-sand);
-            border-radius: 8px;
-            padding: 20px;
-            margin: 15px 0;
-        }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>New Player Guide - Gunsmoke & Dread</title>
+ 
+ <!-- External Stylesheets -->
+ <link rel="stylesheet" href="assets/css/main-styles.css">
+ <link rel="stylesheet" href="assets/css/volume-themes.css">
+ 
+ <style>
+ .beginner-box {
+ background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+ color: white;
+ padding: 30px;
+ border-radius: 12px;
+ margin: 30px 0;
+ border: 3px solid #2d5a8a;
+ }
+ 
+ .step-number {
+ display: inline-block;
+ background: var(--alien-green);
+ color: var(--night-black);
+ width: 40px;
+ height: 40px;
+ line-height: 40px;
+ text-align: center;
+ border-radius: 50%;
+ font-weight: bold;
+ font-size: 1.3em;
+ margin-right: 15px;
+ }
+ 
+ .difficulty-badge {
+ display: inline-block;
+ padding: 5px 15px;
+ border-radius: 20px;
+ font-size: 0.9em;
+ font-weight: bold;
+ margin-left: 10px;
+ }
+ 
+ .diff-easy {
+ background: #4caf50;
+ color: white;
+ }
+ 
+ .diff-medium {
+ background: #ff9800;
+ color: white;
+ }
+ 
+ .diff-hard {
+ background: #f44336;
+ color: white;
+ }
+ 
+ .example-box {
+ background: rgba(139, 69, 19, 0.1);
+ border-left: 4px solid var(--rust);
+ padding: 20px;
+ margin: 20px 0;
+ }
+ 
+ .mechanic-card {
+ background: white;
+ border: 2px solid var(--desert-sand);
+ border-radius: 8px;
+ padding: 20px;
+ margin: 15px 0;
+ }
+ </style>
 </head>
 <body class="theme-desert">
-    <div class="container">
-        
-        <!-- Header -->
-        <div class="hero" style="padding: 60px 40px; background: linear-gradient(135deg, #4a90e2 0%, var(--rust) 50%, var(--night-black) 100%);">
-            <h1 style="font-size: 4em; color: white;">🆕 NEW PLAYER GUIDE</h1>
-            <p class="subtitle" style="color: white;">Mai Giocato Daggerheart? Inizia Qui!</p>
-            <p class="tagline" style="color: var(--seafoam);">
-                Tutorial Completo • Meccaniche Base • Percorso Semplificato
-            </p>
-        </div>
-        
-        <!-- Main Content -->
-        <div class="content">
-            
-            <!-- INTRODUZIONE -->
-            <section class="section">
-                <h2>👋 Benvenuto al Weird West!</h2>
-                
-                <div class="beginner-box">
-                    <h3 style="color: white; margin-top: 0;">🎯 Sei nel Posto Giusto Se...</h3>
-                    <ul style="font-size: 1.1em; line-height: 1.8;">
-                        <li>✅ Non hai mai giocato Daggerheart</li>
-                        <li>✅ Non hai mai giocato un TTRPG (Tabletop RPG)</li>
-                        <li>✅ Sei curioso ma intimidito dalla complessità</li>
-                        <li>✅ Vuoi capire "how to play" prima di impegnarti</li>
-                        <li>✅ Cerchi percorso guidato step-by-step</li>
-                    </ul>
-                    <p style="margin-top: 20px; font-size: 1.2em; font-weight: bold;">
-                        Questa guida ti porta da ZERO a GIOCATORE in 30 minuti! 🚀
-                    </p>
-                </div>
-                
-                <h3>📖 Cosa Troverai in Questa Guida</h3>
-                
-                <div class="grid-auto-wide">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">PARTE 1: Basics</h3>
-                        </div>
-                        <div class="card-body">
-                            <p><strong>Tempo:</strong> 10 minuti lettura</p>
-                            <p>Cos'è Daggerheart, come si gioca, cosa serve</p>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">PARTE 2: Meccaniche</h3>
-                        </div>
-                        <div class="card-body">
-                            <p><strong>Tempo:</strong> 15 minuti lettura</p>
-                            <p>Dadi, checks, combat, rules essenziali</p>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">PARTE 3: Quick Start</h3>
-                        </div>
-                        <div class="card-body">
-                            <p><strong>Tempo:</strong> 5 minuti setup</p>
-                            <p>Percorso semplificato per prima sessione</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- PARTE 1: DAGGERHEART BASICS -->
-            <section class="section">
-                <h2>📚 PARTE 1: Daggerheart Basics</h2>
-                
-                <h3>🎲 Cos'è Daggerheart?</h3>
-                
-                <p class="large">
-                    <strong>Daggerheart</strong> è un gioco di ruolo fantasy creato da Darrington Press. 
-                    Immagina un libro di cui TU scrivi la storia, giocando con amici attorno a un tavolo 
-                    (o online). È come improv theater + videogiochi + scrittura collaborativa.
-                </p>
-                
-                <div class="info-box">
-                    <h4>🎭 Come Funziona un TTRPG (in 3 frasi)</h4>
-                    <ol style="font-size: 1.05em; line-height: 1.8;">
-                        <li><strong>GM descrive situazione:</strong> "Sei in una città polverosa del West. 
-                        Senti strani rumori dal pozzo..."</li>
-                        <li><strong>Tu dici cosa fai:</strong> "Voglio avvicinarmi al pozzo e guardare dentro."</li>
-                        <li><strong>Dadi decidono risultato:</strong> Tiri dadi. GM descrive cosa succede 
-                        (successo, fallimento, complicazione).</li>
-                    </ol>
-                    <p style="margin-top: 15px; font-weight: bold;">
-                        Ripeti questo loop per 3-4 ore = una sessione di gioco!
-                    </p>
-                </div>
-                
-                <h3>👥 Chi Fa Cosa?</h3>
-                
-                <div class="grid-auto-wide">
-                    <div class="mechanic-card">
-                        <h4>🎭 GAME MASTER (GM)</h4>
-                        <p><strong>Ruolo:</strong> Narratore, arbitro, world builder</p>
-                        <p style="margin-top: 10px;"><strong>Fa:</strong></p>
-                        <ul>
-                            <li>Descrive mondo e situazioni</li>
-                            <li>Interpreta NPCs (personaggi non giocanti)</li>
-                            <li>Decide difficoltà checks</li>
-                            <li>Controlla mostri in combat</li>
-                            <li>Giudica regole quando ambigue</li>
-                        </ul>
-                        <p style="margin-top: 10px;"><strong>Numero:</strong> 1 per gruppo</p>
-                    </div>
-                    
-                    <div class="mechanic-card">
-                        <h4>🎮 PLAYERS (Giocatori)</h4>
-                        <p><strong>Ruolo:</strong> Protagonisti della storia</p>
-                        <p style="margin-top: 10px;"><strong>Fanno:</strong></p>
-                        <ul>
-                            <li>Controllano 1 personaggio (PG) ciascuno</li>
-                            <li>Decidono azioni del PG</li>
-                            <li>Tirano dadi quando richiesto</li>
-                            <li>Collaborano per risolvere problemi</li>
-                            <li>Raccontano storia insieme a GM</li>
-                        </ul>
-                        <p style="margin-top: 10px;"><strong>Numero:</strong> 3-5 ideale (min 2, max 6)</p>
-                    </div>
-                </div>
-                
-                <h3>🎒 Cosa Serve per Giocare?</h3>
-                
-                <div class="stat-block">
-                    <h4>MATERIALI ESSENZIALI:</h4>
-                    <ul style="font-size: 1.05em; line-height: 1.7;">
-                        <li>✅ <strong>Questi file HTML</strong> (hai già! Apri in browser)</li>
-                        <li>✅ <strong>Dadi poliedrici:</strong> d4, d6, d8, d10, d12, d20 (1 set per player, 
-                        o app "Dice Roller")</li>
-                        <li>✅ <strong>Character sheet:</strong> Stampato o digitale (incluso in questa collection)</li>
-                        <li>✅ <strong>Carta & penna:</strong> Per note, sketch, tracking</li>
-                        <li>✅ <strong>3-4 ore tempo:</strong> Per sessione tipica</li>
-                        <li>✅ <strong>Tavolo & sedie:</strong> O videoconferenza (Roll20, Foundry, Discord)</li>
-                    </ul>
-                    
-                    <h4 style="margin-top: 25px;">OPZIONALI (Nice to Have):</h4>
-                    <ul style="font-size: 1.05em; line-height: 1.7;">
-                        <li>🎵 Musica ambient (Spotify "fantasy ambience")</li>
-                        <li>🗺️ Mappe & miniature (se giochi in persona)</li>
-                        <li>🍕 Snacks & drinks (sessioni lunghe!)</li>
-                        <li>📱 Tablet per reference (tieni file aperti)</li>
-                    </ul>
-                </div>
-                
-                <div class="warning-box">
-                    <h4>💰 Quanto Costa?</h4>
-                    <p>
-                        <strong>Daggerheart SRD:</strong> FREE (System Reference Document scaricabile gratis)<br>
-                        <strong>Questa Collection:</strong> FREE (hai tutto in questi file)<br>
-                        <strong>Dadi:</strong> $5-15 online (o app gratis)<br>
-                        <strong>Character Sheets:</strong> FREE (inclusi qui, stampa o digitale)
-                    </p>
-                    <p style="margin-top: 15px; font-weight: bold;">
-                        TOTALE: $0-15 per iniziare! 🎉
-                    </p>
-                </div>
-            </section>
-            
-            <!-- PARTE 2: MECCANICHE ESSENZIALI -->
-            <section class="section">
-                <h2>⚙️ PARTE 2: Meccaniche Essenziali</h2>
-                
-                <p class="large">
-                    Queste sono le 5 meccaniche che DEVI capire per giocare. Tutto il resto imparerai giocando!
-                </p>
-                
-                <h3>🎲 MECCANICA #1: Duality Dice</h3>
-                
-                <div class="mechanic-card">
-                    <h4>Come Funziona</h4>
-                    <p style="font-size: 1.05em; line-height: 1.8;">
-                        In Daggerheart, tiri sempre <strong>2 dadi simultaneamente</strong>: uno Hope (speranza) 
-                        e uno Fear (paura). Confronti QUALE dado è più alto.
-                    </p>
-                    
-                    <div class="example-box">
-                        <h4>📖 Esempio Pratico</h4>
-                        <p><strong>Situazione:</strong> Vuoi scalare un muro roccioso.</p>
-                        <p style="margin-top: 10px;"><strong>GM dice:</strong> "Fai un check di Agilità. Tira 
-                        d12 Hope e d12 Fear."</p>
-                        <p style="margin-top: 10px;"><strong>Tu tiri:</strong></p>
-                        <ul>
-                            <li>Hope (d12): 🎲 <strong>9</strong></li>
-                            <li>Fear (d12): 🎲 <strong>4</strong></li>
-                        </ul>
-                        <p style="margin-top: 10px;"><strong>Risultato:</strong> Hope è più alto! Successo. 
-                        GM descrive: "Trovi appiglio perfetto e scali con grazia. Sei in cima!"</p>
-                    </div>
-                    
-                    <div class="info-box">
-                        <h4>🔑 Regola Chiave</h4>
-                        <ul>
-                            <li><strong>Hope > Fear:</strong> Successo! + GM mette token in Hope pool</li>
-                            <li><strong>Fear > Hope:</strong> Complicazione o fallimento + GM mette token in Fear pool</li>
-                            <li><strong>Pareggio:</strong> Successo parziale (entrambi pool ricevono token)</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <h3>📊 MECCANICA #2: Difficulty Checks (CD)</h3>
-                
-                <div class="mechanic-card">
-                    <h4>Come Funziona</h4>
-                    <p style="font-size: 1.05em; line-height: 1.8;">
-                        GM assegna <strong>Challenge Difficulty (CD)</strong> - numero che devi raggiungere o 
-                        superare col dado più alto.
-                    </p>
-                    
-                    <table style="margin-top: 20px;">
-                        <thead>
-                            <tr>
-                                <th>CD</th>
-                                <th>Difficoltà</th>
-                                <th>Esempio</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>10</strong></td>
-                                <td>Facile</td>
-                                <td>Aprire porta non chiusa a chiave</td>
-                            </tr>
-                            <tr>
-                                <td><strong>12</strong></td>
-                                <td>Moderato</td>
-                                <td>Scavalcare recinzione alta</td>
-                            </tr>
-                            <tr>
-                                <td><strong>14</strong></td>
-                                <td>Impegnativo</td>
-                                <td>Convincere sceriffo diffidente</td>
-                            </tr>
-                            <tr>
-                                <td><strong>16</strong></td>
-                                <td>Difficile</td>
-                                <td>Schivare raffica colpi pistola</td>
-                            </tr>
-                            <tr>
-                                <td><strong>18+</strong></td>
-                                <td>Molto Difficile</td>
-                                <td>Confrontare entità cosmica senza impazzire</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <div class="example-box">
-                        <h4>📖 Esempio Pratico</h4>
-                        <p><strong>GM:</strong> "Vuoi scassinare la serratura? CD 14. Tira Agilità."</p>
-                        <p style="margin-top: 10px;"><strong>Tu tiri:</strong> Hope 15, Fear 8</p>
-                        <p style="margin-top: 10px;"><strong>Risultato:</strong> Hope (15) ≥ CD (14) → 
-                        <strong>SUCCESSO!</strong> "Click. La serratura si apre."</p>
-                    </div>
-                </div>
-                
-                <h3>⚔️ MECCANICA #3: Combat Basics</h3>
-                
-                <div class="mechanic-card">
-                    <h4>Come Funziona</h4>
-                    <p style="font-size: 1.05em; line-height: 1.8;">
-                        Combat segue <strong>turni</strong>. Nel tuo turno puoi fare <strong>1 azione maggiore + 
-                        1 movimento</strong>.
-                    </p>
-                    
-                    <h4 style="margin-top: 20px;">🗡️ Azioni Maggiori Comuni:</h4>
-                    <ul style="font-size: 1.05em; line-height: 1.7;">
-                        <li><strong>Attaccare:</strong> Tiro per colpire nemico con arma</li>
-                        <li><strong>Lanciare Magia:</strong> Usare abilità speciale (se hai)</li>
-                        <li><strong>Aiutare Alleato:</strong> Dare Vantaggio a compagno</li>
-                        <li><strong>Schivare:</strong> Focus su difesa (Svantaggio attacchi vs te)</li>
-                    </ul>
-                    
-                    <h4 style="margin-top: 20px;">👟 Movimento:</h4>
-                    <p style="font-size: 1.05em;">
-                        Puoi muoverti fino a <strong>Velocità</strong> (tipicamente 9 metri). Questo rappresenta 
-                        correre, rotolare, repositionarti.
-                    </p>
-                    
-                    <div class="example-box">
-                        <h4>📖 Esempio Turno Combat</h4>
-                        <p><strong>Situazione:</strong> Sei a 6m da bandito armato.</p>
-                        <p style="margin-top: 10px;"><strong>Tuo turno:</strong></p>
-                        <ol>
-                            <li><strong>Movimento:</strong> Corri 6m verso bandito (ora adiacente)</li>
-                            <li><strong>Azione:</strong> Attacchi con revolver</li>
-                            <li><strong>Tiri:</strong> Hope 12, Fear 5 (Hope vince!)</li>
-                            <li><strong>Danni:</strong> Tiri 2d6 = 8 danni. Bandito perde 8 HP.</li>
-                        </ol>
-                        <p style="margin-top: 10px;"><strong>GM:</strong> "Il bandito urla, ferito al braccio. 
-                        Ora tocca a lui..."</p>
-                    </div>
-                </div>
-                
-                <h3>❤️ MECCANICA #4: Hit Points (HP)</h3>
-                
-                <div class="mechanic-card">
-                    <h4>Come Funziona</h4>
-                    <p style="font-size: 1.05em; line-height: 1.8;">
-                        <strong>HP (Hit Points)</strong> rappresenta salute/resistenza. Quando prendi danno, 
-                        sottrai da HP. Se arrivi a 0 HP... non muori subito!
-                    </p>
-                    
-                    <div class="warning-box">
-                        <h4>💀 Cosa Succede a 0 HP?</h4>
-                        <ol style="font-size: 1.05em; line-height: 1.7;">
-                            <li><strong>Down ma non Morto:</strong> Cadi incosciente. Non puoi agire.</li>
-                            <li><strong>Death's Door:</strong> Inizio ogni turno, tiri "Death Save" (d20):</li>
-                            <ul>
-                                <li>🎲 15+: Stabilizzi! (non peggiori ma ancora down)</li>
-                                <li>🎲 10-14: Rimani down</li>
-                                <li>🎲 1-9: Accumuli 1 "Death Mark" (3 = MORTE permanente)</li>
-                            </ul>
-                            <li><strong>Resurrezione:</strong> Alleati possono curarti (riporti a 1+ HP, ti alzi)</li>
-                        </ol>
-                        <p style="margin-top: 15px; font-weight: bold;">
-                            In breve: 0 HP è drammatico ma NON fine immediata. Hai chance!
-                        </p>
-                    </div>
-                </div>
-                
-                <h3>😱 MECCANICA #5: Tenuta Mentale (Questa Campaign)</h3>
-                
-                <div class="mechanic-card">
-                    <h4>Speciale per Gunsmoke & Dread</h4>
-                    <p style="font-size: 1.05em; line-height: 1.8;">
-                        Questa campaign aggiunge <strong>Tenuta</strong> - barra che traccia sanità mentale. 
-                        Quando vedi orrori cosmici, riempi segmenti.
-                    </p>
-                    
-                    <div class="stat-block">
-                        <h4>Come Funziona</h4>
-                        <p><strong>Tenuta Max:</strong> 10 segmenti (come HP ma per sanità)</p>
-                        <p style="margin-top: 10px;"><strong>Quando Riempi:</strong> Vedi mostro orribile, 
-                        scopri verità terrificante, assisti a body horror</p>
-                        <p style="margin-top: 10px;"><strong>Effetti:</strong></p>
-                        <ul>
-                            <li>1-3 segmenti: Ansioso, ma ok</li>
-                            <li>4-6 segmenti: Incubi, paranoia lieve</li>
-                            <li>7-9 segmenti: Fobie, tremori, visioni</li>
-                            <li>10 segmenti (PIENO): Breakdown completo (vedi tabella conseguenze)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="example-box">
-                        <h4>📖 Esempio Pratico</h4>
-                        <p><strong>GM:</strong> "Dal pozzo emerge creatura - metà uomo, metà pesce, scaglie 
-                        verdegrigie. Senti odore putrido. Fate check Tenuta, CD 14."</p>
-                        <p style="margin-top: 10px;"><strong>Tu tiri:</strong> Hope 11, Fear 15 (Fear vince, fail)</p>
-                        <p style="margin-top: 10px;"><strong>GM:</strong> "Riempi 2 segmenti Tenuta. Senti 
-                        sudore freddo. Per un momento, giuri di vedere tentacoli negli angoli visione..."</p>
-                    </div>
-                    
-                    <div class="tip-box">
-                        <h4>💡 Come Recuperare Tenuta</h4>
-                        <ul>
-                            <li><strong>Riposo Lungo:</strong> In luogo sicuro, recuperi 2 segmenti</li>
-                            <li><strong>Downtime:</strong> Settimane/mesi lontano da orrori = reset completo</li>
-                            <li><strong>Supporto:</strong> Talk con alleato fidato = 1 segmento</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- PARTE 3: QUICK START PATH -->
-            <section class="section">
-                <h2>🚀 PARTE 3: Quick Start Path</h2>
-                
-                <p class="large">
-                    Hai letto le basics? Perfetto! Ecco percorso step-by-step per giocare OGGI.
-                </p>
-                
-                <h3>📋 Checklist Pre-Sessione (30 min)</h3>
-                
-                <div class="stat-block">
-                    <h4><span class="step-number">1</span> SCEGLI PERSONAGGIO</h4>
-                    <p style="margin-left: 55px; font-size: 1.05em; line-height: 1.7;">
-                        Apri <strong>Character-Sheets.html</strong>. Leggi i 6 PG. Scegli quello che ti ispira 
-                        di più (non preoccuparti troppo di "ottimizzazione" - tutti funzionano!).
-                    </p>
-                    <p style="margin-left: 55px; margin-top: 10px;">
-                        <strong>Consiglio per beginners:</strong><br>
-                        • <strong>Jack Malone</strong> (Gunslinger) = Semplice, diretto, pew-pew 🔫<br>
-                        • <strong>Sarah Blackwood</strong> (Preacher) = Support, healer, facile 🙏<br>
-                        • <strong>Doc Wells</strong> (Scientist) = Utility, smart, interessante 🔬
-                    </p>
-                </div>
-                
-                <div class="stat-block">
-                    <h4><span class="step-number">2</span> STAMPA/DOWNLOAD CHARACTER SHEET</h4>
-                    <p style="margin-left: 55px; font-size: 1.05em; line-height: 1.7;">
-                        Click "Print" in browser o salva PDF. Avrai character sheet davanti durante gioco. 
-                        Tieni penna per trackare HP, Tenuta, risorse.
-                    </p>
-                </div>
-                
-                <div class="stat-block">
-                    <h4><span class="step-number">3</span> PREPARA DADI</h4>
-                    <p style="margin-left: 55px; font-size: 1.05em; line-height: 1.7;">
-                        Se hai dadi fisici: ottimo! Se no, scarica app "Dice Roller" (gratis su iOS/Android). 
-                        Assicurati di avere: d4, d6, d8, d10, d12, d20.
-                    </p>
-                </div>
-                
-                <div class="stat-block">
-                    <h4><span class="step-number">4</span> GM APRE FILE</h4>
-                    <p style="margin-left: 55px; font-size: 1.05em; line-height: 1.7;">
-                        Game Master apre <strong>Volume-II-COMPLETE.html</strong> in browser. Legge SOLO 
-                        "Atto I - Scena 1: Arrivo a Dry Eye" (10-15 min lettura). Non serve leggere tutto 
-                        scenario - inizia e impara giocando!
-                    </p>
-                </div>
-                
-                <div class="stat-block">
-                    <h4><span class="step-number">5</span> SESSION ZERO (5 MIN)</h4>
-                    <p style="margin-left: 55px; font-size: 1.05em; line-height: 1.7;">
-                        Prima di iniziare, fate quick chat:
-                    </p>
-                    <ul style="margin-left: 55px; font-size: 1.05em; line-height: 1.7;">
-                        <li><strong>Tone:</strong> "Questo è horror. Ci saranno momenti spaventosi. Ok per tutti?"</li>
-                        <li><strong>Safety:</strong> "Se qualcosa è troppo, dite 'pause' e skippamo scena."</li>
-                        <li><strong>Fun:</strong> "Obiettivo è divertirsi. Se confusi, chiedete!"</li>
-                    </ul>
-                </div>
-                
-                <h3>🎬 Prima Sessione - Percorso Semplificato</h3>
-                
-                <div class="beginner-box">
-                    <h4 style="color: white; margin-top: 0;">🎯 OBIETTIVO SESSIONE 1</h4>
-                    <p style="font-size: 1.1em;">
-                        Giocare <strong>Atto I - Scene 1-2</strong> di Volume II. Questo include:
-                    </p>
-                    <ul style="font-size: 1.05em; line-height: 1.7;">
-                        <li>✅ Introduzione personaggi (roleplay leggero)</li>
-                        <li>✅ Arrivo a Dry Eye (exploration, NPCs)</li>
-                        <li>✅ Prima investigation (uso skills)</li>
-                        <li>✅ (Opzionale) Primo combat se tempo (Peter Walsh)</li>
-                    </ul>
-                    <p style="margin-top: 15px; font-weight: bold; font-size: 1.1em;">
-                        Durata: 3-4 ore • Difficoltà: Beginner Friendly
-                    </p>
-                </div>
-                
-                <h4>📖 Script Iniziale per GM</h4>
-                
-                <div class="example-box">
-                    <p style="font-style: italic; font-size: 1.05em; line-height: 1.8;">
-                        <strong>GM legge ad alta voce:</strong>
-                    </p>
-                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                        "È marzo 1886. Vi trovate su treno Southern Pacific diretto verso Arizona. Ciascuno 
-                        di voi ha ricevuto telegramma misterioso - lavoro ben pagato, ma urgente. Il messaggio 
-                        parlava di 'strani eventi' in città chiamata Dry Eye.
-                    </p>
-                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                        Mentre sole tramonta su deserto infinito, treno rallenta. Stazione appare - piccola, 
-                        polverosa, quasi deserta. Cartello sbiadito: <strong>DRY EYE - Pop. 217</strong>.
-                    </p>
-                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
-                        Scendete dal treno. Aria è caldissima. Secca. Odore di polvere e... qualcos'altro. 
-                        Qualcosa di <em>sbagliato</em>.
-                    </p>
-                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8; font-weight: bold;">
-                        Benvenuti a Dry Eye. Cosa fate?"
-                    </p>
-                </div>
-                
-                <h4>🎭 Tips per Prima Sessione</h4>
-                
-                <div class="tip-box">
-                    <h4>Per GM (Principiante):</h4>
-                    <ul style="font-size: 1.05em; line-height: 1.7;">
-                        <li><strong>Non memorizzare tutto:</strong> Va BENE tenere file aperto e leggere. 
-                        Non serve sapere tutto a memoria.</li>
-                        <li><strong>"Non so, decido io":</strong> Se player chiede regola che non conosci, 
-                        dì "Per oggi facciamo così [tua decisione], controlliamo dopo."</li>
-                        <li><strong>Descrivi sensi:</strong> Non solo vista. Odori, suoni, texture. "Senti 
-                        gocciolare acqua. Odore di sale."</li>
-                        <li><strong>Pause ok:</strong> Ogni ora, fate break 5-10 min. Bathroom, stretch, 
-                        recap veloce.</li>
-                        <li><strong>Celebra successi:</strong> Quando player fanno cosa cool, fallo notare! 
-                        "Wow, idea fantastica!"</li>
-                    </ul>
-                </div>
-                
-                <div class="tip-box">
-                    <h4>Per Players (Principianti):</h4>
-                    <ul style="font-size: 1.05em; line-height: 1.7;">
-                        <li><strong>Dì cosa VUOI fare:</strong> Non worry su regole. Dì "Voglio convincere 
-                        sceriffo", GM ti dirà quale dado tirare.</li>
-                        <li><strong>Non esiste "risposta corretta":</strong> Se GM descrive situazione, non 
-                        c'è soluzione predefinita. Fai ciò che PG farebbe!</li>
-                        <li><strong>Collaborate:</strong> Questo è team game. Aiutatevi. "Hey Jack, copri 
-                        le mie spalle mentre entro?"</li>
-                        <li><strong>Roleplay optional:</strong> Non serve "recitare". Va bene dire "Il mio 
-                        PG dice che è pericoloso" invece di fare voce.</li>
-                        <li><strong>Domande ok:</strong> Confuso? CHIEDI. "Aspetta, non ho capito. Posso 
-                        fare X?"</li>
-                    </ul>
-                </div>
-                
-                <h3>📚 Dopo Prima Sessione</h3>
-                
-                <div class="info-box">
-                    <h4>🎉 Congratulazioni - Hai Giocato Daggerheart!</h4>
-                    <p style="font-size: 1.05em; line-height: 1.7;">
-                        Se sei arrivato a fine prima sessione, hai imparato 80% delle meccaniche giocando. 
-                        Ora puoi:
-                    </p>
-                    <ul>
-                        <li><strong>Continua:</strong> Gioca Scena 3 prossima volta (primo combat vero)</li>
-                        <li><strong>Leggi di più:</strong> Ora che hai context, rileggi Weird-West-Rules.html 
-                        - farà MOLTO più senso</li>
-                        <li><strong>Experiment:</strong> Prova abilità speciali PG che non hai usato</li>
-                        <li><strong>Debrief:</strong> Chat con gruppo: "Cosa è piaciuto? Cosa cambiare?"</li>
-                    </ul>
-                </div>
-                
-            </section>
-            
-            <!-- PROSSIMI PASSI -->
-            <section class="section">
-                <h2>🎯 Prossimi Passi</h2>
-                
-                <h3>✅ Hai Completato Tutorial!</h3>
-                
-                <p class="large">
-                    Ora sai abbastanza per GIOCARE. Non serve sapere tutto - il resto imparerai giocando.
-                </p>
-                
-                <div class="grid-auto-wide">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">📖 Approfondisci</h3>
-                        </div>
-                        <div class="card-body">
-                            <p><strong>Quando sei pronto:</strong></p>
-                            <ul>
-                                <li>Weird-West-Rules.html (sistema completo)</li>
-                                <li>Campaign-Guide.html (long-term tips)</li>
-                                <li>Bestiary.html (creature dettagliate)</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">🎮 Inizia Giocare</h3>
-                        </div>
-                        <div class="card-body">
-                            <p><strong>Ready to go:</strong></p>
-                            <ul>
-                                <li>Character-Sheets.html → Scegli PG</li>
-                                <li>Volume-II-COMPLETE.html → Leggi Atto I</li>
-                                <li>Bestiary.html → Bookmark per combat</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">🤝 Trova Gruppo</h3>
-                        </div>
-                        <div class="card-body">
-                            <p><strong>Nessun gruppo?</strong></p>
-                            <ul>
-                                <li>r/Daggerheart (Reddit community)</li>
-                                <li>Roll20.net (online play finder)</li>
-                                <li>Amici + "Vogliamo provare?"</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="beginner-box">
-                    <h3 style="color: white; margin-top: 0;">🎲 Remember</h3>
-                    <p style="font-size: 1.2em; line-height: 1.8;">
-                        Il goal NON è fare tutto "perfetto". Il goal è <strong>divertirsi</strong> raccontando 
-                        storia insieme. Farete errori. Dimenticherete regole. Improvviserete. <em>Va BENE</em>. 
-                        Questa è magia dei TTRPG - ogni gruppo gioca diversamente, e ogni partita è unica.
-                    </p>
-                    <p style="margin-top: 20px; font-size: 1.3em; font-weight: bold;">
-                        Non esiste "wrong fun". Se vi divertite, state facendo bene. 🎉
-                    </p>
-                </div>
-            </section>
-            
-        </div>
-        
-        <!-- Footer -->
-        <div class="footer">
-            <p style="font-size: 0.9em;">
-                <strong>New Player Guide - Gunsmoke & Dread Collection</strong><br>
-                Welcome to the Weird West! 🔫🌊
-            </p>
-            <p style="margin-top: 20px; font-size: 0.85em; color: var(--desert-sand);">
-                <a href="../INDEX.html" style="color: var(--alien-green);">← Torna all'Index</a> | 
-                <a href="../core/Character-Sheets.html" style="color: var(--alien-green);">Scegli Personaggio →</a>
-            </p>
-        </div>
-        
-    </div>
+ <div class="container">
+ 
+ <!-- Header -->
+ <div class="hero" style="padding: 60px 40px; background: linear-gradient(135deg, #4a90e2 0%, var(--rust) 50%, var(--night-black) 100%);">
+ <h1 style="font-size: 4em; color: white;">🆕 NEW PLAYER GUIDE</h1>
+ <p class="subtitle" style="color: white;">Mai Giocato Daggerheart? Inizia Qui!</p>
+ <p class="tagline" style="color: var(--seafoam);">
+ Tutorial Completo • Meccaniche Base • Percorso Semplificato
+ </p>
+ </div>
+ 
+ <!-- Main Content -->
+ <div class="content">
+ 
+ <!-- INTRODUZIONE -->
+ <section class="section">
+ <h2>👋 Benvenuto al Weird ovest!</h2>
+ 
+ <div class="beginner-box">
+ <h3 style="color: white; margin-top: 0;">🎯 Sei nel Posto Giusto Se...</h3>
+ <ul style="font-size: 1.1em; line-height: 1.8;">
+ <li>✅ Non hai mai giocato Daggerheart</li>
+ <li>✅ Non hai mai giocato un TTRPG (Tabletop RPG)</li>
+ <li>✅ Sei curioso ma intimidito dalla complessità</li>
+ <li>✅ Vuoi capire "how to play" prima di impegnarti</li>
+ <li>✅ Cerchi percorso guidato step-by-step</li>
+ </ul>
+ <p style="margin-top: 20px; font-size: 1.2em; font-weight: bold;">
+ Questa guida ti porta da ZERO a GIOCATORE in 30 minuti! 🚀
+ </p>
+ </div>
+ 
+ <h3>📖 Cosa Troverai in Questa Guida</h3>
+ 
+ <div class="grid-auto-wide">
+ <div class="card">
+ <div class="card-header">
+ <h3 class="card-title">PARTE 1: Basics</h3>
+ </div>
+ <div class="card-body">
+ <p><strong>Tempo:</strong> 10 minuti lettura</p>
+ <p>Cos'è Daggerheart, come si gioca, cosa serve</p>
+ </div>
+ </div>
+ 
+ <div class="card">
+ <div class="card-header">
+ <h3 class="card-title">PARTE 2: Meccaniche</h3>
+ </div>
+ <div class="card-body">
+ <p><strong>Tempo:</strong> 15 minuti lettura</p>
+ <p>Dadi, checks, combattimento, rules essenziali</p>
+ </div>
+ </div>
+ 
+ <div class="card">
+ <div class="card-header">
+ <h3 class="card-title">PARTE 3: Quick Start</h3>
+ </div>
+ <div class="card-body">
+ <p><strong>Tempo:</strong> 5 minuti setup</p>
+ <p>Percorso semplificato per prima sessione</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ 
+ <!-- PARTE 1: DAGGERHEART BASICS -->
+ <section class="section">
+ <h2>📚 PARTE 1: Daggerheart Basics</h2>
+ 
+ <h3>🎲 Cos'è Daggerheart?</h3>
+ 
+ <p class="large">
+ <strong>Daggerheart</strong> è un gioco di ruolo fantasy creato da Darrington Press. 
+ Immagina un libro di cui TU scrivi la storia, giocando con amici attorno a un tavolo 
+ (o online). È come improv theater + videogiochi + scrittura collaborativa.
+ </p>
+ 
+ <div class="info-box">
+ <h4>🎭 Come Funziona un TTRPG (in 3 frasi)</h4>
+ <ol style="font-size: 1.05em; line-height: 1.8;">
+ <li><strong>GM descrive situazione:</strong> "Sei in una città polverosa del ovest. 
+ Senti strani rumori dal pozzo..."</li>
+ <li><strong>Tu dici cosa fai:</strong> "Voglio avvicinarmi al pozzo e guardare dentro."</li>
+ <li><strong>Dadi decidono risultato:</strong> Tiri dadi. GM descrive cosa succede 
+ (successo, fallimento, complicazione).</li>
+ </ol>
+ <p style="margin-top: 15px; font-weight: bold;">
+ Ripeti questo loop per 3-4 ore = una sessione di gioco!
+ </p>
+ </div>
+ 
+ <h3>👥 Chi Fa Cosa?</h3>
+ 
+ <div class="grid-auto-wide">
+ <div class="mechanic-card">
+ <h4>🎭 GAME MASTER (GM)</h4>
+ <p><strong>Ruolo:</strong> Narratore, arbitro, world builder</p>
+ <p style="margin-top: 10px;"><strong>Fa:</strong></p>
+ <ul>
+ <li>Descrive mondo e situazioni</li>
+ <li>Interpreta PNG (personaggi non giocanti)</li>
+ <li>Decide difficoltà checks</li>
+ <li>Controlla mostri in combattimento</li>
+ <li>Giudica regole quando ambigue</li>
+ </ul>
+ <p style="margin-top: 10px;"><strong>Numero:</strong> 1 per gruppo</p>
+ </div>
+ 
+ <div class="mechanic-card">
+ <h4>🎮 giocatori (Giocatori)</h4>
+ <p><strong>Ruolo:</strong> Protagonisti della storia</p>
+ <p style="margin-top: 10px;"><strong>Fanno:</strong></p>
+ <ul>
+ <li>Controllano 1 personaggio (PG) ciascuno</li>
+ <li>Decidono azioni del PG</li>
+ <li>Tirano dadi quando richiesto</li>
+ <li>Collaborano per risolvere problemi</li>
+ <li>Raccontano storia insieme a GM</li>
+ </ul>
+ <p style="margin-top: 10px;"><strong>Numero:</strong> 3-5 ideale (min 2, max 6)</p>
+ </div>
+ </div>
+ 
+ <h3>🎒 Cosa Serve per Giocare?</h3>
+ 
+ <div class="stat-block">
+ <h4>MATERIALI ESSENZIALI:</h4>
+ <ul style="font-size: 1.05em; line-height: 1.7;">
+ <li>✅ <strong>Questi file HTML</strong> (hai già! Apri in browser)</li>
+ <li>✅ <strong>Dadi poliedrici:</strong> d4, d6, d8, d10, d12, d20 (1 set per player, 
+ o app "Dice Roller")</li>
+ <li>✅ <strong>Character sheet:</strong> Stampato o digitale (incluso in questa collection)</li>
+ <li>✅ <strong>Carta & penna:</strong> Per note, sketch, tracking</li>
+ <li>✅ <strong>3-4 ore tempo:</strong> Per sessione tipica</li>
+ <li>✅ <strong>Tavolo & sedie:</strong> O videoconferenza (Roll20, Foundry, Discord)</li>
+ </ul>
+ 
+ <h4 style="margin-top: 25px;">OPZIONALI (Nice to Have):</h4>
+ <ul style="font-size: 1.05em; line-height: 1.7;">
+ <li>🎵 Musica ambient (Spotify "fantasy ambience")</li>
+ <li>🗺️ Mappe & miniature (se giochi in persona)</li>
+ <li>🍕 Snacks & drinks (sessioni lunghe!)</li>
+ <li>📱 Tablet per reference (tieni file aperti)</li>
+ </ul>
+ </div>
+ 
+ <div class="warning-box">
+ <h4>💰 Quanto Costa?</h4>
+ <p>
+ <strong>Daggerheart SRD:</strong> FREE (System Reference Document scaricabile gratis)<br>
+ <strong>Questa Collection:</strong> FREE (hai tutto in questi file)<br>
+ <strong>Dadi:</strong> $5-15 online (o app gratis)<br>
+ <strong>Character Sheets:</strong> FREE (inclusi qui, stampa o digitale)
+ </p>
+ <p style="margin-top: 15px; font-weight: bold;">
+ TOTALE: $0-15 per iniziare! 🎉
+ </p>
+ </div>
+ </section>
+ 
+ <!-- PARTE 2: MECCANICHE ESSENZIALI -->
+ <section class="section">
+ <h2>⚙️ PARTE 2: Meccaniche Essenziali</h2>
+ 
+ <p class="large">
+ Queste sono le 5 meccaniche che DEVI capire per giocare. Tutto il resto imparerai giocando!
+ </p>
+ 
+ <h3>🎲 MECCANICA #1: Duality Dice</h3>
+ 
+ <div class="mechanic-card">
+ <h4>Come Funziona</h4>
+ <p style="font-size: 1.05em; line-height: 1.8;">
+ In Daggerheart, tiri sempre <strong>2 dadi simultaneamente</strong>: uno Hope (speranza) 
+ e uno Fear (paura). Confronti QUALE dado è più alto.
+ </p>
+ 
+ <div class="example-box">
+ <h4>📖 Esempio Pratico</h4>
+ <p><strong>Situazione:</strong> Vuoi scalare un muro roccioso.</p>
+ <p style="margin-top: 10px;"><strong>GM dice:</strong> "Fai un prova di Agilità. Tira 
+ d12 Hope e d12 Fear."</p>
+ <p style="margin-top: 10px;"><strong>Tu tiri:</strong></p>
+ <ul>
+ <li>Hope (d12): 🎲 <strong>9</strong></li>
+ <li>Fear (d12): 🎲 <strong>4</strong></li>
+ </ul>
+ <p style="margin-top: 10px;"><strong>Risultato:</strong> Hope è più alto! Successo. 
+ GM descrive: "Trovi appiglio perfetto e scali con grazia. Sei in cima!"</p>
+ </div>
+ 
+ <div class="info-box">
+ <h4>🔑 Regola Chiave</h4>
+ <ul>
+ <li><strong>Hope > Fear:</strong> Successo! + GM mette token in Hope pool</li>
+ <li><strong>Fear > Hope:</strong> Complicazione o fallimento + GM mette token in Fear pool</li>
+ <li><strong>Pareggio:</strong> Successo parziale (entrambi pool ricevono token)</li>
+ </ul>
+ </div>
+ </div>
+ 
+ <h3>📊 MECCANICA #2: Difficulty Checks (CD)</h3>
+ 
+ <div class="mechanic-card">
+ <h4>Come Funziona</h4>
+ <p style="font-size: 1.05em; line-height: 1.8;">
+ GM assegna <strong>Challenge Difficulty (CD)</strong> - numero che devi raggiungere o 
+ superare col dado più alto.
+ </p>
+ 
+ <table style="margin-top: 20px;">
+ <thead>
+ <tr>
+ <th>CD</th>
+ <th>Difficoltà</th>
+ <th>Esempio</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><strong>10</strong></td>
+ <td>Facile</td>
+ <td>Aprire porta non chiusa a chiave</td>
+ </tr>
+ <tr>
+ <td><strong>12</strong></td>
+ <td>Moderato</td>
+ <td>Scavalcare recinzione alta</td>
+ </tr>
+ <tr>
+ <td><strong>14</strong></td>
+ <td>Impegnativo</td>
+ <td>Convincere sceriffo diffidente</td>
+ </tr>
+ <tr>
+ <td><strong>16</strong></td>
+ <td>Difficile</td>
+ <td>Schivare raffica colpi pistola</td>
+ </tr>
+ <tr>
+ <td><strong>18+</strong></td>
+ <td>Molto Difficile</td>
+ <td>Confrontare entità cosmica senza impazzire</td>
+ </tr>
+ </tbody>
+ </table>
+ 
+ <div class="example-box">
+ <h4>📖 Esempio Pratico</h4>
+ <p><strong>GM:</strong> "Vuoi scassinare la serratura? CD 14. Tira Agilità."</p>
+ <p style="margin-top: 10px;"><strong>Tu tiri:</strong> Hope 15, Fear 8</p>
+ <p style="margin-top: 10px;"><strong>Risultato:</strong> Hope (15) ≥ CD (14) → 
+ <strong>SUCCESSO!</strong> "Click. La serratura si apre."</p>
+ </div>
+ </div>
+ 
+ <h3>⚔️ MECCANICA #3: combattimento Basics</h3>
+ 
+ <div class="mechanic-card">
+ <h4>Come Funziona</h4>
+ <p style="font-size: 1.05em; line-height: 1.8;">
+ combattimento segue <strong>turni</strong>. Nel tuo turno puoi fare <strong>1 azione maggiore + 
+ 1 movimento</strong>.
+ </p>
+ 
+ <h4 style="margin-top: 20px;">🗡️ Azioni Maggiori Comuni:</h4>
+ <ul style="font-size: 1.05em; line-height: 1.7;">
+ <li><strong>Attaccare:</strong> Tiro per colpire nemico con arma</li>
+ <li><strong>Lanciare Magia:</strong> Usare abilità speciale (se hai)</li>
+ <li><strong>Aiutare Alleato:</strong> Dare Vantaggio a compagno</li>
+ <li><strong>Schivare:</strong> Focus su difesa (Svantaggio attacchi vs te)</li>
+ </ul>
+ 
+ <h4 style="margin-top: 20px;">👟 Movimento:</h4>
+ <p style="font-size: 1.05em;">
+ Puoi muoverti fino a <strong>Velocità</strong> (tipicamente 9 metri). Questo rappresenta 
+ correre, rotolare, repositionarti.
+ </p>
+ 
+ <div class="example-box">
+ <h4>📖 Esempio Turno combattimento</h4>
+ <p><strong>Situazione:</strong> Sei a 6m da bandito armato.</p>
+ <p style="margin-top: 10px;"><strong>Tuo turno:</strong></p>
+ <ol>
+ <li><strong>Movimento:</strong> Corri 6m verso bandito (ora adiacente)</li>
+ <li><strong>Azione:</strong> Attacchi con revolver</li>
+ <li><strong>Tiri:</strong> Hope 12, Fear 5 (Hope vince!)</li>
+ <li><strong>Danni:</strong> Tiri 2d6 = 8 danni. Bandito perde 8 PF.</li>
+ </ol>
+ <p style="margin-top: 10px;"><strong>GM:</strong> "Il bandito urla, ferito al braccio. 
+ Ora tocca a lui..."</p>
+ </div>
+ </div>
+ 
+ <h3>❤️ MECCANICA #4: Hit Points (PF)</h3>
+ 
+ <div class="mechanic-card">
+ <h4>Come Funziona</h4>
+ <p style="font-size: 1.05em; line-height: 1.8;">
+ <strong>PF (Hit Points)</strong> rappresenta salute/resistenza. Quando prendi danno, 
+ sottrai da PF. Se arrivi a 0 PF... non muori subito!
+ </p>
+ 
+ <div class="warning-box">
+ <h4>💀 Cosa Succede a 0 PF?</h4>
+ <ol style="font-size: 1.05em; line-height: 1.7;">
+ <li><strong>Down ma non Morto:</strong> Cadi incosciente. Non puoi agire.</li>
+ <li><strong>Death's Door:</strong> Inizio ogni turno, tiri "Death Save" (d20):</li>
+ <ul>
+ <li>🎲 15+: Stabilizzi! (non peggiori ma ancora down)</li>
+ <li>🎲 10-14: Rimani down</li>
+ <li>🎲 1-9: Accumuli 1 "Death Mark" (3 = MORTE permanente)</li>
+ </ul>
+ <li><strong>Resurrezione:</strong> Alleati possono curarti (riporti a 1+ PF, ti alzi)</li>
+ </ol>
+ <p style="margin-top: 15px; font-weight: bold;">
+ In breve: 0 PF è drammatico ma NON fine immediata. Hai chance!
+ </p>
+ </div>
+ </div>
+ 
+ <h3>😱 MECCANICA #5: Tenuta Mentale (Questa Campaign)</h3>
+ 
+ <div class="mechanic-card">
+ <h4>Speciale per Gunsmoke & Dread</h4>
+ <p style="font-size: 1.05em; line-height: 1.8;">
+ Questa campaign aggiunge <strong>Tenuta</strong> - barra che traccia sanità mentale. 
+ Quando vedi orrori cosmici, riempi segmenti.
+ </p>
+ 
+ <div class="stat-block">
+ <h4>Come Funziona</h4>
+ <p><strong>Tenuta Max:</strong> 10 segmenti (come PF ma per sanità)</p>
+ <p style="margin-top: 10px;"><strong>Quando Riempi:</strong> Vedi mostro orribile, 
+ scopri verità terrificante, assisti a body orrore</p>
+ <p style="margin-top: 10px;"><strong>Effetti:</strong></p>
+ <ul>
+ <li>1-3 segmenti: Ansioso, ma ok</li>
+ <li>4-6 segmenti: Incubi, paranoia lieve</li>
+ <li>7-9 segmenti: Fobie, tremori, visioni</li>
+ <li>10 segmenti (PIENO): Breakdown completo (vedi tabella conseguenze)</li>
+ </ul>
+ </div>
+ 
+ <div class="example-box">
+ <h4>📖 Esempio Pratico</h4>
+ <p><strong>GM:</strong> "Dal pozzo emerge creatura - metà uomo, metà pesce, scaglie 
+ verdegrigie. Senti odore putrido. Fate prova Tenuta, CD 14."</p>
+ <p style="margin-top: 10px;"><strong>Tu tiri:</strong> Hope 11, Fear 15 (Fear vince, fail)</p>
+ <p style="margin-top: 10px;"><strong>GM:</strong> "Riempi 2 segmenti Tenuta. Senti 
+ sudore freddo. Per un momento, giuri di vedere tentacoli negli angoli visione..."</p>
+ </div>
+ 
+ <div class="tip-box">
+ <h4>💡 Come Recuperare Tenuta</h4>
+ <ul>
+ <li><strong>Riposo Lungo:</strong> In luogo sicuro, recuperi 2 segmenti</li>
+ <li><strong>Downtime:</strong> Settimane/mesi lontano da orrori = reset completo</li>
+ <li><strong>Supporto:</strong> Talk con alleato fidato = 1 segmento</li>
+ </ul>
+ </div>
+ </div>
+ </section>
+ 
+ <!-- PARTE 3: QUICK START PATH -->
+ <section class="section">
+ <h2>🚀 PARTE 3: Quick Start Path</h2>
+ 
+ <p class="large">
+ Hai letto le basics? Perfetto! Ecco percorso step-by-step per giocare OGGI.
+ </p>
+ 
+ <h3>📋 Checklist Pre-Sessione (30 min)</h3>
+ 
+ <div class="stat-block">
+ <h4><span class="step-number">1</span> SCEGLI PERSONAGGIO</h4>
+ <p style="margin-left: 55px; font-size: 1.05em; line-height: 1.7;">
+ Apri <strong>Character-Sheets.html</strong>. Leggi i 6 PG. Scegli quello che ti ispira 
+ di più (non preoccuparti troppo di "ottimizzazione" - tutti funzionano!).
+ </p>
+ <p style="margin-left: 55px; margin-top: 10px;">
+ <strong>Consiglio per beginners:</strong><br>
+ • <strong>Jack Malone</strong> (Gunslinger) = Semplice, diretto, pew-pew 🔫<br>
+ • <strong>Sarah Blackwood</strong> (Preacher) = Support, healer, facile 🙏<br>
+ • <strong>Doc Wells</strong> (Scientist) = Utility, intelligente, interessante 🔬
+ </p>
+ </div>
+ 
+ <div class="stat-block">
+ <h4><span class="step-number">2</span> STAMPA/DOWNLOAD CHARACTER SHEET</h4>
+ <p style="margin-left: 55px; font-size: 1.05em; line-height: 1.7;">
+ Click "Print" in browser o salva PDF. Avrai character sheet davanti durante gioco. 
+ Tieni penna per trackare PF, Tenuta, risorse.
+ </p>
+ </div>
+ 
+ <div class="stat-block">
+ <h4><span class="step-number">3</span> PREPARA DADI</h4>
+ <p style="margin-left: 55px; font-size: 1.05em; line-height: 1.7;">
+ Se hai dadi fisici: ottimo! Se no, scarica app "Dice Roller" (gratis su iOS/Android). 
+ Assicurati di avere: d4, d6, d8, d10, d12, d20.
+ </p>
+ </div>
+ 
+ <div class="stat-block">
+ <h4><span class="step-number">4</span> GM APRE FILE</h4>
+ <p style="margin-left: 55px; font-size: 1.05em; line-height: 1.7;">
+ Game Master apre <strong>Volume-II-COMPLETE.html</strong> in browser. Legge SOLO 
+ "Atto I - Scena 1: Arrivo a Dry Eye" (10-15 min lettura). Non serve leggere tutto 
+ scenario - inizia e impara giocando!
+ </p>
+ </div>
+ 
+ <div class="stat-block">
+ <h4><span class="step-number">5</span> SESSION ZERO (5 MIN)</h4>
+ <p style="margin-left: 55px; font-size: 1.05em; line-height: 1.7;">
+ Prima di iniziare, fate quick chat:
+ </p>
+ <ul style="margin-left: 55px; font-size: 1.05em; line-height: 1.7;">
+ <li><strong>Tone:</strong> "Questo è orrore. Ci saranno momenti spaventosi. Ok per tutti?"</li>
+ <li><strong>Safety:</strong> "Se qualcosa è troppo, dite 'pause' e skippamo scena."</li>
+ <li><strong>Fun:</strong> "Obiettivo è divertirsi. Se confusi, chiedete!"</li>
+ </ul>
+ </div>
+ 
+ <h3>🎬 Prima Sessione - Percorso Semplificato</h3>
+ 
+ <div class="beginner-box">
+ <h4 style="color: white; margin-top: 0;">🎯 OBIETTIVO SESSIONE 1</h4>
+ <p style="font-size: 1.1em;">
+ Giocare <strong>Atto I - Scene 1-2</strong> di Volume II. Questo include:
+ </p>
+ <ul style="font-size: 1.05em; line-height: 1.7;">
+ <li>✅ Introduzione personaggi (roleplay leggero)</li>
+ <li>✅ Arrivo a Dry Eye (exploration, PNG)</li>
+ <li>✅ Prima investigation (uso skills)</li>
+ <li>✅ (Opzionale) Primo combattimento se tempo (Peter Walsh)</li>
+ </ul>
+ <p style="margin-top: 15px; font-weight: bold; font-size: 1.1em;">
+ Durata: 3-4 ore • Difficoltà: Beginner Friendly
+ </p>
+ </div>
+ 
+ <h4>📖 Script Iniziale per GM</h4>
+ 
+ <div class="example-box">
+ <p style="font-style: italic; font-size: 1.05em; line-height: 1.8;">
+ <strong>GM legge ad alta voce:</strong>
+ </p>
+ <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+ "È marzo 1886. Vi trovate su treno Southern Pacific diretto verso Arizona. Ciascuno 
+ di voi ha ricevuto telegramma misterioso - lavoro ben pagato, ma urgente. Il messaggio 
+ parlava di 'strani eventi' in città chiamata Dry Eye.
+ </p>
+ <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+ Mentre sole tramonta su deserto infinito, treno rallenta. Stazione appare - piccola, 
+ polverosa, quasi deserta. Cartello sbiadito: <strong>DRY EYE - Pop. 217</strong>.
+ </p>
+ <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+ Scendete dal treno. Aria è caldissima. Secca. Odore di polvere e... qualcos'altro. 
+ Qualcosa di <em>sbagliato</em>.
+ </p>
+ <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8; font-weight: bold;">
+ Benvenuti a Dry Eye. Cosa fate?"
+ </p>
+ </div>
+ 
+ <h4>🎭 Tips per Prima Sessione</h4>
+ 
+ <div class="tip-box">
+ <h4>Per GM (Principiante):</h4>
+ <ul style="font-size: 1.05em; line-height: 1.7;">
+ <li><strong>Non memorizzare tutto:</strong> Va BENE tenere file aperto e leggere. 
+ Non serve sapere tutto a memoria.</li>
+ <li><strong>"Non so, decido io":</strong> Se player chiede regola che non conosci, 
+ dì "Per oggi facciamo così [tua decisione], controlliamo dopo."</li>
+ <li><strong>Descrivi sensi:</strong> Non solo vista. Odori, suoni, texture. "Senti 
+ gocciolare acqua. Odore di sale."</li>
+ <li><strong>Pause ok:</strong> Ogni ora, fate break 5-10 min. Bathroom, stretch, 
+ recap veloce.</li>
+ <li><strong>Celebra successi:</strong> Quando player fanno cosa cool, fallo notare! 
+ "Wow, idea fantastica!"</li>
+ </ul>
+ </div>
+ 
+ <div class="tip-box">
+ <h4>Per giocatori (Principianti):</h4>
+ <ul style="font-size: 1.05em; line-height: 1.7;">
+ <li><strong>Dì cosa VUOI fare:</strong> Non worry su regole. Dì "Voglio convincere 
+ sceriffo", GM ti dirà quale dado tirare.</li>
+ <li><strong>Non esiste "risposta corretta":</strong> Se GM descrive situazione, non 
+ c'è soluzione predefinita. Fai ciò che PG farebbe!</li>
+ <li><strong>Collaborate:</strong> Questo è team game. Aiutatevi. "Hey Jack, copri 
+ le mie spalle mentre entro?"</li>
+ <li><strong>Roleplay optional:</strong> Non serve "recitare". Va bene dire "Il mio 
+ PG dice che è pericoloso" invece di fare voce.</li>
+ <li><strong>Domande ok:</strong> Confuso? CHIEDI. "Aspetta, non ho capito. Posso 
+ fare X?"</li>
+ </ul>
+ </div>
+ 
+ <h3>📚 Dopo Prima Sessione</h3>
+ 
+ <div class="info-box">
+ <h4>🎉 Congratulazioni - Hai Giocato Daggerheart!</h4>
+ <p style="font-size: 1.05em; line-height: 1.7;">
+ Se sei arrivato a fine prima sessione, hai imparato 80% delle meccaniche giocando. 
+ Ora puoi:
+ </p>
+ <ul>
+ <li><strong>Continua:</strong> Gioca Scena 3 prossima volta (primo combattimento vero)</li>
+ <li><strong>Leggi di più:</strong> Ora che hai context, rileggi Weird-ovest-Rules.html 
+ - farà MOLTO più senso</li>
+ <li><strong>Experiment:</strong> Prova abilità speciali PG che non hai usato</li>
+ <li><strong>Debrief:</strong> Chat con gruppo: "Cosa è piaciuto? Cosa cambiare?"</li>
+ </ul>
+ </div>
+ 
+ </section>
+ 
+ <!-- PROSSIMI PASSI -->
+ <section class="section">
+ <h2>🎯 Prossimi Passi</h2>
+ 
+ <h3>✅ Hai Completato Tutorial!</h3>
+ 
+ <p class="large">
+ Ora sai abbastanza per GIOCARE. Non serve sapere tutto - il resto imparerai giocando.
+ </p>
+ 
+ <div class="grid-auto-wide">
+ <div class="card">
+ <div class="card-header">
+ <h3 class="card-title">📖 Approfondisci</h3>
+ </div>
+ <div class="card-body">
+ <p><strong>Quando sei pronto:</strong></p>
+ <ul>
+ <li>Weird-ovest-Rules.html (sistema completo)</li>
+ <li>Campaign-Guide.html (long-term tips)</li>
+ <li>Bestiary.html (creatura dettagliate)</li>
+ </ul>
+ </div>
+ </div>
+ 
+ <div class="card">
+ <div class="card-header">
+ <h3 class="card-title">🎮 Inizia Giocare</h3>
+ </div>
+ <div class="card-body">
+ <p><strong>Ready to go:</strong></p>
+ <ul>
+ <li>Character-Sheets.html → Scegli PG</li>
+ <li>Volume-II-COMPLETE.html → Leggi Atto I</li>
+ <li>Bestiary.html → Bookmark per combattimento</li>
+ </ul>
+ </div>
+ </div>
+ 
+ <div class="card">
+ <div class="card-header">
+ <h3 class="card-title">🤝 Trova Gruppo</h3>
+ </div>
+ <div class="card-body">
+ <p><strong>Nessun gruppo?</strong></p>
+ <ul>
+ <li>r/Daggerheart (Reddit community)</li>
+ <li>Roll20.net (online play finder)</li>
+ <li>Amici + "Vogliamo provare?"</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ 
+ <div class="beginner-box">
+ <h3 style="color: white; margin-top: 0;">🎲 Remember</h3>
+ <p style="font-size: 1.2em; line-height: 1.8;">
+ Il goal NON è fare tutto "perfetto". Il goal è <strong>divertirsi</strong> raccontando 
+ storia insieme. Farete errori. Dimenticherete regole. Improvviserete. <em>Va BENE</em>. 
+ Questa è magia dei TTRPG - ogni gruppo gioca diversamente, e ogni partita è unica.
+ </p>
+ <p style="margin-top: 20px; font-size: 1.3em; font-weight: bold;">
+ Non esiste "wrong fun". Se vi divertite, state facendo bene. 🎉
+ </p>
+ </div>
+ </section>
+ 
+ </div>
+ 
+ <!-- Footer -->
+ <div class="footer">
+ <p style="font-size: 0.9em;">
+ <strong>New Player Guide - Gunsmoke & Dread Collection</strong><br>
+ Welcome to the Weird ovest! 🔫🌊
+ </p>
+ <p style="margin-top: 20px; font-size: 0.85em; color: var(--desert-sand);">
+ <a href="../INDEX.html" style="color: var(--alien-green);">← Torna all'Index</a> | 
+ <a href="../core/Character-Sheets.html" style="color: var(--alien-green);">Scegli Personaggio →</a>
+ </p>
+ </div>
+ 
+ </div>
 </body>
 </html>
