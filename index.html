@@ -1,771 +1,771 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gunsmoke & Dread - Weird West Horror Collection</title>
-    
-    <!-- External Stylesheets -->
-    <link rel="stylesheet" href="assets/css/main-styles.css">
-    <link rel="stylesheet" href="assets/css/volume-themes.css">
-    
-    <!-- Page-specific inline styles (minimal) -->
-    <style>
-    <!-- Page-specific inline styles (minimal) -->
-    <style>
-        /* Stat boxes specifici per INDEX */
-        .hero .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .hero .stat-box {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border-radius: 8px;
-            border: 2px solid var(--desert-sand);
-        }
-        
-        .hero .stat-number {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: var(--alien-green);
-            display: block;
-        }
-        
-        .hero .stat-label {
-            font-size: 1.1em;
-            color: var(--parchment);
-        }
-        
-        /* Volume cards specifici */
-        .volumes {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin: 40px 0;
-        }
-        
-        .volume-card {
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.1) 0%, rgba(212, 165, 116, 0.1) 100%);
-            border: 3px solid var(--rust);
-            border-radius: 12px;
-            padding: 40px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .volume-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(139, 0, 0, 0.3);
-        }
-        
-        .volume-card.vol1 {
-            border-color: var(--blood-red);
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.15) 0%, rgba(139, 69, 19, 0.1) 100%);
-        }
-        
-        .volume-card.vol2 {
-            border-color: var(--ocean-blue);
-            background: linear-gradient(135deg, rgba(0, 51, 102, 0.15) 0%, rgba(0, 255, 65, 0.05) 100%);
-        }
-        
-        .volume-icon {
-            font-size: 4em;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        .volume-card .features {
-            list-style: none;
-            margin: 20px 0;
-        }
-        
-        .volume-card .features li {
-            padding: 8px 0;
-            padding-left: 30px;
-            position: relative;
-        }
-        
-        .volume-card .features li::before {
-            content: '✦';
-            position: absolute;
-            left: 0;
-            color: var(--rust);
-            font-size: 1.2em;
-        }
-        
-        /* File grid specifico INDEX */
-        .file-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
-        }
-        
-        .file-item {
-            background: rgba(212, 165, 116, 0.1);
-            border: 2px solid var(--rust);
-            border-radius: 8px;
-            padding: 25px;
-            transition: all 0.3s;
-        }
-        
-        .file-item:hover {
-            background: rgba(212, 165, 116, 0.2);
-            transform: translateX(5px);
-        }
-        
-        .file-item .file-link {
-            display: block;
-            color: var(--ocean-blue);
-            text-decoration: none;
-            font-weight: bold;
-            margin: 10px 0;
-            padding: 10px;
-            background: rgba(0, 51, 102, 0.1);
-            border-radius: 4px;
-            transition: background 0.3s;
-        }
-        
-        .file-item .file-link:hover {
-            background: rgba(0, 51, 102, 0.2);
-        }
-        
-        /* Path boxes */
-        .path-boxes {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-        
-        .path-box {
-            background: linear-gradient(135deg, var(--blood-red) 0%, var(--rust) 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        .path-box ol {
-            margin-left: 20px;
-        }
-        
-        .path-box a {
-            color: var(--alien-green);
-        }
-        
-        /* Footer */
-        .footer {
-            background: var(--night-black);
-            color: var(--parchment);
-            padding: 60px 80px;
-            text-align: center;
-        }
-        
-        .footer h3 {
-            color: var(--desert-sand);
-            margin-bottom: 20px;
-        }
-        
-        @media (max-width: 968px) {
-            .volumes {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer {
-                padding: 40px 30px;
-            }
-        }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Gunsmoke & Dread - Weird ovest orrore Collection</title>
+ 
+ <!-- External Stylesheets -->
+ <link rel="stylesheet" href="assets/css/main-styles.css">
+ <link rel="stylesheet" href="assets/css/volume-themes.css">
+ 
+ <!-- Page-specific inline styles (minimal) -->
+ <style>
+ <!-- Page-specific inline styles (minimal) -->
+ <style>
+ /* Stat boxes specifici per INDEX */
+ .hero .stats {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ gap: 20px;
+ max-width: 1000px;
+ margin: 0 auto;
+ }
+ 
+ .hero .stat-box {
+ background: rgba(0, 0, 0, 0.6);
+ padding: 20px;
+ border-radius: 8px;
+ border: 2px solid var(--desert-sand);
+ }
+ 
+ .hero .stat-number {
+ font-size: 2.5em;
+ font-weight: bold;
+ color: var(--alien-green);
+ display: block;
+ }
+ 
+ .hero .stat-label {
+ font-size: 1.1em;
+ color: var(--parchment);
+ }
+ 
+ /* Volume cards specifici */
+ .volumes {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 40px;
+ margin: 40px 0;
+ }
+ 
+ .volume-card {
+ background: linear-gradient(135deg, rgba(139, 0, 0, 0.1) 0%, rgba(212, 165, 116, 0.1) 100%);
+ border: 3px solid var(--rust);
+ border-radius: 12px;
+ padding: 40px;
+ transition: transform 0.3s, box-shadow 0.3s;
+ }
+ 
+ .volume-card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 15px 30px rgba(139, 0, 0, 0.3);
+ }
+ 
+ .volume-card.vol1 {
+ border-color: var(--blood-red);
+ background: linear-gradient(135deg, rgba(139, 0, 0, 0.15) 0%, rgba(139, 69, 19, 0.1) 100%);
+ }
+ 
+ .volume-card.vol2 {
+ border-color: var(--ocean-blue);
+ background: linear-gradient(135deg, rgba(0, 51, 102, 0.15) 0%, rgba(0, 255, 65, 0.05) 100%);
+ }
+ 
+ .volume-icon {
+ font-size: 4em;
+ text-align: center;
+ margin-bottom: 20px;
+ }
+ 
+ .volume-card .features {
+ list-style: none;
+ margin: 20px 0;
+ }
+ 
+ .volume-card .features li {
+ padding: 8px 0;
+ padding-left: 30px;
+ position: relative;
+ }
+ 
+ .volume-card .features li::before {
+ content: '✦';
+ position: absolute;
+ left: 0;
+ color: var(--rust);
+ font-size: 1.2em;
+ }
+ 
+ /* File grid specifico INDEX */
+ .file-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 25px;
+ margin: 30px 0;
+ }
+ 
+ .file-item {
+ background: rgba(212, 165, 116, 0.1);
+ border: 2px solid var(--rust);
+ border-radius: 8px;
+ padding: 25px;
+ transition: all 0.3s;
+ }
+ 
+ .file-item:hover {
+ background: rgba(212, 165, 116, 0.2);
+ transform: translateX(5px);
+ }
+ 
+ .file-item .file-link {
+ display: block;
+ color: var(--ocean-blue);
+ text-decoration: none;
+ font-weight: bold;
+ margin: 10px 0;
+ padding: 10px;
+ background: rgba(0, 51, 102, 0.1);
+ border-radius: 4px;
+ transition: background 0.3s;
+ }
+ 
+ .file-item .file-link:hover {
+ background: rgba(0, 51, 102, 0.2);
+ }
+ 
+ /* Path boxes */
+ .path-boxes {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 30px;
+ margin: 40px 0;
+ }
+ 
+ .path-box {
+ background: linear-gradient(135deg, var(--blood-red) 0%, var(--rust) 100%);
+ color: white;
+ padding: 30px;
+ border-radius: 10px;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+ }
+ 
+ .path-box ol {
+ margin-left: 20px;
+ }
+ 
+ .path-box a {
+ color: var(--alien-green);
+ }
+ 
+ /* Footer */
+ .footer {
+ background: var(--night-black);
+ color: var(--parchment);
+ padding: 60px 80px;
+ text-align: center;
+ }
+ 
+ .footer h3 {
+ color: var(--desert-sand);
+ margin-bottom: 20px;
+ }
+ 
+ @media (max-width: 968px) {
+ .volumes {
+ grid-template-columns: 1fr;
+ }
+ 
+ .footer {
+ padding: 40px 30px;
+ }
+ }
+ </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Hero Header -->
-        <div class="hero">
-            <h1>GUNSMOKE & DREAD</h1>
-            <p class="subtitle">Weird West Horror Collection</p>
-            <p class="tagline">
-                Là dove i pistoleri si trovano ad affrontare degli orrori cosmici nel cuore del deserto americano del 1885.
-                <br>Due avventure complete. Sei personaggi pregenerati. Venticinque creature diverse.
-                <br><strong>E degli incubi senza fine.</strong>
-            </p>
-            
-            <div class="stats">
-                <div class="stat-box">
-                    <span class="stat-number">2</span>
-                    <span class="stat-label">Avventure Complete</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">8-10</span>
-                    <span class="stat-label">Ore di Gioco Totali</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">6</span>
-                    <span class="stat-label">Personaggi Pregenerati</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">25+</span>
-                    <span class="stat-label">Creature & PNG</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Main Content -->
-        <div class="content">
-            
-            <!-- Cos'è questa Collection -->
-            <section class="section">
-                <h2>📖 Cos'è Esattamente Gunsmoke & Dread?</h2>
-                
-                <p style="font-size: 1.2em; line-height: 1.9;">
-                    <strong>Gunsmoke & Dread</strong> è una raccolta che contiene <strong>due avventure complete</strong> 
-                    ambientate nel Weird West per il sistema <strong>Daggerheart™</strong>. Questa collezione fonde 
-                    magistralmente l'azione classica del western americano con l'orrore cosmico di matrice lovecraftiana, 
-                    creando delle esperienze di gioco assolutamente indimenticabili in cui dei pistoleri pragmatici 
-                    si trovano improvvisamente ad affrontare delle entità cosmiche che non dovrebbero nemmeno esistere 
-                    nella nostra realtà.
-                </p>
-                
-                <div class="info-box">
-                    <h3 style="margin-top: 0;">✨ Cosa Rende Davvero Speciale Questa Collezione</h3>
-                    <ul style="font-size: 1.1em; line-height: 1.8;">
-                        <li><strong>Due avventure complete invece di una sola:</strong> Ottieni il doppio del contenuto 
-                        rispetto a quello che ti offrirebbe un tipico quickstart, mantenendo però lo stesso prezzo 
-                        che pagheresti per una singola avventura</li>
-                        <li><strong>Un'escalation narrativa davvero coinvolgente:</strong> La storia si evolve 
-                        naturalmente da un semplice orrore locale fino ad arrivare gradualmente a una rivelazione 
-                        cosmica di portata veramente apocalittica</li>
-                        <li><strong>I personaggi sono completamente riutilizzabili:</strong> Gli stessi PG possono 
-                        essere usati senza problemi per entrambe le avventure, con una progressione organica che 
-                        li porta dal livello 2 fino al livello 5</li>
-                        <li><strong>Un bestiario davvero massiccio:</strong> Più di 25 creature completamente diverse, 
-                        che spaziano dai comuni banditi mortali fino allo stesso Cthulhu dormiente</li>
-                        <li><strong>Un sistema di sanità mentale completamente integrato:</strong> Il sistema della 
-                        Tenuta Mentale traccia con precisione il deterioramento psicologico progressivo dei personaggi</li>
-                        <li><strong>Una compatibilità totale con Daggerheart:</strong> Utilizza fedelmente e 
-                        correttamente le regole ufficiali dell'SRD 1.0</li>
-                    </ul>
-                </div>
-                
-                <h3>🎯 Questa Collezione è Perfetta Per</h3>
-                <ul style="font-size: 1.1em; line-height: 1.8; margin-left: 40px;">
-                    <li><strong>I classici one-shot del weekend:</strong> Ciascuna avventura può essere comodamente 
-                    completata in una singola sessione che dura dalle 3 alle 5 ore</li>
-                    <li><strong>Le mini-campagne brevi ma intense:</strong> Se decidi di collegare le due avventure 
-                    insieme, otterrai una campagna completa e soddisfacente dalle 8 alle 10 ore totali</li>
-                    <li><strong>L'introduzione perfetta al genere Weird West:</strong> È incluso un tutorial 
-                    completamente integrato che è stato pensato appositamente per i nuovi giocatori</li>
-                    <li><strong>I Game Master che cercano materiale di alta qualità:</strong> Tutto il contenuto 
-                    è stato preparato in modo professionale, è stato playtestato approfonditamente ed è perfettamente 
-                    bilanciato dal punto di vista meccanico</li>
-                    <li><strong>I fan appassionati dell'horror cosmico:</strong> Rappresenta l'incontro perfetto 
-                    tra l'universo di Lovecraft e l'ambientazione di Deadlands</li>
-                </ul>
-            </section>
-            
-            <!-- I Due Volumi -->
-            <section class="section">
-                <h2>📚 Le Due Avventure Incluse</h2>
-                
-                <div class="volumes">
-                    <!-- Volume I -->
-                    <div class="volume-card vol1">
-                        <div class="volume-icon">🌵</div>
-                        <h3>Volume I: Shadows in the Desert</h3>
-                        <p class="description">
-                            <strong>Siamo nel New Mexico, nell'anno 1885.</strong> Una rapina a un treno che va 
-                            completamente e disastrosamente storta. Dei banditi che erano stati uccisi ma che, 
-                            contro ogni logica naturale, si rialzano. Un misterioso culto serpentino che si nasconde 
-                            nelle miniere maledette di Silver Hollow. E nelle profondità più remote della terra, 
-                            qualcosa di incredibilmente antico sta attendendo pazientemente nel buio più assoluto.
-                        </p>
-                        
-                        <h4 style="color: var(--blood-red); margin-top: 20px;">🎭 I Momenti Salienti dell'Avventura</h4>
-                        <ul class="features">
-                            <li>L'azione western classica che ti aspetti da questo genere: delle rapine audaci, 
-                            dei duelli mortali faccia a faccia e degli inseguimenti assolutamente mozzafiato 
-                            attraverso le distese del deserto</li>
-                            <li>Una progressione graduale e magistrale verso l'orrore più puro: la storia si 
-                            trasforma lentamente da un thriller convenzionale in un'esperienza intensa di 
-                            survival horror psicologico</li>
-                            <li>Un boss finale tragico e assolutamente memorabile: Jeremiah, il predicatore 
-                            che è caduto in disgrazia e si è irrimediabilmente dato al male</li>
-                            <li>Delle scelte morali davvero significative e pesanti: i giocatori dovranno 
-                            decidere se tentare coraggiosamente di redimere i cultisti oppure se eliminarli 
-                            senza alcuna pietà</li>
-                            <li>Un climax epico e completamente indimenticabile: i personaggi dovranno riuscire 
-                            a distruggere gli idoli profani proprio mentre il terribile rituale di evocazione 
-                            sta rapidamente raggiungendo il suo culmine finale</li>
-                        </ul>
-                        
-                        <p style="margin-top: 20px;">
-                            <strong>⏱️ Durata della Sessione:</strong> Da 3 a 4 ore<br>
-                            <strong>🎲 Livello Iniziale dei Personaggi:</strong> 2<br>
-                            <strong>👹 La Minaccia Principale:</strong> Il Serpente che Giace nelle Profondità Sotterranee
-                        </p>
-                        
-                        <a href="Volume-I-COMPLETE.html" class="cta-button">🔫 Inizia Subito il Volume I</a>
-                    </div>
-                    
-                    <!-- Volume II -->
-                    <div class="volume-card vol2">
-                        <div class="volume-icon">🌊</div>
-                        <h3>Volume II: Where the Ocean Meets the Dust</h3>
-                        <p class="description">
-                            <strong>Siamo nello Utah, sempre nel corso del 1885.</strong> Alcuni geometri della 
-                            ferrovia sono misteriosamente scomparsi nel bel mezzo del deserto. Un'antica antenna 
-                            cosmica, dimenticata da millenni, è stata accidentalmente riattivata. E per un momento 
-                            che sembrerà durare un'eternità, ma che in realtà sarà terribilmente breve, 
-                            <strong>guarderete direttamente negli occhi dello stesso Cthulhu</strong> e 
-                            comprenderete finalmente, in modo viscerale e sconvolgente, quanto l'intera umanità 
-                            sia profondamente insignificante nell'immensità cosmica dell'universo.
-                        </p>
-                        
-                        <h4 style="color: var(--ocean-blue); margin-top: 20px;">🎭 I Momenti Salienti dell'Avventura</h4>
-                        <ul class="features">
-                            <li>Un'investigazione genuinamente e magistralmente lovecraftiana: dovrete seguire 
-                            degli indizi criptici e inquietanti mentre la follia e la paranoia si insinuano 
-                            lentamente e inesorabilmente nelle vostre menti</li>
-                            <li>LA VISIONE centrale e indimenticabile: una sequenza elaborata e articolata in 
-                            cinque fasi completamente distinte in cui vedrete finalmente Cthulhu stesso che 
-                            giace dormiente nelle profondità più abissali dell'oceano</li>
-                            <li>L'horror cosmico portato al suo livello più definitivo e assoluto: scoprirete 
-                            che un oceano fantasma e impossibile si nasconde proprio sotto le sabbie del deserto</li>
-                            <li>Un boss fight complesso e strutturato in più fasi successive: dovrete prima 
-                            affrontare e sconfiggere il terribile Profeta del Sale e poi resistere disperatamente 
-                            a un'intera marea incontenibile di creature antiche</li>
-                            <li>Delle conseguenze che sono davvero e autenticamente permanenti: il trauma 
-                            psicologico profondo che subirete non potrà mai essere completamente eliminato 
-                            o curato</li>
-                        </ul>
-                        
-                        <p style="margin-top: 20px;">
-                            <strong>⏱️ Durata della Sessione:</strong> Dalle 4 alle 6 ore<br>
-                            <strong>🎲 Livello Consigliato dei Personaggi:</strong> Dal 3 al 5<br>
-                            <strong>👹 La Minaccia Principale:</strong> Cthulhu (attraverso una visione devastante) e il Fossile Psichico
-                        </p>
-                        
-                        <a href="Volume-II-COMPLETE.html" class="cta-button">🌊 Inizia Subito il Volume II</a>
-                    </div>
-                </div>
-                
-                <div class="tip-box">
-                    <h3 style="margin-top: 0;">🔗 Come Puoi Collegare le Due Avventure</h3>
-                    <p style="font-size: 1.1em;">
-                        Le due avventure possono essere giocate in tre modi completamente diversi tra loro:
-                    </p>
-                    <ul style="font-size: 1.05em; line-height: 1.8;">
-                        <li><strong>Come avventure completamente standalone:</strong> Sono totalmente indipendenti 
-                        l'una dall'altra e non richiedono assolutamente alcun prerequisito particolare o conoscenza 
-                        pregressa</li>
-                        <li><strong>In sequenza narrativa:</strong> Il Volume II può essere ambientato circa tre 
-                        mesi dopo gli eventi drammatici del Volume I, con dei riferimenti sottili ma significativi 
-                        che collegano elegantemente le due storie</li>
-                        <li><strong>Come una mini-campagna completamente integrata:</strong> Puoi utilizzare il 
-                        nostro dettagliato <a href="Campaign-Guide.html">Campaign Framework</a> per integrare 
-                        completamente e organicamente le trame delle due avventure in un'unica narrazione coerente</li>
-                    </ul>
-                    <p style="font-size: 1.1em; margin-top: 15px;">
-                        I personaggi che riescono a sopravvivere agli eventi del Volume I possono continuare 
-                        naturalmente la loro storia nel Volume II, portando con sé tutti i punti esperienza che 
-                        hanno faticosamente guadagnato (che li porteranno progressivamente dal livello 3 fino al 
-                        livello 5), insieme a tutte le cicatrici sia fisiche che mentali che si sono inevitabilmente 
-                        procurati durante le loro terribili avventure.
-                    </p>
-                </div>
-            </section>
-            
-            <!-- Cosa Contiene -->
-            <section class="section">
-                <h2>📦 Cosa Contiene Esattamente Questa Collezione</h2>
-                
-                <div class="file-grid">
-                    <div class="file-item">
-                        <h4>📖 Le Regole Base del Sistema</h4>
-                        <a href="Weird-West-Rules.html" class="file-link">→ Consulta le Regole Complete del Weird West</a>
-                        <p class="description">
-                            Troverai qui il sistema completo della Tenuta Mentale (che gestisce accuratamente 
-                            la sanità mentale progressiva dei personaggi), le regole specifiche e dettagliate 
-                            per le armi da fuoco tipiche del western, le meccaniche complete per i duelli 
-                            classici faccia a faccia e assolutamente tutto quello che ti servirà per far 
-                            combattere efficacemente i tuoi personaggi contro degli orrori cosmici 
-                            incomprensibili. Ogni singola cosa è basata fedelmente sul Daggerheart SRD 1.0.
-                        </p>
-                    </div>
-                    
-                    <div class="file-item">
-                        <h4>👥 I Personaggi Pregenerati</h4>
-                        <a href="Character-Sheets.html" class="file-link">→ Scarica le Schede Complete dei 6 Personaggi</a>
-                        <p class="description">
-                            Sono inclusi tre personaggi completamente pregenerati di livello 2 (Jack Malone, 
-                            il pistolero disilluso; Sarah Blackwood, la predicatrice combattuta; e Doc Artemis, 
-                            il medico razionalista), più le loro varianti progressivamente potenziate dal 
-                            livello 3 fino al livello 5 per essere usate nel Volume II. Ciascun personaggio 
-                            è stato completamente e amorevolmente sviluppato con un background dettagliato e 
-                            toccante, delle connessioni significative e organiche con gli altri personaggi 
-                            del gruppo e un equipaggiamento completo e appropriato.
-                        </p>
-                    </div>
-                    
-                    <div class="file-item">
-                        <h4>🌵 Il Primo Volume</h4>
-                        <a href="Volume-I-COMPLETE.html" class="file-link">→ Leggi "Shadows in the Desert" per Intero</a>
-                        <p class="description">
-                            Un'avventura completa e autocontenuta che si svolge in tre atti chiaramente 
-                            distinti: inizierai con una rapina disperata a un treno in movimento, esplorerai 
-                            metodicamente una città profondamente maledetta e affronterai un confronto 
-                            assolutamente decisivo con i cultisti fanatici. L'avventura include un bestiario 
-                            dedicato e completo con banditi comuni, zombi orrendi, cultisti devoti e il 
-                            temibile Serpente sotterraneo.
-                        </p>
-                    </div>
-                    
-                    <div class="file-item">
-                        <h4>🌊 Il Secondo Volume</h4>
-                        <a href="Volume-II-COMPLETE.html" class="file-link">→ Leggi "Where Ocean Meets Dust" per Intero</a>
-                        <p class="description">
-                            Un'avventura epica e sconvolgente che si sviluppa progressivamente in ben sei 
-                            atti elaborati: condurrai un'investigazione complessa e inquietante, esplorerai 
-                            il misterioso canyon dell'eco che risuona di voci antiche, vivrai l'esperienza 
-                            devastante della VISIONE DI CTHULHU e affronterai disperatamente un'inquietante 
-                            marea fantasma che emerge dal nulla. Include un bestiario ricchissimo e dettagliato 
-                            di creature cosmiche e oceaniche terrificanti.
-                        </p>
-                    </div>
-                    
-                    <div class="file-item">
-                        <h4>👹 Il Bestiario Completo</h4>
-                        <a href="Bestiary.html" class="file-link">→ Consulta Tutte le 25+ Creature Diverse</a>
-                        <p class="description">
-                            Un repertorio vastissimo che spazia dai comuni banditi mortali fino allo stesso 
-                            Cthulhu dormiente nelle profondità abissali. Ogni singola creatura è presentata 
-                            con uno stat-block completo e dettagliato per il sistema Daggerheart, con delle 
-                            tattiche di combattimento intelligentemente suggerite e delle note narrative 
-                            estremamente utili per il Game Master. Tutto il materiale è stato preparato per 
-                            essere usato immediatamente al tavolo senza alcuna preparazione aggiuntiva.
-                        </p>
-                    </div>
-                    
-                    <div class="file-item">
-                        <h4>📋 La Scheda di Riferimento Rapido</h4>
-                        <a href="GM-Quick-Reference.html" class="file-link">→ Scarica la Scheda Quick Reference</a>
-                        <p class="description">
-                            Una praticissima scheda stampabile su due comode pagine in formato A4 che contiene 
-                            tutte le regole assolutamente essenziali di cui avrai bisogno durante il gioco: 
-                            i tiri azione standard, le difficoltà tipiche per le varie situazioni, il sistema 
-                            completo della Tenuta Mentale, le regole del combattimento e le statistiche 
-                            dettagliate di tutte le armi disponibili. Uno strumento assolutamente essenziale 
-                            da tenere sempre a portata di mano al tavolo di gioco.
-                        </p>
-                    </div>
-                    
-                    <div class="file-item">
-                        <h4>🗺️ Il Framework per la Campagna</h4>
-                        <a href="Campaign-Guide.html" class="file-link">→ Scopri Come Collegare le Avventure</a>
-                        <p class="description">
-                            Una guida completa su come utilizzare efficacemente il Volume I e il Volume II 
-                            come una mini-campagna coerente e soddisfacente: include una timeline dettagliata 
-                            degli eventi, le connessioni narrative sottili ma significative tra le due storie, 
-                            la progressione naturale dei PG attraverso i livelli e le conseguenze importanti 
-                            che persistono realisticamente tra i vari scenari.
-                        </p>
-                    </div>
-                    
-                    <div class="file-item">
-                        <h4>📚 I Materiali Extra</h4>
-                        <a href="Expanded-Lore.html" class="file-link">→ Esplora il Lore Espanso & i Materiali Bonus</a>
-                        <p class="description">
-                            Degli approfondimenti estremamente dettagliati sulla setting, il Mythos di Cthulhu 
-                            calato specificamente nel contesto del West americano del 1885, una ricca galleria 
-                            di PNG con descrizioni evocative, degli incontri addizionali pronti all'uso e 
-                            numerosi hook narrativi utili per espandere ulteriormente la tua campagna secondo 
-                            le esigenze del tuo gruppo.
-                        </p>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Quick Start Paths -->
-            <section class="section">
-                <h2>🚀 Come Iniziare: I Percorsi Rapidi Consigliati</h2>
-                
-                <p style="font-size: 1.2em; margin-bottom: 30px;">
-                    A seconda di quanto tempo hai effettivamente a disposizione per prepararti e di cosa 
-                    desideri esattamente ottenere dalla tua sessione, puoi scegliere uno di questi tre 
-                    percorsi diversi:
-                </p>
-                
-                <div class="path-boxes">
-                    <!-- Path 1: Voglio giocare SUBITO -->
-                    <div class="path-box">
-                        <h4>⚡ "Voglio Giocare Immediatamente"</h4>
-                        <p style="margin-bottom: 15px; font-style: italic;">
-                            Hai solo 10 minuti per la preparazione e poi 3-4 ore disponibili per giocare
-                        </p>
-                        <ol>
-                            <li>Leggi attentamente la <a href="GM-Quick-Reference.html">Quick Reference</a> 
-                            completa (ci vorranno circa 5 minuti)</li>
-                            <li>Stampa le <a href="Character-Sheets.html">Schede dei Personaggi</a> per 
-                            distribuirle ai giocatori</li>
-                            <li>Vai direttamente a <a href="Volume-I-COMPLETE.html">Volume I - Atto I</a> 
-                            e comincia a leggere</li>
-                            <li>Inizia finalmente a giocare e divertiti!</li>
-                        </ol>
-                        <p style="margin-top: 15px; font-size: 0.95em;">
-                            <strong>Un consiglio per i Game Master:</strong> È sufficiente che tu legga 
-                            solamente l'Atto I prima di iniziare effettivamente a giocare. Potrai 
-                            tranquillamente leggere gli Atti II e III durante le pause naturali del gioco 
-                            o tra una sessione e l'altra.
-                        </p>
-                    </div>
-                    
-                    <!-- Path 2: Voglio preparare bene -->
-                    <div class="path-box">
-                        <h4>📚 "Voglio Prepararmi Davvero Bene"</h4>
-                        <p style="margin-bottom: 15px; font-style: italic;">
-                            Hai a disposizione 2-3 ore complete di preparazione prima dell'inizio della sessione
-                        </p>
-                        <ol>
-                            <li>Leggi con attenzione le <a href="Weird-West-Rules.html">Regole Complete del 
-                            Weird West</a> per familiarizzare con il sistema (ti serviranno circa 30 minuti)</li>
-                            <li>Leggi <strong>per intero l'avventura</strong> specifica che hai deciso di 
-                            masterizzare questa volta (conta circa 60 minuti di lettura attenta)</li>
-                            <li>Scorri velocemente il <a href="Bestiary.html">Bestiario</a> concentrandoti 
-                            sulle creature che sono rilevanti per questa avventura (altri 20 minuti circa)</li>
-                            <li>Stampa accuratamente la Reference, le Sheets e gli eventuali Handout che ti 
-                            serviranno (circa 10 minuti di tempo)</li>
-                            <li>Prepara una playlist musicale appropriata per creare l'atmosfera giusta 
-                            (questo è opzionale ma consigliato, altri 10 minuti)</li>
-                        </ol>
-                        <p style="margin-top: 15px; font-size: 0.95em;">
-                            <strong>Il risultato finale:</strong> Avrai una sessione che scorre in modo 
-                            fluido e naturale, ti sentirai completamente a tuo agio e sicuro con il materiale 
-                            e non ci saranno sorprese spiacevoli o momenti di incertezza.
-                        </p>
-                    </div>
-                    
-                    <!-- Path 3: Voglio leggere tutto -->
-                    <div class="path-box">
-                        <h4>🎓 "Voglio Capire e Padroneggiare Tutto"</h4>
-                        <p style="margin-bottom: 15px; font-style: italic;">
-                            Sei un completista e vuoi assorbire totalmente tutto il materiale disponibile
-                        </p>
-                        <ol>
-                            <li>Inizia da questa pagina INDEX (che stai già leggendo in questo momento!)</li>
-                            <li>Leggi completamente le <a href="Weird-West-Rules.html">Core Rules</a> senza 
-                            tralasciare nulla</li>
-                            <li>Leggi attentamente <a href="Character-Sheets.html">tutti e 6 i personaggi</a> 
-                            per comprenderli a fondo</li>
-                            <li>Leggi il <a href="Volume-I-COMPLETE.html">Volume I nella sua interezza</a> 
-                            dall'inizio alla fine</li>
-                            <li>Leggi anche il <a href="Volume-II-COMPLETE.html">Volume II completo</a> 
-                            senza saltare nulla</li>
-                            <li>Studia meticolosamente il <a href="Bestiary.html">Bestiario</a> per conoscere 
-                            ogni creatura</li>
-                            <li>Leggi il <a href="Campaign-Guide.html">Campaign Framework</a> per capire come 
-                            collegare tutto</li>
-                            <li>Esplora infine gli <a href="Expanded-Lore.html">Extras e il Lore Espanso</a> 
-                            per i dettagli finali</li>
-                        </ol>
-                        <p style="margin-top: 15px; font-size: 0.95em;">
-                            <strong>Tempo totale richiesto:</strong> Dalle 6 alle 8 ore di lettura 
-                            concentrata. Ma alla fine conoscerai il materiale assolutamente alla perfezione 
-                            e potrai improvvisare con totale confidenza in qualsiasi situazione.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="warning-box">
-                    <h3 style="margin-top: 0;">⚠️ Una Nota Importante per i Game Master Principianti</h3>
-                    <p style="font-size: 1.1em; line-height: 1.8;">
-                        Se questa è la tua <strong>prima volta in assoluto</strong> come Game Master con 
-                        il sistema Daggerheart, ti consiglio vivamente e caldamente di seguire questi 
-                        suggerimenti pratici:
-                    </p>
-                    <ul style="font-size: 1.05em; line-height: 1.7;">
-                        <li>Inizia assolutamente con il <strong>Volume I</strong> (che è decisamente più 
-                        lineare nella struttura e molto meno complesso da gestire rispetto al secondo volume)</li>
-                        <li>Leggi con estrema attenzione le <a href="Weird-West-Rules.html">Core Rules</a> 
-                        prima di masterizzare la tua prima sessione</li>
-                        <li>Tieni sempre la <a href="GM-Quick-Reference.html">Quick Reference</a> ben 
-                        visibile davanti a te durante tutta la sessione</li>
-                        <li>Non preoccuparti assolutamente di "fare tutto in modo perfetto" - l'importante 
-                        è divertirsi e godersi l'esperienza insieme!</li>
-                        <li>Il Volume II è decisamente più complesso dal punto di vista emotivo e narrativo, 
-                        quindi masterizzalo solo dopo aver acquisito una buona confidenza con il sistema</li>
-                    </ul>
-                </div>
-            </section>
-            
-            <!-- Requisiti -->
-            <section class="section">
-                <h2>🎲 Cosa Ti Serve Concretamente per Giocare</h2>
-                
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 30px 0;">
-                    <div>
-                        <h3>📋 I Materiali Fisici Necessari</h3>
-                        <ul style="font-size: 1.1em; line-height: 1.8; margin-left: 30px;">
-                            <li><strong>I dadi poliedrici standard:</strong> Ti serviranno 2 dadi da 12 facce 
-                            (per gestire la Speranza e la Paura), più 1 dado da 4, 1 dado da 6, 1 dado da 8, 
-                            1 dado da 10 e 1 dado da 20 facce</li>
-                            <li><strong>Dei token o dei segnalini:</strong> Per tracciare visivamente la 
-                            Speranza, la Paura, gli HP e l'Armatura dei personaggi</li>
-                            <li><strong>Una stampante (che è opzionale):</strong> Per stampare la Quick 
-                            Reference, le Character Sheets e gli eventuali handout che vorrai distribuire</li>
-                            <li><strong>Delle matite e delle gomme</strong> per prendere appunti e modificare 
-                            le schede</li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h3>📚 Le Conoscenze Necessarie</h3>
-                        <ul style="font-size: 1.1em; line-height: 1.8; margin-left: 30px;">
-                            <li><strong>Il sistema base di Daggerheart:</strong> È necessaria una conoscenza 
-                            almeno basilare delle meccaniche fondamentali del core (i tiri con 2d12, il 
-                            sistema di Speranza e Paura, il combattimento base)</li>
-                            <li><strong>Nessuna esperienza pregressa con l'horror è richiesta:</strong> 
-                            C'è un tutorial completamente integrato nell'avventura</li>
-                            <li><strong>Nessuna conoscenza del Mythos di Cthulhu è necessaria:</strong> 
-                            Assolutamente tutto viene spiegato chiaramente nel testo</li>
-                        </ul>
-                        
-                        <h3 style="margin-top: 30px;">👥 I Partecipanti Necessari</h3>
-                        <ul style="font-size: 1.1em; line-height: 1.8; margin-left: 30px;">
-                            <li><strong>1 Game Master</strong> che guiderà la storia</li>
-                            <li><strong>Da 3 a 5 Giocatori</strong> (il numero ottimale è 3, esattamente 
-                            come i personaggi pregenerati forniti)</li>
-                            <li><strong>L'età consigliata:</strong> 16 anni o più (per via del contenuto 
-                            horror intenso e dei temi maturi)</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="info-box">
-                    <h3 style="margin-top: 0;">📱 Come Giocare Online</h3>
-                    <p style="font-size: 1.1em; line-height: 1.8;">
-                        Questa collezione funziona assolutamente alla perfezione anche per il gioco online 
-                        utilizzando diverse piattaforme:
-                    </p>
-                    <ul style="font-size: 1.05em; line-height: 1.7;">
-                        <li><strong>Roll20:</strong> Puoi caricare comodamente le character sheets come 
-                        handout e utilizzare delle macro personalizzate per i tiri</li>
-                        <li><strong>Foundry VTT:</strong> Esiste un supporto per Daggerheart creato dalla 
-                        community che è disponibile gratuitamente</li>
-                        <li><strong>Discord con il bot Avrae:</strong> Perfetto per i gruppi che preferiscono 
-                        uno stile di teatro mentale puro</li>
-                        <li><strong>Demiplane Nexus:</strong> Il character builder ufficiale di Daggerheart 
-                        è disponibile qui</li>
-                    </ul>
-                    <p style="font-size: 1.1em; margin-top: 15px;">
-                        <strong>Una nota importante:</strong> Secondo i termini della DPCGL (la Darrington 
-                        Press Community Gaming License), i contenuti fan-made che vengono utilizzati sui VTT 
-                        devono necessariamente essere gratuiti. Questa collection è un prodotto acquistabile, 
-                        ma puoi utilizzarla liberamente sui VTT che sono stati whitelisted (come Roll20, 
-                        Foundry e Demiplane) per le tue sessioni private senza alcun problema.
-                    </p>
-                </div>
-            </section>
-            
-            <!-- Consigli Finali -->
-            <section class="section">
-                <h2>💡 I Nostri Consigli per una Grande Sessione</h2>
-                
-                <div style="columns: 2; column-gap: 40px; font-size: 1.05em; line-height: 1.8;">
-                    <h3>🎬 Creare la Giusta Atmosfera</h3>
-                    <ul style="margin-left: 30px;">
-                        <li><strong>La musica di sottofondo:</strong> Prepara una playlist che mescoli 
-                        la musica western classica (come le colonne sonore di Ennio Morricone) con del 
-                        dark ambient inquietante (ad esempio gli album di Cryo Chamber)</li>
-                        <li><strong>Le luci soffuse:</strong> Abbassa leggermente le luci nella stanza 
-                        per creare naturalmente tensione durante le scene horror più intense</li>
-                        <li><strong>Rallenta deliberatamente per i momenti chiave:</strong> Una scena 
-                        come la Visione di Cthulhu merita assolutamente di essere narrata lentamente 
-                        e merita almeno 10 minuti o più di tempo dedicato</li>
-                    </ul>
-                    
-                    <h3>🎭 L'Interpretazione dei PNG</h3>
-                    <ul style="margin-left: 30px;">
-                        <li><strong>Usa voci diverse per ogni PNG:</strong> Anche delle differenze 
-                        molto sottili aiutano enormemente i giocatori a distinguere i personaggi</li>
-                        <li><strong>Sfrutta le pause drammatiche:</strong> Un momento di silenzio 
-                        assoluto dopo una rivelazione horror particolarmente inquietante può essere 
-                        estremamente efficace</li>
-                        <li><strong>Descrivi usando tutti i sensi:</strong> Non limitarti alla vista, 
-                        descrivi anche gli odori sgradevoli, i suoni inquietanti e le texture 
-                        disgustose</li>
-                    </ul>
-                    
-                    <h3>⚙️ La Gestione delle Meccaniche</h3>
-                    <ul style="margin-left: 30px;">
-                        <li><strong>Non nascondere mai la Tenuta Mentale:</strong> I giocatori devono 
-                        poter vedere chiaramente il deterioramento progressivo della loro sanità mentale</li>
-                        <li><strong>Tieni sempre la Quick Reference ben visibile:</strong> Questo riduce 
-                        drasticamente le interruzioni fastidiose durante il gioco</li>
-                        <li><strong>Prepara gli stat-block in anticipo:</strong> Stampali oppure crea 
-                        dei bookmark nel PDF per un accesso rapidissimo durante il combattimento</li>
-                    </ul>
-                    
-                    <h3>👥 La Gestione dei Giocatori</h3>
-                    <ul style="margin-left: 30px;">
-                        <li><strong>Organizza sempre una Session 0:</strong> Discuti apertamente e 
-                        onestamente il livello di comfort di ciascuno con il contenuto horror</li>
-                        <li><strong>Utilizza la X-Card o uno strumento equivalente:</strong> I safety 
-                        tools devono essere sempre disponibili e facilmente accessibili</li>
-                        <li><strong>Fai delle pause regolari:</strong> Il contenuto horror intenso 
-                        e prolungato richiede assolutamente dei momenti di respiro per i giocatori</li>
-                    </ul>
-                </div>
-            </section>
-            
-        </div>
-        
-        <!-- Footer -->
-        <div class="footer">
-            <h3>⚖️ Note Legali & Credits</h3>
-            
-            <p>
-                <strong>Questo prodotto include materiali provenienti dal Daggerheart System Reference Document 1.0, 
-                © Critical Role, LLC. secondo i termini della Darrington Press Community Gaming (DPCGL) License. 
-                Maggiori informazioni possono essere trovate su https://www.daggerheart.com</strong>
-            </p>
-            
-            <p style="margin-top: 20px;">
-                Darrington Press™ e il logo autorizzato di Darrington Press sono marchi registrati di Critical Role, LLC 
-                e vengono qui utilizzati con il loro esplicito permesso.
-            </p>
-            
-            <p style="margin-top: 30px;">
-                <strong>Design & Scrittura:</strong> Riccardo [Cognome]<br>
-                <strong>Sistema di Gioco:</strong> Daggerheart™ (Darrington Press)<br>
-                <strong>Genere:</strong> Weird West / Lovecraftian Horror<br>
-                <strong>Ispirazioni Principali:</strong> Deadlands, Call of Cthulhu, True Detective, The Terror
-            </p>
-            
-            <p style="margin-top: 30px;">
-                <strong>Setting & Contenuto Originale:</strong> Tutti i personaggi, le location, le trame e le storie 
-                contenute in Gunsmoke & Dread sono creazioni completamente originali © Riccardo [Cognome] 2025. 
-                Il setting del Weird West, Silver Hollow, l'Occhio Asciutto e tutto il lore associato sono proprietà 
-                intellettuale dell'autore.
-            </p>
-            
-            <p style="margin-top: 30px; font-size: 0.9em; color: var(--desert-sand);">
-                Pubblicato sotto la Darrington Press Community Gaming License<br>
-                Versione 1.0 | Rilasciato [DATA]<br>
-                Per feedback e commenti: [email/social media]
-            </p>
-            
-            <p style="margin-top: 40px; font-size: 1.2em; font-family: 'Rye', cursive; color: var(--alien-green);">
-                🔫 Che tu possa avere un ottimo viaggio nel Weird West 🌊<br>
-                <span style="font-size: 0.9em; font-style: italic;">
-                    (E ricorda sempre: non tutti i personaggi riescono a sopravvivere fino all'alba)
-                </span>
-            </p>
-        </div>
-        
-    </div>
+ <div class="container">
+ <!-- Hero Header -->
+ <div class="hero">
+ <h1>GUNSMOKE & DREAD</h1>
+ <p class="subtitle">Weird ovest orrore Collection</p>
+ <p class="tagline">
+ Là dove i pistoleri si trovano ad affrontare degli orrori cosmici nel cuore del deserto americano del 1885.
+ <br>Due avventure complete. Sei personaggi pregenerati. Venticinque creatura diverse.
+ <br><strong>E degli incubi senza fine.</strong>
+ </p>
+ 
+ <div class="stats">
+ <div class="stat-box">
+ <span class="stat-number">2</span>
+ <span class="stat-label">Avventure Complete</span>
+ </div>
+ <div class="stat-box">
+ <span class="stat-number">8-10</span>
+ <span class="stat-label">Ore di Gioco Totali</span>
+ </div>
+ <div class="stat-box">
+ <span class="stat-number">6</span>
+ <span class="stat-label">Personaggi Pregenerati</span>
+ </div>
+ <div class="stat-box">
+ <span class="stat-number">25+</span>
+ <span class="stat-label">creatura & PNG</span>
+ </div>
+ </div>
+ </div>
+ 
+ <!-- Main Content -->
+ <div class="content">
+ 
+ <!-- Cos'è questa Collection -->
+ <section class="section">
+ <h2>📖 Cos'è Esattamente Gunsmoke & Dread?</h2>
+ 
+ <p style="font-size: 1.2em; line-height: 1.9;">
+ <strong>Gunsmoke & Dread</strong> è una raccolta che contiene <strong>due avventure complete</strong> 
+ ambientate nel Weird ovest per il sistema <strong>Daggerheart™</strong>. Questa collezione fonde 
+ magistralmente l'azione classica del western americano con l'orrore cosmico di matrice lovecraftiana, 
+ creando delle esperienze di gioco assolutamente indimenticabili in cui dei pistoleri pragmatici 
+ si trovano improvvisamente ad affrontare delle entità cosmiche che non dovrebbero nemmeno esistere 
+ nella nostra realtà.
+ </p>
+ 
+ <div class="info-box">
+ <h3 style="margin-top: 0;">✨ Cosa Rende Davvero Speciale Questa Collezione</h3>
+ <ul style="font-size: 1.1em; line-height: 1.8;">
+ <li><strong>Due avventure complete invece di una sola:</strong> Ottieni il doppio del contenuto 
+ rispetto a quello che ti offrirebbe un tipico quickstart, mantenendo però lo stesso prezzo 
+ che pagheresti per una singola avventura</li>
+ <li><strong>Un'escalation narrativa davvero coinvolgente:</strong> La storia si evolve 
+ naturalmente da un semplice orrore locale fino ad arrivare gradualmente a una rivelazione 
+ cosmica di portata veramente apocalittica</li>
+ <li><strong>I personaggi sono completamente riutilizzabili:</strong> Gli stessi PG possono 
+ essere usati senza problemi per entrambe le avventure, con una progressione organica che 
+ li porta dal livello 2 fino al livello 5</li>
+ <li><strong>Un bestiario davvero massiccio:</strong> Più di 25 creatura completamente diverse, 
+ che spaziano dai comuni banditi mortali fino allo stesso Cthulhu dormiente</li>
+ <li><strong>Un sistema di sanità mentale completamente integrato:</strong> Il sistema della 
+ Tenuta Mentale traccia con precisione il deterioramento psicologico progressivo dei personaggi</li>
+ <li><strong>Una compatibilità totale con Daggerheart:</strong> Utilizza fedelmente e 
+ correttamente le regole ufficiali dell'SRD 1.0</li>
+ </ul>
+ </div>
+ 
+ <h3>🎯 Questa Collezione è Perfetta Per</h3>
+ <ul style="font-size: 1.1em; line-height: 1.8; margin-left: 40px;">
+ <li><strong>I classici one-shot del weekend:</strong> Ciascuna avventura può essere comodamente 
+ completata in una singola sessione che dura dalle 3 alle 5 ore</li>
+ <li><strong>Le mini-campagne brevi ma intense:</strong> Se decidi di collegare le due avventure 
+ insieme, otterrai una campagna completa e soddisfacente dalle 8 alle 10 ore totali</li>
+ <li><strong>L'introduzione perfetta al genere Weird ovest:</strong> È incluso un tutorial 
+ completamente integrato che è stato pensato appositamente per i nuovi giocatori</li>
+ <li><strong>I Game Master che cercano materiale di alta qualità:</strong> Tutto il contenuto 
+ è stato preparato in modo professionale, è stato playtestato approfonditamente ed è perfettamente 
+ bilanciato dal punto di vista meccanico</li>
+ <li><strong>I fan appassionati dell'orrore cosmico:</strong> Rappresenta l'incontro perfetto 
+ tra l'universo di Lovecraft e l'ambientazione di Deadlands</li>
+ </ul>
+ </section>
+ 
+ <!-- I Due Volumi -->
+ <section class="section">
+ <h2>📚 Le Due Avventure Incluse</h2>
+ 
+ <div class="volumes">
+ <!-- Volume I -->
+ <div class="volume-card vol1">
+ <div class="volume-icon">🌵</div>
+ <h3>Volume I: Shadows in the Desert</h3>
+ <p class="description">
+ <strong>Siamo nel New Mexico, nell'anno 1885.</strong> Una rapina a un treno che va 
+ completamente e disastrosamente storta. Dei banditi che erano stati uccisi ma che, 
+ contro ogni logica naturale, si rialzano. Un misterioso culto serpentino che si nasconde 
+ nelle miniere maledette di Silver Hollow. E nelle profondità più remote della terra, 
+ qualcosa di incredibilmente antico sta attendendo pazientemente nel buio più assoluto.
+ </p>
+ 
+ <h4 style="color: var(--blood-red); margin-top: 20px;">🎭 I Momenti Salienti dell'Avventura</h4>
+ <ul class="features">
+ <li>L'azione western classica che ti aspetti da questo genere: delle rapine audaci, 
+ dei duelli mortali faccia a faccia e degli inseguimenti assolutamente mozzafiato 
+ attraverso le distese del deserto</li>
+ <li>Una progressione graduale e magistrale verso l'orrore più puro: la storia si 
+ trasforma lentamente da un thriller convenzionale in un'esperienza intensa di 
+ survival orrore psicologico</li>
+ <li>Un boss finale tragico e assolutamente memorabile: Jeremiah, il predicatore 
+ che è caduto in disgrazia e si è irrimediabilmente dato al male</li>
+ <li>Delle scelte morali davvero significative e pesanti: i giocatori dovranno 
+ decidere se tentare coraggiosamente di redimere i cultisti oppure se eliminarli 
+ senza alcuna pietà</li>
+ <li>Un climax epico e completamente indimenticabile: i personaggi dovranno riuscire 
+ a distruggere gli idoli profani proprio mentre il terribile rituale di evocazione 
+ sta rapidamente raggiungendo il suo culmine finale</li>
+ </ul>
+ 
+ <p style="margin-top: 20px;">
+ <strong>⏱️ Durata della Sessione:</strong> Da 3 a 4 ore<br>
+ <strong>🎲 Livello Iniziale dei Personaggi:</strong> 2<br>
+ <strong>👹 La Minaccia Principale:</strong> Il Serpente che Giace nelle Profondità Sotterranee
+ </p>
+ 
+ <a href="Volume-I-COMPLETE.html" class="cta-button">🔫 Inizia Subito il Volume I</a>
+ </div>
+ 
+ <!-- Volume II -->
+ <div class="volume-card vol2">
+ <div class="volume-icon">🌊</div>
+ <h3>Volume II: Where the Ocean Meets the Dust</h3>
+ <p class="description">
+ <strong>Siamo nello Utah, sempre nel corso del 1885.</strong> Alcuni geometri della 
+ ferrovia sono misteriosamente scomparsi nel bel mezzo del deserto. Un'antica antenna 
+ cosmica, dimenticata da millenni, è stata accidentalmente riattivata. E per un momento 
+ che sembrerà durare un'eternità, ma che in realtà sarà terribilmente breve, 
+ <strong>guarderete direttamente negli occhi dello stesso Cthulhu</strong> e 
+ comprenderete finalmente, in modo viscerale e sconvolgente, quanto l'intera umanità 
+ sia profondamente insignificante nell'immensità cosmica dell'universo.
+ </p>
+ 
+ <h4 style="color: var(--ocean-blue); margin-top: 20px;">🎭 I Momenti Salienti dell'Avventura</h4>
+ <ul class="features">
+ <li>Un'investigazione genuinamente e magistralmente lovecraftiana: dovrete seguire 
+ degli indizi criptici e inquietanti mentre la follia e la paranoia si insinuano 
+ lentamente e inesorabilmente nelle vostre menti</li>
+ <li>LA VISIONE centrale e indimenticabile: una sequenza elaborata e articolata in 
+ cinque fasi completamente distinte in cui vedrete finalmente Cthulhu stesso che 
+ giace dormiente nelle profondità più abissali dell'oceano</li>
+ <li>L'orrore cosmico portato al suo livello più definitivo e assoluto: scoprirete 
+ che un oceano fantasma e impossibile si nasconde proprio sotto le sabbie del deserto</li>
+ <li>Un boss fight complesso e strutturato in più fasi successive: dovrete prima 
+ affrontare e sconfiggere il terribile Profeta del Sale e poi resistere disperatamente 
+ a un'intera marea incontenibile di creatura antiche</li>
+ <li>Delle conseguenze che sono davvero e autenticamente permanenti: il trauma 
+ psicologico profondo che subirete non potrà mai essere completamente eliminato 
+ o curato</li>
+ </ul>
+ 
+ <p style="margin-top: 20px;">
+ <strong>⏱️ Durata della Sessione:</strong> Dalle 4 alle 6 ore<br>
+ <strong>🎲 Livello Consigliato dei Personaggi:</strong> Dal 3 al 5<br>
+ <strong>👹 La Minaccia Principale:</strong> Cthulhu (attraverso una visione devastante) e il Fossile Psichico
+ </p>
+ 
+ <a href="Volume-II-COMPLETE.html" class="cta-button">🌊 Inizia Subito il Volume II</a>
+ </div>
+ </div>
+ 
+ <div class="tip-box">
+ <h3 style="margin-top: 0;">🔗 Come Puoi Collegare le Due Avventure</h3>
+ <p style="font-size: 1.1em;">
+ Le due avventure possono essere giocate in tre modi completamente diversi tra loro:
+ </p>
+ <ul style="font-size: 1.05em; line-height: 1.8;">
+ <li><strong>Come avventure completamente standalone:</strong> Sono totalmente indipendenti 
+ l'una dall'altra e non richiedono assolutamente alcun prerequisito particolare o conoscenza 
+ pregressa</li>
+ <li><strong>In sequenza narrativa:</strong> Il Volume II può essere ambientato circa tre 
+ mesi dopo gli eventi drammatici del Volume I, con dei riferimenti sottili ma significativi 
+ che collegano elegantemente le due storie</li>
+ <li><strong>Come una mini-campagna completamente integrata:</strong> Puoi utilizzare il 
+ nostro dettagliato <a href="Campaign-Guide.html">Campaign Framework</a> per integrare 
+ completamente e organicamente le trame delle due avventure in un'unica narrazione coerente</li>
+ </ul>
+ <p style="font-size: 1.1em; margin-top: 15px;">
+ I personaggi che riescono a sopravvivere agli eventi del Volume I possono continuare 
+ naturalmente la loro storia nel Volume II, portando con sé tutti i punti esperienza che 
+ hanno faticosamente guadagnato (che li porteranno progressivamente dal livello 3 fino al 
+ livello 5), insieme a tutte le cicatrici sia fisiche che mentali che si sono inevitabilmente 
+ procurati durante le loro terribili avventure.
+ </p>
+ </div>
+ </section>
+ 
+ <!-- Cosa Contiene -->
+ <section class="section">
+ <h2>📦 Cosa Contiene Esattamente Questa Collezione</h2>
+ 
+ <div class="file-grid">
+ <div class="file-item">
+ <h4>📖 Le Regole Base del Sistema</h4>
+ <a href="Weird-ovest-Rules.html" class="file-link">→ Consulta le Regole Complete del Weird ovest</a>
+ <p class="description">
+ Troverai qui il sistema completo della Tenuta Mentale (che gestisce accuratamente 
+ la sanità mentale progressiva dei personaggi), le regole specifiche e dettagliate 
+ per le armi da fuoco tipiche del western, le meccaniche complete per i duelli 
+ classici faccia a faccia e assolutamente tutto quello che ti servirà per far 
+ combattere efficacemente i tuoi personaggi contro degli orrori cosmici 
+ incomprensibili. Ogni singola cosa è basata fedelmente sul Daggerheart SRD 1.0.
+ </p>
+ </div>
+ 
+ <div class="file-item">
+ <h4>👥 I Personaggi Pregenerati</h4>
+ <a href="Character-Sheets.html" class="file-link">→ Scarica le Schede Complete dei 6 Personaggi</a>
+ <p class="description">
+ Sono inclusi tre personaggi completamente pregenerati di livello 2 (Jack Malone, 
+ il pistolero disilluso; Sarah Blackwood, la predicatrice combattuta; e Doc Artemis, 
+ il medico razionalista), più le loro varianti progressivamente potenziate dal 
+ livello 3 fino al livello 5 per essere usate nel Volume II. Ciascun personaggio 
+ è stato completamente e amorevolmente sviluppato con un background dettagliato e 
+ toccante, delle connessioni significative e organiche con gli altri personaggi 
+ del gruppo e un equipaggiamento completo e appropriato.
+ </p>
+ </div>
+ 
+ <div class="file-item">
+ <h4>🌵 Il Primo Volume</h4>
+ <a href="Volume-I-COMPLETE.html" class="file-link">→ Leggi "Shadows in the Desert" per Intero</a>
+ <p class="description">
+ Un'avventura completa e autocontenuta che si svolge in tre atti chiaramente 
+ distinti: inizierai con una rapina disperata a un treno in movimento, esplorerai 
+ metodicamente una città profondamente maledetta e affronterai un confronto 
+ assolutamente decisivo con i cultisti fanatici. L'avventura include un bestiario 
+ dedicato e completo con banditi comuni, zombi orrendi, cultisti devoti e il 
+ temibile Serpente sotterraneo.
+ </p>
+ </div>
+ 
+ <div class="file-item">
+ <h4>🌊 Il Secondo Volume</h4>
+ <a href="Volume-II-COMPLETE.html" class="file-link">→ Leggi "Where Ocean Meets Dust" per Intero</a>
+ <p class="description">
+ Un'avventura epica e sconvolgente che si sviluppa progressivamente in ben sei 
+ atti elaborati: condurrai un'investigazione complessa e inquietante, esplorerai 
+ il misterioso canyon dell'eco che risuona di voci antiche, vivrai l'esperienza 
+ devastante della VISIONE DI CTHULHU e affronterai disperatamente un'inquietante 
+ marea fantasma che emerge dal nulla. Include un bestiario ricchissimo e dettagliato 
+ di creatura cosmiche e oceaniche terrificanti.
+ </p>
+ </div>
+ 
+ <div class="file-item">
+ <h4>👹 Il Bestiario Completo</h4>
+ <a href="Bestiary.html" class="file-link">→ Consulta Tutte le 25+ creatura Diverse</a>
+ <p class="description">
+ Un repertorio vastissimo che spazia dai comuni banditi mortali fino allo stesso 
+ Cthulhu dormiente nelle profondità abissali. Ogni singola creatura è presentata 
+ con uno stat-block completo e dettagliato per il sistema Daggerheart, con delle 
+ tattiche di combattimento intelligentemente suggerite e delle note narrative 
+ estremamente utili per il Game Master. Tutto il materiale è stato preparato per 
+ essere usato immediatamente al tavolo senza alcuna preparazione aggiuntiva.
+ </p>
+ </div>
+ 
+ <div class="file-item">
+ <h4>📋 La Scheda di Riferimento Rapido</h4>
+ <a href="GM-Quick-Reference.html" class="file-link">→ Scarica la Scheda Quick Reference</a>
+ <p class="description">
+ Una praticissima scheda stampabile su due comode pagine in formato A4 che contiene 
+ tutte le regole assolutamente essenziali di cui avrai bisogno durante il gioco: 
+ i tiri azione standard, le difficoltà tipiche per le varie situazioni, il sistema 
+ completo della Tenuta Mentale, le regole del combattimento e le statistiche 
+ dettagliate di tutte le armi disponibili. Uno strumento assolutamente essenziale 
+ da tenere sempre a portata di mano al tavolo di gioco.
+ </p>
+ </div>
+ 
+ <div class="file-item">
+ <h4>🗺️ Il Framework per la Campagna</h4>
+ <a href="Campaign-Guide.html" class="file-link">→ Scopri Come Collegare le Avventure</a>
+ <p class="description">
+ Una guida completa su come utilizzare efficacemente il Volume I e il Volume II 
+ come una mini-campagna coerente e soddisfacente: include una timeline dettagliata 
+ degli eventi, le connessioni narrative sottili ma significative tra le due storie, 
+ la progressione naturale dei PG attraverso i livelli e le conseguenze importanti 
+ che persistono realisticamente tra i vari scenari.
+ </p>
+ </div>
+ 
+ <div class="file-item">
+ <h4>📚 I Materiali Extra</h4>
+ <a href="Expanded-Lore.html" class="file-link">→ Esplora il Lore Espanso & i Materiali Bonus</a>
+ <p class="description">
+ Degli approfondimenti estremamente dettagliati sulla setting, il Mythos di Cthulhu 
+ calato specificamente nel contesto del ovest americano del 1885, una ricca galleria 
+ di PNG con descrizioni evocative, degli incontri addizionali pronti all'uso e 
+ numerosi hook narrativi utili per espandere ulteriormente la tua campagna secondo 
+ le esigenze del tuo gruppo.
+ </p>
+ </div>
+ </div>
+ </section>
+ 
+ <!-- Quick Start Paths -->
+ <section class="section">
+ <h2>🚀 Come Iniziare: I Percorsi Rapidi Consigliati</h2>
+ 
+ <p style="font-size: 1.2em; margin-bottom: 30px;">
+ A seconda di quanto tempo hai effettivamente a disposizione per prepararti e di cosa 
+ desideri esattamente ottenere dalla tua sessione, puoi scegliere uno di questi tre 
+ percorsi diversi:
+ </p>
+ 
+ <div class="path-boxes">
+ <!-- Path 1: Voglio giocare SUBITO -->
+ <div class="path-box">
+ <h4>⚡ "Voglio Giocare Immediatamente"</h4>
+ <p style="margin-bottom: 15px; font-style: italic;">
+ Hai solo 10 minuti per la preparazione e poi 3-4 ore disponibili per giocare
+ </p>
+ <ol>
+ <li>Leggi attentamente la <a href="GM-Quick-Reference.html">Quick Reference</a> 
+ completa (ci vorranno circa 5 minuti)</li>
+ <li>Stampa le <a href="Character-Sheets.html">Schede dei Personaggi</a> per 
+ distribuirle ai giocatori</li>
+ <li>Vai direttamente a <a href="Volume-I-COMPLETE.html">Volume I - Atto I</a> 
+ e comincia a leggere</li>
+ <li>Inizia finalmente a giocare e divertiti!</li>
+ </ol>
+ <p style="margin-top: 15px; font-size: 0.95em;">
+ <strong>Un consiglio per i Game Master:</strong> È sufficiente che tu legga 
+ solamente l'Atto I prima di iniziare effettivamente a giocare. Potrai 
+ tranquillamente leggere gli Atti II e III durante le pause naturali del gioco 
+ o tra una sessione e l'altra.
+ </p>
+ </div>
+ 
+ <!-- Path 2: Voglio preparare bene -->
+ <div class="path-box">
+ <h4>📚 "Voglio Prepararmi Davvero Bene"</h4>
+ <p style="margin-bottom: 15px; font-style: italic;">
+ Hai a disposizione 2-3 ore complete di preparazione prima dell'inizio della sessione
+ </p>
+ <ol>
+ <li>Leggi con attenzione le <a href="Weird-ovest-Rules.html">Regole Complete del 
+ Weird ovest</a> per familiarizzare con il sistema (ti serviranno circa 30 minuti)</li>
+ <li>Leggi <strong>per intero l'avventura</strong> specifica che hai deciso di 
+ masterizzare questa volta (conta circa 60 minuti di lettura attenta)</li>
+ <li>Scorri velocemente il <a href="Bestiary.html">Bestiario</a> concentrandoti 
+ sulle creatura che sono rilevanti per questa avventura (altri 20 minuti circa)</li>
+ <li>Stampa accuratamente la Reference, le Sheets e gli eventuali Handout che ti 
+ serviranno (circa 10 minuti di tempo)</li>
+ <li>Prepara una playlist musicale appropriata per creare l'atmosfera giusta 
+ (questo è opzionale ma consigliato, altri 10 minuti)</li>
+ </ol>
+ <p style="margin-top: 15px; font-size: 0.95em;">
+ <strong>Il risultato finale:</strong> Avrai una sessione che scorre in modo 
+ fluido e naturale, ti sentirai completamente a tuo agio e sicuro con il materiale 
+ e non ci saranno sorprese spiacevoli o momenti di incertezza.
+ </p>
+ </div>
+ 
+ <!-- Path 3: Voglio leggere tutto -->
+ <div class="path-box">
+ <h4>🎓 "Voglio Capire e Padroneggiare Tutto"</h4>
+ <p style="margin-bottom: 15px; font-style: italic;">
+ Sei un completista e vuoi assorbire totalmente tutto il materiale disponibile
+ </p>
+ <ol>
+ <li>Inizia da questa pagina INDEX (che stai già leggendo in questo momento!)</li>
+ <li>Leggi completamente le <a href="Weird-ovest-Rules.html">Core Rules</a> senza 
+ tralasciare nulla</li>
+ <li>Leggi attentamente <a href="Character-Sheets.html">tutti e 6 i personaggi</a> 
+ per comprenderli a fondo</li>
+ <li>Leggi il <a href="Volume-I-COMPLETE.html">Volume I nella sua interezza</a> 
+ dall'inizio alla fine</li>
+ <li>Leggi anche il <a href="Volume-II-COMPLETE.html">Volume II completo</a> 
+ senza saltare nulla</li>
+ <li>Studia meticolosamente il <a href="Bestiary.html">Bestiario</a> per conoscere 
+ ogni creatura</li>
+ <li>Leggi il <a href="Campaign-Guide.html">Campaign Framework</a> per capire come 
+ collegare tutto</li>
+ <li>Esplora infine gli <a href="Expanded-Lore.html">Extras e il Lore Espanso</a> 
+ per i dettagli finali</li>
+ </ol>
+ <p style="margin-top: 15px; font-size: 0.95em;">
+ <strong>Tempo totale richiesto:</strong> Dalle 6 alle 8 ore di lettura 
+ concentrata. Ma alla fine conoscerai il materiale assolutamente alla perfezione 
+ e potrai improvvisare con totale confidenza in qualsiasi situazione.
+ </p>
+ </div>
+ </div>
+ 
+ <div class="warning-box">
+ <h3 style="margin-top: 0;">⚠️ Una Nota Importante per i Game Master Principianti</h3>
+ <p style="font-size: 1.1em; line-height: 1.8;">
+ Se questa è la tua <strong>prima volta in assoluto</strong> come Game Master con 
+ il sistema Daggerheart, ti consiglio vivamente e caldamente di seguire questi 
+ suggerimenti pratici:
+ </p>
+ <ul style="font-size: 1.05em; line-height: 1.7;">
+ <li>Inizia assolutamente con il <strong>Volume I</strong> (che è decisamente più 
+ lineare nella struttura e molto meno complesso da gestire rispetto al secondo volume)</li>
+ <li>Leggi con estrema attenzione le <a href="Weird-ovest-Rules.html">Core Rules</a> 
+ prima di masterizzare la tua prima sessione</li>
+ <li>Tieni sempre la <a href="GM-Quick-Reference.html">Quick Reference</a> ben 
+ visibile davanti a te durante tutta la sessione</li>
+ <li>Non preoccuparti assolutamente di "fare tutto in modo perfetto" - l'importante 
+ è divertirsi e godersi l'esperienza insieme!</li>
+ <li>Il Volume II è decisamente più complesso dal punto di vista emotivo e narrativo, 
+ quindi masterizzalo solo dopo aver acquisito una buona confidenza con il sistema</li>
+ </ul>
+ </div>
+ </section>
+ 
+ <!-- Requisiti -->
+ <section class="section">
+ <h2>🎲 Cosa Ti Serve Concretamente per Giocare</h2>
+ 
+ <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 30px 0;">
+ <div>
+ <h3>📋 I Materiali Fisici Necessari</h3>
+ <ul style="font-size: 1.1em; line-height: 1.8; margin-left: 30px;">
+ <li><strong>I dadi poliedrici standard:</strong> Ti serviranno 2 dadi da 12 facce 
+ (per gestire la Speranza e la Paura), più 1 dado da 4, 1 dado da 6, 1 dado da 8, 
+ 1 dado da 10 e 1 dado da 20 facce</li>
+ <li><strong>Dei token o dei segnalini:</strong> Per tracciare visivamente la 
+ Speranza, la Paura, gli PF e l'Armatura dei personaggi</li>
+ <li><strong>Una stampante (che è opzionale):</strong> Per stampare la Quick 
+ Reference, le Character Sheets e gli eventuali handout che vorrai distribuire</li>
+ <li><strong>Delle matite e delle gomme</strong> per prendere appunti e modificare 
+ le schede</li>
+ </ul>
+ </div>
+ 
+ <div>
+ <h3>📚 Le Conoscenze Necessarie</h3>
+ <ul style="font-size: 1.1em; line-height: 1.8; margin-left: 30px;">
+ <li><strong>Il sistema base di Daggerheart:</strong> È necessaria una conoscenza 
+ almeno basilare delle meccaniche fondamentali del core (i tiri con 2d12, il 
+ sistema di Speranza e Paura, il combattimento base)</li>
+ <li><strong>Nessuna esperienza pregressa con l'orrore è richiesta:</strong> 
+ C'è un tutorial completamente integrato nell'avventura</li>
+ <li><strong>Nessuna conoscenza del Mythos di Cthulhu è necessaria:</strong> 
+ Assolutamente tutto viene spiegato chiaramente nel testo</li>
+ </ul>
+ 
+ <h3 style="margin-top: 30px;">👥 I Partecipanti Necessari</h3>
+ <ul style="font-size: 1.1em; line-height: 1.8; margin-left: 30px;">
+ <li><strong>1 Game Master</strong> che guiderà la storia</li>
+ <li><strong>Da 3 a 5 Giocatori</strong> (il numero ottimale è 3, esattamente 
+ come i personaggi pregenerati forniti)</li>
+ <li><strong>L'età consigliata:</strong> 16 anni o più (per via del contenuto 
+ orrore intenso e dei temi maturi)</li>
+ </ul>
+ </div>
+ </div>
+ 
+ <div class="info-box">
+ <h3 style="margin-top: 0;">📱 Come Giocare Online</h3>
+ <p style="font-size: 1.1em; line-height: 1.8;">
+ Questa collezione funziona assolutamente alla perfezione anche per il gioco online 
+ utilizzando diverse piattaforme:
+ </p>
+ <ul style="font-size: 1.05em; line-height: 1.7;">
+ <li><strong>Roll20:</strong> Puoi caricare comodamente le character sheets come 
+ handout e utilizzare delle macro personalizzate per i tiri</li>
+ <li><strong>Foundry VTT:</strong> Esiste un supporto per Daggerheart creato dalla 
+ community che è disponibile gratuitamente</li>
+ <li><strong>Discord con il bot Avrae:</strong> Perfetto per i gruppi che preferiscono 
+ uno stile di teatro mentale puro</li>
+ <li><strong>Demiplane Nexus:</strong> Il character builder ufficiale di Daggerheart 
+ è disponibile qui</li>
+ </ul>
+ <p style="font-size: 1.1em; margin-top: 15px;">
+ <strong>Una nota importante:</strong> Secondo i termini della DPCGL (la Darrington 
+ Press Community Gaming License), i contenuti fan-made che vengono utilizzati sui VTT 
+ devono necessariamente essere gratuiti. Questa collection è un prodotto acquistabile, 
+ ma puoi utilizzarla liberamente sui VTT che sono stati whitelisted (come Roll20, 
+ Foundry e Demiplane) per le tue sessioni private senza alcun problema.
+ </p>
+ </div>
+ </section>
+ 
+ <!-- Consigli Finali -->
+ <section class="section">
+ <h2>💡 I Nostri Consigli per una Grande Sessione</h2>
+ 
+ <div style="columns: 2; column-gap: 40px; font-size: 1.05em; line-height: 1.8;">
+ <h3>🎬 Creare la Giusta Atmosfera</h3>
+ <ul style="margin-left: 30px;">
+ <li><strong>La musica di sottofondo:</strong> Prepara una playlist che mescoli 
+ la musica western classica (come le colonne sonore di Ennio Morricone) con del 
+ dark ambient inquietante (ad esempio gli album di Cryo Chamber)</li>
+ <li><strong>Le luci soffuse:</strong> Abbassa leggermente le luci nella stanza 
+ per creare naturalmente tensione durante le scene orrore più intense</li>
+ <li><strong>Rallenta deliberatamente per i momenti chiave:</strong> Una scena 
+ come la Visione di Cthulhu merita assolutamente di essere narrata lentamente 
+ e merita almeno 10 minuti o più di tempo dedicato</li>
+ </ul>
+ 
+ <h3>🎭 L'Interpretazione dei PNG</h3>
+ <ul style="margin-left: 30px;">
+ <li><strong>Usa voci diverse per ogni PNG:</strong> Anche delle differenze 
+ molto sottili aiutano enormemente i giocatori a distinguere i personaggi</li>
+ <li><strong>Sfrutta le pause drammatiche:</strong> Un momento di silenzio 
+ assoluto dopo una rivelazione orrore particolarmente inquietante può essere 
+ estremamente efficace</li>
+ <li><strong>Descrivi usando tutti i sensi:</strong> Non limitarti alla vista, 
+ descrivi anche gli odori sgradevoli, i suoni inquietanti e le texture 
+ disgustose</li>
+ </ul>
+ 
+ <h3>⚙️ La Gestione delle Meccaniche</h3>
+ <ul style="margin-left: 30px;">
+ <li><strong>Non nascondere mai la Tenuta Mentale:</strong> I giocatori devono 
+ poter vedere chiaramente il deterioramento progressivo della loro sanità mentale</li>
+ <li><strong>Tieni sempre la Quick Reference ben visibile:</strong> Questo riduce 
+ drasticamente le interruzioni fastidiose durante il gioco</li>
+ <li><strong>Prepara gli stat-block in anticipo:</strong> Stampali oppure crea 
+ dei bookmark nel PDF per un accesso rapidissimo durante il combattimento</li>
+ </ul>
+ 
+ <h3>👥 La Gestione dei Giocatori</h3>
+ <ul style="margin-left: 30px;">
+ <li><strong>Organizza sempre una Session 0:</strong> Discuti apertamente e 
+ onestamente il livello di comfort di ciascuno con il contenuto orrore</li>
+ <li><strong>Utilizza la X-Card o uno strumento equivalente:</strong> I safety 
+ tools devono essere sempre disponibili e facilmente accessibili</li>
+ <li><strong>Fai delle pause regolari:</strong> Il contenuto orrore intenso 
+ e prolungato richiede assolutamente dei momenti di respiro per i giocatori</li>
+ </ul>
+ </div>
+ </section>
+ 
+ </div>
+ 
+ <!-- Footer -->
+ <div class="footer">
+ <h3>⚖️ Note Legali & Credits</h3>
+ 
+ <p>
+ <strong>Questo prodotto include materiali provenienti dal Daggerheart System Reference Document 1.0, 
+ © Critical Role, LLC. secondo i termini della Darrington Press Community Gaming (DPCGL) License. 
+ Maggiori informazioni possono essere trovate su https://www.daggerheart.com</strong>
+ </p>
+ 
+ <p style="margin-top: 20px;">
+ Darrington Press™ e il logo autorizzato di Darrington Press sono marchi registrati di Critical Role, LLC 
+ e vengono qui utilizzati con il loro esplicito permesso.
+ </p>
+ 
+ <p style="margin-top: 30px;">
+ <strong>Design & Scrittura:</strong> Riccardo [Cognome]<br>
+ <strong>Sistema di Gioco:</strong> Daggerheart™ (Darrington Press)<br>
+ <strong>Genere:</strong> Weird ovest / Lovecraftian orrore<br>
+ <strong>Ispirazioni Principali:</strong> Deadlands, Call of Cthulhu, True Detective, The Terror
+ </p>
+ 
+ <p style="margin-top: 30px;">
+ <strong>Setting & Contenuto Originale:</strong> Tutti i personaggi, le località, le trame e le storie 
+ contenute in Gunsmoke & Dread sono creazioni completamente originali © Riccardo [Cognome] 2025. 
+ Il setting del Weird ovest, Silver Hollow, l'Occhio Asciutto e tutto il lore associato sono proprietà 
+ intellettuale dell'autore.
+ </p>
+ 
+ <p style="margin-top: 30px; font-size: 0.9em; color: var(--desert-sand);">
+ Pubblicato sotto la Darrington Press Community Gaming License<br>
+ Versione 1.0 | Rilasciato [DATA]<br>
+ Per feedback e commenti: [email/social media]
+ </p>
+ 
+ <p style="margin-top: 40px; font-size: 1.2em; font-family: 'Rye', cursive; color: var(--alien-green);">
+ 🔫 Che tu possa avere un ottimo viaggio nel Weird ovest 🌊<br>
+ <span style="font-size: 0.9em; font-style: italic;">
+ (E ricorda sempre: non tutti i personaggi riescono a sopravvivere fino all'alba)
+ </span>
+ </p>
+ </div>
+ 
+ </div>
 </body>
 </html>
