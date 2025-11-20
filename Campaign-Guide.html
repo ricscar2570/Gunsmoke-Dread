@@ -1,173 +1,877 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Guida alla Campagna - Gunsmoke & Dread</title>
-    <link rel="stylesheet" href="assets/css/main-styles.css">
-    <link rel="stylesheet" href="assets/css/volume-themes.css">
-    <style media="print">
-        @page { size: A4; margin: 1.5cm; }
-        body { background: white !important; color: black !important; font-size: 10pt; line-height: 1.5; font-family: 'Georgia', serif; }
-        .container { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
-        .sidebar, .nav-links, .hero-stats, .no-print { display: none !important; }
-        .content { column-count: 2; column-gap: 1cm; column-rule: 1px solid #ccc; width: 100% !important; }
-        h1, h2, h3, .hero, .footer { column-span: all; text-align: center; page-break-after: avoid; }
-        .stat-block, .info-box, .warning-box, .horror-box, .tip-box, .card { 
-            break-inside: avoid; page-break-inside: avoid; 
-            border: 2px solid #000 !important; background-color: #f5f5f5 !important; 
-            color: black !important; margin-bottom: 20px; text-align: justify; padding: 15px;
-        }
-        a { text-decoration: underline; color: black !important; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campaign Guide - Gunsmoke & Dread</title>
+  
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="assets/css/main-styles.css">
+  <link rel="stylesheet" href="assets/css/volume-themes.css">
 </head>
 <body class="theme-desert">
-    <div class="container">
-        
-        <div class="hero" style="padding: 60px 40px; background: linear-gradient(135deg, var(--rust) 0%, var(--night-black) 50%, var(--ocean-blue) 100%);">
-            <h1 style="font-size: 4em; color: white;">🗺️ GUIDA ALLA CAMPAGNA</h1>
-            <p class="subtitle" style="color: var(--seafoam);">Il Manuale del Custode</p>
-            <p class="tagline" style="color: white;">Dalla Silver Hollow all'Abisso • Progressione • Archi Narrativi</p>
-        </div>
-        
-        <div class="sidebar-layout">
-            <aside class="sidebar no-print">
-                <h2>Indice</h2>
-                <ul class="nav-links">
-                    <li><a href="#overview">Panoramica</a></li>
-                    <li><a href="#structure">Struttura</a></li>
-                    <li><a href="#timeline">Cronologia</a></li>
-                    <li><a href="#narrative">Archi Narrativi</a></li>
-                    <li><a href="#downtime">Tempo Morto</a></li>
-                    <li><a href="#troubleshooting">Risoluzione Problemi</a></li>
-                </ul>
-            </aside>
-            
-            <main class="content">
-                
-                <section id="overview" class="section">
-                    <h2>📖 La Visione d'Insieme</h2>
-                    
-                    <p class="large">
-                        <strong>Gunsmoke & Dread</strong> non è una semplice serie di avventure scollegate. È una discesa graduale nell'abisso, una campagna horror in due atti ambientata nel Weird West del 1885-1886. L'opera combina l'azione viscerale del western classico con il nichilismo dell'orrore cosmico lovecraftiano, esplorando temi come l'insignificanza umana di fronte all'eterno, la corruzione della carne e la fragilità della mente.
-                    </p>
-                    
-                    <div class="info-box">
-                        <h3>🎯 Dati Essenziali per il GM</h3>
-                        <ul>
-                            <li><strong>Durata Complessiva:</strong> Stimata tra le 25 e le 35 ore di gioco effettivo (circa 10-14 sessioni da 3 ore).</li>
-                            <li><strong>Arco di Livello:</strong> I personaggi iniziano come novizi al Livello 2 e terminano come veterani segnati al Livello 5-6.</li>
-                            <li><strong>Tono e Atmosfera:</strong> Horror psicologico (70%) intervallato da brutale azione western (30%).</li>
-                            <li><strong>Pubblico:</strong> 3-5 Giocatori adulti (contenuti maturi e disturbanti).</li>
-                        </ul>
-                    </div>
-                </section>
-                
-                <section id="structure" class="section">
-                    <h2>🏗️ La Struttura dei Due Volumi</h2>
-                    
-                    <h3>📚 Analisi dei Moduli</h3>
-                    
-                    <div class="card">
-                        <h4>VOLUME I: Shadows in the Desert</h4>
-                        <p><strong>Location:</strong> Silver Hollow, New Mexico.<br><strong>Livelli:</strong> 2 → 3.</p>
-                        <p>Questo volume funge da introduzione. Inizia come un mistero locale (persone scomparse, un prete impazzito) ma si evolve rapidamente verso la rivelazione cosmica. I giocatori imparano che sotto la superficie del mondo esiste "altro".</p>
-                    </div>
-                    
-                    <div class="card">
-                        <h4>VOLUME II: Where the Ocean Meets the Dust</h4>
-                        <p><strong>Location:</strong> Dry Eye, Arizona.<br><strong>Livelli:</strong> 3 → 5.</p>
-                        <p>Questo è il cuore dell'orrore. Non c'è più mistero, solo sopravvivenza. I personaggi, ora consapevoli della minaccia, devono discendere fisicamente in un mondo alieno sottomarino per affrontare un'entità quasi divina.</p>
-                    </div>
-                    
-                    <div class="info-box">
-                        <h4>🔗 Come Collegare i Volumi (Consigliato)</h4>
-                        <p>Il modo migliore per giocare questa campagna è l'<strong>Opzione Continuativa</strong>. Gioca il Volume I, poi narra un intervallo di <strong>6 mesi di tempo in-game</strong> (gestiti tramite le regole del Tempo Morto), e infine riprendi con il Volume II usando gli stessi personaggi.</p>
-                        <p>Questo approccio massimizza l'impatto emotivo: i giocatori vedono i loro eroi evolvere da avventurieri ingenui a veterani pieni di cicatrici, rendendo il finale del Volume II incredibilmente potente.</p>
-                    </div>
-                </section>
-                
-                <section id="timeline" class="section">
-                    <h2>📅 Cronologia degli Eventi</h2>
-                    
-                    <div class="stat-block">
-                        <h4>FASE 1: SETTEMBRE 1885 (L'Incidente)</h4>
-                        <p>I personaggi arrivano a Silver Hollow. In meno di una settimana, smantellano il culto di Jeremiah e scoprono il Tempio del Serpente. L'evento lascia segni indelebili nelle loro menti.</p>
-                    </div>
-                    
-                    <div class="stat-block">
-                        <h4>FASE 2: INVERNO 1885-1886 (Il Silenzio)</h4>
-                        <p>Per sei mesi, il mondo sembra tornare normale. I personaggi si separano o cercano di dimenticare. Ma gli incubi non cessano. In questo periodo, l'entità "Il Guardiano" in Arizona inizia a svegliarsi, influenzando i sogni di persone sensibili a centinaia di chilometri di distanza.</p>
-                    </div>
-                    
-                    <div class="stat-block">
-                        <h4>FASE 3: MARZO 1886 (Il Risveglio)</h4>
-                        <p>Cornelius Brandt invia il telegramma disperato da Dry Eye. I personaggi, spinti dal destino o dal trauma non risolto, si riuniscono. Inizia la discesa finale.</p>
-                    </div>
-                </section>
-                
-                <section id="narrative" class="section">
-                    <h2>🧵 Archi Narrativi dei Personaggi</h2>
-                    <p>Per rendere la storia personale, incoraggia i giocatori a seguire questi archi di sviluppo suggeriti:</p>
-                    
-                    <div class="info-box">
-                        <h4>JACK MALONE: La Redenzione attraverso il Sangue</h4>
-                        <p><strong>Volume I:</strong> Jack è perseguitato dal fantasma della bambina che ha ucciso per errore. È un uomo che cerca la morte ma è troppo bravo a sopravvivere.</p>
-                        <p><strong>Volume II:</strong> Incontra Tommy Garrett (il geometra scomparso), che per lui è come un fratello minore. Quando scopre che Tommy è diventato un mostro, Jack deve fare una scelta impossibile: uccidere l'ultima persona che amava o lasciarlo vivere come abominio. La sua redenzione non sta nel salvare Tommy, ma nel trovare la pace dopo aver fatto la cosa necessaria.</p>
-                    </div>
-                    
-                    <div class="info-box">
-                        <h4>SARAH BLACKWOOD: La Fede nel Fuoco</h4>
-                        <p><strong>Volume I:</strong> La sua fede è dogmatica e sicura. Vedere Padre Jeremiah trasformato in mostro incrina le sue certezze: come può Dio permettere un tale abominio?</p>
-                        <p><strong>Volume II:</strong> La sua fede deve evolversi o morire. Comprende che gli Antichi sono reali e antecedenti alla Bibbia. Il suo arco culmina nella realizzazione che la sua fede non deve essere una negazione della realtà, ma uno scudo contro di essa. Diventa una guerriera sacra che combatte non perché "vincerà", ma perché è giusto.</p>
-                    </div>
-                    
-                    <div class="info-box">
-                        <h4>DOC WELLS: Il Crollo della Ragione</h4>
-                        <p><strong>Volume I:</strong> Cerca di razionalizzare tutto. I mostri sono "animali sconosciuti", la magia è "scienza non spiegata".</p>
-                        <p><strong>Volume II:</strong> Di fronte alla geometria non euclidea della Città Sommersa, la logica umana fallisce. Doc deve accettare che l'universo è più vasto e terrificante di quanto la scienza possa misurare. Il suo trionfo sta nell'usare la sua mente analitica non per negare l'orrore, ma per comprenderne i meccanismi (es. i Pilastri) e sconfiggerlo.</p>
-                    </div>
-                </section>
-                
-                <section id="downtime" class="section">
-                    <h2>⏸️ Gestione del Tempo Morto (Downtime)</h2>
-                    <p>I 6 mesi tra le avventure non devono essere saltati con un semplice "passa il tempo". Chiedi a ogni giocatore di scegliere un'attività principale:</p>
-                    
-                    <div class="stat-block">
-                        <h4>1. RECUPERO E TERAPIA</h4>
-                        <p>Il personaggio passa l'inverno in un sanatorio, in un monastero o semplicemente a casa cercando di dimenticare. <strong>Effetto:</strong> Azzera completamente la Tenuta Mentale e rimuove una Conseguenza Minore.</p>
-                    </div>
-                    
-                    <div class="stat-block">
-                        <h4>2. ADDESTRAMENTO INTENSIVO</h4>
-                        <p>Il personaggio si prepara alla guerra, sapendo che il male tornerà. <strong>Effetto:</strong> Guadagna competenza in un'arma o un bonus +1 permanente a una caratteristica fisica.</p>
-                    </div>
-                    
-                    <div class="stat-block">
-                        <h4>3. RICERCA OCCULTA</h4>
-                        <p>Il personaggio studia i tomi rubati a Silver Hollow o indaga su voci simili. <strong>Effetto:</strong> Il giocatore inizia il Volume II con informazioni cruciali sul Guardiano (conosce la debolezza dei Pilastri prima di vederli).</p>
-                    </div>
-                </section>
-                
-                <section id="troubleshooting" class="section">
-                    <h2>🔧 Risoluzione dei Problemi al Tavolo</h2>
-                    
-                    <div class="warning-box">
-                        <h4>"I miei giocatori non sembrano spaventati"</h4>
-                        <p>L'horror è difficile. Se ridono o fanno battute, non fermarli: è un meccanismo di difesa. Per riportare la tensione, colpisci le loro risorse. Fai in modo che le munizioni finiscano. Descrivi odori disgustosi. Uccidi un NPC a cui tenevano in modo improvviso e brutale. La paura nasce dalla vulnerabilità.</p>
-                    </div>
-                    
-                    <div class="warning-box">
-                        <h4>"Si sono bloccati nell'indagine"</h4>
-                        <p>Non lasciare mai che il gioco si fermi per un tiro fallito. Usa la regola del <strong>"Fail Forward"</strong> (Fallire in avanti). Se falliscono il tiro per scassinare la scrivania dello sceriffo, ci riescono comunque, ma fanno così tanto rumore che l'intera città sa che sono lì. Hanno l'indizio, ma ora sono nei guai.</p>
-                    </div>
-                    
-                    <div class="warning-box">
-                        <h4>"Il Boss li sta massacrando troppo in fretta"</h4>
-                        <p>Se il TPK (Total Party Kill) sembra imminente e non vuoi che finisca così, offri un patto faustiano. Il Boss non li uccide, li <em>cattura</em> per trasformarli con calma. Questo sposta la scena dal combattimento alla fuga disperata dalle celle del tempio, dando loro un'ultima chance.</p>
-                    </div>
-                </section>
-            </main>
-        </div>
+  <div class="container">
+    
+    <!-- Header -->
+    <div class="hero" style="padding: 60px 40px; background: linear-gradient(135deg, var(--rust) 0%, var(--night-black) 50%, var(--ocean-blue) 100%);">
+      <h1 style="font-size: 4em; color: white;">🗺️ GUIDA ALLA CAMPAGNA</h1>
+      <p class="subtitle" style="color: var(--seafoam);">Come gestire efficacemente la campagna di Gunsmoke & Dread</p>
+      <p class="tagline" style="color: white;">
+        Da Silver Hollow fino all'Abisso cosmico • Progressione dei personaggi • Fili narrativi • Gioco a lungo termine
+      </p>
     </div>
+    
+    <!-- Sidebar + Content -->
+    <div class="sidebar-layout">
+      
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <h2>📋 L'indice della guida</h2>
+        <ul class="nav-links">
+          <li><a href="#overview">Panoramica della campagna</a></li>
+          <li><a href="#structure">La struttura dei due volumi</a></li>
+          <li><a href="#timeline">La timeline consigliata</a></li>
+          <li><a href="#progression">La progressione dei PG</a></li>
+          <li><a href="#narrative">I fili narrativi</a></li>
+          <li><a href="#downtime">Downtime e recupero</a></li>
+          <li><a href="#consequences">Le conseguenze a lungo termine</a></li>
+          <li><a href="#npcs">Gli personaggi non giocanti ricorrenti</a></li>
+          <li><a href="#themes">Temi e atmosfera</a></li>
+          <li><a href="#variants">Varianti e opzioni</a></li>
+          <li><a href="#troubleshooting">Risoluzione dei problemi</a></li>
+        </ul>
+      </aside>
+      
+      <!-- Main Content -->
+      <main class="content">
+        
+        <!-- OVERVIEW -->
+        <section id="overview" class="section">
+          <h2>📖 Panoramica generale della campagna</h2>
+          
+          <p class="large">
+            <strong>Gunsmoke & Dread</strong> è una campagna horror strutturata in 2 volumi distinti, 
+            ambientata nel suggestivo e pericoloso Bizzarro West americano degli anni 1885-1886. Questa 
+            campagna combina magistralmente l'azione del western classico con l'orrore cosmico di 
+            matrice lovecraftiana, esplorando temi profondi come l'insignificanza dell'umanità nell'universo, 
+            il body horror viscerale e la corruzione progressiva dell'anima.
+          </p>
+          
+          <div class="info-box">
+            <h3>🎯 Le informazioni essenziali sulla campagna</h3>
+            <ul style="font-size: 1.05em; line-height: 1.7;">
+              <li><strong>Durata totale prevista:</strong> Dalle 25 alle 35 ore di gameplay effettivo, 
+              distribuite su 10-14 sessioni da 3 ore ciascuna</li>
+              <li><strong>Livelli dei personaggi:</strong> I PG iniziano al livello 2 e terminano 
+              tra il livello 5 e il livello 6</li>
+              <li><strong>Sistema di gioco utilizzato:</strong> Daggerheart™ integrato con regole 
+              custom specifiche per il Bizzarro West</li>
+              <li><strong>Tono e atmosfera:</strong> Horror psicologico (70% del contenuto) + Azione 
+              western (30% del contenuto)</li>
+              <li><strong>Numero di giocatori:</strong> Da 3 a 5 giocatori (il numero ideale è 4)</li>
+              <li><strong>Età consigliata:</strong> 18 anni o più (il contenuto horror è particolarmente 
+              intenso e maturo)</li>
+            </ul>
+          </div>
+          
+          <h3>📚 I Due Volumi</h3>
+          
+          <div class="grid-auto-wide">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">VOLUME I</h3>
+              </div>
+              <div class="card-body">
+                <p><strong>Titolo:</strong> Shadows in the Desert</p>
+                <p><strong>Luogo:</strong> Silver Hollow, New Mexico</p>
+                <p><strong>Durata:</strong> 10-12 ore (4-5 sessioni)</p>
+                <p><strong>Livelli:</strong> 2 → 3</p>
+                <p><strong>Focus:</strong> Investigation, culti, primo contatto orrore cosmico</p>
+                <p><strong>Capo:</strong> Jeremiah Trasformato + Grande Antico nascosto</p>
+                <p><strong>Tone:</strong> Mystery horror → Cosmic revelation</p>
+              </div>
+            </div>
+            
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">VOLUME II</h3>
+              </div>
+              <div class="card-body">
+                <p><strong>Titolo:</strong> Where the Ocean Meets the Dust</p>
+                <p><strong>Luogo:</strong> Dry Eye, Arizona + Città Sommersa</p>
+                <p><strong>Durata:</strong> 15-18 ore (6-7 sessioni)</p>
+                <p><strong>Livelli:</strong> 3-5 → 5-6</p>
+                <p><strong>Focus:</strong> Exploration, body horror, confronto diretto</p>
+                <p><strong>Capo:</strong> Il Sacerdote + Il Guardiano</p>
+                <p><strong>Tone:</strong> Survival horror → Epic confrontation</p>
+              </div>
+            </div>
+          </div>
+          
+          <h3>🎭 Arc Narrativo Complessivo</h3>
+          
+          <div class="stat-block">
+            <h4>LA GRANDE STORIA</h4>
+            <p style="font-size: 1.05em; line-height: 1.8;">
+              Sotto il West americano giacciono <strong>rovine preumane</strong> - resti di civiltà 
+              aliena che prosperava quando Terra era coperta da oceani primordiali. Questi "Antichi" 
+              dormono in letargo profondo da milioni di anni, aspettando che oceani tornino.
+            </p>
+            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+              <strong>Volume I</strong> introduce concetto: culto locale ha scoperto passaggio verso 
+              una di queste rovine. Tentano risvegliare entità dormiente. PG fermano rituale ma 
+              realizzano verità cosmica - <em>gli Antichi esistono davvero</em>.
+            </p>
+            <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+              <strong>Volume II</strong> espande: seconda rovina, più grande, più antica. Questa volta 
+              entità è quasi sveglia. Trasforma umani in servitori ibridi. I personaggi giocanti devono scendere nelle 
+              profondità e affrontare direttamente uno degli Antichi - <strong>Il Guardiano</strong>.
+            </p>
+            <p style="margin-top: 15px; font-size: 1.1em; font-weight: bold; color: var(--blood-red);">
+              Tema centrale: L'umanità è <em>temporanea</em>. Eravamo qui solo perché oceani si sono 
+              ritirati. Quando torneranno... cosa saremo?
+            </p>
+          </div>
+        </section>
+        
+        <!-- STRUCTURE -->
+        <section id="structure" class="section">
+          <h2>🏗️ La struttura della campagna in due volumi</h2>
+          
+          <h3>📊 Come collegare efficacemente i due volumi</h3>
+          
+          <div class="info-box">
+            <h4>Opzione A: Campagna Continuativa (FORTEMENTE CONSIGLIATA)</h4>
+            <p style="font-size: 1.05em; line-height: 1.7;">
+              Gioca per intero il Volume I, poi dopo un intervallo temporale di <strong>6 mesi 
+              nel tempo di gioco</strong> (che corrispondono a 1-2 sessioni dedicate a downtime 
+              narrativo e side quests secondarie), inizia il Volume II utilizzando esattamente gli 
+              stessi personaggi giocanti (che ora saranno saliti al livello 3-5, saranno diventati 
+              veterani esperti e porteranno le cicatrici fisiche e mentali del Volume I).
+            </p>
+            <p style="margin-top: 10px;"><strong>Vantaggi di questo approccio:</strong></p>
+            <ul>
+              <li>La continuità narrativa è assolutamente massima e coinvolgente</li>
+              <li>Lo sviluppo dei personaggi diventa profondo e stratificato (trauma psicologico, 
+              crescita personale, cicatrici permanenti)</li>
+              <li>I giocatori diventano emotivamente investiti nelle loro storie personali</li>
+              <li>Il payoff emotivo alla fine è enorme (i giocatori riconoscono i pattern ricorrenti 
+              e sanno cosa aspettarsi questa volta)</li>
+            </ul>
+            <p style="margin-top: 10px;"><strong>Svantaggi da considerare:</strong></p>
+            <ul>
+              <li>Richiede un commitment temporale significativo di 25-30 ore totali (che può essere 
+              troppo lungo per alcuni gruppi di gioco)</li>
+              <li>Se un giocatore lascia il gruppo a metà campagna, diventa piuttosto difficile 
+              sostituirlo efficacemente</li>
+            </ul>
+          </div>
+          
+          <div class="info-box">
+            <h4>Opzione B: I Volumi Come Avventure Standalone Indipendenti</h4>
+            <p style="font-size: 1.05em; line-height: 1.7;">
+              Gioca il Volume I come un one-shot esteso e autoconclusivo. Poi, diversi mesi dopo 
+              nel tempo reale, inizia il Volume II utilizzando <strong>personaggi giocanti 
+              completamente nuovi</strong> oppure una "versione alternativa" degli stessi personaggi 
+              precedenti (in questo caso ignora completamente le cicatrici e i riferimenti narrativi 
+              del Volume I).
+            </p>
+            <p style="margin-top: 10px;"><strong>Vantaggi di questo approccio:</strong></p>
+            <ul>
+              <li>Offre molta più flessibilità nella programmazione delle sessioni</li>
+              <li>Ogni volume funziona come un'avventura self-contained e autoconclusiva</li>
+              <li>È molto più facile gestire efficacemente il turnover dei giocatori</li>
+            </ul>
+            <p style="margin-top: 10px;"><strong>Svantaggi da considerare:</strong></p>
+            <ul>
+              <li>Si perde completamente la continuità emotiva tra i volumi</li>
+              <li>L'impact narrativo complessivo risulta significativamente ridotto</li>
+              <li>Il GM deve ri-spiegare nuovamente il lore e il world building</li>
+            </ul>
+          </div>
+          
+          <div class="info-box">
+            <h4>Opzione C: Giocare Solo il Volume II</h4>
+            <p style="font-size: 1.05em; line-height: 1.7;">
+              Salta completamente il Volume I. Inizia direttamente con il Volume II utilizzando 
+              dei personaggi giocanti di livello 3-5 che sono già "veterani esperti", ma rimuovi 
+              accuratamente tutti i riferimenti narrativi specifici agli eventi di Silver Hollow.
+            </p>
+            <p style="margin-top: 10px;"><strong>Vantaggi di questo approccio:</strong></p>
+            <ul>
+              <li>Permette un salto diretto al contenuto più epico e spettacolare</li>
+              <li>Richiede un commitment temporale molto minore</li>
+              <li>I personaggi giocanti sono già più potenti fin dall'inizio</li>
+            </ul>
+            <p style="margin-top: 10px;"><strong>Svantaggi da considerare:</strong></p>
+            <ul>
+              <li>Si perde completamente il tensione crescente graduale dell'orrore cosmico</li>
+              <li>I personaggi non hanno alcun contesto pregresso sui Great Vecchio Ones</li>
+              <li>L'attachment emotivo dei giocatori risulta significativamente minore</li>
+            </ul>
+          </div>
+          
+          <div class="tip-box">
+            <h4>💡 La raccomandazione ufficiale del designer</h4>
+            <p style="font-size: 1.05em;">
+              Se è possibile per il vostro gruppo, giocate assolutamente l'<strong>Opzione A</strong> 
+              (la campagna continuativa completa). L'esperienza narrativa completa che va dal Volume I 
+              fino al Volume II è esattamente dove questa collezione brilla maggiormente e dà il meglio 
+              di sé. Vedere i personaggi giocanti evolversi gradualmente da "eroi ingenui e idealisti" 
+              fino a diventare "veterani psicologicamente spezzati ma ancora determinati" è narrativamente 
+              potentissimo e indimenticabile.
+            </p>
+          </div>
+        </section>
+        
+        <!-- TIMELINE -->
+        <section id="timeline" class="section">
+          <h2>📅 La timeline consigliata per la campagna</h2>
+          
+          <h3>🗓️ Campagna continuativa (Opzione A raccomandata)</h3>
+          
+          <div class="stat-block">
+            <h4>FASE 1: VOLUME I - SILVER HOLLOW</h4>
+            <p><strong>Tempo nel gioco:</strong> Settembre 1885 (durata narrativa di 2 settimane)</p>
+            <p><strong>Sessioni di gioco:</strong> 4-5 sessioni (per un totale di 10-12 ore di gioco)</p>
+            <p><strong>Livelli dei personaggi:</strong> Inizia al livello 2 → Finisce al livello 3</p>
+            
+            <p style="margin-top: 15px;"><strong>Gli eventi chiave di ogni sessione:</strong></p>
+            <ul>
+              <li>Sessione 1: L'arrivo dei personaggi a Silver Hollow, l'investigation iniziale del mistero</li>
+              <li>Sessione 2-3: L'esplorazione pericolosa della miniera, i primi incontri con i mostri</li>
+              <li>Sessione 4: La discesa nel tempio sotterraneo, il confronto finale con Jeremiah trasformato</li>
+              <li>Sessione 5 (opzionale): L'epilogo narrativo, la realizzazione cosmica devastante</li>
+            </ul>
+          </div>
+          
+          <div class="stat-block" style="margin-top: 30px;">
+            <h4>FASE 2: DOWNTIME - RECUPERO E CONTENUTI SECONDARI</h4>
+            <p><strong>Tempo nel gioco:</strong> Ottobre 1885 - Febbraio 1886 (6 mesi di tempo narrativo)</p>
+            <p><strong>Sessioni di gioco:</strong> 1-2 sessioni (opzionali, vedi le opzioni sotto)</p>
+            <p><strong>Livelli dei personaggi:</strong> Livello 3 → 3-4 (progressione lenta attraverso contenuti secondari)</p>
+            
+            <p style="margin-top: 15px;"><strong>Le opzioni disponibili per il downtime:</strong></p>
+            <ul>
+              <li><strong>Narrazione rapida e concisa:</strong> 10 minuti di recap veloce "6 mesi passano, 
+              cosa fate?" (approccio veloce, jump diretto al Volume II)</li>
+              <li><strong>1 Sessione intermission:</strong> Una side missione minore e autoconclusiva (banditi 
+              locali, animali strani nel deserto, mystery locale) per dare breathing room psicologico</li>
+              <li><strong>2 Sessioni filler narrative:</strong> Mini-arc personale dedicato per ciascun 
+              personaggio giocante (Jack cerca redemption personale, Sarah affronta dubbi sulla fede, 
+              Doc conduce esperimenti scientifici)</li>
+            </ul>
+            
+            <p style="margin-top: 15px;"><strong>Gli obiettivi narrativi del downtime:</strong></p>
+            <ul>
+              <li>Dare ai personaggi giocanti il tempo necessario per processare il trauma psicologico del Volume I</li>
+              <li>Recuperare completamente la Tenuta Mentale (reset automatico a 0 se passano 6+ mesi sicuri)</li>
+              <li>Fare upgrade dell'equipaggiamento (acquistare nuove armi, armature migliori, supplies essenziali)</li>
+              <li>Stabilire nuove connections narrative (nuovi personaggi non giocanti, nuove locations importanti)</li>
+              <li>Creare foreshadowing per il Volume II (rumors su Dry Eye, problemi geometrici inspiegabili)</li>
+            </ul>
+          </div>
+          
+          <div class="stat-block" style="margin-top: 30px;">
+            <h4>FASE 3: VOLUME II - DRY EYE</h4>
+            <p><strong>Tempo nel gioco:</strong> Marzo 1886 (durata narrativa di 3-4 settimane)</p>
+            <p><strong>Sessioni di gioco:</strong> 6-7 sessioni (per un totale di 15-18 ore di gioco)</p>
+            <p><strong>Livelli dei personaggi:</strong> Inizia al livello 3-5 → Finisce al livello 5-6</p>
+            
+            <p style="margin-top: 15px;"><strong>Gli eventi chiave di ogni sessione:</strong></p>
+            <ul>
+              <li>Sessione 1: L'arrivo a Dry Eye, l'investigation iniziale, il primo incontro con un ibrido</li>
+              <li>Sessione 2: La discesa pericolosa nel Pozzo, l'exploration dei tunnel oscuri</li>
+              <li>Sessione 3: Il combattimento intenso nel Nido Ibrido, l'ingresso nella città antica</li>
+              <li>Sessione 4: L'esplorazione della città sommersa aliena</li>
+              <li>Sessione 5: L'esplorazione del Tempio del Sacerdote, la decisione strategica cruciale</li>
+              <li>Sessione 6: Il scontro finale finale epico (contro Il Guardiano o un'alternativa)</li>
+              <li>Sessione 7 (opzionale): L'epilogo narrativo completo, le consequences long-term</li>
+            </ul>
+          </div>
+          
+          <div class="warning-box">
+            <h4>⚠️ Note importanti sul pacing</h4>
+            <p>
+              Queste sono <strong>stime approssimative</strong>. I gruppi di gioco variano enormemente 
+              nello stile:
+            </p>
+            <ul>
+              <li><strong>Gruppi focalizzati sul combattimento:</strong> -20% tempo necessario (meno interpretazione, più azione pura)</li>
+              <li><strong>Gruppi RP-heavy:</strong> +30% tempo necessario (conversazioni lunghe e dettagliate, 
+              exploration lenta e metodica)</li>
+              <li><strong>Gruppi completionisti:</strong> +40% tempo necessario (esplorano TUTTO metodicamente, 
+              massima investigation possibile)</li>
+            </ul>
+            <p style="margin-top: 10px;">
+              Monitora attentamente il pacing durante il gioco e adatta dinamicamente. Se una sessione sta 
+              diventando troppo lunga e faticosa, trova un colpo di scena narrativo naturale e continua la 
+              prossima volta.
+            </p>
+          </div>
+        </section>
+        
+        <!-- PROGRESSION -->
+        <section id="progression" class="section">
+          <h2>📈 La progressione dei personaggi giocanti</h2>
+          
+          <h3>🎯 I livelli e l'esperienza (XP)</h3>
+          
+          <div class="info-box">
+            <h4>Il sistema XP consigliato per questa campagna</h4>
+            <p style="font-size: 1.05em;">
+              Usa il <strong>milestone leveling</strong> invece di tracciare numericamente gli XP. I 
+              personaggi giocanti avanzano di livello automaticamente a punti narrativi chiave e 
+              significativi della storia:
+            </p>
+          </div>
+          
+          <table>
+            <thead>
+              <tr>
+                <th>Il milestone narrativo</th>
+                <th>Il livello raggiunto</th>
+                <th>Quando accade esattamente</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Inizio della campagna</td>
+                <td>2</td>
+                <td>All'inizio del Volume I</td>
+              </tr>
+              <tr>
+                <td>Sopravvivere alla miniera</td>
+                <td>2 → 3</td>
+                <td>Alla fine dell'Atto II del Volume I</td>
+              </tr>
+              <tr>
+                <td>Sconfiggere Jeremiah trasformato</td>
+                <td>3 (confermato)</td>
+                <td>Alla fine completa del Volume I</td>
+              </tr>
+              <tr>
+                <td>Training durante il downtime</td>
+                <td>3 → 4 (opzionale)</td>
+                <td>Durante i 6 mesi di downtime (se giochi side content aggiuntivo)</td>
+              </tr>
+              <tr>
+                <td>Entrare nella città sommersa</td>
+                <td>4 → 5</td>
+                <td>Alla fine dell'Atto II del Volume II</td>
+              </tr>
+              <tr>
+                <td>Sconfiggere Il Guardiano</td>
+                <td>5 → 6</td>
+                <td>Alla fine del Volume II (nell'epilogo vittorioso)</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <h3>💪 I potenziamenti disponibili tra i due volumi</h3>
+          
+          <div class="stat-block">
+            <h4>GLI UPGRADES DISPONIBILI POST-VOLUME I</h4>
+            <p>Durante il periodo di downtime, i personaggi giocanti possono ottenere diversi benefici:</p>
+            
+            <p style="margin-top: 15px;"><strong>Potenziamenti dell'equipaggiamento:</strong></p>
+            <ul>
+              <li><strong>Armi migliorate e personalizzate:</strong> Revolver custom modificato (+1 ai danni), 
+              fucile con mirino telescopico preciso (Vantaggio automatico sulla mira a lunga distanza)</li>
+              <li><strong>Armatura potenziata:</strong> Giubbotto kevlar nascosto sotto il duster (Armatura +1), 
+              abito pesante rinforzato con placche metalliche</li>
+              <li><strong>Supplies speciali:</strong> Munizioni argentate benedette (bonus contro i non-morti), 
+              acqua santa consacrata (3 fiasche), dinamite esplosiva (6 stick)</li>
+            </ul>
+            
+            <p style="margin-top: 15px;"><strong>Abilità narrative acquisite:</strong></p>
+            <ul>
+              <li><strong>Veterano dell'orrore cosmico:</strong> -1 segmento quando riempi la Tenuta Mentale 
+              (hai già visto di peggio, sei più resistente)</li>
+              <li><strong>Conoscenza del Mythos:</strong> Vantaggio automatico ai prova per identificare 
+              correttamente creatura aliene e simboli cosmici</li>
+              <li><strong>Network di contacts:</strong> Conosci personalmente altri "investigatori di strani 
+              casi" (puoi chiamare rinforzi opzionali in emergenza)</li>
+            </ul>
+            
+            <p style="margin-top: 15px;"><strong>Cicatrici permanenti acquisite:</strong></p>
+            <ul>
+              <li><strong>Tenuta Mentale ridotta permanentemente:</strong> Max Tenuta 8/10 invece del normale 
+              10/10 (trauma permanente subito nel Volume I)</li>
+              <li><strong>Incubi ricorrenti notturni:</strong> Svantaggio automatico al primo prova di Tenuta 
+              di ogni sessione (richiede 1 round per "shake it off" psicologicamente)</li>
+              <li><strong>Fobia specifica acquisita:</strong> prova di Istinto CD 12 obbligatorio per avvicinarsi 
+              volontariamente a [innesco specifico del Volume I]</li>
+            </ul>
+          </div>
+          
+          <div class="tip-box">
+            <h4>💡 Bilanciare il potere contro il trauma psicologico</h4>
+            <p>
+              I personaggi giocanti diventano progressivamente più <strong>potenti meccanicamente</strong> 
+              (livelli superiori, gear migliore) ma contemporaneamente anche più <strong>fragili mentalmente</strong> 
+              (Tenuta ridotta permanentemente, cicatrici psicologiche). Questo è un design intentional e voluto - 
+              rappresenta accuratamente il costo psicologico devastante di confrontare ripetutamente l'orrore 
+              cosmico incomprensibile.
+            </p>
+            <p style="margin-top: 10px;">
+              Meccanicamente, questo li rende significativamente più efficaci in combattimento fisico ma drammaticamente 
+              più vulnerabili agli horror effects psicologici. È il perfect balance strategico per il Volume II.
+            </p>
+          </div>
+        </section>
+        
+        <!-- NARRATIVE THREADS -->
+        <section id="narrative" class="section">
+          <h2>🧵 I narrative threads che collegano i due volumi</h2>
+          
+          <h3>🔗 I collegamenti narrativi diretti</h3>
+          
+          <div class="stat-block">
+            <h4>THREAD 1: GLI ANTICHI SONO REALI E OVUNQUE</h4>
+            <p><strong>Setup nel Volume I:</strong> I personaggi giocanti scoprono drammaticamente l'esistenza 
+            di un Great Vecchio One sepolto sotto Silver Hollow. Fermano il rituale cultista ma l'entità cosmica 
+            non è stata "uccisa" - solo scacciata temporaneamente o sigillata nuovamente.</p>
+            <p style="margin-top: 10px;"><strong>Payoff nel Volume II:</strong> Il Guardiano è esattamente 
+            lo <em>stesso tipo</em> di entità cosmica ma infinitamente più vecchio e più potente. I personaggi 
+            giocanti riconoscono immediatamente i pattern familiari - "È come Silver Hollow ma... molto, molto peggio."</p>
+            <p style="margin-top: 10px;"><strong>Impact narrativo:</strong> I personaggi giocanti capiscono 
+            profondamente che Silver Hollow non era un caso isolato. Ci sono MOLTI di questi esseri sepolti 
+            sotto terra. Ovunque nel mondo.</p>
+          </div>
+          
+          <div class="stat-block">
+            <h4>THREAD 2: LA TRASFORMAZIONE PROGRESSIVA E INEVITABILE</h4>
+            <p><strong>Setup nel Volume I:</strong> I cultisti mostrano i primi segni evidenti di "corruzione" 
+            cosmica - simboli geometrici sulla pelle, comportamento alterato e innaturale, occhi stranamente 
+            luminosi. Ma sono ancora fondamentalmente umani.</p>
+            <p style="margin-top: 10px;"><strong>Payoff nel Volume II:</strong> Gli ibridi rappresentano la 
+            trasformazione <em>completa e irreversibile</em>. I personaggi giocanti vedono con orrore cosa 
+            succede quando la corruzione progredisce fino alla fine - la perdita totale e permanente dell'umanità.</p>
+            <p style="margin-top: 10px;"><strong>Impact narrativo:</strong> Se i personaggi giocanti furono 
+            morsi o feriti nel Volume I, possono sviluppare paranoia crescente - "Sto diventando come loro?" 
+            (false alarm, ma crea tensione narrativa intensa)</p>
+          </div>
+          
+          <div class="stat-block">
+            <h4>THREAD 3: FEDE CONTRO ORRORE COSMICO</h4>
+            <p><strong>Setup nel Volume I:</strong> Father Jeremiah - un uomo profondamente di fede - cade 
+            tragicamente in follia e corruzione completa. Dio apparentemente non lo ha salvato dall'orrore.</p>
+            <p style="margin-top: 10px;"><strong>Payoff nel Volume II:</strong> Father Miguel - un altro 
+            prete tormentato - sta affrontando esattamente la stessa crisi di fede devastante. Sarah può 
+            aiutarlo dove ha tragicamente fallito con Jeremiah. Un redemption arc potente.</p>
+            <p style="margin-top: 10px;"><strong>Impact narrativo:</strong> Sarah (se presente nel party) 
+            ha una chance reale di "salvare" un prete questa volta. Character growth profondo e significativo.</p>
+          </div>
+          
+          <div class="stat-block">
+            <h4>THREAD 4: IL PREZZO TERRIBILE DELLA CONOSCENZA</h4>
+            <p><strong>Setup nel Volume I:</strong> I personaggi giocanti trovano tomi alieni e simboli 
+            incomprensibili. Studiarli attivamente dà knowledge preziosa ma costa drammaticamente Tenuta Mentale.</p>
+            <p style="margin-top: 10px;"><strong>Payoff nel Volume II:</strong> La knowledge acquisita nel 
+            Volume I è meccanicamente UTILE - riconoscono simboli alieni, capiscono pattern geometrici, 
+            conoscono debolezze specifiche. Ma il trauma psicologico ha un costo permanente.</p>
+            <p style="margin-top: 10px;"><strong>Impact narrativo:</strong> I personaggi giocanti devono 
+            decidere strategicamente: studiare il Tomo Luminoso nel Vol II per guadagnare advantage tattico 
+            cruciale? O proteggere disperatamente la propria sanità mentale residua?</p>
+          </div>
+          
+          <h3>🎭 Gli arcs personali dei personaggi pre-generati</h3>
+          
+          <div class="info-box">
+            <h4>Jack Malone - Redemption Through azione</h4>
+            <p><strong>Volume I:</strong> Haunted permanentemente dalla morte della bambina innocente. 
+            Riluttante eroe tormentato. Fa la cosa "giusta" perché deve, non perché crede genuinamente 
+            che faccia differenza nel mondo.</p>
+            <p style="margin-top: 10px;"><strong>Volume II:</strong> Tommy (il suo "fratello adottivo" 
+            emotivo) viene trasformato in ibrido. Deve fare una impossible choice devastante - uccidere 
+            misericordiosamente l'amico o lasciarlo vivere come mostro. La decision finale definisce se 
+            trova peace o sprofonda definitivamente in darkness.</p>
+            <p style="margin-top: 10px;"><strong>Resolution options disponibili:</strong></p>
+            <ul>
+              <li><strong>Uccide Tommy merciful:</strong> Doloroso ma necessario. Accetta che sometimes 
+              non puoi salvare tutti. Trova peace.</li>
+              <li><strong>Tenta disperatamente salvare Tommy:</strong> Fallisce tragicamente (è 
+              irreversibile). Learns acceptance difficile. Growth.</li>
+              <li><strong>Sacrificio eroico:</strong> Offre SE STESSO invece di Tommy. Ultimate redemption 
+              completa.</li>
+            </ul>
+          </div>
+          
+          <div class="info-box">
+            <h4>Sarah Blackwood - Crisis of Faith</h4>
+            <p><strong>Volume I:</strong> La sua fede profonda è testata brutalmente da Jeremiah. Vede un 
+            uomo di Dio cadere completamente. Dubbi terribili emergono - "Può Dio proteggere davvero da questo?"</p>
+            <p style="margin-top: 10px;"><strong>Volume II:</strong> Miguel rappresenta simbolicamente una 
+            second chance preziosa. Può "salvare" un prete questa volta. Ma deve confrontare la realizzazione 
+            devastante - i Great Vecchio Ones sono infinitamente più antichi del Dio cristiano. Cosa significa 
+            questo per la fede?</p>
+            <p style="margin-top: 10px;"><strong>Resolution options disponibili:</strong></p>
+            <ul>
+              <li><strong>Fede evolve:</strong> Accetta che Dio e i Great Vecchio Ones coesistono misteriosamente. 
+              La fede diventa personale e vissuta, non dogmatica.</li>
+              <li><strong>Fede shatters:</strong> Crolla completamente e irrevocabilmente. Diventa pragmatica 
+              e cinica come Jack. Loss.</li>
+              <li><strong>Fede strengthens paradossalmente:</strong> "Proprio perché un male così profondo 
+              esiste, Dio DEVE esistere per bilanciarlo cosmicamente." Ironclad conviction assoluta.</li>
+            </ul>
+          </div>
+          
+          <div class="info-box">
+            <h4>Doc Artemis Wells - Science vs Impossible</h4>
+            <p><strong>Volume I:</strong> Razionalista scientifico convinto. "Tutto ha una spiegazione 
+            scientifica razionale." Vede cose oggettivamente inspiegabili. Cognitive dissonance devastante.</p>
+            <p style="margin-top: 10px;"><strong>Volume II:</strong> Ossessionato pericolosamente con capire 
+            HOW funziona tutto. Il Tomo Luminoso offre knowledge impossibile - ma corrompe inesorabilmente. 
+            Must choose: mantenere razionalismo scientifico o accettare che alcune cose sfuggono completamente 
+            alla scienza umana.</p>
+            <p style="margin-top: 10px;"><strong>Resolution options disponibili:</strong></p>
+            <ul>
+              <li><strong>Accetta il mistero:</strong> "Non posso capire tutto. E va bene così." Humility 
+              profonda. Growth.</li>
+              <li><strong>Obsession pericolosa:</strong> DEVE capire assolutamente. Studia ossessivamente 
+              il Tomo. Diventa pericoloso (knowledge without wisdom).</li>
+              <li><strong>New framework:</strong> "È scienza - solo infinitamente più avanzata." Integra 
+              l'alieno nel worldview.</li>
+            </ul>
+          </div>
+        </section>
+        
+        <!-- DOWNTIME -->
+        <section id="downtime" class="section">
+          <h2>⏸️ Downtime e recupero tra i volumi</h2>
+          
+          <h3>🏠 Gestire strategicamente i 6 mesi tra i volumi</h3>
+          
+          <div class="tip-box">
+            <h4>💡 La filosofia del downtime</h4>
+            <p>
+              Il downtime serve a 3 scopi narrativi fondamentali:
+            </p>
+            <ol>
+              <li><strong>Breathing room narrativo:</strong> I giocatori (e i personaggi giocanti) hanno 
+              assolutamente bisogno di un break psicologico dall'intensità horror costante</li>
+              <li><strong>Character development profondo:</strong> Tempo necessario per processare il trauma, 
+              crescere emotivamente, cambiare profondamente</li>
+              <li><strong>Setup per il Volume II:</strong> Introduce strategicamente rumors, foreshadowing 
+              sottile, new connections narrative</li>
+            </ol>
+          </div>
+          
+          <h3>📋 Le downtime activities disponibili (Scegli 2-4)</h3>
+          
+          <div class="stat-block">
+            <h4>1. RECOVERY E THERAPY PSICOLOGICA</h4>
+            <p><strong>Tempo richiesto:</strong> 1-3 mesi narrativi</p>
+            <p><strong>Effetto meccanico:</strong> Svuota completamente tutta la Tenuta Mentale. Rimuovi 1 
+            Conseguenza minore (non permanente).</p>
+            <p><strong>Roleplay suggerito:</strong> Il personaggio giocante passa tempo in una città sicura. 
+            Terapia psicologica (parlare con prete, medico, amico fidato). Routine normale quotidiana. 
+            Niente avventure pericolose.</p>
+            <p><strong>Narrative description:</strong> Descrivi come il personaggio giocante affronta il trauma 
+            gradualmente. Gli incubi notturni diminuiscono progressivamente. Inizia a sentirsi "normale" di nuovo.</p>
+          </div>
+          
+          <div class="stat-block">
+            <h4>2. TRAINING E IMPROVEMENT DELLE ABILITÀ</h4>
+            <p><strong>Tempo richiesto:</strong> 2-4 mesi narrativi</p>
+            <p><strong>Effetto meccanico:</strong> Guadagna 1 proficiency completamente nuova (es: Explosives, 
+            Advanced Medicine, Occult Lore) OPPURE migliora un'abilità esistente (+1 bonus permanente).</p>
+            <p><strong>Roleplay suggerito:</strong> Montage scene cinematica - Jack pratica ossessivamente il 
+            quick-draw, Sarah studia intensamente testi antichi, Doc esperimenta metodicamente con samples.</p>
+            <p><strong>Narrative description:</strong> Il personaggio giocante si prepara consapevolmente e 
+            deliberatamente per "la prossima volta". Sa profondamente che l'orrore tornerà.</p>
+          </div>
+          
+          <div class="stat-block">
+            <h4>3. INVESTIGATION E RUMORS SU DRY EYE</h4>
+            <p><strong>Tempo richiesto:</strong> 1-2 mesi narrativi</p>
+            <p><strong>Effetto meccanico:</strong> I personaggi giocanti scoprono rumors dettagliati su Dry Eye. 
+            Hanno un head-start significativo sull'investigation del Volume II (conoscono personaggi non giocanti, possiedono mappe, 
+            hanno informazioni preziose).</p>
+            <p><strong>Roleplay suggerito:</strong> Il personaggio giocante fa research metodica - legge 
+            giornali vecchi, interroga ferrovieri, studia mappe geologiche dettagliate. Raccolta intel sistematico.</p>
+            <p><strong>Narrative description:</strong> Introduce proattivamente Brandt, Miguel, geometri scomparsi 
+            PRIMA che il telegramma disperato arrivi. I personaggi giocanti sono proattivi e preparati.</p>
+          </div>
+          
+          <div class="stat-block">
+            <h4>4. SIDE missione MINORE AUTOCONCLUSIVA</h4>
+            <p><strong>Tempo richiesto:</strong> 1 sessione di gameplay</p>
+            <p><strong>Effetto meccanico:</strong> XP (500-1000 punti), bottino minore ma utile, introduce un 
+            PNG utile per il futuro.</p>
+            <p><strong>Esempi concreti:</strong></p>
+            <ul>
+              <li><strong>Banditi classici:</strong> Classic western shootout tradizionale. Niente orrore 
+              cosmico - just gunfight puro.</li>
+              <li><strong>Missing cattle mystery:</strong> Investigation → scoperta di creatura naturale 
+              (coyote/bear), false alarm sul supernatural.</li>
+              <li><strong>Taverna brawl sociale:</strong> Social incontro complicato, Jack deve usare 
+              diplomacy invece di violence.</li>
+            </ul>
+            <p><strong>Narrative description:</strong> Palate cleanser psicologico. Reminder importante che 
+            non tutto nel mondo è cosmic horror terrificante.</p>
+          </div>
+          
+          <div class="warning-box">
+            <h4>⚠️ Non fare il downtime troppo lungo</h4>
+            <p>
+              Massimo <strong>2 sessioni dedicate</strong> al downtime. Se fai più sessioni, i giocatori 
+              perdono momentum narrativo e dimenticano completamente gli eventi cruciali del Volume I. 
+              Quick montage + 1 side missione = sweet spot perfetto.
+            </p>
+          </div>
+        </section>
+        
+        <!-- CONSEQUENCES -->
+        <section id="consequences" class="section">
+          <h2>⚖️ Le conseguenze long-term delle scelte</h2>
+          
+          <h3>📊 Tracking delle scelte cross-volume</h3>
+          
+          <p class="large">
+            Le decisioni prese nel Volume I hanno ripercussioni concrete e tangibili nel Volume II. Tieni 
+            traccia meticolosa di queste choices importanti:
+          </p>
+          
+          <table>
+            <thead>
+              <tr>
+                <th>La scelta fatta nel Volume I</th>
+                <th>La conseguenza concreta nel Volume II</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Uccisero brutalmente tutti i cultisti</strong></td>
+                <td>Reputation locale come "spietati". Gli personaggi non giocanti del Volume II sono inizialmente diffidenti 
+                e sospettosi.</td>
+              </tr>
+              <tr>
+                <td><strong>Salvarono i cultisti redimibili</strong></td>
+                <td>Reputation locale come "compassionevoli". Father Miguel si fida immediatamente e 
+                completamente.</td>
+              </tr>
+              <tr>
+                <td><strong>Jeremiah fu ucciso brutalmente</strong></td>
+                <td>Sarah ha guilt permanente. -1 al primo prova di Presenza del Volume II (trauma 
+                irrisolto).</td>
+              </tr>
+              <tr>
+                <td><strong>Jeremiah fu "salvato" (impossibile)</strong></td>
+                <td>Se miracoloso success incredibile, Sarah ha +2 permanente alla Presenza (fede 
+                strengthened drammaticamente).</td>
+              </tr>
+              <tr>
+                <td><strong>Doc autopsiò metodicamente le creatura</strong></td>
+                <td>Vantaggio automatico ai Conoscenza checks vs ibridi (recognizes anatomy aliena).</td>
+              </tr>
+              <tr>
+                <td><strong>I PG distrussero completamente i tomi</strong></td>
+                <td>Nessuna knowledge bonus. Svantaggio nell'identificare correttamente simboli alieni 
+                complessi.</td>
+              </tr>
+              <tr>
+                <td><strong>I PG studiarono ossessivamente i tomi</strong></td>
+                <td>Vantaggio significativo vs Mythos. Ma Tenuta permanent -2 (corruption psicologica 
+                irreversibile).</td>
+              </tr>
+              <tr>
+                <td><strong>Jack uccise personalmente il capo</strong></td>
+                <td>+1d6 danni extra vs capo del Volume II (vendetta fuel). Ma +1 Tenuta ogni capo kill 
+                (bloodlust growing pericolosamente).</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="tip-box">
+            <h4>💡 Come implementare efficacemente</h4>
+            <p>
+              All'inizio del Volume II, fai un quick recap collaborativo con i giocatori: "Ricordiamo insieme 
+              cosa è successo a Silver Hollow. [giocatore], tu hai fatto [scelta specifica]. Nel Volume II, 
+              questo significa meccanicamente [conseguenza]."
+            </p>
+            <p style="margin-top: 10px;">
+              I giocatori adorano vedere che le scelte matter concretamente. Anche se la consequence è minore 
+              (es: +1 bonus situazionale), il fatto che il GM ricorda attentamente e integra narrativamente 
+              è huge per l'immersione totale.
+            </p>
+          </div>
+        </section>
+        
+
+        <!-- REGOLA DEI TRE INDIZI -->
+        <section id="tre-indizi" class="section" style="border: 3px solid var(--gold); padding: 25px;">
+          <h2 style="color: var(--gold);">🔍 LA REGOLA DEI TRE INDIZI</h2>
+          
+          <div class="warning-box">
+            <h3>📜 PRINCIPIO FONDAMENTALE</h3>
+            <p style="font-size: 1.1em;">
+              Per ogni informazione <strong>CRUCIALE</strong> alla progressione, fornisci sempre 
+              <strong>ALMENO 3 modi diversi</strong> per scoprirla.
+            </p>
+          </div>
+          
+          <div class="info-box" style="margin-top: 20px;">
+            <h3>🎯 I TRE PERCORSI TIPICI</h3>
+            
+            <h4>1️⃣ FISICO/MATERIALE</h4>
+            <ul>
+              <li>Tracce, impronte, mappe, diari</li>
+              <li>Check: Sopravvivenza, Percezione</li>
+            </ul>
+            
+            <h4>2️⃣ SOCIALE/UMANO</h4>
+            <ul>
+              <li>Interrogatori, pettegolezzi, confessioni</li>
+              <li>Check: Presenza, Persuasione</li>
+            </ul>
+            
+            <h4>3️⃣ MISTICO/INTUITIVO</h4>
+            <ul>
+              <li>Visioni, incubi, intuizioni</li>
+              <li>Check: Istinto, Conoscenza</li>
+            </ul>
+          </div>
+          
+          <div class="stat-block" style="margin-top: 20px;">
+            <h3>📋 ESEMPIO - Silver Hollow</h3>
+            <p><strong>Info cruciale:</strong> "Tempio sotto la miniera"</p>
+            <ul>
+              <li><strong>Via Fisica:</strong> Seguire tracce (Sopravvivenza 13)</li>
+              <li><strong>Via Sociale:</strong> Barista rivela tunnel segreti</li>
+              <li><strong>Via Mistica:</strong> Incubo mostra serpenti sottoterra</li>
+            </ul>
+          </div>
+          
+          <div class="tip-box" style="margin-top: 20px;">
+            <h4>💡 APPLICAZIONE</h4>
+            <p><strong>Quando progetti:</strong></p>
+            <ol>
+              <li>Identifica 3-5 info CRUCIALI</li>
+              <li>Per ciascuna, crea 3 modi di scoprirla</li>
+              <li>Almeno UNO deve essere quasi impossibile da mancare</li>
+            </ol>
+          </div>
+        </section>
+        <!-- TROUBLESHOOTING -->
+        <section id="troubleshooting" class="section">
+          <h2>🔧 Troubleshooting dei problemi comuni</h2>
+          
+          <h3>❓ "I giocatori sono bloccati nell'investigation"</h3>
+          <div class="tip-box">
+            <p><strong>Sintomo:</strong> I personaggi giocanti girano in tondo indefinitamente, non trovano 
+            clue cruciali, sono visibilmente frustrati.</p>
+            <p style="margin-top: 10px;"><strong>Solution efficace:</strong></p>
+            <ul>
+              <li>Un PNG si avvicina proattivamente a loro con informazioni ("Ho visto qualcosa di strano...")</li>
+              <li>Abbassa retroattivamente la CD per Percezione/Conoscenza checks</li>
+              <li>Un event improvviso forza l'azione (un ibrido attacca improvvisamente, forcing i PG verso 
+              il plot)</li>
+              <li>Permetti uno Speranza spend per "flashback clue" narrativo ("Actually, ricordo che...")</li>
+            </ul>
+          </div>
+          
+          <h3>❓ "L'horror non fa paura ai giocatori"</h3>
+          <div class="tip-box">
+            <p><strong>Sintomo:</strong> I giocatori ridono apertamente, scherzano continuamente, non sentono 
+            alcun dread atmosferico.</p>
+            <p style="margin-top: 10px;"><strong>Solution efficace:</strong></p>
+            <ul>
+              <li>Descrizioni molto più viscerali e sensoriali (odori nauseabondi, suoni inquietanti, texture 
+              disgustose)</li>
+              <li>Slow pacing deliberately drammatico (pause significative dopo revelations importanti)</li>
+              <li>Music/sound effects ambient appropriati</li>
+              <li>Dim lights se stai giocando in persona</li>
+              <li>Consequence più severe meccanicamente (i PG actually dies, non solo down)</li>
+              <li>Ricorda: some groups prefer genuinamente azione over horror - e va bene così!</li>
+            </ul>
+          </div>
+          
+          <h3>❓ "Party wipe imminente e inevitabile"</h3>
+          <div class="tip-box">
+            <p><strong>Sintomo:</strong> Tutti i I personaggi giocanti sono sotto 20% HP, il capo è ancora 50%+ salute, no escape 
+            possibile.</p>
+            <p style="margin-top: 10px;"><strong>Solution efficace:</strong></p>
+            <ul>
+              <li>Il capo offre narrativamente "surrender" (i I personaggi giocanti sono catturati, not killed - escape successivo)</li>
+              <li>Un PNG arrives dramatically con cavalry (Brandt + ferrovieri con dynamite)</li>
+              <li>Environmental deus ex machina (crollo improvviso separa le parties)</li>
+              <li>Retcon difficulty on-fly discretamente (il capo aveva meno HP than stated inizialmente)</li>
+              <li><strong>Opzione hardcore:</strong> Let TPK happen tragicamente. Epilogo E oscuro. Start new 
+              campaign con nuovi heroes che devono fermare i primi PG (now ibridi capo corrotti).</li>
+            </ul>
+          </div>
+          
+          <h3>❓ "Un giocatore lascia mid-campaign"</h3>
+          <div class="tip-box">
+            <p><strong>Sintomo:</strong> Un giocatore non può continuare per motivi personali, il PG deve 
+            exit narrativamente.</p>
+            <p style="margin-top: 10px;"><strong>Solution efficace:</strong></p>
+            <ul>
+              <li><strong>Opzione 1:</strong> Il PG diventa PNG controllato dal GM. Plays him in background, 
+              helps occasionally.</li>
+              <li><strong>Opzione 2:</strong> Il PG "resta indietro" per recupero medico. Narratively 
+              explained convincentemente, removed from active party.</li>
+              <li><strong>Opzione 3:</strong> Dramatic exit eroico. Il PG muore eroicamente salvando il party. 
+              Impactful emotivamente, memorial toccante.</li>
+              <li><strong>Nuovo giocatore entry:</strong> Introduce come "reinforcement" mandato urgentemente da 
+              Brandt. Veterano esperto di altro caso strano. Joins mid-Volume II naturalmente.</li>
+            </ul>
+          </div>
+          
+          <h3>❓ "Il Volume II è troppo difficile"</h3>
+          <div class="tip-box">
+            <p><strong>Sintomo:</strong> Every combattimento è uno struggle estremo, i I personaggi giocanti sono sempre low resources 
+            criticamente.</p>
+            <p style="margin-top: 10px;"><strong>Solution efficace:</strong></p>
+            <ul>
+              <li>Riduce drasticamente HP dei nemici del 20-30%</li>
+              <li>More healing opportunities strategiche (trovano medical supplies, PNG healer disponibile)</li>
+              <li>Extra lanterne/ammo disponibili (rimuovi completamente resource scarcity opprimente)</li>
+              <li>Tenuta max aumenta permanentemente +2 (i I personaggi giocanti sono più resilient mentalmente)</li>
+              <li>Hint le debolezze del capo più ovviamente e chiaramente</li>
+              <li>Allow Speranza regenerate mid-session eccezionalmente (normalmente solo long rest)</li>
+            </ul>
+          </div>
+        </section>
+        
+        <!-- CONCLUSION -->
+        <div style="background: linear-gradient(135deg, var(--rust) 0%, var(--ocean-blue) 100%); 
+          color: white; padding: 60px 40px; margin-top: 60px; text-align: center;">
+          <h2 style="color: white; font-size: 2.5em;">🎭 Buona fortuna, Game Master!</h2>
+          <p style="font-size: 1.3em; max-width: 800px; margin: 30px auto; line-height: 1.8;">
+            Hai ora tutti gli strumenti necessari per condurre una campaign epica e indimenticabile di 
+            <strong>Bizzarro West Horror</strong>. Da Silver Hollow alle profondità abissali dell'oceano 
+            primordiale, guiderai i tuoi giocatori attraverso orrori cosmici incomprensibili, scelte 
+            morali impossibili, e momenti di heroism disperato e magnifico.
+          </p>
+          <p style="font-size: 1.2em; margin-top: 30px;">
+            Ricorda sempre: l'orrore più potente e persistente non è quello che <em>mostri esplicitamente</em>, 
+            ma quello che <strong>suggerisci sottilmente</strong>. L'orrore più memorabile e devastante non 
+            è quello che <em>uccide fisicamente</em>, ma quello che <strong>cambia irreversibilmente</strong>.
+          </p>
+          <p style="font-size: 1.4em; margin-top: 40px; font-family: 'Rye', cursive;">
+            🔫 May Your Aim Be True 🌊<br>
+            🧠 May Your Sanity Hold 👁️
+          </p>
+        </div>
+        
+      </main>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+      <p style="font-size: 0.9em;">
+        <strong>Campaign Guide - Gunsmoke & Dread Collection</strong><br>
+        Compatible with Daggerheart™ SRD 1.0
+      </p>
+      <p style="margin-top: 20px; font-size: 0.85em; color: var(--desert-sand);">
+        <a href="../INDEX.html" style="color: var(--alien-green);">← Torna all'Index</a> | 
+        <a href="../core/Quick-Reference.html" style="color: var(--alien-green);">Quick Reference →</a>
+      </p>
+    </div>
+    
+  </div>
 </body>
 </html>
