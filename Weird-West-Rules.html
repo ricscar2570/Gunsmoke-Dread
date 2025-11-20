@@ -1,1317 +1,1122 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Le Regole del Bizzarro West - Gunsmoke & Dread</title>
-  
-  <!-- External Stylesheets -->
-  <link rel="stylesheet" href="assets/css/main-styles.css">
-  <link rel="stylesheet" href="assets/css/volume-themes.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Regole del Weird West - Gunsmoke & Dread</title>
+    
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main-styles.css">
+    <link rel="stylesheet" href="assets/css/volume-themes.css">
 </head>
 <body class="theme-desert">
-  <div class="container">
-    
-    <!-- Header -->
-    <div class="hero" style="padding: 80px 40px; background: linear-gradient(135deg, var(--rust) 0%, var(--blood-red) 50%, var(--night-black) 100%);">
-      <h1 style="font-size: 4.5em; color: white; text-shadow: 3px 3px 6px rgba(0,0,0,0.7);">
-        🔫 LE REGOLE DEL WEIRD WEST
-      </h1>
-      <p class="subtitle" style="color: var(--desert-sand); font-size: 1.5em;">
-        Il regolamento completo per Gunsmoke & Dread
-      </p>
-      <p class="tagline" style="color: white; font-size: 1.2em;">
-        Il sistema Daggerheart™ integrato con le modifiche specifiche per il Bizzarro West e l'horror cosmico
-      </p>
-    </div>
-    
-    <!-- Sidebar + Content Layout -->
-    <div class="sidebar-layout">
-      
-      <!-- Sidebar Navigation -->
-      <aside class="sidebar">
-        <h2>📋 L'indice completo delle regole</h2>
-        <ul class="nav-links">
-          <li><a href="#intro">L'introduzione al sistema</a></li>
-          <li><a href="#base">Il sistema base di Daggerheart</a></li>
-          <li><a href="#tenuta">Il sistema della Tenuta Mentale</a></li>
-          <li><a href="#checks">Le difficoltà dei prova (CD)</a></li>
-          <li><a href="#combattimento">Le regole del combattimento</a></li>
-          <li><a href="#environment">I pericoli ambientali</a></li>
-          <li><a href="#equipment">L'equipaggiamento del Bizzarro West</a></li>
-          <li><a href="#healing">La guarigione e il recupero</a></li>
-          <li><a href="#conditions">Le condizioni e gli status</a></li>
-          <li><a href="#gm-tools">Gli strumenti per il GM</a></li>
-        </ul>
-      </aside>
-      
-      <!-- Main Content -->
-      <main class="content">
+    <div class="container">
         
-        <!-- INTRODUZIONE -->
-        <section id="intro" class="section">
-          <h2>📖 Un'introduzione completa al sistema di gioco</h2>
-          
-          <p class="large">
-            Questa sezione contiene tutte le regole che ti saranno necessarie per giocare correttamente 
-            e in modo soddisfacente a <strong>Gunsmoke & Dread</strong>. Il sistema di base che utilizziamo 
-            è quello di <strong>Daggerheart™ SRD 1.0</strong>, a cui abbiamo aggiunto delle modifiche 
-            specifiche e calibrate, pensate appositamente per rendere giustizia all'ambientazione unica 
-            del Bizzarro West e per gestire efficacemente le meccaniche dell'horror cosmico.
-          </p>
-          
-          <div class="info-box">
-            <h3>🎯 Che cosa ti serve concretamente per giocare</h3>
-            <ul style="font-size: 1.05em; line-height: 1.7;">
-              <li><strong>Il sistema di base di riferimento:</strong> Ti serviranno le regole base complete 
-              di Daggerheart™ nella versione SRD 1.0 oppure in qualsiasi versione superiore disponibile</li>
-              <li><strong>I dadi poliedrici necessari:</strong> Avrai bisogno di un set completo di dadi 
-              poliedrici, che deve includere almeno un dado d4, un dado d6, un dado d8, un dado d10, 
-              due dadi d12 e un dado d20</li>
-              <li><strong>I partecipanti richiesti:</strong> Il gioco funziona al meglio con un gruppo 
-              composto da 3 a 5 giocatori più 1 Game Master che guida la narrazione (il numero ideale 
-              che raccomandiamo è di 4 personaggi giocanti)</li>
-              <li><strong>L'età consigliata per i partecipanti:</strong> 18 anni o più, dal momento 
-              che il contenuto horror presentato nelle avventure è decisamente maturo e potenzialmente 
-              disturbante</li>
-              <li><strong>La durata tipica delle sessioni:</strong> Ogni sessione di gioco dura 
-              tipicamente dalle 3 alle 4 ore, anche se la durata può variare a seconda del ritmo 
-              del gruppo</li>
-              <li><strong>Le schede dei personaggi necessarie:</strong> Tutte le schede dei personaggi 
-              pregenerati sono fornite complete insieme a questa collezione e sono pronte per essere 
-              utilizzate immediatamente</li>
-            </ul>
-          </div>
-          
-          <div class="warning-box">
-            <h3>⚠️ I safety tools fortemente raccomandati</h3>
-            <p style="font-size: 1.05em; line-height: 1.7;">
-              Questa campagna contiene dei temi di horror particolarmente intensi e potenzialmente 
-              disturbanti, che includono il body horror viscale, la violenza grafica esplicita, 
-              l'orrore psicologico profondo e il nichilismo cosmico devastante. È <strong>fortemente 
-              raccomandato</strong> che tu discuta apertamente e onestamente dei safety tools durante 
-              la Session 0 preliminare con tutti i partecipanti:
+        <!-- Header -->
+        <div class="hero" style="padding: 80px 40px; background: linear-gradient(135deg, var(--rust) 0%, var(--blood-red) 50%, var(--night-black) 100%);">
+            <h1 style="font-size: 4.5em; color: white; text-shadow: 3px 3px 6px rgba(0,0,0,0.7);">
+                🔫 LE REGOLE DEL WEIRD WEST
+            </h1>
+            <p class="subtitle" style="color: var(--desert-sand); font-size: 1.5em;">
+                Il regolamento completo per Gunsmoke & Dread
             </p>
-            <ul>
-              <li><strong>La X-Card (strumento fondamentale):</strong> Chiunque si trovi al tavolo 
-              di gioco può dire "X" in qualsiasi momento per saltare immediatamente del contenuto 
-              che trova problematico, disturbante o inappropriato, senza dover fornire spiegazioni</li>
-              <li><strong>Lines & Veils (linee e veli):</strong> Distingui chiaramente i temi che 
-              sono completamente vietati e off-limits (hard no) rispetto ai temi che possono esistere 
-              nella narrazione ma devono rimanere fuori scena ("fade to black")</li>
-              <li><strong>Le pause regolari per il break:</strong> Fai un prova-in emotivo esplicito 
-              con tutto il gruppo ogni 90 minuti circa per assicurarti che tutti stiano bene e si 
-              stiano divertendo</li>
-              <li><strong>La Open Door Policy (politica della porta aperta):</strong> È sempre 
-              assolutamente OK e accettabile per chiunque lasciare il tavolo di gioco se ne sente 
-              la necessità, senza giudizi o pressioni</li>
-            </ul>
-          </div>
-        </section>
+            <p class="tagline" style="color: white; font-size: 1.2em;">
+                Il sistema Daggerheart™ integrato con le modifiche specifiche per il Weird West e l'horror cosmico
+            </p>
+        </div>
         
-        <!-- SISTEMA BASE DAGGERHEART -->
-        <section id="base" class="section">
-          <h2>🎲 Il sistema base di Daggerheart</h2>
-          
-          <h3>Le meccaniche fondamentali del sistema</h3>
-          
-          <p class="large">
-            Daggerheart utilizza un sistema di gioco che si basa sui <strong>dual-dadi da 12 facce (d12)</strong> 
-            con una meccanica particolare ed innovativa di Hope (Speranza) e Fear (Paura). Per tutte le 
-            azioni importanti e significative, tirerai contemporaneamente 2 dadi da 12 facce (uno dei 
-            quali rappresenta la Hope, l'altro rappresenta la Fear) e userai sempre il risultato più alto 
-            tra i due, ma quale specifico dado mostra il risultato più alto determinerà se il Game Master 
-            ottiene un prezioso token di Fear oppure no, influenzando così il corso della narrazione.
-          </p>
-          
-          <div class="stat-block">
-            <h4>🎲 Il tiro azione di base</h4>
-            <p><strong>Quando si effettua questo tiro:</strong> Ogni volta che tenti di fare qualcosa 
-            il cui risultato è incerto e contemporaneamente significativo per la storia</p>
-            <p style="margin-top: 10px;"><strong>Come si effettua correttamente:</strong></p>
-            <ol>
-              <li>Tira contemporaneamente 2 dadi da 12 facce (uno rappresenta la Hope [usa preferibilmente 
-              un colore chiaro], l'altro rappresenta la Fear [usa preferibilmente un colore scuro])</li>
-              <li>Prendi e utilizza sempre il risultato più alto tra i due dadi tirati</li>
-              <li>Aggiungi al risultato il modificatore rilevante e appropriato del tuo personaggio</li>
-              <li>Confronta il totale ottenuto con la Classe di Difficoltà (CD) che è stata stabilita 
-              in precedenza dal Game Master</li>
-            </ol>
-            <p style="margin-top: 10px;"><strong>I possibili risultati e le loro conseguenze:</strong></p>
-            <ul>
-              <li><strong>Successo Standard (risultato ≥ CD):</strong> Ottieni esattamente quello che 
-              volevi ottenere, senza complicazioni aggiuntive</li>
-              <li><strong>Successo con Hope:</strong> Ottieni il successo desiderato E in più il Game 
-              Master riceve un token di Hope che può utilizzare strategicamente a favore dei giocatori</li>
-              <li><strong>Successo con Fear:</strong> Ottieni il successo che volevi MA il Game Master 
-              riceve un token di Fear che può utilizzare contro i giocatori per complicare le cose</li>
-              <li><strong>Fallimento (risultato < CD):</strong> Non ottieni quello che volevi e ci 
-              saranno delle conseguenze negative significative per il tuo personaggio</li>
-            </ul>
-          </div>
-          
-          <h3>Gli Attributi e i Loro Modificatori</h3>
-          
-          <div class="grid-auto">
-            <div class="stat-box">
-              <h4>💪 LA FORZA</h4>
-              <p>Rappresenta la tua potenza fisica bruta, l'abilità nel combattimento corpo a corpo 
-              e la capacità di sollevare o spingere oggetti pesanti</p>
-            </div>
+        <!-- Sidebar + Content Layout -->
+        <div class="sidebar-layout">
             
-            <div class="stat-box">
-              <h4>🎯 L'AGILITÀ</h4>
-              <p>Rappresenta la tua destrezza manuale, i tuoi riflessi rapidi, la tua capacità di 
-              movimento agile e l'abilità nel combattimento a distanza</p>
-            </div>
-            
-            <div class="stat-box">
-              <h4>🧠 LA CONOSCENZA</h4>
-              <p>Rappresenta la tua intelligenza generale, la tua memoria, la capacità di fare 
-              ricerche approfondite, le tue competenze mediche e investigative</p>
-            </div>
-            
-            <div class="stat-box">
-              <h4>🗣️ LA PRESENZA</h4>
-              <p>Rappresenta il tuo carisma personale, le tue doti di leadership, la capacità di 
-              persuadere gli altri e di intimidire quando necessario</p>
-            </div>
-            
-            <div class="stat-box">
-              <h4>👁️ L'ISTINTO</h4>
-              <p>Rappresenta la tua percezione dell'ambiente circostante, la tua empatia verso 
-              gli altri, il tuo intuito naturale e la tua generale awareness</p>
-            </div>
-            
-            <div class="stat-box">
-              <h4>🛡️ LA COSTITUZIONE</h4>
-              <p>Rappresenta la tua resistenza fisica, la tua tenacia mentale e la capacità di 
-              resistere ai veleni, alle malattie e alla fatica prolungata</p>
-            </div>
-          </div>
-          
-          <div class="tip-box">
-            <h3>💡 Un Consiglio per i Nuovi Giocatori</h3>
-            <p style="font-size: 1.05em; line-height: 1.8;">
-              Se questa è la tua prima volta con il sistema Daggerheart, non preoccuparti affatto! 
-              Il sistema è stato progettato per essere intuitivo e narrativo. La cosa più importante 
-              da ricordare è questa: <strong>descrivi sempre quello che il tuo personaggio sta 
-              tentando di fare</strong>, e poi il Game Master ti dirà quale dado tirare e quale 
-              Classe di Difficoltà dovrai superare.
-            </p>
-          </div>
-        </section>
-        
-        <!-- SISTEMA TENUTA MENTALE -->
-
-<!-- ABILITÀ AL LIMITE -->
-<div class="warning-box" style="margin-top: 30px; border-color: var(--blood-red);">
-  <h3>⚡ ABILITÀ AL LIMITE - Costo della Potenza (REGOLA OPZIONALE)</h3>
-  <p style="font-size: 1.05em;">
-    Alcune abilità vanno OLTRE i limiti umani. Quando le usi, paghi un prezzo.
-  </p>
-  
-  <p style="margin-top: 15px;"><strong>Quando attivi un'abilità che:</strong></p>
-  <ul>
-    <li>Sfida le leggi della fisica</li>
-    <li>Rivela conoscenze impossibili</li>
-    <li>Canalizza poteri soprannaturali</li>
-  </ul>
-  
-  <p style="margin-top: 15px;"><strong>Puoi scegliere di pagare:</strong></p>
-  <ul>
-    <li><strong>OPZIONE A:</strong> 1 Speranza (uso normale)</li>
-    <li><strong>OPZIONE B:</strong> 1 segmento Tenuta Mentale (uso disperato)</li>
-  </ul>
-  
-  <div style="margin-top: 15px; padding: 10px; background: #2a1a1a;">
-    <p style="font-weight: bold;">💀 ESEMPIO:</p>
-    <p>"Ira Divina" del Predicatore - costa 1 Speranza OPPURE 1 Tenuta</p>
-    <p>"Occhio del Cacciatore" - vedere oltre il normale costa 1 Tenuta</p>
-  </div>
-  
-  <p style="margin-top: 15px; font-style: italic; color: var(--rust);">
-    <strong>Descrivi il costo:</strong> "Vedi oltre il velo... e qualcosa ti guarda indietro"
-  </p>
-</div>
-
-<!-- CRITICI CORROTTI -->
-<div class="info-box" style="margin-top: 30px;">
-  <h3>💀 CRITICI CORROTTI (REGOLA OPZIONALE)</h3>
-  <p>Quando ottieni un SUCCESSO CRITICO, il GM può descriverlo come eccellenza... INQUIETANTE.</p>
-  
-  <div style="margin-top: 15px;">
-    <p><strong>🔴 CRITICO VIOLENTO:</strong></p>
-    <p>Il colpo è BRUTALE, quasi disumano. "Non ti fermi al primo colpo..."</p>
-  </div>
-  
-  <div style="margin-top: 10px;">
-    <p><strong>🔴 CRITICO INTUITIVO:</strong></p>
-    <p>Vedi pattern impossibili. "Sai esattamente dove colpire. Come lo sai?"</p>
-  </div>
-  
-  <div style="margin-top: 10px;">
-    <p><strong>🔴 CRITICO FORTUNATO:</strong></p>
-    <p>Troppo fortunato. "La corda si rompe proprio mentre passavi sotto"</p>
-  </div>
-  
-  <p style="margin-top: 15px; font-weight: bold; color: var(--blood-red);">
-    ⚠️ NESSUNA PENALITÀ. Solo narrazione per atmosfera.
-  </p>
-</div>
-
-        <section id="tenuta" class="section">
-          <h2>🧠 Il sistema completo della Tenuta Mentale</h2>
-          
-          <p class="large">
-            Il sistema della <strong>Tenuta Mentale</strong> (che in inglese viene chiamato "Sanity") 
-            rappresenta l'aggiunta meccanica più importante e significativa per il genere dell'horror 
-            cosmico lovecraftiano. Questo sistema traccia accuratamente il deterioramento psicologico 
-            progressivo e inesorabile del tuo personaggio quando viene ripetutamente esposto a delle 
-            verità cosmiche devastanti che la mente umana semplicemente non è progettata biologicamente 
-            per comprendere o accettare.
-          </p>
-          
-          <div class="horror-box">
-            <h3>👁️ Come funziona esattamente il sistema</h3>
-            <p style="font-size: 1.05em; line-height: 1.8;">
-              Ogni personaggio giocante possiede una traccia dedicata della Tenuta Mentale che è 
-              suddivisa in <strong>10 segmenti distinti e progressivi</strong>. Quando il tuo 
-              personaggio subisce un trauma psicologico significativo (per esempio quando vede per 
-              la prima volta un mostro terrificante, quando legge un tomo proibito e blasfemo, o 
-              quando assiste direttamente a una rivelazione cosmica devastante), tu riempi 
-              immediatamente uno o più segmenti di questa traccia della sanità mentale.
-            </p>
-            <p style="margin-top: 15px; font-weight: bold; color: var(--blood-red);">
-              Quando la traccia viene riempita completamente fino all'ultimo segmento (tutti i 10 
-              segmenti sono completamente pieni), il tuo personaggio subisce immediatamente e 
-              inevitabilmente una <strong>Conseguenza Permanente e Irreversibile</strong>, e 
-              successivamente la traccia viene azzerata completamente per ricominciare da capo 
-              il ciclo devastante.
-            </p>
-          </div>
-          
-          <h3>Le Cinque Fasi del Deterioramento Mentale</h3>
-          
-          <div class="stat-block">
-            <h4>FASE 1: NORMALE (0-2 Segmenti Riempiti)</h4>
-            <p><strong>Lo Stato Mentale:</strong> Il personaggio è ancora psicologicamente stabile 
-            e funzionale</p>
-            <p><strong>Gli Effetti Meccanici:</strong> Nessun malus o penalità di alcun tipo</p>
-            <p><strong>I Segni Narrativi:</strong></p>
-            <ul>
-              <li>Il personaggio può occasionalmente avere degli incubi notturni disturbanti</li>
-              <li>Potrebbe esitare momentaneamente prima di affrontare situazioni spaventose</li>
-              <li>Ma in generale mantiene il controllo completo delle sue azioni</li>
-            </ul>
-          </div>
-          
-          <div class="stat-block" style="margin-top: 20px;">
-            <h4>FASE 2: SCOSSO (3-5 Segmenti Riempiti)</h4>
-            <p><strong>Lo Stato Mentale:</strong> Il personaggio comincia a mostrare dei segni 
-            evidenti di stress psicologico</p>
-            <p><strong>Gli Effetti Meccanici:</strong> Subisce uno svantaggio (-1) a tutti i prova 
-            di Presenza quando si trova in situazioni sociali stressanti</p>
-            <p><strong>I Segni Narrativi:</strong></p>
-            <ul>
-              <li>Sviluppa dei tic nervosi visibili (come il tremore alle mani, lo sguardo che 
-              vaga costantemente)</li>
-              <li>Fatica notevolmente a concentrarsi su compiti che richiedono attenzione prolungata</li>
-              <li>Può avere degli improvvisi flashback vividi di eventi traumatici che ha vissuto</li>
-              <li>Dorme molto male e quando dorme è tormentato da incubi ricorrenti</li>
-            </ul>
-          </div>
-          
-          <div class="stat-block" style="margin-top: 20px;">
-            <h4>FASE 3: GRAVEMENTE TRAUMATIZZATO (6-8 Segmenti Riempiti)</h4>
-            <p><strong>Lo stato mentale del personaggio:</strong> Il personaggio è ormai gravemente 
-            e profondamente traumatizzato psicologicamente</p>
-            <p><strong>Gli effetti meccanici sul gioco:</strong></p>
-            <ul>
-              <li>Subisce uno svantaggio significativo (-2) a tutti i prova di Presenza senza eccezioni</li>
-              <li>Subisce uno svantaggio aggiuntivo (-1) a tutti i prova di Istinto quando si trova 
-              sotto pressione o stress intenso</li>
-              <li>Deve obbligatoriamente effettuare un prova di Presenza (CD 12) ogni singola volta 
-              che affronta direttamente la fonte specifica del suo trauma, oppure rimane completamente 
-              paralizzato dalla paura paralizzante per 1 round completo di combattimento</li>
-            </ul>
-            <p><strong>I segni narrativi evidenti:</strong></p>
-            <ul>
-              <li>Manifesta una paranoia sempre più crescente e pervasiva (vede potenziali minacce 
-              ovunque lo circondano)</li>
-              <li>Ha degli episodi dissociativi ricorrenti e inquietanti ("perdo completamente momenti 
-              di tempo", "non ricordo assolutamente cosa ho fatto")</li>
-              <li>Può sviluppare delle fobie specifiche e debilitanti legate direttamente e 
-              inequivocabilmente ai suoi traumi subiti</li>
-              <li>Le sue relazioni sociali con gli altri cominciano a deteriorarsi rapidamente e 
-              visibilmente</li>
-            </ul>
-          </div>
-          
-          <div class="stat-block" style="margin-top: 20px;">
-            <h4>FASE 4: PERICOLOSAMENTE IN BILICO (9 Segmenti Riempiti)</h4>
-            <p><strong>Lo stato mentale del personaggio:</strong> Il personaggio è ormai pericolosamente 
-            sull'orlo di un completo e irreversibile breakdown mentale</p>
-            <p><strong>Gli effetti meccanici sul gioco:</strong></p>
-            <ul>
-              <li>Subisce uno svantaggio devastante (-2) a TUTTI i prova di qualsiasi tipo, senza 
-              alcuna eccezione</li>
-              <li>Una volta per ogni sessione di gioco, il Game Master può forzare narrativamente 
-              un'azione completamente irrazionale (il giocatore può spendere ben 2 token di Hope 
-              preziosi per resistere a questa compulsione)</li>
-              <li>Non può assolutamente più beneficiare dei normali effetti rigenerativi del riposo 
-              lungo per recuperare alcun punto di Tenuta Mentale</li>
-            </ul>
-            <p><strong>I segni narrativi allarmanti:</strong></p>
-            <ul>
-              <li>Ha delle allucinazioni sensoriali ricorrenti e vivide (vede chiaramente cose che 
-              oggettivamente non ci sono, sente distintamente voci completamente inesistenti)</li>
-              <li>Il suo comportamento diventa sempre più erratico, imprevedibile e potenzialmente 
-              pericoloso</li>
-              <li>Può avere degli episodi preoccupanti di amnesia temporanea o dissociazione completa</li>
-              <li>Tutti gli altri personaggi notano immediatamente e chiaramente che "c'è qualcosa 
-              di profondamente e terribilmente sbagliato" con lui</li>
-            </ul>
-          </div>
-          
-          <div class="warning-box" style="margin-top: 20px;">
-            <h4>💀 FASE 5: BREAKDOWN COMPLETO (10 Segmenti - Traccia Completamente Piena)</h4>
-            <p style="font-size: 1.1em; font-weight: bold; color: var(--blood-red);">
-              Quando la traccia della Tenuta Mentale viene riempita completamente fino all'ultimo 
-              segmento disponibile, il personaggio subisce immediatamente e inevitabilmente una 
-              CONSEGUENZA PERMANENTE E IRREVERSIBILE sulla sua psiche.
-            </p>
-            <p style="margin-top: 15px;"><strong>La meccanica di risoluzione:</strong></p>
-            <ol>
-              <li>Il giocatore tira immediatamente 1d6 sulla Tabella delle Conseguenze Permanenti 
-              (vedi la tabella dettagliata qui sotto)</li>
-              <li>La Conseguenza ottenuta dal tiro diventa <strong>assolutamente permanente</strong> 
-              e deve essere scritta in modo indelebile sulla scheda del personaggio</li>
-              <li>La traccia della Tenuta Mentale viene immediatamente azzerata completamente e 
-              ricomincia da 0 segmenti riempiti</li>
-              <li>Il personaggio può accumulare progressivamente <strong>multiple Conseguenze 
-              Permanenti diverse</strong> durante l'intera campagna (ogni singola volta che riempie 
-              completamente la traccia fino a 10 segmenti)</li>
-            </ol>
-          </div>
-          
-          <h3>📊 La tabella completa delle Conseguenze Permanenti</h3>
-          
-          <div class="stat-block">
-            <p><strong>Tira 1d6 e consulta la tabella:</strong></p>
-            
-            <p style="margin-top: 15px;"><strong>1 - LA FOBIA DEBILITANTE E PARALIZZANTE</strong></p>
-            <p>Il personaggio sviluppa una fobia intensa, irrazionale e specifica legata direttamente 
-            al trauma psicologico che ha subito (per esempio: paura paralizzante dell'acqua profonda, 
-            paura del buio totale e opprimente, paura claustrofobica degli spazi chiusi e angusti). 
-            Quando si trova direttamente esposto alla fonte specifica della sua fobia, subisce 
-            automaticamente uno svantaggio permanente e costante (-2) a tutti i prova di qualsiasi 
-            tipo e deve immediatamente superare un prova di Presenza (CD 15) oppure fugge 
-            completamente terrorizzato dalla scena.</p>
-            
-            <p style="margin-top: 15px;"><strong>2 - IL TIC COMPULSIVO INCONTROLLABILE</strong></p>
-            <p>Il personaggio sviluppa un comportamento ossessivo-compulsivo specifico che non riesce 
-            assolutamente a controllare razionalmente (per esempio: deve contare ossessivamente tutti 
-            gli oggetti che vede, deve controllare ripetutamente e compulsivamente che le porte siano 
-            chiuse, deve lavarsi le mani continuamente in modo maniacale). Se viene fisicamente 
-            impedito di compiere il suo rituale compulsivo personale, subisce immediatamente uno 
-            svantaggio (-1) a tutti i prova di qualsiasi tipo finché non può finalmente completare 
-            il rituale che lo ossessiona.</p>
-            
-            <p style="margin-top: 15px;"><strong>3 - LA PARANOIA CRONICA E PERVASIVA</strong></p>
-            <p>Il personaggio diventa profondamente e cronicamente paranoico in modo permanente. Vede 
-            costantemente minacce nascoste e cospirazioni elaborate ovunque lo circondano. Subisce 
-            uno svantaggio permanente e costante (-1) a tutti i prova sociali di qualsiasi tipo 
-            perché non riesce più a fidarsi veramente di nessuno, nemmeno dei suoi alleati più 
-            stretti. Nelle situazioni particolarmente stressanti, può improvvisamente accusare i 
-            propri alleati fidati di tradimento e cospirazione contro di lui.</p>
-            
-            <p style="margin-top: 15px;"><strong>4 - GLI INCUBI RICORRENTI E DEVASTANTI</strong></p>
-            <p>Il personaggio è tormentato ogni singola notte da incubi vividi, terrificanti e 
-            ricorrenti che lo perseguitano nel sonno. Non può assolutamente più beneficiare 
-            completamente di un riposo lungo normale - recupera solamente la metà esatta dei normali 
-            HP che recupererebbe e non recupera automaticamente nemmeno un singolo segmento di Tenuta 
-            Mentale dal riposo notturno. Appare costantemente e visibilmente esausto con le occhiaie 
-            profonde e scure.</p>
-            
-            <p style="margin-top: 15px;"><strong>5 - LA DISSOCIAZIONE EPISODICA RICORRENTE</strong></p>
-            <p>Il personaggio ha degli episodi ricorrenti e incontrollabili di dissociazione mentale 
-            durante i quali perde completamente e temporaneamente il contatto con la realtà oggettiva. 
-            Una volta per ogni sessione di gioco (o quando il GM lo ritiene narrativamente appropriato 
-            e drammatico), il personaggio può improvvisamente avere un episodio dissociativo acuto 
-            che dura esattamente 1d4 minuti durante i quali non è assolutamente consapevole di ciò 
-            che lo circonda o di cosa sta facendo.</p>
-            
-            <p style="margin-top: 15px;"><strong>6 - LA RIVELAZIONE COSMICA OSCURA</strong></p>
-            <p>Il personaggio ha finalmente compreso una verità cosmica terrificante e devastante che 
-            non può più ignorare o dimenticare. Guadagna permanentemente un bonus significativo (+2) 
-            a tutti i prova relativi al Mythos di Cthulhu e alle creatura cosmiche incomprensibili, 
-            MA subisce contemporaneamente uno svantaggio permanente e pesante (-2) a tutti i prova 
-            sociali con le persone normali e ignare (perché ora vede e comprende il mondo in modo 
-            troppo radicalmente diverso da loro). Inoltre, tutti i futuri prova di Tenuta Mentale 
-            hanno automaticamente la CD aumentata permanentemente di +2 punti.</p>
-          </div>
-          
-          <div class="tip-box">
-            <h3>💡 Dei consigli pratici per interpretare la Tenuta Mentale</h3>
-            <p style="font-size: 1.05em; line-height: 1.8;">
-              La Tenuta Mentale non è solamente una fredda meccanica di gioco - è un potentissimo 
-              strumento narrativo per arricchire l'interpretazione. Quando il tuo personaggio 
-              guadagna dei segmenti di Tenuta progressivamente, prenditi sempre un momento per 
-              descrivere dettagliatamente come questo danno psicologico lo influenza emotivamente 
-              e comportamentalmente. Come reagisce concretamente il tuo personaggio? Diventa più 
-              silenzioso, introverso e chiuso in se stesso? Inizia a bere alcol per dimenticare 
-              gli orrori? Si aggrappa disperatamente ai suoi compagni per sentirsi sicuro? Usa 
-              creativamente la meccanica per arricchire profondamente la tua interpretazione del 
-              personaggio e la sua evoluzione psicologica.
-            </p>
-          </div>
-        </section>
-        
-        <!-- Le sezioni rimanenti continueranno nello stesso stile fluido -->
-        
-        <!-- DIFFICOLTÀ CHECKS -->
-        <section id="checks" class="section">
-          <h2>📊 Le difficoltà dei prova (Classe Difficoltà)</h2>
-          
-          <p class="large">
-            La <strong>Classe di Difficoltà (CD)</strong> rappresenta il numero target che devi 
-            raggiungere o superare con il tuo tiro di dado per avere successo nell'azione che stai 
-            tentando. Il Game Master stabilisce dinamicamente la CD appropriata in base a quanto è 
-            oggettivamente difficile e rischioso quello che stai tentando di fare.
-          </p>
-          
-          <div class="stat-block">
-            <h4>📊 La scala standard delle difficoltà</h4>
-            <table style="width: 100%; margin-top: 10px;">
-              <thead>
-                <tr>
-                  <th>La CD</th>
-                  <th>La difficoltà</th>
-                  <th>La descrizione dettagliata</th>
-                  <th>Un esempio pratico concreto</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>5</strong></td>
-                  <td>Triviale</td>
-                  <td>È praticamente impossibile fallire questa azione</td>
-                  <td>Notare una porta gigantesca proprio davanti a te nella luce del giorno</td>
-                </tr>
-                <tr>
-                  <td><strong>8</strong></td>
-                  <td>Facile</td>
-                  <td>La stragrande maggioranza delle persone ci riesce senza problemi</td>
-                  <td>Cavalcare un cavallo particolarmente tranquillo e ben addestrato</td>
-                </tr>
-                <tr>
-                  <td><strong>10</strong></td>
-                  <td>Routine</td>
-                  <td>Le persone competenti e addestrate ci riescono normalmente</td>
-                  <td>Scalare una parete rocciosa moderatamente ripida avendo delle corde robuste</td>
-                </tr>
-                <tr style="background: rgba(255, 152, 0, 0.1);">
-                  <td><strong>12</strong></td>
-                  <td>Moderato</td>
-                  <td>Richiede una certa abilità innata e competenza acquisita</td>
-                  <td>Convincere verbalmente una guardia che è naturalmente sospettosa di te</td>
-                </tr>
-                <tr style="background: rgba(255, 152, 0, 0.2);">
-                  <td><strong>14</strong></td>
-                  <td>Difficile</td>
-                  <td>Solo le persone davvero skilled e esperte ci riescono regolarmente</td>
-                  <td>Disarmare una trappola meccanica particolarmente complessa e ben costruita</td>
-                </tr>
-                <tr style="background: rgba(244, 67, 54, 0.1);">
-                  <td><strong>16</strong></td>
-                  <td>Molto difficile</td>
-                  <td>Rappresenta una sfida significativa anche per gli esperti del settore</td>
-                  <td>Decifrare un linguaggio scritto completamente alieno e sconosciuto</td>
-                </tr>
-                <tr style="background: rgba(244, 67, 54, 0.2);">
-                  <td><strong>18</strong></td>
-                  <td>Formidabile</td>
-                  <td>È quasi completamente impossibile senza preparazione eccezionale</td>
-                  <td>Saltare atleticamente attraverso un canyon largo esattamente 6 metri</td>
-                </tr>
-                <tr style="background: rgba(0, 0, 0, 0.2);">
-                  <td><strong>20+</strong></td>
-                  <td>Leggendario</td>
-                  <td>Serve praticamente un miracolo o una mastery assoluta della disciplina</td>
-                  <td>Comprendere profondamente la geometria non-euclidea completamente aliena</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          
-          <div class="tip-box">
-            <h4>💡 Le linee guida pratiche per il Game Master</h4>
-            <ul>
-              <li><strong>CD 10-12:</strong> Questa rappresenta la "baseline" standard e di riferimento 
-              per la maggior parte dei prova normali e quotidiani del gioco</li>
-              <li><strong>CD 14-16:</strong> Usa queste CD più alte per le situazioni che sono 
-              particolarmente tese e drammatiche, dove c'è molta pressione emotiva o dove viene 
-              richiesta una vera expertise tecnica specifica</li>
-              <li><strong>CD 18 o superiore:</strong> Riservale solamente e unicamente per i momenti 
-              davvero climactici e memorabili della storia o per le azioni che sono praticamente 
-              impossibili da compiere</li>
-              <li><strong>Vantaggio/Svantaggio:</strong> Spesso è meccanicamente meglio e più elegante 
-              modificare la probabilità di successo usando questi modificatori piuttosto che cambiare 
-              direttamente la CD stessa dell'azione</li>
-            </ul>
-          </div>
-        </section>
-        
-        <!-- COMBATTIMENTO -->
-        <section id="combattimento" class="section">
-          <h2>⚔️ Il sistema completo di combattimento</h2>
-          
-          <h3>L'iniziativa e la struttura dei round</h3>
-          
-          <div class="stat-block">
-            <h4>🎲 Come determinare correttamente l'iniziativa</h4>
-            <p>All'inizio di ogni singolo combattimento, tutti i partecipanti coinvolti (sia i 
-            personaggi giocanti che i nemici) devono tirare <strong>Istinto + Agilità</strong>. 
-            L'ordine di azione nel turno procede sistematicamente dal risultato più alto ottenuto 
-            verso il risultato più basso.</p>
-            <p><strong>Note importanti da tenere a mente:</strong></p>
-            <ul>
-              <li>Il livello attuale di Tenuta Mentale del tuo personaggio può dare delle penalità 
-              meccaniche significative al tuo tiro di Iniziativa</li>
-              <li>Fattore Sorpresa: Chi riesce a sorprendere completamente i nemici ottiene 
-              automaticamente un Vantaggio sostanziale al tiro di Iniziativa</li>
-              <li>Ogni round di combattimento dura approssimativamente 6 secondi di tempo narrativo 
-              all'interno del gioco</li>
-            </ul>
-          </div>
-          
-          <h3>L'economia completa delle azioni disponibili</h3>
-          
-          <div class="grid-auto">
-            <div class="stat-box">
-              <h4>L'AZIONE PRINCIPALE</h4>
-              <p><strong>Ne hai esattamente 1 sola per ogni singolo turno</strong></p>
-              <ul>
-                <li>Effettuare un attacco offensivo (con un'arma fisica oppure con una incantesimo magica)</li>
-                <li>Usare l'azione Dash per ottenere del movimento extra aggiuntivo</li>
-                <li>Compiere un'azione particolarmente complessa (come disarmare fisicamente qualcuno)</li>
-                <li>Aiutare attivamente e concretamente un tuo alleato in difficoltà</li>
-              </ul>
-            </div>
-            
-            <div class="stat-box">
-              <h4>IL MOVIMENTO</h4>
-              <p><strong>È completamente gratuito (puoi muoverti 1 volta la tua velocità base)</strong></p>
-              <ul>
-                <li>Un essere umano standard può muoversi di 9 metri (che equivalgono a 30 piedi 
-                nel sistema imperiale)</li>
-                <li>Il terreno particolarmente difficile riduce drasticamente la velocità effettiva 
-                alla metà del normale</li>
-                <li>L'azione speciale Dash ti permette di muoverti del doppio della tua velocità 
-                normale di base</li>
-              </ul>
-            </div>
-            
-            <div class="stat-box">
-              <h4>L'AZIONE BONUS</h4>
-              <p><strong>Solo se ne hai una effettivamente disponibile</strong></p>
-              <ul>
-                <li>Usare un oggetto particolarmente semplice e immediato</li>
-                <li>Attivare delle abilità specifiche caratteristiche della tua classe di personaggio</li>
-                <li>Effettuare un secondo attacco aggiuntivo (solo se possiedi esplicitamente questa 
-                capacità speciale)</li>
-              </ul>
-            </div>
-            
-            <div class="stat-box">
-              <h4>LA REACTION</h4>
-              <p><strong>Ne hai esattamente 1 sola per ogni round completo di combattimento</strong></p>
-              <ul>
-                <li>Effettuare un attacco di opportunità quando qualcuno si allontana imprudentemente 
-                dalla tua portata</li>
-                <li>Attivare delle abilità specificatamente difensive</li>
-                <li>Rispondere a dei innesco molto specifici</li>
-              </ul>
-            </div>
-          </div>
-          
-          <h3>L'Attacco e il Danno</h3>
-          
-          <div class="stat-block">
-            <h4>🎯 Il Processo di Attacco Base</h4>
-            <p><strong>Il Processo Completo:</strong></p>
-            <ol>
-              <li>Dichiari esplicitamente il tuo target che deve trovarsi entro il range della 
-              tua arma</li>
-              <li>Tiri 2d12 e aggiungi il tuo modificatore di attacco appropriato</li>
-              <li>Confronti il totale con l'Armor Class (AC) del tuo target</li>
-              <li>Se il risultato è uguale o superiore all'AC: Hai colpito! Tira il danno</li>
-              <li>Se il risultato è inferiore all'AC: Hai mancato completamente!</li>
-            </ol>
-            
-            <p style="margin-top: 15px;"><strong>I Modificatori di Attacco:</strong></p>
-            <ul>
-              <li><strong>Per gli Attacchi in Mischia (Melee):</strong> Usi normalmente il tuo 
-              bonus di Forza</li>
-              <li><strong>Per gli Attacchi a Distanza (Ranged):</strong> Usi il tuo bonus di Agilità</li>
-              <li><strong>Per le Armi con la proprietà Finesse:</strong> Puoi scegliere liberamente 
-              se usare Forza o Agilità</li>
-            </ul>
-          </div>
-          
-          <h3>Le Armi da Fuoco (Specifiche per il Bizzarro West)</h3>
-          
-          <div class="stat-block">
-            <h4>🔫 Le Regole Speciali per le Firearms</h4>
-            <table style="width: 100%; margin-top: 10px;">
-              <thead>
-                <tr>
-                  <th>Il Tipo di Arma</th>
-                  <th>Il Danno Base</th>
-                  <th>Il Range Effettivo</th>
-                  <th>Le Proprietà Speciali</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Il Revolver</strong></td>
-                  <td>2d6</td>
-                  <td>12 metri / 36 metri</td>
-                  <td>Richiede Loading, contiene 6 colpi</td>
-                </tr>
-                <tr>
-                  <td><strong>Il Rifle</strong></td>
-                  <td>2d8</td>
-                  <td>24 metri / 90 metri</td>
-                  <td>Richiede Two-handed, Loading</td>
-                </tr>
-                <tr>
-                  <td><strong>Lo Shotgun</strong></td>
-                  <td>3d6</td>
-                  <td>6 metri / 15 metri</td>
-                  <td>Richiede Two-handed, ha proprietà Spread</td>
-                </tr>
-                <tr>
-                  <td><strong>La Dynamite</strong></td>
-                  <td>4d6</td>
-                  <td>Raggio di 6 metri</td>
-                  <td>Richiede Reflex CD 14 per dimezzare il danno</td>
-                </tr>
-              </tbody>
-            </table>
-            
-            <div class="warning-box" style="margin-top: 20px; border-color: var(--blood-red);">
-              <h4>💥 REGOLA SPECIALE - DANNI STRUTTURALI DINAMITE</h4>
-              <p style="font-size: 1.05em;">
-                Contro <strong>CREATURE GIGANTESCHE</strong> o <strong>STRUTTURE</strong>:
-              </p>
-              <ul style="margin-top: 10px;">
-                <li>✨ La dinamite infligge <strong>DANNO MASSIMO automatico (24 danni)</strong></li>
-                <li>✨ Stordisce il bersaglio per 1 round</li>
-                <li>✨ Può far crollare soffitti, distruggere pilastri, bloccare passaggi</li>
-              </ul>
-              
-              <p style="margin-top: 15px;"><strong>💡 ESEMPIO TATTICO:</strong></p>
-              <p>Piazzare dinamite sui Pilastri Runici nel tempio:</p>
-              <ul style="margin-top: 5px;">
-                <li>Distrugge il pilastro (1 round)</li>
-                <li>Infligge 24 danni al boss collegato</li>
-                <li>Ferma la rigenerazione</li>
-              </ul>
-              
-              <p style="margin-top: 15px; font-style: italic; color: var(--rust);">
-                <strong>Scopo:</strong> Premiare giocatori che PREPARANO e PIANIFICANO 
-                invece di limitarsi a "picchiare finché muore".
-              </p>
-            </div>
-            
-            <p style="margin-top: 15px;"><strong>La Proprietà Loading:</strong></p>
-            <p style="font-size: 1.05em; line-height: 1.8;">
-              Ricaricare un'arma da fuoco richiede un'azione bonus completa. Durante l'era del Bizzarro 
-              West, non esistevano ancora i caricatori rapidi - ogni colpo doveva essere inserito 
-              manualmente nella camera dell'arma.
-            </p>
-            
-            <p style="margin-top: 15px;"><strong>La Proprietà Spread (per lo Shotgun):</strong></p>
-            <p style="font-size: 1.05em; line-height: 1.8;">
-              A distanza ravvicinata (entro i 3 metri), puoi scegliere di colpire simultaneamente 
-              2 target adiacenti con un singolo colpo, ma il danno viene diviso equamente tra loro.
-            </p>
-          </div>
-          
-          <div class="tip-box">
-            <h3>💡 I Consigli Tattici per il Combattimento</h3>
-            <ul style="font-size: 1.05em; line-height: 1.7;">
-              <li><strong>Usa sempre la copertura quando è possibile:</strong> Stare dietro una 
-              copertura può darti un bonus significativo alla tua AC</li>
-              <li><strong>Coordina le azioni con i tuoi alleati:</strong> Aiutare un alleato può 
-              dargli Vantaggio sul suo prossimo attacco</li>
-              <li><strong>Gestisci attentamente le tue munizioni:</strong> Nel Bizzarro West, le munizioni 
-              non sono infinite e ricaricare richiede tempo prezioso</li>
-              <li><strong>Considera sempre la Tenuta Mentale:</strong> Un personaggio che è 
-              gravemente traumatizzato combatte con penalità significative</li>
-            </ul>
-          </div>
-        </section>
-        
-        <!-- PERICOLI AMBIENTALI -->
-        <section id="environment" class="section">
-          <h2>🌪️ I pericoli ambientali del Bizzarro West</h2>
-          
-          <p class="large">
-            Il Bizzarro West è un luogo estremamente e mortalmente pericoloso anche senza considerare 
-            minimamente i mostri cosmici soprannaturali. Il deserto spietato e implacabile, le tempeste 
-            improvvise e devastanti e i pericoli naturali possono essere altrettanto letali quanto 
-            qualsiasi creatura abominevole soprannaturale.
-          </p>
-          
-          <div class="stat-block">
-            <h4>🔥 IL CALORE ESTREMO E SOFFOCANTE DEL DESERTO</h4>
-            <p style="font-size: 1.05em; line-height: 1.8;">
-              Durante il giorno torrido, il deserto può raggiungere temperature che superano 
-              facilmente i 45°C all'ombra (se riesci a trovare dell'ombra scarsa). I personaggi che 
-              viaggiano imprudentemente durante le ore più calde devono obbligatoriamente effettuare 
-              un prova di Costituzione (CD 12) ogni 2 ore passate sotto il sole cocente. In caso di 
-              fallimento del prova, guadagnano immediatamente 1 livello di Esaurimento fisico.
-            </p>
-            <p style="margin-top: 10px;"><strong>Le misure di prevenzione:</strong></p>
-            <ul>
-              <li>Viaggiare strategicamente durante le ore più fresche (all'alba e al tramonto)</li>
-              <li>Indossare abbigliamento adeguato e leggero che copre completamente il corpo dal sole</li>
-              <li>Bere molta acqua regolarmente (almeno 4 litri al giorno per ogni persona)</li>
-            </ul>
-          </div>
-          
-          <div class="stat-block" style="margin-top: 20px;">
-            <h4>❄️ IL FREDDO NOTTURNO PENETRANTE DEL DESERTO</h4>
-            <p style="font-size: 1.05em; line-height: 1.8;">
-              Quando il sole tramonta completamente, la temperatura del deserto può crollare 
-              drammaticamente e rapidamente fino a raggiungere lo zero o addirittura temperature 
-              sotto zero nelle notti più rigide. I personaggi senza un riparo adeguato o senza 
-              coperte calde devono obbligatoriamente effettuare un prova di Costituzione (CD 10) 
-              ogni 4 ore passate al freddo. Il fallimento causa immediatamente 1 livello di 
-              Esaurimento fisico.
-            </p>
-          </div>
-          
-          <div class="stat-block" style="margin-top: 20px;">
-            <h4>💧 LA DISIDRATAZIONE PROGRESSIVA</h4>
-            <p style="font-size: 1.05em; line-height: 1.8;">
-              Un personaggio ha bisogno di almeno 4 litri d'acqua al giorno nel clima desertico 
-              arido. Per ogni giorno passato senza acqua sufficiente, deve obbligatoriamente 
-              effettuare un prova di Costituzione (CD che aumenta progressivamente di +2 ogni 
-              giorno consecutivo). Il fallimento causa immediatamente 1 livello di Esaurimento 
-              fisico che non può assolutamente essere rimosso finché non beve abbondantemente.
-            </p>
-          </div>
-          
-          <div class="warning-box">
-            <h4>🐍 GLI INCONTRI CON ANIMALI NATURALMENTE PERICOLOSI</h4>
-            <p style="font-size: 1.05em; line-height: 1.8;">
-              Il deserto è abitato da numerose creatura pericolose completamente naturali che 
-              non hanno nulla di soprannaturale:
-            </p>
-            <ul>
-              <li><strong>I serpenti a sonagli velenosi:</strong> Il loro morso velenoso richiede 
-              immediatamente un prova di Costituzione (CD 14) oppure il personaggio subisce 2d6 di 
-              danno da veleno e viene avvelenato gravemente per 1 ora completa</li>
-              <li><strong>Gli scorpioni nascosti:</strong> Nascosti insidiosamente sotto le rocce, 
-              la loro puntura causa 1d4 di danno più un prova di Costituzione (CD 12) contro il veleno</li>
-              <li><strong>I coyote affamati:</strong> Raramente attaccano direttamente gli umani ma 
-              possono essere attratti pericolosamente dai bivacchi notturni e dal cibo lasciato incustodito</li>
-            </ul>
-          </div>
-        </section>
-        
-        <!-- EQUIPAGGIAMENTO WEIRD WEST -->
-        <section id="equipment" class="section">
-          <h2>🎒 L'equipaggiamento tipico del Bizzarro West</h2>
-          
-          <h3>Le armi standard dell'epoca storica</h3>
-          
-          <div class="stat-block">
-            <table style="width: 100%; margin-top: 10px;">
-              <thead>
-                <tr>
-                  <th>Il tipo di arma</th>
-                  <th>Il costo</th>
-                  <th>Il danno</th>
-                  <th>Il peso</th>
-                  <th>Le proprietà speciali</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Il revolver Colt .45 classico</strong></td>
-                  <td>$15</td>
-                  <td>2d6</td>
-                  <td>1.5 kg</td>
-                  <td>Richiede Loading manuale, contiene 6 colpi, range 12/36 metri</td>
-                </tr>
-                <tr>
-                  <td><strong>Il rifle Winchester a leva</strong></td>
-                  <td>$25</td>
-                  <td>2d8</td>
-                  <td>4 kg</td>
-                  <td>Richiede entrambe le mani (Two-handed), range 24/90 metri</td>
-                </tr>
-                <tr>
-                  <td><strong>Il double-barrel shotgun a canne mozze</strong></td>
-                  <td>$30</td>
-                  <td>3d6</td>
-                  <td>4 kg</td>
-                  <td>Two-handed, proprietà Spread devastante, range 6/15 metri</td>
-                </tr>
-                <tr>
-                  <td><strong>Il knife o dagger da caccia</strong></td>
-                  <td>$2</td>
-                  <td>1d4</td>
-                  <td>0.5 kg</td>
-                  <td>Finesse, Light, può essere lanciato 6/12 metri</td>
-                </tr>
-                <tr>
-                  <td><strong>Il tomahawk dei nativi</strong></td>
-                  <td>$5</td>
-                  <td>1d6</td>
-                  <td>1 kg</td>
-                  <td>Può essere lanciato 6/18 metri, Versatile</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          
-          <h3>L'equipaggiamento di base e le forniture essenziali</h3>
-          
-          <div class="stat-block">
-            <table style="width: 100%; margin-top: 10px;">
-              <thead>
-                <tr>
-                  <th>L'oggetto</th>
-                  <th>Il costo</th>
-                  <th>Il peso</th>
-                  <th>Le note importanti</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>La corda di canapa robusta (15 metri)</td>
-                  <td>$1</td>
-                  <td>5 kg</td>
-                  <td>Fatta di canapa robusta e resistente all'usura</td>
-                </tr>
-                <tr>
-                  <td>La lanterna a olio con riserva</td>
-                  <td>$3</td>
-                  <td>1 kg</td>
-                  <td>Fornisce luce intensa per 6 ore continue</td>
-                </tr>
-                <tr>
-                  <td>Il bastoncino di dynamite esplosiva</td>
-                  <td>$2</td>
-                  <td>0.5 kg</td>
-                  <td>Causa 4d6 di danno devastante in un raggio di 6 metri</td>
-                </tr>
-                <tr>
-                  <td>La bottiglia di whiskey di bassa qualità</td>
-                  <td>$0.50</td>
-                  <td>0.5 kg</td>
-                  <td>Permette temporaneamente di ignorare le penalità di Tenuta Mentale</td>
-                </tr>
-                <tr>
-                  <td>La dose di morphine medicinale</td>
-                  <td>$1</td>
-                  <td>-</td>
-                  <td>Guarisce 2d4+2 HP ma crea dipendenza fisica se usata troppo spesso</td>
-                </tr>
-                <tr>
-                  <td>Il sacco a pelo (bedroll) imbottito</td>
-                  <td>$1</td>
-                  <td>3 kg</td>
-                  <td>Permette un riposo più confortevole durante la notte fredda</td>
-                </tr>
-                <tr>
-                  <td>Un cavallo da sella ben addestrato</td>
-                  <td>$50-150</td>
-                  <td>-</td>
-                  <td>Velocità di 18 metri per round, può trasportare fino a 200 kg</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          
-          <h3>Gli oggetti speciali e misteriosi del Bizzarro West</h3>
-          
-          <div class="horror-box">
-            <h4>🔮 Gli amuleti protettivi e i talismani mistici</h4>
-            <p style="font-size: 1.05em; line-height: 1.8;">
-              Questi oggetti sono estremamente rari e spesso di efficacia molto dubbia e 
-              contestata, ma possono fornire un certo conforto psicologico prezioso ai 
-              personaggi terrorizzati:
-            </p>
-            <ul>
-              <li><strong>La croce benedetta dal vescovo:</strong> Fornisce un bonus modesto di 
-              +1 ai prova di Tenuta Mentale contro le presenze profane e demoniache (anche se 
-              potrebbe essere solo un semplice effetto placebo psicologico)</li>
-              <li><strong>I proiettili d'argento puro:</strong> Causano il doppio esatto del danno 
-              normale contro certe creatura soprannaturali specifiche (ma costano ben $5 ciascuno, 
-              un prezzo esorbitante)</li>
-              <li><strong>Il dreamcatcher tradizionale dei nativi:</strong> Fornisce un bonus di +2 
-              ai saving throws contro gli incubi notturni ricorrenti e terrificanti</li>
-              <li><strong>Il whiskey "Ghost Ward" venduto dai ciarlatani:</strong> Venduto dai 
-              venditori ambulanti come protezione magica contro i fantasmi, ma in realtà è solo 
-              snake oil completamente inefficace senza alcun effetto reale verificabile</li>
-            </ul>
-          </div>
-        </section>
-        
-        <!-- HEALING & RECOVERY -->
-        <section id="healing" class="section">
-          <h2>❤️‍🩹 La guarigione e il recupero fisico</h2>
-          
-          <h3>Il recupero graduale dei Punti Ferita</h3>
-          
-          <div class="stat-block">
-            <h4>🛏️ I diversi tipi di riposo disponibili</h4>
-            
-            <p><strong>IL RIPOSO BREVE (SHORT REST - durata 1 ora):</strong></p>
-            <ul>
-              <li>Puoi tirare uno qualsiasi dei tuoi Hit dadi ancora disponibili e non spesi</li>
-              <li>Recuperi un numero di HP pari esattamente al risultato del dado più il tuo 
-              modificatore personale di Costituzione</li>
-              <li>Puoi effettuare al massimo 1 Short Rest tra un Long Rest e l'altro consecutivo</li>
-            </ul>
-            
-            <p style="margin-top: 15px;"><strong>IL RIPOSO LUNGO (LONG REST - durata 8 ore):</strong></p>
-            <ul>
-              <li>Recuperi automaticamente e completamente TUTTI i tuoi Punti Ferita massimi</li>
-              <li>Recuperi la metà esatta dei tuoi Hit dadi totali disponibili (con un minimo 
-              assoluto di 1)</li>
-              <li>Recuperi 1d4 segmenti casuali di Tenuta Mentale</li>
-              <li>Rimuovi automaticamente 1 livello di Esaurimento fisico (Exhaustion)</li>
-            </ul>
-            
-            <p style="margin-top: 15px;"><strong>I requisiti necessari per un Long Rest valido:</strong></p>
-            <ul>
-              <li>Devi trovarti in un luogo relativamente sicuro e protetto (senza minacce attive 
-              immediate nelle vicinanze)</li>
-              <li>Devi dormire ininterrottamente per almeno 6 ore delle 8 totali necessarie</li>
-              <li>Puoi dedicare al massimo 2 ore ad attività leggere e non faticose (come fare la 
-              guardia o cucinare cibo)</li>
-            </ul>
-          </div>
-          
-          <h3>🥃 Il recupero della Tenuta Mentale tramite i Vizi</h3>
-          
-          <div class="info-box" style="border-left: 4px solid var(--blood-red);">
-            <h4>💀 RECUPERO TENUTA MENTALE - "IL VIZIO"</h4>
-            <p style="font-size: 1.05em; margin-bottom: 15px;">
-              Durante un <strong>Riposo Breve</strong> o <strong>Lungo</strong>, un personaggio può 
-              tentare di recuperare Tenuta Mentale in due modi diversi. Questa meccanica previene 
-              la "spirale della morte" dove i giocatori diventano passivi per paura di spendere risorse.
-            </p>
-            
-            <div class="stat-block" style="margin-top: 15px;">
-              <h4>🍺 OPZIONE 1: Indulgere in un Vizio</h4>
-              <p>Scegli un vizio del tuo personaggio (Alcol, Gioco d'azzardo, Preghiera ossessiva, 
-              Violenza gratuita, Tabacco, ecc.)</p>
-              
-              <p style="margin-top: 10px;"><strong>Meccanica:</strong></p>
-              <ul>
-                <li><strong>Tira 1d6</strong></li>
-                <li><strong>Risultato 2-6:</strong> Recuperi <strong>1d4 segmenti di Tenuta</strong></li>
-                <li><strong>Risultato 1 (COMPLICAZIONE):</strong> Recuperi solo 1 segmento MA ottieni 
-                una condizione negativa:
-                  <ul style="margin-top: 8px;">
-                    <li><strong>Ubriaco:</strong> -1 a tutte le prove fisiche fino al prossimo riposo</li>
-                    <li><strong>Al verde:</strong> Perdi metà dei tuoi soldi al gioco</li>
-                    <li><strong>Rimorso:</strong> Svantaggio alla prossima prova sociale</li>
-                    <li><strong>Esausto:</strong> Velocità ridotta di 5 piedi</li>
-                  </ul>
-                </li>
-              </ul>
-              
-              <p style="margin-top: 15px; font-style: italic; color: var(--rust);">
-                <strong>Nota per il roleplay:</strong> Descrivi come il tuo personaggio indulge 
-                nel vizio. È un momento di debolezza umana in un mondo crudele.
-              </p>
-            </div>
-            
-            <div class="stat-block" style="margin-top: 15px;">
-              <h4>🔥 OPZIONE 2: Confessione al Falò</h4>
-              <p>Durante un momento di riposo, confessa una paura profonda a un altro personaggio 
-              giocante (roleplay richiesto, minimo 2 minuti reali)</p>
-              
-              <p style="margin-top: 10px;"><strong>Meccanica:</strong></p>
-              <ul>
-                <li>Chi confessa recupera <strong>1 segmento di Tenuta automaticamente</strong></li>
-                <li>Se il giocatore che ascolta risponde in modo significativo (roleplay), 
-                <strong>entrambi i personaggi recuperano +1 segmento aggiuntivo</strong></li>
-                <li><strong>Limite:</strong> Puoi usare questa opzione solo una volta per Riposo Lungo</li>
-              </ul>
-              
-              <p style="margin-top: 15px; font-style: italic; color: var(--rust);">
-                <strong>Obiettivo:</strong> Questa meccanica incentiva l'interazione tra personaggi 
-                e crea momenti memorabili di vulnerabilità condivisa.
-              </p>
-            </div>
-            
-            <div class="tip-box" style="margin-top: 15px;">
-              <h4>💡 Consiglio per il GM</h4>
-              <p>Non tutte le sessioni devono includere momenti di vizio o confessione. Usa queste 
-              meccaniche quando senti che i giocatori hanno bisogno di una "valvola di sfogo" emotiva 
-              o quando la Tenuta del gruppo è pericolosamente bassa. Sono strumenti narrativi, non 
-              obblighi meccanici.</p>
-            </div>
-          </div>
-          
-          <h3>La medicina e i primi soccorsi d'emergenza</h3>
-          
-          <div class="stat-block">
-            <h4>🩹 Il First Aid rapido (Richiede un'azione standard)</h4>
-            <p><strong>I requisiti necessari:</strong> Devi possedere un kit medico funzionante e il 
-            target deve essere ancora vivo e respirante</p>
-            <p><strong>Il prova richiesto:</strong> Conoscenza con CD 12</p>
-            <p><strong>In caso di successo:</strong> Il target recupera immediatamente 1d6 + il tuo 
-            modificatore personale di Conoscenza in Punti Ferita</p>
-            <p><strong>Il limite importante:</strong> Puoi usare il First Aid solamente 1 volta per 
-            ogni singolo target tra un Short Rest e l'altro</p>
-          </div>
-          
-          <div class="stat-block" style="margin-top: 20px;">
-            <h4>💉 La Surgery complessa (Richiede 1 ora completa ininterrotta)</h4>
-            <p><strong>I requisiti necessari:</strong> Devi possedere un kit medico completo e 
-            professionale, più un luogo ragionevolmente pulito e igienico</p>
-            <p><strong>Il prova richiesto:</strong> Conoscenza con CD 15</p>
-            <p><strong>In caso di successo:</strong> Puoi rimuovere chirurgicamente 1 condizione 
-            persistente e debilitante (come Maimed, Disease e simili)</p>
-            <p><strong>In caso di fallimento:</strong> Nessun effetto benefico (o peggio ancora, con 
-            CD 18+ potrebbero sorgere delle complicazioni mediche serie e potenzialmente letali)</p>
-          </div>
-          
-          <h3>Le regole complete per Dying e Death</h3>
-          
-          <div class="warning-box">
-            <h4>☠️ Le regole complete per lo stato di Dying</h4>
-            <p style="font-size: 1.05em; line-height: 1.8;">
-              Quando i tuoi Punti Ferita arrivano esattamente a 0, cadi immediatamente e 
-              inevitabilmente in stato critico di <strong>Dying</strong>:
-            </p>
-            
-            <p style="margin-top: 10px;"><strong>Durante ogni tuo turno mentre sei in stato di Dying:</strong></p>
-            <ol>
-              <li>Tiri 1d20 (questo è chiamato tecnicamente un Death tiro salvezza):
-                <ul>
-                  <li>Con un risultato di 10 o superiore: Segni 1 successo sulla tua scheda personaggio</li>
-                  <li>Con un risultato da 1 a 9: Segni 1 fallimento sulla tua scheda personaggio</li>
-                  <li>Con un Natural 20 perfetto: Vieni stabilizzato immediatamente E recuperi 
-                  anche 1 HP bonus</li>
-                  <li>Con un Natural 1 critico: Questo conta come ben 2 fallimenti invece di uno 
-                  solo</li>
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar">
+                <h2>📋 L'indice completo delle regole</h2>
+                <ul class="nav-links">
+                    <li><a href="#intro">L'introduzione al sistema</a></li>
+                    <li><a href="#base">Il sistema base di Daggerheart</a></li>
+                    <li><a href="#tenuta">Il sistema della Tenuta Mentale</a></li>
+                    <li><a href="#checks">Le difficoltà dei check (CD)</a></li>
+                    <li><a href="#combat">Le regole del combattimento</a></li>
+                    <li><a href="#environment">I pericoli ambientali</a></li>
+                    <li><a href="#equipment">L'equipaggiamento del Weird West</a></li>
+                    <li><a href="#healing">La guarigione e il recupero</a></li>
+                    <li><a href="#conditions">Le condizioni e gli status</a></li>
+                    <li><a href="#gm-tools">Gli strumenti per il GM</a></li>
                 </ul>
-              </li>
-              <li>Se accumuli 3 successi totali: Vieni stabilizzato completamente (rimani a 0 HP 
-              ma sei cosciente e stabile)</li>
-              <li>Se accumuli 3 fallimenti totali: Il tuo personaggio muore definitivamente e 
-              permanentemente</li>
-            </ol>
+            </aside>
             
-            <p style="margin-top: 15px;"><strong>La stabilizzazione da parte di un alleato:</strong></p>
-            <ul>
-              <li>Un alleato presente può usare un'azione per tentare di stabilizzarti medicamente 
-              con un prova di Conoscenza CD 10</li>
-              <li>In caso di successo del prova, vieni stabilizzato immediatamente senza bisogno di 
-              ulteriori Death Saves</li>
-              <li>Qualsiasi guarigione magica o pozione medica ti stabilizza automaticamente E ti 
-              fa recuperare immediatamente HP</li>
-            </ul>
-            
-            <p style="margin-top: 15px; font-weight: bold; color: var(--blood-red);">
-              ⚠️ ATTENZIONE CRITICA: Subire danno aggiuntivo mentre sei già in stato di Dying causa 
-              automaticamente 1 fallimento immediato (e se il danno è massiccio e devastante, può 
-              significare la morte istantanea senza possibilità di tiri salvezza)
-            </p>
-          </div>
-        </section>
-        
-        <!-- CONDITIONS & STATUS -->
-        <section id="conditions" class="section">
-          <h2>🤕 Le condizioni e gli effetti di status del gioco</h2>
-          
-          <div class="grid-auto-wide">
-            <div class="stat-box">
-              <h4>BLINDED (COMPLETAMENTE ACCECATO)</h4>
-              <p>Non riesci a vedere assolutamente nulla intorno a te, sei avvolto nell'oscurità totale</p>
-              <ul>
-                <li>Fallisci automaticamente tutti i prova che richiedono necessariamente la vista</li>
-                <li>Tutti i tuoi attacchi subiscono automaticamente Svantaggio meccanico</li>
-                <li>Tutti gli attacchi diretti contro di te ottengono automaticamente Vantaggio</li>
-              </ul>
-            </div>
-            
-            <div class="stat-box">
-              <h4>DEAFENED (COMPLETAMENTE ASSORDATO)</h4>
-              <p>Non riesci a sentire alcun suono, sei immerso nel silenzio totale</p>
-              <ul>
-                <li>Fallisci automaticamente tutti i prova che richiedono necessariamente l'udito</li>
-                <li>Non ci sono altre penalità meccaniche dirette oltre a questa</li>
-              </ul>
-            </div>
-            
-            <div class="stat-box">
-              <h4>FRIGHTENED (TERRORIZZATO)</h4>
-              <p>Provi un terrore profondo e paralizzante verso una specifica fonte identificabile</p>
-              <ul>
-                <li>Hai Svantaggio automatico a tutti i prova mentre puoi vedere la fonte della tua paura</li>
-                <li>Non puoi assolutamente avvicinarti volontariamente alla fonte specifica della tua paura</li>
-              </ul>
-            </div>
-            
-            <div class="stat-box">
-              <h4>GRAPPLED (FISICAMENTE AFFERRATO)</h4>
-              <p>Sei trattenuto fermamente da una forza esterna fisica</p>
-              <ul>
-                <li>La tua velocità di movimento diventa automaticamente 0 metri</li>
-                <li>La condizione termina immediatamente se chi ti afferra diventa Incapacitato</li>
-              </ul>
-            </div>
-            
-            <div class="stat-box">
-              <h4>INCAPACITATED (COMPLETAMENTE INABILITATO)</h4>
-              <p>Non sei in grado di agire o reagire efficacemente</p>
-              <ul>
-                <li>Non puoi compiere azioni o reazioni di alcun tipo</li>
-                <li>Puoi ancora muoverti se fisicamente è possibile farlo</li>
-              </ul>
-            </div>
-            
-            <div class="stat-box">
-              <h4>PARALYZED (COMPLETAMENTE PARALIZZATO)</h4>
-              <p>Il tuo corpo non risponde più ai comandi volontari</p>
-              <ul>
-                <li>Sei automaticamente anche Incapacitato completamente</li>
-                <li>Fallisci automaticamente tutti i tiro salvezza di Forza e di Agilità</li>
-                <li>Gli attacchi diretti contro di te hanno automaticamente Vantaggio</li>
-                <li>Qualsiasi colpo sferrato entro 1.5 metri è automaticamente un colpo critico devastante</li>
-              </ul>
-            </div>
-            
-            <div class="stat-box">
-              <h4>POISONED (GRAVEMENTE AVVELENATO)</h4>
-              <p>Hai del veleno tossico che circola nel tuo sistema sanguigno</p>
-              <ul>
-                <li>Tutti i tuoi attacchi offensivi subiscono automaticamente Svantaggio</li>
-                <li>Tutti i tuoi ability prova subiscono automaticamente Svantaggio</li>
-              </ul>
-            </div>
-            
-            <div class="stat-box">
-              <h4>PRONE (PRONO/SDRAIATO A TERRA)</h4>
-              <p>Sei sdraiato completamente a terra</p>
-              <ul>
-                <li>I tuoi attacchi in mischia ravvicinata subiscono automaticamente Svantaggio</li>
-                <li>Ottieni un bonus di +2 alla AC contro gli attacchi a distanza (oltre 1.5 metri)</li>
-                <li>Subisci una penalità di -2 alla AC contro gli attacchi in mischia ravvicinata</li>
-                <li>Alzarti in piedi costa esattamente metà del tuo movimento disponibile</li>
-              </ul>
-            </div>
-            
-            <div class="stat-box">
-              <h4>RESTRAINED (FISICAMENTE TRATTENUTO)</h4>
-              <p>Sei legato strettamente o intrappolato fisicamente</p>
-              <ul>
-                <li>La tua velocità di movimento diventa automaticamente 0 metri</li>
-                <li>Tutti i tuoi attacchi offensivi subiscono automaticamente Svantaggio</li>
-                <li>I tuoi tiro salvezza di Agilità subiscono automaticamente Svantaggio</li>
-                <li>Gli attacchi diretti contro di te hanno automaticamente Vantaggio</li>
-              </ul>
-            </div>
-            
-            <div class="stat-box">
-              <h4>STUNNED (GRAVEMENTE STORDITO)</h4>
-              <p>Sei completamente dazed, confuso e disorientato</p>
-              <ul>
-                <li>Sei automaticamente anche Incapacitato completamente</li>
-                <li>Fallisci automaticamente tutti i tiro salvezza di Forza e di Agilità</li>
-                <li>Gli attacchi diretti contro di te hanno automaticamente Vantaggio</li>
-              </ul>
-            </div>
-            
-            <div class="stat-box">
-              <h4>UNCONSCIOUS (COMPLETAMENTE INCOSCIENTE)</h4>
-              <p>Sei completamente svenuto oppure stai dormendo profondamente</p>
-              <ul>
-                <li>Sei automaticamente anche Incapacitato completamente</li>
-                <li>Lasci cadere immediatamente tutto ciò che stai tenendo in mano</li>
-                <li>Fallisci automaticamente tutti i tiro salvezza di Forza e di Agilità</li>
-                <li>Gli attacchi diretti contro di te hanno automaticamente Vantaggio</li>
-                <li>Qualsiasi colpo sferrato entro 1.5 metri è automaticamente un colpo critico devastante</li>
-              </ul>
-            </div>
-            
-            <div class="stat-box">
-              <h4>EXHAUSTION (ESAURIMENTO FISICO PROGRESSIVO)</h4>
-              <p>Rappresenta una fatica cumulativa progressiva e devastante</p>
-              <ul>
-                <li>Livello 1: Svantaggio automatico a tutti i prova di qualsiasi tipo</li>
-                <li>Livello 2: La tua velocità di movimento viene drasticamente dimezzata</li>
-                <li>Livello 3: Svantaggio automatico a tutti gli attacchi e a tutti i tiro salvezza</li>
-                <li>Livello 4: I tuoi HP massimi vengono drasticamente dimezzati</li>
-                <li>Livello 5: La tua velocità diventa solo 1.5 metri per round</li>
-                <li>Livello 6: Morte fisica immediata e inevitabile</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        
-        <!-- GM TOOLS -->
-        <section id="gm-tools" class="section">
-          <h2>🎲 Gli strumenti e le tabelle per il Game Master</h2>
-          
-          <h3>La costruzione bilanciata degli incontri</h3>
-          
-          <div class="tip-box">
-            <h4>⚖️ Le linee guida per il bilanciamento degli incontri</h4>
-            <p><strong>Per un party standard di 4 personaggi giocanti, livelli 3-5:</strong></p>
-            <ul>
-              <li><strong>Un combattimento facile:</strong> Da 4 a 6 nemici Minion OPPURE 2 nemici 
-              di tipo Standard</li>
-              <li><strong>Un combattimento di difficoltà media:</strong> Da 8 a 10 Minion OPPURE 
-              da 3 a 4 Standard OPPURE 1 nemico Elite</li>
-              <li><strong>Un combattimento difficile:</strong> 12 o più Minion OPPURE da 5 a 6 
-              Standard OPPURE 2 Elite OPPURE 1 Capo potente</li>
-              <li><strong>Un combattimento mortale:</strong> 1 Capo con del supporto attivo OPPURE 
-              2 creatura di livello Capo contemporaneamente</li>
-            </ul>
-            
-            <p style="margin-top: 15px;"><strong>I modificatori da applicare strategicamente:</strong></p>
-            <ul>
-              <li>Se il party ha solo 3 PG: Riduci il numero di nemici del 25%</li>
-              <li>Se il party ha 5 PG: Aumenta il numero di nemici del 25%</li>
-              <li>Se i I personaggi giocanti sono in Fase 3+ di Tenuta Mentale: Riduci i nemici del 20% (sono già 
-              severamente handicappati psicologicamente)</li>
-              <li>Se il terreno è favorevole ai PG: Aumenta i nemici del 20%</li>
-            </ul>
-          </div>
-          
-          <div class="info-box" style="margin-top: 30px;">
-            <h3>💡 I consigli finali per il Game Master</h3>
-            <p style="font-size: 1.05em; line-height: 1.8;">
-              Ricorda sempre che queste sono <strong>linee guida flessibili, non regole assolute 
-              e inviolabili</strong>. L'horror cosmico lovecraftiano funziona meccanicamente meglio 
-              quando i giocatori si sentono genuinamente vulnerabili e sotto pressione costante. Non 
-              aver paura di creare deliberatamente incontri che sembrano inizialmente impossibili da 
-              vincere - a volte la fuga disperata è la scelta più intelligente e ragionevole. Usa 
-              strategicamente la Tenuta Mentale come strumento narrativo potente per mostrare 
-              visivamente il deterioramento psicologico graduale e inesorabile. E soprattutto: 
-              mantieni sempre il senso profondo di mistero e di scoperta graduale. Non rivelare mai 
-              troppo e troppo presto ai tuoi giocatori.
-            </p>
-          </div>
-        </section>
-        
-      </main>
+            <!-- Main Content -->
+            <main class="content">
+                
+                <!-- INTRODUZIONE -->
+                <section id="intro" class="section">
+                    <h2>📖 Un'introduzione completa al sistema di gioco</h2>
+                    
+                    <p class="large">
+                        Questa sezione contiene tutte le regole che ti saranno necessarie per giocare correttamente 
+                        e in modo soddisfacente a <strong>Gunsmoke & Dread</strong>. Il sistema di base che utilizziamo 
+                        è quello di <strong>Daggerheart™ SRD 1.0</strong>, a cui abbiamo aggiunto delle modifiche 
+                        specifiche e calibrate, pensate appositamente per rendere giustizia all'ambientazione unica 
+                        del Weird West e per gestire efficacemente le meccaniche dell'horror cosmico.
+                    </p>
+                    
+                    <div class="info-box">
+                        <h3>🎯 Che cosa ti serve concretamente per giocare</h3>
+                        <ul style="font-size: 1.05em; line-height: 1.7;">
+                            <li><strong>Il sistema di base di riferimento:</strong> Ti serviranno le regole base complete 
+                            di Daggerheart™ nella versione SRD 1.0 oppure in qualsiasi versione superiore disponibile</li>
+                            <li><strong>I dadi poliedrici necessari:</strong> Avrai bisogno di un set completo di dadi 
+                            poliedrici, che deve includere almeno un dado d4, un dado d6, un dado d8, un dado d10, 
+                            due dadi d12 e un dado d20</li>
+                            <li><strong>I partecipanti richiesti:</strong> Il gioco funziona al meglio con un gruppo 
+                            composto da 3 a 5 giocatori più 1 Game Master che guida la narrazione (il numero ideale 
+                            che raccomandiamo è di 4 personaggi giocanti)</li>
+                            <li><strong>L'età consigliata per i partecipanti:</strong> 18 anni o più, dal momento 
+                            che il contenuto horror presentato nelle avventure è decisamente maturo e potenzialmente 
+                            disturbante</li>
+                            <li><strong>La durata tipica delle sessioni:</strong> Ogni sessione di gioco dura 
+                            tipicamente dalle 3 alle 4 ore, anche se la durata può variare a seconda del ritmo 
+                            del gruppo</li>
+                            <li><strong>Le schede dei personaggi necessarie:</strong> Tutte le schede dei personaggi 
+                            pregenerati sono fornite complete insieme a questa collezione e sono pronte per essere 
+                            utilizzate immediatamente</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h3>⚠️ I safety tools fortemente raccomandati</h3>
+                        <p style="font-size: 1.05em; line-height: 1.7;">
+                            Questa campagna contiene dei temi di horror particolarmente intensi e potenzialmente 
+                            disturbanti, che includono il body horror viscale, la violenza grafica esplicita, 
+                            l'orrore psicologico profondo e il nichilismo cosmico devastante. È <strong>fortemente 
+                            raccomandato</strong> che tu discuta apertamente e onestamente dei safety tools durante 
+                            la Session 0 preliminare con tutti i partecipanti:
+                        </p>
+                        <ul>
+                            <li><strong>La X-Card (strumento fondamentale):</strong> Chiunque si trovi al tavolo 
+                            di gioco può dire "X" in qualsiasi momento per saltare immediatamente del contenuto 
+                            che trova problematico, disturbante o inappropriato, senza dover fornire spiegazioni</li>
+                            <li><strong>Lines & Veils (linee e veli):</strong> Distingui chiaramente i temi che 
+                            sono completamente vietati e off-limits (hard no) rispetto ai temi che possono esistere 
+                            nella narrazione ma devono rimanere fuori scena ("fade to black")</li>
+                            <li><strong>Le pause regolari per il break:</strong> Fai un check-in emotivo esplicito 
+                            con tutto il gruppo ogni 90 minuti circa per assicurarti che tutti stiano bene e si 
+                            stiano divertendo</li>
+                            <li><strong>La Open Door Policy (politica della porta aperta):</strong> È sempre 
+                            assolutamente OK e accettabile per chiunque lasciare il tavolo di gioco se ne sente 
+                            la necessità, senza giudizi o pressioni</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- SISTEMA BASE DAGGERHEART -->
+                <section id="base" class="section">
+                    <h2>🎲 Il sistema base di Daggerheart</h2>
+                    
+                    <h3>Le meccaniche fondamentali del sistema</h3>
+                    
+                    <p class="large">
+                        Daggerheart utilizza un sistema di gioco che si basa sui <strong>dual-dice da 12 facce (d12)</strong> 
+                        con una meccanica particolare ed innovativa di Hope (Speranza) e Fear (Paura). Per tutte le 
+                        azioni importanti e significative, tirerai contemporaneamente 2 dadi da 12 facce (uno dei 
+                        quali rappresenta la Hope, l'altro rappresenta la Fear) e userai sempre il risultato più alto 
+                        tra i due, ma quale specifico dado mostra il risultato più alto determinerà se il Game Master 
+                        ottiene un prezioso token di Fear oppure no, influenzando così il corso della narrazione.
+                    </p>
+                    
+                    <div class="stat-block">
+                        <h4>🎲 Il tiro azione di base</h4>
+                        <p><strong>Quando si effettua questo tiro:</strong> Ogni volta che tenti di fare qualcosa 
+                        il cui risultato è incerto e contemporaneamente significativo per la storia</p>
+                        <p style="margin-top: 10px;"><strong>Come si effettua correttamente:</strong></p>
+                        <ol>
+                            <li>Tira contemporaneamente 2 dadi da 12 facce (uno rappresenta la Hope [usa preferibilmente 
+                            un colore chiaro], l'altro rappresenta la Fear [usa preferibilmente un colore scuro])</li>
+                            <li>Prendi e utilizza sempre il risultato più alto tra i due dadi tirati</li>
+                            <li>Aggiungi al risultato il modificatore rilevante e appropriato del tuo personaggio</li>
+                            <li>Confronta il totale ottenuto con la Classe di Difficoltà (CD) che è stata stabilita 
+                            in precedenza dal Game Master</li>
+                        </ol>
+                        <p style="margin-top: 10px;"><strong>I possibili risultati e le loro conseguenze:</strong></p>
+                        <ul>
+                            <li><strong>Successo Standard (risultato ≥ CD):</strong> Ottieni esattamente quello che 
+                            volevi ottenere, senza complicazioni aggiuntive</li>
+                            <li><strong>Successo con Hope:</strong> Ottieni il successo desiderato E in più il Game 
+                            Master riceve un token di Hope che può utilizzare strategicamente a favore dei giocatori</li>
+                            <li><strong>Successo con Fear:</strong> Ottieni il successo che volevi MA il Game Master 
+                            riceve un token di Fear che può utilizzare contro i giocatori per complicare le cose</li>
+                            <li><strong>Fallimento (risultato < CD):</strong> Non ottieni quello che volevi e ci 
+                            saranno delle conseguenze negative significative per il tuo personaggio</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Gli Attributi e i Loro Modificatori</h3>
+                    
+                    <div class="grid-auto">
+                        <div class="stat-box">
+                            <h4>💪 LA FORZA</h4>
+                            <p>Rappresenta la tua potenza fisica bruta, l'abilità nel combattimento corpo a corpo 
+                            e la capacità di sollevare o spingere oggetti pesanti</p>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>🎯 L'AGILITÀ</h4>
+                            <p>Rappresenta la tua destrezza manuale, i tuoi riflessi rapidi, la tua capacità di 
+                            movimento agile e l'abilità nel combattimento a distanza</p>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>🧠 LA CONOSCENZA</h4>
+                            <p>Rappresenta la tua intelligenza generale, la tua memoria, la capacità di fare 
+                            ricerche approfondite, le tue competenze mediche e investigative</p>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>🗣️ LA PRESENZA</h4>
+                            <p>Rappresenta il tuo carisma personale, le tue doti di leadership, la capacità di 
+                            persuadere gli altri e di intimidire quando necessario</p>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>👁️ L'ISTINTO</h4>
+                            <p>Rappresenta la tua percezione dell'ambiente circostante, la tua empatia verso 
+                            gli altri, il tuo intuito naturale e la tua generale awareness</p>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>🛡️ LA COSTITUZIONE</h4>
+                            <p>Rappresenta la tua resistenza fisica, la tua tenacia mentale e la capacità di 
+                            resistere ai veleni, alle malattie e alla fatica prolungata</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h3>💡 Un Consiglio per i Nuovi Giocatori</h3>
+                        <p style="font-size: 1.05em; line-height: 1.8;">
+                            Se questa è la tua prima volta con il sistema Daggerheart, non preoccuparti affatto! 
+                            Il sistema è stato progettato per essere intuitivo e narrativo. La cosa più importante 
+                            da ricordare è questa: <strong>descrivi sempre quello che il tuo personaggio sta 
+                            tentando di fare</strong>, e poi il Game Master ti dirà quale dado tirare e quale 
+                            Classe di Difficoltà dovrai superare.
+                        </p>
+                    </div>
+                </section>
+                
+                <!-- SISTEMA TENUTA MENTALE -->
+                <section id="tenuta" class="section">
+                    <h2>🧠 Il sistema completo della Tenuta Mentale</h2>
+                    
+                    <p class="large">
+                        Il sistema della <strong>Tenuta Mentale</strong> (che in inglese viene chiamato "Sanity") 
+                        rappresenta l'aggiunta meccanica più importante e significativa per il genere dell'horror 
+                        cosmico lovecraftiano. Questo sistema traccia accuratamente il deterioramento psicologico 
+                        progressivo e inesorabile del tuo personaggio quando viene ripetutamente esposto a delle 
+                        verità cosmiche devastanti che la mente umana semplicemente non è progettata biologicamente 
+                        per comprendere o accettare.
+                    </p>
+                    
+                    <div class="horror-box">
+                        <h3>👁️ Come funziona esattamente il sistema</h3>
+                        <p style="font-size: 1.05em; line-height: 1.8;">
+                            Ogni personaggio giocante possiede una traccia dedicata della Tenuta Mentale che è 
+                            suddivisa in <strong>10 segmenti distinti e progressivi</strong>. Quando il tuo 
+                            personaggio subisce un trauma psicologico significativo (per esempio quando vede per 
+                            la prima volta un mostro terrificante, quando legge un tomo proibito e blasfemo, o 
+                            quando assiste direttamente a una rivelazione cosmica devastante), tu riempi 
+                            immediatamente uno o più segmenti di questa traccia della sanità mentale.
+                        </p>
+                        <p style="margin-top: 15px; font-weight: bold; color: var(--blood-red);">
+                            Quando la traccia viene riempita completamente fino all'ultimo segmento (tutti i 10 
+                            segmenti sono completamente pieni), il tuo personaggio subisce immediatamente e 
+                            inevitabilmente una <strong>Conseguenza Permanente e Irreversibile</strong>, e 
+                            successivamente la traccia viene azzerata completamente per ricominciare da capo 
+                            il ciclo devastante.
+                        </p>
+                    </div>
+                    
+                    <h3>Le Cinque Fasi del Deterioramento Mentale</h3>
+                    
+                    <div class="stat-block">
+                        <h4>FASE 1: NORMALE (0-2 Segmenti Riempiti)</h4>
+                        <p><strong>Lo Stato Mentale:</strong> Il personaggio è ancora psicologicamente stabile 
+                        e funzionale</p>
+                        <p><strong>Gli Effetti Meccanici:</strong> Nessun malus o penalità di alcun tipo</p>
+                        <p><strong>I Segni Narrativi:</strong></p>
+                        <ul>
+                            <li>Il personaggio può occasionalmente avere degli incubi notturni disturbanti</li>
+                            <li>Potrebbe esitare momentaneamente prima di affrontare situazioni spaventose</li>
+                            <li>Ma in generale mantiene il controllo completo delle sue azioni</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="stat-block" style="margin-top: 20px;">
+                        <h4>FASE 2: SCOSSO (3-5 Segmenti Riempiti)</h4>
+                        <p><strong>Lo Stato Mentale:</strong> Il personaggio comincia a mostrare dei segni 
+                        evidenti di stress psicologico</p>
+                        <p><strong>Gli Effetti Meccanici:</strong> Subisce uno svantaggio (-1) a tutti i check 
+                        di Presenza quando si trova in situazioni sociali stressanti</p>
+                        <p><strong>I Segni Narrativi:</strong></p>
+                        <ul>
+                            <li>Sviluppa dei tic nervosi visibili (come il tremore alle mani, lo sguardo che 
+                            vaga costantemente)</li>
+                            <li>Fatica notevolmente a concentrarsi su compiti che richiedono attenzione prolungata</li>
+                            <li>Può avere degli improvvisi flashback vividi di eventi traumatici che ha vissuto</li>
+                            <li>Dorme molto male e quando dorme è tormentato da incubi ricorrenti</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="stat-block" style="margin-top: 20px;">
+                        <h4>FASE 3: TRAUMATIZZATO (6-8 Segmenti Riempiti)</h4>
+                        <p><strong>Lo Stato Mentale:</strong> Il personaggio è gravemente traumatizzato 
+                        psicologicamente</p>
+                        <p><strong>Gli Effetti Meccanici:</strong></p>
+                        <ul>
+                            <li>Subisce uno svantaggio (-2) a tutti i check di Presenza</li>
+                            <li>Subisce uno svantaggio (-1) a tutti i check di Istinto quando si trova sotto 
+                            pressione</li>
+                            <li>Deve effettuare un check di Presenza (CD 12) ogni volta che affronta direttamente 
+                            la fonte del suo trauma, oppure rimane paralizzato dalla paura per 1 round completo</li>
+                        </ul>
+                        <p><strong>I Segni Narrativi:</strong></p>
+                        <ul>
+                            <li>Manifesta una paranoia sempre crescente (vede minacce ovunque lo circondano)</li>
+                            <li>Ha degli episodi dissociativi ricorrenti ("perdo momenti di tempo", "non ricordo 
+                            cosa ho fatto")</li>
+                            <li>Può sviluppare delle fobie specifiche legate direttamente ai suoi traumi</li>
+                            <li>Le sue relazioni sociali cominciano a deteriorarsi visibilmente</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="stat-block" style="margin-top: 20px;">
+                        <h4>FASE 4: IN BILICO (9 Segmenti Riempiti)</h4>
+                        <p><strong>Lo Stato Mentale:</strong> Il personaggio è sull'orlo di un completo 
+                        breakdown mentale</p>
+                        <p><strong>Gli Effetti Meccanici:</strong></p>
+                        <ul>
+                            <li>Subisce uno svantaggio (-2) a TUTTI i check di qualsiasi tipo</li>
+                            <li>Una volta per sessione, il Game Master può forzare un'azione irrazionale 
+                            (il giocatore può spendere 2 token di Hope per resistere)</li>
+                            <li>Non può più beneficiare dei normali effetti del riposo lungo per recuperare 
+                            la Tenuta Mentale</li>
+                        </ul>
+                        <p><strong>I Segni Narrativi:</strong></p>
+                        <ul>
+                            <li>Ha delle allucinazioni ricorrenti (vede cose che non ci sono, sente voci 
+                            inesistenti)</li>
+                            <li>Il suo comportamento diventa sempre più erratico e imprevedibile</li>
+                            <li>Può avere degli episodi di amnesia temporanea</li>
+                            <li>Gli altri personaggi notano chiaramente che "c'è qualcosa di profondamente 
+                            sbagliato"</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="warning-box" style="margin-top: 20px;">
+                        <h4>💀 FASE 5: BREAKDOWN (10 Segmenti - Traccia Completa)</h4>
+                        <p style="font-size: 1.1em; font-weight: bold; color: var(--blood-red);">
+                            Quando la traccia della Tenuta Mentale viene riempita completamente, il personaggio 
+                            subisce immediatamente una CONSEGUENZA PERMANENTE.
+                        </p>
+                        <p style="margin-top: 15px;"><strong>La Meccanica:</strong></p>
+                        <ol>
+                            <li>Il giocatore tira 1d6 sulla Tabella delle Conseguenze (vedi sotto)</li>
+                            <li>La Conseguenza ottenuta diventa <strong>permanente</strong> e viene scritta 
+                            sulla scheda del personaggio</li>
+                            <li>La traccia della Tenuta Mentale viene immediatamente azzerata e ricomincia 
+                            da 0</li>
+                            <li>Il personaggio può accumulare <strong>multiple Conseguenze</strong> durante 
+                            la campagna (ogni volta che riempie completamente la traccia)</li>
+                        </ol>
+                    </div>
+                    
+                    <h3>📊 La Tabella delle Conseguenze Permanenti</h3>
+                    
+                    <div class="stat-block">
+                        <p><strong>Tira 1d6:</strong></p>
+                        
+                        <p style="margin-top: 15px;"><strong>1 - LA FOBIA DEBILITANTE</strong></p>
+                        <p>Il personaggio sviluppa una fobia intensa e specifica legata direttamente al trauma 
+                        che ha subito (per esempio: paura dell'acqua, paura del buio profondo, paura degli 
+                        spazi chiusi). Quando si trova esposto alla fonte della sua fobia, subisce uno 
+                        svantaggio permanente (-2) a tutti i check e deve superare un check di Presenza (CD 15) 
+                        oppure fugge terrorizzato.</p>
+                        
+                        <p style="margin-top: 15px;"><strong>2 - IL TIC COMPULSIVO</strong></p>
+                        <p>Il personaggio sviluppa un comportamento compulsivo che non riesce a controllare 
+                        (per esempio: deve contare ossessivamente gli oggetti, deve controllare ripetutamente 
+                        le porte, deve lavarsi le mani continuamente). Se viene impedito di compiere il suo 
+                        rituale compulsivo, subisce uno svantaggio (-1) a tutti i check finché non può 
+                        completarlo.</p>
+                        
+                        <p style="margin-top: 15px;"><strong>3 - LA PARANOIA CRONICA</strong></p>
+                        <p>Il personaggio diventa profondamente e cronicamente paranoico. Vede minacce e 
+                        cospirazioni ovunque lo circondano. Subisce uno svantaggio permanente (-1) a tutti i 
+                        check sociali perché non si fida più di nessuno. Nelle situazioni stressanti, può 
+                        accusare gli alleati di tradimento.</p>
+                        
+                        <p style="margin-top: 15px;"><strong>4 - GLI INCUBI RICORRENTI</strong></p>
+                        <p>Il personaggio è tormentato ogni notte da incubi terrificanti e vividi. Non può più 
+                        beneficiare completamente di un riposo lungo - recupera solamente la metà dei normali 
+                        HP e non recupera automaticamente alcun segmento di Tenuta Mentale dal riposo. Appare 
+                        costantemente esausto e con le occhiaie profonde.</p>
+                        
+                        <p style="margin-top: 15px;"><strong>5 - LA DISSOCIAZIONE EPISODICA</strong></p>
+                        <p>Il personaggio ha degli episodi ricorrenti di dissociazione durante i quali perde 
+                        completamente il contatto con la realtà. Una volta per sessione (o quando il GM lo 
+                        ritiene appropriato), il personaggio può avere un episodio dissociativo che dura 1d4 
+                        minuti durante i quali non è consapevole di ciò che lo circonda.</p>
+                        
+                        <p style="margin-top: 15px;"><strong>6 - LA RIVELAZIONE OSCURA</strong></p>
+                        <p>Il personaggio ha compreso una verità cosmica terrificante che non può più ignorare. 
+                        Guadagna permanentemente un bonus (+2) a tutti i check relativi al Mythos e alle 
+                        creature cosmiche, MA subisce uno svantaggio permanente (-2) a tutti i check sociali 
+                        con persone normali (perché ora vede il mondo in modo troppo diverso da loro). Inoltre, 
+                        tutti i futuri check di Tenuta Mentale hanno la CD aumentata di +2.</p>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h3>💡 Dei Consigli per Interpretare la Tenuta Mentale</h3>
+                        <p style="font-size: 1.05em; line-height: 1.8;">
+                            La Tenuta Mentale non è solamente una meccanica di gioco - è un potente strumento 
+                            narrativo. Quando il tuo personaggio guadagna dei segmenti di Tenuta, prenditi un 
+                            momento per descrivere come questo lo influenza emotivamente. Come reagisce il tuo 
+                            personaggio? Diventa più silenzioso e introverso? Inizia a bere per dimenticare? 
+                            Si aggrappa disperatamente ai suoi compagni? Usa la meccanica per arricchire la 
+                            tua interpretazione del personaggio.
+                        </p>
+                    </div>
+                </section>
+                
+                <!-- Le sezioni rimanenti continueranno nello stesso stile fluido -->
+                
+                <!-- DIFFICOLTÀ CHECKS -->
+                <section id="checks" class="section">
+                    <h2>📊 Le Difficoltà dei Check (Classe Difficoltà)</h2>
+                    
+                    <p class="large">
+                        La <strong>Classe di Difficoltà (CD)</strong> rappresenta il numero che devi raggiungere 
+                        o superare con il tuo tiro per avere successo in un'azione. Il Game Master stabilisce la 
+                        CD in base a quanto è difficile quello che stai tentando di fare.
+                    </p>
+                    
+                    <div class="stat-block">
+                        <h4>📊 La Scala Standard delle Difficoltà</h4>
+                        <table style="width: 100%; margin-top: 10px;">
+                            <thead>
+                                <tr>
+                                    <th>La CD</th>
+                                    <th>La Difficoltà</th>
+                                    <th>La Descrizione</th>
+                                    <th>Un Esempio Pratico</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>5</strong></td>
+                                    <td>Triviale</td>
+                                    <td>È quasi impossibile fallire</td>
+                                    <td>Notare una porta gigantesca proprio davanti a te</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>8</strong></td>
+                                    <td>Facile</td>
+                                    <td>La maggior parte delle persone ci riesce</td>
+                                    <td>Cavalcare un cavallo particolarmente tranquillo</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>10</strong></td>
+                                    <td>Routine</td>
+                                    <td>Le persone competenti ci riescono normalmente</td>
+                                    <td>Scalare una parete rocciosa avendo delle corde</td>
+                                </tr>
+                                <tr style="background: rgba(255, 152, 0, 0.1);">
+                                    <td><strong>12</strong></td>
+                                    <td>Moderato</td>
+                                    <td>Richiede una certa abilità e competenza</td>
+                                    <td>Convincere una guardia che è sospettosa di te</td>
+                                </tr>
+                                <tr style="background: rgba(255, 152, 0, 0.2);">
+                                    <td><strong>14</strong></td>
+                                    <td>Difficile</td>
+                                    <td>Solo le persone davvero skilled ci riescono</td>
+                                    <td>Disarmare una trappola meccanica complessa</td>
+                                </tr>
+                                <tr style="background: rgba(244, 67, 54, 0.1);">
+                                    <td><strong>16</strong></td>
+                                    <td>Molto Difficile</td>
+                                    <td>Rappresenta una sfida anche per gli esperti</td>
+                                    <td>Decifrare un linguaggio completamente alieno</td>
+                                </tr>
+                                <tr style="background: rgba(244, 67, 54, 0.2);">
+                                    <td><strong>18</strong></td>
+                                    <td>Formidabile</td>
+                                    <td>È quasi completamente impossibile</td>
+                                    <td>Saltare attraverso un canyon largo 6 metri</td>
+                                </tr>
+                                <tr style="background: rgba(0, 0, 0, 0.2);">
+                                    <td><strong>20+</strong></td>
+                                    <td>Leggendario</td>
+                                    <td>Serve praticamente un miracolo o una mastery assoluta</td>
+                                    <td>Comprendere la geometria non-euclidea aliena</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Le Linee Guida per il Game Master</h4>
+                        <ul>
+                            <li><strong>CD 10-12:</strong> Questa rappresenta la "baseline" standard per la maggior 
+                            parte dei check normali e quotidiani</li>
+                            <li><strong>CD 14-16:</strong> Usa queste CD per le situazioni che sono particolarmente 
+                            tese, dove c'è molta pressione o dove viene richiesta una vera expertise</li>
+                            <li><strong>CD 18 o superiore:</strong> Riservale solamente per i momenti davvero 
+                            climactici della storia o per le azioni che sono praticamente impossibili</li>
+                            <li><strong>Vantaggio/Svantaggio:</strong> Spesso è meglio modificare la probabilità 
+                            di successo usando questi modificatori piuttosto che cambiare la CD stessa</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- COMBATTIMENTO -->
+                <section id="combat" class="section">
+                    <h2>⚔️ Il sistema completo di combattimento</h2>
+                    
+                    <h3>L'iniziativa e la struttura dei round</h3>
+                    
+                    <div class="stat-block">
+                        <h4>🎲 Come determinare correttamente l'iniziativa</h4>
+                        <p>All'inizio di ogni singolo combattimento, tutti i partecipanti coinvolti (sia i 
+                        personaggi giocanti che i nemici) devono tirare <strong>Istinto + Agilità</strong>. 
+                        L'ordine di azione nel turno procede sistematicamente dal risultato più alto ottenuto 
+                        verso il risultato più basso.</p>
+                        <p><strong>Note importanti da tenere a mente:</strong></p>
+                        <ul>
+                            <li>Il livello attuale di Tenuta Mentale del tuo personaggio può dare delle penalità 
+                            meccaniche significative al tuo tiro di Iniziativa</li>
+                            <li>Fattore Sorpresa: Chi riesce a sorprendere completamente i nemici ottiene 
+                            automaticamente un Vantaggio sostanziale al tiro di Iniziativa</li>
+                            <li>Ogni round di combattimento dura approssimativamente 6 secondi di tempo narrativo 
+                            all'interno del gioco</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>L'economia completa delle azioni disponibili</h3>
+                    
+                    <div class="grid-auto">
+                        <div class="stat-box">
+                            <h4>L'AZIONE PRINCIPALE</h4>
+                            <p><strong>Ne hai esattamente 1 sola per ogni singolo turno</strong></p>
+                            <ul>
+                                <li>Effettuare un attacco offensivo (con un'arma fisica oppure con una spell magica)</li>
+                                <li>Usare l'azione Dash per ottenere del movimento extra aggiuntivo</li>
+                                <li>Compiere un'azione particolarmente complessa (come disarmare fisicamente qualcuno)</li>
+                                <li>Aiutare attivamente e concretamente un tuo alleato in difficoltà</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>IL MOVIMENTO</h4>
+                            <p><strong>È completamente gratuito (puoi muoverti 1 volta la tua velocità base)</strong></p>
+                            <ul>
+                                <li>Un essere umano standard può muoversi di 9 metri (che equivalgono a 30 piedi 
+                                nel sistema imperiale)</li>
+                                <li>Il terreno particolarmente difficile riduce drasticamente la velocità effettiva 
+                                alla metà del normale</li>
+                                <li>L'azione speciale Dash ti permette di muoverti del doppio della tua velocità 
+                                normale di base</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>L'AZIONE BONUS</h4>
+                            <p><strong>Solo se ne hai una effettivamente disponibile</strong></p>
+                            <ul>
+                                <li>Usare un oggetto particolarmente semplice e immediato</li>
+                                <li>Attivare delle abilità specifiche caratteristiche della tua classe di personaggio</li>
+                                <li>Effettuare un secondo attacco aggiuntivo (solo se possiedi esplicitamente questa 
+                                capacità speciale)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>LA REACTION</h4>
+                            <p><strong>Ne hai esattamente 1 sola per ogni round completo di combattimento</strong></p>
+                            <ul>
+                                <li>Effettuare un attacco di opportunità quando qualcuno si allontana imprudentemente 
+                                dalla tua portata</li>
+                                <li>Attivare delle abilità specificatamente difensive</li>
+                                <li>Rispondere a dei innesco molto specifici</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3>L'Attacco e il Danno</h3>
+                    
+                    <div class="stat-block">
+                        <h4>🎯 Il Processo di Attacco Base</h4>
+                        <p><strong>Il Processo Completo:</strong></p>
+                        <ol>
+                            <li>Dichiari esplicitamente il tuo target che deve trovarsi entro il range della 
+                            tua arma</li>
+                            <li>Tiri 2d12 e aggiungi il tuo modificatore di attacco appropriato</li>
+                            <li>Confronti il totale con l'Armor Class (AC) del tuo target</li>
+                            <li>Se il risultato è uguale o superiore all'AC: Hai colpito! Tira il danno</li>
+                            <li>Se il risultato è inferiore all'AC: Hai mancato completamente!</li>
+                        </ol>
+                        
+                        <p style="margin-top: 15px;"><strong>I Modificatori di Attacco:</strong></p>
+                        <ul>
+                            <li><strong>Per gli Attacchi in Mischia (Melee):</strong> Usi normalmente il tuo 
+                            bonus di Forza</li>
+                            <li><strong>Per gli Attacchi a Distanza (Ranged):</strong> Usi il tuo bonus di Agilità</li>
+                            <li><strong>Per le Armi con la proprietà Finesse:</strong> Puoi scegliere liberamente 
+                            se usare Forza o Agilità</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Le Armi da Fuoco (Specifiche per il Weird West)</h3>
+                    
+                    <div class="stat-block">
+                        <h4>🔫 Le Regole Speciali per le Firearms</h4>
+                        <table style="width: 100%; margin-top: 10px;">
+                            <thead>
+                                <tr>
+                                    <th>Il Tipo di Arma</th>
+                                    <th>Il Danno Base</th>
+                                    <th>Il Range Effettivo</th>
+                                    <th>Le Proprietà Speciali</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Il Revolver</strong></td>
+                                    <td>2d6</td>
+                                    <td>12 metri / 36 metri</td>
+                                    <td>Richiede Loading, contiene 6 colpi</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Il Rifle</strong></td>
+                                    <td>2d8</td>
+                                    <td>24 metri / 90 metri</td>
+                                    <td>Richiede Two-handed, Loading</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Lo Shotgun</strong></td>
+                                    <td>3d6</td>
+                                    <td>6 metri / 15 metri</td>
+                                    <td>Richiede Two-handed, ha proprietà Spread</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>La Dynamite</strong></td>
+                                    <td>4d6</td>
+                                    <td>Raggio di 6 metri</td>
+                                    <td>Richiede Reflex CD 14 per dimezzare il danno</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <p style="margin-top: 15px;"><strong>La Proprietà Loading:</strong></p>
+                        <p style="font-size: 1.05em; line-height: 1.8;">
+                            Ricaricare un'arma da fuoco richiede un'azione bonus completa. Durante l'era del Weird 
+                            West, non esistevano ancora i caricatori rapidi - ogni colpo doveva essere inserito 
+                            manualmente nella camera dell'arma.
+                        </p>
+                        
+                        <p style="margin-top: 15px;"><strong>La Proprietà Spread (per lo Shotgun):</strong></p>
+                        <p style="font-size: 1.05em; line-height: 1.8;">
+                            A distanza ravvicinata (entro i 3 metri), puoi scegliere di colpire simultaneamente 
+                            2 target adiacenti con un singolo colpo, ma il danno viene diviso equamente tra loro.
+                        </p>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h3>💡 I Consigli Tattici per il Combattimento</h3>
+                        <ul style="font-size: 1.05em; line-height: 1.7;">
+                            <li><strong>Usa sempre la copertura quando è possibile:</strong> Stare dietro una 
+                            copertura può darti un bonus significativo alla tua AC</li>
+                            <li><strong>Coordina le azioni con i tuoi alleati:</strong> Aiutare un alleato può 
+                            dargli Vantaggio sul suo prossimo attacco</li>
+                            <li><strong>Gestisci attentamente le tue munizioni:</strong> Nel Weird West, le munizioni 
+                            non sono infinite e ricaricare richiede tempo prezioso</li>
+                            <li><strong>Considera sempre la Tenuta Mentale:</strong> Un personaggio che è 
+                            gravemente traumatizzato combatte con penalità significative</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- PERICOLI AMBIENTALI -->
+                <section id="environment" class="section">
+                    <h2>🌪️ I Pericoli Ambientali</h2>
+                    
+                    <p class="large">
+                        Il Weird West è un luogo estremamente pericoloso anche senza considerare i mostri cosmici. 
+                        Il deserto spietato, le tempeste improvvise e i pericoli naturali possono essere altrettanto 
+                        mortali quanto qualsiasi creatura soprannaturale.
+                    </p>
+                    
+                    <div class="stat-block">
+                        <h4>🔥 IL CALORE ESTREMO DEL DESERTO</h4>
+                        <p style="font-size: 1.05em; line-height: 1.8;">
+                            Durante il giorno, il deserto può raggiungere temperature che superano facilmente i 
+                            45°C all'ombra (se riesci a trovare dell'ombra). I personaggi che viaggiano durante 
+                            le ore più calde devono effettuare un check di Costituzione (CD 12) ogni 2 ore. In 
+                            caso di fallimento, guadagnano 1 livello di Esaurimento.
+                        </p>
+                        <p style="margin-top: 10px;"><strong>La Prevenzione:</strong></p>
+                        <ul>
+                            <li>Viaggiare durante le ore più fresche (alba e tramonto)</li>
+                            <li>Indossare abbigliamento adeguato che copre il corpo</li>
+                            <li>Bere molta acqua regolarmente (almeno 4 litri al giorno per persona)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="stat-block" style="margin-top: 20px;">
+                        <h4>❄️ IL FREDDO NOTTURNO DEL DESERTO</h4>
+                        <p style="font-size: 1.05em; line-height: 1.8;">
+                            Quando il sole tramonta, la temperatura del deserto può crollare drammaticamente 
+                            fino a raggiungere lo zero o addirittura temperature sotto zero. I personaggi senza 
+                            un riparo adeguato o senza coperte calde devono effettuare un check di Costituzione 
+                            (CD 10) ogni 4 ore. Il fallimento causa 1 livello di Esaurimento.
+                        </p>
+                    </div>
+                    
+                    <div class="stat-block" style="margin-top: 20px;">
+                        <h4>💧 LA DISIDRATAZIONE</h4>
+                        <p style="font-size: 1.05em; line-height: 1.8;">
+                            Un personaggio ha bisogno di almeno 4 litri d'acqua al giorno nel clima desertico. 
+                            Per ogni giorno senza acqua sufficiente, deve effettuare un check di Costituzione 
+                            (CD che aumenta di +2 ogni giorno). Il fallimento causa 1 livello di Esaurimento 
+                            che non può essere rimosso finché non beve abbondantemente.
+                        </p>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>🐍 GLI INCONTRI CON ANIMALI PERICOLOSI</h4>
+                        <p style="font-size: 1.05em; line-height: 1.8;">
+                            Il deserto è abitato da numerose creature pericolose completamente naturali:
+                        </p>
+                        <ul>
+                            <li><strong>I Serpenti a Sonagli:</strong> Il loro morso velenoso richiede un check 
+                            di Costituzione (CD 14) oppure il personaggio subisce 2d6 di danno da veleno e viene 
+                            avvelenato per 1 ora</li>
+                            <li><strong>Gli Scorpioni:</strong> Nascosti sotto le rocce, la loro puntura causa 
+                            1d4 di danno più un check di Costituzione (CD 12) contro il veleno</li>
+                            <li><strong>I Coyote Affamati:</strong> Raramente attaccano gli umani ma possono 
+                            essere attratti dai bivacchi notturni e dal cibo</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- EQUIPAGGIAMENTO WEIRD WEST -->
+                <section id="equipment" class="section">
+                    <h2>🎒 L'Equipaggiamento del Weird West</h2>
+                    
+                    <h3>Le Armi Standard dell'Epoca</h3>
+                    
+                    <div class="stat-block">
+                        <table style="width: 100%; margin-top: 10px;">
+                            <thead>
+                                <tr>
+                                    <th>Il Tipo di Arma</th>
+                                    <th>Il Costo</th>
+                                    <th>Il Danno</th>
+                                    <th>Il Peso</th>
+                                    <th>Le Proprietà Speciali</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Il Revolver Colt .45</strong></td>
+                                    <td>$15</td>
+                                    <td>2d6</td>
+                                    <td>1.5 kg</td>
+                                    <td>Richiede Loading, contiene 6 colpi, range 12/36 metri</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Il Winchester Rifle</strong></td>
+                                    <td>$25</td>
+                                    <td>2d8</td>
+                                    <td>4 kg</td>
+                                    <td>Richiede entrambe le mani (Two-handed), range 24/90 metri</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Il Double-Barrel Shotgun</strong></td>
+                                    <td>$30</td>
+                                    <td>3d6</td>
+                                    <td>4 kg</td>
+                                    <td>Two-handed, proprietà Spread, range 6/15 metri</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Il Knife o Dagger</strong></td>
+                                    <td>$2</td>
+                                    <td>1d4</td>
+                                    <td>0.5 kg</td>
+                                    <td>Finesse, Light, può essere lanciato 6/12 metri</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Il Tomahawk</strong></td>
+                                    <td>$5</td>
+                                    <td>1d6</td>
+                                    <td>1 kg</td>
+                                    <td>Può essere lanciato 6/18 metri, Versatile</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h3>L'Equipaggiamento di Base e le Forniture</h3>
+                    
+                    <div class="stat-block">
+                        <table style="width: 100%; margin-top: 10px;">
+                            <thead>
+                                <tr>
+                                    <th>L'Oggetto</th>
+                                    <th>Il Costo</th>
+                                    <th>Il Peso</th>
+                                    <th>Le Note Importanti</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>La Corda di Canapa (15 metri)</td>
+                                    <td>$1</td>
+                                    <td>5 kg</td>
+                                    <td>Fatta di canapa robusta e resistente</td>
+                                </tr>
+                                <tr>
+                                    <td>La Lanterna con l'Olio</td>
+                                    <td>$3</td>
+                                    <td>1 kg</td>
+                                    <td>Fornisce luce per 6 ore continue</td>
+                                </tr>
+                                <tr>
+                                    <td>Il Bastoncino di Dynamite</td>
+                                    <td>$2</td>
+                                    <td>0.5 kg</td>
+                                    <td>Causa 4d6 di danno in un raggio di 6 metri</td>
+                                </tr>
+                                <tr>
+                                    <td>La Bottiglia di Whiskey</td>
+                                    <td>$0.50</td>
+                                    <td>0.5 kg</td>
+                                    <td>Permette temporaneamente di ignorare le penalità di Tenuta Mentale</td>
+                                </tr>
+                                <tr>
+                                    <td>La Dose di Morphine</td>
+                                    <td>$1</td>
+                                    <td>-</td>
+                                    <td>Guarisce 2d4+2 HP ma crea dipendenza se usata spesso</td>
+                                </tr>
+                                <tr>
+                                    <td>Il Sacco a Pelo (Bedroll)</td>
+                                    <td>$1</td>
+                                    <td>3 kg</td>
+                                    <td>Permette un riposo più confortevole durante la notte</td>
+                                </tr>
+                                <tr>
+                                    <td>Un Cavallo da Sella</td>
+                                    <td>$50-150</td>
+                                    <td>-</td>
+                                    <td>Velocità di 18 metri, può trasportare fino a 200 kg</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h3>Gli Oggetti Speciali del Weird West</h3>
+                    
+                    <div class="horror-box">
+                        <h4>🔮 Gli Amuleti Protettivi e i Talismani</h4>
+                        <p style="font-size: 1.05em; line-height: 1.8;">
+                            Questi oggetti sono estremamente rari e spesso di efficacia molto dubbia, ma possono 
+                            fornire un certo conforto psicologico ai personaggi:
+                        </p>
+                        <ul>
+                            <li><strong>La Croce Benedetta:</strong> Fornisce un bonus di +1 ai check di Tenuta 
+                            Mentale contro le presenze profane (anche se potrebbe essere solo un effetto placebo)</li>
+                            <li><strong>I Proiettili d'Argento:</strong> Causano il doppio del danno normale contro 
+                            certe creature soprannaturali (ma costano ben $5 ciascuno)</li>
+                            <li><strong>Il Dreamcatcher dei Nativi:</strong> Fornisce un bonus di +2 ai saving 
+                            throws contro gli incubi notturni</li>
+                            <li><strong>Il Whiskey "Ghost Ward":</strong> Venduto come protezione contro i fantasmi, 
+                            ma in realtà è solo snake oil senza alcun effetto reale</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- HEALING & RECOVERY -->
+                <section id="healing" class="section">
+                    <h2>❤️‍🩹 La Guarigione e il Recupero</h2>
+                    
+                    <h3>Il Recupero dei Punti Ferita</h3>
+                    
+                    <div class="stat-block">
+                        <h4>🛏️ I Diversi Tipi di Riposo</h4>
+                        
+                        <p><strong>IL RIPOSO BREVE (SHORT REST - 1 ora):</strong></p>
+                        <ul>
+                            <li>Puoi tirare uno qualsiasi dei tuoi Hit Dice ancora disponibili</li>
+                            <li>Recuperi un numero di HP pari al risultato del dado più il tuo modificatore di 
+                            Costituzione</li>
+                            <li>Puoi effettuare al massimo 1 Short Rest tra un Long Rest e l'altro</li>
+                        </ul>
+                        
+                        <p style="margin-top: 15px;"><strong>IL RIPOSO LUNGO (LONG REST - 8 ore):</strong></p>
+                        <ul>
+                            <li>Recuperi automaticamente TUTTI i tuoi Punti Ferita</li>
+                            <li>Recuperi la metà dei tuoi Hit Dice totali (con un minimo di 1)</li>
+                            <li>Recuperi 1d4 segmenti di Tenuta Mentale</li>
+                            <li>Rimuovi 1 livello di Esaurimento (Exhaustion)</li>
+                        </ul>
+                        
+                        <p style="margin-top: 15px;"><strong>I Requisiti per un Long Rest Valido:</strong></p>
+                        <ul>
+                            <li>Devi trovarti in un luogo relativamente sicuro (senza minacce attive immediate)</li>
+                            <li>Devi dormire per almeno 6 ore delle 8 totali</li>
+                            <li>Puoi dedicare al massimo 2 ore ad attività leggere (come fare la guardia o 
+                            cucinare)</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>La Medicina e i Primi Soccorsi</h3>
+                    
+                    <div class="stat-block">
+                        <h4>🩹 Il First Aid (Richiede un'Azione)</h4>
+                        <p><strong>I Requisiti Necessari:</strong> Devi avere un kit medico e il target deve 
+                        essere ancora vivo</p>
+                        <p><strong>Il Check Richiesto:</strong> Conoscenza con CD 12</p>
+                        <p><strong>In Caso di Successo:</strong> Il target recupera 1d6 + il tuo modificatore 
+                        di Conoscenza in Punti Ferita</p>
+                        <p><strong>Il Limite Importante:</strong> Puoi usare il First Aid solamente 1 volta per 
+                        ogni target tra un Short Rest e l'altro</p>
+                    </div>
+                    
+                    <div class="stat-block" style="margin-top: 20px;">
+                        <h4>💉 La Surgery (Richiede 1 ora completa)</h4>
+                        <p><strong>I Requisiti Necessari:</strong> Devi avere un kit medico completo e professionale, 
+                        più un luogo ragionevolmente pulito</p>
+                        <p><strong>Il Check Richiesto:</strong> Conoscenza con CD 15</p>
+                        <p><strong>In Caso di Successo:</strong> Puoi rimuovere 1 condizione persistente (come 
+                        Maimed, Disease e simili)</p>
+                        <p><strong>In Caso di Fallimento:</strong> Nessun effetto benefico (o peggio ancora, con 
+                        CD 18+ potrebbero sorgere delle complicazioni serie)</p>
+                    </div>
+                    
+                    <h3>Le Regole per Dying e Death</h3>
+                    
+                    <div class="warning-box">
+                        <h4>☠️ Le Regole Complete per il Dying</h4>
+                        <p style="font-size: 1.05em; line-height: 1.8;">
+                            Quando i tuoi Punti Ferita arrivano esattamente a 0, cadi immediatamente in stato 
+                            di <strong>Dying</strong>:
+                        </p>
+                        
+                        <p style="margin-top: 10px;"><strong>Durante Ogni Tuo Turno mentre Sei Dying:</strong></p>
+                        <ol>
+                            <li>Tiri 1d20 (questo è chiamato un Death Saving Throw):
+                                <ul>
+                                    <li>Con un risultato di 10 o superiore: Segni 1 successo sulla tua scheda</li>
+                                    <li>Con un risultato da 1 a 9: Segni 1 fallimento sulla tua scheda</li>
+                                    <li>Con un Natural 20: Vieni stabilizzato immediatamente E recuperi anche 1 HP</li>
+                                    <li>Con un Natural 1: Questo conta come ben 2 fallimenti invece di uno solo</li>
+                                </ul>
+                            </li>
+                            <li>Se accumuli 3 successi totali: Vieni stabilizzato (rimani a 0 HP ma sei cosciente)</li>
+                            <li>Se accumuli 3 fallimenti totali: Il tuo personaggio muore definitivamente</li>
+                        </ol>
+                        
+                        <p style="margin-top: 15px;"><strong>La Stabilizzazione da Parte di un Alleato:</strong></p>
+                        <ul>
+                            <li>Un alleato può usare un'azione per tentare di stabilizzarti con un check di 
+                            Conoscenza CD 10</li>
+                            <li>In caso di successo, vieni stabilizzato immediatamente senza bisogno di ulteriori 
+                            Death Saves</li>
+                            <li>Qualsiasi guarigione magica o pozione ti stabilizza automaticamente E ti fa 
+                            recuperare HP</li>
+                        </ul>
+                        
+                        <p style="margin-top: 15px; font-weight: bold; color: var(--blood-red);">
+                            ⚠️ ATTENZIONE: Subire danno mentre sei già in stato di Dying causa automaticamente 
+                            1 fallimento (e se il danno è massiccio, può significare la morte istantanea)
+                        </p>
+                    </div>
+                </section>
+                
+                <!-- CONDITIONS & STATUS -->
+                <section id="conditions" class="section">
+                    <h2>🤕 Le Condizioni e gli Effetti di Status</h2>
+                    
+                    <div class="grid-auto-wide">
+                        <div class="stat-box">
+                            <h4>BLINDED (ACCECATO)</h4>
+                            <p>Non riesci a vedere assolutamente nulla intorno a te</p>
+                            <ul>
+                                <li>Fallisci automaticamente tutti i check che richiedono la vista</li>
+                                <li>Tutti i tuoi attacchi subiscono Svantaggio</li>
+                                <li>Tutti gli attacchi contro di te hanno Vantaggio</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>DEAFENED (ASSORDATO)</h4>
+                            <p>Non riesci a sentire alcun suono</p>
+                            <ul>
+                                <li>Fallisci automaticamente tutti i check che richiedono l'udito</li>
+                                <li>Non ci sono altre penalità meccaniche dirette</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>FRIGHTENED (SPAVENTATO)</h4>
+                            <p>Provi un terrore profondo verso una specifica fonte</p>
+                            <ul>
+                                <li>Hai Svantaggio a tutti i check mentre puoi vedere la fonte della paura</li>
+                                <li>Non puoi avvicinarti volontariamente alla fonte della tua paura</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>GRAPPLED (AFFERRATO)</h4>
+                            <p>Sei trattenuto da una forza esterna</p>
+                            <ul>
+                                <li>La tua velocità di movimento diventa 0</li>
+                                <li>La condizione termina se chi ti afferra diventa Incapacitato</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>INCAPACITATED (INABILITATO)</h4>
+                            <p>Non sei in grado di agire</p>
+                            <ul>
+                                <li>Non puoi compiere azioni o reazioni di alcun tipo</li>
+                                <li>Puoi ancora muoverti se fisicamente è possibile farlo</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>PARALYZED (PARALIZZATO)</h4>
+                            <p>Il tuo corpo non risponde più ai comandi</p>
+                            <ul>
+                                <li>Sei automaticamente anche Incapacitato</li>
+                                <li>Fallisci automaticamente tutti i saving throw di Forza e Agilità</li>
+                                <li>Gli attacchi contro di te hanno Vantaggio</li>
+                                <li>Qualsiasi colpo entro 1.5 metri è automaticamente un colpo critico</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>POISONED (AVVELENATO)</h4>
+                            <p>Hai del veleno che circola nel tuo sistema</p>
+                            <ul>
+                                <li>Tutti i tuoi attacchi subiscono Svantaggio</li>
+                                <li>Tutti i tuoi ability check subiscono Svantaggio</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>PRONE (PRONO/A TERRA)</h4>
+                            <p>Sei sdraiato a terra</p>
+                            <ul>
+                                <li>I tuoi attacchi in mischia subiscono Svantaggio</li>
+                                <li>Ottieni +2 alla AC contro gli attacchi a distanza (oltre 1.5 metri)</li>
+                                <li>Subisci -2 alla AC contro gli attacchi in mischia</li>
+                                <li>Alzarti costa metà del tuo movimento disponibile</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>RESTRAINED (TRATTENUTO)</h4>
+                            <p>Sei legato o intrappolato fisicamente</p>
+                            <ul>
+                                <li>La tua velocità di movimento diventa 0</li>
+                                <li>Tutti i tuoi attacchi subiscono Svantaggio</li>
+                                <li>I tuoi saving throw di Agilità subiscono Svantaggio</li>
+                                <li>Gli attacchi contro di te hanno Vantaggio</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>STUNNED (STORDITO)</h4>
+                            <p>Sei completamente dazed e confuso</p>
+                            <ul>
+                                <li>Sei automaticamente anche Incapacitato</li>
+                                <li>Fallisci automaticamente tutti i saving throw di Forza e Agilità</li>
+                                <li>Gli attacchi contro di te hanno Vantaggio</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>UNCONSCIOUS (INCOSCIENTE)</h4>
+                            <p>Sei completamente svenuto o stai dormendo</p>
+                            <ul>
+                                <li>Sei automaticamente anche Incapacitato</li>
+                                <li>Lasci cadere tutto ciò che stai tenendo in mano</li>
+                                <li>Fallisci automaticamente tutti i saving throw di Forza e Agilità</li>
+                                <li>Gli attacchi contro di te hanno Vantaggio</li>
+                                <li>Qualsiasi colpo entro 1.5 metri è automaticamente un colpo critico</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <h4>EXHAUSTION (ESAURIMENTO)</h4>
+                            <p>Rappresenta una fatica cumulativa progressiva</p>
+                            <ul>
+                                <li>Livello 1: Svantaggio a tutti i check</li>
+                                <li>Livello 2: La tua velocità viene dimezzata</li>
+                                <li>Livello 3: Svantaggio a tutti gli attacchi e saving throw</li>
+                                <li>Livello 4: I tuoi HP massimi vengono dimezzati</li>
+                                <li>Livello 5: La tua velocità diventa solo 1.5 metri</li>
+                                <li>Livello 6: Morte immediata</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- GM TOOLS -->
+                <section id="gm-tools" class="section">
+                    <h2>🎲 Gli Strumenti e le Tabelle per il Game Master</h2>
+                    
+                    <h3>La Costruzione degli Incontri</h3>
+                    
+                    <div class="tip-box">
+                        <h4>⚖️ Le Linee Guida per il Bilanciamento</h4>
+                        <p><strong>Per un Party di 4 Personaggi Giocanti, Livello 3-5:</strong></p>
+                        <ul>
+                            <li><strong>Un Combattimento Facile:</strong> Da 4 a 6 nemici Minion OPPURE 2 nemici 
+                            Standard</li>
+                            <li><strong>Un Combattimento Medio:</strong> Da 8 a 10 Minion OPPURE da 3 a 4 Standard 
+                            OPPURE 1 Elite</li>
+                            <li><strong>Un Combattimento Difficile:</strong> 12 o più Minion OPPURE da 5 a 6 
+                            Standard OPPURE 2 Elite OPPURE 1 Capo</li>
+                            <li><strong>Un Combattimento Mortale:</strong> 1 Capo con del supporto OPPURE 2 
+                            creature di livello Capo</li>
+                        </ul>
+                        
+                        <p style="margin-top: 15px;"><strong>I Modificatori da Applicare:</strong></p>
+                        <ul>
+                            <li>Se il party ha solo 3 PG: Riduci i nemici del 25%</li>
+                            <li>Se il party ha 5 PG: Aumenta i nemici del 25%</li>
+                            <li>Se i PG sono in Fase 3+ di Tenuta: Riduci i nemici del 20% (sono già 
+                            handicappati)</li>
+                            <li>Se il terreno è favorevole ai PG: Aumenta i nemici del 20%</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-box" style="margin-top: 30px;">
+                        <h3>💡 I Consigli Finali per il Game Master</h3>
+                        <p style="font-size: 1.05em; line-height: 1.8;">
+                            Ricorda sempre che queste sono <strong>linee guida, non regole assolute</strong>. 
+                            L'horror cosmico funziona meglio quando i giocatori si sentono vulnerabili e sotto 
+                            pressione. Non aver paura di creare incontri che sembrano impossibili - a volte la 
+                            fuga è la scelta più intelligente. Usa la Tenuta Mentale come strumento narrativo 
+                            per mostrare il deterioramento psicologico graduale. E soprattutto: mantieni sempre 
+                            il senso di mistero e di scoperta graduale. Non rivelare mai troppo e troppo presto.
+                        </p>
+                    </div>
+                </section>
+                
+            </main>
+        </div>
     </div>
-  </div>
 </body>
 </html>
