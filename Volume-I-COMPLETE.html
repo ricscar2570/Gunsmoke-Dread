@@ -3,229 +3,1185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volume I: Shadows in the Desert - Gunsmoke & Dread</title>
-    
-    <!-- External Stylesheets -->
-    <link rel="stylesheet" href="assets/css/main-styles.css">
-    <link rel="stylesheet" href="assets/css/volume-themes.css">
+    <title>Gunsmoke & Dread - Volume I: Sangue sui Binari (Edizione Completa)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rye&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Special+Elite&display=swap');
+        
+        :root {
+            --desert-sand: #d4a574;
+            --blood-red: #8b0000;
+            --night-black: #1a1a1a;
+            --parchment: #f4e8d0;
+            --rust: #a0522d;
+            --shadow-grey: #3a3a3a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            background: linear-gradient(135deg, var(--night-black) 0%, var(--shadow-grey) 100%);
+            color: var(--parchment);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 30px;
+        }
+        
+        .sidebar {
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+            background: rgba(26, 26, 26, 0.95);
+            border: 3px solid var(--rust);
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+        }
+        
+        .sidebar h2 {
+            font-family: 'Rye', cursive;
+            color: var(--desert-sand);
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        .nav-links {
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin: 8px 0;
+        }
+        
+        .nav-links a {
+            color: var(--desert-sand);
+            text-decoration: none;
+            display: block;
+            padding: 8px 12px;
+            border-left: 3px solid transparent;
+            transition: all 0.3s;
+            font-size: 0.95em;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(212, 165, 116, 0.1);
+            border-left-color: var(--blood-red);
+            padding-left: 18px;
+        }
+        
+        .nav-links .sub-link {
+            font-size: 0.85em;
+            padding-left: 24px;
+            color: #c4a574;
+        }
+        
+        .content {
+            background: var(--parchment);
+            color: var(--night-black);
+            padding: 50px 60px;
+            border-radius: 5px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            border: 2px solid var(--rust);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Rye', cursive;
+            color: var(--blood-red);
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2.8em;
+            border-bottom: 3px solid var(--rust);
+            padding-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        h2 {
+            font-size: 2.2em;
+            border-bottom: 2px solid var(--desert-sand);
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.7em;
+            color: var(--rust);
+        }
+        
+        h4 {
+            font-size: 1.3em;
+            color: var(--shadow-grey);
+        }
+        
+        p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 40px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .info-box {
+            background: rgba(212, 165, 116, 0.15);
+            border-left: 5px solid var(--rust);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 3px;
+        }
+        
+        .warning-box {
+            background: rgba(139, 0, 0, 0.1);
+            border-left: 5px solid var(--blood-red);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 3px;
+        }
+        
+        .stat-block {
+            background: rgba(58, 58, 58, 0.05);
+            border: 2px solid var(--shadow-grey);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+            font-family: 'Special Elite', cursive;
+            font-size: 0.95em;
+        }
+        
+        .stat-block h4 {
+            margin-top: 0;
+            font-family: 'Rye', cursive;
+        }
+        
+        .creature-card {
+            background: rgba(139, 0, 0, 0.05);
+            border: 3px solid var(--blood-red);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .creature-card h3 {
+            margin-top: 0;
+            color: var(--blood-red);
+            font-size: 1.8em;
+        }
+        
+        .collapsible {
+            cursor: pointer;
+            padding: 15px;
+            background: rgba(139, 0, 0, 0.1);
+            border: 2px solid var(--rust);
+            border-radius: 5px;
+            margin: 20px 0;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .collapsible:hover {
+            background: rgba(139, 0, 0, 0.2);
+        }
+        
+        .collapsible::before {
+            content: "▶ ";
+            display: inline-block;
+            margin-right: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .collapsible.active::before {
+            transform: rotate(90deg);
+        }
+        
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 20px;
+        }
+        
+        .collapsible-content.active {
+            max-height: 10000px;
+            padding: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+        }
+        
+        th, td {
+            border: 1px solid var(--shadow-grey);
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: var(--rust);
+            color: var(--parchment);
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background: rgba(212, 165, 116, 0.1);
+        }
+        
+        hr {
+            border: none;
+            border-top: 2px solid var(--desert-sand);
+            margin: 40px 0;
+        }
+        
+        .part-header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--blood-red) 0%, var(--night-black) 100%);
+            color: var(--parchment);
+            border-radius: 5px;
+            margin-bottom: 40px;
+            border: 3px double var(--desert-sand);
+        }
+        
+        .part-header h1 {
+            color: var(--parchment);
+            border: none;
+            margin: 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+        }
+        
+        .act-header {
+            background: linear-gradient(135deg, var(--rust) 0%, var(--shadow-grey) 100%);
+            color: var(--parchment);
+            padding: 25px;
+            margin: 40px 0 30px 0;
+            border-radius: 5px;
+            border: 2px solid var(--blood-red);
+        }
+        
+        .act-header h2 {
+            color: var(--parchment);
+            border: none;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+            .sidebar {
+                display: none;
+            }
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .content {
+                box-shadow: none;
+                border: none;
+            }
+        }
+        
+        @media (max-width: 968px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
 </head>
-<body class="theme-rust">
+<body>
     <div class="container">
-        
-        <!-- Header -->
-        <div class="hero" style="background: linear-gradient(135deg, var(--rust) 0%, var(--night-black) 100%);">
-            <h1 style="font-size: 4em;">🏜️ VOLUME I</h1>
-            <p class="subtitle">SHADOWS IN THE DESERT</p>
-            <p class="tagline">
-                Silver Hollow, New Mexico • Settembre 1885 • Mystery Horror
-            </p>
-            <div class="hero-stats">
-                <span><strong>Durata:</strong> 10-12 ore</span>
-                <span><strong>Livelli:</strong> 2 → 3</span>
-                <span><strong>Giocatori:</strong> 3-5</span>
-                <span><strong>Difficoltà:</strong> Moderata</span>
+        <nav class="sidebar">
+            <h2>📖 Volume I</h2>
+            <ul class="nav-links">
+                <li><a href="#intro">Introduzione</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#atto1">🔫 Atto I: La Rapina</a>
+                    <ul>
+                        <li><a href="#rapina-setup" class="sub-link">Setup</a></li>
+                        <li><a href="#rapina-combattimento" class="sub-link">Combattimento</a></li>
+                        <li><a href="#rapina-morti" class="sub-link">I Morti</a></li>
+                    </ul>
+                </li>
+                <li><a href="#atto2">💀 Atto II: Notte dei Morti</a>
+                    <ul>
+                        <li><a href="#notte-sopravvivenza" class="sub-link">Sopravvivenza</a></li>
+                        <li><a href="#notte-alba" class="sub-link">Alba</a></li>
+                    </ul>
+                </li>
+                <li><a href="#atto3">🏜️ Atto III: Silver Hollow</a>
+                    <ul>
+                        <li><a href="#silver-arrivo" class="sub-link">Arrivo</a></li>
+                        <li><a href="#silver-investigazione" class="sub-link">Investigazione</a></li>
+                        <li><a href="#silver-indizi" class="sub-link">Indizi</a></li>
+                    </ul>
+                </li>
+                <li><a href="#atto4">⛏️ Atto IV: Il Tempio</a>
+                    <ul>
+                        <li><a href="#tempio-miniera" class="sub-link">La Miniera</a></li>
+                        <li><a href="#tempio-discesa" class="sub-link">Discesa</a></li>
+                        <li><a href="#tempio-boss" class="sub-link">Boss Finale</a></li>
+                    </ul>
+                </li>
+                <li><a href="#epilogo">Epilogo</a></li>
+                <li><a href="#bestiario">Bestiario</a></li>
+                <li><a href="#consigli-gm">Consigli GM</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <div class="part-header">
+                <h1>🔫 VOLUME I: SANGUE SUI BINARI</h1>
+                <p style="font-size: 1.3em; margin: 15px 0;">Weird West Horror per Daggerheart</p>
+                <p style="font-size: 1.1em;"><strong>Edizione Completa - 4 Atti</strong></p>
+                <p>Durata: 10-14 ore | Livelli: 2 → 3</p>
             </div>
-        </div>
-        
-        <!-- Sidebar + Content -->
-        <div class="sidebar-layout">
-            
-            <!-- Sidebar Navigation -->
-            <aside class="sidebar">
-                <h2>📋 Indice</h2>
-                <ul class="nav-links">
-                    <li><a href="#intro">Introduzione</a></li>
-                    <li><a href="#setup">Setup & Hooks</a></li>
-                    <li><a href="#atto1">Atto I: Arrivo</a></li>
-                    <li><a href="#atto2">Atto II: Miniera</a></li>
-                    <li><a href="#atto3">Atto III: Tempio</a></li>
-                    <li><a href="#epilogo">Epiloghi</a></li>
-                    <li><a href="#npcs">NPCs & Mostri</a></li>
-                </ul>
-                <div class="sidebar-card">
-                    <h3>⚠️ Content Warning</h3>
-                    <p>Body horror, culti, sacrifici umani, orrore cosmico</p>
+
+            <div class="warning-box" style="text-align: center;">
+                <h4 style="margin-top: 0;">⚠️ CONTENUTO MATURO</h4>
+                <p style="margin-bottom: 0;">
+                    Questa avventura contiene violenza grafica, body horror e temi psicologicamente disturbanti. 
+                    Discuti safety tools (X-Card, Lines & Veils) con il gruppo prima di giocare.
+                </p>
+            </div>
+
+            <section id="intro">
+                <h2>📜 Introduzione</h2>
+                
+                <p style="font-size: 1.15em; font-weight: 600; margin: 20px 0;">
+                    <strong>New Mexico, Agosto 1885.</strong> Una rapina al treno che va terribilmente storta. 
+                    I banditi morti che si rialzano. Una cittadina mineraria maledetta. Un culto antico che 
+                    venera qualcosa di mostruoso nelle profondità della terra.
+                </p>
+
+                <p>
+                    <em>Sangue sui Binari</em> è un'avventura horror western completa in quattro atti che 
+                    porta i personaggi dall'azione frenetica di una rapina al confronto con orrori cosmici 
+                    indicibili. Combina il meglio del genere western - sparatorie, duelli, frontiera selvaggia - 
+                    con l'orrore lovecraftiano più viscerale.
+                </p>
+
+                <div class="info-box">
+                    <h4>🎭 Tono e Atmosfera</h4>
+                    <p>Questa avventura bilancia quattro toni distinti che evolvono nel corso della storia:</p>
+                    <ul>
+                        <li><strong>Atto I - Western Action:</strong> Veloce, cinematografico, eroico</li>
+                        <li><strong>Atto II - Survival Horror:</strong> Tensione, paura, disperazione</li>
+                        <li><strong>Atto III - Investigation Mystery:</strong> Paranoia, rivelazioni inquietanti</li>
+                        <li><strong>Atto IV - Cosmic Horror:</strong> Insignificanza, terrore esistenziale</li>
+                    </ul>
+                    <p style="margin-top: 15px;">
+                        Non lasciare che un singolo tono domini completamente - la varietà mantiene i giocatori 
+                        coinvolti e amplifica l'impatto emotivo di ogni sezione.
+                    </p>
                 </div>
-            </aside>
-            
-            <!-- Main Content -->
-            <main class="content">
-                
-                <!-- INTRODUZIONE -->
-                <section id="intro" class="section">
-                    <h2>📖 Introduzione</h2>
+            </section>
+
+            <section id="overview">
+                <h2>🗺️ Overview Avventura</h2>
+
+                <p>
+                    <em>Sangue sui Binari</em> segue una struttura narrativa in quattro atti con escalation 
+                    progressiva dall'azione terrena all'orrore cosmico. Ogni atto può essere giocato come 
+                    sessione separata (per campagna) o compresso per one-shot.
+                </p>
+
+                <h3>Struttura dei Quattro Atti</h3>
+
+                <div class="stat-block">
+                    <h4>🔫 ATTO I: LA RAPINA AL TRENO</h4>
+                    <p><strong>Durata:</strong> 45-90 minuti</p>
+                    <p><strong>Location:</strong> Treno Southwestern & Pacific Railroad</p>
+                    <p><strong>Tono:</strong> Western action - eroico, violento, cinematografico</p>
+                    <p><strong>Obiettivo:</strong> I PG scortano carico d'oro. Banda di disperati attacca il treno. 
+                    Combattimento dinamico su treno in movimento. Banditi eliminati... ma al tramonto si rialzano come morti viventi.</p>
+                    <p><strong>Climax:</strong> I morti camminano. Prima esperienza con il soprannaturale. Terror puro.</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>💀 ATTO II: LA NOTTE DEI MORTI</h4>
+                    <p><strong>Durata:</strong> 90-120 minuti</p>
+                    <p><strong>Location:</strong> Treno fermo nel deserto, notte</p>
+                    <p><strong>Tono:</strong> Survival horror - claustrofobico, disperato, brutale</p>
+                    <p><strong>Obiettivo:</strong> Sopravvivere fino all'alba. I morti continuano a rialzarsi. 
+                    Risorse limitate. Proteggere civili. Ogni decisione ha conseguenze mortali.</p>
+                    <p><strong>Climax:</strong> Alba finalmente sorge. Morti si dissolvono. Ma qualcosa nel deserto 
+                    stava osservando...</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>🏜️ ATTO III: INVESTIGAZIONE A SILVER HOLLOW</h4>
+                    <p><strong>Durata:</strong> 2-3 ore</p>
+                    <p><strong>Location:</strong> Cittadina mineraria Silver Hollow</p>
+                    <p><strong>Tono:</strong> Mystery investigation - tensione crescente, paranoia</p>
+                    <p><strong>Obiettivo:</strong> Cittadina maledetta. Dodici persone scomparse. Culto segreto del 
+                    Serpente Sotterraneo. Sheriff Morrison sopraffatto. Raccogliere indizi, interrogare PNG, scoprire 
+                    la verità nascosta.</p>
+                    <p><strong>Climax:</strong> Entrata miniera scoperta. Culto si prepara per rituale finale stanotte. 
+                    È ora di agire.</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>⛏️ ATTO IV: IL TEMPIO DEL SERPENTE</h4>
+                    <p><strong>Durata:</strong> 3-4 ore</p>
+                    <p><strong>Location:</strong> Miniera abbandonata → Tempio sotterraneo</p>
+                    <p><strong>Tono:</strong> Cosmic horror - claustrofobia, terrore, insignificanza</p>
+                    <p><strong>Obiettivo:</strong> Discesa nella miniera maledetta. Tunnel che sfidano geometria. 
+                    Camera rituale dove cultisti stanno per risvegliare "Il Serpente Sotterraneo". Boss fight contro 
+                    Reverendo Jeremiah Stone trasformato e i suoi accoliti.</p>
+                    <p><strong>Climax:</strong> Sconfitta/sigillo della minaccia. Ma i PG capiscono che questo è solo 
+                    un frammento di qualcosa di infinitamente più grande. Setup per Volume II.</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>⏱️ Pacing e Opzioni di Gioco</h4>
                     
-                    <p class="large">
-                        <strong>Silver Hollow</strong> sembrava cittadina mineraria come tante altre nel New Mexico 
-                        del 1885. Ma quando la miniera d'argento si esaurì, i cittadini scoprirono qualcosa di 
-                        più prezioso - e molto più pericoloso - nelle profondità della terra.
-                    </p>
+                    <p><strong>One-Shot Veloce (4-5 ore):</strong></p>
+                    <ul>
+                        <li>Atto I: 30 minuti (rapina + twist morti)</li>
+                        <li>Atto II: 45 minuti (sopravvivenza compressa)</li>
+                        <li>Atto III: 1 ora (investigazione streamlined - solo indizi chiave)</li>
+                        <li>Atto IV: 2 ore (dungeon completo)</li>
+                    </ul>
                     
+                    <p style="margin-top: 15px;"><strong>Campagna Completa (10-14 ore / 3-4 sessioni):</strong></p>
+                    <ul>
+                        <li><strong>Sessione 1:</strong> Atti I + II completi (3-4 ore) - Cliffhanger: viaggio a Silver Hollow</li>
+                        <li><strong>Sessione 2:</strong> Atto III completo (2-3 ore) - Cliffhanger: alla miniera stanotte</li>
+                        <li><strong>Sessione 3:</strong> Atto IV parte 1 - Discesa miniera (2-3 ore)</li>
+                        <li><strong>Sessione 4:</strong> Atto IV parte 2 - Boss finale + Epilogo (2-3 ore)</li>
+                    </ul>
+                </div>
+
+                <h3>Collegamenti con Volume II</h3>
+
+                <p>
+                    Questa avventura è completamente autocontenuta con conclusione soddisfacente, ma prepara 
+                    il terreno per <em>Where Ocean Meets Dust</em> (Volume II). Elementi chiave che ritornano:
+                </p>
+
+                <ul>
+                    <li><strong>Il Serpente Sotterraneo:</strong> Manifestazione locale di entità cosmica più grande</li>
+                    <li><strong>Simboli strani:</strong> Spirali, geometrie impossibili - collegati ai Grandi Antichi</li>
+                    <li><strong>Morti risorti:</strong> Non casuali - tracce di energia cosmica che pervade la regione</li>
+                    <li><strong>Sogni disturbanti:</strong> Dopo questa esperienza, i PG iniziano avere visioni</li>
+                    <li><strong>Arizona, 1886:</strong> Tre mesi dopo, qualcosa di simile si muove nel deserto...</li>
+                </ul>
+
+                <p>
+                    Se i giocatori non continuano con Volume II, l'avventura offre comunque chiusura: la minaccia 
+                    locale è eliminata, Silver Hollow è salvata, i PG sono eroi. Ma chi continua scoprirà che 
+                    questo era solo l'inizio...
+                </p>
+            </section>
+
+                <!-- ATTO PRIMO -->
+                <article id="atto1">
+                    <div class="act-header">
+                        <h2>Atto Primo: La Rapina al Treno</h2>
+                        <p style="margin: 10px 0 0 0; font-size: 1.1em;">Dove l'azione western diventa incubo</p>
+                    </div>
+
+                    <h3>La Situazione</h3>
+
+                    <p>È il tardo pomeriggio di un giovedì di agosto 1885. I tre personaggi si trovano su un treno della Southwestern & Pacific Railroad che è partito da Tucson due ore fa ed è diretto verso Phoenix. Sono stati assunti dalla Cattleman's Bank per scortare cinquemila dollari in oro - le buste paga mensili per i minatori. Paga: cinquanta dollari ciascuno, da pagare all'arrivo.</p>
+
+                    <p>Il carico è custodito nel vagone merci in una cassaforte sorvegliata da due guardie della compagnia - uomini di mezza età, uniformi blu sbiadite, compiacenti per routine. Gli altri passeggeri sono un misto tipico: venditore ambulante, famiglia di coloni, minatori, vecchia signora, giocatore d'azzardo elegante.</p>
+
+                    <p>L'atmosfera è rilassata. Il calore pomeridiano rende tutti sonnolenti. Nessuno sospetta che nei prossimi minuti la violenza esploderà, e che prima dell'alba affronteranno orrori che sfidano ogni comprensione della realtà.</p>
+
+                    <h3>I Banditi - La Banda di Clay Morrison</h3>
+
+                    <p>Sei uomini a cavallo aspettano nascosti dietro un affioramento roccioso tre miglia avanti. Hanno studiato gli orari per settimane, scelto questo punto dove il treno rallenta in curva.</p>
+
                     <div class="info-box">
-                        <h3>🎯 Overview Scenario</h3>
-                        <ul style="font-size: 1.05em; line-height: 1.7;">
-                            <li><strong>Location:</strong> Silver Hollow, New Mexico (città mineraria 300 abitanti)</li>
-                            <li><strong>Tempo:</strong> Settembre 1885 (fine estate, caldo torrido)</li>
-                            <li><strong>Hook:</strong> Sceriffo chiede aiuto - cittadini scompaiono, strani culti</li>
-                            <li><strong>Minaccia:</strong> Culto scopre tempio preumano, tenta risvegliare entità</li>
-                            <li><strong>Climax:</strong> Fermare rituale nel tempio sotterraneo</li>
-                            <li><strong>Tone:</strong> Mystery investigation → Horror revelation</li>
-                        </ul>
-                    </div>
-                    
-                    <h3>🎭 Struttura in 3 Atti</h3>
-                    
-                    <div class="grid-auto-wide">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">ATTO I: ARRIVO</h3>
-                            </div>
-                            <div class="card-body">
-                                <p><strong>Durata:</strong> 3-4 ore</p>
-                                <p><strong>Focus:</strong> Investigation, social, first clues</p>
-                                <ul>
-                                    <li>Arrivo a Silver Hollow</li>
-                                    <li>Meet sceriffo & NPCs</li>
-                                    <li>Investigation scomparse</li>
-                                    <li>Primo incontro culto (zombi)</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <h4>Clay Morrison</h4>
+                        <p>Trentacinque anni, ex-soldato confederato, barba incolta, occhi stanchi. Guida la banda non per avidità ma per disperazione. Sua sorella Elizabeth muore di tubercolosi. Le cure costano più di quanto potrebbe guadagnare in cinque anni di lavoro onesto. Questa rapina è l'ultimo tentativo disperato di salvarla.</p>
                         
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">ATTO II: MINIERA</h3>
-                            </div>
-                            <div class="card-body">
-                                <p><strong>Durata:</strong> 4-5 ore</p>
-                                <p><strong>Focus:</strong> Dungeon crawl, combat, horror</p>
-                                <ul>
-                                    <li>Discesa nella miniera</li>
-                                    <li>Tunnel & trappole</li>
-                                    <li>Cultisti & non-morti</li>
-                                    <li>Discovery: ingresso tempio</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <p>I cinque uomini con lui sono ugualmente disperati: <strong>Tommy "Kid" Walsh</strong> (19, troppo giovane), <strong>Miguel Rodriguez</strong> (32, derubato della sua terra), <strong>Samuel Brooks</strong> (45, ex-minatore mutilato), <strong>Marcus Green</strong> (28, libertà legale senza opportunità), <strong>Jacob "Old Jake" Patterson</strong> (57, veterano).</p>
                         
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">ATTO III: TEMPIO</h3>
-                            </div>
-                            <div class="card-body">
-                                <p><strong>Durata:</strong> 3-4 ore</p>
-                                <p><strong>Focus:</strong> Boss fight, choice, revelation</p>
-                                <ul>
-                                    <li>Tempio sotterraneo alieno</li>
-                                    <li>Confronto Father Jeremiah</li>
-                                    <li>Fermare/assistere rituale</li>
-                                    <li>4 epiloghi possibili</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <p><em>Non sono mostri. Sono uomini che hanno fatto scelte discutibili spinti da circostanze terribili. Non vogliono uccidere - vogliono l'oro e fuggire.</em></p>
                     </div>
-                    
+
+                    <h3>Come Inizia</h3>
+
+                    <p>Non iniziare con l'azione immediatamente. Costruisci tensione. Descrivi la normalità che sta per essere distrutta - il rumore ritmico delle ruote, il paesaggio desertico, le conversazioni sonnolente.</p>
+
+                    <p>Poi chiedi ai giocatori: <strong>"Dove vi trovate sul treno? Cosa state facendo per passare il tempo?"</strong></p>
+
+                    <p>Le loro risposte determinano come percepiscono l'attacco iniziale. Se Jack è sul balcone posteriore, nota i cavalieri (Istinto vs 12). Se Sarah è con i passeggeri, sente i primi spari. Se Doc è nel suo compartimento, riconosce l'esplosione come dinamite sulla cassaforte.</p>
+
+                    <h3>Il Combattimento</h3>
+
+                    <div class="stat-block">
+                        <h4>LAYOUT DEL TRENO</h4>
+                        <p>Cinque zone: Locomotiva/Tender → Vagone Merci (cassaforte + guardie) → Due Vagoni Passeggeri (civili) → Caboose (balcone posteriore)</p>
+                        <p>Muoversi tra zone adiacenti = azione minore. Il tetto è accessibile ma richiede Agilità vs 12 per non cadere.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>Tattica dei Banditi</h4>
+                        <p>Tre vanno al vagone merci (obiettivo primario), due restano sul tetto (copertura), Clay va alla locomotiva (costringere il conducente a rallentare). Eseguono con efficienza militare ma non sono invincibili.</p>
+                    </div>
+
+                    <div class="collapsible">Complicazioni Possibili (spendi Paura)</div>
+                    <div class="collapsible-content">
+                        <p><strong>[1 Paura] Passeggero Panico:</strong> Un civile terrorizzato corre nella linea di fuoco</p>
+                        <p><strong>[2 Paura] Bambina Esposta:</strong> Una bambina di sei anni paralizzata sotto un sedile dove sta per iniziare uno scontro</p>
+                        <p><strong>[2 Paura] Pallottola Vagante:</strong> Colpo perso rompe lanterna/linea vapore/supporto strutturale</p>
+                        <p><strong>[3 Paura] "È Mio Fratello!":</strong> Un bandito riconosce un personaggio (Guerra Civile? Città natale?), esita. Momento drammatico - sparare a un vecchio amico o provare a parlare?</p>
+                    </div>
+
                     <div class="warning-box">
-                        <h3>⚠️ Note per GM</h3>
-                        <p style="font-size: 1.05em;">
-                            <strong>Volume I è "gateway drug"</strong> - introduce players a orrore cosmico 
-                            gradualmente. Inizia come western mystery standard, poi rivela verità terrificante. 
-                            Pacing è critico: buildup lento → revelation devastante.
-                        </p>
+                        <h4>⚠️ Adatta la Difficoltà</h4>
+                        <p>Se i personaggi dominano facilmente, aggiungi banditi. Se stanno lottando, fai ritirare i banditi prima. La fiction guida i numeri, non viceversa.</p>
                     </div>
-                
-                
-                <!-- ═══════════════════════════════════════════════════════════ -->
-                <!-- HANDOUT INTEGRATO #1: TELEGRAMMA SCERIFFO                   -->
-                <!-- ═══════════════════════════════════════════════════════════ -->
-                
-                <section id="handout-telegramma" class="section" style="page-break-before: always; background: linear-gradient(135deg, #f4e8d0 0%, #e8d5b7 100%); padding: 40px; border: 3px solid #8b4513; margin: 40px 0;">
-                    <div style="text-align: center; margin-bottom: 30px; padding: 20px; background: rgba(139, 69, 19, 0.1); border: 2px solid #8b4513;">
-                        <h2 style="font-size: 2em; color: #8b4513; margin: 0;">📄 HANDOUT #1: TELEGRAMMA DELLO SCERIFFO</h2>
-                        <p style="margin: 10px 0 0 0; font-style: italic; color: #654321;">
-                            Questo telegramma può essere consegnato ai giocatori come hook iniziale
-                        </p>
+
+                    <h3>Le Morti Contano</h3>
+
+                    <p>Quando un bandito muore, descrivi la sua morte in modo umano:</p>
+
+                    <div class="info-box" style="font-style: italic;">
+                        <p>"Il proiettile di Jack colpisce il bandito mascherato al petto. La maschera scivola rivelando un viso giovane - troppo giovane, forse diciannove. Ha occhi spalancati di shock. Cade dal treno, il corpo colpisce la ghiaia con rumore sordo e orribile. Non si muove più."</p>
+                    </div>
+
+                    <p>Questi non sono stat blocks eliminati. Sono vite spente. Dovrebbe pesare emotivamente.</p>
+
+                    <h3>Il Twist</h3>
+
+                    <p>Dopo il combattimento, c'è relativa calma. Il treno continua. I passeggeri sopravvissuti sono traumatizzati ma vivi. I personaggi hanno minuti per curare feriti, parlare con sopravvissuti, esaminare corpi.</p>
+
+                    <p><strong>Se Doc esamina i corpi</strong> (Conoscenza vs 12):</p>
+
+                    <div class="warning-box" style="font-style: italic;">
+                        <p>"Questi uomini sono morti per ferite da arma da fuoco standard. Ma c'è qualcosa di strano. La temperatura corporea non sta diminuendo normalmente - senti un calore innaturale emanare da loro. E se presti attenzione, giureresti di vedere spasmi muscolari molto più intensi dei normali riflessi post-mortem."</p>
+                    </div>
+
+                    <h3>I Morti Si Alzano</h3>
+
+                    <p>Circa dieci minuti dopo la fine del combattimento, il sole tramonta completamente. L'oscurità cade rapidamente sul deserto. E poi sentite qualcosa. Un suono sottile - respiri rochi? Rantoli?</p>
+
+                    <div class="warning-box">
+                        <h4>Descrivi Questo Momento Lentamente</h4>
+                        
+                        <p>Chi è vicino ai corpi vede per primo. Le dita di un cadavere si contraggono - non uno spasmo, un movimento deliberato. Le dita si chiudono in pugno e si aprono, tastando l'aria.</p>
+
+                        <p>Il petto del cadavere si gonfia. Non respira - i polmoni sono perforati, vedi sangue schiumante dal foro - ma il petto si solleva comunque, come se qualcosa pompasse aria attraverso pura forza innaturale.</p>
+
+                        <p>Gli occhi del morto si aprono di scatto. Completamente bianchi. Non ci sono pupille, non iridi - solo bianco latte che riflette la luce delle lanterne.</p>
+
+                        <p>E poi il cadavere inizia a muoversi. Lentamente, goffamente, innaturalmente. Si rotola su un fianco. Le braccia spingono contro il pavimento. Le gambe si piegano in angoli impossibili.</p>
+
+                        <p><strong>Tutti i corpi</strong>. Tutti i banditi che avete ucciso. Si stanno alzando. E hanno fame.</p>
+                    </div>
+
+                    <div class="stat-block">
+                        <h4>PRESENZA TERRIFICANTE</h4>
+                        <p>Ogni personaggio deve tirare <strong>Istinto vs 12</strong>.</p>
+                        <p><strong>Fallimento:</strong> Riempi 1 segmento Tenuta Mentale e sei Scosso (svantaggio) per 1 round.</p>
+                        <p><strong>Fallimento critico (6+ sotto):</strong> Riempi 2 segmenti e tira 1d6 per reazione: 1-2 fuga panica, 3-4 congelamento, 5-6 frenesia violenta (tutti per 1d4 round).</p>
+                    </div>
+
+                    <p>Il conducente, terrorizzato, tira i freni di emergenza. Il treno stride fino a fermarsi nel mezzo del deserto, miglia dalla stazione più vicina. Il sistema frenante è parzialmente danneggiato - ripararlo richiederà tempo.</p>
+
+                    <p>I morti camminano. La notte è nera. <strong>L'avventura vera è appena iniziata.</strong></p>
+                </article>
+
+                <hr>
+
+                <!-- ATTO SECONDO -->
+                <article id="atto2">
+                    <div class="act-header">
+                        <h2>Atto Secondo: La Notte dei Morti</h2>
+                        <p style="margin: 10px 0 0 0; font-size: 1.1em;">Sopravvivere fino all'alba</p>
+                    </div>
+
+                    <h3>La Situazione - Bloccati nell'Oscurità</h3>
+
+                    <p>Il treno è fermo. Riparare i freni richiede trenta minuti di lavoro da qualcuno con competenza meccanica. La locomotiva produce ancora vapore, quindi le luci a gas nei vagoni rimangono accese - piccole isole di luce calda in un oceano di oscurità. Ma quelle luci attirano attenzione.</p>
+
+                    <p>I passeggeri sono oltre il terrore razionale. Alcuni pregano istericamente. Altri piangono. Alcuni sono catatonici. La vecchia signora ripete "Non è possibile" come mantra spezzato.</p>
+
+                    <div class="stat-block">
+                        <h4>📍 L'OROLOGIO DELL'ALBA</h4>
+                        <p>L'Atto Secondo è strutturato intorno a un <strong>Orologio dell'Alba (8 segmenti)</strong>. Rappresenta le ore che mancano all'alba. All'inizio è a 0/8. Avanza di 1 segmento per "ondata" (~45 minuti narrativi). A 8/8, il sole sorge e i non-morti crollano.</p>
+                        <p><strong>I personaggi non possono accelerare l'orologio. Devono semplicemente SOPRAVVIVERE.</strong></p>
+                    </div>
+
+                    <h3>Scelte Strategiche</h3>
+
+                    <p>Prima che inizi il vero assedio, i personaggi devono decidere la strategia:</p>
+
+                    <div class="info-box">
+                        <h4>FORTIFICARE IL TRENO</h4>
+                        <p><strong>Vantaggio:</strong> Protezione fisica, civili già qui.</p>
+                        <p><strong>Svantaggio:</strong> Claustrofobico, se i morti entrano è difficile fuggire.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>FUGGIRE NEL DESERTO</h4>
+                        <p><strong>Vantaggio:</strong> Movimento, forse evitare scontri.</p>
+                        <p><strong>Svantaggio:</strong> Deserto notturno letale, civili non in condizioni di marciare, i morti potrebbero seguire.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>RIPARARE E SCAPPARE</h4>
+                        <p><strong>Vantaggio:</strong> Se riuscito, risolve tutto.</p>
+                        <p><strong>Svantaggio:</strong> Richiede qualcuno esposto fuori mentre lavora (30 min, Conoscenza vs 14), potrebbe fallire.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>CACCIARE ATTIVAMENTE</h4>
+                        <p><strong>Vantaggio:</strong> Iniziativa, elimina minaccia.</p>
+                        <p><strong>Svantaggio:</strong> Oscurità favorisce i morti, rischio di essere circondati.</p>
+                    </div>
+
+                    <p><em>Non c'è scelta "giusta". Sviluppa basandoti su cosa decidono.</em></p>
+
+                    <h3>Il Framework delle Ondate</h3>
+
+                    <p>Invece di prescrivere esattamente cosa succede in ogni ondata, ecco il framework generale - adatta basandoti su scelte dei giocatori e pacing:</p>
+
+                    <table>
+                        <tr>
+                            <th>Ondate</th>
+                            <th>Segmenti</th>
+                            <th>Intensità</th>
+                            <th>Descrizione</th>
+                        </tr>
+                        <tr>
+                            <td>1-2</td>
+                            <td>1-2/8</td>
+                            <td>Attacchi di prova</td>
+                            <td>1-2 morti per volta. Relativamente gestibili. "Forse possiamo farcela."</td>
+                        </tr>
+                        <tr>
+                            <td>3-4</td>
+                            <td>3-4/8</td>
+                            <td>Intensificazione</td>
+                            <td>3-4 morti coordinati. Primi segni che stanno imparando. "Questo sta diventando serio."</td>
+                        </tr>
+                        <tr>
+                            <td>5-6</td>
+                            <td>5-6/8</td>
+                            <td>Assedio vero</td>
+                            <td>Attacchi da direzioni multiple. Brecce nelle difese. Qualche PNG muore. "Potremmo non sopravvivere."</td>
+                        </tr>
+                        <tr>
+                            <td>7-8</td>
+                            <td>7-8/8</td>
+                            <td>Disperazione</td>
+                            <td>Risorse finite (munizioni, PF, utilizzi abilità). Esaurimento totale. L'alba non arriverà mai. Poi... arriva.</td>
+                        </tr>
+                    </table>
+
+                    <h3>Elementi da Alternare</h3>
+
+                    <div class="info-box">
+                        <h4>MOMENTI DI AZIONE</h4>
+                        <p>Combattimenti contro ondate di morti. Rumorosi, frenetici, consumano risorse. Tenui alla luce tremolante delle lanterne. Grida, spari, il suono di corpi che si abbattono sulle barricazioni.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>MOMENTI TRANQUILLI</h4>
+                        <p>Pause tra ondate. Qui avvengono le scene di carattere più importanti. Jack che pulisce ossessivamente i revolver con mani che tremano leggermente. Sarah che prega (ma le preghiere suonano più come domande). Doc che calcola se le munizioni saranno sufficienti. Le Connessioni tra personaggi si attivano - momenti dove si supportano emotivamente.</p>
+                    </div>
+
+                    <div class="collapsible">Complicazioni (spendi Paura)</div>
+                    <div class="collapsible-content">
+                        <p><strong>[1 Paura] Panico Civile:</strong> Un civile terrorizzato tenta di fuggire ciecamente, deve essere fermato</p>
+                        <p><strong>[2 Paura] Breccia nelle Difese:</strong> Un morto trova un punto debole, entra nel vagone con i civili</p>
+                        <p><strong>[2 Paura] Qualcuno Muore:</strong> Un PNG viene ucciso nonostante gli sforzi. 10 minuti dopo... si rialza. I personaggi devono distruggere qualcuno che conoscevano.</p>
+                        <p><strong>[3 Paura] Munizioni Critiche:</strong> Un personaggio realizza di avere solo 6 proiettili rimasti. Deve razionare o trovare alternative.</p>
+                    </div>
+
+                    <h3>La Perdita È Inevitabile</h3>
+
+                    <p>A un certo punto (probabilmente ondata 5 o 6), qualcuno dovrebbe morire. Non arbitrariamente - come conseguenza logica di scelte e sfortuna. Forse il venditore ambulante panica e corre fuori. Forse una guardia ferita cede per perdita di sangue.</p>
+
+                    <p>Quando succede, dai spazio al dolore. Chiedi ai giocatori come reagiscono i loro personaggi. Jack si incolpa? Sarah prega per l'anima della persona? Doc registra clinicamente cosa è andato storto?</p>
+
+                    <p>E quando quella persona si rialza 10 minuti dopo, i personaggi devono affrontare la scelta impossibile di distruggerla.</p>
+
+                    <h3>L'Alba Arriva</h3>
+
+                    <div class="warning-box">
+                        <p>Il cielo a est inizia a schiarirsi. Non è ancora pieno giorno - solo il primo accenno pallido di grigio che precede l'alba vera. Ma è sufficiente.</p>
+
+                        <p>I morti sentono qualcosa che i vivi non possono percepire. Si fermano a metà attacco. Le teste si girano tutte nella stessa direzione, verso est, verso la luce che sta arrivando.</p>
+
+                        <p>Uno per uno, crollano. Non drammaticamente - semplicemente cadono. I corpi diventano inerti. Gli occhi bianchi si chiudono. Il non-morto ritorna ad essere morto.</p>
+
+                        <p>Il silenzio che segue è quasi assordante. I sopravvissuti rimangono fermi, incapaci di credere che sia finita. Qualcuno piange. Qualcun altro ride con isteria al limite della follia.</p>
+
+                        <p><strong>Il sole sta sorgendo sul deserto. E per la prima volta da quando i morti si sono alzati, i personaggi possono permettersi di sperare.</strong></p>
+                    </div>
+
+                    <h3>Dopo l'Alba - Gli Indizi</h3>
+
+                    <p>Doc esamina i corpi (Conoscenza vs 14): "Le ferite sembrano alterate. Qualcosa ha lavorato dall'interno. Gli organi mostrano decomposizione avanzata incompatibile con la timeline. E c'è una sostanza nera e viscosa che permea i tessuti. Non è sangue. Odora di zolfo e di qualcosa più antico."</p>
+
+                    <p>Negli effetti personali dei banditi, trovano:</p>
+
+                    <ul>
+                        <li><strong>Mappa del deserto</strong> con X rossa circa 5 miglia a nord: "Silverstone Mine - EVITARE" (cancellato), sopra scritto "Dove si nasconde?"</li>
+                        <li><strong>Tre proiettili d'argento</strong> con simboli strani incisi</li>
+                        <li><strong>Taccuino bruciato</strong> con schizzo di un portale e scritto in spirale: "non tornare NON TORNARE"</li>
+                    </ul>
+
+                    <p><strong>L'ovvia implicazione:</strong> Qualcosa in quella miniera ha rianimato i banditi morti. Se vogliono risposte - e assicurarsi che questo non succeda di nuovo - devono investigare.</p>
+
+                    <h3>La Scelta</h3>
+
+                    <p>I personaggi hanno una scelta genuina: tornare alla civilizzazione con i sopravvissuti (riferire, lasciare che altri investighi), oppure seguire gli indizi alla Silverstone Mine (scendere nella miniera maledetta, confrontare l'oscurità alla fonte).</p>
+
+                    <p><strong>Non forzarli.</strong> Se vogliono veramente tornare, lasciagli. Ma se vogliono risposte - e la maggior parte dei gruppi le vorranno - la miniera li aspetta.</p>
+                </article>
+
+                <hr>
+
+                <!-- ATTO TERZO -->
+                <article id="atto3">
+                    <div class="act-header">
+                        <h2>Atto Terzo: La Miniera Maledetta</h2>
+                        <p style="margin: 10px 0 0 0; font-size: 1.1em;">Discesa nell'oscurità</p>
+                    </div>
+
+                    <h3>L'Ingresso della Silverstone Mine</h3>
+
+                    <p>Dopo un'ora di cammino attraverso deserto sempre più caldo, arrivano. La miniera si trova in un canyon stretto dove pareti di roccia rossa creano ombre profonde anche a mezzogiorno. L'ingresso principale è una bocca nera nella parete roccia, puntellata da travi di legno marcio sul punto di crollare.</p>
+
+                    <p>Intorno all'ingresso: resti di accampamento minerario - baracche crollate, carrelli arrugginiti. Ma mescolato con la decadenza ci sono <strong>segni di attività recente</strong>: impronte fresche, qualcuno ha ripulito parzialmente l'ingresso, una baracca mostra uso recente.</p>
+
+                    <p>E poi ci sono i <strong>simboli</strong>. Dipinti sulle pareti rocciose con quello che sembra sangue. Forme geometriche che fanno male agli occhi se le guardi troppo a lungo - angoli simultaneamente acuti e ottusi, linee curve e dritte allo stesso tempo.</p>
+
+                    <div class="warning-box">
+                        <p><strong>Se qualcuno fissa i simboli per più di pochi secondi: Istinto vs 12 o riempi 1 segmento Tenuta Mentale.</strong></p>
+                    </div>
+
+                    <p><strong>L'atmosfera:</strong> Anche alla luce piena del giorno, questo posto emana malvagità tangibile. Gli uccelli non cantano. Non ci sono insetti. Il vento produce suoni strani - quasi sussurri in lingue morte. La temperatura è più fredda qui che nel deserto circostante.</p>
+
+                    <h3>Cosa È Successo Qui - Background</h3>
+
+                    <div class="info-box">
+                        <p>Vent'anni fa (1865), la Silverstone Mine era operazione prospera. Cinquantasette minatori scavavano sempre più in profondità. Poi sfondarono in qualcosa che non avrebbe dovuto esserci: una camera scolpita deliberatamente, in epoca così antica che la storia registrata non arriva vicino.</p>
+
+                        <p>Le pareti erano coperte di simboli. Al centro c'era un <strong>monolito</strong> - colonna di pietra nera lucida che rifletteva luce in modi impossibili, mostrando riflessi di luoghi che non erano la miniera, di cieli con troppi soli.</p>
+
+                        <p>I minatori impazzirono immediatamente. Entro una settimana, tutti i cinquantasette erano morti. La compagnia sigillò l'ingresso.</p>
+
+                        <p>Ma negli ultimi mesi, qualcosa ha iniziato a <strong>svegliarsi</strong>. A chiamare. Sogni hanno iniziato ad arrivare - sogni di potere, immortalità. Alcuni hanno ascoltato.</p>
+                    </div>
+
+                    <h3>Il Culto del Serpente Sotterraneo</h3>
+
+                    <p>Nelle ultime sei settimane, un culto di ~15 persone si è formato. Guidati da <strong>Jeremiah Caldwell</strong>, ex-predicatore che ha perso fede quando moglie e tre figli morirono di colera. Ha sognato del monolito ogni notte. Nei sogni, una voce sibilante prometteva: immortalità e dominio su vita e morte.</p>
+
+                    <p>I cultisti sono disperati - persone che hanno perso tutto. Non sono mostri per natura. Sono vittime manipolate.</p>
+
+                    <p>Il rituale cerca di risvegliare l'entità dormiente. I banditi furono maledetti dal culto - simboli incisi sui proiettili. Quando morirono, furono rianimati come servitori.</p>
+
+                    <h3>Livello 1 (Superiore) - L'Incontro</h3>
+
+                    <p>Il primo livello è rete di tunnel dove minatori lavoravano vene meno profonde. Lampade a olio riaccese forniscono luce fioca.</p>
+
+                    <p>In una camera laterale: accampamento improvvisato con ~12 sacchi a pelo in cerchio. Casse di provviste. Su roccia piatta: mappe della regione con località segnate, schizzi da libri occultisti, simboli ripetuti - un serpente che si mangia la coda.</p>
+
+                    <p><strong>I personaggi incontrano 2-3 Cultisti.</strong> Crucialmente, <strong>non attaccano immediatamente</strong>. Tentano di reclutare:</p>
+
+                    <div class="info-box" style="font-style: italic;">
+                        <p>"Fratelli! Sorelle! Avete sentito il richiamo, vero? Per questo siete qui. Il Serpente parla a chi ha orecchie per ascoltare. Venite, scendete con noi. La Voce vi spiegherà tutto."</p>
+                    </div>
+
+                    <p><strong>Opzioni:</strong> Combattere, Interrogare, Infiltrarsi (fingere interesse - rischioso), Negoziare (ragionare, fare appello all'umanità). Non c'è scelta "giusta".</p>
+
+                    <h3>Livello 2 (Intermedio) - La Discesa</h3>
+
+                    <p>Scala di legno precaria scende attraverso pozzo verticale (~50 piedi). Scendere richiede <strong>Agilità vs 12</strong>. Fallimento = caduta (3d6 danni) o aggrappato (serve aiuto).</p>
+
+                    <p>Il secondo livello è claustrofobico. Soffitti bassi, aria stantia. Questo livello mostra segni del crollo 1865. Soffitti sfondati, carrelli schiacciati. <strong>Scheletri umani</strong> ancora sepolti - corpi mai recuperati.</p>
+
+                    <div class="stat-block">
+                        <h4>⏰ L'OROLOGIO DELL'ARIA</h4>
+                        <p>L'aria è limitata. <strong>Orologio dell'Aria (6 segmenti)</strong>. Avanza di 1 ogni 15 minuti narrativi al livello 2-3.</p>
+                        <p><strong>3/6:</strong> Svantaggio tiri mentali (mal di testa, vertigini)</p>
+                        <p><strong>6/6:</strong> 1d6 danni ogni 5 minuti, rischio svenimento</p>
+                        <p><em>Crea pressione temporale - non puoi esplorare ogni tunnel o prendere riposi lunghi.</em></p>
+                    </div>
+
+                    <p><strong>Camera dei Preparativi:</strong> Vestiti rituali, coltelli cerimoniali su altare. Ciotole con sostanze (Doc identifica: peyote, funghi, oppio, qualcosa sconosciuto con odore sulfureo).</p>
+
+                    <p>E c'è un <strong>libro</strong>. Vecchio, pagine fragili come cenere. Copertina di qualcosa che sembra pelle ma ha texture innaturale. Quando Doc guarda le parole, la sua mente traduce: <strong>"Il Testamento del Serpente Sotterraneo"</strong></p>
+
+                    <div class="warning-box">
+                        <h4>⚠️ Se Qualcuno Legge il Libro</h4>
+                        <p>30 minuti, <strong>Conoscenza vs 16</strong></p>
+                        <p><strong>Successo:</strong> Acquisisce informazioni preziose - natura del Serpente, punti deboli (fuoco e luce solare), il rituale può essere interrotto distruggendo i tre idoli.</p>
+                        <p><strong>Ma indipendentemente da successo/fallimento: riempi 3 segmenti Tenuta Mentale immediatamente.</strong></p>
+                        <p><em>La conoscenza ha un prezzo.</em></p>
+                    </div>
+
+                    <p><strong>Incontro con Guardie:</strong> Avvicinandosi al terzo livello, <strong>4 Cultisti</strong> più pericolosi - armati, ordini di uccidere. Questi non possono essere raggiunti con ragione. Combattono con ferocia disperata.</p>
+
+                    <h3>Livello 3 - La Camera del Serpente</h3>
+
+                    <p>Pozzo verticale scende nell'oscurità per ~100 piedi. Corde e carrucole improvvisate. Scendere richiede <strong>Agilità vs 14</strong>. Fallimento = 4d6 danni.</p>
+
+                    <p>Mentre scendono, aria diventa più fredda. E iniziano a sentire suono - canto ritmico in lingua sconosciuta, voci multiple in armonie dissonanti.</p>
+
+                    <p><strong>Il rituale è già in corso.</strong></p>
+
+                    <h3>La Camera Antica</h3>
+
+                    <div class="warning-box">
+                        <p>Il fondo del pozzo si apre in caverna così vasta che lanterne non illuminano bordi opposti.</p>
+
+                        <p>Al centro: Il <strong>monolito nero</strong>. Alto ~20 piedi, perfettamente liscio tranne per simboli incisi così densamente che l'intera superficie sembra tessuta da geometrie impossibili.</p>
+
+                        <p>Intorno al monolito, disposti in triangolo perfetto, tre <strong>idoli di pietra</strong> (~3 piedi). Ognuno scolpito in forme che feriscono la mente - sembrano serpenti e non-serpenti, contorcersi quando non li guardi direttamente.</p>
+
+                        <p>Intorno agli idoli, <strong>13 cultisti</strong> eseguono il rituale. Tuniche nere, maschere dipinte. Si muovono in pattern coreografati, voci che si alzano e abbassano.</p>
+
+                        <p>Al centro, davanti al monolito con braccia alzate: <strong>La Voce del Serpente - Jeremiah Caldwell</strong>.</p>
+                    </div>
+
+                    <h3>Il Confronto Finale</h3>
+
+                    <p>Jeremiah era attraente e carismatico. Adesso è relitto - ha perso ~30 libbre, pelle flaccida, occhi infossati, capelli grigi a ciocche. Mani tremano tranne quando conduce rituale.</p>
+
+                    <p>Ma la voce è ancora potente. Ipnotica.</p>
+
+                    <div class="info-box">
+                        <h4>Le Sue Motivazioni</h4>
+                        <p style="font-style: italic;">"Dio mi ha tolto tutto. Ho pregato ogni giorno. E Lui ha guardato mentre mia moglie moriva tossendo sangue, mentre i miei bambini urlavano. Ma il Serpente... il Serpente offre potere. Il potere di decidere chi vive e chi muore."</p>
+                        <p>È tragico - vuole sinceramente porre fine alla sofferenza. Ma il metodo distruggerà molte più vite.</p>
+                    </div>
+
+                    <p><strong>Sarah può provare a salvarlo</strong> (<strong>Presenza vs 18</strong>, estremamente difficile). Se fa discorso genuinamente commovente su redenzione, Jeremiah potrebbe fermare il rituale volontariamente. Ma anche convinto, cultisti fanatici potrebbero non fermarsi.</p>
+
+                    <div class="stat-block">
+                        <h4>⏰ L'OROLOGIO DEL RITUALE</h4>
+                        <p>6 segmenti, inizia a 4/6 (ore di lavoro prima che personaggi arrivassero).</p>
+                        <p>Avanza 1 ogni 3 round combattimento.</p>
+                        <p><strong>A 6/6: la Manifestazione emerge completamente.</strong></p>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4>🎯 PRIORITÀ TATTICA</h4>
+                        <p><strong>Distruggere i tre idoli prima di combattere Jeremiah o la Manifestazione.</strong></p>
+                        <p>Ogni idolo: <strong>20 PF, Armatura 5</strong> (pietra solida). Fuoco Purificatore di Sarah ignora Armatura.</p>
+                        <p><strong>Ogni idolo distrutto:</strong> -30% PF massimi Manifestazione, -1 Armatura, perde abilità Paura.</p>
+                    </div>
+
+                    <h3>Boss Fight</h3>
+
+                    <p><strong>Jeremiah (60 PF, Difficoltà 15, Soglia 5)</strong> combatte tatticamente. Mantiene distanza, usa Parole Serpente per attacchi mentali, evoca serpenti spettrali. Legato al monolito (entro Lontana): +2 tutti i tiri, recupera 5 PF/turno.</p>
+
+                    <p><strong>Se ridotto sotto 30 PF e hai 4+ Paura:</strong> Trasformazione Parziale - scaglie nere, occhi gialli, artigli. Armatura 3, attacchi +1d6 veleno, 2 azioni/turno, +2 Difficoltà. Perde capacità parlare.</p>
+
+                    <p><strong>Se l'Orologio raggiunge 6/6:</strong> La Manifestazione emerge. Massa fluida tentacoli/occhi/bocche. Colore che mente non interpreta. <strong>90 PF, Difficoltà 16, Soglia 7, Armatura 5, Resistenza Fisica 8.</strong> Vulnerabile a fuoco e luce solare. Legata agli idoli - distruggerli la indebolisce drasticamente.</p>
+
+                    <p><strong>Strategia migliore:</strong> Alcuni tengono occupata Manifestazione mentre altri distruggono idoli, poi tutti concentrano fuoco sulla creatura indebolita.</p>
+
+                    <h3>Risoluzione</h3>
+
+                    <p>Come si risolve dipende dalle azioni dei giocatori. Possibili finali:</p>
+
+                    <ul>
+                        <li><strong>Vittoria Eroica:</strong> Fermano rituale, distruggono idoli, sconfiggono tutto, salvano cultisti sani. Sono cambiati ma sopravvissuti.</li>
+                        <li><strong>Vittoria Costosa:</strong> Fermano rituale ma qualcuno muore, qualcuno guadagna Cicatrice Mentale permanente.</li>
+                        <li><strong>Fuga Disperata:</strong> Realizzano che non possono vincere, fuggono, usano esplosivi per crollare tunnel. Emergono appena prima del crollo. Vivi ma sanno che non hanno veramente sconfitto il male.</li>
+                        <li><strong>Ambiguità Oscura:</strong> Sconfiggono tutto ma Doc nota altri tunnel che scendono ancora più in profondità. Da quelli arrivano suoni. Movimento. Il Serpente era solo l'inizio.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <hr style="margin: 80px 0;">
+
+            <!-- BESTIARIO -->
+            <section id="bestiario">
+                <h1>Bestiario</h1>
+
+                <p style="text-align: center; font-style: italic; margin: 30px 0;">
+                    Dal banale al cosmico: le creature che il gruppo affronterà durante l'avventura.<br>
+                    Statistiche snelle in stile Daggerheart per consultazione rapida.
+                </p>
+
+                <div class="creature-card">
+                    <h3>BANDITO [UMANO]</h3>
+                    <p><strong>PF:</strong> 18 | <strong>Difficoltà:</strong> 13 | <strong>Soglia:</strong> 2 | <strong>Armatura:</strong> 1</p>
+                    
+                    <p><strong>ATTACCHI:</strong></p>
+                    <ul>
+                        <li>Revolver (Ravvicinata) - 1d8+2 danni, Penetrante 1</li>
+                        <li>Coltello (Molto Ravvicinata) - 1d6+1 danni</li>
+                    </ul>
+                    
+                    <p><strong>ABILITÀ:</strong></p>
+                    <p><strong>Copertura Rapida:</strong> Come azione minore, muoversi dietro copertura e guadagnare +2 Evasione fino al prossimo turno.</p>
+                    
+                    <div class="collapsible">Note per il GM</div>
+                    <div class="collapsible-content">
+                        <p>Banditi normali combattono per vivere, non per morire. Se ridotti sotto metà PF, cercano ritirata o resa. Lavorano meglio in gruppi di 3-4 usando fuoco di copertura coordinato. Non sono stupidi - usano tattiche, sfruttano terreno. Quando muoiono, descrivi umanamente - hanno famiglie, storie, sogni interrotti dal proiettile.</p>
+                    </div>
+                </div>
+
+                <div class="creature-card">
+                    <h3>BANDITO RISORTO [NON-MORTO]</h3>
+                    <p><strong>PF:</strong> 22 | <strong>Difficoltà:</strong> 12 | <strong>Soglia:</strong> 2 | <strong>Armatura:</strong> 1</p>
+                    <p><strong>IMMUNITÀ:</strong> Dolore, Paura, effetti mentali | <strong>RESISTENZA FISICA:</strong> 3</p>
+                    
+                    <p><strong>ATTACCHI:</strong></p>
+                    <ul>
+                        <li>Artigli/Morso (Molto Ravvicinata) - 1d8+3 danni</li>
+                        <li>Revolver (se impugna) - 1d8+2 danni con svantaggio</li>
+                    </ul>
+                    
+                    <p><strong>ABILITÀ:</strong></p>
+                    <p><strong>Rigenerazione Minore:</strong> Recupera 1d6 PF all'inizio del turno. Fuoco o danni sacri prevengono questo per 1 round.</p>
+                    <p><strong>Presenza Innaturale:</strong> Prima vista: Istinto vs 12 o riempi 1 segmento Tenuta Mentale.</p>
+                    
+                    <div class="collapsible">Note per il GM</div>
+                    <div class="collapsible-content">
+                        <p>Mantengono tracce memoria muscolare ma nessuna personalità. Movimenti goffi, teste girate angoli strani, occhi bianchi. Attaccano con ferocia animalesca - sibilano, grugniscono, mordono. Non sentono dolore quindi continuano anche con arti spezzati. Vulnerabili fuoco (paura istintiva) e luce solare (dissoluzione). Eccellenti per prima vista horror. Atto Secondo: usane 3-8 simultaneamente per senso assedio.</p>
+                    </div>
+                </div>
+
+                <div class="creature-card">
+                    <h3>CULTISTA [UMANO, CORROTTO]</h3>
+                    <p><strong>PF:</strong> 16 | <strong>Difficoltà:</strong> 13 | <strong>Soglia:</strong> 2 | <strong>Armatura:</strong> 0</p>
+                    
+                    <p><strong>ATTACCHI:</strong></p>
+                    <ul>
+                        <li>Coltello Rituale (Molto Ravvicinata) - 1d6+2 danni + 1d4 sanguinamento</li>
+                        <li>Fucile (Ravvicinata/Lontana) - 2d6 danni</li>
+                    </ul>
+                    
+                    <p><strong>ABILITÀ:</strong></p>
+                    <p><strong>Parole del Serpente</strong> (Ricarica 5-6): Azione. Bersaglio entro Ravvicinata: Presenza vs 14 o Stordito 1 round.</p>
+                    <p><strong>Fanatico:</strong> Vantaggio su tiri contro Paura/Intimidazione. Non fugge mai volontariamente.</p>
+                    
+                    <div class="collapsible">Note per il GM</div>
+                    <div class="collapsible-content">
+                        <p>Umani disperati manipolati da forze cosmiche. Nei primi incontri (Livello 1-2), alcuni potrebbero essere raggiunti con diplomazia - mostrano esitazione, dubbio. Più vicini al terzo livello = più corrotti e fanatici. Durante combattimenti, tattiche sacrificali. Quando muoiono, ultimi respiri sono preghiere al Serpente. Utili per dilemmazione morale - sono vittime o complici? Sarah particolarmente conflittuale su questo.</p>
+                    </div>
+                </div>
+
+                <div class="creature-card">
+                    <h3>SERPENTI SPETTRALI [EVOCAZIONE]</h3>
+                    <p><strong>PF:</strong> 8 (ciascuno) | <strong>Difficoltà:</strong> 14 | <strong>Soglia:</strong> 1 | <strong>Armatura:</strong> 0</p>
+                    <p><strong>IMMUNITÀ:</strong> Veleno, malattie | <strong>EVOCATI:</strong> Jeremiah evoca 1d4+1 come azione</p>
+                    
+                    <p><strong>ATTACCHI:</strong></p>
+                    <ul>
+                        <li>Morso Etereo (Molto Ravvicinata) - 1d6+2 danni necrotici (ignorano Armatura fisica)</li>
+                    </ul>
+                    
+                    <p><strong>ABILITÀ:</strong></p>
+                    <p><strong>Forma Semi-Solida:</strong> Danni fisici ridotti di metà. Fuoco e danni sacri pieni.</p>
+                    <p><strong>Strisciare Pareti:</strong> Muovono su superfici verticali/soffitti liberamente.</p>
+                    
+                    <div class="collapsible">Note per il GM</div>
+                    <div class="collapsible-content">
+                        <p>Manifestazioni semi-reali evocate da Jeremiah. Sembrano serpenti ma troppo lunghi, troppe vertebre, movimento innaturale. Quando colpiti, corpo "glitch" come immagine difettosa. Eccellenti per molestare personaggi a distanza o proteggere Jeremiah mentre lancia. Muoiono automaticamente se Jeremiah cade incosciente. Non intelligenti - attaccano bersaglio più vicino.</p>
+                    </div>
+                </div>
+
+                <div class="creature-card">
+                    <h3>LA VOCE DEL SERPENTE - JEREMIAH CALDWELL [UMANO, CORROTTO]</h3>
+                    <p><strong>PF:</strong> 60 | <strong>Difficoltà:</strong> 15 | <strong>Soglia:</strong> 5 | <strong>Armatura:</strong> 2</p>
+                    
+                    <p><strong>ATTACCHI:</strong></p>
+                    <ul>
+                        <li>Bastone Rituale (Molto Ravvicinata) - 2d6+3 danni</li>
+                        <li>Parole Serpente (Ravvicinata) - 2d8+4 danni psichici, Presenza vs 15 o Stordito</li>
+                    </ul>
+                    
+                    <p><strong>ABILITÀ:</strong></p>
+                    <p><strong>Evocare Serpenti Spettrali:</strong> Azione. 1d4+1 serpenti appaiono entro Ravvicinata.</p>
+                    <p><strong>Vincolo al Monolito</strong> (mentre entro Lontana dal monolito): +2 tutti i tiri, recupera 5 PF inizio turno.</p>
+                    <p><strong>Parole di Dominio</strong> (1/combattimento): Azione. Tutti nemici entro Ravvicinata: Presenza vs 16 o Affascinati 1d4 round.</p>
+                    <p><strong>Trasformazione Parziale</strong> (quando sotto 30 PF, se hai 4+ Paura): Scaglie nere, occhi gialli, artigli. Guadagna Armatura 3, attacchi +1d6 veleno, 2 azioni/turno, +2 Difficoltà. Perde capacità parlare.</p>
+                    
+                    <div class="collapsible">Note per il GM</div>
+                    <div class="collapsible-content">
+                        <p>Boss finale "umano" - tragico, comprensibile, ma commesso a percorso oscuro. Combatte intelligentemente: mantiene distanza, usa serpenti come scudi, posiziona cultisti tra sé e minacce. Se Sarah tenta ragionare, ruola conflitto interno genuino. Trasformazione (se attivata) momento body-horror drammatico. Quando sconfitto, ultimi respiri per famiglia morta: "Elizabeth... bambini... vi rivedrò..."</p>
+                    </div>
+                </div>
+
+                <div class="creature-card">
+                    <h3>LA MANIFESTAZIONE DEL SERPENTE SOTTERRANEO [ORRORE COSMICO]</h3>
+                    <p><strong>PF:</strong> 90 | <strong>Difficoltà:</strong> 16 | <strong>Soglia:</strong> 7 | <strong>Armatura:</strong> 5</p>
+                    <p><strong>RESISTENZA FISICA:</strong> 8 | <strong>IMMUNITÀ:</strong> Dolore, Paura, Veleno, Malattia, effetti mentali</p>
+                    
+                    <p><strong>ATTACCHI:</strong></p>
+                    <ul>
+                        <li>Tentacoli Multipli - 1d4+1 attacchi, ciascuno 2d8+4 danni, Portata Ravvicinata</li>
+                        <li>Morso Impossibile (1/turno, 2 azioni) - 3d10+6 danni, bersaglio trascinato dentro (Forza vs 18 liberarsi)</li>
+                    </ul>
+                    
+                    <p><strong>ABILITÀ:</strong></p>
+                    <p><strong>Rigenerazione Maggiore:</strong> Recupera 2d8 PF inizio turno. Fuoco previene 1 round. Danni sacri prevengono permanentemente.</p>
+                    <p><strong>Ondata Psichica</strong> (Ricarica 5-6): Azione. Tutti entro Lontana: Istinto vs 18 o riempi 3 segmenti Tenuta + 3d8 danni psichici. Successo dimezza.</p>
+                    <p><strong>Presenza Terrificante:</strong> Prima vista: Istinto vs 16 o riempi 2 segmenti + Scosso 1d4 round.</p>
+                    <p><strong>Legata agli Idoli:</strong> Mentre 1+ idolo esiste, +2 tutti i tiri. Per ogni idolo distrutto: -30% PF max, -1 Armatura, -2 Resistenza.</p>
+                    <p><strong>Vulnerabilità Luce Solare:</strong> Luce diretta infligge 5d10 danni automatici inizio turno. Dopo 3 round sotto sole, bandita.</p>
+                    
+                    <div class="collapsible">Note per il GM</div>
+                    <div class="collapsible-content">
+                        <p>VERO boss finale orrore cosmico - deve essere TERRIFICANTE. Descrivi come massa fluida che occhi non riescono focalizzare - tentacoli e non-tentacoli, occhi troppi, bocche dove non dovrebbero essere, colore senza nome. Si muove violando fisica - angoli impossibili, esistendo in più posti simultaneamente. Attacca con fame predatoria cosmica pura. ESSENZIALE: distruggere idoli prima = scontro gestibile. Piena potenza con 3 idoli = TPK probabile. Richiede coordinazione totale gruppo. Quando sconfitta (0 PF o bandita), non "muore" - dissolve urlando, risucchiata indietro. Lascia sensazione: non l'avete uccisa, solo rimandata.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr style="margin: 80px 0;">
+
+            <!-- STRUMENTI GM -->
+            <section id="strumenti">
+                <h1>Strumenti per il Game Master</h1>
+
+                <div class="warning-box" style="background: rgba(212, 165, 116, 0.15); border-color: var(--desert-sand);">
+                    <h3>🖨️ MATERIALI STAMPABILI ESSENZIALI</h3>
+                    <p>Prima di masterare questa avventura, <strong>STAMPA QUESTI FILE</strong> inclusi nel quickstart:</p>
+                    
+                    <div style="margin: 15px 0;">
+                        <p><strong>📄 gunsmoke-dread-quick-reference.html</strong></p>
+                        <p style="margin-left: 20px;">Scheda di riferimento rapido (1 pagina A4) con tutte le regole essenziali: difficoltà, distanze, combattimento, armi, duelli, Tenuta Mentale, condizioni, e regole Weird West. <strong>Tienila dietro lo schermo durante tutta la sessione!</strong></p>
                     </div>
                     
-                    <div style="background: white; padding: 20px; border: 2px solid #654321; box-shadow: 0 5px 20px rgba(0,0,0,0.3);">
-                        <p style="text-align: center; margin-bottom: 20px; font-size: 1.1em; color: #8b4513;">
-                            <strong>💡 Visualizza handout grafico completo:</strong> 
-                            <a href="../HANDOUTS-GRAFICA-PDF/GRAFICA-Telegramma-Sceriffo.html" target="_blank" 
-                               style="color: #d4af37; text-decoration: underline; font-weight: bold;">
-                                Apri handout in nuova finestra per stampa
-                            </a>
-                        </p>
+                    <div style="margin: 15px 0;">
+                        <p><strong>📋 gunsmoke-dread-character-sheets.html</strong></p>
+                        <p style="margin-left: 20px;">Schede personaggio complete per Jack, Sarah e Doc (3 pagine A4). Stampa una copia per ogni giocatore. Include spazi per segnare HP, Stress, Tenuta Mentale, Speranza, note di sessione. Molto più pratico che consultare l'HTML durante il gioco.</p>
                     </div>
-                </section>
-</section>
-                
-                <!-- SETUP & HOOKS -->
-                <section id="setup" class="section">
-                    <h2>🎣 Setup & Hooks</h2>
                     
-                    <p class="large">
-                        Come PG arrivano a Silver Hollow? Scegli hook appropriato per gruppo, o lascia ciascun 
-                        player scegliere il proprio.
+                    <p style="margin-top: 15px;"><strong>💡 Consiglio Pro:</strong> Se hai una stampante a colori, stampa la Quick Reference su carta colorata (giallo/beige chiaro) per un effetto "old west" e per trovarla facilmente tra i tuoi appunti!</p>
+                </div>
+
+                <h2>Tabelle di Riferimento Rapido</h2>
+
+                <table>
+                    <tr>
+                        <th>Difficoltà</th>
+                        <th>Valore</th>
+                    </tr>
+                    <tr><td>Facile</td><td>10</td></tr>
+                    <tr><td>Normale</td><td>12</td></tr>
+                    <tr><td>Medio</td><td>14</td></tr>
+                    <tr><td>Difficile</td><td>16</td></tr>
+                    <tr><td>Molto Difficile</td><td>18</td></tr>
+                    <tr><td>Quasi Impossibile</td><td>20</td></tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <th>Distanza</th>
+                        <th>Metri/Piedi</th>
+                    </tr>
+                    <tr><td>Molto Ravvicinata</td><td>Tocco - 3 metri (10 piedi)</td></tr>
+                    <tr><td>Ravvicinata</td><td>9 metri (30 piedi)</td></tr>
+                    <tr><td>Lontana</td><td>18 metri (60 piedi)</td></tr>
+                    <tr><td>Molto Lontana</td><td>36+ metri (120+ piedi)</td></tr>
+                </table>
+
+                <h2>Consigli per Gestire l'Avventura</h2>
+
+                <div class="info-box">
+                    <h4>BILANCIA AZIONE E HORROR</h4>
+                    <p>Atto Primo = azione western pura. Atto Secondo = survival horror con violenza difensiva. Atto Terzo = confronto cosmico. Non lasciare che nessun tono domini completamente - la varietà mantiene gruppo ingaggiato.</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>USA PAURA STRATEGICAMENTE</h4>
+                    <p>Non spendere Paura solo per danneggiare. Usala per creare complicazioni narrative interessanti, forzare scelte difficili, costruire tensione. Migliori usi Paura = momenti che gruppo ricorderà per sempre.</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>LASCIA RESPIRARE TRA AZIONI</h4>
+                    <p>Dopo combattimenti intensi, dai 5-10 minuti per scene personaggi quiete. Conversazioni, Connessioni, processare trauma. Queste scene costruiscono investimento emotivo che rende prossima azione ancora più impattante.</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>IMPROVVISA BASANDOTI SU GIOCATORI</h4>
+                    <p>Se gruppo decide strategia inaspettata, vai con loro. Adatta numeri nemici e pacing. Migliori storie emergono quando GM risponde creativamente a iniziativa giocatori invece forzarli su binari.</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>TENUTA MENTALE È STRUMENTO NARRATIVO</h4>
+                    <p>Non riempire segmenti meccanicamente. Riempili quando fa senso narrativo. Jack veterano potrebbe non riempire vedendo cadavere ma sì vedendo qualcuno morire sotto protezione. Sarah forte contro orrore cosmico ma vulnerabile a prove che Dio non ascolta. Doc distaccato ma vulnerabile a conoscenza che rompe visione scientifica.</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>NON AVER PAURA DI MORTE PNG</h4>
+                    <p>Civili non hanno trama armor. Alcuni dovrebbero morire durante Atto Secondo per peso emotivo. Ma morti devono significare qualcosa - non casuali o gratuite. Vecchia signora che si sacrifica = potente. Venditore ucciso off-screen = spreco.</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>JEREMIAH È TRAGICO, NON MALVAGIO PURO</h4>
+                    <p>Quando gruppo lo confronta, ruola conflitto interno. Dubita. Esita. Se Sarah fa discorso commovente, concedi possibilità redenzione. Se gruppo lo tratta come mostro, diventa mostro che si aspettano. Personaggi creano narrativa attraverso interazioni.</p>
+                </div>
+
+                <h2>Regolare Difficoltà al Volo</h2>
+
+            <!-- ATTO III: SILVER HOLLOW -->
+            <article id="atto3">
+                <div class="act-header">
+                    <h2>🏜️ Atto Terzo: Investigazione a Silver Hollow</h2>
+                    <p style="margin: 10px 0 0 0; font-size: 1.1em;">Dove la paranoia cresce e i segreti emergono</p>
+                </div>
+
+                <h3>Il Viaggio</h3>
+                
+                <p>
+                    All'alba, i morti si dissolvono completamente - i loro corpi collassano in cenere che il vento 
+                    del deserto disperde rapidamente. Il treno è danneggiato ma funzionale. I sopravvissuti sono 
+                    traumatizzati ma vivi.
+                </p>
+
+                <p>
+                    Il conducente del treno rifiuta categoricamente di continuare verso Phoenix. "C'è qualcosa di 
+                    maledetto in questa regione," dice, gli occhi ancora pieni di terrore. "Porterò questo treno 
+                    all'insediamento più vicino - Silver Hollow - e poi torno a Tucson. E se siete saggi, farete lo stesso."
+                </p>
+
+                <div class="info-box">
+                    <h4>🗺️ Distanza e Viaggio</h4>
+                    <p>
+                        Silver Hollow dista circa quindici miglia dalla posizione attuale del treno. Il viaggio 
+                        richiede tre ore con il treno che procede lentamente per precauzione. Durante il viaggio:
                     </p>
-                    
-                    <h3>🔫 HOOK 1: Jack Malone - Bounty Hunter</h3>
-                    <div class="stat-block">
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Hai ricevuto wanted poster da marshal territoriale: <strong>"Jeremiah Stone - Wanted 
-                            for Murder & Heresy - $500 Reward"</strong>. Stone era prete a Silver Hollow. Poi 
-                            impazzì, uccise 3 parrocchiani, fuggì nella miniera. Ultimo avvistamento: 2 settimane fa.
-                        </p>
-                        <p style="margin-top: 10px;"><strong>Motivazione:</strong> $500 è ottimo denaro. E forse... 
-                        salvare qualche anima nel processo.</p>
-                    </div>
-                    
-                    <h3>🙏 HOOK 2: Sarah Blackwood - Called by Church</h3>
-                    <div class="stat-block">
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Lettera da <strong>Vescovo Santa Fe</strong>: "Sister Sarah, abbiamo perso contatto 
-                            con Father Jeremiah a Silver Hollow. Sue ultime lettere... preoccupanti. Parlava di 
-                            'verità antiche' e 'falsi dei'. Investigate discretamente. Se è caduto in eresia, 
-                            riportalo alla fede. Se... oltre redemption... fa ciò che è necessario."
-                        </p>
-                        <p style="margin-top: 10px;"><strong>Motivazione:</strong> Duty alla Chiesa. E curiosità 
-                        - cosa ha scoperto Jeremiah?</p>
-                    </div>
-                    
-                    <h3>🔬 HOOK 3: Doc Wells - Scientific Curiosity</h3>
-                    <div class="stat-block">
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            Articolo su <strong>Santa Fe Scientific Journal</strong>: "Strange Geological Formation 
-                            Discovered in Silver Hollow Mine - Ancient Ruins Predating Known Civilizations?" 
-                            L'autore, geologo locale, è scomparso settimana dopo pubblicazione. Le foto mostrano... 
-                            architettura impossibile. Pietra che non corrisponde a nessuna formazione conosciuta.
-                        </p>
-                        <p style="margin-top: 10px;"><strong>Motivazione:</strong> Scientific discovery of lifetime! 
-                        E... dovere verificare se collega è salvo.</p>
-                    </div>
-                    
-                    <h3>🎯 HOOK 4: Universal - Sheriff's Telegram</h3>
-                    <div class="stat-block">
-                        <p style="font-size: 1.05em; line-height: 1.8;">
-                            <strong>Telegramma urgente da Sheriff Hank Morrison, Silver Hollow:</strong><br>
-                            "NEED HELP STOP 12 CITIZENS MISSING STOP CULT ACTIVITY SUSPECTED STOP LOCALS SCARED 
-                            STOP PAY $100 EACH STOP COME IMMEDIATELY STOP"
-                        </p>
-                        <p style="margin-top: 10px;"><strong>Motivazione:</strong> Denaro, adventure, help people 
-                        in need. Simple ma effective.</p>
-                    </div>
-                    
-                    <div class="tip-box">
-                        <h4>💡 Combinare Hooks</h4>
-                        <p>
-                            In party misto, ogni PG può avere hook diverso. Arrivano a Silver Hollow per ragioni 
-                            diverse, si incontrano lì, decidono collaborare. Questo crea dynamic interessante - 
-                            motivazioni diverse, conflitti potenziali, ma obiettivo comune.
-                        </p>
-                    </div>
-                </section>
-                
-                <!-- ATTO I -->
-                <section id="atto1" class="section">
+                    <ul>
+                        <li>I passeggeri si riprendono lentamente dallo shock</li>
+                        <li>Alcuni ringraziano i PG per averli salvati; altri li guardano con sospetto</li>
+                        <li>Il paesaggio diventa progressivamente più desolato</li>
+                        <li>Nessuno dorme - tutti continuano a guardare fuori, temendo che i morti tornino</li>
+                    </ul>
+                </div>
+
                     <h2>🏜️ ATTO I: ARRIVO A SILVER HOLLOW</h2>
                     
                     <p class="large">
@@ -352,53 +1308,6 @@ li segreti in miniera. Membri "fedeli"
                             loose. Ultime 5 entries sono... inquietanti (vedi Handout #1).
                         </p>
                     </div>
-
-                <!-- ═══════════════════════════════════════════════════════════ -->
-                <!-- HANDOUT INTEGRATO #2: DIARIO REVERENDO JEREMIAH            -->
-                <!-- ═══════════════════════════════════════════════════════════ -->
-                
-                <section id="handout-diario" class="section" style="page-break-before: always; background: linear-gradient(135deg, #f4e8d0 0%, #e8d5b7 100%); padding: 40px; border: 3px solid #8b0000; margin: 40px 0;">
-                    <div style="text-align: center; margin-bottom: 30px; padding: 20px; background: rgba(139, 0, 0, 0.1); border: 2px solid #8b0000;">
-                        <h2 style="font-size: 2em; color: #8b0000; margin: 0;">📖 HANDOUT #2: DIARIO REVERENDO JEREMIAH</h2>
-                        <p style="margin: 10px 0 0 0; font-style: italic; color: #654321;">
-                            Trovato nascosto sotto una tavola del pavimento nella chiesa (Percezione CD 13)
-                        </p>
-                    </div>
-                    
-                    <div style="background: white; padding: 20px; border: 2px solid #654321; box-shadow: 0 5px 20px rgba(0,0,0,0.3);">
-                        <p style="text-align: center; margin-bottom: 20px; font-size: 1.1em; color: #8b4513;">
-                            <strong>💡 Visualizza handout grafico completo:</strong> 
-                            <a href="../HANDOUTS-GRAFICA-PDF/GRAFICA-Diario-Reverendo-Jeremiah.html" target="_blank" 
-                               style="color: #8b0000; text-decoration: underline; font-weight: bold;">
-                                Apri diario completo (3 pagine) in nuova finestra
-                            </a>
-                        </p>
-                        
-                        <div style="margin-top: 20px; padding: 15px; background: rgba(139, 0, 0, 0.08); border-left: 4px solid #8b0000;">
-                            <strong style="color: #8b0000;">💀 TENUTA MENTALE:</strong>
-                            <p style="margin: 10px 0 0 0; line-height: 1.7;">
-                                Dopo aver letto il diario completo, i personaggi devono effettuare un check di 
-                                <strong>Tenuta Mentale (Presenza CD 14)</strong>. Fallimento = perdita di 2 segmenti. 
-                                Assistere alla discesa nella follia di un uomo di fede è devastante.
-                            </p>
-                        </div>
-                        
-                        <div style="margin-top: 15px; padding: 15px; background: rgba(212, 175, 55, 0.1); border-left: 4px solid #d4af37;">
-                            <strong style="color: #b8860b;">📋 Riassunto Diario:</strong>
-                            <p style="margin: 10px 0 0 0; line-height: 1.7;">
-                                <strong>3 Settembre:</strong> Jeremiah arriva a Silver Hollow, ottimista e pieno di fede.<br>
-                                <strong>12 Settembre:</strong> Minatori riportano sogni strani. Anche lui inizia a sognare.<br>
-                                <strong>18 Settembre:</strong> Scoperta camera antica nella miniera. Simboli inquietanti. 
-                                Parla di un "Sigillo".<br>
-                                <strong>23 Settembre:</strong> Team scomparso. Jeremiah vede "attraverso i loro occhi". 
-                                Le Scritture si contorcono.<br>
-                                <strong>27 Settembre:</strong> <em>Follia completa.</em> "NON È DIO CHE DORME NEL PROFONDO". 
-                                Ultima entry incomprensibile, scritta in sangue.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
                     
                     <div class="warning-box">
                         <h4>💀 TENUTA CHECK</h4>
@@ -573,6 +1482,49 @@ li segreti in miniera. Membri "fedeli"
                     </div>
                 </section>
                 
+                <!-- ATTO II: LA MINIERA -->
+
+            </article>
+
+            <!-- ATTO IV: IL TEMPIO -->
+            <article id="atto4">
+                <div class="act-header">
+                    <h2>⛏️ Atto Quarto: Il Tempio del Serpente Sotterraneo</h2>
+                    <p style="margin: 10px 0 0 0; font-size: 1.1em;">Dove la realtà si spezza e gli orrori attendono</p>
+                </div>
+
+                <h3 id="tempio-decisione">La Decisione</h3>
+                
+                <p>
+                    Dopo l'investigazione a Silver Hollow, i PG hanno scoperto la verità: un culto segreto venera 
+                    un'entità antica chiamata "Il Serpente Sotterraneo" nella miniera abbandonata. Dodici persone 
+                    sono state rapite per un rituale di risveglio che si terrà stanotte.
+                </p>
+
+                <p>
+                    Sheriff Morrison è esausto e sopraffatto. "Non posso chiedervi di entrare là dentro," ammette. 
+                    "Ma se non lo fate voi... chi lo farà? Quei poveri diavoli sono già morti, o peggio. E se quel 
+                    culto riesce nel suo intento..." La sua voce si spegne. Non sa nemmeno cosa succederebbe.
+                </p>
+
+                <div class="warning-box">
+                    <h4>⏰ Urgenza Temporale</h4>
+                    <p>
+                        È sera. Il sole sta tramontando. Il rituale inizierà a mezzanotte. I PG hanno circa quattro 
+                        ore per:
+                    </p>
+                    <ul>
+                        <li>Prepararsi (equipaggiamento, riposo, strategia)</li>
+                        <li>Raggiungere la miniera (30 minuti a cavallo)</li>
+                        <li>Penetrare nelle profondità</li>
+                        <li>Fermare il rituale prima che sia troppo tardi</li>
+                    </ul>
+                    <p style="margin-top: 10px;">
+                        Ogni ora spesa in preparazione è un'ora in meno per esplorare. Il trade-off tra preparazione 
+                        e tempo è reale e dovrebbe pesare sulle decisioni dei giocatori.
+                    </p>
+                </div>
+
                 <!-- ATTO II: LA MINIERA -->
                 <section id="atto2" class="section">
                     <h2>⛏️ ATTO II: LA MINIERA MALEDETTA</h2>
@@ -949,93 +1901,196 @@ li segreti in miniera. Membri "fedeli"
                     
                     <div class="stat-block">
                         <h4>📜 D: SACRIFICIO EROICO</h4>
-                        <p><strong>Trigger:</strong> 1 PG sacrifica se stesso per salvare party</p>
-                        <p style="margin-top: 10px;">Ultimate heroism. Tempio destroyed, PG morto ma remembered. 
-                        Reward: 1800 XP + Honor bonus.</p>
-                    </div>
-                </section>
-                
-                <!-- NPCs REFERENCE -->
-                <section id="npcs" class="section">
-                    <h2>👥 NPCs & Creature Quick Reference</h2>
+
+                <div class="warning-box">
+                    <h4>SE GRUPPO DOMINA FACILMENTE:</h4>
+                    <ul>
+                        <li>Aggiungi 1-2 nemici extra per incontro</li>
+                        <li>Boss recupera 10-20 PF (narrativamente: "seconda ventata")</li>
+                        <li>Attiva complicazioni ambientali (coperture crollano, tunnel minaccia crollo)</li>
+                        <li>Ma NON aumentare se gruppo domina per intelligenza tattica - ricompensa gioco intelligente</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <h4>SE GRUPPO LOTTA TROPPO:</h4>
+                    <ul>
+                        <li>Riduci PF nemici non ancora apparsi</li>
+                        <li>Fai nemici feriti fuggire invece combattere morte</li>
+                        <li>Introduci opportunità tattiche (barili esplosivi, stalattiti)</li>
+                        <li>Sarah "trova" 6 proiettili benedetti che aveva dimenticato</li>
+                    </ul>
+                </div>
+
+                <p><strong>L'obiettivo è sfida soddisfacente, non TPK né passeggiata.</strong> Leggi tavolo - se giocatori ridono nervosi/eccitati = perfetto. Se frustrati/annoiati = aggiusta.</p>
+
+                <h2>Espandere Oltre Questo Quickstart</h2>
+
+                <div class="collapsible">Se Vuoi Campagna Continuata</div>
+                <div class="collapsible-content">
+                    <p><strong>Conseguenze Immediate:</strong> Sopravvissuti diffondono storia. Alcuni credono (attira cacciatori mostri), altri no (personaggi etichettati pazzi). Compagnia ferroviaria vuole insabbiare.</p>
                     
-                    <h3>🤠 NPCs Chiave</h3>
-                    <ul style="font-size: 1.05em; line-height: 1.7;">
-                        <li><strong>Sheriff Hank Morrison:</strong> Quest giver, HP 28, overwhelmed ma honest</li>
-                        <li><strong>Frank (Barista):</strong> Info hub, knows gossip, nervous</li>
-                        <li><strong>Old Pete:</strong> Ex-miner witness, drunk ma truthful</li>
-                        <li><strong>Maria:</strong> Prostituta, pattern recognition, pragmatica</li>
+                    <p><strong>Altre Miniere Maledette:</strong> Silverstone non era unica. Altre miniere sparse Southwest nascondono segreti simili. Gruppo diventa "esperti".</p>
+                    
+                    <p><strong>Il Culto Sopravvive:</strong> Se cultisti fuggirono, ricostruiscono con nuovo leader. Giurano vendetta.</p>
+                    
+                    <p><strong>Cicatrici Permanenti:</strong> Condizioni Tenuta guadagnate continuano. Jack diventa più isolato. Sarah fede testata. Doc ossessionato catalogare orrori.</p>
+                    
+                    <p><strong>Entità Maggiori:</strong> Serpente era servitore minore. Avete attirato attenzione. Sogni strani iniziano. Qualcosa sta arrivando.</p>
+                </div>
+            </section>
+
+            <hr style="margin: 80px 0;">
+
+            <!-- APPENDICE -->
+            <section id="appendice">
+                <h1>Appendice</h1>
+
+                <h2>Materiale Stampabile - Checklist</h2>
+
+                <div class="stat-block">
+                    <h4>CHECKLIST PRE-SESSIONE GM</h4>
+                    <p>☐ Leggi Introduzione + Ambientazione (15 min)</p>
+                    <p>☐ Leggi Regole Essenziali 🔥 (15 min)</p>
+                    <p>☐ Leggi Avventura (45-60 min)</p>
+                    <p>☐ Scorri Bestiario (10 min)</p>
+                    <p>☐ Stampa: Scheda Riferimento, Bestiario, schede personaggi</p>
+                    <p>☐ Prepara: 6d12, dadi poliedrici, segnalini Speranza/Paura</p>
+                    <p>☐ Opzionale: Playlist, mappe</p>
+                </div>
+
+                <div class="stat-block">
+                    <h4>DURANTE GIOCO</h4>
+                    <p>☐ Inizia con recap regole Daggerheart (5 min)</p>
+                    <p>☐ Spiega Tenuta Mentale prima Atto II</p>
+                    <p>☐ Traccia Orologi: Alba (8), Rituale (6), Aria (6)</p>
+                    <p>☐ Usa Paura per complicazioni narrative</p>
+                    <p>☐ Fai pause tra atti per scene personaggi</p>
+                    <p>☐ Chiedi feedback fine sessione</p>
+                </div>
+
+                <h2>Adattare per VTT</h2>
+
+                <div class="info-box">
+                    <p><strong>MAPPE NECESSARIE:</strong></p>
+                    <ul>
+                        <li>Treno (locomotiva → 5 vagoni, vista laterale + tetto)</li>
+                        <li>Accampamento desertico (opzionale per Atto II)</li>
+                        <li>Miniera Livello 1 (tunnel + camera accampamento)</li>
+                        <li>Miniera Livello 3 (camera grande con monolito + 3 idoli)</li>
                     </ul>
                     
-                    <h3>👹 Creature Stats</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Creatura</th>
-                                <th>HP</th>
-                                <th>AC</th>
-                                <th>Attacco</th>
-                                <th>Special</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Zombie</td>
-                                <td>22</td>
-                                <td>0</td>
-                                <td>+4 (1d8+2)</td>
-                                <td>Inesorabile</td>
-                            </tr>
-                            <tr>
-                                <td>Cultista</td>
-                                <td>18</td>
-                                <td>0</td>
-                                <td>+4 (1d6+2)</td>
-                                <td>Fanatico</td>
-                            </tr>
-                            <tr>
-                                <td>Jeremiah</td>
-                                <td>70</td>
-                                <td>3</td>
-                                <td>Multiattack ×2</td>
-                                <td>Regeneration 8, Boss</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-                
-                <!-- CONCLUSIONE -->
-                <div style="background: linear-gradient(135deg, var(--rust) 0%, var(--night-black) 100%); 
-                    color: white; padding: 60px 40px; margin-top: 60px; text-align: center;">
-                    <h2 style="color: white; font-size: 2.5em;">✅ VOLUME I COMPLETO!</h2>
-                    <p style="font-size: 1.3em; max-width: 900px; margin: 30px auto; line-height: 1.8;">
-                        <strong>Shadows in the Desert</strong> è ora completamente giocabile. Include 3 Atti, 
-                        10+ scene, 4 epiloghi, e supporto GM completo.
+                    <p><strong>TOKEN RICHIESTI:</strong> 3 personaggi, banditi (6+), banditi risorti (6+), cultisti (15+), serpenti spettrali (8+), Jeremiah (2 versioni), Manifestazione</p>
+                    
+                    <p><strong>ILLUMINAZIONE:</strong> Atto II e III beneficiano sistema illuminazione VTT. Treno = lanterne cerchi luce. Miniera = lanterne personaggi, resto nero. Aumenta tensione drammaticamente.</p>
+                </div>
+
+                <h2>Note Finali</h2>
+
+                <p>Gunsmoke & Dread vuole essere avventura che bilancia competenza eroica con vulnerabilità umana, azione western con horror cosmico, violenza necessaria con peso morale.</p>
+
+                <p>Non tutte le scelte hanno risposta giusta. Non tutti i nemici sono malvagi. Non tutte le vittorie sono pulite.</p>
+
+                <p>Ma nell'oscurità del Weird West, dove morti camminano e realtà si sfalda, piccoli atti coraggio e compassione significano tutto.</p>
+
+                <p>I tuoi personaggi sono eroi imperfetti in mondo imperfetto. Guideranno gruppo attraverso notte verso alba - se sopravvivono.</p>
+
+                <div class="warning-box" style="text-align: center; padding: 40px; margin: 60px 0;">
+                    <h2 style="margin: 0; color: var(--blood-red);">Buona fortuna, GM.</h2>
+                    <p style="font-size: 1.3em; margin: 20px 0 0 0; font-style: italic;">Il deserto aspetta. 🤠</p>
+                </div>
+            </section>
+
+
+            </article>
+
+            <!-- EPILOGO -->
+            <section id="epilogo">
+                <h2>🌅 Epilogo: Dopo la Tempesta</h2>
+
+                <p>
+                    Il Serpente Sotterraneo è sigillato o distrutto. Il Reverendo Jeremiah Stone è caduto. 
+                    I cultisti sono dispersi o morti. La miniera è crollata su se stessa, sigillando le profondità.
+                </p>
+
+                <p>
+                    Ma la vittoria ha un prezzo. Gli ostaggi che i PG hanno salvato sono traumatizzati. Alcuni 
+                    potrebbero non riprendersi mai completamente da ciò che hanno visto. Silver Hollow è salva... 
+                    ma tutti sanno che qualcosa di terribile si nascondeva sotto i loro piedi.
+                </p>
+
+                <div class="info-box">
+                    <h4>🎭 Conseguenze</h4>
+                    <p><strong>Per i PG:</strong></p>
+                    <ul>
+                        <li>Sono eroi locali - Sheriff Morrison li ringrazia pubblicamente</li>
+                        <li>Guadagnano 1 Experience Point e avanzano a Livello 3</li>
+                        <li>Ma iniziano avere sogni disturbanti - visioni di spirali, oceani impossibili...</li>
+                        <li>Hanno visto abbastanza per sapere che il mondo è più strano e pericoloso di quanto pensassero</li>
+                    </ul>
+                    
+                    <p style="margin-top: 15px;"><strong>Per Silver Hollow:</strong></p>
+                    <ul>
+                        <li>La città gradualmente ritorna alla normalità</li>
+                        <li>La miniera viene ufficialmente chiusa e sigillata</li>
+                        <li>Alcuni residenti se ne vanno, non riuscendo a dimenticare</li>
+                        <li>Ma la maggioranza resta, grata di essere viva</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <h4>🔮 Setup Volume II</h4>
+                    <p>
+                        Tre mesi dopo, a Phoenix, i PG sentono strane notizie dall'Arizona. Una cittadina mineraria 
+                        chiamata Dry Eye ha subito eventi simili. Persone scomparse. Simboli strani. E qualcuno 
+                        menziona... un oceano nel deserto?
                     </p>
-                    <ul style="text-align: left; max-width: 700px; margin: 30px auto; font-size: 1.15em; line-height: 1.9;">
-                        <li>✅ <strong>10-12 ore</strong> gameplay</li>
-                        <li>✅ <strong>4 Hooks</strong> personalizzati</li>
-                        <li>✅ <strong>Boss fight</strong> Jeremiah 3-fase</li>
-                        <li>✅ <strong>4 Epiloghi</strong> basati scelte</li>
-                        <li>✅ <strong>Dungeon crawl</strong> 3 livelli</li>
-                    </ul>
-                    <p style="font-size: 1.2em; margin-top: 40px;">
-                        🏜️ Pronto per Silver Hollow! 🏜️
+                    <p style="margin-top: 10px; font-style: italic;">
+                        Se i giocatori sono interessati a continuare la storia, questo è il gancio per 
+                        <em>Where Ocean Meets Dust</em> (Volume II). Ma se preferiscono fermarsi qui, l'avventura 
+                        offre una conclusione soddisfacente.
                     </p>
                 </div>
-                
-            </main>
-        </div>
-        
-        <!-- Footer -->
-        <div class="footer">
-            <p><strong>Volume I: Shadows in the Desert</strong> - Gunsmoke & Dread Collection</p>
-            <p style="margin-top: 10px;">
-                <a href="../INDEX.html">← Torna all'Index</a> | 
-                <a href="../volume-ii/Volume-II-Main.html">Volume II →</a>
-            </p>
-        </div>
-        
+
+                <hr>
+
+                <p style="text-align: center; font-size: 1.2em; margin: 40px 0;">
+                    <strong>FINE VOLUME I</strong>
+                </p>
+                <p style="text-align: center; font-style: italic; color: var(--rust);">
+                    Il Serpente dorme, ma l'ombra resta...<br>
+                    La storia continua in <em>Volume II: Where Ocean Meets Dust</em>
+                </p>
+            </section>
+
+        </main>
     </div>
+
+    <script>
+        // Collapsible functionality
+        document.querySelectorAll('.collapsible').forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                if (content.classList.contains('collapsible-content')) {
+                    content.classList.toggle('active');
+                }
+            });
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
