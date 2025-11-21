@@ -1,372 +1,351 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>GM Quick Reference - Gunsmoke & Dread</title>
- 
- <link rel="stylesheet" href="assets/css/main-styles.css">
- 
- <style>
- /* Print-optimized styling */
- @media print {
- body { font-size: 9pt; }
- .no-print { display: none; }
- section { page-break-inside: avoid; }
- table { font-size: 8pt; }
- }
- 
- .ref-grid {
- display: grid;
- grid-template-columns: 1fr 1fr;
- gap: 20px;
- margin: 20px 0;
- }
- 
- .ref-box {
- border: 2px solid #8b4513;
- padding: 15px;
- background: #faf8f3;
- border-radius: 6px;
- }
- 
- .ref-box h3 {
- margin-top: 0;
- color: #8b4513;
- font-size: 1.1em;
- border-bottom: 1px solid #8b4513;
- padding-bottom: 5px;
- }
- 
- .ref-box ul, .ref-box ol {
- margin: 10px 0;
- padding-left: 20px;
- }
- 
- .ref-box li {
- margin: 5px 0;
- line-height: 1.4;
- }
- 
- table.compact {
- font-size: 0.9em;
- width: 100%;
- }
- 
- table.compact th {
- background: #8b4513;
- color: white;
- padding: 5px;
- }
- 
- table.compact td {
- padding: 4px 5px;
- border: 1px solid #ddd;
- }
- </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GM Quick Reference - Gunsmoke & Dread</title>
+    
+    <link rel="stylesheet" href="assets/css/main-styles.css">
+    
+    <style>
+        /* Print-optimized styling */
+        @media print {
+            body { font-size: 9pt; }
+            .no-print { display: none; }
+            section { page-break-inside: avoid; }
+            table { font-size: 8pt; }
+        }
+        
+        .ref-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .ref-box {
+            border: 2px solid #8b4513;
+            padding: 15px;
+            background: #faf8f3;
+            border-radius: 6px;
+        }
+        
+        .ref-box h3 {
+            margin-top: 0;
+            color: #8b4513;
+            font-size: 1.1em;
+            border-bottom: 1px solid #8b4513;
+            padding-bottom: 5px;
+        }
+        
+        .ref-box ul, .ref-box ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .ref-box li {
+            margin: 5px 0;
+            line-height: 1.4;
+        }
+        
+        table.compact {
+            font-size: 0.9em;
+            width: 100%;
+        }
+        
+        table.compact th {
+            background: #8b4513;
+            color: white;
+            padding: 5px;
+        }
+        
+        table.compact td {
+            padding: 4px 5px;
+            border: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body style="background: white; color: #333;">
- <div class="container" style="max-width: 1200px;">
- 
- <!-- Header -->
- <div style="background: #8b4513; color: white; padding: 20px; text-align: center; margin-bottom: 30px;">
- <h1 style="margin: 0; font-size: 2em;">⚡ GM QUICK REFERENCE</h1>
- <p style="margin: 10px 0 0 0; font-size: 1.1em;">Gunsmoke & Dread - Essentials On One Page</p>
- </div>
- 
- <!-- Two Column Layout -->
- <div class="ref-grid">
- 
- <!-- COLUMN 1 -->
- <div>
- 
- <!-- DIFFICULTY -->
- <div class="ref-box">
- <h3>🎯 Challenge Difficulty (CD)</h3>
- <table class="compact">
- <tr>
- <td><strong>CD 10</strong></td>
- <td>Facile - routine task</td>
- </tr>
- <tr>
- <td><strong>CD 12</strong></td>
- <td>Moderato - richiede abilità</td>
- </tr>
- <tr>
- <td><strong>CD 14</strong></td>
- <td>Impegnativo - challenging</td>
- </tr>
- <tr>
- <td><strong>CD 16</strong></td>
- <td>Difficile - very hard</td>
- </tr>
- <tr>
- <td><strong>CD 18</strong></td>
- <td>Eroico - nearly impossible</td>
- </tr>
- <tr>
- <td><strong>CD 20+</strong></td>
- <td>Leggendario - epic</td>
- </tr>
- </table>
- </div>
- 
- <!-- DUALITY DICE -->
- <div class="ref-box">
- <h3>🎲 Duality Dice Results</h3>
- <ul style="font-size: 0.95em;">
- <li><strong>Hope > Fear:</strong> Success + Hope token</li>
- <li><strong>Fear > Hope:</strong> Complication/Fail + Fear token</li>
- <li><strong>Tied:</strong> Success parziale + both tokens</li>
- <li><strong>Critical (20):</strong> Best possible outcome</li>
- <li><strong>Fumble (1):</strong> Worst possible + Fear token</li>
- </ul>
- </div>
- 
- <!-- TENUTA MENTAL -->
- <div class="ref-box">
- <h3>😱 Tenuta Mentale (Sanità)</h3>
- <p style="font-size: 0.9em; margin: 5px 0;"><strong>Max:</strong> 10 segmenti</p>
- <table class="compact">
- <tr>
- <th>Trigger</th>
- <th>CD</th>
- <th>Segmenti</th>
- </tr>
- <tr>
- <td>Vedere cadavere</td>
- <td>11</td>
- <td>1</td>
- </tr>
- <tr>
- <td>Body orrore lieve</td>
- <td>12</td>
- <td>1-2</td>
- </tr>
- <tr>
- <td>non-morto/non-morti</td>
- <td>13-14</td>
- <td>2</td>
- </tr>
- <tr>
- <td>Architettura aliena</td>
- <td>15-16</td>
- <td>3-4</td>
- </tr>
- <tr>
- <td>Entità cosmica</td>
- <td>17-18</td>
- <td>4-6</td>
- </tr>
- <tr>
- <td>Cthulhu stesso</td>
- <td>20</td>
- <td>6-8</td>
- </tr>
- </table>
- <p style="font-size: 0.85em; margin-top: 10px;">
- <strong>10 segmenti (pieno):</strong> Breakdown - roll Breakdown Table
- </p>
- </div>
- 
- <!-- combattimento QUICK -->
- <div class="ref-box">
- <h3>⚔️ combattimento Basics</h3>
- <p style="font-size: 0.9em;"><strong>Turno = 1 Azione Maggiore + Movimento</strong></p>
- <ul style="font-size: 0.9em;">
- <li><strong>Attaccare:</strong> Roll vs CD, successo = roll danno</li>
- <li><strong>Movimento:</strong> Fino a Velocità (tipico 9m)</li>
- <li><strong>Action Minor:</strong> Free (draw weapon, open door)</li>
- <li><strong>0 PF:</strong> Down ma non morto - Death Saves</li>
- <li><strong>Death Save:</strong> d20: 15+ stable, 10-14 stay down, 1-9 = 1 Death Mark</li>
- <li><strong>3 Death Marks:</strong> Morte permanente</li>
- </ul>
- </div>
- 
- </div>
- 
- <!-- COLUMN 2 -->
- <div>
- 
- <!-- creatura QUICK STATS -->
- <div class="ref-box">
- <h3>👹 creatura Quick Stats</h3>
- <table class="compact">
- <thead>
- <tr>
- <th>Creatura</th>
- <th>PF</th>
- <th>AC</th>
- <th>Attacco</th>
- <th>Danno</th>
- </tr>
- </thead>
- <tbody>
- <tr>
- <td>non-morto</td>
- <td>22</td>
- <td>0</td>
- <td>+4</td>
- <td>1d8+2</td>
- </tr>
- <tr>
- <td>Cultista</td>
- <td>18</td>
- <td>0</td>
- <td>+4</td>
- <td>1d6+2</td>
- </tr>
- <tr>
- <td>Ibrido</td>
- <td>38</td>
- <td>1</td>
- <td>+6</td>
- <td>2d6+3</td>
- </tr>
- <tr>
- <td>Jeremiah</td>
- <td>70</td>
- <td>3</td>
- <td>+7</td>
- <td>2d8+4</td>
- </tr>
- <tr>
- <td>Guardiano</td>
- <td>200</td>
- <td>5</td>
- <td>+10</td>
- <td>4d10+8</td>
- </tr>
- <tr>
- <td>Cthulhu</td>
- <td>666</td>
- <td>8</td>
- <td>+15</td>
- <td>10d12+20</td>
- </tr>
- </tbody>
- </table>
- </div>
- 
- <!-- ENVIRONMENTAL HAZARDS -->
- <div class="ref-box">
- <h3>🌪️ Hazards Comuni</h3>
- <ul style="font-size: 0.9em;">
- <li><strong>Caduta (3m):</strong> 1d6 contundenti</li>
- <li><strong>Caduta (6m):</strong> 3d6 contundenti</li>
- <li><strong>Caduta (10m+):</strong> 6d6 contundenti</li>
- <li><strong>Fuoco (piccolo):</strong> 1d6/round</li>
- <li><strong>Fuoco (grande):</strong> 3d6/round</li>
- <li><strong>Annegamento:</strong> Costituzione CD 12, fallimento = 1d6/round</li>
- <li><strong>Gas tossico:</strong> Costituzione CD 13, fail = Avvelenato</li>
- <li><strong>Collasso tunnel:</strong> Agilità CD 15 or 4d8 contundenti</li>
- </ul>
- </div>
- 
- <!-- HOPE & FEAR TOKENS -->
- <div class="ref-box">
- <h3>💚❤️ Hope & Fear Token Usage</h3>
- <p style="font-size: 0.9em;"><strong>Hope Tokens (Player Use):</strong></p>
- <ul style="font-size: 0.85em;">
- <li>Spendi 1: Vantaggio su roll</li>
- <li>Spendi 2: Reroll fallimento</li>
- <li>Spendi 3: Azione extra in turno</li>
- </ul>
- <p style="font-size: 0.9em; margin-top: 15px;"><strong>Fear Tokens (GM Use) - MOSSE HORROR:</strong></p>
- <div style="border: 2px solid #8b0000; padding: 10px; background: #fff5f5; margin-top: 8px;">
-   <p style="font-weight: bold; font-size: 0.9em; margin: 5px 0;">💀 SPENDI 1 TOKEN - Atmosfera</p>
-   <ul style="font-size: 0.8em; margin: 5px 0 10px 15px;">
-     <li>Torcia si spegne / Rumore inquietante / Ombra si muove</li>
-     <li>Allucinazione breve / Voci sussurrate / Porta si chiude</li>
-   </ul>
-   <p style="font-weight: bold; font-size: 0.9em; margin: 5px 0;">💀💀 SPENDI 2 TOKEN - Minaccia</p>
-   <ul style="font-size: 0.8em; margin: 5px 0 10px 15px;">
-     <li>Rinforzi (1d4 minion) / Via fuga crolla / Arma inceppata</li>
-     <li>Terreno difficile / PNG in pericolo / Oggetto danneggiato</li>
-   </ul>
-   <p style="font-weight: bold; font-size: 0.9em; margin: 5px 0;">💀💀💀 SPENDI 3 TOKEN - Terrore</p>
-   <ul style="font-size: 0.8em; margin: 5px 0 10px 15px;">
-     <li>Boss abilità speciale / Check Tenuta SVANTAGGIO</li>
-     <li>Minaccia maggiore / Realtà distorta / Visione trauma</li>
-   </ul>
-   <p style="font-size: 0.75em; font-style: italic; color: #8b0000; margin-top: 8px;">
-     ⚠️ Non spendere tutto subito. Tensione nasce da accumulo visibile.
-   </p>
- </div>
-
-
-
-
-
-
- </div>
- 
- <!-- ROLEPLAY TIPS -->
- <div class="ref-box">
- <h3>🎭 Roleplaying orrore - Quick Tips</h3>
- <ul style="font-size: 0.85em; line-height: 1.5;">
- <li><strong>Pacing:</strong> Slow burn → explosive reveal</li>
- <li><strong>Descrizioni:</strong> 5 sensi (non solo vista)</li>
- <li><strong>Silence:</strong> Usa pause dramatic</li>
- <li><strong>Voice:</strong> Whisper per momenti tesi</li>
- <li><strong>Unknown > Known:</strong> Implicazione > exposition</li>
- <li><strong>PNG:</strong> Dare emotions, non solo info</li>
- <li><strong>Foreshadowing:</strong> Plant clues 2-3 scene prima</li>
- <li><strong>Player Agency:</strong> Choices matter sempre</li>
- </ul>
- </div>
- 
- </div>
- 
- </div>
- 
- <!-- BOTTOM SECTION - Full Width -->
- <div class="ref-box" style="margin-top: 20px;">
- <h3>📋 Session Checklist - Pre-Game</h3>
- <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; font-size: 0.9em;">
- <div>
- <p><strong>✅ Materials Ready:</strong></p>
- <ul>
- <li>☐ Scenario file open</li>
- <li>☐ Character sheets</li>
- <li>☐ creatura stats bookmarked</li>
- <li>☐ Dadi ready</li>
- <li>☐ Hope/Fear tokens (coins/poker chips)</li>
- </ul>
- </div>
- <div>
- <p><strong>✅ Session 0 Topics:</strong></p>
- <ul>
- <li>☐ Content warnings discussi</li>
- <li>☐ Safety tools (X-Card) explained</li>
- <li>☐ Tone expectations aligned</li>
- <li>☐ House rules concordati</li>
- </ul>
- </div>
- <div>
- <p><strong>✅ During Play:</strong></p>
- <ul>
- <li>☐ Track Hope/Fear tokens</li>
- <li>☐ Note Tenuta segmenti</li>
- <li>☐ Track PF enemies</li>
- <li>☐ Note PC achievements</li>
- <li>☐ Colpo di Scena ready per fine sessione</li>
- </ul>
- </div>
- </div>
- </div>
- 
- <!-- PRINT NOTE -->
- <div class="no-print" style="background: #f0f0f0; padding: 20px; margin-top: 30px; text-align: center; border-radius: 8px;">
- <p style="font-size: 1.1em; margin: 0;">
- <strong>💡 Tip:</strong> Print questa pagina e tieni dietro GM screen per quick reference durante sessione!
- </p>
- <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
- <a href="../INDEX.html">← Torna all'Index</a> | 
- <a href="javascript:window.print()">🖨️ Stampa Questa Pagina</a>
- </p>
- </div>
- 
- </div>
+    <div class="container" style="max-width: 1200px;">
+        
+        <!-- Header -->
+        <div style="background: #8b4513; color: white; padding: 20px; text-align: center; margin-bottom: 30px;">
+            <h1 style="margin: 0; font-size: 2em;">⚡ GM QUICK REFERENCE</h1>
+            <p style="margin: 10px 0 0 0; font-size: 1.1em;">Gunsmoke & Dread - Essentials On One Page</p>
+        </div>
+        
+        <!-- Two Column Layout -->
+        <div class="ref-grid">
+            
+            <!-- COLUMN 1 -->
+            <div>
+                
+                <!-- DIFFICULTY -->
+                <div class="ref-box">
+                    <h3>🎯 Challenge Difficulty (CD)</h3>
+                    <table class="compact">
+                        <tr>
+                            <td><strong>CD 10</strong></td>
+                            <td>Facile - routine task</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CD 12</strong></td>
+                            <td>Moderato - richiede skill</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CD 14</strong></td>
+                            <td>Impegnativo - challenging</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CD 16</strong></td>
+                            <td>Difficile - very hard</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CD 18</strong></td>
+                            <td>Eroico - nearly impossible</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CD 20+</strong></td>
+                            <td>Leggendario - epic</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <!-- DUALITY DICE -->
+                <div class="ref-box">
+                    <h3>🎲 Duality Dice Results</h3>
+                    <ul style="font-size: 0.95em;">
+                        <li><strong>Hope > Fear:</strong> Success + Hope token</li>
+                        <li><strong>Fear > Hope:</strong> Complication/Fail + Fear token</li>
+                        <li><strong>Tied:</strong> Success parziale + both tokens</li>
+                        <li><strong>Critical (20):</strong> Best possible outcome</li>
+                        <li><strong>Fumble (1):</strong> Worst possible + Fear token</li>
+                    </ul>
+                </div>
+                
+                <!-- TENUTA MENTAL -->
+                <div class="ref-box">
+                    <h3>😱 Tenuta Mentale (Sanità)</h3>
+                    <p style="font-size: 0.9em; margin: 5px 0;"><strong>Max:</strong> 10 segmenti</p>
+                    <table class="compact">
+                        <tr>
+                            <th>Trigger</th>
+                            <th>CD</th>
+                            <th>Segmenti</th>
+                        </tr>
+                        <tr>
+                            <td>Vedere cadavere</td>
+                            <td>11</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Body horror lieve</td>
+                            <td>12</td>
+                            <td>1-2</td>
+                        </tr>
+                        <tr>
+                            <td>Zombie/non-morti</td>
+                            <td>13-14</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Architettura aliena</td>
+                            <td>15-16</td>
+                            <td>3-4</td>
+                        </tr>
+                        <tr>
+                            <td>Entità cosmica</td>
+                            <td>17-18</td>
+                            <td>4-6</td>
+                        </tr>
+                        <tr>
+                            <td>Cthulhu stesso</td>
+                            <td>20</td>
+                            <td>6-8</td>
+                        </tr>
+                    </table>
+                    <p style="font-size: 0.85em; margin-top: 10px;">
+                        <strong>10 segmenti (pieno):</strong> Breakdown - roll Breakdown Table
+                    </p>
+                </div>
+                
+                <!-- COMBAT QUICK -->
+                <div class="ref-box">
+                    <h3>⚔️ Combat Basics</h3>
+                    <p style="font-size: 0.9em;"><strong>Turno = 1 Azione Maggiore + Movimento</strong></p>
+                    <ul style="font-size: 0.9em;">
+                        <li><strong>Attaccare:</strong> Roll vs CD, successo = roll damage</li>
+                        <li><strong>Movimento:</strong> Fino a Velocità (tipico 9m)</li>
+                        <li><strong>Action Minor:</strong> Free (draw weapon, open door)</li>
+                        <li><strong>0 HP:</strong> Down ma non morto - Death Saves</li>
+                        <li><strong>Death Save:</strong> d20: 15+ stable, 10-14 stay down, 1-9 = 1 Death Mark</li>
+                        <li><strong>3 Death Marks:</strong> Morte permanente</li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <!-- COLUMN 2 -->
+            <div>
+                
+                <!-- CREATURE QUICK STATS -->
+                <div class="ref-box">
+                    <h3>👹 Creature Quick Stats</h3>
+                    <table class="compact">
+                        <thead>
+                            <tr>
+                                <th>Creatura</th>
+                                <th>HP</th>
+                                <th>AC</th>
+                                <th>Attacco</th>
+                                <th>Danno</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Zombie</td>
+                                <td>22</td>
+                                <td>0</td>
+                                <td>+4</td>
+                                <td>1d8+2</td>
+                            </tr>
+                            <tr>
+                                <td>Cultista</td>
+                                <td>18</td>
+                                <td>0</td>
+                                <td>+4</td>
+                                <td>1d6+2</td>
+                            </tr>
+                            <tr>
+                                <td>Ibrido</td>
+                                <td>38</td>
+                                <td>1</td>
+                                <td>+6</td>
+                                <td>2d6+3</td>
+                            </tr>
+                            <tr>
+                                <td>Jeremiah</td>
+                                <td>70</td>
+                                <td>3</td>
+                                <td>+7</td>
+                                <td>2d8+4</td>
+                            </tr>
+                            <tr>
+                                <td>Guardiano</td>
+                                <td>200</td>
+                                <td>5</td>
+                                <td>+10</td>
+                                <td>4d10+8</td>
+                            </tr>
+                            <tr>
+                                <td>Cthulhu</td>
+                                <td>666</td>
+                                <td>8</td>
+                                <td>+15</td>
+                                <td>10d12+20</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- ENVIRONMENTAL HAZARDS -->
+                <div class="ref-box">
+                    <h3>🌪️ Hazards Comuni</h3>
+                    <ul style="font-size: 0.9em;">
+                        <li><strong>Caduta (3m):</strong> 1d6 contundenti</li>
+                        <li><strong>Caduta (6m):</strong> 3d6 contundenti</li>
+                        <li><strong>Caduta (10m+):</strong> 6d6 contundenti</li>
+                        <li><strong>Fuoco (piccolo):</strong> 1d6/round</li>
+                        <li><strong>Fuoco (grande):</strong> 3d6/round</li>
+                        <li><strong>Annegamento:</strong> Costituzione CD 12, fallimento = 1d6/round</li>
+                        <li><strong>Gas tossico:</strong> Costituzione CD 13, fail = Avvelenato</li>
+                        <li><strong>Collasso tunnel:</strong> Agilità CD 15 or 4d8 contundenti</li>
+                    </ul>
+                </div>
+                
+                <!-- HOPE & FEAR TOKENS -->
+                <div class="ref-box">
+                    <h3>💚❤️ Hope & Fear Token Usage</h3>
+                    <p style="font-size: 0.9em;"><strong>Hope Tokens (Player Use):</strong></p>
+                    <ul style="font-size: 0.85em;">
+                        <li>Spendi 1: Vantaggio su roll</li>
+                        <li>Spendi 2: Reroll fallimento</li>
+                        <li>Spendi 3: Azione extra in turno</li>
+                    </ul>
+                    <p style="font-size: 0.9em; margin-top: 10px;"><strong>Fear Tokens (GM Use):</strong></p>
+                    <ul style="font-size: 0.85em;">
+                        <li>Spendi 1: Svantaggio a PG</li>
+                        <li>Spendi 2: Trigger complicazione</li>
+                        <li>Spendi 3: Enemy prende azione extra</li>
+                    </ul>
+                </div>
+                
+                <!-- ROLEPLAY TIPS -->
+                <div class="ref-box">
+                    <h3>🎭 Roleplaying Horror - Quick Tips</h3>
+                    <ul style="font-size: 0.85em; line-height: 1.5;">
+                        <li><strong>Pacing:</strong> Slow burn → explosive reveal</li>
+                        <li><strong>Descrizioni:</strong> 5 sensi (non solo vista)</li>
+                        <li><strong>Silence:</strong> Usa pause dramatic</li>
+                        <li><strong>Voice:</strong> Whisper per momenti tesi</li>
+                        <li><strong>Unknown > Known:</strong> Implicazione > exposition</li>
+                        <li><strong>NPCs:</strong> Dare emotions, non solo info</li>
+                        <li><strong>Foreshadowing:</strong> Plant clues 2-3 scene prima</li>
+                        <li><strong>Player Agency:</strong> Choices matter sempre</li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <!-- BOTTOM SECTION - Full Width -->
+        <div class="ref-box" style="margin-top: 20px;">
+            <h3>📋 Session Checklist - Pre-Game</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; font-size: 0.9em;">
+                <div>
+                    <p><strong>✅ Materials Ready:</strong></p>
+                    <ul>
+                        <li>☐ Scenario file open</li>
+                        <li>☐ Character sheets</li>
+                        <li>☐ Creature stats bookmarked</li>
+                        <li>☐ Dadi ready</li>
+                        <li>☐ Hope/Fear tokens (coins/poker chips)</li>
+                    </ul>
+                </div>
+                <div>
+                    <p><strong>✅ Session 0 Topics:</strong></p>
+                    <ul>
+                        <li>☐ Content warnings discussi</li>
+                        <li>☐ Safety tools (X-Card) explained</li>
+                        <li>☐ Tone expectations aligned</li>
+                        <li>☐ House rules concordati</li>
+                    </ul>
+                </div>
+                <div>
+                    <p><strong>✅ During Play:</strong></p>
+                    <ul>
+                        <li>☐ Track Hope/Fear tokens</li>
+                        <li>☐ Note Tenuta segmenti</li>
+                        <li>☐ Track HP enemies</li>
+                        <li>☐ Note PC achievements</li>
+                        <li>☐ Cliffhanger ready per fine sessione</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PRINT NOTE -->
+        <div class="no-print" style="background: #f0f0f0; padding: 20px; margin-top: 30px; text-align: center; border-radius: 8px;">
+            <p style="font-size: 1.1em; margin: 0;">
+                <strong>💡 Tip:</strong> Print questa pagina e tieni dietro GM screen per quick reference durante sessione!
+            </p>
+            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
+                <a href="../INDEX.html">← Torna all'Index</a> | 
+                <a href="javascript:window.print()">🖨️ Stampa Questa Pagina</a>
+            </p>
+        </div>
+        
+    </div>
 </body>
 </html>
