@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bestiary - Gunsmoke & Dread</title>
+  <title>Bestiario - Gunsmoke & Dread</title>
   
   <!-- External Stylesheets -->
   <link rel="stylesheet" href="assets/css/main-styles.css">
@@ -33,7 +33,7 @@
       border: none;
     }
     
-    .creatura-type {
+    .tipo-creatura {
       display: inline-block;
       background: var(--night-black);
       color: var(--alien-green);
@@ -78,7 +78,7 @@
       margin: 15px 0;
     }
     
-    .challenge-rating {
+    .grado-sfida {
       display: inline-block;
       background: var(--alien-green);
       color: var(--night-black);
@@ -156,13 +156,13 @@
           </ul>
         </div>
         
-        <h3>📊 Indice creatura per Challenge Rating</h3>
+        <h3>📊 Indice Creature per Grado di Sfida</h3>
         
         <table>
           <thead>
             <tr>
               <th>CR</th>
-              <th>creatura</th>
+              <th>Creatura</th>
               <th>Volume</th>
               <th>Uso Tipico</th>
             </tr>
@@ -172,48 +172,48 @@
               <td><strong>Minion</strong></td>
               <td>non-morto, Cultista, Scorpione Gigante</td>
               <td>I</td>
-              <td>Swarms, cannon fodder</td>
+              <td>Orde, carne da cannone</td>
             </tr>
             <tr>
               <td><strong>Standard</strong></td>
               <td>Ghoul, Ibrido Iniziale, Serpente Velenoso</td>
               <td>I, II</td>
-              <td>Encounter regolari, 2-4 per party</td>
+              <td>Incontri regolari, 2-4 per party</td>
             </tr>
             <tr>
               <td><strong>Elite</strong></td>
               <td>Ibrido Avanzato, Non-Morto Potenziato, Shadow Beast</td>
               <td>I, II</td>
-              <td>Mini-capo, 1-2 per party</td>
+              <td>Mini-boss, 1-2 per party</td>
             </tr>
             <tr>
               <td><strong>Capo</strong></td>
               <td>Il Sacerdote, Jeremiah Trasformato, Sand Wurm</td>
               <td>I, II</td>
-              <td>Climax atto, scontro finale maggiore</td>
+              <td>Climax atto, scontro finale</td>
             </tr>
             <tr>
               <td><strong>Legendary</strong></td>
               <td>Il Guardiano, Grande Antico (Vol I)</td>
               <td>I, II</td>
-              <td>Final capo, almost unkillable</td>
+              <td>Boss finale, quasi indistruttibile</td>
             </tr>
           </tbody>
         </table>
       </section>
       
-      <!-- SEZIONE: creatura UMANOIDI -->
+      <!-- SEZIONE: CREATURE UMANOIDI -->
       <section class="section">
-        <h2>👤 creatura UMANOIDI</h2>
+        <h2>👤 CREATURE UMANOIDI</h2>
         <p>Umani trasformati, corrotti, o al servizio di poteri oscuri.</p>
         
         <!-- CULTISTA -->
         <div class="creatura-entry">
           <div class="creatura-header">
-            <h3>CULTISTA <span class="challenge-rating">CR: Minion</span></h3>
+            <h3>CULTISTA <span class="grado-sfida">GS: Servitore</span></h3>
             <span class="volume-tag vol-1">Volume I</span>
-            <span class="creatura-type">Umanoide</span>
-            <span class="creatura-type">Fanatic</span>
+            <span class="tipo-creatura">Umanoide</span>
+            <span class="tipo-creatura">Fanatico</span>
           </div>
           
           <p style="font-style: italic; font-size: 1.05em; line-height: 1.7;">
@@ -247,7 +247,7 @@
             <p><strong>Revolver Malandato:</strong> +3, 2d6 perforanti (6 colpi, ricaricare 1 azione)</p>
             
             <h4 style="margin-top: 20px;">✨ Abilità Speciali</h4>
-            <p><strong>Fanatico:</strong> Vantaggio su tiri salvezza vs Spaventato e Charme (fede distorta 
+            <p><strong>Fanatico:</strong> Vantaggio su tiri salvezza vs Spaventato e Affascinato (fede distorta 
             protegge mentalmente)</p>
             <p><strong>Morte Devota:</strong> Quando ridotto a 0 PF, può fare ultimo attacco come Reazione 
             (muore gridando lodi al suo dio)</p>
@@ -256,8 +256,8 @@
           
           <div class="tip-box">
             <h4>💡 Uso Tattico</h4>
-            <p>Cultisti sono <strong>cannon fodder</strong> ma pericolosi in numero. Usali in gruppi 4-8. 
-            Combattono senza paura, si sacrificano volentieri. Non negoziano - sono beyond reason.</p>
+            <p>Cultisti sono <strong>carne da cannone</strong> ma pericolosi in numero. Usali in gruppi 4-8. 
+            Combattono senza paura, si sacrificano volentieri. Non negoziano - sono oltre ogni ragione.</p>
             <p style="margin-top: 10px;"><strong>Variante Elite:</strong> Leader cultista ha +10 PF, 
             può lanciare 1 rituale minore (es: Benedizione Oscura, +2 attacchi alleati).</p>
           </div>
@@ -266,10 +266,10 @@
         <!-- IBRIDO INIZIALE -->
         <div class="creatura-entry">
           <div class="creatura-header">
-            <h3>IBRIDO UMANO-MARINO (Iniziale) <span class="challenge-rating">CR: Standard</span></h3>
+            <h3>IBRIDO UMANO-MARINO (Iniziale) <span class="grado-sfida">GS: Standard</span></h3>
             <span class="volume-tag vol-2">Volume II</span>
-            <span class="creatura-type">Aberration</span>
-            <span class="creatura-type">Acquatico</span>
+            <span class="tipo-creatura">Aberrazione</span>
+            <span class="tipo-creatura">Acquatico</span>
           </div>
           
           <p style="font-style: italic; font-size: 1.05em; line-height: 1.7;">
@@ -333,10 +333,10 @@
         <!-- IBRIDO AVANZATO -->
         <div class="creatura-entry">
           <div class="creatura-header">
-            <h3>IBRIDO AVANZATO <span class="challenge-rating">CR: Elite</span></h3>
+            <h3>IBRIDO AVANZATO <span class="grado-sfida">GS: Elite</span></h3>
             <span class="volume-tag vol-2">Volume II</span>
-            <span class="creatura-type">Aberration</span>
-            <span class="creatura-type">Acquatico</span>
+            <span class="tipo-creatura">Aberrazione</span>
+            <span class="tipo-creatura">Acquatico</span>
           </div>
           
           <p style="font-style: italic; font-size: 1.05em; line-height: 1.7;">
@@ -402,9 +402,9 @@
         <!-- non-morto -->
         <div class="creatura-entry">
           <div class="creatura-header">
-            <h3>non-morto (Standard) <span class="challenge-rating">CR: Minion</span></h3>
+            <h3>non-morto (Standard) <span class="grado-sfida">GS: Servitore</span></h3>
             <span class="volume-tag vol-1">Volume I</span>
-            <span class="creatura-type">Non-Morto</span>
+            <span class="tipo-creatura">Non-Morto</span>
           </div>
           
           <p style="font-style: italic; font-size: 1.05em; line-height: 1.7;">
@@ -457,10 +457,10 @@
         <!-- GHOUL -->
         <div class="creatura-entry">
           <div class="creatura-header">
-            <h3>GHOUL <span class="challenge-rating">CR: Standard</span></h3>
+            <h3>GHOUL <span class="grado-sfida">GS: Standard</span></h3>
             <span class="volume-tag vol-1">Volume I</span>
-            <span class="creatura-type">Non-Morto</span>
-            <span class="creatura-type">Intelligente</span>
+            <span class="tipo-creatura">Non-Morto</span>
+            <span class="tipo-creatura">Intelligente</span>
           </div>
           
           <p style="font-style: italic; font-size: 1.05em; line-height: 1.7;">
@@ -532,10 +532,10 @@
         <!-- IL SACERDOTE -->
         <div class="creatura-entry">
           <div class="creatura-header">
-            <h3>IL SACERDOTE (Ibrido Finale) <span class="challenge-rating">CR: Capo</span></h3>
+            <h3>IL SACERDOTE (Ibrido Finale) <span class="grado-sfida">GS: Capo</span></h3>
             <span class="volume-tag vol-2">Volume II</span>
-            <span class="creatura-type">Aberration</span>
-            <span class="creatura-type">Capo</span>
+            <span class="tipo-creatura">Aberrazione</span>
+            <span class="tipo-creatura">Capo</span>
           </div>
           
           <p style="font-style: italic; font-size: 1.05em; line-height: 1.7;">
@@ -603,11 +603,11 @@
         <!-- IL GUARDIANO -->
         <div class="creatura-entry">
           <div class="creatura-header">
-            <h3>IL GUARDIANO <span class="challenge-rating">CR: Legendary</span></h3>
+            <h3>IL GUARDIANO <span class="grado-sfida">GS: Leggendario</span></h3>
             <span class="volume-tag vol-2">Volume II</span>
-            <span class="creatura-type">Great Vecchio One</span>
-            <span class="creatura-type">Aberration</span>
-            <span class="creatura-type">God-Tier</span>
+            <span class="tipo-creatura">Great Vecchio One</span>
+            <span class="tipo-creatura">Aberrazione</span>
+            <span class="tipo-creatura">God-Tier</span>
           </div>
           
           <p style="font-style: italic; font-size: 1.05em; line-height: 1.7;">
@@ -639,8 +639,8 @@
           
           <div class="ability-list">
             <h4>⚔️ Azioni (3 per turno)</h4>
-            <p><strong>Morso Colossale:</strong> +10, 4d10+8 perforanti, reach 3m</p>
-            <p><strong>Tentacolo Slam:</strong> +9, 3d8+6 contundenti, reach 10m, può afferrare (Forza 
+            <p><strong>Morso Colossale:</strong> +10, 4d10+8 perforanti, portata 3m</p>
+            <p><strong>Tentacolo Slam:</strong> +9, 3d8+6 contundenti, portata 10m, può afferrare (Forza 
             CD 18 per liberarsi)</p>
             <p><strong>Constrict:</strong> Se afferra, automaticamente 3d10 contundenti inizio turno + 
             Soffocato</p>
@@ -783,7 +783,7 @@
     <!-- Footer -->
     <div class="footer">
       <p style="font-size: 0.9em;">
-        <strong>Bestiary - Gunsmoke & Dread Collection</strong><br>
+        <strong>Bestiario - Gunsmoke & Dread Collection</strong><br>
         Compatible with Daggerheart™ SRD 1.0
       </p>
       <p style="margin-top: 20px; font-size: 0.85em; color: var(--desert-sand);">
