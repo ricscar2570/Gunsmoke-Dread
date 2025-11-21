@@ -1,1951 +1,1948 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Character Sheets - Gunsmoke & Dread</title>
- 
- <!-- External Stylesheets -->
- <link rel="stylesheet" href="assets/css/main-styles.css">
- <link rel="stylesheet" href="assets/css/volume-themes.css">
- 
- <!-- Character sheet specific styles -->
- <style>
- .character-sheet {
- background: rgba(212, 165, 116, 0.1);
- border: 4px solid var(--rust);
- border-radius: 12px;
- padding: 30px;
- margin: 40px 0;
- page-break-inside: avoid;
- }
- 
- .character-sheet.level-5 {
- border-color: var(--ocean-blue);
- background: rgba(0, 51, 102, 0.05);
- }
- 
- .char-header {
- background: linear-gradient(135deg, var(--blood-red) 0%, var(--rust) 100%);
- color: white;
- padding: 20px;
- margin: -30px -30px 20px -30px;
- border-radius: 8px 8px 0 0;
- }
- 
- .char-header.level-5 {
- background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--teal-dark) 100%);
- }
- 
- .char-header h2 {
- margin: 0;
- color: white;
- border: none;
- font-size: 2.2em;
- }
- 
- .char-tagline {
- font-family: 'Special Elite', cursive;
- font-size: 1.2em;
- margin: 5px 0 0 0;
- opacity: 0.9;
- }
- 
- .char-stats-grid {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
- gap: 15px;
- margin: 20px 0;
- }
- 
- .stat-box-char {
- background: white;
- border: 2px solid var(--rust);
- border-radius: 6px;
- padding: 12px;
- text-align: center;
- }
- 
- .stat-label {
- font-family: 'Rye', cursive;
- font-size: 0.9em;
- color: var(--rust);
- text-transform: uppercase;
- }
- 
- .stat-value {
- font-size: 2em;
- font-weight: bold;
- color: var(--blood-red);
- }
- 
- .traits-grid {
- display: grid;
- grid-template-columns: 1fr 1fr 1fr;
- gap: 15px;
- margin: 20px 0;
- }
- 
- .trait-box {
- background: rgba(139, 69, 19, 0.1);
- border-left: 4px solid var(--rust);
- padding: 12px;
- }
- 
- .trait-box h4 {
- margin: 0 0 5px 0;
- font-family: 'Rye', cursive;
- color: var(--blood-red);
- font-size: 1.1em;
- }
- 
- .trait-value {
- font-size: 1.8em;
- font-weight: bold;
- color: var(--rust);
- }
- 
- .abilities-section {
- margin: 25px 0;
- }
- 
- .ability-card {
- background: white;
- border: 2px solid var(--desert-sand);
- border-radius: 8px;
- padding: 15px;
- margin: 12px 0;
- }
- 
- .ability-card h4 {
- margin: 0 0 10px 0;
- color: var(--blood-red);
- font-family: 'Rye', cursive;
- }
- 
- .ability-tag {
- display: inline-block;
- background: var(--rust);
- color: white;
- padding: 4px 12px;
- border-radius: 4px;
- font-size: 0.85em;
- margin-right: 8px;
- font-family: 'Special Elite', cursive;
- }
- 
- .equipment-list {
- background: rgba(212, 165, 116, 0.15);
- border: 2px dashed var(--rust);
- border-radius: 8px;
- padding: 20px;
- margin: 20px 0;
- }
- 
- .equipment-list ul {
- columns: 2;
- column-gap: 30px;
- }
- 
- .connections-box {
- background: linear-gradient(135deg, rgba(139, 0, 0, 0.1) 0%, rgba(212, 165, 116, 0.1) 100%);
- border: 3px solid var(--blood-red);
- border-radius: 10px;
- padding: 20px;
- margin: 20px 0;
- }
- 
- .level-badge {
- display: inline-block;
- background: var(--alien-green);
- color: var(--night-black);
- padding: 8px 20px;
- border-radius: 20px;
- font-family: 'Rye', cursive;
- font-size: 1.1em;
- margin-left: 15px;
- }
- 
- .print-button-char {
- background: var(--blood-red);
- color: white;
- border: none;
- padding: 12px 30px;
- border-radius: 6px;
- font-family: 'Special Elite', cursive;
- font-size: 1em;
- cursor: pointer;
- margin: 10px 5px;
- transition: background 0.3s;
- }
- 
- .print-button-char:hover {
- background: var(--rust);
- }
- 
- @media print {
- .character-sheet {
- page-break-after: always;
- }
- 
- .no-print {
- display: none;
- }
- 
- .char-header {
- background: white;
- color: black;
- border: 3px solid black;
- }
- 
- .char-header h2 {
- color: black;
- }
- }
- </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Sheets - Gunsmoke & Dread</title>
+    
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main-styles.css">
+    <link rel="stylesheet" href="assets/css/volume-themes.css">
+    
+    <!-- Character sheet specific styles -->
+    <style>
+        .character-sheet {
+            background: rgba(212, 165, 116, 0.1);
+            border: 4px solid var(--rust);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            page-break-inside: avoid;
+        }
+        
+        .character-sheet.level-5 {
+            border-color: var(--ocean-blue);
+            background: rgba(0, 51, 102, 0.05);
+        }
+        
+        .char-header {
+            background: linear-gradient(135deg, var(--blood-red) 0%, var(--rust) 100%);
+            color: white;
+            padding: 20px;
+            margin: -30px -30px 20px -30px;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .char-header.level-5 {
+            background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--teal-dark) 100%);
+        }
+        
+        .char-header h2 {
+            margin: 0;
+            color: white;
+            border: none;
+            font-size: 2.2em;
+        }
+        
+        .char-tagline {
+            font-family: 'Special Elite', cursive;
+            font-size: 1.2em;
+            margin: 5px 0 0 0;
+            opacity: 0.9;
+        }
+        
+        .char-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-box-char {
+            background: white;
+            border: 2px solid var(--rust);
+            border-radius: 6px;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        .stat-label {
+            font-family: 'Rye', cursive;
+            font-size: 0.9em;
+            color: var(--rust);
+            text-transform: uppercase;
+        }
+        
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--blood-red);
+        }
+        
+        .traits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .trait-box {
+            background: rgba(139, 69, 19, 0.1);
+            border-left: 4px solid var(--rust);
+            padding: 12px;
+        }
+        
+        .trait-box h4 {
+            margin: 0 0 5px 0;
+            font-family: 'Rye', cursive;
+            color: var(--blood-red);
+            font-size: 1.1em;
+        }
+        
+        .trait-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--rust);
+        }
+        
+        .abilities-section {
+            margin: 25px 0;
+        }
+        
+        .ability-card {
+            background: white;
+            border: 2px solid var(--desert-sand);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 12px 0;
+        }
+        
+        .ability-card h4 {
+            margin: 0 0 10px 0;
+            color: var(--blood-red);
+            font-family: 'Rye', cursive;
+        }
+        
+        .ability-tag {
+            display: inline-block;
+            background: var(--rust);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            margin-right: 8px;
+            font-family: 'Special Elite', cursive;
+        }
+        
+        .equipment-list {
+            background: rgba(212, 165, 116, 0.15);
+            border: 2px dashed var(--rust);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .equipment-list ul {
+            columns: 2;
+            column-gap: 30px;
+        }
+        
+        .connections-box {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.1) 0%, rgba(212, 165, 116, 0.1) 100%);
+            border: 3px solid var(--blood-red);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .level-badge {
+            display: inline-block;
+            background: var(--alien-green);
+            color: var(--night-black);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-family: 'Rye', cursive;
+            font-size: 1.1em;
+            margin-left: 15px;
+        }
+        
+        .print-button-char {
+            background: var(--blood-red);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-family: 'Special Elite', cursive;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 10px 5px;
+            transition: background 0.3s;
+        }
+        
+        .print-button-char:hover {
+            background: var(--rust);
+        }
+        
+        @media print {
+            .character-sheet {
+                page-break-after: always;
+            }
+            
+            .no-print {
+                display: none;
+            }
+            
+            .char-header {
+                background: white;
+                color: black;
+                border: 3px solid black;
+            }
+            
+            .char-header h2 {
+                color: black;
+            }
+        }
+    </style>
 </head>
 <body class="theme-desert">
- <div class="container">
- 
- <!-- Header -->
- <div class="hero" style="padding: 60px 40px;">
- <h1 style="font-size: 3.5em;">👥 CHARACTER SHEETS</h1>
- <p class="subtitle">Personaggi Pregenerati per Gunsmoke & Dread</p>
- <p class="tagline">
- 3 Personaggi × 2 Livelli = 6 Opzioni Pronte all'Uso
- </p>
- </div>
- 
- <!-- Print Buttons -->
- <div class="content no-print" style="text-align: center; padding: 30px;">
- <h2>🖨️ Stampa Character Sheets</h2>
- <p style="font-size: 1.1em; margin-bottom: 20px;">
- Clicca per stampare tutti i personaggi o seleziona individualmente:
- </p>
- <button class="print-button-char" onclick="window.print()">🖨️ Stampa Tutti (6 PG)</button>
- <button class="print-button-char" onclick="printCharacter('jack-2')">Jack Liv. 2</button>
- <button class="print-button-char" onclick="printCharacter('sarah-2')">Sarah Liv. 2</button>
- <button class="print-button-char" onclick="printCharacter('doc-2')">Doc Liv. 2</button>
- <button class="print-button-char" onclick="printCharacter('jack-5')">Jack Liv. 5</button>
- <button class="print-button-char" onclick="printCharacter('sarah-5')">Sarah Liv. 5</button>
- <button class="print-button-char" onclick="printCharacter('doc-5')">Doc Liv. 5</button>
- </div>
- 
- <!-- Introduzione -->
- <div class="content no-print">
- <section class="section">
- <h2>📖 Come Usare Questi Personaggi</h2>
- 
- <div class="info-box">
- <h3>🎭 Due Versioni per Ogni Personaggio</h3>
- <p style="font-size: 1.1em; line-height: 1.8;">
- Ogni personaggio è disponibile in <strong>due versioni</strong>:
- </p>
- <ul style="font-size: 1.05em; line-height: 1.7;">
- <li><strong>Livello 2:</strong> Per <strong>Volume I: Shadows in the Desert</strong> 
- (avventura entry-level, personaggi freschi)</li>
- <li><strong>Livello 3-5:</strong> Per <strong>Volume II: Where the Ocean Meets the Dust</strong> 
- (sequel, personaggi veterani con cicatrici Volume I)</li>
- </ul>
- <p style="margin-top: 15px; font-size: 1.05em;">
- <strong>Nota:</strong> Puoi usare versioni Livello 3-5 anche standalone se vuoi personaggi 
- più potenti. Le cicatrici/background riferimenti a Volume I sono opzionali.
- </p>
- </div>
- 
- <div class="tip-box">
- <h3>💡 Quick Start per Giocatori</h3>
- <ol style="font-size: 1.05em; line-height: 1.7;">
- <li><strong>Scegli personaggio:</strong> Leggi tagline e ruolo, scegli quello che ti ispira</li>
- <li><strong>Stampa scheda:</strong> Usa bottoni sopra per stampare solo il tuo PG</li>
- <li><strong>Leggi background:</strong> 5 minuti per familiarizzare con personalità</li>
- <li><strong>Leggi abilità:</strong> Concentrati su 2-3 abilità signature, rest learn playing</li>
- <li><strong>Inizia a giocare!</strong> Non serve conoscere tutto - impari giocando</li>
- </ol>
- </div>
- 
- <h3>👥 I Tre Personaggi</h3>
- 
- <div class="grid-auto-wide">
- <div class="card">
- <div class="card-header">
- <h3 class="card-title">🔫 JACK MALONE</h3>
- </div>
- <div class="card-body">
- <p><strong>Ruolo:</strong> DPS / Controllo</p>
- <p><strong>Stile:</strong> Pistolero pragmatico, haunted dal passato</p>
- <p><strong>Best for:</strong> Giocatori che amano action, mobilità, danno</p>
- <p><strong>Signature:</strong> Marcare bersagli, colpi precisi, duelli</p>
- </div>
- </div>
- 
- <div class="card">
- <div class="card-header">
- <h3 class="card-title">🙏 SARAH BLACKWOOD</h3>
- </div>
- <div class="card-body">
- <p><strong>Ruolo:</strong> Healer / Burst danno vs Non-Morti</p>
- <p><strong>Stile:</strong> Predicatrice compassionevole, fede vs orrore</p>
- <p><strong>Best for:</strong> Giocatori che amano support, RP, complessità morale</p>
- <p><strong>Signature:</strong> Healing potente, scacciare non-morti, presenza sociale</p>
- </div>
- </div>
- 
- <div class="card">
- <div class="card-header">
- <h3 class="card-title">🔬 DOC ARTEMIS WELLS</h3>
- </div>
- <div class="card-body">
- <p><strong>Ruolo:</strong> Healer / Utility / Analisi</p>
- <p><strong>Stile:</strong> Medico-inventore razionalista, scienza vs impossibile</p>
- <p><strong>Best for:</strong> Giocatori che amano problem-solving, gadget, supporto tattico</p>
- <p><strong>Signature:</strong> Medicina avanzata, analizzare nemici, gadget improvvisati</p>
- </div>
- </div>
- </div>
- </section>
- </div>
- 
- <div class="content">
- 
- <!-- ============================================================ -->
- <!-- JACK MALONE - LIVELLO 2 -->
- <!-- ============================================================ -->
- 
- <div class="character-sheet" id="jack-2">
- <div class="char-header">
- <h2>🔫 JACK "GHOST" MALONE <span class="level-badge">Livello 2</span></h2>
- <p class="char-tagline">Il Pistolero Haunted - Cacciatore di Taglie Pragmatico</p>
- </div>
- 
- <!-- Stats Base -->
- <div class="char-stats-grid">
- <div class="stat-box-char">
- <div class="stat-label">Hit Points</div>
- <div class="stat-value">28</div>
- </div>
- <div class="stat-box-char">
- <div class="stat-label">Armatura</div>
- <div class="stat-value">2</div>
- <small>(Duster rinforzato)</small>
- </div>
- <div class="stat-box-char">
- <div class="stat-label">Tenuta Mentale</div>
- <div class="stat-value">7/10</div>
- <small>(già segnato)</small>
- </div>
- <div class="stat-box-char">
- <div class="stat-label">Velocità</div>
- <div class="stat-value">9m</div>
- </div>
- </div>
- 
- <!-- Traits -->
- <h3>📊 Tratti</h3>
- <div class="traits-grid">
- <div class="trait-box">
- <h4>Agilità</h4>
- <div class="trait-value">+3</div>
- <small>Estrazione rapida, schivare</small>
- </div>
- <div class="trait-box">
- <h4>Forza</h4>
- <div class="trait-value">+2</div>
- <small>Lottare, trascinare</small>
- </div>
- <div class="trait-box">
- <h4>Finezza</h4>
- <div class="trait-value">+1</div>
- <small>Svuotare tasche, serrature</small>
- </div>
- <div class="trait-box">
- <h4>Istinto</h4>
- <div class="trait-value">+4</div>
- <small><strong>PRIMARIO</strong> - Percezione, tracking, survival</small>
- </div>
- <div class="trait-box">
- <h4>Presenza</h4>
- <div class="trait-value">+1</div>
- <small>Intimidazione pragmatica</small>
- </div>
- <div class="trait-box">
- <h4>Conoscenza</h4>
- <div class="trait-value">+0</div>
- <small>Educazione limitata</small>
- </div>
- </div>
- 
- <!-- Background -->
- <h3>📜 Background</h3>
- <div class="info-box">
- <p style="font-size: 1.05em; line-height: 1.8;">
- Jack Malone ha 32 anni e 14 anni di pistola alle spalle. Ex-marshal del Kansas, ha lasciato 
- il distintivo dopo un <strong>incidente</strong> (preferisce non parlarne - coinvolge una 
- sparatoria che ha ucciso una bambina per errore). Ora lavora come cacciatore di taglie 
- freelance, accettando solo lavori che considera "giusti".
- </p>
- <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
- <strong>Personalità:</strong> Pragmatico, silenzioso, haunted. Non crede in bene/male assoluto, 
- solo in "cosa si deve fare". Rispetta la competenza, odia i bulli. Beve whisky per dormire 
- (incubi ricorrenti). Ha un codice d'onore personale ferreo, ma non sempre coincide con la legge.
- </p>
- <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
- <strong>Aspetto:</strong> Alto (1.85m), magro ma muscoloso. Capelli neri lunghi fino spalle, 
- sempre legati. Barba incolta di 3 giorni. Cicatrice sotto occhio sinistro. Occhi color ghiaccio 
- che sembrano guardare attraverso le persone. Duster grigio polvere, stetson nero, doppio revolver.
- </p>
- </div>
- 
- <!-- Abilità -->
- <h3>⚔️ Abilità & Azioni</h3>
- 
- <div class="abilities-section">
- <div class="ability-card">
- <h4>🎯 MARCA IL BERSAGLIO (Signature)</h4>
- <span class="ability-tag">Azione</span>
- <span class="ability-tag">1/Combattimento</span>
- <p>
- <strong>Effetto:</strong> Scegli una creatura che puoi vedere entro 18 metri. Fino alla 
- fine del combattimento, tu e gli alleati avete <strong>Vantaggio</strong> su tutti gli 
- attacchi contro quel bersaglio. Inoltre, quando qualcuno colpisce il bersaglio marcato, 
- aggiungi <strong>+1d6 danni</strong>.
- </p>
- <p style="margin-top: 10px; font-style: italic;">
- "L'ho nel mirino. Quando dico 'ora', sparate."
- </p>
- </div>
- 
- <div class="ability-card">
- <h4>💨 ESTRAZIONE RAPIDA</h4>
- <span class="ability-tag">Reazione</span>
- <span class="ability-tag">2/Riposo</span>
- <p>
- <strong>Trigger:</strong> Un nemico ti attacca e tu non hai ancora agito nel turno.
- </p>
- <p>
- <strong>Effetto:</strong> Interrompi l'attacco. Fai immediatamente un attacco con revolver 
- contro l'attaccante con <strong>Vantaggio</strong>. Se lo colpisci, il suo attacco è 
- <strong>automaticamente mancato</strong>.
- </p>
- <p style="margin-top: 10px; font-style: italic;">
- "Più veloce di te." [BANG]
- </p>
- </div>
- 
- <div class="ability-card">
- <h4>👁️ OCCHIO DEL CACCIATORE</h4>
- <span class="ability-tag">Azione Minor</span>
- <span class="ability-tag">Sempre</span>
- <p>
- <strong>Effetto:</strong> Fai un tiro <strong>Istinto + Percezione</strong> per studiare 
- una creatura, area, o oggetto. Con successo, il GM ti rivela 1-3 informazioni utili 
- (debolezze nemico, trappole nascoste, tracce, dettagli ambientali).
- </p>
- <p style="margin-top: 10px;">
- <strong>Speciale:</strong> Contro creatura che hai già affrontato, hai automaticamente 
- Vantaggio e conosci le loro vulnerabilità.
- </p>
- </div>
- 
- <div class="ability-card">
- <h4>🏃 MOVIMENTO TATTICO</h4>
- <span class="ability-tag">Passivo</span>
- <p>
- <strong>Effetto:</strong> Puoi muoverti attraverso spazi occupati da alleati senza 
- penalità. Quando ti muovi almeno 6 metri prima di attaccare, ottieni <strong>+2 danni</strong> 
- sull'attacco.
- </p>
- <p style="margin-top: 10px;">
- <strong>Inoltre:</strong> Terreno difficile (macerie, cespugli) costa solo +1 metro invece 
- di +1 metro per metro (più mobile in combattimento caotico).
- </p>
- </div>
- 
- <div class="ability-card">
- <h4>🎲 COLPO FORTUNATO</h4>
- <span class="ability-tag">Spendi 1 Speranza</span>
- <span class="ability-tag">1/Turno</span>
- <p>
- <strong>Trigger:</strong> Fai un attacco a distanza con revolver o fucile.
- </p>
- <p>
- <strong>Effetto:</strong> Uno dei seguenti (scegli quando dichiari):
- </p>
- <ul>
- <li><strong>Colpo Disarmante:</strong> Su colpo, bersaglio lascia cadere arma (Agilità CD 14 nega)</li>
- <li><strong>Colpo alle Gambe:</strong> Bersaglio velocità dimezzata fino fine turno successivo</li>
- <li><strong>Colpo Intimidatorio:</strong> Bersaglio deve fare Presenza CD 14 o Spaventato</li>
- <li><strong>Rimbalzo:</strong> Colpisci bersaglio secondario adiacente per metà danni</li>
- </ul>
- </div>
- </div>
- 
- <!-- Equipaggiamento -->
- <div class="equipment-list">
- <h3>🎒 Equipaggiamento</h3>
- <ul>
- <li><strong>Doppio Revolver Colt .45</strong> (2d6 danni, 6 colpi ciascuno)</li>
- <li><strong>Fucile Winchester</strong> (2d8 danni, 12 colpi, gittata lunga)</li>
- <li><strong>Coltello da caccia</strong> (1d6 danni)</li>
- <li><strong>Duster rinforzato</strong> (Armatura 2, tasche interne)</li>
- <li><strong>200 proiettili</strong> (assortiti .45 e Winchester)</li>
- <li><strong>Kit tracking</strong> (lente ingrandimento, metro, pennello)</li>
- <li><strong>Corda robusta</strong> (15 metri)</li>
- <li><strong>Manette</strong> (2 paia)</li>
- <li><strong>Flask whisky</strong> (mezzo pieno)</li>
- <li><strong>Poster wanted</strong> (target attuali - se rilevante per avventura)</li>
- <li><strong>Distintivo ex-marshal</strong> (nascosto, mai mostrato)</li>
- <li><strong>35 dollari</strong> in contanti</li>
- </ul>
- </div>
- 
- <!-- Connessioni -->
- <div class="connections-box">
- <h3>💬 Connessioni con Altri PG</h3>
- 
- <p><strong>→ Sarah Blackwood:</strong></p>
- <p style="margin-left: 20px; font-size: 0.95em;">
- Sarah ha provato più volte a "salvare la tua anima". Tu rispetti la sua fede anche se non 
- la condividi. Lei è l'unica persona che conosce della bambina morta. Ti fidi di lei più di 
- quanto vorresti ammettere.
- </p>
- 
- <p style="margin-top: 15px;"><strong>→ Doc Artemis:</strong></p>
- <p style="margin-left: 20px; font-size: 0.95em;">
- Doc ha curato una ferita da coltello grave 6 mesi fa, salvandoti la vita. Gli devi ancora 
- il pagamento completo (50 dollari). Apprezzi la sua competenza pragmatica - non fa domande 
- inutili. A volte i suoi "esperimenti" ti rendono nervoso.
- </p>
- </div>
- 
- <!-- Note Interpretazione -->
- <div class="tip-box">
- <h3>🎭 Note per l'Interpretazione</h3>
- <ul>
- <li><strong>Voce:</strong> Bassa, roca (da whisky e sigarette), poche parole</li>
- <li><strong>Postura:</strong> Rilassata ma pronta, mani sempre vicine alle fondine</li>
- <li><strong>Quirks:</strong> Controlla ambiente costantemente (occhi in movimento), pulisce 
- revolver quando nervoso</li>
- <li><strong>Frase signature:</strong> "Lavoro da fare." / "Non mi piace, ma si deve fare."</li>
- <li><strong>Trigger emotivo:</strong> Bambini in pericolo (diventa protettivo, anche irrazionale)</li>
- <li><strong>Arc suggerito:</strong> Imparare a perdonarsi, trovare nuova purpose oltre vendetta/espiazione</li>
-          <li><strong>Vizio prescelto:</strong> _____________ (Alcol, Gioco, Preghiera, Violenza, ecc.)</li>
- </ul>
- </div>
- </div>
- 
- <!-- ============================================================ -->
- <!-- SARAH BLACKWOOD - LIVELLO 2 -->
- <!-- ============================================================ -->
- 
- <div class="character-sheet" id="sarah-2">
- <div class="char-header">
- <h2>🙏 SARAH BLACKWOOD <span class="level-badge">Livello 2</span></h2>
- <p class="char-tagline">La Predicatrice Guerriera - Fede Contro le Tenebre</p>
- </div>
- 
- <!-- Stats Base -->
- <div class="char-stats-grid">
- <div class="stat-box-char">
- <div class="stat-label">Hit Points</div>
- <div class="stat-value">24</div>
- </div>
- <div class="stat-box-char">
- <div class="stat-label">Armatura</div>
- <div class="stat-value">1</div>
- <small>(Abito rinforzato)</small>
- </div>
- <div class="stat-box-char">
- <div class="stat-label">Tenuta Mentale</div>
- <div class="stat-value">8/10</div>
- <small>(forte ma testata)</small>
- </div>
- <div class="stat-box-char">
- <div class="stat-label">Velocità</div>
- <div class="stat-value">9m</div>
- </div>
- </div>
- 
- <!-- Traits -->
- <h3>📊 Tratti</h3>
- <div class="traits-grid">
- <div class="trait-box">
- <h4>Agilità</h4>
- <div class="trait-value">+1</div>
- <small>Non abituata a combattere</small>
- </div>
- <div class="trait-box">
- <h4>Forza</h4>
- <div class="trait-value">+0</div>
- <small>Costituzione fragile</small>
- </div>
- <div class="trait-box">
- <h4>Finezza</h4>
- <div class="trait-value">+2</div>
- <small>Percezione emotiva, empatia</small>
- </div>
- <div class="trait-box">
- <h4>Istinto</h4>
- <div class="trait-value">+3</div>
- <small>Intuizione spirituale</small>
- </div>
- <div class="trait-box">
- <h4>Presenza</h4>
- <div class="trait-value">+4</div>
- <small><strong>PRIMARIA</strong> - Carisma, fede, predicazione</small>
- </div>
- <div class="trait-box">
- <h4>Conoscenza</h4>
- <div class="trait-value">+2</div>
- <small>Teologia, storia, lingue</small>
- </div>
- </div>
- 
- <!-- Background -->
- <h3>📜 Background</h3>
- <div class="info-box">
- <p style="font-size: 1.05em; line-height: 1.8;">
- Sarah Blackwood ha 28 anni ed è predicatrice itinerante da 5. Figlia di un pastore 
- metodista del Massachusetts, ha abbandonato la chiesa tradizionale dopo una <strong>visione 
- divina</strong> (o così crede) che le mostrava "tenebre crescenti nel ovest". È venuta 
- ovest per "portare luce dove l'oscurità avanza".
- </p>
- <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
- <strong>Personalità:</strong> Compassionevole ma non debole, pragmatica nella fede. Crede 
- fermamente in redenzione - <em>tutti</em> possono essere salvati, anche i peggiori. Ma quando 
- affronta il soprannaturale (non-morti, demoni), la compassione cede a ferocia protettiva. 
- Soffre di dubbi interni costanti - "La mia fede è abbastanza forte?"
- </p>
- <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
- <strong>Aspetto:</strong> Altezza media (1.65m), corporatura esile. Capelli castani raccolti 
- in treccia singola. Occhi verdi intensi che trasmettono sincerità disarmante. Abito nero 
- semplice da predicatrice (gonna lunga, camicia alta colletto), croce d'argento al collo. 
- Porta sempre Bibbia consumata e derringer nascosto (non è ingenua).
- </p>
- </div>
- 
- <!-- Abilità -->
- <h3>⚔️ Abilità & Azioni</h3>
- 
- <div class="abilities-section">
- <div class="ability-card">
- <h4>✨ TOCCO CURATIVO (Signature)</h4>
- <span class="ability-tag">Azione</span>
- <span class="ability-tag">3/Riposo</span>
- <p>
- <strong>Effetto:</strong> Tocca una creatura (inclusa te stessa). Target recupera 
- <strong>2d8+4 PF</strong>. Inoltre, rimuovi 1 Condizione (Avvelenato, Spaventato, 
- Stordito, etc).
- </p>
- <p style="margin-top: 10px;">
- <strong>Speciale:</strong> Se il target ha 0 PF (morente), lo stabilizzi automaticamente 
- + recupera 1d8 PF.
- </p>
- <p style="margin-top: 10px; font-style: italic;">
- "La luce del Signore ti guarisce. Alzati."
- </p>
- </div>
- 
- <div class="ability-card">
- <h4>⚡ SCACCIARE NON-MORTI</h4>
- <span class="ability-tag">Azione</span>
- <span class="ability-tag">2/Riposo</span>
- <p>
- <strong>Effetto:</strong> Alzi croce e citi preghiera. Tutti non-morti entro 
- <strong>9 metri</strong> (Close) devono fare <strong>Presenza CD 14</strong>:
- </p>
- <ul>
- <li><strong>Fallimento:</strong> Spaventato per 1 minuto (scappa, non può avvicinarsi)</li>
- <li><strong>Fallimento di 5+:</strong> Prende <strong>3d8 danni radianti</strong> + Spaventato</li>
- <li><strong>Non-morti minori (non-morto, scheletri):</strong> Distrutti istantaneamente se 
- PF ≤ 20</li>
- </ul>
- <p style="margin-top: 10px; font-style: italic;">
- "Nel nome del Padre, torna nell'abisso!"
- </p>
- </div>
- 
- <div class="ability-card">
- <h4>🛡️ BENEDIZIONE PROTETTIVA</h4>
- <span class="ability-tag">Azione Minor</span>
- <span class="ability-tag">1/Combattimento</span>
- <p>
- <strong>Effetto:</strong> Scegli fino a 3 alleati che puoi vedere entro 18 metri. 
- Per <strong>1 minuto</strong>, guadagnano:
- </p>
- <ul>
- <li><strong>+2 a tutti i tiri salvezza</strong></li>
- <li><strong>+1 Armatura</strong> (scudo spirituale)</li>
- <li><strong>Vantaggio vs Spaventato</strong></li>
- </ul>
- <p style="margin-top: 10px;">
- <strong>Concentrazione:</strong> Dura finché mantieni concentrazione (come incantesimi). 
- Se subisci danno, Costituzione CD 10 per mantenere.
- </p>
- </div>
- 
- <div class="ability-card">
- <h4>💬 PAROLA DI CONFORTO</h4>
- <span class="ability-tag">Azione Minor</span>
- <span class="ability-tag">Sempre</span>
- <p>
- <strong>Effetto:</strong> Scegli 1 alleato che puoi vedere entro 18 metri. L'alleato 
- può immediatamente:
- </p>
- <ul>
- <li>Fare un <strong>tiro salvezza</strong> contro una condizione persistente, oppure</li>
- <li>Svuotare <strong>1 segmento Tenuta Mentale</strong>, oppure</li>
- <li>Guadagnare <strong>1d6 PF temporanei</strong> fino a fine combattimento</li>
- </ul>
- <p style="margin-top: 10px; font-style: italic;">
- "Non sei solo. Dio è con te. Io sono con te."
- </p>
- </div>
- 
- <div class="ability-card">
- <h4>🔥 IRA DIVINA (Vs Male Manifesto)</h4>
- <span class="ability-tag">Spendi 1 Speranza</span>
- <span class="ability-tag">1/Combattimento</span>
- <p>
- <strong>Trigger:</strong> Attacchi una creatura chiaramente malvagia (non-morto, demone, 
- cultista, mostro che fa del male intenzionale).
- </p>
- <p>
- <strong>Effetto:</strong> Il tuo attacco infligge <strong>+3d6 danni radianti</strong> 
- aggiuntivi. Se il bersaglio cade a 0 PF con questo attacco, esplode in luce purificatrice 
- (tutti nemici adiacenti prendono 1d8 radianti).
- </p>
- <p style="margin-top: 10px; font-style: italic; color: var(--blood-red);">
- "Il Signore non tollera abominio!" [Occhi brillano dorati]
- </p>
- </div>
- </div>
- 
- <!-- Equipaggiamento -->
- <div class="equipment-list">
- <h3>🎒 Equipaggiamento</h3>
- <ul>
- <li><strong>Derringer .41</strong> (1d8 danni, 2 colpi, nascosto in manica)</li>
- <li><strong>Croce d'argento benedetta</strong> (focus per abilità divine)</li>
- <li><strong>Bibbia familiare</strong> (consumata, annotazioni marginali)</li>
- <li><strong>Abito da predicatrice</strong> (Armatura 1, nero formale)</li>
- <li><strong>Kit medico base</strong> (bende, laudano, ago/filo)</li>
- <li><strong>Acqua santa</strong> (3 fiasche, 1d6 radianti vs non-morti)</li>
- <li><strong>Sale benedetto</strong> (2 sacchetti, linee di protezione)</li>
- <li><strong>Candele</strong> (6, per preghiere/rituali)</li>
- <li><strong>Diario personale</strong> (registra visioni, dubbi)</li>
- <li><strong>Rosario</strong> (di sua madre, portafortuna)</li>
- <li><strong>Vestito di ricambio</strong> (semplice ma pulito)</li>
- <li><strong>18 dollari</strong> (dona la maggior parte ai bisognosi)</li>
- </ul>
- </div>
- 
- <!-- Connessioni -->
- <div class="connections-box">
- <h3>💬 Connessioni con Altri PG</h3>
- 
- <p><strong>→ Jack Malone:</strong></p>
- <p style="margin-left: 20px; font-size: 0.95em;">
- Vedi il dolore dietro i suoi occhi. Ti ha confidato dell'incidente con la bambina - sei 
- l'unica persona viva che lo sa. Credi che possa trovare redenzione, ma lui resiste. Preghi 
- per lui ogni notte. Lui ti protegge più ferocemente di quanto ammetta.
- </p>
- 
- <p style="margin-top: 15px;"><strong>→ Doc Artemis:</strong></p>
- <p style="margin-left: 20px; font-size: 0.95em;">
- Il suo razionalismo ti affascina e frustra. Avete dibattiti filosofici costanti (fede vs 
- scienza). Lui rispetta la tua abilità di healing anche se la considera "placebo avanzato". 
- Quando hai visto cose inspiegabili, Doc era lì - e anche LUI non sapeva spiegare. Un legame 
- silenzioso nasce da quell'esperienza condivisa.
- </p>
- </div>
- 
- <!-- Note Interpretazione -->
- <div class="tip-box">
- <h3>🎭 Note per l'Interpretazione</h3>
- <ul>
- <li><strong>Voce:</strong> Calma, melodiosa (abituata a predicare), ma può diventare 
- ferrea/autoritaria quando necessario</li>
- <li><strong>Postura:</strong> Eretta, composta, mani spesso giunte o sulla croce</li>
- <li><strong>Quirks:</strong> Cita versetti biblici (anche fuori contesto quando nervosa), 
- mormora preghiere sottovoce in stress</li>
- <li><strong>Frase signature:</strong> "La fede ci guiderà." / "Anche tu puoi essere salvato."</li>
- <li><strong>Trigger emotivo:</strong> Innocenti sofferenti (diventa materna/protettiva), 
- blasfemia vs sua fede (si infuria)</li>
- <li><strong>Arc suggerito:</strong> Testare fede contro orrori cosmici - Dio esiste ancora 
-          <li><strong>Vizio prescelto:</strong> _____________ (Alcol, Gioco, Preghiera, Violenza, ecc.)</li>
- se Cthulhu è reale? Evolvere fede da dogmatica a personale</li>
- </ul>
- </div>
- </div>
- 
- <!-- ============================================================ -->
- <!-- DOC ARTEMIS WELLS - LIVELLO 2 -->
- <!-- ============================================================ -->
- 
- <div class="character-sheet" id="doc-2">
- <div class="char-header">
- <h2>🔬 DOC ARTEMIS WELLS <span class="level-badge">Livello 2</span></h2>
- <p class="char-tagline">Il Medico-Inventore - Scienza Contro l'Impossibile</p>
- </div>
- 
- <!-- Stats Base -->
- <div class="char-stats-grid">
- <div class="stat-box-char">
- <div class="stat-label">Hit Points</div>
- <div class="stat-value">20</div>
- <small>(fragile ma ingegnoso)</small>
- </div>
- <div class="stat-box-char">
- <div class="stat-label">Armatura</div>
- <div class="stat-value">0</div>
- <small>(Vestiti normali)</small>
- </div>
- <div class="stat-box-char">
- <div class="stat-label">Tenuta Mentale</div>
- <div class="stat-value">5/10</div>
- <small>(razionalista vulnerabile)</small>
- </div>
- <div class="stat-box-char">
- <div class="stat-label">Velocità</div>
- <div class="stat-value">9m</div>
- </div>
- </div>
- 
- <!-- Traits -->
- <h3>📊 Tratti</h3>
- <div class="traits-grid">
- <div class="trait-box">
- <h4>Agilità</h4>
- <div class="trait-value">+2</div>
- <small>Mani precise (chirurgia)</small>
- </div>
- <div class="trait-box">
- <h4>Forza</h4>
- <div class="trait-value">+0</div>
- <small>Fisicamente debole</small>
- </div>
- <div class="trait-box">
- <h4>Finezza</h4>
- <div class="trait-value">+3</div>
- <small>Lavoro di precisione, gadget</small>
- </div>
- <div class="trait-box">
- <h4>Istinto</h4>
- <div class="trait-value">+1</div>
- <small>Osservazione clinica</small>
- </div>
- <div class="trait-box">
- <h4>Presenza</h4>
- <div class="trait-value">+1</div>
- <small>Bedside manner limitato</small>
- </div>
- <div class="trait-box">
- <h4>Conoscenza</h4>
- <div class="trait-value">+4</div>
- <small><strong>PRIMARIA</strong> - Medicina, scienza, ingegneria</small>
- </div>
- </div>
- 
- <!-- Background -->
- <h3>📜 Background</h3>
- <div class="info-box">
- <p style="font-size: 1.05em; line-height: 1.8;">
- Artemis Wells ha 35 anni ed è medico da 12. Laureato Johns Hopkins (prestigioso!), ha 
- abbandonato carriera promettente a Filadelfia dopo uno <strong>scandalo</strong> (sperimentazione 
- non autorizzata su cadaveri - voleva sviluppare nuove tecniche chirurgiche). È venuto ovest 
- dove "nessuno fa domande" e può praticare medicina senza supervisione rigida.
- </p>
- <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
- <strong>Personalità:</strong> Razionalista ferreo, scettico cronico. Tutto ha spiegazione 
- scientifica - o semplicemente non abbiamo ancora scoperto la scienza giusta. Curioso 
- compulsivo - quando vede qualcosa di inspiegabile, DEVE capire come funziona (anche se 
- pericoloso). Socialmente goffo ma non scortese - semplicemente non capisce sottigliezze emotive.
- </p>
- <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
- <strong>Aspetto:</strong> Altezza media (1.75m), magro quasi emaciato (dimentica di mangiare 
- quando concentrato). Capelli neri con prime striature grigie, sempre in disordine. Occhiali 
- tondi spessi. Vestito nero da dottore sempre macchiato (sangue, inchiostro, sostanze chimiche). 
- Porta borsa medica oversize piena di strumenti improvvisati.
- </p>
- </div>
- 
- <!-- Abilità -->
- <h3>⚔️ Abilità & Azioni</h3>
- 
- <div class="abilities-section">
- <div class="ability-card">
- <h4>💉 CHIRURGIA DA CAMPO (Signature)</h4>
- <span class="ability-tag">Azione</span>
- <span class="ability-tag">3/Riposo</span>
- <p>
- <strong>Effetto:</strong> Scegli creatura adiacente (o te stesso). Fai tiro <strong>Finezza 
- + Conoscenza (Medicina)</strong> CD 12:
- </p>
- <ul>
- <li><strong>Successo:</strong> Target recupera <strong>2d8+4 PF</strong> + rimuovi 1 condizione 
- (Sanguinante, Avvelenato, etc)</li>
- <li><strong>Successo di 5+:</strong> Come sopra + rimuovi 2 condizioni</li>
- <li><strong>Fallimento:</strong> Recupera solo 1d8 PF (trattamento frettoloso)</li>
- </ul>
- <p style="margin-top: 10px;">
- <strong>Speciale:</strong> Funziona anche su creatura a 0 PF (morenti). Stabilizzi + recuperano PF normalmente.
- </p>
- <p style="margin-top: 10px; font-style: italic;">
- "Tieni fermo. Questo farà male." [Estrae bisturi]
- </p>
- </div>
- 
- <div class="ability-card">
- <h4>🔬 ANALISI ANATOMICA</h4>
- <span class="ability-tag">Azione Minor</span>
- <span class="ability-tag">Sempre</span>
- <p>
- <strong>Effetto:</strong> Studi una creatura che puoi vedere. Fai <strong>Conoscenza CD 12</strong>:
- </p>
- <ul>
- <li><strong>Successo:</strong> Apprendi 2 delle seguenti info:
- <ul style="margin-top: 5px;">
- <li>PF attuali approssimativi (range)</li>
- <li>1 vulnerabilità o resistenza</li>
- <li>1 abilità speciale che possiede</li>
- <li>Punto debole (dove colpire per max danno)</li>
- </ul>
- </li>
- <li><strong>Successo di 5+:</strong> Apprendi tutte e 4 le informazioni</li>
- </ul>
- <p style="margin-top: 10px;">
- <strong>Inoltre:</strong> Per resto del combattimento, alleati hanno <strong>+2 danni</strong> 
- contro quella creatura (sfruttano l'analisi).
- </p>
- </div>
- 
- <div class="ability-card">
- <h4>⚗️ GADGET IMPROVVISATO</h4>
- <span class="ability-tag">Azione</span>
- <span class="ability-tag">2/Riposo</span>
- <p>
- <strong>Effetto:</strong> Passi 1 azione frugando nella borsa e assembli gadget improvvisato. 
- Scegli uno:
- </p>
- <ul>
- <li><strong>Granata Flash:</strong> Lanci entro 12m. Tutti in 3m: Costituzione CD 13 o 
- Accecati 1 round</li>
- <li><strong>Fumogeno:</strong> Crei nube 6m raggio. Visibilità zero, dura 3 round</li>
- <li><strong>Acido Corrosivo:</strong> Fiasca che fa 3d6 danni acido + corrode armatura (-2 per 1 min)</li>
- <li><strong>Stimolante:</strong> Iniezione che dà a target +2 Agilità e Forza per 1 minuto, 
- poi 1 Fatica</li>
- <li><strong>Filo Esplosivo:</strong> Trappola che fa 4d6 danni fuoco in linea 9m quando attivato</li>
- </ul>
- <p style="margin-top: 10px;">
- <strong>Nota GM:</strong> Incoraggia creatività - se giocatore propone gadget ragionevole, 
- consenti con CD appropriata.
- </p>
- </div>
- 
- <div class="ability-card">
- <h4>🧪 TOSSINE & ANTIDOTI</h4>
- <span class="ability-tag">Azione Minor</span>
- <span class="ability-tag">1/Riposo per tipo</span>
- <p>
- <strong>Effetto:</strong> Hai preparato 2 dosi di ciascuno:
- </p>
- <ul>
- <li><strong>Antidoto Universale:</strong> Rimuove veleno + cura 2d6 PF</li>
- <li><strong>Laudano Forte:</strong> Rimuove dolore (ignora 1 condizione negativa per 1 ora, 
- poi Svantaggio per 4h - dipendente)</li>
- <li><strong>Adrenalina Sintetica:</strong> Target si sveglia da incoscienza/sonno + ha 
- Vantaggio prossimo tiro</li>
- </ul>
- <p style="margin-top: 10px;">
- Somministrare = Azione Minor. Può essere su te stesso.
- </p>
- </div>
- 
- <div class="ability-card">
- <h4>🎯 COLPO CHIRURGICO</h4>
- <span class="ability-tag">Spendi 1 Speranza</span>
- <span class="ability-tag">1/Turno</span>
- <p>
- <strong>Trigger:</strong> Fai attacco corpo a corpo con bisturi/scalpello.
- </p>
- <p>
- <strong>Effetto:</strong> Scegli punto preciso anatomia. Su colpo:
- </p>
- <ul>
- <li><strong>Tendine:</strong> Velocità dimezzata, Svantaggio Agilità per 1 minuto</li>
- <li><strong>Nervo:</strong> Braccio/gamba inutilizzabile per 1d4 round (Costituzione CD 14 nega)</li>
- <li><strong>Arteria:</strong> Sanguinamento (1d6 danni/round finché non riceve cure)</li>
- <li><strong>Occhi:</strong> Accecato temporaneamente (1d4 round)</li>
- </ul>
- <p style="margin-top: 10px;">
- <strong>Speciale:</strong> Non funziona su creatura senza anatomia (elementali, ooze, etc).
- </p>
- </div>
- </div>
- 
- <!-- Equipaggiamento -->
- <div class="equipment-list">
- <h3>🎒 Equipaggiamento</h3>
- <ul>
- <li><strong>Borsa medica completa</strong> (oversize, 20+ strumenti)</li>
- <li><strong>Bisturi chirurgico</strong> (1d6 danni, può fare Colpo Chirurgico)</li>
- <li><strong>Revolver .38</strong> (2d6 danni, 6 colpi - lo usa male, Svantaggio)</li>
- <li><strong>Taccuino ricerca</strong> (schizzi anatomici, note scientifiche)</li>
- <li><strong>Microscopio portatile</strong> (pieghevole, ingegnoso)</li>
- <li><strong>Kit chimico</strong> (reagenti vari, fiasche, provette)</li>
- <li><strong>Cloroformio</strong> (2 dosi - sedazione istantanea)</li>
- <li><strong>Morfina</strong> (4 dosi - antidolorifico potente)</li>
- <li><strong>Bende, aghi, filo chirurgico</strong> (scorta ampia)</li>
- <li><strong>Occhiali di ricambio</strong> (essenziali - quasi cieco senza)</li>
- <li><strong>Orologio da taschino</strong> (per timing operazioni)</li>
- <li><strong>Vestito nero dottore</strong> (sempre macchiato)</li>
- <li><strong>Libro anatomia</strong> (riferimento costante)</li>
- <li><strong>62 dollari</strong> (paga decente, spende poco)</li>
- </ul>
- </div>
- 
- <!-- Connessioni -->
- <div class="connections-box">
- <h3>💬 Connessioni con Altri PG</h3>
- 
- <p><strong>→ Jack Malone:</strong></p>
- <p style="margin-left: 20px; font-size: 0.95em;">
- Hai curato una ferita critica 6 mesi fa - è tecnicamente in debito (50 dollari non pagati, 
- ma non è per quello che sei qui). Rispetti la sua competenza pragmatica. I suoi "incubi" 
- ti affascinano da punto di vista psicologico - credi siano PTSD, non soprannaturale. Finora.
- </p>
- 
- <p style="margin-top: 15px;"><strong>→ Sarah Blackwood:</strong></p>
- <p style="margin-left: 20px; font-size: 0.95em;">
- I vostri dibattiti fede-vs-scienza sono intensi ma rispettosi. Trovi le sue "guarigioni 
- miracolose" scientificamente affascinanti (effetto placebo + abilità medica inconscia?). 
- Quando hai visto cose inspiegabili insieme, per la prima volta nella vita hai dubitato del 
- razionalismo. Non l'hai ancora ammesso a lei. O a te stesso.
- </p>
- </div>
- 
- <!-- Note Interpretazione -->
- <div class="tip-box">
- <h3>🎭 Note per l'Interpretazione</h3>
- <ul>
- <li><strong>Voce:</strong> Rapida, precisa, spesso interrompe con correzioni tecniche</li>
- <li><strong>Postura:</strong> Curva (da ore su libri/pazienti), occhiali sempre storto</li>
- <li><strong>Quirks:</strong> Prende note compulsive, mormora calcoli/osservazioni, 
- aggiusta occhiali nervosamente</li>
- <li><strong>Frase signature:</strong> "Affascinante..." / "C'è una spiegazione razionale 
- per questo." / "Lasciami esaminare."</li>
- <li><strong>Trigger emotivo:</strong> Malattie/ferite che non può curare (frustrazione), 
- fenomeni inspiegabili (ossessione)</li>
- <li><strong>Arc suggerito:</strong> Razionalismo messo alla prova da orrori cosmici - 
-          <li><strong>Vizio prescelto:</strong> _____________ (Alcol, Gioco, Preghiera, Violenza, ecc.)</li>
- accettare che alcune cose sfuggono alla scienza, o cercare ostinatamente di spiegarle comunque?</li>
- </ul>
- </div>
- </div>
- 
- </div>
- 
- <!-- ============================================================ -->
- <!-- JACK MALONE - LIVELLO 5 -->
- <!-- ============================================================ -->
- 
- <div class="character-sheet level-5" id="jack-5">
- <div class="char-header level-5">
- <h2>🔫 JACK "GHOST" MALONE <span class="level-badge" style="background: var(--alien-green);">Livello 5</span></h2>
- <p class="char-tagline">Il Pistolero Veterano - Sopravvissuto al Serpente Sotterraneo</p>
- </div>
- 
- <!-- Stats Base -->
- <div class="char-stats-grid">
- <div class="stat-box-char">
- <div class="stat-label">Hit Points</div>
- <div class="stat-value">42</div>
- <small>(+14 da livello 2)</small>
- </div>
- <div class="stat-box-char">
- <div class="stat-label">Armatura</div>
- <div class="stat-value">3</div>
- <small>(Duster rinforzato migliorato)</small>
- </div>
- <div class="stat-box-char">
- <div class="stat-label">Tenuta Mentale</div>
- <div class="stat-value">6/10</div>
- <small>(PERMANENTE - cicatrice Silver Hollow)</small>
- </div>
- <div class="stat-box-char">
- <div class="stat-label">Velocità</div>
- <div class="stat-value">10.5m</div>
- <small>(+1.5m da esperienza)</small>
- </div>
- </div>
- 
- <!-- Traits -->
- <h3>📊 Tratti</h3>
- <div class="traits-grid">
- <div class="trait-box">
- <h4>Agilità</h4>
- <div class="trait-value">+4</div>
- <small>↑ Riflessi perfezionati</small>
- </div>
- <div class="trait-box">
- <h4>Forza</h4>
- <div class="trait-value">+3</div>
- <small>↑ Temprato dalle battaglie</small>
- </div>
- <div class="trait-box">
- <h4>Finezza</h4>
- <div class="trait-value">+2</div>
- <small>↑ Esperienza tracking</small>
- </div>
- <div class="trait-box">
- <h4>Istinto</h4>
- <div class="trait-value">+5</div>
- <small><strong>PRIMARIO</strong> ↑ Istinto del sopravvissuto</small>
- </div>
- <div class="trait-box">
- <h4>Presenza</h4>
- <div class="trait-value">+2</div>
- <small>↑ Aura di veterano</small>
- </div>
- <div class="trait-box">
- <h4>Conoscenza</h4>
- <div class="trait-value">+1</div>
- <small>↑ Ha visto troppo</small>
- </div>
- </div>
- 
- <!-- Background -->
- <h3>📜 Background - 3 Mesi Dopo Silver Hollow</h3>
- <div class="info-box" style="background: rgba(0, 51, 102, 0.1); border-color: var(--ocean-blue);">
- <p style="font-size: 1.05em; line-height: 1.8;">
- Sono passati 3 mesi da Silver Hollow. Jack ha <strong>ucciso Jeremiah Caldwell</strong>, 
- visto morti risorgere, e affrontato il Serpente Sotterraneo. È sopravvissuto, ma non 
- <em>illeso</em>. Gli incubi sono peggiorati - ora vede non solo la bambina, ma anche i 
- cultisti che si trasformavano, Jeremiah che rideva mentre moriva.
- </p>
- <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
- <strong>Cambiamenti:</strong> È più silenzioso di prima (cosa che non credeva possibile). 
- Beve più whisky. Ma paradossalmente è anche più <em>efficace</em> - avere affrontato 
- l'impossibile lo ha reso meno esitante. "Se non-morti esistono, allora tutto è possibile. 
- Adattati o muori." Ha sviluppato una pragmaticità ancora più ferrea.
- </p>
- <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
- <strong>Cicatrice fisica:</strong> Morso del cultista trasformato sulla spalla sinistra. 
- Non guarisce bene - a volte pulsa quando il soprannaturale è vicino (Spider-Sense inquietante).
- </p>
- <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
- <strong>Perché è qui:</strong> Quando Blackwood lo ha contattato per i geometri scomparsi, 
- ha accettato immediatamente. Preferisce affrontare orrori nel deserto che stare fermo con 
- i suoi pensieri. E se c'è qualcosa là fuori peggio del Serpente... vuole fermarlo prima che 
- arrivi in città.
- </p>
- </div>
- 
- <!-- Abilità (tutte quelle di prima + nuove) -->
- <h3>⚔️ Abilità & Azioni</h3>
- 
- <div class="abilities-section">
- <!-- Abilità Livello 2 (mantenute) -->
- <div class="ability-card">
- <h4>🎯 MARCA IL BERSAGLIO (Signature - Potenziata)</h4>
- <span class="ability-tag">Azione</span>
- <span class="ability-tag">2/Combattimento</span>
- <span class="ability-tag" style="background: var(--alien-green); color: black;">UPGRADED</span>
- <p>
- <strong>Effetto:</strong> Scegli creatura entro 30 metri (↑ da 18m). Fino fine combattimento, 
- tu e alleati avete <strong>Vantaggio</strong> su attacchi contro bersaglio + <strong>+2d6 
- danni</strong> (↑ da 1d6) quando colpito.
- </p>
- <p style="margin-top: 10px;">
- <strong>NUOVO:</strong> Puoi marcare 2 bersagli simultaneamente (1 uso per ciascuno).
- </p>
- </div>
- 
- <div class="ability-card">
- <h4>💨 ESTRAZIONE RAPIDA (Mantenuta)</h4>
- <span class="ability-tag">Reazione</span>
- <span class="ability-tag">3/Riposo</span>
- <p>
- [Come livello 2, ma 3 usi invece di 2]
- </p>
- </div>
- 
- <div class="ability-card">
- <h4>👁️ OCCHIO DEL CACCIATORE (Potenziato)</h4>
- <span class="ability-tag">Azione Minor</span>
- <span class="ability-tag">Sempre</span>
- <span class="ability-tag" style="background: var(--alien-green); color: black;">UPGRADED</span>
- <p>
- <strong>Effetto:</strong> Come prima + <strong>NUOVO:</strong>
- </p>
- <ul>
- <li>Puoi percepire <strong>presenza soprannaturale</strong> entro 18m (Spider-Sense - cicatrice pulsa)</li>
- <li>Automaticamente rilevi <strong>illusioni/inganni</strong> con Istinto CD 14</li>
- <li>Contro creatura Mythos: rivela anche <strong>vero nome</strong> o <strong>debolezza rituale</strong></li>
- </ul>
- </div>
- 
- <div class="ability-card">
- <h4>🏃 MOVIMENTO TATTICO (Mantenuto)</h4>
- <span class="ability-tag">Passivo</span>
- <p>[Come livello 2, unchanged]</p>
- </div>
- 
- <div class="ability-card">
- <h4>🎲 COLPO FORTUNATO (Mantenuto)</h4>
- <span class="ability-tag">Spendi 1 Speranza</span>
- <p>[Come livello 2, unchanged]</p>
- </div>
- 
- <!-- NUOVE ABILITÀ LIVELLO 5 -->
- <div class="ability-card" style="border: 3px solid var(--alien-green);">
- <h4>💀 SOPRAVVISSUTO ALL'IMPOSSIBILE (NUOVA)</h4>
- <span class="ability-tag" style="background: var(--alien-green); color: black;">Livello 5</span>
- <span class="ability-tag">Passivo</span>
- <p>
- <strong>Effetto:</strong> Avendo affrontato il Serpente Sotterraneo, sei temprato contro 
- l'orrore cosmico:
- </p>
- <ul>
- <li><strong>Vantaggio</strong> su tutti tiri salvezza <strong>Tenuta Mentale</strong></li>
- <li>Quando riempi Tenuta, riduci segmenti di <strong>-2</strong> (min 1)</li>
- <li>Se vedi creatura che hai già affrontato (tipo simile), <strong>immune</strong> a stress 
- da quella visione</li>
- <li><strong>Inoltre:</strong> Alleati entro 6m da te hanno <strong>+2</strong> ai loro tiri 
- Tenuta (la tua calma li stabilizza)</li>
- </ul>
- <p style="margin-top: 10px; font-style: italic; color: var(--ocean-blue);">
- "Ho visto peggio. Molto peggio."
- </p>
- </div>
- 
- <div class="ability-card" style="border: 3px solid var(--alien-green);">
- <h4>⚡ RAFFICA MORTALE (NUOVA)</h4>
- <span class="ability-tag" style="background: var(--alien-green); color: black;">Livello 5</span>
- <span class="ability-tag">Azione</span>
- <span class="ability-tag">1/Riposo</span>
- <p>
- <strong>Effetto:</strong> Spari un'intera camera di revolver in sequenza fulminea. 
- Scegli fino a <strong>6 bersagli</strong> diversi entro gittata:
- </p>
- <ul>
- <li>Fai 1 attacco contro ciascuno (tiri separati)</li>
- <li>Se colpisci, <strong>1d10+Agilità</strong> danni (invece di 2d6 normale)</li>
- <li><strong>Critico (doppio 12):</strong> Bersaglio è anche <strong>Stordito</strong> 1 round</li>
- </ul>
- <p style="margin-top: 10px;">
- <strong>Costo:</strong> Revolver è <strong>vuoto</strong> (richiede ricarica dopo - 1 Azione). 
- Ma vale.
- </p>
- <p style="margin-top: 10px; font-style: italic; color: var(--blood-red);">
- [Estrae entrambi i revolver] "Dance." [BANG BANG BANG BANG BANG BANG]
- </p>
- </div>
- 
- <div class="ability-card" style="border: 3px solid var(--alien-green);">
- <h4>🎯 COLPO ESECUTORE (NUOVA)</h4>
- <span class="ability-tag" style="background: var(--alien-green); color: black;">Livello 5</span>
- <span class="ability-tag">Spendi 2 Speranza</span>
- <span class="ability-tag">1/Combattimento</span>
- <p>
- <strong>Trigger:</strong> Attacchi creatura che è sotto 50% PF.
- </p>
- <p>
- <strong>Effetto:</strong> Tiri <strong>3d12</strong> invece di 2d12 per attacco (prendi 2 
- più alti). Se colpisci:
- </p>
- <ul>
- <li>Danni <strong>automaticamente massimi</strong> (non tirare - usa valore max dadi)</li>
- <li>Se questo porta bersaglio a <strong>0 PF</strong>, è <strong>ucciso istantaneamente</strong> 
- (no tiri morte, no resurrezione facile)</li>
- <li>Se bersaglio sopravvive, è <strong>Spaventato</strong> di te (Presenza CD 16 nega)</li>
- </ul>
- <p style="margin-top: 10px; font-style: italic; color: var(--blood-red);">
- "Niente personale. Lavoro da fare." [Colpo perfetto tra gli occhi]
- </p>
- </div>
- </div>
- 
- <!-- Equipaggiamento -->
- <div class="equipment-list">
- <h3>🎒 Equipaggiamento - Veterano</h3>
- <ul>
- <li><strong>Doppio Revolver Colt .45 Personalizzati</strong> (2d6 danni, impugnature incise, 
- manutentati perfettamente)</li>
- <li><strong>Fucile Winchester Modificato</strong> (2d8 danni, mirino migliorato, 15 colpi)</li>
- <li><strong>Coltello argento</strong> (1d6+2 danni, efficace vs licantropi se esistono)</li>
- <li><strong>Duster rinforzato superiore</strong> (Armatura 3, piastre sottili cucite dentro)</li>
- <li><strong>300 proiettili</strong> + <strong>20 proiettili argento</strong> (costosi, solo emergenze)</li>
- <li><strong>Kit tracking professionale</strong> (lente, metro, pennello, calchi impronte)</li>
- <li><strong>Corda robusta</strong> (20 metri, grappling hook)</li>
- <li><strong>Manette</strong> (3 paia)</li>
- <li><strong>Flask whisky</strong> (pieno - serve più di prima)</li>
- <li><strong>Amuleto protezione Ute</strong> (regalo da Aquila che Vede Lontano - +1 vs magia)</li>
- <li><strong>Poster wanted aggiornati</strong></li>
- <li><strong>Diario Silver Hollow</strong> (note su cosa è successo - nessuno crederebbe)</li>
- <li><strong>120 dollari</strong> (risparmio da ultimi lavori)</li>
- </ul>
- </div>
- 
- <!-- Cicatrici -->
- <div class="warning-box">
- <h3>💀 Cicatrici & Conseguenze Permanenti</h3>
- <ul style="font-size: 1.05em; line-height: 1.8;">
- <li><strong>Tenuta Mentale permanentemente ridotta:</strong> Max 10 ma PARTE da 6/10 (6 segmenti 
- sempre pieni = "visto troppo")</li>
- <li><strong>Morso cultista:</strong> Cicatrice sulla spalla che pulsa vicino al soprannaturale 
- (utile ma inquietante)</li>
- <li><strong>Incubi cronici:</strong> Ogni notte. Non recupera benefici pieni da riposo lungo 
- (conta come 3/4 riposo)</li>
- <li><strong>Dipendenza whisky lieve:</strong> Deve bere ogni sera o Svantaggio sociale il giorno 
- dopo (withdrawal)</li>
- <li><strong>Trigger PTSD:</strong> Culti serpentini, trasformazioni corporee = deve fare Istinto 
- CD 12 o momentaneamente paralizzato (flashback 1 round)</li>
- </ul>
- </div>
- 
- <!-- Connessioni -->
- <div class="connections-box">
- <h3>💬 Connessioni - Veterani Insieme</h3>
- 
- <p><strong>→ Sarah Blackwood:</strong></p>
- <p style="margin-left: 20px; font-size: 0.95em;">
- Lei ha visto tutto a Silver Hollow. Ha pregato su corpi di cultisti che tu hai ucciso. Ha curato 
- il morso che ancora brucia. Il legame ora è più profondo - siete sopravvissuti all'inferno insieme. 
- A volte preghi con lei, anche se non credi. Il rituale conforta.
- </p>
- 
- <p style="margin-top: 15px;"><strong>→ Doc Artemis:</strong></p>
- <p style="margin-left: 20px; font-size: 0.95em;">
- Ha cercato di spiegare scientificamente il Serpente per settimane dopo Silver Hollow. Hai assistito 
- al suo breakdown quando ha ammesso "non posso spiegare questo". Ora rispetti la sua abilità di 
- adattamento - ha accettato l'impossibile e continua comunque. Il debito dei 50 dollari? Dimenticato. 
- Questo va oltre i soldi.
- </p>
- </div>
- </div>
- 
- <!-- ============================================================ -->
- <!-- SARAH BLACKWOOD - LIVELLO 5 -->
- <!-- ============================================================ -->
- 
- <div class="character-sheet level-5" id="sarah-5">
- <div class="char-header level-5">
- <h2>🙏 SARAH BLACKWOOD <span class="level-badge" style="background: var(--alien-green);">Livello 5</span></h2>
- <p class="char-tagline">La Predicatrice Testata - Fede Temprata dal Fuoco</p>
- </div>
- 
- <!-- Stats Base -->
- <div class="char-stats-grid">
- <div class="stat-box-char">
- <div class="stat-label">Hit Points</div>
- <div class="stat-value">36</div>
- <small>(+12 da livello 2)</small>
- </div>
- <div class="stat-box-char">
- <div class="stat-label">Armatura</div>
- <div class="stat-value">2</div>
- <small>(Abito + protezione divina)</small>
- </div>
- <div class="stat-box-char">
- <div class="stat-label">Tenuta Mentale</div>
- <div class="stat-value">8/10</div>
- <small>(Forte ma permanentemente segnata)</small>
- </div>
- <div class="stat-box-char">
- <div class="stat-label">Velocità</div>
- <div class="stat-value">9m</div>
- </div>
- </div>
- 
- <!-- Traits -->
- <h3>📊 Tratti</h3>
- <div class="traits-grid">
- <div class="trait-box">
- <h4>Agilità</h4>
- <div class="trait-value">+2</div>
- <small>↑ Più agile sotto pressione</small>
- </div>
- <div class="trait-box">
- <h4>Forza</h4>
- <div class="trait-value">+1</div>
- <small>↑ Temprata spiritualmente</small>
- </div>
- <div class="trait-box">
- <h4>Finezza</h4>
- <div class="trait-value">+3</div>
- <small>↑ Empatia più profonda</small>
- </div>
- <div class="trait-box">
- <h4>Istinto</h4>
- <div class="trait-value">+4</div>
- <small>↑ Intuizione spirituale potenziata</small>
- </div>
- <div class="trait-box">
- <h4>Presenza</h4>
- <div class="trait-value">+5</div>
- <small><strong>PRIMARIA</strong> ↑ Aura di fede incrollabile</small>
- </div>
- <div class="trait-box">
- <h4>Conoscenza</h4>
- <div class="trait-value">+3</div>
- <small>↑ Studio intensivo post-Silver Hollow</small>
- </div>
- </div>
- 
- <!-- Background -->
- <h3>📜 Background - La Fede Testata</h3>
- <div class="info-box" style="background: rgba(0, 51, 102, 0.1); border-color: var(--ocean-blue);">
- <p style="font-size: 1.05em; line-height: 1.8;">
- Silver Hollow ha quasi spezzato Sarah. Vedere Jeremiah - un <em>pastore</em>, un uomo di Dio - 
- trasformato in mostro... pregare su corpi di cultisti che credevano in un dio-serpente alieno... 
- affrontare non-morti che non dovrebbero esistere... Per 2 settimane dopo, non riusciva a pregare. 
- Le parole morivano in gola.
- </p>
- <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
- <strong>La Svolta:</strong> Una notte, al terzo whisky (lei! che prima non beveva!), ha avuto una 
- realizzazione: "Se il male così profondo esiste, allora Dio DEVE esistere per bilanciarlo. Il 
- Serpente conferma Dio, non lo nega." La fede è tornata - ma cambiata. Più personale, meno dogmatica, 
- fieramente protettiva.
- </p>
- <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
- <strong>Cambiamenti:</strong> Meno ingenua, più pragmatica. Ha imparato a sparare meglio (Jack le 
- dà lezioni). Porta derringer ora senza vergogna - "Dio aiuta chi si aiuta." Non cerca più di 
- redimere <em>tutti</em> - alcuni sono oltre la salvezza. Ma per chi vale la pena? Combatte 
- ferocemente.
- </p>
- <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
- <strong>Perché è qui:</strong> Quando i geometri sono scomparsi nell'Occhio Asciutto, ha sentito... 
- qualcosa. Un richiamo spirituale. "Il male cresce là. Devo fermarlo." Questa volta non è naïve - 
- sa che potrebbe morire. Ma la fede richiede sacrificio.
- </p>
- </div>
- 
- <!-- Abilità -->
- <h3>⚔️ Abilità & Azioni</h3>
- 
- <div class="abilities-section">
- <!-- Abilità base potenziate -->
- <div class="ability-card">
- <h4>✨ TOCCO CURATIVO (Signature - Potenziato)</h4>
- <span class="ability-tag">Azione</span>
- <span class="ability-tag">4/Riposo</span>
- <span class="ability-tag" style="background: var(--alien-green); color: black;">UPGRADED</span>
- <p>
- <strong>Effetto:</strong> Target recupera <strong>3d8+6 PF</strong> (↑ da 2d8+4) + rimuovi 
- <strong>2 Condizioni</strong> (↑ da 1).
- </p>
- <p style="margin-top: 10px;">
- <strong>NUOVO:</strong> Puoi usare su target entro <strong>6 metri</strong> (non richiede tocco 
- fisico - proietti luce curativa).
- </p>
- </div>
- 
- <div class="ability-card">
- <h4>⚡ SCACCIARE NON-MORTI (Potenziato)</h4>
- <span class="ability-tag">Azione</span>
- <span class="ability-tag">3/Riposo</span>
- <span class="ability-tag" style="background: var(--alien-green); color: black;">UPGRADED</span>
- <p>
- <strong>Effetto:</strong> Raggio aumentato a <strong>15 metri</strong> (↑ da 9m). Presenza CD 
- <strong>16</strong> (↑ da 14). Danni <strong>4d8 radianti</strong> (↑ da 3d8).
- </p>
- <p style="margin-top: 10px;">
- <strong>NUOVO:</strong> Funziona anche su <strong>demoni</strong> e <strong>possessioni</strong>. 
- Non-morti minori distrutti se PF ≤ <strong>35</strong> (↑ da 20).
- </p>
- </div>
- 
- <div class="ability-card">
- <h4>🛡️ BENEDIZIONE PROTETTIVA (Potenziata)</h4>
- <span class="ability-tag">Azione Minor</span>
- <span class="ability-tag">2/Combattimento</span>
- <span class="ability-tag" style="background: var(--alien-green); color: black;">UPGRADED</span>
- <p>
- <strong>Effetto:</strong> Fino a <strong>4 alleati</strong> (↑ da 3) entro <strong>24 metri</strong> 
- (↑ da 18m):
- </p>
- <ul>
- <li><strong>+3 tiri salvezza</strong> (↑ da +2)</li>
- <li><strong>+2 Armatura</strong> (↑ da +1)</li>
- <li><strong>Vantaggio vs Spaventato E Charme</strong></li>
- <li><strong>NUOVO: Immunità a possessione</strong></li>
- </ul>
- </div>
- 
- <div class="ability-card">
- <h4>💬 PAROLA DI CONFORTO (Mantenuta)</h4>
- <span class="ability-tag">Azione Minor</span>
- <p>[Come livello 2, unchanged]</p>
- </div>
- 
- <div class="ability-card">
- <h4>🔥 IRA DIVINA (Potenziata)</h4>
- <span class="ability-tag">Spendi 1 Speranza</span>
- <span class="ability-tag">2/Combattimento</span>
- <span class="ability-tag" style="background: var(--alien-green); color: black;">UPGRADED</span>
- <p>
- <strong>Danni:</strong> <strong>4d6 radianti</strong> (↑ da 3d6). Esplosione: <strong>2d8 
- radianti</strong> (↑ da 1d8) a tutti nemici entro 3 metri.
- </p>
- </div>
- 
- <!-- NUOVE ABILITÀ -->
- <div class="ability-card" style="border: 3px solid var(--alien-green);">
- <h4>🕊️ RESURREZIONE MINORE (NUOVA)</h4>
- <span class="ability-tag" style="background: var(--alien-green); color: black;">Livello 5</span>
- <span class="ability-tag">Azione (10 minuti)</span>
- <span class="ability-tag">1/Settimana</span>
- <p>
- <strong>Effetto:</strong> Puoi riportare in vita creatura morta da <strong>≤ 1 ora</strong>:
- </p>
- <ul>
- <li>Richiede <strong>10 minuti preghiera ininterrotta</strong> toccando il corpo</li>
- <li>Target ritorna con <strong>1 PF</strong> + <strong>2 Fatica</strong> (esperienza traumatica)</li>
- <li><strong>Non funziona</strong> se: morte per vecchiaia, corpo distrutto completamente, 
- anima intrappolata/consumata</li>
- <li><strong>Costo:</strong> Tu subisci <strong>2d8 danni</strong> + riempi <strong>3 segmenti 
- Tenuta</strong> (condividi morte)</li>
- </ul>
- <p style="margin-top: 10px; font-style: italic; color: var(--blood-red);">
- "Non oggi. Dio non ti prende oggi." [Mani brillano dorato intenso]
- </p>
- </div>
- 
- <div class="ability-card" style="border: 3px solid var(--alien-green);">
- <h4>⭐ AURA DI FEDE (NUOVA)</h4>
- <span class="ability-tag" style="background: var(--alien-green); color: black;">Livello 5</span>
- <span class="ability-tag">Passivo</span>
- <span class="ability-tag">Toggle On/Off</span>
- <p>
- <strong>Effetto:</strong> Puoi attivare/disattivare aura divina visibile (luce dorata):
- </p>
- <ul>
- <li><strong>Alleati entro 6 metri:</strong>
- <ul>
- <li>+1d6 PF recuperati quando curati</li>
- <li>Vantaggio primo tiro salvezza ogni turno</li>
- <li>Immune a paura da creatura ≤ tuo livello</li>
- </ul>
- </li>
- <li><strong>Nemici non-morti/demoni entro 6 metri:</strong>
- <ul>
- <li>Svantaggio su attacchi</li>
- <li>-1d6 ai danni inflitti</li>
- <li>Costituzione CD 13 ogni turno o 1d6 danni radianti</li>
- </ul>
- </li>
- </ul>
- <p style="margin-top: 10px;">
- <strong>Costo:</strong> Mentre attiva, <strong>-3m velocità</strong> (concentrazione richiesta). 
- Interrotta se Stordita/Incosciente.
- </p>
- </div>
- 
- <div class="ability-card" style="border: 3px solid var(--alien-green);">
- <h4>📿 ESORCISMO (NUOVA)</h4>
- <span class="ability-tag" style="background: var(--alien-green); color: black;">Livello 5</span>
- <span class="ability-tag">Azione (1 minuto)</span>
- <span class="ability-tag">1/Riposo</span>
- <p>
- <strong>Effetto:</strong> Esorcizzi possessione, maledizione, o controllo mentale:
- </p>
- <ul>
- <li>Contested: tuo <strong>Presenza</strong> vs <strong>Presenza entità</strong></li>
- <li><strong>Successo:</strong> Possessione/controllo <strong>terminato</strong>. Entità espulsa, 
- prende 4d10 danni radianti</li>
- <li><strong>Fallimento:</strong> Nessun effetto, ma puoi ritentare dopo 10 minuti</li>
- <li><strong>Fallimento critico:</strong> Entità contrattacca - tu prendi 2d10 psichici + 2 Tenuta</li>
- </ul>
- <p style="margin-top: 10px;">
- <strong>Durata:</strong> Richiede 1 minuto preghiera/rituabile ininterrotto. Se interrotta, 
- fallisce automaticamente.
- </p>
- <p style="margin-top: 10px; font-style: italic;">
- "Nel nome del Padre, del Figlio, e dello Spirito Santo - VATTENE!" [Croce brucia]
- </p>
- </div>
- </div>
- 
- <!-- Equipaggiamento -->
- <div class="equipment-list">
- <h3>🎒 Equipaggiamento - Veterana</h3>
- <ul>
- <li><strong>Derringer .41</strong> (1d8 danni, 2 colpi, ora lo usa competentemente)</li>
- <li><strong>Revolver .38</strong> (2d6 danni, 6 colpi - nuovo, regalo da Jack)</li>
- <li><strong>Croce d'argento benedetta potenziata</strong> (focus +2, brucia non-morti al tocco)</li>
- <li><strong>Bibbia familiare consumata</strong> (pagine Silver Hollow macchiate sangue cultista)</li>
- <li><strong>Abito predicatrice rinforzato</strong> (Armatura 2 - piastre sottili cucite da Doc)</li>
- <li><strong>Kit medico avanzato</strong> (include strumenti chirurgici base)</li>
- <li><strong>Acqua santa concentrata</strong> (5 fiasche, 2d6 radianti vs non-morti)</li>
- <li><strong>Sale benedetto</strong> (4 sacchetti)</li>
- <li><strong>Incenso sacro</strong> (per rituali esorcismo)</li>
- <li><strong>Candele benedette</strong> (12)</li>
- <li><strong>Rosario materno</strong> (ora anche amuleto protezione +1 vs possessione)</li>
- <li><strong>Diario spirituale</strong> (registra visioni, dubbi, epifanie post-Silver Hollow)</li>
- <li><strong>Libro preghiere esorcismo</strong> (studiato intensamente 3 mesi)</li>
- <li><strong>45 dollari</strong> (dona meno ora - ha capito che anche lei ha bisogno risorse)</li>
- </ul>
- </div>
- 
- <!-- Cicatrici -->
- <div class="warning-box">
- <h3>💀 Cicatrici Spirituali</h3>
- <ul style="font-size: 1.05em; line-height: 1.8;">
- <li><strong>Crisi fede superata:</strong> Fede ora più personale ma anche più fragile - dubbio 
- permanente sottostante</li>
- <li><strong>Tenuta permanentemente a 8/10:</strong> 2 segmenti sempre pieni (aver visto Jeremiah 
- trasformato)</li>
- <li><strong>Incubi ricorrenti:</strong> Sogna Jeremiah che predica con voce serpentina</li>
- <li><strong>Mani tremano:</strong> Quando usa armi (conflitto interno violenza/fede) - primo attacco 
- combattimento ha Svantaggio</li>
- <li><strong>Trigger:</strong> Culti religiosi corrotti = deve fare Presenza CD 12 o momentanea paralisi 
- (flashback)</li>
- </ul>
- </div>
- 
- <!-- Connessioni -->
- <div class="connections-box">
- <h3>💬 Connessioni - Veterani</h3>
- 
- <p><strong>→ Jack Malone:</strong></p>
- <p style="margin-left: 20px; font-size: 0.95em;">
- Il legame è ora quasi familiare. Prega con lui ogni sera (anche se lui non crede). Lui la protegge 
- con ferocia che va oltre duty. Lei lo perdona per ogni vita che prende - "Dio comprende necessità." 
- A volte si chiede se siano... qualcosa di più? Ma non è il momento. Forse mai.
- </p>
- 
- <p style="margin-top: 15px;"><strong>→ Doc Artemis:</strong></p>
- <p style="margin-left: 20px; font-size: 0.95em;">
- Dopo Silver Hollow, i dibattiti sono cambiati. Lui ha ammesso limiti scienza. Lei ha ammesso dubbi 
- fede. Ora cercano <em>insieme</em> - "Forse verità è nel mezzo." Ha imparato medicina da lui. Lui ha 
- imparato empatia da lei. Rispetto reciproco profondo.
- </p>
- </div>
- </div>
- 
- <!-- ============================================================ -->
- <!-- DOC ARTEMIS WELLS - LIVELLO 5 -->
- <!-- ============================================================ -->
- 
- <div class="character-sheet level-5" id="doc-5">
- <div class="char-header level-5">
- <h2>🔬 DOC ARTEMIS WELLS <span class="level-badge" style="background: var(--alien-green);">Livello 5</span></h2>
- <p class="char-tagline">Lo Scienziato Pragmatico - Razionalismo Evoluto</p>
- </div>
- 
- <!-- Stats Base -->
- <div class="char-stats-grid">
- <div class="stat-box-char">
- <div class="stat-label">Hit Points</div>
- <div class="stat-value">30</div>
- <small>(+10 da livello 2)</small>
- </div>
- <div class="stat-box-char">
- <div class="stat-label">Armatura</div>
- <div class="stat-value">1</div>
- <small>(Protezione improvvisata)</small>
- </div>
- <div class="stat-box-char">
- <div class="stat-label">Tenuta Mentale</div>
- <div class="stat-value">4/10</div>
- <small>(PERMANENTE - paradigma infranto)</small>
- </div>
- <div class="stat-box-char">
- <div class="stat-label">Velocità</div>
- <div class="stat-value">9m</div>
- </div>
- </div>
- 
- <!-- Traits -->
- <h3>📊 Tratti</h3>
- <div class="traits-grid">
- <div class="trait-box">
- <h4>Agilità</h4>
- <div class="trait-value">+3</div>
- <small>↑ Mani ancora più precise</small>
- </div>
- <div class="trait-box">
- <h4>Forza</h4>
- <div class="trait-value">+1</div>
- <small>↑ Slightly less fragile</small>
- </div>
- <div class="trait-box">
- <h4>Finezza</h4>
- <div class="trait-value">+4</div>
- <small>↑ Maestria strumenti</small>
- </div>
- <div class="trait-box">
- <h4>Istinto</h4>
- <div class="trait-value">+2</div>
- <small>↑ Ha imparato a "sentire" pericolo</small>
- </div>
- <div class="trait-box">
- <h4>Presenza</h4>
- <div class="trait-value">+2</div>
- <small>↑ Bedside manner migliorato</small>
- </div>
- <div class="trait-box">
- <h4>Conoscenza</h4>
- <div class="trait-value">+5</div>
- <small><strong>PRIMARIA</strong> ↑ Esperto multi-disciplinare</small>
- </div>
- </div>
- 
- <!-- Background -->
- <h3>📜 Background - Il Paradigma Infranto</h3>
- <div class="info-box" style="background: rgba(0, 51, 102, 0.1); border-color: var(--ocean-blue);">
- <p style="font-size: 1.05em; line-height: 1.8;">
- Silver Hollow ha <strong>distrutto</strong> il worldview di Artemis. Per 3 settimane dopo, non 
- riusciva a dormire - passava notti scrivendo equazioni, cercando disperatamente una spiegazione 
- scientifica per morti risorti, trasformazioni impossibili, Serpente che sfidava leggi biologiche.
- </p>
- <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
- <strong>Il Breakdown:</strong> Una notte, dopo il quarto whisky (condiviso con Sarah, ironicamente), 
- ha pianto. "Tutta la mia vita... ho creduto che tutto fosse spiegabile. E ora... COSA CAZZO ERA 
- QUELLO?" Sarah ha risposto semplicemente: "Mistero. Accettalo." E lui... lo ha fatto.
- </p>
- <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
- <strong>Evoluzione:</strong> Non ha abbandonato razionalismo - lo ha <em>espanso</em>. "Ok, ci sono 
- cose che la scienza attuale non spiega. Ma forse c'è una scienza DIVERSA - aliena, dimensionale, 
- quantistica? Dobbiamo solo scoprirla." Ora studia occultismo con metodo scientifico. Prende campioni 
- di creatura Mythos. Disseziona quando possibile. È diventato... <strong>scienziato dell'impossibile</strong>.
- </p>
- <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
- <strong>Perché è qui:</strong> Geometri scomparsi + anomalie magnetiche + geometria impossibile? 
- "DEVO studiare questo. Se c'è un pattern, posso trovarlo. E se posso trovarlo... posso combatterlo."
- </p>
- </div>
- 
- <!-- Abilità -->
- <h3>⚔️ Abilità & Azioni</h3>
- 
- <div class="abilities-section">
- <!-- Abilità potenziate -->
- <div class="ability-card">
- <h4>💉 CHIRURGIA DA CAMPO (Potenziata)</h4>
- <span class="ability-tag">Azione</span>
- <span class="ability-tag">4/Riposo</span>
- <span class="ability-tag" style="background: var(--alien-green); color: black;">UPGRADED</span>
- <p>
- <strong>Recupero:</strong> <strong>3d8+6 PF</strong> (↑ da 2d8+4) + rimuovi <strong>2 condizioni</strong> 
- (↑ da 1).
- </p>
- <p style="margin-top: 10px;">
- <strong>NUOVO:</strong> Funziona anche su <strong>creatura non-umane</strong> (ha studiato anatomia 
- aliena). CD ridotta a <strong>10</strong> (↑ da 12 - più esperto).
- </p>
- </div>
- 
- <div class="ability-card">
- <h4>🔬 ANALISI ANATOMICA (Potenziata)</h4>
- <span class="ability-tag">Azione Minor</span>
- <span class="ability-tag">Sempre</span>
- <span class="ability-tag" style="background: var(--alien-green); color: black;">UPGRADED</span>
- <p>
- <strong>Effetto:</strong> CD ridotta a <strong>10</strong>. Alleati ora hanno <strong>+3 danni</strong> 
- (↑ da +2) contro creatura analizzata.
- </p>
- <p style="margin-top: 10px;">
- <strong>NUOVO:</strong> Puoi analizzare anche <strong>trappole</strong>, <strong>rituali in corso</strong>, 
- o <strong>anomalie ambientali</strong> (geometria non-euclidea, etc).
- </p>
- </div>
- 
- <div class="ability-card">
- <h4>⚗️ GADGET IMPROVVISATO (Potenziato)</h4>
- <span class="ability-tag">Azione</span>
- <span class="ability-tag">3/Riposo</span>
- <span class="ability-tag" style="background: var(--alien-green); color: black;">UPGRADED</span>
- <p>
- <strong>Opzioni aumentate:</strong> Tutti gadget esistenti + <strong>2 nuovi</strong>:
- </p>
- <ul>
- <li><strong>EMP Organico:</strong> Disabilita elettricità/magia in 6m raggio per 1 minuto</li>
- <li><strong>Sigillo Temporaneo:</strong> Crea barriera che blocca entità soprannaturali 10 minuti 
- (Presenza CD 16 per attraversare)</li>
- </ul>
- </div>
- 
- <div class="ability-card">
- <h4>🧪 TOSSINE & ANTIDOTI (Mantenuto)</h4>
- <span class="ability-tag">Azione Minor</span>
- <p>[Come livello 2, ma ora 3 dosi ciascuno invece di 2]</p>
- </div>
- 
- <div class="ability-card">
- <h4>🎯 COLPO CHIRURGICO (Mantenuto)</h4>
- <span class="ability-tag">Spendi 1 Speranza</span>
- <p>[Come livello 2, unchanged]</p>
- </div>
- 
- <!-- NUOVE ABILITÀ -->
- <div class="ability-card" style="border: 3px solid var(--alien-green);">
- <h4>🧬 ANALISI MYTHOS (NUOVA)</h4>
- <span class="ability-tag" style="background: var(--alien-green); color: black;">Livello 5</span>
- <span class="ability-tag">Azione (10 minuti)</span>
- <span class="ability-tag">Sempre</span>
- <p>
- <strong>Effetto:</strong> Studi campione creatura Mythos, simbolo alieno, o fenomeno soprannaturale:
- </p>
- <ul>
- <li>Fai <strong>Conoscenza CD 14</strong></li>
- <li><strong>Successo:</strong> Apprendi <strong>3 informazioni</strong> su origine, debolezze, pattern</li>
- <li><strong>Successo 5+:</strong> Inoltre, puoi <strong>creare contromisura specifica</strong> 
- (veleno anti-Mythos, sigillo, frequenza sonora disruptiva, etc). Richiede 1 ora + materiali.</li>
- </ul>
- <p style="margin-top: 10px;">
- <strong>Note campioni:</strong> Conservi campioni di tutte creatura affrontate (sangue, tessuti, 
- scale). Borsa medica ora include fiasche specimen.
- </p>
- <p style="margin-top: 10px; font-style: italic;">
- "Affascinante... la struttura cellulare è completamente aliena. Ma vulnerabile a..." [Prende appunti frenetici]
- </p>
- </div>
- 
- <div class="ability-card" style="border: 3px solid var(--alien-green);">
- <h4>⚙️ INVENZIONE RAPIDA (NUOVA)</h4>
- <span class="ability-tag" style="background: var(--alien-green); color: black;">Livello 5</span>
- <span class="ability-tag">Azione</span>
- <span class="ability-tag">1/Riposo</span>
- <p>
- <strong>Effetto:</strong> Assembli <strong>dispositivo complesso</strong> in 1 azione (invece di ore):
- </p>
- <ul>
- <li><strong>Esempi:</strong>
- <ul>
- <li>Detonatore a tempo (fa esplodere dinamite dopo X round)</li>
- <li>Detector radiazioni/magia (beep quando soprannaturale vicino)</li>
- <li>Purificatore acqua contaminata (rimuove veleni/corruzione)</li>
- <li>Radio primitivo (comunicazione 1 km)</li>
- <li>Trappola elaborata (rete + elettricità + allarme)</li>
- </ul>
- </li>
- <li><strong>Limiti:</strong> Deve essere plausibile per tech 1885 + tua borsa. GM final say.</li>
- <li><strong>Durata:</strong> Dispositivo funziona per 1 ora poi si rompe (improvvisato)</li>
- </ul>
- <p style="margin-top: 10px; font-style: italic;">
- "Dammi 60 secondi e una candela..." [Smonta orologio, combina con fiasche chimiche] "Ecco. Timer esplosivo."
- </p>
- </div>
- 
- <div class="ability-card" style="border: 3px solid var(--alien-green);">
- <h4>🧠 RAZIONALISMO ADATTIVO (NUOVA)</h4>
- <span class="ability-tag" style="background: var(--alien-green); color: black;">Livello 5</span>
- <span class="ability-tag">Passivo</span>
- <p>
- <strong>Effetto:</strong> Avendo accettato l'impossibile, ora sei <strong>meno vulnerabile</strong> 
- allo shock:
- </p>
- <ul>
- <li><strong>+3 bonus</strong> tiri salvezza <strong>Tenuta Mentale</strong></li>
- <li>Quando vedi fenomeno soprannaturale, <strong>metà segmenti</strong> Tenuta riempiti (arrotonda giù)</li>
- <li><strong>Immunità</strong> a effetti che causano <strong>disbelief/shock</strong> (hai già visto troppo)</li>
- <li><strong>Inoltre:</strong> Puoi spendere <strong>1 azione</strong> per fare <strong>Conoscenza CD 12</strong>. 
- Successo = <strong>razionalizzi</strong> orrore per alleati nearby ("È solo biologia aliena!"). Alleati entro 
- 6m svuotano <strong>1 segmento Tenuta</strong>.</li>
- </ul>
- <p style="margin-top: 10px; font-style: italic;">
- "Non è magia. È semplicemente scienza che non comprendiamo ancora. Calma. Analizza. Sopravvivi."
- </p>
- </div>
- </div>
- 
- <!-- Equipaggiamento -->
- <div class="equipment-list">
- <h3>🎒 Equipaggiamento - Scienziato dell'Impossibile</h3>
- <ul>
- <li><strong>Borsa medica espansa</strong> (30+ strumenti + compartimento specimen)</li>
- <li><strong>Bisturi chirurgico</strong> (1d6 danni)</li>
- <li><strong>Revolver .38 migliorato</strong> (2d6, 6 colpi - ora sa usarlo decentemente)</li>
- <li><strong>Taccuino ricerca COMPLETO</strong> (centinaia pagine note Silver Hollow + teoremi)</li>
- <li><strong>Microscopio portatile avanzato</strong></li>
- <li><strong>Kit chimico espanso</strong> (reagenti rari inclusi)</li>
- <li><strong>Campioni Mythos</strong> (fiasche con sangue cultista, scaglie Serpente, tessuti non-morti)</li>
- <li><strong>Cloroformio</strong> (4 dosi)</li>
- <li><strong>Morfina</strong> (6 dosi)</li>
- <li><strong>Stimolanti sintetici</strong> (3 dosi - formula migliorata)</li>
- <li><strong>Dinamite</strong> (3 stick - "per emergenze")</li>
- <li><strong>Occhiali scuri protettivi</strong> (vs flash luminosi)</li>
- <li><strong>Guanti rinforzati</strong> (protezione acidi/tossine)</li>
- <li><strong>Libro anatomia + Tomo appunti Mythos</strong> (suo, scritto negli ultimi 3 mesi)</li>
- <li><strong>95 dollari</strong> (ha iniziato a farsi pagare meglio)</li>
- </ul>
- </div>
- 
- <!-- Cicatrici -->
- <div class="warning-box">
- <h3>💀 Cicatrici Mentali</h3>
- <ul style="font-size: 1.05em; line-height: 1.8;">
- <li><strong>Tenuta PERMANENTEMENTE a 4/10:</strong> 4 segmenti sempre pieni (paradigma razionalista 
- infranto per sempre)</li>
- <li><strong>Ossessione compulsiva:</strong> DEVE studiare ogni fenomeno soprannaturale - a volte 
- pericolosamente</li>
- <li><strong>Insonnia cronica:</strong> Dorme 3-4 ore/notte (mente troppo attiva). Sempre Fatica lieve 
- (non impatta meccaniche ma narrative sì)</li>
- <li><strong>Tic nervoso:</strong> Aggiusta occhiali freneticamente quando stressato</li>
- <li><strong>Dissociazione occasionale:</strong> A volte "si scollega" durante stress estremo (diventa 
- osservatore clinico freddamente distaccato - defense mechanism)</li>
- </ul>
- </div>
- 
- <!-- Connessioni -->
- <div class="connections-box">
- <h3>💬 Connessioni - Veterani</h3>
- 
- <p><strong>→ Jack Malone:</strong></p>
- <p style="margin-left: 20px; font-size: 0.95em;">
- Rispetto reciproco profondo. Jack apprezza che Doc non fa domande inutili. Doc apprezza che Jack non 
- giudica la sua ossessione con l'impossibile. Hanno condiviso whisky e silenzio dopo Silver Hollow - 
- a volte silenzio dice più di parole. Debito? Dimenticato. Questo è partnership.
- </p>
- 
- <p style="margin-top: 15px;"><strong>→ Sarah Blackwood:</strong></p>
- <p style="margin-left: 20px; font-size: 0.95em;">
- La loro dinamica è cambiata completamente. Lui ha ammesso limiti scienza. Lei ha ammesso valore analisi. 
- Ora collaborano - "Fede E ragione insieme." Lei prega mentre lui disseziona campioni Mythos. Strano? 
- Sì. Funziona? Assolutamente. A volte si chiede se sia innamorato. Ma emozioni sono complicate. Meglio 
- focus su lavoro.
- </p>
- </div>
- </div>
- 
- <!-- Footer -->
- <div class="footer">
- <p style="font-size: 0.9em;">
- <strong>Character Sheets - Gunsmoke & Dread</strong><br>
- Personaggi Pregenerati per Daggerheart™<br>
- Compatible with Daggerheart SRD 1.0
- </p>
- <p style="margin-top: 20px; font-size: 0.85em; color: var(--desert-sand);">
- <a href="../INDEX.html" style="color: var(--alien-green);" class="no-print">← Torna all'Index</a> | 
- <a href="../core/Quick-Reference.html" style="color: var(--alien-green);" class="no-print">Quick Reference →</a>
- </p>
- </div>
- 
- </div>
- 
- <!-- Print Script -->
- <script>
- function printCharacter(id) {
- // Hide all character sheets
- document.querySelectorAll('.character-sheet').forEach(sheet => {
- sheet.style.display = 'none';
- });
- 
- // Show only selected character
- document.getElementById(id).style.display = 'block';
- 
- // Print
- window.print();
- 
- // Restore all sheets
- document.querySelectorAll('.character-sheet').forEach(sheet => {
- sheet.style.display = 'block';
- });
- }
- </script>
- 
+    <div class="container">
+        
+        <!-- Header -->
+        <div class="hero" style="padding: 60px 40px;">
+            <h1 style="font-size: 3.5em;">👥 CHARACTER SHEETS</h1>
+            <p class="subtitle">Personaggi Pregenerati per Gunsmoke & Dread</p>
+            <p class="tagline">
+                3 Personaggi × 2 Livelli = 6 Opzioni Pronte all'Uso
+            </p>
+        </div>
+        
+        <!-- Print Buttons -->
+        <div class="content no-print" style="text-align: center; padding: 30px;">
+            <h2>🖨️ Stampa Character Sheets</h2>
+            <p style="font-size: 1.1em; margin-bottom: 20px;">
+                Clicca per stampare tutti i personaggi o seleziona individualmente:
+            </p>
+            <button class="print-button-char" onclick="window.print()">🖨️ Stampa Tutti (6 PG)</button>
+            <button class="print-button-char" onclick="printCharacter('jack-2')">Jack Liv. 2</button>
+            <button class="print-button-char" onclick="printCharacter('sarah-2')">Sarah Liv. 2</button>
+            <button class="print-button-char" onclick="printCharacter('doc-2')">Doc Liv. 2</button>
+            <button class="print-button-char" onclick="printCharacter('jack-5')">Jack Liv. 5</button>
+            <button class="print-button-char" onclick="printCharacter('sarah-5')">Sarah Liv. 5</button>
+            <button class="print-button-char" onclick="printCharacter('doc-5')">Doc Liv. 5</button>
+        </div>
+        
+        <!-- Introduzione -->
+        <div class="content no-print">
+            <section class="section">
+                <h2>📖 Come Usare Questi Personaggi</h2>
+                
+                <div class="info-box">
+                    <h3>🎭 Due Versioni per Ogni Personaggio</h3>
+                    <p style="font-size: 1.1em; line-height: 1.8;">
+                        Ogni personaggio è disponibile in <strong>due versioni</strong>:
+                    </p>
+                    <ul style="font-size: 1.05em; line-height: 1.7;">
+                        <li><strong>Livello 2:</strong> Per <strong>Volume I: Shadows in the Desert</strong> 
+                        (avventura entry-level, personaggi freschi)</li>
+                        <li><strong>Livello 3-5:</strong> Per <strong>Volume II: Where the Ocean Meets the Dust</strong> 
+                        (sequel, personaggi veterani con cicatrici Volume I)</li>
+                    </ul>
+                    <p style="margin-top: 15px; font-size: 1.05em;">
+                        <strong>Nota:</strong> Puoi usare versioni Livello 3-5 anche standalone se vuoi personaggi 
+                        più potenti. Le cicatrici/background riferimenti a Volume I sono opzionali.
+                    </p>
+                </div>
+                
+                <div class="tip-box">
+                    <h3>💡 Quick Start per Giocatori</h3>
+                    <ol style="font-size: 1.05em; line-height: 1.7;">
+                        <li><strong>Scegli personaggio:</strong> Leggi tagline e ruolo, scegli quello che ti ispira</li>
+                        <li><strong>Stampa scheda:</strong> Usa bottoni sopra per stampare solo il tuo PG</li>
+                        <li><strong>Leggi background:</strong> 5 minuti per familiarizzare con personalità</li>
+                        <li><strong>Leggi abilità:</strong> Concentrati su 2-3 abilità signature, rest learn playing</li>
+                        <li><strong>Inizia a giocare!</strong> Non serve conoscere tutto - impari giocando</li>
+                    </ol>
+                </div>
+                
+                <h3>👥 I Tre Personaggi</h3>
+                
+                <div class="grid-auto-wide">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">🔫 JACK MALONE</h3>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Ruolo:</strong> DPS / Controllo</p>
+                            <p><strong>Stile:</strong> Pistolero pragmatico, haunted dal passato</p>
+                            <p><strong>Best for:</strong> Giocatori che amano action, mobilità, damage</p>
+                            <p><strong>Signature:</strong> Marcare bersagli, colpi precisi, duelli</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">🙏 SARAH BLACKWOOD</h3>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Ruolo:</strong> Healer / Burst Damage vs Non-Morti</p>
+                            <p><strong>Stile:</strong> Predicatrice compassionevole, fede vs orrore</p>
+                            <p><strong>Best for:</strong> Giocatori che amano support, RP, complessità morale</p>
+                            <p><strong>Signature:</strong> Healing potente, scacciare non-morti, presenza sociale</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">🔬 DOC ARTEMIS WELLS</h3>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Ruolo:</strong> Healer / Utility / Analisi</p>
+                            <p><strong>Stile:</strong> Medico-inventore razionalista, scienza vs impossibile</p>
+                            <p><strong>Best for:</strong> Giocatori che amano problem-solving, gadget, supporto tattico</p>
+                            <p><strong>Signature:</strong> Medicina avanzata, analizzare nemici, gadget improvvisati</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div class="content">
+            
+            <!-- ============================================================ -->
+            <!--                    JACK MALONE - LIVELLO 2                  -->
+            <!-- ============================================================ -->
+            
+            <div class="character-sheet" id="jack-2">
+                <div class="char-header">
+                    <h2>🔫 JACK "GHOST" MALONE <span class="level-badge">Livello 2</span></h2>
+                    <p class="char-tagline">Il Pistolero Haunted - Cacciatore di Taglie Pragmatico</p>
+                </div>
+                
+                <!-- Stats Base -->
+                <div class="char-stats-grid">
+                    <div class="stat-box-char">
+                        <div class="stat-label">Hit Points</div>
+                        <div class="stat-value">28</div>
+                    </div>
+                    <div class="stat-box-char">
+                        <div class="stat-label">Armatura</div>
+                        <div class="stat-value">2</div>
+                        <small>(Duster rinforzato)</small>
+                    </div>
+                    <div class="stat-box-char">
+                        <div class="stat-label">Tenuta Mentale</div>
+                        <div class="stat-value">7/10</div>
+                        <small>(già segnato)</small>
+                    </div>
+                    <div class="stat-box-char">
+                        <div class="stat-label">Velocità</div>
+                        <div class="stat-value">9m</div>
+                    </div>
+                </div>
+                
+                <!-- Traits -->
+                <h3>📊 Tratti</h3>
+                <div class="traits-grid">
+                    <div class="trait-box">
+                        <h4>Agilità</h4>
+                        <div class="trait-value">+3</div>
+                        <small>Estrazione rapida, schivare</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Forza</h4>
+                        <div class="trait-value">+2</div>
+                        <small>Lottare, trascinare</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Finezza</h4>
+                        <div class="trait-value">+1</div>
+                        <small>Svuotare tasche, serrature</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Istinto</h4>
+                        <div class="trait-value">+4</div>
+                        <small><strong>PRIMARIO</strong> - Percezione, tracking, survival</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Presenza</h4>
+                        <div class="trait-value">+1</div>
+                        <small>Intimidazione pragmatica</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Conoscenza</h4>
+                        <div class="trait-value">+0</div>
+                        <small>Educazione limitata</small>
+                    </div>
+                </div>
+                
+                <!-- Background -->
+                <h3>📜 Background</h3>
+                <div class="info-box">
+                    <p style="font-size: 1.05em; line-height: 1.8;">
+                        Jack Malone ha 32 anni e 14 anni di pistola alle spalle. Ex-marshal del Kansas, ha lasciato 
+                        il distintivo dopo un <strong>incidente</strong> (preferisce non parlarne - coinvolge una 
+                        sparatoria che ha ucciso una bambina per errore). Ora lavora come cacciatore di taglie 
+                        freelance, accettando solo lavori che considera "giusti".
+                    </p>
+                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+                        <strong>Personalità:</strong> Pragmatico, silenzioso, haunted. Non crede in bene/male assoluto, 
+                        solo in "cosa si deve fare". Rispetta la competenza, odia i bulli. Beve whisky per dormire 
+                        (incubi ricorrenti). Ha un codice d'onore personale ferreo, ma non sempre coincide con la legge.
+                    </p>
+                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+                        <strong>Aspetto:</strong> Alto (1.85m), magro ma muscoloso. Capelli neri lunghi fino spalle, 
+                        sempre legati. Barba incolta di 3 giorni. Cicatrice sotto occhio sinistro. Occhi color ghiaccio 
+                        che sembrano guardare attraverso le persone. Duster grigio polvere, stetson nero, doppio revolver.
+                    </p>
+                </div>
+                
+                <!-- Abilità -->
+                <h3>⚔️ Abilità & Azioni</h3>
+                
+                <div class="abilities-section">
+                    <div class="ability-card">
+                        <h4>🎯 MARCA IL BERSAGLIO (Signature)</h4>
+                        <span class="ability-tag">Azione</span>
+                        <span class="ability-tag">1/Combattimento</span>
+                        <p>
+                            <strong>Effetto:</strong> Scegli una creatura che puoi vedere entro 18 metri. Fino alla 
+                            fine del combattimento, tu e gli alleati avete <strong>Vantaggio</strong> su tutti gli 
+                            attacchi contro quel bersaglio. Inoltre, quando qualcuno colpisce il bersaglio marcato, 
+                            aggiungi <strong>+1d6 danni</strong>.
+                        </p>
+                        <p style="margin-top: 10px; font-style: italic;">
+                            "L'ho nel mirino. Quando dico 'ora', sparate."
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>💨 ESTRAZIONE RAPIDA</h4>
+                        <span class="ability-tag">Reazione</span>
+                        <span class="ability-tag">2/Riposo</span>
+                        <p>
+                            <strong>Trigger:</strong> Un nemico ti attacca e tu non hai ancora agito nel turno.
+                        </p>
+                        <p>
+                            <strong>Effetto:</strong> Interrompi l'attacco. Fai immediatamente un attacco con revolver 
+                            contro l'attaccante con <strong>Vantaggio</strong>. Se lo colpisci, il suo attacco è 
+                            <strong>automaticamente mancato</strong>.
+                        </p>
+                        <p style="margin-top: 10px; font-style: italic;">
+                            "Più veloce di te." [BANG]
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>👁️ OCCHIO DEL CACCIATORE</h4>
+                        <span class="ability-tag">Azione Minor</span>
+                        <span class="ability-tag">Sempre</span>
+                        <p>
+                            <strong>Effetto:</strong> Fai un tiro <strong>Istinto + Percezione</strong> per studiare 
+                            una creatura, area, o oggetto. Con successo, il GM ti rivela 1-3 informazioni utili 
+                            (debolezze nemico, trappole nascoste, tracce, dettagli ambientali).
+                        </p>
+                        <p style="margin-top: 10px;">
+                            <strong>Speciale:</strong> Contro creature che hai già affrontato, hai automaticamente 
+                            Vantaggio e conosci le loro vulnerabilità.
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>🏃 MOVIMENTO TATTICO</h4>
+                        <span class="ability-tag">Passivo</span>
+                        <p>
+                            <strong>Effetto:</strong> Puoi muoverti attraverso spazi occupati da alleati senza 
+                            penalità. Quando ti muovi almeno 6 metri prima di attaccare, ottieni <strong>+2 danni</strong> 
+                            sull'attacco.
+                        </p>
+                        <p style="margin-top: 10px;">
+                            <strong>Inoltre:</strong> Terreno difficile (macerie, cespugli) costa solo +1 metro invece 
+                            di +1 metro per metro (più mobile in combattimento caotico).
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>🎲 COLPO FORTUNATO</h4>
+                        <span class="ability-tag">Spendi 1 Speranza</span>
+                        <span class="ability-tag">1/Turno</span>
+                        <p>
+                            <strong>Trigger:</strong> Fai un attacco a distanza con revolver o fucile.
+                        </p>
+                        <p>
+                            <strong>Effetto:</strong> Uno dei seguenti (scegli quando dichiari):
+                        </p>
+                        <ul>
+                            <li><strong>Colpo Disarmante:</strong> Su colpo, bersaglio lascia cadere arma (Agilità CD 14 nega)</li>
+                            <li><strong>Colpo alle Gambe:</strong> Bersaglio velocità dimezzata fino fine turno successivo</li>
+                            <li><strong>Colpo Intimidatorio:</strong> Bersaglio deve fare Presenza CD 14 o Spaventato</li>
+                            <li><strong>Rimbalzo:</strong> Colpisci bersaglio secondario adiacente per metà danni</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Equipaggiamento -->
+                <div class="equipment-list">
+                    <h3>🎒 Equipaggiamento</h3>
+                    <ul>
+                        <li><strong>Doppio Revolver Colt .45</strong> (2d6 danni, 6 colpi ciascuno)</li>
+                        <li><strong>Fucile Winchester</strong> (2d8 danni, 12 colpi, gittata lunga)</li>
+                        <li><strong>Coltello da caccia</strong> (1d6 danni)</li>
+                        <li><strong>Duster rinforzato</strong> (Armatura 2, tasche interne)</li>
+                        <li><strong>200 proiettili</strong> (assortiti .45 e Winchester)</li>
+                        <li><strong>Kit tracking</strong> (lente ingrandimento, metro, pennello)</li>
+                        <li><strong>Corda robusta</strong> (15 metri)</li>
+                        <li><strong>Manette</strong> (2 paia)</li>
+                        <li><strong>Flask whisky</strong> (mezzo pieno)</li>
+                        <li><strong>Poster wanted</strong> (target attuali - se rilevante per avventura)</li>
+                        <li><strong>Distintivo ex-marshal</strong> (nascosto, mai mostrato)</li>
+                        <li><strong>35 dollari</strong> in contanti</li>
+                    </ul>
+                </div>
+                
+                <!-- Connessioni -->
+                <div class="connections-box">
+                    <h3>💬 Connessioni con Altri PG</h3>
+                    
+                    <p><strong>→ Sarah Blackwood:</strong></p>
+                    <p style="margin-left: 20px; font-size: 0.95em;">
+                        Sarah ha provato più volte a "salvare la tua anima". Tu rispetti la sua fede anche se non 
+                        la condividi. Lei è l'unica persona che conosce della bambina morta. Ti fidi di lei più di 
+                        quanto vorresti ammettere.
+                    </p>
+                    
+                    <p style="margin-top: 15px;"><strong>→ Doc Artemis:</strong></p>
+                    <p style="margin-left: 20px; font-size: 0.95em;">
+                        Doc ha curato una ferita da coltello grave 6 mesi fa, salvandoti la vita. Gli devi ancora 
+                        il pagamento completo (50 dollari). Apprezzi la sua competenza pragmatica - non fa domande 
+                        inutili. A volte i suoi "esperimenti" ti rendono nervoso.
+                    </p>
+                </div>
+                
+                <!-- Note Interpretazione -->
+                <div class="tip-box">
+                    <h3>🎭 Note per l'Interpretazione</h3>
+                    <ul>
+                        <li><strong>Voce:</strong> Bassa, roca (da whisky e sigarette), poche parole</li>
+                        <li><strong>Postura:</strong> Rilassata ma pronta, mani sempre vicine alle fondine</li>
+                        <li><strong>Quirks:</strong> Controlla ambiente costantemente (occhi in movimento), pulisce 
+                        revolver quando nervoso</li>
+                        <li><strong>Frase signature:</strong> "Lavoro da fare." / "Non mi piace, ma si deve fare."</li>
+                        <li><strong>Trigger emotivo:</strong> Bambini in pericolo (diventa protettivo, anche irrazionale)</li>
+                        <li><strong>Arc suggerito:</strong> Imparare a perdonarsi, trovare nuova purpose oltre vendetta/espiazione</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- ============================================================ -->
+            <!--                  SARAH BLACKWOOD - LIVELLO 2                -->
+            <!-- ============================================================ -->
+            
+            <div class="character-sheet" id="sarah-2">
+                <div class="char-header">
+                    <h2>🙏 SARAH BLACKWOOD <span class="level-badge">Livello 2</span></h2>
+                    <p class="char-tagline">La Predicatrice Guerriera - Fede Contro le Tenebre</p>
+                </div>
+                
+                <!-- Stats Base -->
+                <div class="char-stats-grid">
+                    <div class="stat-box-char">
+                        <div class="stat-label">Hit Points</div>
+                        <div class="stat-value">24</div>
+                    </div>
+                    <div class="stat-box-char">
+                        <div class="stat-label">Armatura</div>
+                        <div class="stat-value">1</div>
+                        <small>(Abito rinforzato)</small>
+                    </div>
+                    <div class="stat-box-char">
+                        <div class="stat-label">Tenuta Mentale</div>
+                        <div class="stat-value">8/10</div>
+                        <small>(forte ma testata)</small>
+                    </div>
+                    <div class="stat-box-char">
+                        <div class="stat-label">Velocità</div>
+                        <div class="stat-value">9m</div>
+                    </div>
+                </div>
+                
+                <!-- Traits -->
+                <h3>📊 Tratti</h3>
+                <div class="traits-grid">
+                    <div class="trait-box">
+                        <h4>Agilità</h4>
+                        <div class="trait-value">+1</div>
+                        <small>Non abituata a combattere</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Forza</h4>
+                        <div class="trait-value">+0</div>
+                        <small>Costituzione fragile</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Finezza</h4>
+                        <div class="trait-value">+2</div>
+                        <small>Percezione emotiva, empatia</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Istinto</h4>
+                        <div class="trait-value">+3</div>
+                        <small>Intuizione spirituale</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Presenza</h4>
+                        <div class="trait-value">+4</div>
+                        <small><strong>PRIMARIA</strong> - Carisma, fede, predicazione</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Conoscenza</h4>
+                        <div class="trait-value">+2</div>
+                        <small>Teologia, storia, lingue</small>
+                    </div>
+                </div>
+                
+                <!-- Background -->
+                <h3>📜 Background</h3>
+                <div class="info-box">
+                    <p style="font-size: 1.05em; line-height: 1.8;">
+                        Sarah Blackwood ha 28 anni ed è predicatrice itinerante da 5. Figlia di un pastore 
+                        metodista del Massachusetts, ha abbandonato la chiesa tradizionale dopo una <strong>visione 
+                        divina</strong> (o così crede) che le mostrava "tenebre crescenti nel West". È venuta 
+                        ovest per "portare luce dove l'oscurità avanza".
+                    </p>
+                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+                        <strong>Personalità:</strong> Compassionevole ma non debole, pragmatica nella fede. Crede 
+                        fermamente in redenzione - <em>tutti</em> possono essere salvati, anche i peggiori. Ma quando 
+                        affronta il soprannaturale (non-morti, demoni), la compassione cede a ferocia protettiva. 
+                        Soffre di dubbi interni costanti - "La mia fede è abbastanza forte?"
+                    </p>
+                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+                        <strong>Aspetto:</strong> Altezza media (1.65m), corporatura esile. Capelli castani raccolti 
+                        in treccia singola. Occhi verdi intensi che trasmettono sincerità disarmante. Abito nero 
+                        semplice da predicatrice (gonna lunga, camicia alta colletto), croce d'argento al collo. 
+                        Porta sempre Bibbia consumata e derringer nascosto (non è ingenua).
+                    </p>
+                </div>
+                
+                <!-- Abilità -->
+                <h3>⚔️ Abilità & Azioni</h3>
+                
+                <div class="abilities-section">
+                    <div class="ability-card">
+                        <h4>✨ TOCCO CURATIVO (Signature)</h4>
+                        <span class="ability-tag">Azione</span>
+                        <span class="ability-tag">3/Riposo</span>
+                        <p>
+                            <strong>Effetto:</strong> Tocca una creatura (inclusa te stessa). Target recupera 
+                            <strong>2d8+4 HP</strong>. Inoltre, rimuovi 1 Condizione (Avvelenato, Spaventato, 
+                            Stordito, etc).
+                        </p>
+                        <p style="margin-top: 10px;">
+                            <strong>Speciale:</strong> Se il target ha 0 HP (morente), lo stabilizzi automaticamente 
+                            + recupera 1d8 HP.
+                        </p>
+                        <p style="margin-top: 10px; font-style: italic;">
+                            "La luce del Signore ti guarisce. Alzati."
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>⚡ SCACCIARE NON-MORTI</h4>
+                        <span class="ability-tag">Azione</span>
+                        <span class="ability-tag">2/Riposo</span>
+                        <p>
+                            <strong>Effetto:</strong> Alzi croce e citi preghiera. Tutti non-morti entro 
+                            <strong>9 metri</strong> (Close) devono fare <strong>Presenza CD 14</strong>:
+                        </p>
+                        <ul>
+                            <li><strong>Fallimento:</strong> Spaventato per 1 minuto (scappa, non può avvicinarsi)</li>
+                            <li><strong>Fallimento di 5+:</strong> Prende <strong>3d8 danni radianti</strong> + Spaventato</li>
+                            <li><strong>Non-morti minori (zombie, scheletri):</strong> Distrutti istantaneamente se 
+                            HP ≤ 20</li>
+                        </ul>
+                        <p style="margin-top: 10px; font-style: italic;">
+                            "Nel nome del Padre, torna nell'abisso!"
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>🛡️ BENEDIZIONE PROTETTIVA</h4>
+                        <span class="ability-tag">Azione Minor</span>
+                        <span class="ability-tag">1/Combattimento</span>
+                        <p>
+                            <strong>Effetto:</strong> Scegli fino a 3 alleati che puoi vedere entro 18 metri. 
+                            Per <strong>1 minuto</strong>, guadagnano:
+                        </p>
+                        <ul>
+                            <li><strong>+2 a tutti i tiri salvezza</strong></li>
+                            <li><strong>+1 Armatura</strong> (scudo spirituale)</li>
+                            <li><strong>Vantaggio vs Spaventato</strong></li>
+                        </ul>
+                        <p style="margin-top: 10px;">
+                            <strong>Concentrazione:</strong> Dura finché mantieni concentrazione (come incantesimi). 
+                            Se subisci danno, Costituzione CD 10 per mantenere.
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>💬 PAROLA DI CONFORTO</h4>
+                        <span class="ability-tag">Azione Minor</span>
+                        <span class="ability-tag">Sempre</span>
+                        <p>
+                            <strong>Effetto:</strong> Scegli 1 alleato che puoi vedere entro 18 metri. L'alleato 
+                            può immediatamente:
+                        </p>
+                        <ul>
+                            <li>Fare un <strong>tiro salvezza</strong> contro una condizione persistente, oppure</li>
+                            <li>Svuotare <strong>1 segmento Tenuta Mentale</strong>, oppure</li>
+                            <li>Guadagnare <strong>1d6 HP temporanei</strong> fino a fine combattimento</li>
+                        </ul>
+                        <p style="margin-top: 10px; font-style: italic;">
+                            "Non sei solo. Dio è con te. Io sono con te."
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>🔥 IRA DIVINA (Vs Male Manifesto)</h4>
+                        <span class="ability-tag">Spendi 1 Speranza</span>
+                        <span class="ability-tag">1/Combattimento</span>
+                        <p>
+                            <strong>Trigger:</strong> Attacchi una creatura chiaramente malvagia (non-morto, demone, 
+                            cultista, mostro che fa del male intenzionale).
+                        </p>
+                        <p>
+                            <strong>Effetto:</strong> Il tuo attacco infligge <strong>+3d6 danni radianti</strong> 
+                            aggiuntivi. Se il bersaglio cade a 0 HP con questo attacco, esplode in luce purificatrice 
+                            (tutti nemici adiacenti prendono 1d8 radianti).
+                        </p>
+                        <p style="margin-top: 10px; font-style: italic; color: var(--blood-red);">
+                            "Il Signore non tollera abominio!" [Occhi brillano dorati]
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Equipaggiamento -->
+                <div class="equipment-list">
+                    <h3>🎒 Equipaggiamento</h3>
+                    <ul>
+                        <li><strong>Derringer .41</strong> (1d8 danni, 2 colpi, nascosto in manica)</li>
+                        <li><strong>Croce d'argento benedetta</strong> (focus per abilità divine)</li>
+                        <li><strong>Bibbia familiare</strong> (consumata, annotazioni marginali)</li>
+                        <li><strong>Abito da predicatrice</strong> (Armatura 1, nero formale)</li>
+                        <li><strong>Kit medico base</strong> (bende, laudano, ago/filo)</li>
+                        <li><strong>Acqua santa</strong> (3 fiasche, 1d6 radianti vs non-morti)</li>
+                        <li><strong>Sale benedetto</strong> (2 sacchetti, linee di protezione)</li>
+                        <li><strong>Candele</strong> (6, per preghiere/rituali)</li>
+                        <li><strong>Diario personale</strong> (registra visioni, dubbi)</li>
+                        <li><strong>Rosario</strong> (di sua madre, portafortuna)</li>
+                        <li><strong>Vestito di ricambio</strong> (semplice ma pulito)</li>
+                        <li><strong>18 dollari</strong> (dona la maggior parte ai bisognosi)</li>
+                    </ul>
+                </div>
+                
+                <!-- Connessioni -->
+                <div class="connections-box">
+                    <h3>💬 Connessioni con Altri PG</h3>
+                    
+                    <p><strong>→ Jack Malone:</strong></p>
+                    <p style="margin-left: 20px; font-size: 0.95em;">
+                        Vedi il dolore dietro i suoi occhi. Ti ha confidato dell'incidente con la bambina - sei 
+                        l'unica persona viva che lo sa. Credi che possa trovare redenzione, ma lui resiste. Preghi 
+                        per lui ogni notte. Lui ti protegge più ferocemente di quanto ammetta.
+                    </p>
+                    
+                    <p style="margin-top: 15px;"><strong>→ Doc Artemis:</strong></p>
+                    <p style="margin-left: 20px; font-size: 0.95em;">
+                        Il suo razionalismo ti affascina e frustra. Avete dibattiti filosofici costanti (fede vs 
+                        scienza). Lui rispetta la tua abilità di healing anche se la considera "placebo avanzato". 
+                        Quando hai visto cose inspiegabili, Doc era lì - e anche LUI non sapeva spiegare. Un legame 
+                        silenzioso nasce da quell'esperienza condivisa.
+                    </p>
+                </div>
+                
+                <!-- Note Interpretazione -->
+                <div class="tip-box">
+                    <h3>🎭 Note per l'Interpretazione</h3>
+                    <ul>
+                        <li><strong>Voce:</strong> Calma, melodiosa (abituata a predicare), ma può diventare 
+                        ferrea/autoritaria quando necessario</li>
+                        <li><strong>Postura:</strong> Eretta, composta, mani spesso giunte o sulla croce</li>
+                        <li><strong>Quirks:</strong> Cita versetti biblici (anche fuori contesto quando nervosa), 
+                        mormora preghiere sottovoce in stress</li>
+                        <li><strong>Frase signature:</strong> "La fede ci guiderà." / "Anche tu puoi essere salvato."</li>
+                        <li><strong>Trigger emotivo:</strong> Innocenti sofferenti (diventa materna/protettiva), 
+                        blasfemia vs sua fede (si infuria)</li>
+                        <li><strong>Arc suggerito:</strong> Testare fede contro orrori cosmici - Dio esiste ancora 
+                        se Cthulhu è reale? Evolvere fede da dogmatica a personale</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- ============================================================ -->
+            <!--              DOC ARTEMIS WELLS - LIVELLO 2                  -->
+            <!-- ============================================================ -->
+            
+            <div class="character-sheet" id="doc-2">
+                <div class="char-header">
+                    <h2>🔬 DOC ARTEMIS WELLS <span class="level-badge">Livello 2</span></h2>
+                    <p class="char-tagline">Il Medico-Inventore - Scienza Contro l'Impossibile</p>
+                </div>
+                
+                <!-- Stats Base -->
+                <div class="char-stats-grid">
+                    <div class="stat-box-char">
+                        <div class="stat-label">Hit Points</div>
+                        <div class="stat-value">20</div>
+                        <small>(fragile ma ingegnoso)</small>
+                    </div>
+                    <div class="stat-box-char">
+                        <div class="stat-label">Armatura</div>
+                        <div class="stat-value">0</div>
+                        <small>(Vestiti normali)</small>
+                    </div>
+                    <div class="stat-box-char">
+                        <div class="stat-label">Tenuta Mentale</div>
+                        <div class="stat-value">5/10</div>
+                        <small>(razionalista vulnerabile)</small>
+                    </div>
+                    <div class="stat-box-char">
+                        <div class="stat-label">Velocità</div>
+                        <div class="stat-value">9m</div>
+                    </div>
+                </div>
+                
+                <!-- Traits -->
+                <h3>📊 Tratti</h3>
+                <div class="traits-grid">
+                    <div class="trait-box">
+                        <h4>Agilità</h4>
+                        <div class="trait-value">+2</div>
+                        <small>Mani precise (chirurgia)</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Forza</h4>
+                        <div class="trait-value">+0</div>
+                        <small>Fisicamente debole</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Finezza</h4>
+                        <div class="trait-value">+3</div>
+                        <small>Lavoro di precisione, gadget</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Istinto</h4>
+                        <div class="trait-value">+1</div>
+                        <small>Osservazione clinica</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Presenza</h4>
+                        <div class="trait-value">+1</div>
+                        <small>Bedside manner limitato</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Conoscenza</h4>
+                        <div class="trait-value">+4</div>
+                        <small><strong>PRIMARIA</strong> - Medicina, scienza, ingegneria</small>
+                    </div>
+                </div>
+                
+                <!-- Background -->
+                <h3>📜 Background</h3>
+                <div class="info-box">
+                    <p style="font-size: 1.05em; line-height: 1.8;">
+                        Artemis Wells ha 35 anni ed è medico da 12. Laureato Johns Hopkins (prestigioso!), ha 
+                        abbandonato carriera promettente a Filadelfia dopo uno <strong>scandalo</strong> (sperimentazione 
+                        non autorizzata su cadaveri - voleva sviluppare nuove tecniche chirurgiche). È venuto ovest 
+                        dove "nessuno fa domande" e può praticare medicina senza supervisione rigida.
+                    </p>
+                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+                        <strong>Personalità:</strong> Razionalista ferreo, scettico cronico. Tutto ha spiegazione 
+                        scientifica - o semplicemente non abbiamo ancora scoperto la scienza giusta. Curioso 
+                        compulsivo - quando vede qualcosa di inspiegabile, DEVE capire come funziona (anche se 
+                        pericoloso). Socialmente goffo ma non scortese - semplicemente non capisce sottigliezze emotive.
+                    </p>
+                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+                        <strong>Aspetto:</strong> Altezza media (1.75m), magro quasi emaciato (dimentica di mangiare 
+                        quando concentrato). Capelli neri con prime striature grigie, sempre in disordine. Occhiali 
+                        tondi spessi. Vestito nero da dottore sempre macchiato (sangue, inchiostro, sostanze chimiche). 
+                        Porta borsa medica oversize piena di strumenti improvvisati.
+                    </p>
+                </div>
+                
+                <!-- Abilità -->
+                <h3>⚔️ Abilità & Azioni</h3>
+                
+                <div class="abilities-section">
+                    <div class="ability-card">
+                        <h4>💉 CHIRURGIA DA CAMPO (Signature)</h4>
+                        <span class="ability-tag">Azione</span>
+                        <span class="ability-tag">3/Riposo</span>
+                        <p>
+                            <strong>Effetto:</strong> Scegli creatura adiacente (o te stesso). Fai tiro <strong>Finezza 
+                            + Conoscenza (Medicina)</strong> CD 12:
+                        </p>
+                        <ul>
+                            <li><strong>Successo:</strong> Target recupera <strong>2d8+4 HP</strong> + rimuovi 1 condizione 
+                            (Sanguinante, Avvelenato, etc)</li>
+                            <li><strong>Successo di 5+:</strong> Come sopra + rimuovi 2 condizioni</li>
+                            <li><strong>Fallimento:</strong> Recupera solo 1d8 HP (trattamento frettoloso)</li>
+                        </ul>
+                        <p style="margin-top: 10px;">
+                            <strong>Speciale:</strong> Funziona anche su creature a 0 HP (morenti). Stabilizzi + recuperano HP normalmente.
+                        </p>
+                        <p style="margin-top: 10px; font-style: italic;">
+                            "Tieni fermo. Questo farà male." [Estrae bisturi]
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>🔬 ANALISI ANATOMICA</h4>
+                        <span class="ability-tag">Azione Minor</span>
+                        <span class="ability-tag">Sempre</span>
+                        <p>
+                            <strong>Effetto:</strong> Studi una creatura che puoi vedere. Fai <strong>Conoscenza CD 12</strong>:
+                        </p>
+                        <ul>
+                            <li><strong>Successo:</strong> Apprendi 2 delle seguenti info:
+                                <ul style="margin-top: 5px;">
+                                    <li>HP attuali approssimativi (range)</li>
+                                    <li>1 vulnerabilità o resistenza</li>
+                                    <li>1 abilità speciale che possiede</li>
+                                    <li>Punto debole (dove colpire per max danno)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Successo di 5+:</strong> Apprendi tutte e 4 le informazioni</li>
+                        </ul>
+                        <p style="margin-top: 10px;">
+                            <strong>Inoltre:</strong> Per resto del combattimento, alleati hanno <strong>+2 danni</strong> 
+                            contro quella creatura (sfruttano l'analisi).
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>⚗️ GADGET IMPROVVISATO</h4>
+                        <span class="ability-tag">Azione</span>
+                        <span class="ability-tag">2/Riposo</span>
+                        <p>
+                            <strong>Effetto:</strong> Passi 1 azione frugando nella borsa e assembli gadget improvvisato. 
+                            Scegli uno:
+                        </p>
+                        <ul>
+                            <li><strong>Granata Flash:</strong> Lanci entro 12m. Tutti in 3m: Costituzione CD 13 o 
+                            Accecati 1 round</li>
+                            <li><strong>Fumogeno:</strong> Crei nube 6m raggio. Visibilità zero, dura 3 round</li>
+                            <li><strong>Acido Corrosivo:</strong> Fiasca che fa 3d6 danni acido + corrode armatura (-2 per 1 min)</li>
+                            <li><strong>Stimolante:</strong> Iniezione che dà a target +2 Agilità e Forza per 1 minuto, 
+                            poi 1 Fatica</li>
+                            <li><strong>Filo Esplosivo:</strong> Trappola che fa 4d6 danni fuoco in linea 9m quando attivato</li>
+                        </ul>
+                        <p style="margin-top: 10px;">
+                            <strong>Nota GM:</strong> Incoraggia creatività - se giocatore propone gadget ragionevole, 
+                            consenti con CD appropriata.
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>🧪 TOSSINE & ANTIDOTI</h4>
+                        <span class="ability-tag">Azione Minor</span>
+                        <span class="ability-tag">1/Riposo per tipo</span>
+                        <p>
+                            <strong>Effetto:</strong> Hai preparato 2 dosi di ciascuno:
+                        </p>
+                        <ul>
+                            <li><strong>Antidoto Universale:</strong> Rimuove veleno + cura 2d6 HP</li>
+                            <li><strong>Laudano Forte:</strong> Rimuove dolore (ignora 1 condizione negativa per 1 ora, 
+                            poi Svantaggio per 4h - dipendente)</li>
+                            <li><strong>Adrenalina Sintetica:</strong> Target si sveglia da incoscienza/sonno + ha 
+                            Vantaggio prossimo tiro</li>
+                        </ul>
+                        <p style="margin-top: 10px;">
+                            Somministrare = Azione Minor. Può essere su te stesso.
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>🎯 COLPO CHIRURGICO</h4>
+                        <span class="ability-tag">Spendi 1 Speranza</span>
+                        <span class="ability-tag">1/Turno</span>
+                        <p>
+                            <strong>Trigger:</strong> Fai attacco corpo a corpo con bisturi/scalpello.
+                        </p>
+                        <p>
+                            <strong>Effetto:</strong> Scegli punto preciso anatomia. Su colpo:
+                        </p>
+                        <ul>
+                            <li><strong>Tendine:</strong> Velocità dimezzata, Svantaggio Agilità per 1 minuto</li>
+                            <li><strong>Nervo:</strong> Braccio/gamba inutilizzabile per 1d4 round (Costituzione CD 14 nega)</li>
+                            <li><strong>Arteria:</strong> Sanguinamento (1d6 danni/round finché non riceve cure)</li>
+                            <li><strong>Occhi:</strong> Accecato temporaneamente (1d4 round)</li>
+                        </ul>
+                        <p style="margin-top: 10px;">
+                            <strong>Speciale:</strong> Non funziona su creature senza anatomia (elementali, ooze, etc).
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Equipaggiamento -->
+                <div class="equipment-list">
+                    <h3>🎒 Equipaggiamento</h3>
+                    <ul>
+                        <li><strong>Borsa medica completa</strong> (oversize, 20+ strumenti)</li>
+                        <li><strong>Bisturi chirurgico</strong> (1d6 danni, può fare Colpo Chirurgico)</li>
+                        <li><strong>Revolver .38</strong> (2d6 danni, 6 colpi - lo usa male, Svantaggio)</li>
+                        <li><strong>Taccuino ricerca</strong> (schizzi anatomici, note scientifiche)</li>
+                        <li><strong>Microscopio portatile</strong> (pieghevole, ingegnoso)</li>
+                        <li><strong>Kit chimico</strong> (reagenti vari, fiasche, provette)</li>
+                        <li><strong>Cloroformio</strong> (2 dosi - sedazione istantanea)</li>
+                        <li><strong>Morfina</strong> (4 dosi - antidolorifico potente)</li>
+                        <li><strong>Bende, aghi, filo chirurgico</strong> (scorta ampia)</li>
+                        <li><strong>Occhiali di ricambio</strong> (essenziali - quasi cieco senza)</li>
+                        <li><strong>Orologio da taschino</strong> (per timing operazioni)</li>
+                        <li><strong>Vestito nero dottore</strong> (sempre macchiato)</li>
+                        <li><strong>Libro anatomia</strong> (riferimento costante)</li>
+                        <li><strong>62 dollari</strong> (paga decente, spende poco)</li>
+                    </ul>
+                </div>
+                
+                <!-- Connessioni -->
+                <div class="connections-box">
+                    <h3>💬 Connessioni con Altri PG</h3>
+                    
+                    <p><strong>→ Jack Malone:</strong></p>
+                    <p style="margin-left: 20px; font-size: 0.95em;">
+                        Hai curato una ferita critica 6 mesi fa - è tecnicamente in debito (50 dollari non pagati, 
+                        ma non è per quello che sei qui). Rispetti la sua competenza pragmatica. I suoi "incubi" 
+                        ti affascinano da punto di vista psicologico - credi siano PTSD, non soprannaturale. Finora.
+                    </p>
+                    
+                    <p style="margin-top: 15px;"><strong>→ Sarah Blackwood:</strong></p>
+                    <p style="margin-left: 20px; font-size: 0.95em;">
+                        I vostri dibattiti fede-vs-scienza sono intensi ma rispettosi. Trovi le sue "guarigioni 
+                        miracolose" scientificamente affascinanti (effetto placebo + abilità medica inconscia?). 
+                        Quando hai visto cose inspiegabili insieme, per la prima volta nella vita hai dubitato del 
+                        razionalismo. Non l'hai ancora ammesso a lei. O a te stesso.
+                    </p>
+                </div>
+                
+                <!-- Note Interpretazione -->
+                <div class="tip-box">
+                    <h3>🎭 Note per l'Interpretazione</h3>
+                    <ul>
+                        <li><strong>Voce:</strong> Rapida, precisa, spesso interrompe con correzioni tecniche</li>
+                        <li><strong>Postura:</strong> Curva (da ore su libri/pazienti), occhiali sempre storto</li>
+                        <li><strong>Quirks:</strong> Prende note compulsive, mormora calcoli/osservazioni, 
+                        aggiusta occhiali nervosamente</li>
+                        <li><strong>Frase signature:</strong> "Affascinante..." / "C'è una spiegazione razionale 
+                        per questo." / "Lasciami esaminare."</li>
+                        <li><strong>Trigger emotivo:</strong> Malattie/ferite che non può curare (frustrazione), 
+                        fenomeni inspiegabili (ossessione)</li>
+                        <li><strong>Arc suggerito:</strong> Razionalismo messo alla prova da orrori cosmici - 
+                        accettare che alcune cose sfuggono alla scienza, o cercare ostinatamente di spiegarle comunque?</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- ============================================================ -->
+            <!--                    JACK MALONE - LIVELLO 5                  -->
+            <!-- ============================================================ -->
+            
+            <div class="character-sheet level-5" id="jack-5">
+                <div class="char-header level-5">
+                    <h2>🔫 JACK "GHOST" MALONE <span class="level-badge" style="background: var(--alien-green);">Livello 5</span></h2>
+                    <p class="char-tagline">Il Pistolero Veterano - Sopravvissuto al Serpente Sotterraneo</p>
+                </div>
+                
+                <!-- Stats Base -->
+                <div class="char-stats-grid">
+                    <div class="stat-box-char">
+                        <div class="stat-label">Hit Points</div>
+                        <div class="stat-value">42</div>
+                        <small>(+14 da livello 2)</small>
+                    </div>
+                    <div class="stat-box-char">
+                        <div class="stat-label">Armatura</div>
+                        <div class="stat-value">3</div>
+                        <small>(Duster rinforzato migliorato)</small>
+                    </div>
+                    <div class="stat-box-char">
+                        <div class="stat-label">Tenuta Mentale</div>
+                        <div class="stat-value">6/10</div>
+                        <small>(PERMANENTE - cicatrice Silver Hollow)</small>
+                    </div>
+                    <div class="stat-box-char">
+                        <div class="stat-label">Velocità</div>
+                        <div class="stat-value">10.5m</div>
+                        <small>(+1.5m da esperienza)</small>
+                    </div>
+                </div>
+                
+                <!-- Traits -->
+                <h3>📊 Tratti</h3>
+                <div class="traits-grid">
+                    <div class="trait-box">
+                        <h4>Agilità</h4>
+                        <div class="trait-value">+4</div>
+                        <small>↑ Riflessi perfezionati</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Forza</h4>
+                        <div class="trait-value">+3</div>
+                        <small>↑ Temprato dalle battaglie</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Finezza</h4>
+                        <div class="trait-value">+2</div>
+                        <small>↑ Esperienza tracking</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Istinto</h4>
+                        <div class="trait-value">+5</div>
+                        <small><strong>PRIMARIO</strong> ↑ Istinto del sopravvissuto</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Presenza</h4>
+                        <div class="trait-value">+2</div>
+                        <small>↑ Aura di veterano</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Conoscenza</h4>
+                        <div class="trait-value">+1</div>
+                        <small>↑ Ha visto troppo</small>
+                    </div>
+                </div>
+                
+                <!-- Background -->
+                <h3>📜 Background - 3 Mesi Dopo Silver Hollow</h3>
+                <div class="info-box" style="background: rgba(0, 51, 102, 0.1); border-color: var(--ocean-blue);">
+                    <p style="font-size: 1.05em; line-height: 1.8;">
+                        Sono passati 3 mesi da Silver Hollow. Jack ha <strong>ucciso Jeremiah Caldwell</strong>, 
+                        visto morti risorgere, e affrontato il Serpente Sotterraneo. È sopravvissuto, ma non 
+                        <em>illeso</em>. Gli incubi sono peggiorati - ora vede non solo la bambina, ma anche i 
+                        cultisti che si trasformavano, Jeremiah che rideva mentre moriva.
+                    </p>
+                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+                        <strong>Cambiamenti:</strong> È più silenzioso di prima (cosa che non credeva possibile). 
+                        Beve più whisky. Ma paradossalmente è anche più <em>efficace</em> - avere affrontato 
+                        l'impossibile lo ha reso meno esitante. "Se non-morti esistono, allora tutto è possibile. 
+                        Adattati o muori." Ha sviluppato una pragmaticità ancora più ferrea.
+                    </p>
+                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+                        <strong>Cicatrice fisica:</strong> Morso del cultista trasformato sulla spalla sinistra. 
+                        Non guarisce bene - a volte pulsa quando il soprannaturale è vicino (Spider-Sense inquietante).
+                    </p>
+                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+                        <strong>Perché è qui:</strong> Quando Blackwood lo ha contattato per i geometri scomparsi, 
+                        ha accettato immediatamente. Preferisce affrontare orrori nel deserto che stare fermo con 
+                        i suoi pensieri. E se c'è qualcosa là fuori peggio del Serpente... vuole fermarlo prima che 
+                        arrivi in città.
+                    </p>
+                </div>
+                
+                <!-- Abilità (tutte quelle di prima + nuove) -->
+                <h3>⚔️ Abilità & Azioni</h3>
+                
+                <div class="abilities-section">
+                    <!-- Abilità Livello 2 (mantenute) -->
+                    <div class="ability-card">
+                        <h4>🎯 MARCA IL BERSAGLIO (Signature - Potenziata)</h4>
+                        <span class="ability-tag">Azione</span>
+                        <span class="ability-tag">2/Combattimento</span>
+                        <span class="ability-tag" style="background: var(--alien-green); color: black;">UPGRADED</span>
+                        <p>
+                            <strong>Effetto:</strong> Scegli creatura entro 30 metri (↑ da 18m). Fino fine combattimento, 
+                            tu e alleati avete <strong>Vantaggio</strong> su attacchi contro bersaglio + <strong>+2d6 
+                            danni</strong> (↑ da 1d6) quando colpito.
+                        </p>
+                        <p style="margin-top: 10px;">
+                            <strong>NUOVO:</strong> Puoi marcare 2 bersagli simultaneamente (1 uso per ciascuno).
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>💨 ESTRAZIONE RAPIDA (Mantenuta)</h4>
+                        <span class="ability-tag">Reazione</span>
+                        <span class="ability-tag">3/Riposo</span>
+                        <p>
+                            [Come livello 2, ma 3 usi invece di 2]
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>👁️ OCCHIO DEL CACCIATORE (Potenziato)</h4>
+                        <span class="ability-tag">Azione Minor</span>
+                        <span class="ability-tag">Sempre</span>
+                        <span class="ability-tag" style="background: var(--alien-green); color: black;">UPGRADED</span>
+                        <p>
+                            <strong>Effetto:</strong> Come prima + <strong>NUOVO:</strong>
+                        </p>
+                        <ul>
+                            <li>Puoi percepire <strong>presenza soprannaturale</strong> entro 18m (Spider-Sense - cicatrice pulsa)</li>
+                            <li>Automaticamente rilevi <strong>illusioni/inganni</strong> con Istinto CD 14</li>
+                            <li>Contro creature Mythos: rivela anche <strong>vero nome</strong> o <strong>debolezza rituale</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>🏃 MOVIMENTO TATTICO (Mantenuto)</h4>
+                        <span class="ability-tag">Passivo</span>
+                        <p>[Come livello 2, unchanged]</p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>🎲 COLPO FORTUNATO (Mantenuto)</h4>
+                        <span class="ability-tag">Spendi 1 Speranza</span>
+                        <p>[Come livello 2, unchanged]</p>
+                    </div>
+                    
+                    <!-- NUOVE ABILITÀ LIVELLO 5 -->
+                    <div class="ability-card" style="border: 3px solid var(--alien-green);">
+                        <h4>💀 SOPRAVVISSUTO ALL'IMPOSSIBILE (NUOVA)</h4>
+                        <span class="ability-tag" style="background: var(--alien-green); color: black;">Livello 5</span>
+                        <span class="ability-tag">Passivo</span>
+                        <p>
+                            <strong>Effetto:</strong> Avendo affrontato il Serpente Sotterraneo, sei temprato contro 
+                            l'orrore cosmico:
+                        </p>
+                        <ul>
+                            <li><strong>Vantaggio</strong> su tutti tiri salvezza <strong>Tenuta Mentale</strong></li>
+                            <li>Quando riempi Tenuta, riduci segmenti di <strong>-2</strong> (min 1)</li>
+                            <li>Se vedi creatura che hai già affrontato (tipo simile), <strong>immune</strong> a stress 
+                            da quella visione</li>
+                            <li><strong>Inoltre:</strong> Alleati entro 6m da te hanno <strong>+2</strong> ai loro tiri 
+                            Tenuta (la tua calma li stabilizza)</li>
+                        </ul>
+                        <p style="margin-top: 10px; font-style: italic; color: var(--ocean-blue);">
+                            "Ho visto peggio. Molto peggio."
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card" style="border: 3px solid var(--alien-green);">
+                        <h4>⚡ RAFFICA MORTALE (NUOVA)</h4>
+                        <span class="ability-tag" style="background: var(--alien-green); color: black;">Livello 5</span>
+                        <span class="ability-tag">Azione</span>
+                        <span class="ability-tag">1/Riposo</span>
+                        <p>
+                            <strong>Effetto:</strong> Spari un'intera camera di revolver in sequenza fulminea. 
+                            Scegli fino a <strong>6 bersagli</strong> diversi entro gittata:
+                        </p>
+                        <ul>
+                            <li>Fai 1 attacco contro ciascuno (tiri separati)</li>
+                            <li>Se colpisci, <strong>1d10+Agilità</strong> danni (invece di 2d6 normale)</li>
+                            <li><strong>Critico (doppio 12):</strong> Bersaglio è anche <strong>Stordito</strong> 1 round</li>
+                        </ul>
+                        <p style="margin-top: 10px;">
+                            <strong>Costo:</strong> Revolver è <strong>vuoto</strong> (richiede ricarica dopo - 1 Azione). 
+                            Ma vale.
+                        </p>
+                        <p style="margin-top: 10px; font-style: italic; color: var(--blood-red);">
+                            [Estrae entrambi i revolver] "Dance." [BANG BANG BANG BANG BANG BANG]
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card" style="border: 3px solid var(--alien-green);">
+                        <h4>🎯 COLPO ESECUTORE (NUOVA)</h4>
+                        <span class="ability-tag" style="background: var(--alien-green); color: black;">Livello 5</span>
+                        <span class="ability-tag">Spendi 2 Speranza</span>
+                        <span class="ability-tag">1/Combattimento</span>
+                        <p>
+                            <strong>Trigger:</strong> Attacchi creatura che è sotto 50% HP.
+                        </p>
+                        <p>
+                            <strong>Effetto:</strong> Tiri <strong>3d12</strong> invece di 2d12 per attacco (prendi 2 
+                            più alti). Se colpisci:
+                        </p>
+                        <ul>
+                            <li>Danni <strong>automaticamente massimi</strong> (non tirare - usa valore max dadi)</li>
+                            <li>Se questo porta bersaglio a <strong>0 HP</strong>, è <strong>ucciso istantaneamente</strong> 
+                            (no tiri morte, no resurrezione facile)</li>
+                            <li>Se bersaglio sopravvive, è <strong>Spaventato</strong> di te (Presenza CD 16 nega)</li>
+                        </ul>
+                        <p style="margin-top: 10px; font-style: italic; color: var(--blood-red);">
+                            "Niente personale. Lavoro da fare." [Colpo perfetto tra gli occhi]
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Equipaggiamento -->
+                <div class="equipment-list">
+                    <h3>🎒 Equipaggiamento - Veterano</h3>
+                    <ul>
+                        <li><strong>Doppio Revolver Colt .45 Personalizzati</strong> (2d6 danni, impugnature incise, 
+                        manutentati perfettamente)</li>
+                        <li><strong>Fucile Winchester Modificato</strong> (2d8 danni, mirino migliorato, 15 colpi)</li>
+                        <li><strong>Coltello argento</strong> (1d6+2 danni, efficace vs licantropi se esistono)</li>
+                        <li><strong>Duster rinforzato superiore</strong> (Armatura 3, piastre sottili cucite dentro)</li>
+                        <li><strong>300 proiettili</strong> + <strong>20 proiettili argento</strong> (costosi, solo emergenze)</li>
+                        <li><strong>Kit tracking professionale</strong> (lente, metro, pennello, calchi impronte)</li>
+                        <li><strong>Corda robusta</strong> (20 metri, grappling hook)</li>
+                        <li><strong>Manette</strong> (3 paia)</li>
+                        <li><strong>Flask whisky</strong> (pieno - serve più di prima)</li>
+                        <li><strong>Amuleto protezione Ute</strong> (regalo da Aquila che Vede Lontano - +1 vs magia)</li>
+                        <li><strong>Poster wanted aggiornati</strong></li>
+                        <li><strong>Diario Silver Hollow</strong> (note su cosa è successo - nessuno crederebbe)</li>
+                        <li><strong>120 dollari</strong> (risparmio da ultimi lavori)</li>
+                    </ul>
+                </div>
+                
+                <!-- Cicatrici -->
+                <div class="warning-box">
+                    <h3>💀 Cicatrici & Conseguenze Permanenti</h3>
+                    <ul style="font-size: 1.05em; line-height: 1.8;">
+                        <li><strong>Tenuta Mentale permanentemente ridotta:</strong> Max 10 ma PARTE da 6/10 (6 segmenti 
+                        sempre pieni = "visto troppo")</li>
+                        <li><strong>Morso cultista:</strong> Cicatrice sulla spalla che pulsa vicino al soprannaturale 
+                        (utile ma inquietante)</li>
+                        <li><strong>Incubi cronici:</strong> Ogni notte. Non recupera benefici pieni da riposo lungo 
+                        (conta come 3/4 riposo)</li>
+                        <li><strong>Dipendenza whisky lieve:</strong> Deve bere ogni sera o Svantaggio sociale il giorno 
+                        dopo (withdrawal)</li>
+                        <li><strong>Trigger PTSD:</strong> Culti serpentini, trasformazioni corporee = deve fare Istinto 
+                        CD 12 o momentaneamente paralizzato (flashback 1 round)</li>
+                    </ul>
+                </div>
+                
+                <!-- Connessioni -->
+                <div class="connections-box">
+                    <h3>💬 Connessioni - Veterani Insieme</h3>
+                    
+                    <p><strong>→ Sarah Blackwood:</strong></p>
+                    <p style="margin-left: 20px; font-size: 0.95em;">
+                        Lei ha visto tutto a Silver Hollow. Ha pregato su corpi di cultisti che tu hai ucciso. Ha curato 
+                        il morso che ancora brucia. Il legame ora è più profondo - siete sopravvissuti all'inferno insieme. 
+                        A volte preghi con lei, anche se non credi. Il rituale conforta.
+                    </p>
+                    
+                    <p style="margin-top: 15px;"><strong>→ Doc Artemis:</strong></p>
+                    <p style="margin-left: 20px; font-size: 0.95em;">
+                        Ha cercato di spiegare scientificamente il Serpente per settimane dopo Silver Hollow. Hai assistito 
+                        al suo breakdown quando ha ammesso "non posso spiegare questo". Ora rispetti la sua abilità di 
+                        adattamento - ha accettato l'impossibile e continua comunque. Il debito dei 50 dollari? Dimenticato. 
+                        Questo va oltre i soldi.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- ============================================================ -->
+            <!--                  SARAH BLACKWOOD - LIVELLO 5                -->
+            <!-- ============================================================ -->
+            
+            <div class="character-sheet level-5" id="sarah-5">
+                <div class="char-header level-5">
+                    <h2>🙏 SARAH BLACKWOOD <span class="level-badge" style="background: var(--alien-green);">Livello 5</span></h2>
+                    <p class="char-tagline">La Predicatrice Testata - Fede Temprata dal Fuoco</p>
+                </div>
+                
+                <!-- Stats Base -->
+                <div class="char-stats-grid">
+                    <div class="stat-box-char">
+                        <div class="stat-label">Hit Points</div>
+                        <div class="stat-value">36</div>
+                        <small>(+12 da livello 2)</small>
+                    </div>
+                    <div class="stat-box-char">
+                        <div class="stat-label">Armatura</div>
+                        <div class="stat-value">2</div>
+                        <small>(Abito + protezione divina)</small>
+                    </div>
+                    <div class="stat-box-char">
+                        <div class="stat-label">Tenuta Mentale</div>
+                        <div class="stat-value">8/10</div>
+                        <small>(Forte ma permanentemente segnata)</small>
+                    </div>
+                    <div class="stat-box-char">
+                        <div class="stat-label">Velocità</div>
+                        <div class="stat-value">9m</div>
+                    </div>
+                </div>
+                
+                <!-- Traits -->
+                <h3>📊 Tratti</h3>
+                <div class="traits-grid">
+                    <div class="trait-box">
+                        <h4>Agilità</h4>
+                        <div class="trait-value">+2</div>
+                        <small>↑ Più agile sotto pressione</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Forza</h4>
+                        <div class="trait-value">+1</div>
+                        <small>↑ Temprata spiritualmente</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Finezza</h4>
+                        <div class="trait-value">+3</div>
+                        <small>↑ Empatia più profonda</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Istinto</h4>
+                        <div class="trait-value">+4</div>
+                        <small>↑ Intuizione spirituale potenziata</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Presenza</h4>
+                        <div class="trait-value">+5</div>
+                        <small><strong>PRIMARIA</strong> ↑ Aura di fede incrollabile</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Conoscenza</h4>
+                        <div class="trait-value">+3</div>
+                        <small>↑ Studio intensivo post-Silver Hollow</small>
+                    </div>
+                </div>
+                
+                <!-- Background -->
+                <h3>📜 Background - La Fede Testata</h3>
+                <div class="info-box" style="background: rgba(0, 51, 102, 0.1); border-color: var(--ocean-blue);">
+                    <p style="font-size: 1.05em; line-height: 1.8;">
+                        Silver Hollow ha quasi spezzato Sarah. Vedere Jeremiah - un <em>pastore</em>, un uomo di Dio - 
+                        trasformato in mostro... pregare su corpi di cultisti che credevano in un dio-serpente alieno... 
+                        affrontare non-morti che non dovrebbero esistere... Per 2 settimane dopo, non riusciva a pregare. 
+                        Le parole morivano in gola.
+                    </p>
+                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+                        <strong>La Svolta:</strong> Una notte, al terzo whisky (lei! che prima non beveva!), ha avuto una 
+                        realizzazione: "Se il male così profondo esiste, allora Dio DEVE esistere per bilanciarlo. Il 
+                        Serpente conferma Dio, non lo nega." La fede è tornata - ma cambiata. Più personale, meno dogmatica, 
+                        fieramente protettiva.
+                    </p>
+                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+                        <strong>Cambiamenti:</strong> Meno ingenua, più pragmatica. Ha imparato a sparare meglio (Jack le 
+                        dà lezioni). Porta derringer ora senza vergogna - "Dio aiuta chi si aiuta." Non cerca più di 
+                        redimere <em>tutti</em> - alcuni sono oltre la salvezza. Ma per chi vale la pena? Combatte 
+                        ferocemente.
+                    </p>
+                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+                        <strong>Perché è qui:</strong> Quando i geometri sono scomparsi nell'Occhio Asciutto, ha sentito... 
+                        qualcosa. Un richiamo spirituale. "Il male cresce là. Devo fermarlo." Questa volta non è naïve - 
+                        sa che potrebbe morire. Ma la fede richiede sacrificio.
+                    </p>
+                </div>
+                
+                <!-- Abilità -->
+                <h3>⚔️ Abilità & Azioni</h3>
+                
+                <div class="abilities-section">
+                    <!-- Abilità base potenziate -->
+                    <div class="ability-card">
+                        <h4>✨ TOCCO CURATIVO (Signature - Potenziato)</h4>
+                        <span class="ability-tag">Azione</span>
+                        <span class="ability-tag">4/Riposo</span>
+                        <span class="ability-tag" style="background: var(--alien-green); color: black;">UPGRADED</span>
+                        <p>
+                            <strong>Effetto:</strong> Target recupera <strong>3d8+6 HP</strong> (↑ da 2d8+4) + rimuovi 
+                            <strong>2 Condizioni</strong> (↑ da 1).
+                        </p>
+                        <p style="margin-top: 10px;">
+                            <strong>NUOVO:</strong> Puoi usare su target entro <strong>6 metri</strong> (non richiede tocco 
+                            fisico - proietti luce curativa).
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>⚡ SCACCIARE NON-MORTI (Potenziato)</h4>
+                        <span class="ability-tag">Azione</span>
+                        <span class="ability-tag">3/Riposo</span>
+                        <span class="ability-tag" style="background: var(--alien-green); color: black;">UPGRADED</span>
+                        <p>
+                            <strong>Effetto:</strong> Raggio aumentato a <strong>15 metri</strong> (↑ da 9m). Presenza CD 
+                            <strong>16</strong> (↑ da 14). Danni <strong>4d8 radianti</strong> (↑ da 3d8).
+                        </p>
+                        <p style="margin-top: 10px;">
+                            <strong>NUOVO:</strong> Funziona anche su <strong>demoni</strong> e <strong>possessioni</strong>. 
+                            Non-morti minori distrutti se HP ≤ <strong>35</strong> (↑ da 20).
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>🛡️ BENEDIZIONE PROTETTIVA (Potenziata)</h4>
+                        <span class="ability-tag">Azione Minor</span>
+                        <span class="ability-tag">2/Combattimento</span>
+                        <span class="ability-tag" style="background: var(--alien-green); color: black;">UPGRADED</span>
+                        <p>
+                            <strong>Effetto:</strong> Fino a <strong>4 alleati</strong> (↑ da 3) entro <strong>24 metri</strong> 
+                            (↑ da 18m):
+                        </p>
+                        <ul>
+                            <li><strong>+3 tiri salvezza</strong> (↑ da +2)</li>
+                            <li><strong>+2 Armatura</strong> (↑ da +1)</li>
+                            <li><strong>Vantaggio vs Spaventato E Charme</strong></li>
+                            <li><strong>NUOVO: Immunità a possessione</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>💬 PAROLA DI CONFORTO (Mantenuta)</h4>
+                        <span class="ability-tag">Azione Minor</span>
+                        <p>[Come livello 2, unchanged]</p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>🔥 IRA DIVINA (Potenziata)</h4>
+                        <span class="ability-tag">Spendi 1 Speranza</span>
+                        <span class="ability-tag">2/Combattimento</span>
+                        <span class="ability-tag" style="background: var(--alien-green); color: black;">UPGRADED</span>
+                        <p>
+                            <strong>Danni:</strong> <strong>4d6 radianti</strong> (↑ da 3d6). Esplosione: <strong>2d8 
+                            radianti</strong> (↑ da 1d8) a tutti nemici entro 3 metri.
+                        </p>
+                    </div>
+                    
+                    <!-- NUOVE ABILITÀ -->
+                    <div class="ability-card" style="border: 3px solid var(--alien-green);">
+                        <h4>🕊️ RESURREZIONE MINORE (NUOVA)</h4>
+                        <span class="ability-tag" style="background: var(--alien-green); color: black;">Livello 5</span>
+                        <span class="ability-tag">Azione (10 minuti)</span>
+                        <span class="ability-tag">1/Settimana</span>
+                        <p>
+                            <strong>Effetto:</strong> Puoi riportare in vita creatura morta da <strong>≤ 1 ora</strong>:
+                        </p>
+                        <ul>
+                            <li>Richiede <strong>10 minuti preghiera ininterrotta</strong> toccando il corpo</li>
+                            <li>Target ritorna con <strong>1 HP</strong> + <strong>2 Fatica</strong> (esperienza traumatica)</li>
+                            <li><strong>Non funziona</strong> se: morte per vecchiaia, corpo distrutto completamente, 
+                            anima intrappolata/consumata</li>
+                            <li><strong>Costo:</strong> Tu subisci <strong>2d8 danni</strong> + riempi <strong>3 segmenti 
+                            Tenuta</strong> (condividi morte)</li>
+                        </ul>
+                        <p style="margin-top: 10px; font-style: italic; color: var(--blood-red);">
+                            "Non oggi. Dio non ti prende oggi." [Mani brillano dorato intenso]
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card" style="border: 3px solid var(--alien-green);">
+                        <h4>⭐ AURA DI FEDE (NUOVA)</h4>
+                        <span class="ability-tag" style="background: var(--alien-green); color: black;">Livello 5</span>
+                        <span class="ability-tag">Passivo</span>
+                        <span class="ability-tag">Toggle On/Off</span>
+                        <p>
+                            <strong>Effetto:</strong> Puoi attivare/disattivare aura divina visibile (luce dorata):
+                        </p>
+                        <ul>
+                            <li><strong>Alleati entro 6 metri:</strong>
+                                <ul>
+                                    <li>+1d6 HP recuperati quando curati</li>
+                                    <li>Vantaggio primo tiro salvezza ogni turno</li>
+                                    <li>Immune a paura da creature ≤ tuo livello</li>
+                                </ul>
+                            </li>
+                            <li><strong>Nemici non-morti/demoni entro 6 metri:</strong>
+                                <ul>
+                                    <li>Svantaggio su attacchi</li>
+                                    <li>-1d6 ai danni inflitti</li>
+                                    <li>Costituzione CD 13 ogni turno o 1d6 danni radianti</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p style="margin-top: 10px;">
+                            <strong>Costo:</strong> Mentre attiva, <strong>-3m velocità</strong> (concentrazione richiesta). 
+                            Interrotta se Stordita/Incosciente.
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card" style="border: 3px solid var(--alien-green);">
+                        <h4>📿 ESORCISMO (NUOVA)</h4>
+                        <span class="ability-tag" style="background: var(--alien-green); color: black;">Livello 5</span>
+                        <span class="ability-tag">Azione (1 minuto)</span>
+                        <span class="ability-tag">1/Riposo</span>
+                        <p>
+                            <strong>Effetto:</strong> Esorcizzi possessione, maledizione, o controllo mentale:
+                        </p>
+                        <ul>
+                            <li>Contested: tuo <strong>Presenza</strong> vs <strong>Presenza entità</strong></li>
+                            <li><strong>Successo:</strong> Possessione/controllo <strong>terminato</strong>. Entità espulsa, 
+                            prende 4d10 danni radianti</li>
+                            <li><strong>Fallimento:</strong> Nessun effetto, ma puoi ritentare dopo 10 minuti</li>
+                            <li><strong>Fallimento critico:</strong> Entità contrattacca - tu prendi 2d10 psichici + 2 Tenuta</li>
+                        </ul>
+                        <p style="margin-top: 10px;">
+                            <strong>Durata:</strong> Richiede 1 minuto preghiera/rituabile ininterrotto. Se interrotta, 
+                            fallisce automaticamente.
+                        </p>
+                        <p style="margin-top: 10px; font-style: italic;">
+                            "Nel nome del Padre, del Figlio, e dello Spirito Santo - VATTENE!" [Croce brucia]
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Equipaggiamento -->
+                <div class="equipment-list">
+                    <h3>🎒 Equipaggiamento - Veterana</h3>
+                    <ul>
+                        <li><strong>Derringer .41</strong> (1d8 danni, 2 colpi, ora lo usa competentemente)</li>
+                        <li><strong>Revolver .38</strong> (2d6 danni, 6 colpi - nuovo, regalo da Jack)</li>
+                        <li><strong>Croce d'argento benedetta potenziata</strong> (focus +2, brucia non-morti al tocco)</li>
+                        <li><strong>Bibbia familiare consumata</strong> (pagine Silver Hollow macchiate sangue cultista)</li>
+                        <li><strong>Abito predicatrice rinforzato</strong> (Armatura 2 - piastre sottili cucite da Doc)</li>
+                        <li><strong>Kit medico avanzato</strong> (include strumenti chirurgici base)</li>
+                        <li><strong>Acqua santa concentrata</strong> (5 fiasche, 2d6 radianti vs non-morti)</li>
+                        <li><strong>Sale benedetto</strong> (4 sacchetti)</li>
+                        <li><strong>Incenso sacro</strong> (per rituali esorcismo)</li>
+                        <li><strong>Candele benedette</strong> (12)</li>
+                        <li><strong>Rosario materno</strong> (ora anche amuleto protezione +1 vs possessione)</li>
+                        <li><strong>Diario spirituale</strong> (registra visioni, dubbi, epifanie post-Silver Hollow)</li>
+                        <li><strong>Libro preghiere esorcismo</strong> (studiato intensamente 3 mesi)</li>
+                        <li><strong>45 dollari</strong> (dona meno ora - ha capito che anche lei ha bisogno risorse)</li>
+                    </ul>
+                </div>
+                
+                <!-- Cicatrici -->
+                <div class="warning-box">
+                    <h3>💀 Cicatrici Spirituali</h3>
+                    <ul style="font-size: 1.05em; line-height: 1.8;">
+                        <li><strong>Crisi fede superata:</strong> Fede ora più personale ma anche più fragile - dubbio 
+                        permanente sottostante</li>
+                        <li><strong>Tenuta permanentemente a 8/10:</strong> 2 segmenti sempre pieni (aver visto Jeremiah 
+                        trasformato)</li>
+                        <li><strong>Incubi ricorrenti:</strong> Sogna Jeremiah che predica con voce serpentina</li>
+                        <li><strong>Mani tremano:</strong> Quando usa armi (conflitto interno violenza/fede) - primo attacco 
+                        combattimento ha Svantaggio</li>
+                        <li><strong>Trigger:</strong> Culti religiosi corrotti = deve fare Presenza CD 12 o momentanea paralisi 
+                        (flashback)</li>
+                    </ul>
+                </div>
+                
+                <!-- Connessioni -->
+                <div class="connections-box">
+                    <h3>💬 Connessioni - Veterani</h3>
+                    
+                    <p><strong>→ Jack Malone:</strong></p>
+                    <p style="margin-left: 20px; font-size: 0.95em;">
+                        Il legame è ora quasi familiare. Prega con lui ogni sera (anche se lui non crede). Lui la protegge 
+                        con ferocia che va oltre duty. Lei lo perdona per ogni vita che prende - "Dio comprende necessità." 
+                        A volte si chiede se siano... qualcosa di più? Ma non è il momento. Forse mai.
+                    </p>
+                    
+                    <p style="margin-top: 15px;"><strong>→ Doc Artemis:</strong></p>
+                    <p style="margin-left: 20px; font-size: 0.95em;">
+                        Dopo Silver Hollow, i dibattiti sono cambiati. Lui ha ammesso limiti scienza. Lei ha ammesso dubbi 
+                        fede. Ora cercano <em>insieme</em> - "Forse verità è nel mezzo." Ha imparato medicina da lui. Lui ha 
+                        imparato empatia da lei. Rispetto reciproco profondo.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- ============================================================ -->
+            <!--              DOC ARTEMIS WELLS - LIVELLO 5                  -->
+            <!-- ============================================================ -->
+            
+            <div class="character-sheet level-5" id="doc-5">
+                <div class="char-header level-5">
+                    <h2>🔬 DOC ARTEMIS WELLS <span class="level-badge" style="background: var(--alien-green);">Livello 5</span></h2>
+                    <p class="char-tagline">Lo Scienziato Pragmatico - Razionalismo Evoluto</p>
+                </div>
+                
+                <!-- Stats Base -->
+                <div class="char-stats-grid">
+                    <div class="stat-box-char">
+                        <div class="stat-label">Hit Points</div>
+                        <div class="stat-value">30</div>
+                        <small>(+10 da livello 2)</small>
+                    </div>
+                    <div class="stat-box-char">
+                        <div class="stat-label">Armatura</div>
+                        <div class="stat-value">1</div>
+                        <small>(Protezione improvvisata)</small>
+                    </div>
+                    <div class="stat-box-char">
+                        <div class="stat-label">Tenuta Mentale</div>
+                        <div class="stat-value">4/10</div>
+                        <small>(PERMANENTE - paradigma infranto)</small>
+                    </div>
+                    <div class="stat-box-char">
+                        <div class="stat-label">Velocità</div>
+                        <div class="stat-value">9m</div>
+                    </div>
+                </div>
+                
+                <!-- Traits -->
+                <h3>📊 Tratti</h3>
+                <div class="traits-grid">
+                    <div class="trait-box">
+                        <h4>Agilità</h4>
+                        <div class="trait-value">+3</div>
+                        <small>↑ Mani ancora più precise</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Forza</h4>
+                        <div class="trait-value">+1</div>
+                        <small>↑ Slightly less fragile</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Finezza</h4>
+                        <div class="trait-value">+4</div>
+                        <small>↑ Maestria strumenti</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Istinto</h4>
+                        <div class="trait-value">+2</div>
+                        <small>↑ Ha imparato a "sentire" pericolo</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Presenza</h4>
+                        <div class="trait-value">+2</div>
+                        <small>↑ Bedside manner migliorato</small>
+                    </div>
+                    <div class="trait-box">
+                        <h4>Conoscenza</h4>
+                        <div class="trait-value">+5</div>
+                        <small><strong>PRIMARIA</strong> ↑ Esperto multi-disciplinare</small>
+                    </div>
+                </div>
+                
+                <!-- Background -->
+                <h3>📜 Background - Il Paradigma Infranto</h3>
+                <div class="info-box" style="background: rgba(0, 51, 102, 0.1); border-color: var(--ocean-blue);">
+                    <p style="font-size: 1.05em; line-height: 1.8;">
+                        Silver Hollow ha <strong>distrutto</strong> il worldview di Artemis. Per 3 settimane dopo, non 
+                        riusciva a dormire - passava notti scrivendo equazioni, cercando disperatamente una spiegazione 
+                        scientifica per morti risorti, trasformazioni impossibili, Serpente che sfidava leggi biologiche.
+                    </p>
+                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+                        <strong>Il Breakdown:</strong> Una notte, dopo il quarto whisky (condiviso con Sarah, ironicamente), 
+                        ha pianto. "Tutta la mia vita... ho creduto che tutto fosse spiegabile. E ora... COSA CAZZO ERA 
+                        QUELLO?" Sarah ha risposto semplicemente: "Mistero. Accettalo." E lui... lo ha fatto.
+                    </p>
+                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+                        <strong>Evoluzione:</strong> Non ha abbandonato razionalismo - lo ha <em>espanso</em>. "Ok, ci sono 
+                        cose che la scienza attuale non spiega. Ma forse c'è una scienza DIVERSA - aliena, dimensionale, 
+                        quantistica? Dobbiamo solo scoprirla." Ora studia occultismo con metodo scientifico. Prende campioni 
+                        di creature Mythos. Disseziona quando possibile. È diventato... <strong>scienziato dell'impossibile</strong>.
+                    </p>
+                    <p style="margin-top: 15px; font-size: 1.05em; line-height: 1.8;">
+                        <strong>Perché è qui:</strong> Geometri scomparsi + anomalie magnetiche + geometria impossibile? 
+                        "DEVO studiare questo. Se c'è un pattern, posso trovarlo. E se posso trovarlo... posso combatterlo."
+                    </p>
+                </div>
+                
+                <!-- Abilità -->
+                <h3>⚔️ Abilità & Azioni</h3>
+                
+                <div class="abilities-section">
+                    <!-- Abilità potenziate -->
+                    <div class="ability-card">
+                        <h4>💉 CHIRURGIA DA CAMPO (Potenziata)</h4>
+                        <span class="ability-tag">Azione</span>
+                        <span class="ability-tag">4/Riposo</span>
+                        <span class="ability-tag" style="background: var(--alien-green); color: black;">UPGRADED</span>
+                        <p>
+                            <strong>Recupero:</strong> <strong>3d8+6 HP</strong> (↑ da 2d8+4) + rimuovi <strong>2 condizioni</strong> 
+                            (↑ da 1).
+                        </p>
+                        <p style="margin-top: 10px;">
+                            <strong>NUOVO:</strong> Funziona anche su <strong>creature non-umane</strong> (ha studiato anatomia 
+                            aliena). CD ridotta a <strong>10</strong> (↑ da 12 - più esperto).
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>🔬 ANALISI ANATOMICA (Potenziata)</h4>
+                        <span class="ability-tag">Azione Minor</span>
+                        <span class="ability-tag">Sempre</span>
+                        <span class="ability-tag" style="background: var(--alien-green); color: black;">UPGRADED</span>
+                        <p>
+                            <strong>Effetto:</strong> CD ridotta a <strong>10</strong>. Alleati ora hanno <strong>+3 danni</strong> 
+                            (↑ da +2) contro creatura analizzata.
+                        </p>
+                        <p style="margin-top: 10px;">
+                            <strong>NUOVO:</strong> Puoi analizzare anche <strong>trappole</strong>, <strong>rituali in corso</strong>, 
+                            o <strong>anomalie ambientali</strong> (geometria non-euclidea, etc).
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>⚗️ GADGET IMPROVVISATO (Potenziato)</h4>
+                        <span class="ability-tag">Azione</span>
+                        <span class="ability-tag">3/Riposo</span>
+                        <span class="ability-tag" style="background: var(--alien-green); color: black;">UPGRADED</span>
+                        <p>
+                            <strong>Opzioni aumentate:</strong> Tutti gadget esistenti + <strong>2 nuovi</strong>:
+                        </p>
+                        <ul>
+                            <li><strong>EMP Organico:</strong> Disabilita elettricità/magia in 6m raggio per 1 minuto</li>
+                            <li><strong>Sigillo Temporaneo:</strong> Crea barriera che blocca entità soprannaturali 10 minuti 
+                            (Presenza CD 16 per attraversare)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>🧪 TOSSINE & ANTIDOTI (Mantenuto)</h4>
+                        <span class="ability-tag">Azione Minor</span>
+                        <p>[Come livello 2, ma ora 3 dosi ciascuno invece di 2]</p>
+                    </div>
+                    
+                    <div class="ability-card">
+                        <h4>🎯 COLPO CHIRURGICO (Mantenuto)</h4>
+                        <span class="ability-tag">Spendi 1 Speranza</span>
+                        <p>[Come livello 2, unchanged]</p>
+                    </div>
+                    
+                    <!-- NUOVE ABILITÀ -->
+                    <div class="ability-card" style="border: 3px solid var(--alien-green);">
+                        <h4>🧬 ANALISI MYTHOS (NUOVA)</h4>
+                        <span class="ability-tag" style="background: var(--alien-green); color: black;">Livello 5</span>
+                        <span class="ability-tag">Azione (10 minuti)</span>
+                        <span class="ability-tag">Sempre</span>
+                        <p>
+                            <strong>Effetto:</strong> Studi campione creature Mythos, simbolo alieno, o fenomeno soprannaturale:
+                        </p>
+                        <ul>
+                            <li>Fai <strong>Conoscenza CD 14</strong></li>
+                            <li><strong>Successo:</strong> Apprendi <strong>3 informazioni</strong> su origine, debolezze, pattern</li>
+                            <li><strong>Successo 5+:</strong> Inoltre, puoi <strong>creare contromisura specifica</strong> 
+                            (veleno anti-Mythos, sigillo, frequenza sonora disruptiva, etc). Richiede 1 ora + materiali.</li>
+                        </ul>
+                        <p style="margin-top: 10px;">
+                            <strong>Note campioni:</strong> Conservi campioni di tutte creature affrontate (sangue, tessuti, 
+                            scale). Borsa medica ora include fiasche specimen.
+                        </p>
+                        <p style="margin-top: 10px; font-style: italic;">
+                            "Affascinante... la struttura cellulare è completamente aliena. Ma vulnerabile a..." [Prende appunti frenetici]
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card" style="border: 3px solid var(--alien-green);">
+                        <h4>⚙️ INVENZIONE RAPIDA (NUOVA)</h4>
+                        <span class="ability-tag" style="background: var(--alien-green); color: black;">Livello 5</span>
+                        <span class="ability-tag">Azione</span>
+                        <span class="ability-tag">1/Riposo</span>
+                        <p>
+                            <strong>Effetto:</strong> Assembli <strong>dispositivo complesso</strong> in 1 azione (invece di ore):
+                        </p>
+                        <ul>
+                            <li><strong>Esempi:</strong>
+                                <ul>
+                                    <li>Detonatore a tempo (fa esplodere dinamite dopo X round)</li>
+                                    <li>Detector radiazioni/magia (beep quando soprannaturale vicino)</li>
+                                    <li>Purificatore acqua contaminata (rimuove veleni/corruzione)</li>
+                                    <li>Radio primitivo (comunicazione 1 km)</li>
+                                    <li>Trappola elaborata (rete + elettricità + allarme)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Limiti:</strong> Deve essere plausibile per tech 1885 + tua borsa. GM final say.</li>
+                            <li><strong>Durata:</strong> Dispositivo funziona per 1 ora poi si rompe (improvvisato)</li>
+                        </ul>
+                        <p style="margin-top: 10px; font-style: italic;">
+                            "Dammi 60 secondi e una candela..." [Smonta orologio, combina con fiasche chimiche] "Ecco. Timer esplosivo."
+                        </p>
+                    </div>
+                    
+                    <div class="ability-card" style="border: 3px solid var(--alien-green);">
+                        <h4>🧠 RAZIONALISMO ADATTIVO (NUOVA)</h4>
+                        <span class="ability-tag" style="background: var(--alien-green); color: black;">Livello 5</span>
+                        <span class="ability-tag">Passivo</span>
+                        <p>
+                            <strong>Effetto:</strong> Avendo accettato l'impossibile, ora sei <strong>meno vulnerabile</strong> 
+                            allo shock:
+                        </p>
+                        <ul>
+                            <li><strong>+3 bonus</strong> tiri salvezza <strong>Tenuta Mentale</strong></li>
+                            <li>Quando vedi fenomeno soprannaturale, <strong>metà segmenti</strong> Tenuta riempiti (arrotonda giù)</li>
+                            <li><strong>Immunità</strong> a effetti che causano <strong>disbelief/shock</strong> (hai già visto troppo)</li>
+                            <li><strong>Inoltre:</strong> Puoi spendere <strong>1 azione</strong> per fare <strong>Conoscenza CD 12</strong>. 
+                            Successo = <strong>razionalizzi</strong> orrore per alleati nearby ("È solo biologia aliena!"). Alleati entro 
+                            6m svuotano <strong>1 segmento Tenuta</strong>.</li>
+                        </ul>
+                        <p style="margin-top: 10px; font-style: italic;">
+                            "Non è magia. È semplicemente scienza che non comprendiamo ancora. Calma. Analizza. Sopravvivi."
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Equipaggiamento -->
+                <div class="equipment-list">
+                    <h3>🎒 Equipaggiamento - Scienziato dell'Impossibile</h3>
+                    <ul>
+                        <li><strong>Borsa medica espansa</strong> (30+ strumenti + compartimento specimen)</li>
+                        <li><strong>Bisturi chirurgico</strong> (1d6 danni)</li>
+                        <li><strong>Revolver .38 migliorato</strong> (2d6, 6 colpi - ora sa usarlo decentemente)</li>
+                        <li><strong>Taccuino ricerca COMPLETO</strong> (centinaia pagine note Silver Hollow + teoremi)</li>
+                        <li><strong>Microscopio portatile avanzato</strong></li>
+                        <li><strong>Kit chimico espanso</strong> (reagenti rari inclusi)</li>
+                        <li><strong>Campioni Mythos</strong> (fiasche con sangue cultista, scaglie Serpente, tessuti non-morti)</li>
+                        <li><strong>Cloroformio</strong> (4 dosi)</li>
+                        <li><strong>Morfina</strong> (6 dosi)</li>
+                        <li><strong>Stimolanti sintetici</strong> (3 dosi - formula migliorata)</li>
+                        <li><strong>Dinamite</strong> (3 stick - "per emergenze")</li>
+                        <li><strong>Occhiali scuri protettivi</strong> (vs flash luminosi)</li>
+                        <li><strong>Guanti rinforzati</strong> (protezione acidi/tossine)</li>
+                        <li><strong>Libro anatomia + Tomo appunti Mythos</strong> (suo, scritto negli ultimi 3 mesi)</li>
+                        <li><strong>95 dollari</strong> (ha iniziato a farsi pagare meglio)</li>
+                    </ul>
+                </div>
+                
+                <!-- Cicatrici -->
+                <div class="warning-box">
+                    <h3>💀 Cicatrici Mentali</h3>
+                    <ul style="font-size: 1.05em; line-height: 1.8;">
+                        <li><strong>Tenuta PERMANENTEMENTE a 4/10:</strong> 4 segmenti sempre pieni (paradigma razionalista 
+                        infranto per sempre)</li>
+                        <li><strong>Ossessione compulsiva:</strong> DEVE studiare ogni fenomeno soprannaturale - a volte 
+                        pericolosamente</li>
+                        <li><strong>Insonnia cronica:</strong> Dorme 3-4 ore/notte (mente troppo attiva). Sempre Fatica lieve 
+                        (non impatta meccaniche ma narrative sì)</li>
+                        <li><strong>Tic nervoso:</strong> Aggiusta occhiali freneticamente quando stressato</li>
+                        <li><strong>Dissociazione occasionale:</strong> A volte "si scollega" durante stress estremo (diventa 
+                        osservatore clinico freddamente distaccato - defense mechanism)</li>
+                    </ul>
+                </div>
+                
+                <!-- Connessioni -->
+                <div class="connections-box">
+                    <h3>💬 Connessioni - Veterani</h3>
+                    
+                    <p><strong>→ Jack Malone:</strong></p>
+                    <p style="margin-left: 20px; font-size: 0.95em;">
+                        Rispetto reciproco profondo. Jack apprezza che Doc non fa domande inutili. Doc apprezza che Jack non 
+                        giudica la sua ossessione con l'impossibile. Hanno condiviso whisky e silenzio dopo Silver Hollow - 
+                        a volte silenzio dice più di parole. Debito? Dimenticato. Questo è partnership.
+                    </p>
+                    
+                    <p style="margin-top: 15px;"><strong>→ Sarah Blackwood:</strong></p>
+                    <p style="margin-left: 20px; font-size: 0.95em;">
+                        La loro dinamica è cambiata completamente. Lui ha ammesso limiti scienza. Lei ha ammesso valore analisi. 
+                        Ora collaborano - "Fede E ragione insieme." Lei prega mentre lui disseziona campioni Mythos. Strano? 
+                        Sì. Funziona? Assolutamente. A volte si chiede se sia innamorato. Ma emozioni sono complicate. Meglio 
+                        focus su lavoro.
+                    </p>
+                </div>
+            </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p style="font-size: 0.9em;">
+                <strong>Character Sheets - Gunsmoke & Dread</strong><br>
+                Personaggi Pregenerati per Daggerheart™<br>
+                Compatible with Daggerheart SRD 1.0
+            </p>
+            <p style="margin-top: 20px; font-size: 0.85em; color: var(--desert-sand);">
+                <a href="../INDEX.html" style="color: var(--alien-green);" class="no-print">← Torna all'Index</a> | 
+                <a href="../core/Quick-Reference.html" style="color: var(--alien-green);" class="no-print">Quick Reference →</a>
+            </p>
+        </div>
+        
+    </div>
+    
+    <!-- Print Script -->
+    <script>
+        function printCharacter(id) {
+            // Hide all character sheets
+            document.querySelectorAll('.character-sheet').forEach(sheet => {
+                sheet.style.display = 'none';
+            });
+            
+            // Show only selected character
+            document.getElementById(id).style.display = 'block';
+            
+            // Print
+            window.print();
+            
+            // Restore all sheets
+            document.querySelectorAll('.character-sheet').forEach(sheet => {
+                sheet.style.display = 'block';
+            });
+        }
+    </script>
+    
 </body>
 </html>
